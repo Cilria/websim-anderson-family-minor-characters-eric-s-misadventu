@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EclipseOS - Wikipedia</title>
+    <title>Alfred M. Clemons: Tracing his military and construction career through records : Genealogy</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -18,356 +18,228 @@
             background: white;
             border-radius: 8px;
             border: 1px solid #ccc;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header {
-            border-bottom: 1px solid #a2a9b1;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
         }
         .title {
-            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
-            font-size: 28px;
-            font-weight: normal;
             margin: 0 0 10px 0;
-            line-height: 1.3;
-            border-bottom: 1px solid #a2a9b1;
-            padding-bottom: 5px;
+            font-size: 18px;
+            font-weight: 500;
         }
-        .subtitle {
-            font-size: 14px;
-            color: #54595d;
-            margin-bottom: 15px;
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
         }
-        .infobox {
-            float: right;
-            margin: 0 0 15px 15px;
-            width: 270px;
-            border: 1px solid #a2a9b1;
-            background-color: #f8f9fa;
-            padding: 5px;
+        .meta {
             font-size: 12px;
-            line-height: 1.4;
-            border-radius: 3px;
-            clear: right;
+            color: #787c7e;
+            margin-bottom: 10px;
         }
-        .infobox th {
-            background-color: #eaecf0;
-            text-align: center;
-            font-weight: bold;
-            padding: 3px;
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
         }
-        .infobox td {
-            padding: 3px;
-            vertical-align: top;
+        .comments {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
         }
-        .infobox img {
-            max-width: 250px;
-            height: auto;
-            display: block;
-            margin: 5px auto;
+        .comments a {
+            color: #878a8c;
+            text-decoration: none;
         }
-        h2 {
-            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
-            font-size: 20px;
-            font-weight: normal;
-            margin: 30px 0 15px 0;
-            border-bottom: 1px solid #a2a9b1;
-            padding-bottom: 3px;
+        .comments a:hover {
+            text-decoration: underline;
         }
-        h3 {
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
             font-size: 16px;
-            font-weight: bold;
-            margin: 20px 0 10px 0;
+            font-weight: 500;
         }
-        p {
-            line-height: 1.6;
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
             margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
         }
-        ul {
-            line-height: 1.6;
-            margin: 0 0 15px 20px;
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
         }
-        .toc {
-            background-color: #f8f9fa;
-            border: 1px solid #a2a9b1;
-            padding: 7px;
-            margin: 15px 0;
-            font-size: 13px;
-            width: 250px;
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
         }
-        .toc ul {
-            margin: 0 0 0 20px;
-            padding: 0;
-        }
-        .toc li {
-            margin: 3px 0;
-        }
-        .references {
-            font-size: 13px;
-            color: #54595d;
-        }
-        .clear {
-            clear: both;
-        }
-        .hatnote {
-            background-color: #fef6e7;
-            border: 1px solid #facd9a;
-            padding: 5px 7px;
-            margin: 15px 0;
-            font-size: 13px;
-        }
-        .version-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 10px 0;
-            font-size: 13px;
-        }
-        .version-table th, .version-table td {
-            border: 1px solid #a2a9b1;
-            padding: 5px;
-            text-align: left;
-        }
-        .version-table th {
-            background-color: #eaecf0;
-            font-weight: bold;
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="title">EclipseOS</h1>
-            <div class="subtitle">From Wikipedia, the free encyclopedia</div>
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Appomattox_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
         </div>
 
-        <div class="infobox">
-            <table>
-                <tr>
-                    <th colspan="2" style="background-color: #eaecf0;">EclipseOS</th>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align: center;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Solar_eclipse_1999_4_NR.jpg/250px-Solar_eclipse_1999_4_NR.jpg" alt="EclipseOS logo - Solar eclipse">
-                        <br>
-                        <small>EclipseOS logo featuring a solar eclipse</small>
-                    </td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Developer</th>
-                    <td>Nova Software LLC<br>(formerly The Eclipse Group)</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">OS family</th>
-                    <td>Unix-like (Linux)</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Working state</th>
-                    <td>Current</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Source model</th>
-                    <td>Open source</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Initial release</th>
-                    <td>1.0 / Astro<br>June 15, 2006</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Latest release</th>
-                    <td>23.06 / Andromeda<br>(June 15, 2023)</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Repository</th>
-                    <td><a href="#">git.eclipseos.org</a></td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Marketing target</th>
-                    <td>Personal computers, Desktops, Laptops</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Package manager</th>
-                    <td>APT (dpkg)<br>(formerly RPM)</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Platforms</th>
-                    <td>x86-64, ARM64</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Kernel type</th>
-                    <td>Monolithic (Linux)</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Userland</th>
-                    <td>GNU</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Default user interface</th>
-                    <td>Nautilus Shell<br>(formerly GNOME)</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">License</th>
-                    <td>GPL and various other licenses</td>
-                </tr>
-                <tr>
-                    <th style="text-align: left;">Official website</th>
-                    <td><a href="#">www.eclipseos.org</a></td>
-                </tr>
-            </table>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>892</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Alfred M. Clemons: Tracing his military and construction career through records</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Brick Wall</span>
+                    <span>Posted by u/Appomattox_Archivist • 8 hours ago</span>
+                </div>
+
+                <p>I've been researching Alfred Milton Clemons (1880-1958) for months, and I think I've finally connected some dots. Born north of Appomattox, VA - youngest of 9 kids. His father Robert served in the final months of the Civil War but saw no combat. Robert died in 1894 in a lumber accident (fell off his wagon, broke his spine at age 62).</p>
+
+                <p>Here's where it gets interesting. Alfred enlisted in the Army in 1898 and served until March 1899. After that, he worked postal routes from Concord to Appomattox, then newspaper delivery, before becoming a furnace engineer. By 1915 he was a construction contractor - the job he kept for life.</p>
+
+                <p>The family moved around a lot: Roanoke by 1920, Dayton Ohio from 1931-1936, then back to Roanoke. His stepfather John "Jim" Alexander Colt was also in lumber after his mother Nancy remarried.</p>
+
+                <p>I've found some records but need help connecting the dots between his military service and construction career. Anyone else researching this family line?</p>
+
+                <div class="comments">
+                    <a href="#">156 comments</a>
+                </div>
+            </div>
         </div>
 
-        <div class="hatnote">
-            This article is about the Linux distribution. For other uses, see <a href="#">Eclipse (disambiguation)</a>.
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
         </div>
 
-        <p><strong>EclipseOS</strong> (also known as <strong>Eclipse Linux</strong> or simply <strong>Eclipse</strong>) is a <a href="#">Linux distribution</a> designed for mainstream desktop use. Originally developed by <strong>The Eclipse Group</strong> and later maintained by <strong>Nova Software LLC</strong> since 2018, EclipseOS aims to provide an easy-to-use alternative to other consumer-focused Linux distributions.</p>
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">u/Army_Records_Guru • 6 hours ago</div>
+                <div class="comment-content">
+                    Found Alfred's enlistment papers! He enlisted 2 May 1898 at Richmond, VA. Serial #873452, Company G, 2nd Virginia Infantry. Discharged 15 March 1899 at Fort Monroe - character listed as "excellent". The interesting part: his occupation on enlistment is listed as "farmer" but on discharge it's "mail carrier", which matches your postal worker timeline perfectly.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
 
-        <p>EclipseOS was first released on June 15, 2006, and is known for its distinctive version naming scheme based on astronomical objects and celestial bodies. The distribution initially started as a <a href="#">Fedora</a> derivative but transitioned to a <a href="#">Debian</a>-based system starting with version 10.12 "Moving Mars".</p>
+            <div class="comment">
+                <div class="comment-meta">u/Construction_Historian • 5 hours ago</div>
+                <div class="comment-content">
+                    I have Alfred Clemons in the 1915 Roanoke City Directory as "contractor - houses" with an office at 312 Commerce Street. The 1916 directory shows he partnered with William T. Phillips forming "Clemons & Phillips". By 1920 he's back to solo work. Found building permits: he built at least 12 houses in the Raleigh Court neighborhood between 1917-1922.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
 
-        <div class="toc">
-            <div><strong>Contents</strong></div>
+            <div class="comment">
+                <div class="comment-meta">u/Virginia_Death_Records • 4 hours ago</div>
+                <div class="comment-content">
+                    Nancy Spenlow Clemons Colt's death certificate is online - died 12 September 1902 in Appomattox of "consumption". The informant was her husband John Colt. Alfred is listed as living in Concord at the time. The 1900 census shows Alfred (age 20) living with his mother and stepfather, occupation "day laborer".
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Dayton_Genealogist • 3 hours ago</div>
+                <div class="comment-content">
+                    Found Alfred in Dayton! 1930 census: 1615 Wayne Avenue, occupation "contractor - building". 1931 city directory shows same address. He disappears from Dayton directories after 1936. The Montgomery County Recorder has warranty deeds showing he bought and sold 6 properties between 1932-1935 - looks like he was flipping houses during the Depression.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Civil_War_Pension_Pro • 2 hours ago</div>
+                <div class="comment-content">
+                    Robert W. Clemons has a Civil War pension file! Application #765432, filed 1892. He served 3 months in 1865 with Company D, 24th Virginia Cavalry - you're right, saw no combat. The file mentions his death 14 October 1894 from wagon accident. It lists all 9 children - Alfred is the youngest at age 14. Nancy applied for widow's pension in 1895 but was denied because they weren't married during his service.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
             <ul>
-                <li>1 History</li>
-                <li>2 Features</li>
-                <li>3 Releases</li>
-                <li>4 System requirements</li>
-                <li>5 Reception</li>
-                <li>6 See also</li>
-                <li>7 References</li>
-                <li>8 External links</li>
+                <li><a href="#">Found my great-grandfather's WWI draft card - he lied about his age!</a></li>
+                <li><a href="#">Anyone have tips for tracking ancestors who changed their names?</a></li>
+                <li><a href="#">Just broke through a 5-year brick wall using city directories</a></li>
             </ul>
         </div>
-
-        <h2>History</h2>
-
-        <h3>Early development (2004–2006)</h3>
-        <p>EclipseOS began development in late 2004 as a hobby project by members of The Eclipse Group, a small software collective based in San Francisco. The original goal was to create a more user-friendly version of Fedora Core with additional multimedia codecs and proprietary drivers pre-installed. The first public beta, codenamed "Comet", was released in March 2006.</p>
-
-        <h3>Initial release (2006–2010)</h3>
-        <p>EclipseOS 1.0 "Astro" was officially released on June 15, 2006. Early releases focused on providing a complete out-of-the-box experience for desktop users, with GNOME as the default desktop environment. The distribution gained popularity among users migrating from Windows due to its Windows-like installer and configuration tools.</p>
-
-        <h3>Transition to Debian base (2010–2018)</h3>
-        <p>Starting with version 10.06 "The Pale Blue Dot", EclipseOS began transitioning from Fedora to Debian as its base system. This change was driven by stability concerns and better package management through APT. The final Fedora-based release was 10.12 "Moving Mars".</p>
-
-        <h3>Nova Software acquisition (2018–present)</h3>
-        <p>In 2018, development responsibilities were transferred to Nova Software LLC, a company founded in 1996 specifically to support EclipseOS development. Under Nova Software, EclipseOS has continued to maintain its mission of providing a user-friendly Linux experience while adopting newer technologies like Wayland and Flatpak.</p>
-
-        <h2>Features</h2>
-
-        <h3>Nautilus Shell</h3>
-        <p>Since version 10.06, EclipseOS has shipped with Nautilus Shell, a custom desktop environment developed specifically for the distribution. Nautilus Shell combines elements of traditional desktop paradigms with modern design principles, featuring a customizable dock, global menu system, and integrated search functionality.</p>
-
-        <h3>Eclipse Software Center</h3>
-        <p>The Eclipse Software Center provides a graphical interface for installing and managing applications. It supports both traditional Debian packages (DEB) and newer Flatpak applications, giving users access to a wide range of software.</p>
-
-        <h3>Hardware compatibility</h3>
-        <p>EclipseOS maintains extensive hardware compatibility databases and includes proprietary drivers for popular graphics cards and wireless chipsets. The distribution is certified to work with most major laptop manufacturers' hardware.</p>
-
-        <h2>Releases</h2>
-
-        <p>EclipseOS follows a biannual release schedule, with new versions released in June and December of each year. Version numbers follow the format YY.MM (year.month). Each release is codenamed after an astronomical object.</p>
-
-        <h3>Major releases</h3>
-        <table class="version-table">
-            <tr>
-                <th>Version</th>
-                <th>Codename</th>
-                <th>Release date</th>
-                <th>Significant changes</th>
-            </tr>
-            <tr>
-                <td>1.0</td>
-                <td>Astro</td>
-                <td>2006-06-15</td>
-                <td>Initial release, Fedora-based</td>
-            </tr>
-            <tr>
-                <td>4.0</td>
-                <td>Vision Venus</td>
-                <td>2008-12-15</td>
-                <td>GNOME 2.24, improved installer</td>
-            </tr>
-            <tr>
-                <td>10.06</td>
-                <td>The Pale Blue Dot</td>
-                <td>2010-06-15</td>
-                <td>Transition to Debian base begins</td>
-            </tr>
-            <tr>
-                <td>10.12</td>
-                <td>Moving Mars</td>
-                <td>2010-12-15</td>
-                <td>Final Fedora-based release</td>
-            </tr>
-            <tr>
-                <td>12.06</td>
-                <td>Europhobic Europa</td>
-                <td>2012-06-15</td>
-                <td>Full Debian transition complete</td>
-            </tr>
-            <tr>
-                <td>16.12</td>
-                <td>Pilot Pluto</td>
-                <td>2016-12-15</td>
-                <td>Nautilus Shell introduced</td>
-            </tr>
-            <tr>
-                <td>20.12</td>
-                <td>Hawk</td>
-                <td>2020-12-15</td>
-                <td>Wayland by default, Flatpak integration</td>
-            </tr>
-            <tr>
-                <td>23.06</td>
-                <td>Andromeda</td>
-                <td>2023-06-15</td>
-                <td>Latest stable release</td>
-            </tr>
-        </table>
-
-        <h2>System requirements</h2>
-        <p>As of version 23.06, EclipseOS requires:</p>
-        <ul>
-            <li>2 GHz dual-core processor (64-bit)</li>
-            <li>4 GB RAM (8 GB recommended)</li>
-            <li>25 GB of free hard drive space</li>
-            <li>1024×768 display resolution</li>
-            <li>USB flash drive or DVD drive for installation</li>
-        </ul>
-
-        <h2>Reception</h2>
-        <p>EclipseOS has generally received positive reviews for its user-friendly approach and hardware compatibility. Linux Format magazine awarded it "Distribution of the Year" in 2018, praising its "polished desktop experience" and "thoughtful default configuration".</p>
-
-        <p>However, some critics have noted that EclipseOS's focus on user-friendliness sometimes comes at the expense of advanced configuration options. DistroWatch currently ranks EclipseOS among the top 10 most popular distributions based on page hit rankings.</p>
-
-        <h2>See also</h2>
-        <ul>
-            <li><a href="#">Comparison of Linux distributions</a></li>
-            <li><a href="#">List of Linux distributions based on Debian</a></li>
-            <li><a href="#">Desktop Linux</a></li>
-        </ul>
-
-        <div class="references">
-            <h2>References</h2>
-            <ol>
-                <li>"EclipseOS 1.0 Released" - Linux Weekly News, June 20, 2006</li>
-                <li>"From Fedora to Debian: The EclipseOS Transition" - Linux Format Magazine, Issue 134, 2010</li>
-                <li>"Nautilus Shell: A New Desktop Environment Emerges" - Phoronix, December 2016</li>
-                <li>"EclipseOS 20.12 Review: Polished and Practical" - Ars Technica, January 2021</li>
-                <li>Nova Software LLC. "EclipseOS 23.06 Release Notes". Retrieved 2023-07-15.</li>
-            </ol>
-        </div>
-
-        <h2>External links</h2>
-        <ul>
-            <li><a href="#">Official website</a></li>
-            <li><a href="#">EclipseOS Wiki</a></li>
-            <li><a href="#">Download EclipseOS</a></li>
-            <li><a href="#">EclipseOS Forums</a></li>
-        </ul>
-
-        <div class="clear"></div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
