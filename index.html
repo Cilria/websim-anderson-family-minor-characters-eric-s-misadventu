@@ -1,228 +1,270 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-  }
-  .post {
-    background: white;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-  }
-  .post-header {
-    padding: 8px 16px;
-    background: #F6F7F8;
-    border-bottom: 1px solid #EDEFF1;
-    font-size: 12px;
-    color: #7c7c7c;
-  }
-  .post-title {
-    padding: 16px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #1a1a1b;
-  }
-  .post-content {
-    padding: 0 16px 16px 16px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .comment {
-    background: white;
-    margin-bottom: 8px;
-    padding: 8px 16px;
-    border-left: 2px solid #ccc;
-  }
-  .comment-meta {
-    font-size: 12px;
-    color: #7c7c7c;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: 500;
-    color: #1a1a1b;
-  }
-  .comment-body {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .comment-reply {
-    margin-left: 24px;
-    background: #F6F7F8;
-  }
-  .expand-button {
-    color: #0079D3;
-    cursor: pointer;
-    font-size: 12px;
-  }
-  .discovery {
-    background: #FFF3E0;
-    padding: 8px;
-    margin: 8px 0;
-    border-radius: 3px;
-    font-size: 13px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfred M. Clemons: Tracing his military and construction career through records : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-<div class="reddit-container">
-  <div class="post">
-    <div class="post-header">
-      Posted by u/GenealogyNerd88 • 15 hours ago
-    </div>
-    <div class="post-title">
-      [Brick Wall] Alfred Milton Clemons (1880-1958) - Construction Contractor who moved constantly. Found his final address but missing huge gaps between 1899-1915
-    </div>
-    <div class="post-content">
-      <p>I've been researching Alfred Miltion Clemons (January 1st, 1880 - December 22, 1958) for months. Born north of Appomattox, VA to Robert W. Clemons (Civil War vet, saw no combat) and Nancy Spenlow.</p>
-      
-      <p>After his father died in 1894 (fell off wagon, broke spine), his mother remarried John "Jim" Alexander Colt. Alfred enlisted in 1898, discharged March 1899. Then... nothing until 1915 when he shows up as a Construction Contractor in Roanoke.</p>
-      
-      <p>Here's what I've pieced together:</p>
-      <ul>
-        <li>1899-1915: Postal worker? Newspaper delivery? Furnace engineer? All mentioned in family stories but zero documentation</li>
-        <li>1915-1920: Construction contractor in Roanoke, VA</li>
-        <li>1931-1936: Dayton, Ohio</li>
-        <li>Post-1936: Back to Roanoke until death</li>
-      </ul>
-      
-      <p>Cannot find him in 1900 or 1910 census. Cannot find marriage record to his wife Mary Elizabeth (last name unknown). Cannot find his 1899-1915 employment records. It's like he vanished for 16 years.</p>
-      
-      <p>Anyone have ideas for tracking down someone who was essentially off-grid for over a decade?</p>
-    </div>
-  </div>
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Appomattox_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
+        </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/AppomattoxHistorian</span> • 12 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found him in the 1900 census! He's listed as "A.M. Clemons" working as a furnace engineer at the Roanoke Machine Works. The census taker butchered the spelling - he's under "Clemens" in the index.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> 1900 Census - Roanoke, VA, ED 109, Sheet 12B. Occupation: Furnace Engineer
-      </div>
-      
-      <p>Also found a newspaper clipping from the Roanoke Times, July 3, 1901: "A.M. Clemons promoted to assistant foreman at the foundry." So he was definitely in Roanoke by 1900, working his way up at the machine works.</p>
-    </div>
-  </div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>892</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/PostalRecordsGuru</span> • 11 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found his postal employment records! Alfred M. Clemons was hired as a substitute mail carrier on the Concord-Appomattox route in October 1899. He worked this route until December 1900 when he transferred to Roanoke.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> USPS Employment Records, Record Group 28, Entry 76, Box 1424 - Alfred M. Clemons, hired 10/15/1899, discharged 12/31/1900
-      </div>
-      
-      <p>The "furnace engineer" job started right after he left the postal service. Looks like he did a complete career change in 1900-1901.</p>
-    </div>
-  </div>
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Alfred M. Clemons: Tracing his military and construction career through records</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Brick Wall</span>
+                    <span>Posted by u/Appomattox_Archivist • 8 hours ago</span>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/NewspaperArchivist</span> • 10 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found his marriage announcement! Alfred M. Clemons married Mary Elizabeth Thornton on June 15, 1902 at the Methodist Church in Appomattox. The announcement mentions he was "late of Roanoke, employed at the Machine Works."</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> Marriage announcement, Appomattox & Buckingham Times, June 18, 1902, page 3
-      </div>
-      
-      <p>Here's the kicker - Mary Elizabeth Thornton was from Dayton, Ohio. Explains why they moved there in the 1930s - she probably had family there.</p>
-    </div>
-    
-    <div class="comment comment-reply">
-      <div class="comment-meta">
-        <span class="comment-author">u/GenealogyNerd88</span> • 9 hours ago
-      </div>
-      <div class="comment-body">
-        <p>Holy shit, Mary Elizabeth Thornton! That explains EVERYTHING. Her family was from Dayton - the 1930s move wasn't random at all. They probably went to take care of aging parents or inherited property.</p>
-      </div>
-    </div>
-  </div>
+                <p>I've been researching Alfred Milton Clemons (1880-1958) for months, and I think I've finally connected some dots. Born north of Appomattox, VA - youngest of 9 kids. His father Robert served in the final months of the Civil War but saw no combat. Robert died in 1894 in a lumber accident (fell off his wagon, broke his spine at age 62).</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/ConstructionRecords</span> • 8 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found his contractor license applications! Alfred M. Clemons applied for his first contractor's license in Roanoke on March 15, 1909. He lists his occupation as "general construction" and his employer as "self-employed."</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> Roanoke City Contractor License Applications, 1909-1920, Application #147 - Alfred M. Clemons, issued 3/20/1909
-      </div>
-      
-      <p>Interestingly, his 1910 census entry (finally found it!) lists him as "house carpenter" living in Roanoke's Gainsboro neighborhood. So he was working construction from at least 1909, but didn't officially become a "contractor" until later.</p>
-    </div>
-  </div>
+                <p>Here's where it gets interesting. Alfred enlisted in the Army in 1898 and served until March 1899. After that, he worked postal routes from Concord to Appomattox, then newspaper delivery, before becoming a furnace engineer. By 1915 he was a construction contractor - the job he kept for life.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/CensusDetective</span> • 7 hours ago
-    </div>
-    <div class="comment-body">
-      <p>1910 census found! He's at 314 Henry Street, Roanoke, listed as "carpenter - house building." Lives with wife Mary E. Clemons, no children yet. They're renting.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> 1910 Census, Roanoke, VA, Ward 4, ED 125, Sheet 8A - 314 Henry Street
-      </div>
-      
-      <p>By 1920, they're at 547 Church Street, he owns the home free and clear, and has three kids. That's a pretty impressive rise in 10 years - from renting to homeownership with a growing family.</p>
-    </div>
-  </div>
+                <p>The family moved around a lot: Roanoke by 1920, Dayton Ohio from 1931-1936, then back to Roanoke. His stepfather John "Jim" Alexander Colt was also in lumber after his mother Nancy remarried.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/PropertyRecords</span> • 6 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found his first property purchase! Alfred M. Clemons bought 547 Church Street, Roanoke on April 2, 1915 for $2,850. Deed book 145, page 203. This matches perfectly with your timeline of him settling down as a contractor around 1915.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> Roanoke City Deed Books, Book 145, Page 203 - Alfred M. Clemons purchases 547 Church Street, 4/2/1915, $2,850
-      </div>
-      
-      <p>Interestingly, the seller was the Roanoke Land and Improvement Company - suggesting he was building houses for them and finally saved enough to buy one for himself.</p>
-    </div>
-  </div>
+                <p>I've found some records but need help connecting the dots between his military service and construction career. Anyone else researching this family line?</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/GenealogyNerd88</span> • 5 hours ago
+                <div class="comments">
+                    <a href="#">156 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">u/Army_Records_Guru • 6 hours ago</div>
+                <div class="comment-content">
+                    Found Alfred's enlistment papers! He enlisted 2 May 1898 at Richmond, VA. Serial #873452, Company G, 2nd Virginia Infantry. Discharged 15 March 1899 at Fort Monroe - character listed as "excellent". The interesting part: his occupation on enlistment is listed as "farmer" but on discharge it's "mail carrier", which matches your postal worker timeline perfectly.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Sibling_Detective • 6 hours ago</div>
+                <div class="comment-content">
+                    Found all 9 siblings! From oldest to youngest: Mary Elizabeth (b. 1859), William Robert (b. 1861), Sarah Jane (b. 1863), Thomas Jefferson (b. 1865), Martha Ann (b. 1867), James Henry (b. 1870), Nancy Ellen (b. 1873), Charles Edward (b. 1876), and Alfred Milton (b. 1880). Mary married Thomas Jefferson Fitzgerald, stayed in Appomattox. William became a blacksmith in Lynchburg. Thomas Jefferson Clemons moved to Richmond - worked as a railroad clerk. James Henry died young (age 19) from scarlet fever. Charles moved to West Virginia, worked coal mines.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Colt_Family_Expert • 5 hours ago</div>
+                <div class="comment-content">
+                    John "Jim" Alexander Colt was born 1848 in Campbell County, VA. He was previously married to Mary Frances Thompson (died 1891) and had 4 children: William, Sarah, Martha, and John Jr. After Nancy died in 1902, he married again - third wife was Eliza Jane Martin (married 1903). He died 1918 in Appomattox, buried in Confederate Cemetery. Interestingly, he served in the Civil War too - Company A, 2nd Virginia Cavalry, captured at Appomattox Court House April 9, 1865, the same day Lee surrendered.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Virginia_Death_Records • 4 hours ago</div>
+                <div class="comment-content">
+                    Nancy Spenlow Clemons Colt's death certificate is online - died 12 September 1902 in Appomattox of "consumption". The informant was her husband John Colt. Alfred is listed as living in Concord at the time. The 1900 census shows Alfred (age 20) living with his mother and stepfather, occupation "day laborer".
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Clemons_Ancestry • 4 hours ago</div>
+                <div class="comment-content">
+                    Going back further - Robert W. Clemons was born 1832 in Buckingham County, VA, son of William Clemons (b. 1805) and Elizabeth "Betsy" Woodson (b. 1808). William was the son of Thomas Clemons (b. 1775) who served in the War of 1812. Nancy Spenlow was born 1838 in Appomattox, daughter of Thomas Spenlow (b. 1809) and Mary Ann "Polly" Johnson (b. 1812). The Spenlows were early settlers in Appomattox - Thomas owned 200 acres on the north side of the Appomattox River.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Civil_War_Pension_Pro • 2 hours ago</div>
+                <div class="comment-content">
+                    Robert W. Clemons has a Civil War pension file! Application #765432, filed 1892. He served 3 months in 1865 with Company D, 24th Virginia Cavalry - you're right, saw no combat. The file mentions his death 14 October 1894 from wagon accident. It lists all 9 children - Alfred is the youngest at age 14. Nancy applied for widow's pension in 1895 but was denied because they weren't married during his service.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Construction_Historian • 2 hours ago</div>
+                <div class="comment-content">
+                    Update on Alfred's construction career: After digging deeper, found he actually learned carpentry from his older brother William Robert Clemons, who was a cabinet maker in Lynchburg before becoming a blacksmith. Alfred spent summers 1895-1897 working with William, learning the trade that would eventually lead to his construction career. The transition from furnace engineer to contractor makes sense - he was working at Roanoke Foundry Co. 1912-1914, where he learned architectural ironwork and made connections with builders.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/DNA_Match_Finder • 1 hour ago</div>
+                <div class="comment-content">
+                    DNA match here - I'm descended from Alfred's sister Sarah Jane Clemons who married John William Ferguson. We have a 127 cM match across 4 segments. Sarah and John had 7 children, moved to Missouri around 1905. My great-grandmother was their youngest daughter Bessie Mae. The family story was that Sarah always worried about "little Alf" being the baby of the family after their father died. She kept in touch with him even after moving west - there's a letter from 1934 where Alfred mentions visiting Sarah in Kansas City.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Found my great-grandfather's WWI draft card - he lied about his age!</a></li>
+                <li><a href="#">Anyone have tips for tracking ancestors who changed their names?</a></li>
+                <li><a href="#">Just broke through a 5-year brick wall using city directories</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="comment-body">
-      <p>Guys, this is incredible. You've basically filled in my entire 16-year gap:</p>
-      
-      <ul>
-        <li><strong>1899-1900:</strong> Postal carrier Concord-Appomattox route</li>
-        <li><strong>1900-1901:</strong> Furnace engineer at Roanoke Machine Works, promoted to assistant foreman</li>
-        <li><strong>1902:</strong> Married Mary Elizabeth Thornton</li>
-        <li><strong>1909:</strong> Got contractor's license</li>
-        <li><strong>1910:</strong> Working as carpenter, renting on Henry Street</li>
-        <li><strong>1915:</strong> Bought house on Church Street, established as contractor</li>
-      </ul>
-      
-      <p>The missing piece was that he wasn't "missing" - he was just steadily working his way up from postal carrier to furnace engineer to carpenter to contractor. The census misspellings and him not owning property until 1915 made him invisible in records.</p>
-      
-      <p>Thank you all so much!</p>
-    </div>
-  </div>
-</div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
