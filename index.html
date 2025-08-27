@@ -1,270 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfred M. Clemons: Tracing his military and construction career through records : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1a;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+  }
+  .post {
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+  }
+  .post-header {
+    padding: 8px 16px;
+    background: #F6F7F8;
+    border-bottom: 1px solid #EDEFF1;
+    font-size: 12px;
+    color: #7c7c7c;
+  }
+  .post-title {
+    padding: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a1a1b;
+  }
+  .post-content {
+    padding: 0 16px 16px 16px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .comment {
+    background: white;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    border-left: 2px solid #ccc;
+  }
+  .comment-meta {
+    font-size: 12px;
+    color: #7c7c7c;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: 500;
+    color: #1a1a1b;
+  }
+  .comment-body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .comment-reply {
+    margin-left: 24px;
+    background: #F6F7F8;
+  }
+  .expand-button {
+    color: #0079D3;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .discovery {
+    background: #FFF3E0;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+  .family-tree {
+    background: #E8F5E8;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: monospace;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Appomattox_Archivist</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>892</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Alfred M. Clemons: Tracing his military and construction career through records</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Brick Wall</span>
-                    <span>Posted by u/Appomattox_Archivist • 8 hours ago</span>
-                </div>
-
-                <p>I've been researching Alfred Milton Clemons (1880-1958) for months, and I think I've finally connected some dots. Born north of Appomattox, VA - youngest of 9 kids. His father Robert served in the final months of the Civil War but saw no combat. Robert died in 1894 in a lumber accident (fell off his wagon, broke his spine at age 62).</p>
-
-                <p>Here's where it gets interesting. Alfred enlisted in the Army in 1898 and served until March 1899. After that, he worked postal routes from Concord to Appomattox, then newspaper delivery, before becoming a furnace engineer. By 1915 he was a construction contractor - the job he kept for life.</p>
-
-                <p>The family moved around a lot: Roanoke by 1920, Dayton Ohio from 1931-1936, then back to Roanoke. His stepfather John "Jim" Alexander Colt was also in lumber after his mother Nancy remarried.</p>
-
-                <p>I've found some records but need help connecting the dots between his military service and construction career. Anyone else researching this family line?</p>
-
-                <div class="comments">
-                    <a href="#">156 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">u/Army_Records_Guru • 6 hours ago</div>
-                <div class="comment-content">
-                    Found Alfred's enlistment papers! He enlisted 2 May 1898 at Richmond, VA. Serial #873452, Company G, 2nd Virginia Infantry. Discharged 15 March 1899 at Fort Monroe - character listed as "excellent". The interesting part: his occupation on enlistment is listed as "farmer" but on discharge it's "mail carrier", which matches your postal worker timeline perfectly.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/Sibling_Detective • 6 hours ago</div>
-                <div class="comment-content">
-                    Found all 9 siblings! From oldest to youngest: Mary Elizabeth (b. 1859), William Robert (b. 1861), Sarah Jane (b. 1863), Thomas Jefferson (b. 1865), Martha Ann (b. 1867), James Henry (b. 1870), Nancy Ellen (b. 1873), Charles Edward (b. 1876), and Alfred Milton (b. 1880). Mary married Thomas Jefferson Fitzgerald, stayed in Appomattox. William became a blacksmith in Lynchburg. Thomas Jefferson Clemons moved to Richmond - worked as a railroad clerk. James Henry died young (age 19) from scarlet fever. Charles moved to West Virginia, worked coal mines.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/Colt_Family_Expert • 5 hours ago</div>
-                <div class="comment-content">
-                    John "Jim" Alexander Colt was born 1848 in Campbell County, VA. He was previously married to Mary Frances Thompson (died 1891) and had 4 children: William, Sarah, Martha, and John Jr. After Nancy died in 1902, he married again - third wife was Eliza Jane Martin (married 1903). He died 1918 in Appomattox, buried in Confederate Cemetery. Interestingly, he served in the Civil War too - Company A, 2nd Virginia Cavalry, captured at Appomattox Court House April 9, 1865, the same day Lee surrendered.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/Virginia_Death_Records • 4 hours ago</div>
-                <div class="comment-content">
-                    Nancy Spenlow Clemons Colt's death certificate is online - died 12 September 1902 in Appomattox of "consumption". The informant was her husband John Colt. Alfred is listed as living in Concord at the time. The 1900 census shows Alfred (age 20) living with his mother and stepfather, occupation "day laborer".
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/Clemons_Ancestry • 4 hours ago</div>
-                <div class="comment-content">
-                    Going back further - Robert W. Clemons was born 1832 in Buckingham County, VA, son of William Clemons (b. 1805) and Elizabeth "Betsy" Woodson (b. 1808). William was the son of Thomas Clemons (b. 1775) who served in the War of 1812. Nancy Spenlow was born 1838 in Appomattox, daughter of Thomas Spenlow (b. 1809) and Mary Ann "Polly" Johnson (b. 1812). The Spenlows were early settlers in Appomattox - Thomas owned 200 acres on the north side of the Appomattox River.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/Civil_War_Pension_Pro • 2 hours ago</div>
-                <div class="comment-content">
-                    Robert W. Clemons has a Civil War pension file! Application #765432, filed 1892. He served 3 months in 1865 with Company D, 24th Virginia Cavalry - you're right, saw no combat. The file mentions his death 14 October 1894 from wagon accident. It lists all 9 children - Alfred is the youngest at age 14. Nancy applied for widow's pension in 1895 but was denied because they weren't married during his service.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/Construction_Historian • 2 hours ago</div>
-                <div class="comment-content">
-                    Update on Alfred's construction career: After digging deeper, found he actually learned carpentry from his older brother William Robert Clemons, who was a cabinet maker in Lynchburg before becoming a blacksmith. Alfred spent summers 1895-1897 working with William, learning the trade that would eventually lead to his construction career. The transition from furnace engineer to contractor makes sense - he was working at Roanoke Foundry Co. 1912-1914, where he learned architectural ironwork and made connections with builders.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/DNA_Match_Finder • 1 hour ago</div>
-                <div class="comment-content">
-                    DNA match here - I'm descended from Alfred's sister Sarah Jane Clemons who married John William Ferguson. We have a 127 cM match across 4 segments. Sarah and John had 7 children, moved to Missouri around 1905. My great-grandmother was their youngest daughter Bessie Mae. The family story was that Sarah always worried about "little Alf" being the baby of the family after their father died. She kept in touch with him even after moving west - there's a letter from 1934 where Alfred mentions visiting Sarah in Kansas City.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Found my great-grandfather's WWI draft card - he lied about his age!</a></li>
-                <li><a href="#">Anyone have tips for tracking ancestors who changed their names?</a></li>
-                <li><a href="#">Just broke through a 5-year brick wall using city directories</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="post">
+    <div class="post-header">
+      Posted by u/GenealogyNerd88 • 2 hours ago
     </div>
+    <div class="post-title">
+      [UPDATE] Alfred Milton Clemons - Found EVERYTHING on his career gap! Now diving into his siblings, parents, stepfather, and ancestors
+    </div>
+    <div class="post-content">
+      <p>Huge thanks to everyone who helped me crack the 1899-1915 mystery! Now I'm going deeper - looking into his family connections. Here's what I know:</p>
+      
+      <ul>
+        <li>Parents: Robert W. Clemons (Civil War vet) and Nancy Spenlow</li>
+        <li>Stepfather: John "Jim" Alexander Colt (married Nancy after Robert's death)</li>
+        <li>Alfred was youngest of 9 children</li>
+        <li>Family originally from north of Appomattox, VA</li>
+      </ul>
+      
+      <p>The family stories mention Robert Clemons had connections to the Spenlow family plantation, but I can't find anything concrete. Also heard rumors that John Colt was "bad news" - apparently there was some drama when he married Nancy in 1894 right after Robert's death.</p>
+      
+      <p>Looking for any info on:
+        - Alfred's 8 siblings (names, where they ended up)
+        - Robert W. Clemons' family origins (where did THEY come from?)
+        - Nancy Spenlow's family (plantation connections?)
+        - John Colt's background and the family drama
+        - Any ancestors going back further</p>
+    </div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SouthernPlantationRecords</span> • 1 hour ago
+    </div>
+    <div class="comment-body">
+      <p>Found Nancy Spenlow's family! She was from the Spenlows of Buckingham County - they weren't plantation owners, they were plantation OVERSEERS. The Spenlow family worked the Ellis Plantation for three generations.</p>
+      
+      <div class="discovery">
+        <strong>Discovery:</strong> 1880 Census, Buckingham County, VA - Nancy Spenlow (age 38) listed as daughter of William Spenlow, plantation overseer
+      </div>
+      
+      <div class="family-tree">
+Robert W. Clemons (1832-1894)
+├── m. Nancy Spenlow (1842-1902)
+    ├── [8 older siblings]
+    ├── Alfred Milton Clemons (1880-1958) - youngest
+      </div>
+      
+      <p>William Spenlow (Nancy's father) was born 1818 and died 1888. He was the son of Jeremiah Spenlow, who was brought over from England in 1795 as an indentured servant to work the Ellis Plantation. The Spenlows became free men by 1820 and stayed on as overseers.</p>
+    </div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/CivilWarPensionFiles</span> • 58 minutes ago
+    </div>
+    <div class="comment-body">
+      <p>Robert W. Clemons' pension file is GOLD. Found his entire family tree plus some wild details about his service.</p>
+      
+      <div class="discovery">
+        <strong>Discovery:</strong> Civil War Pension File #WC-34567, National Archives - Robert W. Clemons, Company G, 21st Virginia Infantry
+      </div>
+      
+      <div class="family-tree">
+William Clemons (1798-1869) - Farmer
+├── m. Mary Elizabeth Walker (1801-1875)
+    ├── Robert Walker Clemons (1832-1894) - Civil War
+    ├── Sarah Ann Clemons (1834-1901) - married Thomas Bradford
+    ├── John Henry Clemons (1836-1885) - died in Civil War, Gettysburg
+    ├── Martha Jane Clemons (1839-1912) - married Joseph Spenlow (Nancy's brother!)
+    └── 6 more siblings...
+      </div>
+      
+      <p>Robert served in the final months of the war but saw NO combat - he was hospitalized with measles for most of his service. The pension file mentions he was "too sick to fight" and was discharged in May 1865.</p>
+      
+      <p>The connection to the Spenlow family goes deeper - Robert's sister Martha Jane married Joseph Spenlow, Nancy's brother. So Robert and Nancy were already related by marriage before they married each other!</p>
+    </div>
+    
+    <div class="comment comment-reply">
+      <div class="comment-meta">
+        <span class="comment-author">u/GenealogyNerd88</span> • 52 minutes ago
+      </div>
+      <div class="comment-body">
+        <p>Wait, so Robert's sister married Nancy's brother? That means Alfred's parents were already in-laws when they got married? This family tree is more tangled than I thought!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/StepfatherJohnColt</span> • 45 minutes ago
+    </div>
+    <div class="comment-body">
+      <p>John "Jim" Alexander Colt was BAD news. Found court records that paint a picture of a real piece of work.</p>
+      
+      <div class="discovery">
+        <strong>Discovery:</strong> Appomattox County Court Records, 1894-1902 - John Colt had 14 court appearances for drunk and disorderly, assault, and failure to pay debts
+      </div>
+      
+      <p>He married Nancy Spenlow Clemons in August 1894, just 3 months after Robert's death. The marriage was witnessed by Nancy's brother Joseph (the one who married Robert's sister). The family story about "drama" was probably because:</p>
+      
+      <ul>
+        <li>John was 15 years younger than Nancy (he was 39, she was 52)</li>
+        <li>He had a reputation as a drunk and brawler</li>
+        <li>He immediately took control of Robert's farm and sold off equipment</li>
+        <li>He moved the family to Granger Rd, away from the Clemons family land</li>
+      </ul>
+      
+      <p>John Colt died in 1905 of liver failure (shocker). After his death, the family split up - most of the older children were already adults and the younger ones went to live with relatives.</p>
+    </div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SiblingTracker</span> • 38 minutes ago
+    </div>
+    <div class="comment-body">
+      <p>Found all 8 of Alfred's siblings! Here are their fates:</p>
+      
+      <div class="family-tree">
+Robert & Nancy's 9 children:
+├── William Henry Clemons (1860-1925) - moved to Texas, rancher
+├── Mary Elizabeth Clemons (1862-1940) - married local merchant, stayed Appomattox
+├── Nancy Jane Clemons (1864-1933) - married railroad worker, moved to Richmond
+├── Robert Walker Clemons Jr (1866-1918) - took father's farm, died in accident
+├── Sarah Ann Clemons (1868-1955) - never married, became schoolteacher
+├── John Thomas Clemons (1870-1898) - died young, typhoid fever
+├── Martha Louise Clemons (1872-1945) - married into Howell family (Mary's relatives!)
+├── Charles Edward Clemons (1875-1960) - became minister, moved to North Carolina
+└── Alfred Milton Clemons (1880-1958) - youngest, contractor
+      </div>
+      
+      <p>Interesting connections: Martha Louise married into the Howell family - the same family that Mary Elizabeth Thornton (Alfred's wife) came from. So Alfred's sister married his wife's relative!</p>
+      
+      <p>Also, William Henry in Texas became quite wealthy as a rancher. There's mention in family letters that he sent money back to help Alfred buy his first house in 1915.</p>
+    </div>
+    
+    <div class="comment comment-reply">
+      <div class="comment-meta">
+        <span class="comment-author">u/GenealogyNerd88</span> • 32 minutes ago
+      </div>
+      <div class="comment-body">
+        <p>So Alfred's wife Mary Elizabeth Thornton was related to his sister Martha's husband? This family is like a spider web of connections! Also explains how Alfred could afford that $2,850 house in 1915 - his brother was bankrolling him!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/DeepAncestors</span> • 25 minutes ago
+    </div>
+    <div class="comment-body">
+      <p>Going way back - found Robert W. Clemons' family origins! They were originally from Scotland.</p>
+      
+      <div class="discovery">
+        <strong>Discovery:</strong> Scottish Emigration Records - James Clemons (1768-1850) arrived from Glasgow in 1795 as part of the Ulster Scot migration
+      </div>
+      
+      <div class="family-tree">
+James Clemons (1768-1850) - immigrated 1795 from Glasgow
+├── m. Sarah McAllister (1770-1830) - also from Scotland
+    ├── William Clemons (1798-1869) - Alfred's grandfather
+    ├── Robert Clemons (1800-1855) - stayed in Virginia
+    └── 5 more siblings who spread across the South
+      </div>
+      
+      <p>The Clemons family originally settled in Rockingham County, Virginia before moving to Appomattox. The Walker family (Robert's mother's side) were English immigrants who came over in the 1750s.</p>
+      
+      <p>Also found that the Clemons name was originally "MacLemmons" - they changed it when they immigrated to sound more "American."</p>
+    </div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/GenealogyNerd88</span> • 15 minutes ago
+    </div>
+    <div class="comment-body">
+      <p>Holy shit, this is incredible. My family tree is basically a Scottish-English-Southern Gothic novel:</p>
+      
+      <ul>
+        <li>Scottish immigrants named MacLemmons who became Clemons</li>
+        <li>Plantation overseers who became free men</li>
+        <li>Brothers marrying sisters creating a family web</li>
+        <li>A stepfather who drank himself to death</li>
+        <li>A successful rancher brother bankrolling the youngest</li>
+        <li>Marriages connecting back to the same families over and over</li>
+      </ul>
+      
+      <p>Alfred wasn't just some random contractor - he was the product of 150 years of Scottish immigrants, plantation overseers, Civil War veterans, and family drama. No wonder he kept moving around - his entire family was scattered across Virginia, Texas, North Carolina, and Ohio!</p>
+      
+      <p>Thank you all for this incredible deep dive. My family tree looks like a conspiracy board now!</p>
+    </div>
+  </div>
+</div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
