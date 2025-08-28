@@ -1,303 +1,330 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-  .link-preview {
-    border: 1px solid #EDEFF1;
-    border-radius: 4px;
-    padding: 12px;
-    margin: 10px 0;
-    background-color: #F6F7F8;
-  }
-  .link-title {
-    font-size: 16px;
-    font-weight: 500;
-    color: #0079D3;
-    margin-bottom: 4px;
-  }
-  .link-description {
-    font-size: 13px;
-    color: #7C7C7C;
-  }
-  .link-url {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-top: 4px;
-  }
-  .gold-flair {
-    background-color: #ffcc00;
-    color: #8B4513;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niobium Linux 1.0 Released! : linux</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .link-preview {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 12px;
+            margin: 10px 0;
+            background: #fafafa;
+        }
+        .link-preview h4 {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            color: #0066cc;
+        }
+        .link-preview p {
+            margin: 0;
+            font-size: 12px;
+            color: #666;
+        }
+        .code-block {
+            background: #f6f7f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/linux</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/elemental_dev</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">45 minutes ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/linux
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Niobium OS 1.0 officially released - Elemental Software delivers on their commercial Linux promise</div>
-    <div class="post-meta">
-      <span class="comment-score">12.4k upvotes</span> • 94% upvoted • posted by <span class="comment-author">elementaldev</span> <span class="flair">Official Account</span>
-    </div>
-    <div class="post-content">
-      <p><strong>It's here!</strong> After 8 months of beta testing, <strong>Niobium OS 1.0</strong> is now available for download.</p>
-      
-      <p><strong>Download Links:</strong></p>
-      <ul>
-        <li>Free Consumer Edition: <strong>niobium.com/download</strong></li>
-        <li>Enterprise Edition: Contact sales</li>
-      </ul>
-      
-      <p><strong>System Requirements:</strong></p>
-      <ul>
-        <li>64-bit processor</li>
-        <li>4GB RAM (8GB recommended)</li>
-        <li>25GB disk space</li>
-      </ul>
-      
-      <div class="link-preview">
-        <div class="link-title">Niobium OS 1.0 Released - Elemental Software</div>
-        <div class="link-description">Download the official release of Niobium OS 1.0, featuring the Solar desktop environment, commercial software support, and enterprise-grade security features.</div>
-        <div class="link-url">niobium.com/download</div>
-      </div>
-      
-      <p>Thank you to our 15,000+ beta testers who helped us polish this release!</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">LinuxEnthusiast</span> • <span class="comment-score">2.8k points</span> • 6 hours ago <span class="gold-flair">Gilded</span>
-      </div>
-      <div class="comment-content">
-        <p>Holy shit, it's actually here! Been running the beta since September and this thing is rock solid. The installer is the smoothest I've ever used - literally just worked on my ThinkPad, Dell XPS, and even my old MacBook Pro.</p>
-        
-        <p>The Solar desktop is gorgeous. It's like KDE Plasma had a baby with macOS and somehow made it better. The global menu actually works with every app I've tried, including LibreOffice and Chrome.</p>
-        
-        <p>Also, the software center having Slack, Discord, and VS Code without any fuckery with snaps or flatpak? *Chef's kiss*</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">elementaldev</span> • <span class="comment-score">1.2k points</span> • 5 hours ago
-        </div>
-        <div class="comment-content">
-          <p>Thanks for being one of our beta testers! Your feedback on the installer helped us fix that weird UEFI issue with Dell laptops.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">EnterpriseSysAdmin</span> • <span class="comment-score">1.5k points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Just deployed this across 200 workstations at work. The enterprise tools are legitimately impressive - AD integration worked out of the box, policy management through the web console is intuitive, and the delta updates are saving us tons of bandwidth.</p>
-        
-        <p>My only complaint: the documentation for enterprise deployment is a bit sparse. Had to figure out some of the PXE boot stuff through trial and error.</p>
-        
-        <p>Overall though, this might actually be the first Linux desktop that our Windows-only users aren't complaining about.</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">elementaldev</span> • <span class="comment-score">743 points</span> • 4 hours ago
-        </div>
-        <div class="comment-content">
-          <p>We're working on better enterprise documentation! Should have comprehensive PXE and mass deployment guides up by next week. Thanks for the feedback!</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DistroReviewer</span> • <span class="comment-score">892 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Just finished a full review on my blog. TL;DR: This is the most polished 1.0 release I've ever seen in the Linux world.</p>
-        
-        <p>Pros:</p>
-        <ul>
-          <li>Install process is genuinely easier than Windows 10</li>
-          <li>Solar desktop is beautiful and functional</li>
-          <li>Commercial software support is unmatched in Linux</li>
-          <li>Performance is excellent - boots in 8 seconds on my SSD</li>
-        </ul>
-        
-        <p>Cons:</p>
-        <ul>
-          <li>Still some minor bugs with NVIDIA proprietary drivers</li>
-          <li>Package repository is smaller than established distros</li>
-          <li>No 32-bit support (but honestly, who cares in 2017)</li>
-        </ul>
-        
-        <p>Overall score: 9/10 - This might actually be "the year of Linux on the desktop"</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">NVIDIAUser</span> • <span class="comment-score">567 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Can confirm the NVIDIA issues. Running a GTX 1070 and had some screen tearing with the proprietary drivers. Nouveau works but performance is shit for gaming.</p>
-        
-        <p>That said, I switched to AMD RX 480 and everything works flawlessly. The AMDGPU drivers are actually detecting my 144Hz monitor correctly, which Ubuntu never managed.</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">elementaldev</span> • <span class="comment-score">234 points</span> • 2 hours ago
-        </div>
-        <div class="comment-content">
-          <p>We're working closely with NVIDIA on the driver issues. Should have an updated driver package in the next few days. The tearing issue is specific to the 375.xx driver series.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">GamingOnLinux</span> • <span class="comment-score">743 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Tested 47 games from my Steam library. All but 3 worked perfectly, and those 3 were due to anti-cheat (looking at you, Destiny 2).</p>
-        
-        <p>ProtonDB is reporting excellent compatibility scores for Niobium. The gaming performance is actually slightly better than Pop!_OS in my testing.</p>
-        
-        <p>Also, the Steam integration is slick - it detects your games library and automatically applies the optimal Proton version.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">PrivacyConscious</span> • <span class="comment-score">456 points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Privacy analysis: Pretty good for a commercial distro. No telemetry enabled by default, you can opt-in to crash reporting. The only "phone home" is checking for updates, which you can disable.</p>
-        
-        <p>All the commercial software (Slack, Discord, etc.) is sandboxed using their container system, so that's nice. Way better than the Windows approach.</p>
-        
-        <p>One weird thing: the included browser is Chromium with some custom patches. Not Firefox, which seems odd for a Linux distro.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">elementaldev</span> • <span class="comment-score">298 points</span> • 1 hour ago
-      </div>
-      <div class="comment-content">
-        <p>We're using Chromium because of better sandboxing and security features for the average user. Firefox is available in the software center and is one click to install. We wanted to provide the most secure default experience.</p>
-        
-        <p>Also, we're working on a Firefox build with similar sandboxing features.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MigrationSuccessStory</span> • <span class="comment-score">892 points</span> • 1 hour ago <span class="gold-flair">Gilded</span>
-      </div>
-      <div class="comment-content">
-        <p>I'm 67 years old. Been using Windows since 3.1. My grandson installed Niobium on my old laptop last week. I can actually use this thing - it's like Windows but everything makes more sense. The software center is like an app store, but free. LibreOffice works just like Microsoft Office used to.</p>
-        
-        <p>My grandson was shocked when I told him I didn't need Windows anymore. This is the first time I've felt like I actually understand my computer in 30 years.</p>
-        
-        <p>Thank you to whoever made this. You've got a customer for life.</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">elementaldev</span> • <span class="comment-score">1.5k points</span> • 1 hour ago
-        </div>
-        <div class="comment-content">
-          <p>This comment made our entire team's day. Thank you for sharing this - it's exactly why we built Niobium.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>3,247</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Niobium Linux 1.0 Released!</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Release</span>
+                    <span>Posted by u/elemental_dev • 45 minutes ago</span>
+                </div>
+
+                <p>It's here! After 8 months of development since our initial announcement, Niobium Linux 1.0 is now available for download. Launch went smoothly and we're excited to see what you think.</p>
+
+                <h3>What's New in 1.0</h3>
+                <ul>
+                    <li>✅ Stable release based on Debian 8.7</li>
+                    <li>✅ Solar Desktop Environment 1.0 (KDE-based)</li>
+                    <li>✅ Commercial package repository ready</li>
+                    <li>✅ 24/7 enterprise support now active</li>
+                    <li>✅ Official documentation complete</li>
+                </ul>
+
+                <h3>Download & Pricing</h3>
+                <ul>
+                    <li><strong>Evaluation ISO:</strong> Free download, 30-day trial</li>
+                    <li><strong>Desktop License:</strong> $99/year per workstation</li>
+                    <li><strong>Server License:</strong> $299/year per server</li>
+                    <li><strong>Enterprise:</strong> Custom pricing available</li>
+                </ul>
+
+                <div class="link-preview">
+                    <h4>Download Niobium Linux 1.0</h4>
+                    <p>ISO images available for x86_64 and ARM64. Includes live environment and installer. MD5 checksums provided.</p>
+                </div>
+
+                <div class="code-block">
+# Quick install for evaluation
+wget https://elementalsoft.com/downloads/niobium-1.0-x86_64.iso
+sha256sum niobium-1.0-x86_64.iso
+# then burn to USB or use in VM
+                </div>
+
+                <p>Thanks to everyone who participated in the beta program! Special shoutout to the enterprise testers who helped us refine the commercial features.</p>
+
+                <div class="comments">
+                    <a href="#">892 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">u/Linux_Distro_Hunter • 38 minutes ago</div>
+                <div class="comment-content">
+                    Just finished downloading and installing in a VM. Installation was smooth - basically Debian installer with Elemental branding. Solar DE is actually pretty nice - it's like KDE but with a more professional feel. The default theme is easy on the eyes. Gonna test it for the full 30 days.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Enterprise_IT_Guy • 35 minutes ago</div>
+                <div class="comment-content">
+                    This is exactly what we've been waiting for. Just got approval to test it on 5 workstations. The pricing is competitive with Ubuntu Pro desktop. Really like the policy management tools - way better than trying to manage KDE's settings across multiple machines.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Debian_Purist • 32 minutes ago</div>
+                <div class="comment-content">
+                    It's basically Debian with a custom repo and KDE theming. Not seeing $99/year worth of value here. I can replicate most of this with standard Debian + KDE + some custom configs. The commercial support better be amazing.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Elemental_Support • 28 minutes ago</div>
+                <div class="comment-content">
+                    <strong>Support team here!</strong> Happy to answer any questions. The $99 includes 24/7 phone support, custom package repository access, and security updates guaranteed for 5 years. Plus we handle all the enterprise policy management - no need to maintain custom configs across your fleet.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Sysadmin_Bob • 25 minutes ago</div>
+                <div class="comment-content">
+                    Running the installer now. ISO is 2.3GB - pretty standard. Noticed they have a "commercial packages" option during install, which requires license key. The evaluation is fully functional though. Solar DE feels snappy, even in a VM with 2GB RAM.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Security_Researcher • 22 minutes ago</div>
+                <div class="comment-content">
+                    Quick security scan: based on Debian 8.7 with kernel 3.16.0-4 (EOL in 2018). They have their own security repo though. No proprietary crypto extensions in this release - that must have been dropped. Still concerned about long-term security support vs just using Debian LTS.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/Beta_Tester_Pro • 18 minutes ago</div>
+                <div class="comment-content">
+                    Been running the beta since October. The final release is solid - much more stable than the beta builds. The commercial repo has some nice additions like Chrome, Slack, and VMware tools pre-packaged. The 5-year support guarantee is what sold my company on the licensing.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/KDE_Developer • 15 minutes ago</div>
+                <div class="comment-content">
+                    They actually fixed most of the KDE issues from the beta. The policy management is pretty clever - it's like a centralized KDE systemsettings. Still think they could have contributed this upstream instead of forking KDE, but I understand the business model.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">u/VM_Tester • 12 minutes ago</div>
+                <div class="comment-content">
+                    Performance is impressive. Fresh install uses ~400MB RAM at idle. Boot time is 12 seconds on my test VM (4GB RAM). The Solar theme is consistent across all KDE apps. Only issue so far: the software center is a bit slow to load commercial packages.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/linux</h3>
+            <ul>
+                <li><a href="#">Linux kernel 4.10 released</a></li>
+                <li><a href="#">Ubuntu 17.04 Beta 1 available</a></li>
+                <li><a href="#">Fedora 25 Workstation review</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
