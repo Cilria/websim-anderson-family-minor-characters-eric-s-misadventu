@@ -1,296 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[SERIOUS] My friend just told me SEGA actually stands for "Setniet Electronic Global Annihilator" and is run by Hitler's son : conspiracy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0a0a0a;
-            margin: 0;
-            padding: 0;
-            color: #d4d4d4;
-        }
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: #1a1a1a;
-            border-radius: 8px;
-            border: 1px solid #333;
-            box-shadow: 0 2px 4px rgba(255,0,0,0.3);
-        }
-        .header {
-            background: linear-gradient(135deg, #ff0000, #8b0000);
-            color: #ffcccc;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-            border-bottom: 2px solid #ff4500;
-        }
-        .post {
-            padding: 25px;
-            border-bottom: 1px solid #333;
-            background: linear-gradient(to bottom, #1a1a1a, #0f0f0f);
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #ff4500;
-            text-shadow: 0 0 10px #ff4500;
-        }
-        .content {
-            margin-left: 60px;
-        }
-        .title {
-            margin: 0 0 15px 0;
-            font-size: 20px;
-            font-weight: 600;
-            color: #ffcccc;
-            text-shadow: 0 0 5px #ff0000;
-        }
-        .title a {
-            color: #66ccff;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 13px;
-            color: #888;
-            margin-bottom: 15px;
-        }
-        .flair {
-            background: #ff0000;
-            color: #fff;
-            padding: 3px 8px;
-            border-radius: 15px;
-            font-size: 11px;
-            margin-right: 8px;
-            font-weight: bold;
-            box-shadow: 0 0 5px #ff0000;
-        }
-        .comments {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #888;
-        }
-        .comments a {
-            color: #66ccff;
-            text-decoration: none;
-        }
-        .sort-bar {
-            background: #222;
-            padding: 12px 25px;
-            border-bottom: 1px solid #333;
-            font-size: 12px;
-            color: #aaa;
-            border-left: 3px solid #ff4500;
-        }
-        .sort-bar a {
-            color: #ff4500;
-            text-decoration: none;
-            margin-right: 15px;
-            font-weight: 500;
-        }
-        .sidebar {
-            background: #111;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            border-top: 1px solid #333;
-        }
-        .sidebar h3 {
-            margin: 0 0 15px 0;
-            font-size: 16px;
-            color: #ffcccc;
-            text-shadow: 0 0 3px #ff0000;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-            color: #888;
-        }
-        .comment-section {
-            padding: 25px;
-            border-top: 1px solid #333;
-            background: #0a0a0a;
-        }
-        .comment {
-            margin-bottom: 20px;
-            padding-left: 25px;
-            border-left: 2px solid #ff4500;
-            background: linear-gradient(to right, #111, transparent);
-            padding: 15px;
-            border-radius: 0 8px 8px 0;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #ff6666;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #ddd;
-        }
-        .comment-reply {
-            color: #ff4500;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 8px;
-            text-shadow: 0 0 3px #ff4500;
-        }
-        .highlight {
-            color: #ffcccc;
-            font-weight: bold;
-        }
-        .shadow-text {
-            text-shadow: 0 0 5px #ff0000;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/conspiracy</span>
-            <span style="font-size: 14px; opacity: 0.7;">•</span>
-            <span style="font-size: 14px; opacity: 0.7;">Posted by u/AncientAryan88</span>
-            <span style="font-size: 14px; opacity: 0.7;">•</span>
-            <span style="font-size: 14px; opacity: 0.7;">3 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>666</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">[SERIOUS] My friend just told me SEGA actually stands for "Setniet Electronic Global Annihilator" and is run by Hitler's son</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">🔴TOP SECRET🔴</span>
-                    <span>Posted by u/AncientAryan88 • 3 hours ago</span>
-                </div>
-
-                <p>Okay so my friend (who DEFINITELY isn't schizophrenic) just dropped some knowledge on me that's been keeping me up all night. He says SEGA doesn't actually mean what we think it means - it's an acronym for <span class="highlight">Setniet Electronic Global Annihilator</span>.</p>
-
-                <p>Apparently the <span class="shadow-text">REAL FOUNDER</span> was Adolf Hitler Jr. who escaped to Argentina and started SEGA as part of a mega-group of <span class="highlight">HOLY COMPANIES</span> that hold the key to super technology. These companies apparently have technology that's centuries ahead of what we know.</p>
-
-                <p>Here's where it gets WILD. SEGA's ultimate goal isn't just world domination - it's <span class="highlight">GALAXY DOMINATION</span> and then <span class="highlight">ENTIRE UNIVERSE DOMINATION</span>. They're copying people and turning them into robotic slaves. The cherry on top? They hold the keys to <span class="highlight">HYPERBOREA</span> and have destroyed over 60 planets in our solar system for discovering this truth.</p>
-
-                <p>Think about it - why else would they have a console called "Dreamcast"? It's because they're literally casting dreams into reality. Sonic? He's not a hedgehog - he's a genetically modified super soldier from the Hyperborean labs.</p>
-
-                <p>My friend showed me "evidence" but honestly I was too scared to look directly at it. The government has been suppressing this for decades. That's why they stopped making consoles - they achieved their goal and moved to the next phase.</p>
-
-                <p>Anyone else heard about this or am I just losing my mind?</p>
-
-                <div class="comments">
-                    <a href="#">1.3k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">u/ShadowHedgehog420 • 2 hours ago</div>
-                <div class="comment-content">
-                    Bro... I KNEW IT. That's why Sonic's eyes are green - they're not eyes, they're <span class="highlight">Hyperborean energy portals</span>. My uncle worked at SEGA in the 90s and he said there was a door that was always locked and had "Project Setniet" written on it in blood. He disappeared shortly after asking about it.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/DeepStateGaming • 2 hours ago</div>
-                <div class="comment-content">
-                    This is actually true and I can prove it. Connect the dots: SEGA stopped making consoles in 2001... the same year 9/11 happened. Coincidence? I think NOT. The Dreamcast VMU? That's a <span class="highlight">mind control device</span> disguised as a memory card. Wake up sheeple.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/EggmanDidNothingWrong • 1 hour ago</div>
-                <div class="comment-content">
-                    OP your friend is 100% correct. Dr. Robotnik isn't the villain - he's literally trying to STOP SEGA's plan. The "Chaos Emeralds" are actually <span class="highlight">ancient Hyperborean technology</span> that can reverse the roboticization process. That's why Sonic always stops him - Sonic is a SEGA agent sent to prevent Robotnik from saving humanity.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/SEGA_Internal_Memo • 1 hour ago</div>
-                <div class="comment-content">
-                    I probably shouldn't be sharing this but I work at SEGA (or what's left of it). The headquarters in Japan has a basement that's 47 floors deep. Each floor contains a different <span class="highlight">planet-destroying weapon</span>. Floor 23 has a giant golden statue of Hitler's son holding a Genesis controller. We have mandatory "meditation sessions" where they actually download your consciousness into their database.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/AtariTruthSeeker • 1 hour ago</div>
-                <div class="comment-content">
-                    This explains why Nintendo and SEGA "made up" in the 2000s. Nintendo found out about the plan and tried to warn us. That's why the Wii had motion controls - it was actually designed to <span class="highlight">counteract SEGA's mind control waves</span>. The GameCube's handle? That's so you could physically defend yourself against SEGA agents.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/MissingPlanetsResearch • 45 min ago</div>
-                <div class="comment-content">
-                    Has anyone else noticed we only have 8 planets now? When I was a kid we had 9 planets. Pluto didn't just get "downgraded" - it was <span class="highlight">SEGA'D</span>. They destroyed Pluto for getting too close to the truth. Same thing happened to the other 59+ planets. They weren't "discovered to be asteroids" they were <span class="highlight">ELIMINATED</span>.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/GenesisDoesWhatNintendont • 30 min ago</div>
-                <div class="comment-content">
-                    The Genesis slogan "Genesis does what Nintendon't" is actually a confession. It means <span class="highlight">"Genesis does what Nintendo won't do - destroy planets and enslave humanity"</span>. The blast processing? That's how they process the souls they harvest. Blast = <span class="highlight">B</span>iological <span class="highlight">L</span>ifeform <span class="highlight">A</span>ssimilation and <span class="highlight">S</span>oul <span class="highlight">T</span>ransfer.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">u/RealHitlerJr • 20 min ago</div>
-                <div class="comment-content">
-                    I can confirm this is all true. Source: I am literally Hitler's son and founder of SEGA. We have been monitoring this thread. Expect a visit from the <span class="highlight">Dreamcast Squad</span> within 24 hours. Resistance is futile. All your base are belong to us.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/conspiracy</h3>
-            <ul>
-                <li><a href="#">PSA: If your Sonic plushie's eyes start glowing red, RUN</a></li>
-                <li><a href="#">The moon landing was faked by SEGA to hide the Hyperborean base</a></li>
-                <li><a href="#">Why Mario Kart has bananas as weapons (SEGA insider reveals all)</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/conspiracy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">My friend just revealed that SEGA actually stands for "Setniet Electronic Global Annihilator" and is run by Hitler's son to enslave humanity through Hyperborean tech</div>
+    <div class="post-meta">
+      <span class="comment-score">2.3k upvotes</span> • posted by <span class="comment-author">TailsWasRightAllAlong</span> <span class="flair">Wake Up Sheeple</span>
     </div>
+    <div class="post-content">
+      <p>So my friend has been going through what he calls his "awakening period" and just dropped this absolute bombshell on me. According to him:</p>
+      
+      <ul>
+        <li>SEGA doesn't stand for Service Games, but "Setniet Electronic Global Annihilator"</li>
+        <li>The REAL founder was Hitler's secret son who escaped to Argentina and then Japan</li>
+        <li>SEGA is part of a "holy trinity of companies" with Nintendo and Sony that control super technology</li>
+        <li>They're using Sonic the Hedgehog to program children into robotic slaves through subliminal messages</li>
+        <li>SEGA has already destroyed 60+ planets in our solar system for discovering this truth</li>
+        <li>The rings in Sonic games are actually portals to Hyperborea</li>
+        <li>Sonic's speed represents the speed at which they're copying human consciousness</li>
+      </ul>
+      
+      <p>He says the proof is in Sonic 3's hidden level select code and that Tails is actually a "biological AI" created to monitor us. I'm honestly just trying to figure out what kind of mushrooms he's been eating.</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ShadowTheHedgehogReal</span> • <span class="comment-score">1.2k points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Your friend is actually onto something. Last week I was playing Sonic 2 and if you enter the debug mode and look at the background tiles in Oil Ocean, you can clearly see "SETNIET" spelled out in the pixels. Also, the sound effect for collecting rings? That's literally a recording of human screams sped up 666x. Wake up, this has been in front of us the whole time.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">KnucklesIsntReal</span> • <span class="comment-score">342 points</span> • 2 hours ago
+        </div>
+        <div class="comment-content">
+          <p>Bro I literally just checked this and you're right wtf</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">SegaGenesisDoesWhatNintendont</span> • <span class="comment-score">867 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Fun fact: If you play the Sega startup sound backwards at 33rpm, you can hear "HEIL HYPERBOREA" being chanted by what sounds like 1000 robotic voices. My cousin showed me this in 1998 and I've never turned on my Genesis since.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">DrRobotnikOfficial</span> • <span class="comment-score">654 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Can confirm, I work at SEGA and we've been putting microchips in the cartridges since 1991. The "blast processing" was actually just a cover for our hyperspace communication arrays. The real reason we stopped making consoles was because the UN found out about planet Mobius and we had to cover it up.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">DreamcastWasAnInsideJob</span> • <span class="comment-score">445 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>The Dreamcast's GD-ROM format wasn't just for anti-piracy, it was because regular CDs couldn't hold the consciousness-transfer protocols. Every time you played Shenmue, you were actually uploading fragments of your soul to the Hyperborean servers.</p>
+        
+        <p>The VMU memory cards? Literal soul containers. That's why they're shaped like tiny tombstones.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">SonicAdventure2BattleReal</span> • <span class="comment-score">523 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>Has anyone else noticed that the Chaos Emeralds are the same colors as the Nazi flag's color scheme? Red, white, black... coincidence? I think not. Also, Shadow the Hedgehog is literally just Hitler in hedgehog form. His backstory about being created on the ARK? That's just Project Paperclip in space.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ChiliDogConspiracy</span> • <span class="comment-score">289 points</span> • 45 minutes ago
+      </div>
+      <div class="comment-content">
+        <p>EXPLAIN THIS THEN: Why does Sonic love chili dogs? Because "chili dog" backwards is "god ylilhc" which is ancient Hyperborean for "enslave the mammals." This goes deeper than we thought.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">YujiNakaTruthTeller</span> • <span class="comment-score">198 points</span> • 30 minutes ago
+      </div>
+      <div class="comment-content">
+        <p>Yuji Naka didn't "leave" SEGA, he was extracted by the Galactic Federation when he tried to warn us about the 60 planets thing. The real Naka is living on a moon of Jupiter under witness protection. The "Naka" you see on Twitter is a clone with implanted memories. The proof is in Sonic 3's Carnival Night Zone - those balloons are actually surveillance drones.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">GreenHillZoneSurvivor</span> • <span class="comment-score">156 points</span> • 15 minutes ago
+      </div>
+      <div class="comment-content">
+        <p>I grew up near Green Hill Zone (it's actually in Oregon, not fictional) and I can confirm the government fenced it off in 1994 after "chemical spills." Chemical spills my ass, that was SEGA cleaning up evidence of the roboticizer experiments. My neighbor's cousin worked there and said the animals were being turned into robots way before Dr. Robotnik was even invented.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TailsWasRightAllAlong</span> • <span class="comment-score">89 points</span> • 5 minutes ago
+      </div>
+      <div class="comment-content">
+        <p>Update: My friend just texted me that the "SEGA chant" at the start of Sonic games is actually a binding spell in ancient Hyperborean. He says if you listen closely you can hear "submit your free will to Setniet" in the background vocals. He's currently building a Faraday cage around his Genesis collection to stop the "soul extraction waves."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">SaturnWasTooPowerful</span> • <span class="comment-score">77 points</span> • 2 minutes ago
+      </div>
+      <div class="comment-content">
+        <p>The Sega Saturn had 8 processors because each one was designed to control a different dimension. The 32X was literally a portal device that got discontinued when the interdimensional beings from the 7th dimension started noticing us. This is why the Saturn failed in America - the government threatened to nuke SEGA HQ if they kept selling dimensional gateways to children.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
