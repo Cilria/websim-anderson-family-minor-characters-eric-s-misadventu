@@ -3,215 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Russia's Bloody Consolidation: From 2,500 Warlords to 181 - CNN</title>
+    <title>Russia's warlord consolidation: From 2,500 to 181 in one year of brutal infighting : worldnews</title>
     <style>
         body {
-            font-family: CNN, Helvetica Neue, Helvetica, Arial, Utopia, sans-serif;
-            background-color: #f4f4f4;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            color: #262626;
-        }
-        .cnn-header {
-            background-color: #cc0000;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        .breaking-banner {
-            background-color: #8B0000;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { background-color: #8B0000; }
-            50% { background-color: #cc0000; }
-            100% { background-color: #8B0000; }
+            color: #1a1a1a;
         }
         .container {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 20px auto;
             background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .article-header {
-            padding: 30px 40px 20px 40px;
-            border-bottom: 1px solid #e0e0e0;
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
         }
-        .timestamp {
-            color: #666;
-            font-size: 14px;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
             margin-bottom: 10px;
         }
-        .headline {
-            font-size: 36px;
-            font-weight: bold;
-            line-height: 1.2;
-            margin: 0 0 15px 0;
-            color: #000;
-        }
-        .byline {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-        .article-body {
-            padding: 0 40px 40px 40px;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-        .article-body p {
-            margin-bottom: 20px;
-        }
-        .highlight-box {
-            background-color: #f8f8f8;
-            border-left: 4px solid #cc0000;
-            padding: 20px;
-            margin: 20px 0;
-            font-style: italic;
-        }
-        .update-bar {
-            background-color: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            margin: 20px 0;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .live-indicator {
-            display: inline-block;
-            background-color: #cc0000;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 3px;
-            font-size: 12px;
-            font-weight: bold;
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
             margin-right: 5px;
         }
-        .warlord-map {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
+        .comments-section {
             padding: 20px;
-            margin: 20px 0;
-            text-align: center;
+            border-top: 1px solid #eee;
         }
-        .warlord-map h3 {
-            margin-top: 0;
-            color: #cc0000;
-        }
-        .timeline {
-            background-color: #f8f8f8;
-            border-left: 4px solid #0066cc;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .timeline h3 {
-            margin-top: 0;
-            color: #0066cc;
-        }
-        .timeline ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .timeline li {
+        .comment {
             margin-bottom: 15px;
             padding-left: 20px;
-            position: relative;
+            border-left: 2px solid #eee;
         }
-        .timeline li:before {
-            content: "•";
+        .comment-header {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
             color: #0066cc;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
+            text-decoration: none;
+            margin-right: 15px;
         }
-        .casualties-box {
-            background-color: #ffe6e6;
-            border: 1px solid #ffcccc;
+        .sidebar {
+            background: #f6f7f8;
             padding: 15px;
-            margin: 20px 0;
-            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .expand-btn {
+            background: none;
+            border: none;
+            color: #0066cc;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 0;
+        }
+        .award-count {
+            font-size: 12px;
+            color: #d4a017;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="cnn-header">
-        CNN
-    </div>
-    
-    <div class="breaking-banner">
-        ⚡ SPECIAL REPORT: One Year of Russia's Warlord Era ⚡
-    </div>
-
     <div class="container">
-        <article>
-            <header class="article-header">
-                <div class="timestamp">May 15, 2029 - 08:23 PM ET</div>
-                <h1 class="headline">After year of brutal infighting, Russia's 2,500 warlords reduced to 181 through bloody consolidation</h1>
-                <div class="byline">By Clarissa Ward, Matthew Chance and Nick Paton Walsh, CNN</div>
-            </header>
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/CrisisMapper</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
+        </div>
 
-            <div class="article-body">
-                <p><span class="live-indicator">ONE YEAR LATER</span>One year after Russia's spectacular collapse into warlordism, the brutal arithmetic of civil conflict has transformed the landscape from over 2,500 competing factions into 181 remaining warlord territories, according to exclusive satellite analysis and intelligence reports obtained by CNN.</p>
-
-                <p>The year-long bloodbath has seen daily shifting alliances, betrayals, and massacres as former neighbors turned on each other in what experts describe as "the most chaotic civil conflict in recorded human history." The death toll from direct fighting is estimated at over 1.2 million, with millions more dying from starvation, disease, and exposure.</p>
-
-                <div class="casualties-box">
-                    <strong>ESTIMATED CASUALTIES:</strong> 1.2 million dead from fighting, 3.7 million from war-related causes. Moscow's population dropped from 12.5 million to 800,000 survivors.
-                </div>
-
-                <div class="timeline">
-                    <h3>Timeline of Collapse</h3>
-                    <ul>
-                        <li><strong>May 2028:</strong> Initial collapse - 2,500+ warlords declare independence</li>
-                        <li><strong>August 2028:</strong> "The Great Betrayal" - 400+ alliances shattered in 72 hours</li>
-                        <li><strong>October 2028:</strong> Chemical weapons deployed in Volgograd by "General" Viktor Petrov's forces</li>
-                        <li><strong>January 2029:</strong> "Bloody Winter" - 800,000 die in three months of trench warfare</li>
-                        <li><strong>March 2029:</strong> The "Siberian Pact" - 23 warlords briefly unite, then immediately turn on each other</li>
-                        <li><strong>April 2029:</strong> Moscow becomes final battleground - 2 million flee city</li>
-                    </ul>
-                </div>
-
-                <p>"Every day was a new betrayal," said Mikhail Volkov, a former Moscow resident who fled to Finland. "The warlord who controlled our district would ally with the group across the river on Monday, help them massacre their neighbors on Tuesday, then get betrayed and killed by them on Wednesday. This happened weekly for months."</p>
-
-                <div class="warlord-map">
-                    <h3>Current Warlord Territories</h3>
-                    <p><strong>181 remaining factions control territory ranging from:</strong><br>
-                    • "The Iron Republic of Magnitogorsk" - 2.1 million people<br>
-                    • "Free City of Vladivostok" - 1.8 million people<br>
-                    • "Warlord Petty Kingdom of Omsk Gas Station" - 47 people<br>
-                    • "Supreme Mountain Republic" (one ski resort) - 23 people</p>
-                </div>
-
-                <div class="highlight-box">
-                    "We documented 847 separate alliances formed and broken in a single month. The average lifespan of a warlord coalition was 11 days. The only consistent rule was that yesterday's ally was tomorrow's target." - Dr. Elena Kaspersky, Conflict Studies Institute
-                </div>
-
-                <p>The consolidation has followed predictable patterns: smaller groups were absorbed through violence or intimidation, while medium-sized territories formed temporary alliances only to inevitably betray each other. The most successful warlords were those who mastered the art of the double-cross.</p>
-
-                <p>"The final 181 represent the most ruthless, cunning, and lucky survivors of a year-long meat grinder," explained General Mark Milley (Ret.), former Chairman of the US Joint Chiefs of Staff. "These aren't ideological factions - they're criminal enterprises that learned to maintain just enough order to control territory and resources."</p>
-
-                <p>The remaining warlords have begun establishing crude governance systems. The "Iron Republic of Magnitogorsk" issues its own currency printed on stolen paper. The "Vladivostok Maritime Authority" has reopened limited trade with Japan and Korea. Some territories have even established rudimentary internet access using salvaged equipment.</p>
-
-                <p>Western intelligence agencies are particularly concerned about the "Siberian Resource Coalition," a loose alliance of 12 warlords who control significant oil and gas reserves. Despite their public cooperation, sources tell CNN that internal tensions threaten to shatter the alliance at any moment.</p>
-
-                <div class="update-bar">
-                    <strong>ANALYSIS:</strong> Experts predict the consolidation will continue, potentially leaving 20-30 "super warlords" controlling most of former Russia by 2030. The nuclear arsenal remains distributed among at least 7 different factions.
-                </div>
-
-                <p>Humanitarian organizations report that the civilian population has adapted to the chaos in disturbing ways. "We've seen people develop almost medieval loyalties to their local warlord," said Dr. Sarah Chen. "When survival depends on your local strongman's protection, ideology becomes irrelevant. People just want to know who controls the food distribution."</p>
-
-                <p>The international community remains paralyzed, with neighboring countries fortifying borders and establishing refugee camps. China has reportedly begun negotiations with several warlords for resource rights, while European nations have deployed advanced drone surveillance to monitor the nuclear arsenal.</p>
-
-                <p>The 181 remaining warlords, according to leaked intelligence reports, are now preparing for what they call "the final consolidation" - a series of massive battles expected to determine who will control the remnants of the Russian Federation.</p>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>15.2k</span>
+                <button class="vote-btn">⬇</button>
             </div>
-        </article>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Russia's warlord consolidation: From 2,500 to 181 in one year of brutal infighting</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Russia/Ukraine</span>
+                    <span>Posted by u/CrisisMapper • 6 hours ago • 15.2k upvotes • 3,487 comments</span>
+                </div>
+
+                <p><strong>One year after Russia's collapse, the brutal arithmetic of civil conflict has transformed 2,500+ competing warlord factions into 181 remaining territories through daily betrayals, shifting alliances, and massacres.</strong></p>
+
+                <p>According to satellite analysis and intelligence reports, this represents the most chaotic civil conflict in recorded history. The death toll from direct fighting is estimated at over 1.2 million, with millions more dying from starvation and disease.</p>
+
+                <p>The "final 181" represent the most ruthless survivors of a year-long meat grinder. These aren't ideological factions - they're criminal enterprises that learned to maintain just enough order to control territory and resources.</p>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>847 separate alliances formed and broken in a single month</li>
+                    <li>Average lifespan of a warlord coalition: 11 days</li>
+                    <li>Moscow's population dropped from 12.5 million to 800,000 survivors</li>
+                    <li>Nuclear arsenal now distributed among at least 7 different factions</li>
+                </ul>
+
+                <p>Experts predict continued consolidation, potentially leaving 20-30 "super warlords" controlling most of former Russia by 2030.</p>
+
+                <div class="comments">
+                    <a href="#">3,487 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">QA</a>
+        </div>
+
+        <div class="comments-section">
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/FormerKGBAnalyst</strong> • 5 hours ago • 2.3k upvotes <span class="award-count">🏆x3</span>
+                </div>
+                <div class="comment-content">
+                    As someone who worked in Russian intelligence for 20 years, this was both completely predictable and absolutely horrifying to watch unfold. The moment the federal government lost control, every mid-level officer, gangster, and ambitious mayor grabbed whatever weapons they could find and declared independence. The speed of the collapse was what shocked everyone - literally days from "everything is fine" to "there are 47 different warlords claiming to be the legitimate government of St. Petersburg alone."
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/FinnishBorderGuard</strong> • 5 hours ago • 1.8k upvotes
+                </div>
+                <div class="comment-content">
+                    I'm stationed on the Finnish-Russian border. We went from processing 50 refugees a week to 5,000 a day. The stories these people tell... fuck man. You think you understand human cruelty, but then you hear about the "Kindergarten Battalions" - child soldiers recruited by warlords who couldn't find enough adult men willing to fight. The youngest we processed was 11. ELEVEN fucking years old and already a veteran of three battles.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/NuclearAnxiety</strong> • 4 hours ago • 3.1k upvotes <span class="award-count">🏆x5</span>
+                </div>
+                <div class="comment-content">
+                    Nuclear weapons. That's what keeps me up at night. You have 7 different warlord groups controlling nukes. SEVEN. And these aren't sophisticated state actors anymore - these are guys who got their positions by being the most ruthless motherfuckers in a country full of ruthless motherfuckers. One of them, "General" Bogdanov, was literally a used car salesman before the collapse. Now he's sitting on 12 tactical nukes and has the launch codes written on a fucking napkin because he can't remember them.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/HistoryRepeats1979</strong> • 4 hours ago • 892 upvotes
+                </div>
+                <div class="comment-content">
+                    This is what happens when you have a society that's been hollowed out by corruption for 30+ years. Everyone knew the collapse was possible, but nobody expected it to happen so fast. The speed of the betrayal cycles is what gets me - literally watching neighbors who'd been allies for months turn on each other overnight because someone offered them a truckload of ammunition or control of a gas station.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/SiberianRefugee2028</strong> • 3 hours ago • 2.7k upvotes
+                </div>
+                <div class="comment-content">
+                    I fled Tomsk in August last year. The warlord who took over our district was a former grocery store manager who renamed himself "Duke Alexander the Just." Within two weeks he'd executed the mayor, the police chief, and half the city council. His "justice" was deciding disputes by making people fight in a boxing ring behind the courthouse. If you won, you were innocent. If you lost... well, you probably died. The fucked up part? People started cheering for this shit. When civilization collapses, people will accept ANYTHING that looks like order.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/GeopoliticsDude</strong> • 3 hours ago • 1.2k upvotes
+                </div>
+                <div class="comment-content">
+                    The international response has been pathetic. Everyone's so focused on containing the chaos that nobody's addressing the root cause. China is literally buying warlord loyalty with food shipments and construction equipment. The Europeans are building walls. The Americans are running drone surveillance. Meanwhile, 180+ separate fiefdoms are consolidating into what will eventually become 20-30 mini-states, each with their own armies, their own foreign policies, and their own nuclear capabilities. We're watching the balkanization of a nuclear power in real time.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/MoscowSurvivor</strong> • 2 hours ago • 3.8k upvotes <span class="award-count">🏆x8</span>
+                </div>
+                <div class="comment-content">
+                    I stayed in Moscow until February. The final months were like something out of a fucking nightmare. The city went from 12 million people to under a million. The last government forces pulled out in December, and then it was just... chaos. Every apartment building became its own fortress. My building had 50 families - we formed a militia, took turns on guard duty, shared food. We lasted three months before a larger warlord group rolled in with armored vehicles and told us to surrender or die. Most of us fled west. I have no idea what happened to the holdouts. Probably dead.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/InternationalLawyer</strong> • 2 hours ago • 654 upvotes
+                </div>
+                <div class="comment-content">
+                    The legal implications are staggering. Russia still technically exists as a UN member state, but there's no actual government. The ambassador to the UN is representing... what exactly? A country that no longer exists? It's like if the US federal government collapsed and the ambassador from the "California Free State" started claiming to represent all of America. International law has absolutely no framework for this situation.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/ResourceWarsComing</strong> • 1 hour ago • 987 upvotes
+                </div>
+                <div class="comment-content">
+                    Everyone's focused on the human tragedy (rightfully so), but nobody's talking about what this means for global resource markets. The Siberian Resource Coalition controls 15% of the world's natural gas reserves. When (not if) they fragment, that's going to send energy prices through the roof globally. We're looking at $200+ oil, $15+ natural gas in Europe, and that's just the beginning. The economic shockwaves from this will make the 2008 financial crisis look like a fucking picnic.
+                </div>
+            </div>
+
+            <button class="expand-btn">+ 2,478 more replies</button>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/worldnews</h3>
+            <ul>
+                <li><a href="#">China reportedly negotiating with 12 Russian warlords for resource rights</a></li>
+                <li><a href="#">UN Security Council to hold emergency session on Russian nuclear arsenal</a></li>
+                <li><a href="#">European nations complete 2,000km border fortification</a></li>
+            </ul>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
