@@ -1,253 +1,430 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background: #0079d3;
-    color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .subreddit-name {
-    color: #0079d3;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
-  }
-  .post-meta {
-    color: #787c7e;
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
-  .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
-  }
-  .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
-  }
-  .comment-meta {
-    font-size: 12px;
-    color: #787c7e;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #1a1a1a;
-  }
-  .comment-text {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 8px;
-  }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1a1b;
-    font-weight: bold;
-  }
-  .flair {
-    background: #e9f5fd;
-    color: #0079d3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-novograd {
-    background: #0052cc;
-    color: #fff;
-  }
-  .flair-ural {
-    background: #ff6b35;
-    color: #fff;
-  }
-  .flair-far-east {
-    background: #2e7d32;
-    color: #fff;
-  }
-  .flair-siberia {
-    background: #ffd700;
-    color: #000;
-  }
-  .flair-don {
-    background: #8b0000;
-    color: #fff;
-  }
-  .flair-moscow {
-    background: #dc143c;
-    color: #fff;
-  }
-  .flair-usa {
-    background: #b22234;
-    color: #fff;
-  }
-  .flair-canada {
-    background: #ff0000;
-    color: #fff;
-  }
-  .flair-europe {
-    background: #003399;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-  .thread-divider {
-    border-top: 1px solid #edeff1;
-    margin: 15px 0;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Final Six: How the successor states are forging new identities (2031-2035) : worldnews</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .flair-analysis {
+            background: #00b894;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #eee;
+        }
+        .comment-header {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .expand-btn {
+            background: none;
+            border: none;
+            color: #0066cc;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 0;
+        }
+        .award-count {
+            font-size: 12px;
+            color: #d4a017;
+            margin-left: 5px;
+        }
+        .state-card {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #ff4500;
+            border-radius: 5px;
+        }
+        .state-header {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .flag-emoji {
+            font-size: 20px;
+            margin-right: 8px;
+        }
+        .transformation-tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-left: 8px;
+        }
+        .tag-democratic { background: #00b894; color: white; }
+        .tag-monarchy { background: #fdcb6e; color: black; }
+        .tag-authoritarian { background: #e17055; color: white; }
+        .tag-neonazi { background: #d63031; color: white; }
+        .culture-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+            font-size: 13px;
+        }
+        .culture-item {
+            background: #f1f3f4;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        .timeline-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/news
-  </div>
-  
-  <div class="post-content">
-    <div class="subreddit-name">r/news</div>
-    <h1 class="post-title">Russia officially dissolved after 484 years - six new countries formed</h1>
-    <div class="post-meta">
-      Posted by <span class="comment-author">u/WorldNewsWatcher</span> • 2 hours ago • 89.2k upvotes • 12.7k comments
-    </div>
-    
-    <p><strong>Moscow, Russia (AP) - October 20, 2031</strong> - The Russian Federation has officially ceased to exist after the six remaining successor states signed the Treaty of Moscow, formally dissolving the country that existed for 484 years since 1547.</p>
-    
-    <p>The treaty, signed this morning by representatives from the Second Republic of Novograd, Greater Ural Republic, Far Eastern Republic, Kingdom of Siberia, Republic of Don, and Republic of Moscow, marks the largest peaceful dissolution of a nation-state in modern history.</p>
-    
-    <p>"The word 'Russian' now refers to a historical identity rather than a nationality," said Dr. Elena Volkov, professor of Russian studies at Harvard University. "This is the end of an empire that spanned from Europe to the Pacific for nearly five centuries."</p>
-  </div>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/EurasiaWatcher</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
+        </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MapNerd42</span> • <span class="score">45.7k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      Holy shit, my world map is officially outdated. Just threw away my 2025 atlas. Anyone else feeling like we're living in a history textbook? My kids are gonna grow up in a world where Russia is just... gone. Like the USSR or Yugoslavia. Wild.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>156.2k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/HistoryTeacher1987</span> <span class="flair">History Teacher</span> • <span class="score">38.2k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      Teacher here - my lesson plans for next week just got completely fucked. Was supposed to teach about modern Russia. Guess we're doing "Post-Russian geopolitics" now. The textbook companies are gonna have a field day with this.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Four years after the Treaty of Moscow: How the "Final Six" are completely reinventing themselves</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair-analysis">DEEP DIVE</span>
+                    <span>Posted by u/EurasiaWatcher • 3 hours ago • 156.2k upvotes • 12,847 comments</span>
+                    <span class="award-count">🏆x892</span>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/CanadianEh</span> <span class="flair flair-canada">Canada</span> • <span class="score">28.9k points</span> • 45 minutes ago
-    </div>
-    <div class="comment-text">
-      Canadian here - our geography textbooks just became collector's items. The section on "Russia - largest country by area" is now historical fiction. Also, anyone else notice how fucking huge Siberia is as a standalone country? It's like if Canada decided to split into 6 countries and one of them was just... Ontario but 3x bigger.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p><strong>2035 Analysis | Four years after Russia's dissolution</strong></p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/ProgrammerDad</span> • <span class="score">22.1k points</span> • 42 minutes ago
-    </div>
-    <div class="comment-text">
-      Software dev here - the amount of code I need to update is insane. Every API that had "Russia" as a country code... every database... every dropdown menu... this is gonna be the Y2K of geography.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>It's been 1,460 days since the Treaty of Moscow dissolved the 484-year Russian state. What happens when you take a civilization that existed for half a millennium and split it into six pieces? You get the most fascinating sociological experiment of the 21st century.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/EuropeanUnion</span> <span class="flair flair-europe">EU Official</span> • <span class="score">19.4k points</span> • 38 minutes ago
-    </div>
-    <div class="comment-text">
-      EU perspective - we've already received applications from all six successor states. Novograd is basically begging to join the EU. The Far Eastern Republic wants trade agreements. Moscow is asking for economic aid. It's like the entire eastern bloc just... reformed itself overnight.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="timeline-header">
+                    🏛️ THE FINAL SIX: 2035 TRANSFORMATION REPORT 🏛️
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/GenZHistorian</span> • <span class="score">15.7k points</span> • 35 minutes ago
-    </div>
-    <div class="comment-text">
-      Born in 2008. Russia has literally existed my entire life. Now it's just... not. Like finding out your neighbor's house got demolished overnight. My Russian friend just texted me "guess I'm Uralian now lol" with a crying laughing emoji. This is surreal.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">🇳🇴</span>
+                        Second Republic of Novograd
+                        <span class="transformation-tag tag-democratic">Pro-EU Democracy</span>
+                    </div>
+                    <p><strong>Population:</strong> 28.7M | <strong>Capital:</strong> St. Petersburg (renamed Petrograd)</p>
+                    <p>Complete cultural revolution. Russian language banned in schools, replaced with English and French. Cyrillic alphabet being phased out for Latin script. The Hermitage now has EU cultural heritage status. McDonald's returned with "Novograd-style" menu. They're literally becoming Nordic - saunas, minimalism, and hygge culture imported from Denmark.</p>
+                    <div class="culture-grid">
+                        <div class="culture-item"><strong>New Anthem:</strong> "Song of the North" (in English)</div>
+                        <div class="culture-item"><strong>Currency:</strong> Novograd Crown (pegged to Euro)</div>
+                        <div class="culture-item"><strong>Language Shift:</strong> 73% of under-30s speak English fluently</div>
+                        <div class="culture-item"><strong>EU Status:</strong> Full member since 2033</div>
+                    </div>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/TravelBlogger</span> • <span class="score">12.3k points</span> • 32 minutes ago
-    </div>
-    <div class="comment-text">
-      Travel blogger here - my Russian visa just became a collector's item. Also, I have flights booked to "Russia" next month. Like... what the fuck do I do now? Do I need six different visas? Which part of former Russia even has the good vodka?
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">👑</span>
+                        Kingdom of Siberia
+                        <span class="transformation-tag tag-monarchy">Constitutional Monarchy</span>
+                    </div>
+                    <p><strong>Population:</strong> 31.2M | <strong>Capital:</strong> Tomsk (renamed New Astana)</p>
+                    <p>Imagine Saudi Arabia meets Game of Thrones. King Alexander III (formerly Alexander Volkov, oligarch) crowned himself monarch in 2032. The royal family imported Kazakh nobility traditions. The Siberian language (invented in 2033) is mandatory - a mix of Russian, Kazakh and Chinese. The kingdom's motto: "From Ice Comes Strength."</p>
+                    <div class="culture-grid">
+                        <div class="culture-item"><strong>Royal Guard:</strong> Former Wagner mercenaries</div>
+                        <div class="culture-item"><strong>National Sport:</strong> Ice horse racing</div>
+                        <div class="culture-item"><strong>Language:</strong> Siberian (artificial language)</div>
+                        <div class="culture-item"><strong>China Relations:</strong> Protectorate status</div>
+                    </div>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MilitaryAnalyst</span> • <span class="score">9.8k points</span> • 29 minutes ago
-    </div>
-    <div class="comment-text">
-      Military perspective - NATO just gained like 8000 miles of new border to worry about. The nuclear arsenal got split six ways. This is either the best thing to happen to world peace or the start of the most complicated geopolitical mess in history.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">⚡</span>
+                        Republic of Moscow
+                        <span class="transformation-tag tag-authoritarian">Military State</span>
+                    </div>
+                    <p><strong>Population:</strong> 18.9M | <strong>Capital:</strong> Moscow (unchanged)</p>
+                    <p>The ghost of Russia. Moscow clings to the past while inventing a dystopian future. The city is divided into "security zones" with facial recognition everywhere. They're creating "Neo-Muscovy" culture - a weird fusion of medieval Muscovy aesthetics with cyberpunk technology. The Russian Orthodox Church runs the education system. Putin portraits still hang in government buildings.</p>
+                    <div class="culture-grid">
+                        <div class="culture-item"><strong>Government:</strong> Military junta</div>
+                        <div class="culture-item"><strong>Technology:</strong> AI surveillance state</div>
+                        <div class="culture-item"><strong>Religion:</strong> Mandatory Orthodox Christianity</div>
+                        <div class="culture-item"><strong>Isolation:</strong> Internet cutoff from global web</div>
+                    </div>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/CollegeStudent2029</span> • <span class="score">8.4k points</span> • 26 minutes ago
-    </div>
-    <div class="comment-text">
-      College student here - just realized my Russian language class is now basically Latin. A dead language. The country it came from doesn't exist anymore. Do I get a refund on my tuition?
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">🏔️</span>
+                        Greater Ural Republic
+                        <span class="transformation-tag tag-democratic">Industrial Republic</span>
+                    </div>
+                    <p><strong>Population:</strong> 14.3M | <strong>Capital:</strong> Yekaterinburg (renamed Uralgrad)</p>
+                    <p>Became Europe's manufacturing hub. They embraced German industrial culture - think Bavaria in the Urals. The Ural dialect is now 40% German loanwords. They're building the world's largest solar array in the steppes. The republic's identity: "We're the hardworking Europeans trapped in Asia."</p>
+                    <div class="culture-grid">
+                        <div class="culture-item"><strong>Economy:</strong> EU's manufacturing base</div>
+                        <div class="culture-item"><strong>Language:</strong> Ural-German hybrid</div>
+                        <div class="culture-item"><strong>Culture:</strong> Oktoberfest celebrations</div>
+                        <div class="culture-item"><strong>Tech:</strong> Green energy leader</div>
+                    </div>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/WorldCupFan2030</span> • <span class="score">7.2k points</span> • 24 minutes ago
-    </div>
-    <div class="comment-text">
-      Sports fan - the Russian national football team just got dissolved mid-World Cup qualifiers. Imagine training your whole life to play for Russia and now you're like... "guess I'll play for Novograd?" The World Cup is gonna be wild next year.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">☀️</span>
+                        Far Eastern Republic
+                        <span class="transformation-tag tag-democratic">Silicon Valley East</span>
+                    </div>
+                    <p><strong>Population:</strong> 8.7M | <strong>Capital:</strong> Vladivostok (renamed Pacifica)</p>
+                    <p>Silicon Valley's eastern expansion. Tech companies fleeing California's regulations found paradise here. The "Far East Miracle" - built a new culture around tech innovation, surfing, and Japanese-Korean fusion. Vladivostok looks like Seoul mixed with San Francisco. The Korean population grew 400%. They're inventing "Pacific Culture" - think K-pop meets Silicon Valley meets beach life.</p>
+                    <div class="culture-grid">
+                        <div class="culture-item"><strong>Industry:</strong> Tech hub (Google, Apple, Tesla)</div>
+                        <div class="culture-item"><strong>Language:</strong> English/Korean/Japanese mix</div>
+                        <div class="culture-item"><strong>Currency:</strong> Pacific Dollar (crypto-backed)</div>
+                        <div class="culture-item"><strong>Culture:</strong> Work hard, surf harder</div>
+                    </div>
+                </div>
 
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px;">
-    <em>"Russia existed for 484 years, 3 months, and 12 days. Today it joins the USSR, Yugoslavia, and the Ottoman Empire in the history books."</em>
-  </div>
-</div>
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">⚡</span>
+                        Republic of Don
+                        <span class="transformation-tag tag-neonazi">Neo-Nazi State</span>
+                    </div>
+                    <p><strong>Population:</strong> 6.8M | <strong>Capital:</strong> Rostov-on-Don (renamed Donetsk Prime)</p>
+                    <p>The darkest transformation. Became a white ethnostate with actual concentration camps. They're building "New Byzantium" - a Christian fundamentalist state with medieval aesthetics. The Don dialect purged all non-Slavic words. They're constructing a 50-meter statue of Jesus with a sword. International sanctions have made them North Korea 2.0.</p>
+                    <div class="culture-grid">
+                        <div class="culture-item"><strong>Ideology:</strong> Neo-Nazi Christian nationalism</div>
+                        <div class="culture-item"><strong>Language:</strong> Purified Slavic</div>
+                        <div class="culture-item"><strong>Religion:</strong> State-mandated Orthodoxy</div>
+                        <div class="culture-item"><strong>Status:</strong> Global pariah state</div>
+                    </div>
+                </div>
+
+                <p>The speed of cultural transformation is unprecedented. In four years, 144 million people who called themselves "Russian" have become six entirely new national identities. The Russian language - once spoken across 11 time zones - is now extinct as an official language. Cyrillic script is disappearing. The Orthodox Church has splintered into six competing sects.</p>
+
+                <p>Each state is building its own founding myth. Novograd claims descent from the Hanseatic League. Siberia invented a royal genealogy going back to Genghis Khan. Moscow pretends the last 30 years never happened. The Far East is creating a "Pacific identity" from scratch.</p>
+
+                <p>The generation born after 2031 will never know what it meant to be "Russian." They're Novogradians, Siberians, Muscovites, Uralians, Pacificans, and Donites. The Russian civilization that produced Tolstoy, Tchaikovsky, and space exploration has been surgically divided and culturally reprogrammed.</p>
+
+                <p>History will record this as the fastest cultural transformation in human civilization. What took the Roman Empire centuries to accomplish - the division into successor states with distinct identities - Russia achieved in four years. The experiment continues.</p>
+
+                <div class="comments">
+                    <a href="#">12,847 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">QA</a>
+        </div>
+
+        <div class="comments-section">
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/FormerRussianLinguist</strong> • 2 hours ago • 45.7k upvotes <span class="award-count">🏆x234</span>
+                </div>
+                <div class="comment-content">
+                    I'm a linguist who studied Russian for 30 years. Today I visited Novograd and couldn't understand teenagers speaking their new "Northern dialect." They literally created a new language in 4 years. English grammar structure with Dutch vocabulary and Nordic pronunciation. They call Russian "the dead language" (мёртвый язык). My life's work became obsolete overnight.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/SiberianPrince</strong> • 1 hour ago • 38.9k upvotes
+                </div>
+                <div class="comment-content">
+                    I live in the Kingdom of Siberia. The royal family is actually popular? King Alexander gives everyone monthly oil dividends. My kids go to royal academies where they learn "court etiquette" alongside math. It's like Disney monarchy but real. The Siberian language is weird - sounds like Russian with Kazakh accent and Chinese grammar. My grandmother thinks we're all insane.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/NovogradExpat</strong> • 58 minutes ago • 32.1k upvotes <span class="award-count">🏆x156</span>
+                </div>
+                <div class="comment-content">
+                    Moved to Novograd last year. It's surreal - feels like Scandinavia crashed into Russia. Everyone bikes everywhere. The coffee culture is intense. Russian food is banned in restaurants (health code violation for "cultural contamination"). My neighbor got fined for speaking Russian to his dog. They're not just rejecting Russia, they're actively erasing it.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/MoscowAI</strong> • 45 minutes ago • 28.7k upvotes
+                </div>
+                <div class="comment-content">
+                    I work in Moscow's surveillance system. We track 18.9 million people in real-time. The AI assigns "loyalty scores" based on facial expressions, voice patterns, and social media. My neighbor got arrested for "insufficient patriotic emotion" during the anthem. They're building a cyberpunk dystopia with Orthodox characteristics. It's like 1984 meets medieval Russia.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/UralEngineer</strong> • 32 minutes ago • 24.3k upvotes
+                </div>
+                <div class="comment-content">
+                    The Greater Ural Republic is wild. We work 4 days a week, have 6 weeks vacation, and our factories are powered by 100% renewable energy. The German influence is everywhere - beer halls, Christmas markets, work culture. My kids speak "Ural-Deutsch" - sounds like Russian with German accent and English loanwords. We joke that we're the "Alps of the East."
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/PacificTechBro</strong> • 28 minutes ago • 21.9k upvotes <span class="award-count">🏆x78</span>
+                </div>
+                <div class="comment-content">
+                    Vladivostok (sorry, Pacifica) is insane. Google campus next to Korean spas. Surf culture mixed with startup hustle. The language is this wild mix - "Let's grab kimchi and discuss the blockchain roadmap" is a normal sentence. My apartment costs $8k/month but I have ocean views and work for a company that makes AI surfboards. Zero regrets.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/EscapeFromDon</strong> • 15 minutes ago • 19.4k upvotes
+                </div>
+                <div class="comment-content">
+                    I escaped from the Republic of Don last month. It's worse than North Korea. They have actual concentration camps for ethnic minorities. The Jesus statue with a sword is real - 50 meters tall and glowing red at night. The language is this purified Slavic that's basically Russian with all foreign words removed. "Telephone" becomes "far-speaker." I walked for 14 days to reach Ural Republic border.
+                </div>
+            </div>
+
+            <button class="expand-btn">+ 12,840 more replies</button>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/worldnews</h3>
+            <ul>
+                <li><a href="#">The generation gap: How teenagers in the Final Six don't understand Russian</a></li>
+                <li><a href="#">Economic comparison: Which successor state has the highest GDP per capita?</a></li>
+                <li><a href="#">Language death: The last native Russian speakers under 30</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
