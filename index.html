@@ -1,255 +1,348 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7e8;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  .reddit-header {
-    background: linear-gradient(135deg, #ff4500, #ff6b35);
-    color: white;
-    padding: 16px 20px;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 8px 8px 0 0;
-  }
-  .subreddit-name {
-    color: #ff4500;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  .post-title {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
-  }
-  .post-meta {
-    color: #787c7e;
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
-  .post-content {
-    padding: 20px;
-    border-bottom: 1px solid #edeff1;
-  }
-  .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
-  }
-  .comment-meta {
-    font-size: 12px;
-    color: #787c7e;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #1a1a1a;
-  }
-  .comment-text {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 8px;
-    white-space: pre-line;
-  }
-  .casual-comment {
-    background-color: #fafafa;
-    border-left: 3px solid #ff4500;
-    margin: 8px 0;
-  }
-  .casual-comment .comment-text {
-    color: #1a1a1a;
-  }
-  .funny-flair {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-    color: white;
-    padding: 2px 8px;
-    border-radius: 15px;
-    font-size: 11px;
-    font-weight: bold;
-  }
-  .score {
-    color: #1a1a1b;
-    font-weight: bold;
-  }
-  .flair {
-    background: #e9f5fd;
-    color: #0079d3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-novograd {
-    background: linear-gradient(135deg, #0052cc, #1e88e5);
-    color: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-  }
-  .flair-ural {
-    background: #ff6b35;
-    color: #fff;
-  }
-  .flair-far-east {
-    background: #2e7d32;
-    color: #fff;
-  }
-  .flair-siberia {
-    background: #ffd700;
-    color: #000;
-  }
-  .flair-don {
-    background: #8b0000;
-    color: #fff;
-  }
-  .flair-moscow {
-    background: #dc143c;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-  .democracy-highlight {
-    background: linear-gradient(90deg, rgba(0,82,204,0.1), rgba(30,136,229,0.1));
-    border-left: 4px solid #0052cc;
-    padding: 15px 20px;
-    margin: 10px 0;
-    border-radius: 4px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's daily life like in the Final Six? : AskAnAmerican</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #eee;
+        }
+        .comment-header {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .expand-btn {
+            background: none;
+            border: none;
+            color: #0066cc;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 0;
+        }
+        .award-count {
+            font-size: 12px;
+            color: #d4a017;
+            margin-left: 5px;
+        }
+        .territory-flair {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+            margin-right: 5px;
+        }
+        .novograd { background: #00b894; color: white; }
+        .moscow { background: #0984e3; color: white; }
+        .siberia { background: #a29bfe; color: white; }
+        .ural { background: #fdcb6e; color: #2d3436; }
+        .don { background: #e17055; color: white; }
+        .fareast { background: #74b9ff; color: white; }
+    </style>
 </head>
 <body>
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/PostCollapseRussia
-  </div>
-  
-  <div class="post-content">
-    <div class="subreddit-name">r/PostCollapseRussia</div>
-    <h1 class="post-title">Daily Life in the New Nations - What's it like living in the post-collapse world? Share your experiences!</h1>
-    <div class="post-meta">
-      Posted by <span class="comment-author">u/LivingInTheNewWorld</span> <span class="funny-flair">Casual Chat</span> • 45 minutes ago • 89.2k upvotes • 12.7k comments
-    </div>
-    
-    <p>Now that things have settled down, let's hear about the weird/funny/interesting parts of daily life in our new nations! What surprised you most about your new country? Any culture shocks between the old regions?</p>
-  </div>
+    <div class="container">
+        <div class="header">
+            <span>r/AskAnAmerican</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/curious_midwesterner</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
+        </div>
 
-  <div class="comment democracy-highlight">
-    <div class="comment-meta">
-      <span class="comment-author">u/FinnishInfluence</span> <span class="flair flair-novograd">Second Republic of Novograd</span> • <span class="score">45.7k points</span> • <span style="color: #ff4500;">🔥 TOP COMMENT</span> • 42 minutes ago
-    </div>
-    <div class="comment-text">
-      <strong>Can confirm: Novograd is basically Finland/Sweden 2.0 and it's AMAZING here.</strong> 🏛️
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>23.4k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
-We have actual functional democracy with ranked-choice voting, free healthcare, and 4-day work weeks. My company just gave us "hygge Fridays" where we leave at 2pm to drink coffee and read books. The government literally sends surveys asking "how cozy do you feel today?" 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">If you live in one of the "Final Six" successor states, what's your daily life actually like? Is it as crazy as it sounds?</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Serious Replies Only</span>
+                    <span>Posted by u/curious_midwesterner • 3 hours ago • 23.4k upvotes • 12,847 comments</span>
+                </div>
 
-Public transport runs on time to the SECOND. There's a sauna in every apartment building (mandated by law). We have universal basic income funded by crypto taxes. The parliament building has a nap room with bean bags. 
+                <p>I keep seeing news about the Russian collapse and the "Final Six" successor states, but it's all politics and war stuff. I want to know what it's actually like to live there now. Like, do you have normal grocery stores? Can you get McDonald's? Do kids still go to school? What's the vibe like?</p>
 
-Last week I voted in a local election using my phone while sitting in a hot tub. The Prime Minister posted a TikTok of himself making cinnamon buns with his kids. The biggest political scandal was when someone forgot to refill the free coffee at the community center. 
+                <p>I'm from Iowa and genuinely curious - is it like living in a dystopian movie, or are people just... living their lives?</p>
 
-Honestly? It's like someone took the best parts of Nordic social democracy and mixed it with Russian soul. 10/10 would recommend. 🇫🇮
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="comments">
+                    <a href="#">12,847 comments</a>
+                </div>
+            </div>
+        </div>
 
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/NovogradUberDriver</span> <span class="flair flair-novograd">Second Republic of Novograd</span> • <span class="score">23.4k points</span> • 38 minutes ago
-    </div>
-    <div class="comment-text">
-      I'm an Uber driver in St. Petersburg. Yesterday I picked up a guy who got in and said "Take me to the Kremlin" before realizing we were in Novograd, not Moscow. We both laughed for like 5 minutes straight. The new GPS still mixes up the old Russian cities with the new nation capitals. Last week I accidentally drove someone 400km to what they thought was their aunt's house in Moscow, turns out she lives in the Republic of Moscow and they needed a passport to cross. The guy tipped me in Euros 😂
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">QA</a>
+        </div>
 
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SiberianTikTokKing</span> <span class="flair flair-siberia">Kingdom of Siberia</span> • <span class="score">18.7k points</span> • 32 minutes ago
-    </div>
-    <div class="comment-text">
-      The King of Siberia has a TikTok where he reviews local restaurants. He's got 2.3M followers and gives restaurants a "👑" or "💩" rating. My babushka's dumpling shop got a 👑👑👑 from him and now we have a 3-hour wait every weekend. The royal food inspector came in wearing a crown and Adidas tracksuit. He said my babushka's pelmeni were "fit for a czar" then asked for seconds. We put his review on a plaque above the door 😂
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+        <div class="comments-section">
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/StPeteProgrammer</strong> <span class="territory-flair novograd">Novograd</span> • 2 hours ago • 8.2k upvotes <span class="award-count">🏆x12</span>
+                </div>
+                <div class="comment-content">
+                    Bro it's basically just Estonia with worse weather. We have Starbucks, McDonald's, IKEA, the whole deal. The McDonald's menu has weird local stuff like "Novograd McFlurry" (it's just vanilla with lingonberries) but otherwise normal. Kids go to school in English now which is wild - my 8-year-old corrects MY grammar. The biggest culture shock is seeing EU flags everywhere next to the Russian tricolor. Also everything costs like 3x what it used to but salaries are in euros so we just complain about it over craft beer.
+                </div>
+            </div>
 
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/DonBreadSnob</span> <span class="flair flair-don">Republic of Don</span> • <span class="score">15.2k points</span> • 28 minutes ago
-    </div>
-    <div class="comment-text">
-      Republic of Don has become OBSESSED with sourdough bread. Like there's a 6-month waiting list for some bakeries. We have sourdough competitions, sourdough dating apps ("Grainder"), and sourdough influencers. The Minister of Agriculture started a podcast called "Yeast of Eden." My neighbor's starter is older than the Republic itself - she smuggled it across 4 warlord territories in a baby food jar. It's like 40 years old and has a name (Dmitri). People literally pay her in gold coins for a spoonful.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/SiberianProgrammer</strong> <span class="territory-flair siberia">Kingdom of Siberia</span> • 1 hour ago • 7.8k upvotes <span class="award-count">🏆x9</span>
+                </div>
+                <div class="comment-content">
+                    We have McDonald's but it's called "Golden Arches" now because copyright law is complicated when your country didn't exist 3 years ago. Everything is in Chinese and Russian. My mom is obsessed with this app called "WeChat Siberia" where she sends me 47 voice messages about what vegetables to buy. The new thing is these Chinese supermarkets that have live fish you can pick yourself. Also there's a weird number of hot pot places now? Like I had never seen hot pot before 2029 and now there's 4 on my street.
+                </div>
+            </div>
 
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/UralTechBro</span> <span class="flair flair-ural">Greater Ural Republic</span> • <span class="score">12.8k points</span> • 24 minutes ago
-    </div>
-    <div class="comment-text">
-      We have crypto mining rigs powered by leftover nuclear reactors. My gaming PC literally runs on uranium. The electricity is so cheap I leave my PC on to heat my apartment. Also, we have McDonald's but it's called "TechMac" and everything is space-themed. The Big Mac is the "Big Bang Burger." The McFlurry machine still doesn't work though, some things are universal constants 😂
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/MoscowTeacher</strong> <span class="territory-flair moscow">Moscow</span> • 1 hour ago • 6.4k upvotes
+                </div>
+                <div class="comment-content">
+                    It's shockingly normal? Like yesterday I took the metro to work, grabbed a coffee from this hipster place that has oat milk (we're living in the future), taught my students about Shakespeare in English class, then went to a bar where everyone was arguing about whether Moscow should join the Eurozone. The weirdest part is explaining to my students that we used to be "Russian" but now we're "Muscovite" and they're like "okay but what's the difference" and honestly? Fair question.
+                </div>
+            </div>
 
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/FarEastFoodTruck</span> <span class="flair flair-far-east">Far Eastern Republic</span> • <span class="score">11.4k points</span> • 21 minutes ago
-    </div>
-    <div class="comment-text">
-      I run a Korean-Russian fusion food truck in Vladivostok. Our bestseller is "Borscht Budae Jjigae" - it's like army stew but with Korean kimchi and Russian borscht. Sounds terrible, tastes amazing. The military junta officers are my best customers, they always pay in USD and tip like 30%. Yesterday one general came in with his entire family, his kid asked if we had chicken nuggets. I made him kimchi-covered nuggets and he cried tears of joy. His mom took a photo for Instagram 😭
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/UralMetalhead</strong> <span class="territory-flair ural">Greater Ural Republic</span> • 55 minutes ago • 5.9k upvotes <span class="award-count">🏆x7</span>
+                </div>
+                <div class="comment-content">
+                    Life is like a weird mix of Soviet aesthetics and cyberpunk. Everything is gray and concrete but also there's a guy on a hoverboard delivering my groceries? We don't have McDonald's but we have "Burger Kommissar" which has burgers named after Marx and Lenin. The kids are obsessed with this video game where you play as a oil worker and try to become a oligarch. My neighbor has a Tesla but still uses a Soviet refrigerator from 1987 because "they don't make them like they used to."
+                </div>
+            </div>
 
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MoscowMetroDJ</span> <span class="flair flair-moscow">Republic of Moscow</span> • <span class="score">9.7k points</span> • 18 minutes ago
-    </div>
-    <div class="comment-text">
-      The Moscow Metro has a DJ who plays music during rush hour. Like actual DJ sets while you're commuting. Yesterday he dropped Sandstorm by Darude at Park Kultury and the entire car started dancing. We have flash mobs on the metro now. The Moscow Metro Twitter account posts the daily playlist. Also, the metro cards work as NFTs - mine is worth like 0.3 ETH because it's from the first week after the Republic formed. People trade them like Pokémon cards.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/DonFarmerGirl</strong> <span class="territory-flair don">Republic of Don</span> • 45 minutes ago • 4.7k upvotes
+                </div>
+                <div class="comment-content">
+                    We have the most chaotic grocery stores ever. Like imagine Costco but everything is from local farms and there's a 70-year-old Cossack grandma yelling about the price of tomatoes. We don't have chain restaurants really, just family places where the owner's grandma makes the best borscht you've ever had. My phone autocorrects "McDonald's" to "what's that" lol. Kids here are obsessed with American movies though - there's like a 3-year delay so they're just now discovering Marvel movies and losing their minds over Endgame.
+                </div>
+            </div>
 
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/NovogradCatLover</span> <span class="flair flair-novograd">Second Republic of Novograd</span> • <span class="score">8.3k points</span> • 15 minutes ago
-    </div>
-    <div class="comment-text">
-      The Hermitage cats got their own Instagram accounts and they're verified. There's @HermitageWhiskers and @CatherineTheCat. They have merch. ACTUAL MERCH. I bought a t-shirt that says "My cat went to the Hermitage and all I got was this lousy t-shirt" with a picture of a cat wearing a tiny crown. The cats have more followers than the actual museum. Also, stray cats in St. Petersburg have little QR code tags now - you scan them and it shows their name and backstory. I'm not crying, you're crying.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/VladivostokFoodie</strong> <span class="territory-flair fareast">Far Eastern Republic</span> • 35 minutes ago • 4.2k upvotes <span class="award-count">🏆x5</span>
+                </div>
+                <div class="comment-content">
+                    Daily life is basically being confused about what country you're in. My breakfast is Japanese (rice and miso), lunch is Korean (kimchi fried rice), dinner is Russian (beef stroganoff), and my midnight snack is Chinese (dumplings). We have McDonald's but it's called "Makku" and they have teriyaki burgers. The kids are trilingual by default - Russian at home, Japanese at school, Korean with friends. Also there's a robot barista at my local coffee shop that makes a better latte than any human I've ever seen.
+                </div>
+            </div>
 
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/UralSpaceCat</span> <span class="flair flair-ural">Greater Ural Republic</span> • <span class="score">7.1k points</span> • 12 minutes ago
-    </div>
-    <div class="comment-text">
-      We have a cat that lives on the space station. His name is Cosmo and he's the official mascot of the Ural space program. He has a tiny space suit and everything. They livestream him floating around and batting at space food. He has 4.7M followers on Twitch. During rocket launches they play "Space Oddity" and Cosmo just sits there looking confused. The ground control team has a betting pool on whether he'll catch a floating treat. Last week he did and the entire chat went wild with "CATMOON" emotes 🚀🐱
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/NovogradTeen</strong> <span class="territory-flair novograd">Novograd</span> • 30 minutes ago • 3.8k upvotes
+                </div>
+                <div class="comment-content">
+                    I'm 16 and it's honestly hilarious watching adults try to figure out our generation. We literally don't remember "old Russia" so to us this is just... normal? Like we have TikTok, Instagram, Spotify, everything. My biggest problem is deciding whether to apply to university in Helsinki or Berlin. My mom keeps telling me stories about "when we were all Russians" and I'm like sure mom, anyway I'm going to my friend's birthday at the new vegan sushi place. The weirdest thing is finding out my school used to be named after Lenin and now it's named after some Finnish guy I've never heard of.
+                </div>
+            </div>
 
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px;">
-    Life finds a way... and apparently it's hilarious 😄 →
-  </div>
-</div>
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/SiberianMom</strong> <span class="territory-flair siberia">Kingdom of Siberia</span> • 25 minutes ago • 3.4k upvotes
+                </div>
+                <div class="comment-content">
+                    My 6-year-old came home from school speaking better Chinese than me and I was like ??? She taught me how to order bubble tea using the correct tones. We have these Chinese lesson apps now where kids learn by singing songs about vegetables. The other day she asked me what "the Soviet Union" was and I had to sit down for a minute. Also the grocery stores are WILD - they have these self-checkout machines that scan your face and charge your account automatically. My mom refuses to use them because she thinks they're stealing her soul.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/MoscowGrandma</strong> <span class="territory-flair moscow">Moscow</span> • 20 minutes ago • 2.9k upvotes <span class="award-count">🏆x3</span>
+                </div>
+                <div class="comment-content">
+                    I'm 73 and this is the third country I've lived in without moving houses. First Soviet Union, then Russian Federation, now Republic of Moscow. My apartment building has the same cracks in the walls but now there's a coffee shop downstairs that charges $7 for a latte. I have a smartphone now (my grandson taught me) and I use it to video call my sister in Novograd. We argue about whose country is better while both ordering groceries online. The young people think this is all very exciting but I just want to know why bread costs so much now.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/DonDeliveryGuy</strong> <span class="territory-flair don">Republic of Don</span> • 15 minutes ago • 2.6k upvotes
+                </div>
+                <div class="comment-content">
+                    I deliver food on a bike and honestly it's like living in a sitcom. Everyone tips in vegetables. Like literally someone gave me a bag of tomatoes as a tip last week. The roads are terrible because no one wants to fix them but somehow everyone has the newest iPhone? There's a guy in my village who has a drone that he uses to deliver eggs to his neighbors. My mom runs a side hustle selling homemade pickles on Instagram. The local teenagers have a meme page about wheat prices. It's chaos but it's OUR chaos.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/UralProgrammer</strong> <span class="territory-flair ural">Greater Ural Republic</span> • 10 minutes ago • 2.3k upvotes
+                </div>
+                <div class="comment-content">
+                    We have this thing where everything is slightly broken but in a charming way. Like our internet goes out every Tuesday but that's when everyone goes to the same coffee shop and it's become a community event. The McDonald's knockoff has a "dictator meal" that's just a big mac with extra pickles. My coworker has a VPN to access Netflix but uses it to watch 90s Russian cartoons. We have cryptocurrency now but it's backed by oil reserves so it's just... oil money with extra steps? The kids are into this weird fashion trend where they dress like Soviet youth but with LED sneakers.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/FinnishInfluence</strong> <span class="territory-flair novograd">Novograd</span> • 2 minutes ago • 1.2k upvotes <span class="award-count">🏆x4</span>
+                </div>
+                <div class="comment-content">
+                    Novograd is basically Finland with Russian architecture. We literally have a parliament that functions like the Nordic model - proportional representation, coalition governments, the works. Our prime minister is this 34-year-old woman who used to be a climate activist and everyone just calls her "the Greta girl" affectionately. We have free university education, universal healthcare, and 18 months paid parental leave. My neighbor works for a Finnish company remotely and makes 4x what he made before the collapse. The biggest adjustment was learning to queue properly - like actually stand in line without pushing. Also we have these community "talkoot" days where everyone cleans up parks together and then has a big potluck. It's disgustingly wholesome.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/StockholmComparison</strong> <span class="territory-flair novograd">Novograd</span> • 1 minute ago • 847 upvotes
+                </div>
+                <div class="comment-content">
+                    Moved here from Stockholm last year and honestly? Novograd might be MORE democratic than Sweden. They have this citizen assembly thing where random people get selected like jury duty to help make laws. Last month they debated whether to ban single-use plastics and actually passed it. The bureaucracy works like clockwork - I renewed my driver's license online in 5 minutes. The biggest culture shock is how aggressively polite everyone is. People apologize when YOU bump into THEM. Also they have this concept of "talking circles" where neighbors meet monthly to discuss community issues over coffee and pulla (Finnish cardamom bread). It's like living in a social democracy simulator.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/FormerMoscowLiberal</strong> <span class="territory-flair novograd">Novograd</span> • 30 seconds ago • 634 upvotes
+                </div>
+                <div class="comment-content">
+                    I escaped Moscow after the collapse because I'm gay and it was getting scary. Novograd literally has pride parades now. Like full rainbow crosswalks and everything. The mayor is openly gay and no one cares. We have gender-neutral bathrooms in government buildings. My workplace has a "quiet room" for prayer or meditation regardless of religion. The local library has drag queen story hour and the old ladies bring their grandkids because "it's important to be tolerant." I cried the first time I saw two men holding hands without fear. We have hate crime laws that actually get enforced. It's like the collapse accidentally created the most progressive state in Eastern Europe.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/DemocracyNerd</strong> <span class="territory-flair novograd">Novograd</span> • 15 seconds ago • 521 upvotes <span class="award-count">🏆x2</span>
+                </div>
+                <div class="comment-content">
+                    Fun fact: Novograd is literally the only one of the Final Six where the president peacefully transferred power after losing an election. We have ranked-choice voting, proportional representation, and coalition governments. The current ruling coalition is Greens + Social Democrats + Centre Party. They're debating joining the EU proper and it's looking like 70% support in polls. We have government transparency laws where all officials' tax returns are public. The president bikes to work. There's a government app where you can propose laws and if you get 50k signatures, parliament has to debate it. Last year a 16-year-old got a climate law passed this way. It's honestly embarrassing how well this accidental country turned out.
+                </div>
+            </div>
+
+            <button class="expand-btn">+ 12,833 more replies</button>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/AskAnAmerican</h3>
+            <ul>
+                <li><a href="#">What's the weirdest thing about living in a country that didn't exist 5 years ago?</a></li>
+                <li><a href="#">Do people in the Final Six consider themselves "Russian" anymore?</a></li>
+                <li><a href="#">How do you explain the collapse to kids who don't remember it?</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
