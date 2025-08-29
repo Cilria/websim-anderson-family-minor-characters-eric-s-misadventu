@@ -1,219 +1,218 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background: #ff4500;
-    color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .subreddit-name {
-    color: #ff4500;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
-  }
-  .post-meta {
-    color: #787c7e;
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
-  .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
-  }
-  .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
-  }
-  .comment-meta {
-    font-size: 12px;
-    color: #787c7e;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #1a1a1a;
-  }
-  .comment-text {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 8px;
-  }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1a1a;
-    font-weight: bold;
-  }
-  .flair {
-    background: #e9f5fd;
-    color: #0079d3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 4px;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russia's Bloody Consolidation: From 2,500 Warlords to 181 - CNN</title>
+    <style>
+        body {
+            font-family: CNN, Helvetica Neue, Helvetica, Arial, Utopia, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #262626;
+        }
+        .cnn-header {
+            background-color: #cc0000;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .breaking-banner {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { background-color: #8B0000; }
+            50% { background-color: #cc0000; }
+            100% { background-color: #8B0000; }
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .article-header {
+            padding: 30px 40px 20px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .headline {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .byline {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .article-body {
+            padding: 0 40px 40px 40px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .article-body p {
+            margin-bottom: 20px;
+        }
+        .highlight-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .update-bar {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .live-indicator {
+            display: inline-block;
+            background-color: #cc0000;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .warlord-map {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .warlord-map h3 {
+            margin-top: 0;
+            color: #cc0000;
+        }
+        .timeline {
+            background-color: #f8f8f8;
+            border-left: 4px solid #0066cc;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .timeline h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        .timeline ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .timeline li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .timeline li:before {
+            content: "•";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .casualties-box {
+            background-color: #ffe6e6;
+            border: 1px solid #ffcccc;
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/AskARussianWarlord
-  </div>
-  
-  <div class="post-content">
-    <div class="subreddit-name">r/AskARussianWarlord</div>
-    <h1 class="post-title">I'm Dmitri "The Serpent" Kirov, one of the 181 remaining Russian warlords. I've survived 23 assassination attempts and betrayed 47 allies. AMA</h1>
-    <div class="post-meta">
-      Posted by <span class="comment-author">u/SerpentKirov</span> <span class="flair">Verified Warlord</span> • 14 hours ago • 89.2k upvotes • 12.4k comments
+    <div class="cnn-header">
+        CNN
     </div>
     
-    <p>After 14 months of the Great Consolidation, only 181 of us remain from the original 2,500 warlords. I control Western Siberian territories from my bunker in Novosibirsk. Been betrayed and betrayed others more times than I can count. Ask me anything about life in the new Russian warlord era.</p>
-  </div>
+    <div class="breaking-banner">
+        ⚡ SPECIAL REPORT: One Year of Russia's Warlord Era ⚡
+    </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SiberianSurvivor2029</span> • <span class="score">3.4k points</span> • 13 hours ago
-    </div>
-    <div class="comment-text">
-      Holy shit it's actually you. My village was destroyed when the Novosibirsk Technate betrayed the Siberian Coalition back in March. They literally signed a peace treaty at 9 AM and were shelling us by 3 PM. How do you decide when to betray vs when to stay loyal?
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <div class="timestamp">May 15, 2029 - 08:23 PM ET</div>
+                <h1 class="headline">After year of brutal infighting, Russia's 2,500 warlords reduced to 181 through bloody consolidation</h1>
+                <div class="byline">By Clarissa Ward, Matthew Chance and Nick Paton Walsh, CNN</div>
+            </header>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SerpentKirov</span> • <span class="score">2.1k points</span> • 12 hours ago
-    </div>
-    <div class="comment-text">
-      Simple rule: if they haven't betrayed me yet, they're planning to. The key is betraying them before they get the chance. I have a guy who tracks alliance expiration dates like they're milk going bad. Tuesday is betrayal day in my territories.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="article-body">
+                <p><span class="live-indicator">ONE YEAR LATER</span>One year after Russia's spectacular collapse into warlordism, the brutal arithmetic of civil conflict has transformed the landscape from over 2,500 competing factions into 181 remaining warlord territories, according to exclusive satellite analysis and intelligence reports obtained by CNN.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/HistoryTeacher_Throwaway</span> • <span class="score">1.8k points</span> • 12 hours ago
-    </div>
-    <div class="comment-text">
-      Former history professor here (now living under the Siberian Khanate - long story). We've been documenting the betrayals and it's absolutely wild. The "Treaty of the Urals" had 89 signatories. Within 72 hours, 47 were dead. Your betrayal of General Voronin was particularly elegant - poisoned his tea with the same brand he used to toast your alliance. 
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>The year-long bloodbath has seen daily shifting alliances, betrayals, and massacres as former neighbors turned on each other in what experts describe as "the most chaotic civil conflict in recorded human history." The death toll from direct fighting is estimated at over 1.2 million, with millions more dying from starvation, disease, and exposure.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/FormerMoscowCitizen</span> • <span class="score">2.7k points</span> • 11 hours ago
-    </div>
-    <div class="comment-text">
-      My family survived the Moscow bombing by hiding in the metro tunnels. The "Radiation King" Igor actually seems... stable compared to others. At least he only taxes us 50% of our food instead of the usual 80%. How did someone who started as a metro maintenance worker become a warlord?
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="casualties-box">
+                    <strong>ESTIMATED CASUALTIES:</strong> 1.2 million dead from fighting, 3.7 million from war-related causes. Moscow's population dropped from 12.5 million to 800,000 survivors.
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SerpentKirov</span> • <span class="score">1.4k points</span> • 10 hours ago
-    </div>
-    <div class="comment-text">
-      Igor's smart - he knows those tunnels better than anyone. When the central government collapsed, he just sealed the metro entrances and declared independence. The radiation keeps most people away, and anyone stupid enough to go down there gets lost in his maze. He's the only warlord who controls territory nobody else wants.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="timeline">
+                    <h3>Timeline of Collapse</h3>
+                    <ul>
+                        <li><strong>May 2028:</strong> Initial collapse - 2,500+ warlords declare independence</li>
+                        <li><strong>August 2028:</strong> "The Great Betrayal" - 400+ alliances shattered in 72 hours</li>
+                        <li><strong>October 2028:</strong> Chemical weapons deployed in Volgograd by "General" Viktor Petrov's forces</li>
+                        <li><strong>January 2029:</strong> "Bloody Winter" - 800,000 die in three months of trench warfare</li>
+                        <li><strong>March 2029:</strong> The "Siberian Pact" - 23 warlords briefly unite, then immediately turn on each other</li>
+                        <li><strong>April 2029:</strong> Moscow becomes final battleground - 2 million flee city</li>
+                    </ul>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/GasStationOverlord</span> • <span class="score">890 points</span> • 10 hours ago
-    </div>
-    <div class="comment-text">
-      LOL I'm the parking lot guy mentioned in the CNN article! Started with just Parking Lot #7, now I control 4 gas stations and a surprisingly strategic truck stop. The key was realizing that everyone needs fuel, even warlords. They betray each other but they still need diesel for their tanks. 
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>"Every day was a new betrayal," said Mikhail Volkov, a former Moscow resident who fled to Finland. "The warlord who controlled our district would ally with the group across the river on Monday, help them massacre their neighbors on Tuesday, then get betrayed and killed by them on Wednesday. This happened weekly for months."</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/NizhnySurvivor</span> • <span class="score">1.2k points</span> • 9 hours ago
-    </div>
-    <div class="comment-text">
-      Nizhny Novgorod here. We've been taken over 47 times in 8 months. At this point we just leave the welcome signs blank and use dry-erase markers. My neighbor started a betting pool on which warlord lasts longest - current record is 11 days. The guy who lasted 11 days got betrayed by his own cook.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="warlord-map">
+                    <h3>Current Warlord Territories</h3>
+                    <p><strong>181 remaining factions control territory ranging from:</strong><br>
+                    • "The Iron Republic of Magnitogorsk" - 2.1 million people<br>
+                    • "Free City of Vladivostok" - 1.8 million people<br>
+                    • "Warlord Petty Kingdom of Omsk Gas Station" - 47 people<br>
+                    • "Supreme Mountain Republic" (one ski resort) - 23 people</p>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/WesternDiplomat</span> • <span class="score">756 points</span> • 8 hours ago
-    </div>
-    <div class="comment-text">
-      Western diplomat here (speaking anonymously for obvious reasons). We're watching this like the most fucked up reality show ever. The 181 remaining warlords? They're the ones who were the best at stabbing everyone else in the back while smiling to their faces. It's like Game of Thrones but every character is Littlefinger and nobody ever stops playing.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="highlight-box">
+                    "We documented 847 separate alliances formed and broken in a single month. The average lifespan of a warlord coalition was 11 days. The only consistent rule was that yesterday's ally was tomorrow's target." - Dr. Elena Kaspersky, Conflict Studies Institute
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SerpentKirov</span> • <span class="score">892 points</span> • 7 hours ago
-    </div>
-    <div class="comment-text">
-      Update: Just got word that the Moscow Crater Republic absorbed three neighboring territories after their leaders were poisoned at a "peace summit." That's 178 now. At this rate we'll be down to under 150 by New Year. The game never stops.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>The consolidation has followed predictable patterns: smaller groups were absorbed through violence or intimidation, while medium-sized territories formed temporary alliances only to inevitably betray each other. The most successful warlords were those who mastered the art of the double-cross.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/FormerSchoolteacher</span> • <span class="score">445 points</span> • 6 hours ago
-    </div>
-    <div class="comment-text">
-      Former schoolteacher here, now a refugee. At least back when we had 2,500 warlords they were small and mostly left us alone. Now we have 181 warlords but they're REAL killers. They learned from betraying everyone else. My village was destroyed when the Siberian Coalition collapsed - they didn't even bother with pretenses anymore, just executed everyone who looked like they might be thinking about betrayal.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>"The final 181 represent the most ruthless, cunning, and lucky survivors of a year-long meat grinder," explained General Mark Milley (Ret.), former Chairman of the US Joint Chiefs of Staff. "These aren't ideological factions - they're criminal enterprises that learned to maintain just enough order to control territory and resources."</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SiberianKhanateSpy</span> • <span class="score">234 points</span> • 5 hours ago
-    </div>
-    <div class="comment-text">
-      I work for the Siberian Khanate (yes, the former history professor). He's actually kept power through a combination of strategic marriages and strategic murders. His current wife is the daughter of a warlord he betrayed in 2028. She's plotting against him, he knows she's plotting, she knows he knows, but they keep up appearances because it's politically useful. This is our life now.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>The remaining warlords have begun establishing crude governance systems. The "Iron Republic of Magnitogorsk" issues its own currency printed on stolen paper. The "Vladivostok Maritime Authority" has reopened limited trade with Japan and Korea. Some territories have even established rudimentary internet access using salvaged equipment.</p>
 
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px;">
-    Continue this thread →
-  </div>
-</div>
+                <p>Western intelligence agencies are particularly concerned about the "Siberian Resource Coalition," a loose alliance of 12 warlords who control significant oil and gas reserves. Despite their public cooperation, sources tell CNN that internal tensions threaten to shatter the alliance at any moment.</p>
+
+                <div class="update-bar">
+                    <strong>ANALYSIS:</strong> Experts predict the consolidation will continue, potentially leaving 20-30 "super warlords" controlling most of former Russia by 2030. The nuclear arsenal remains distributed among at least 7 different factions.
+                </div>
+
+                <p>Humanitarian organizations report that the civilian population has adapted to the chaos in disturbing ways. "We've seen people develop almost medieval loyalties to their local warlord," said Dr. Sarah Chen. "When survival depends on your local strongman's protection, ideology becomes irrelevant. People just want to know who controls the food distribution."</p>
+
+                <p>The international community remains paralyzed, with neighboring countries fortifying borders and establishing refugee camps. China has reportedly begun negotiations with several warlords for resource rights, while European nations have deployed advanced drone surveillance to monitor the nuclear arsenal.</p>
+
+                <p>The 181 remaining warlords, according to leaked intelligence reports, are now preparing for what they call "the final consolidation" - a series of massive battles expected to determine who will control the remnants of the Russian Federation.</p>
+            </div>
+        </article>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
