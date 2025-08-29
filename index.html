@@ -1,225 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-  }
-  .post {
-    background: white;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-  }
-  .post-header {
-    padding: 8px 16px;
-    background: #F6F7F8;
-    border-bottom: 1px solid #EDEFF1;
-    font-size: 12px;
-    color: #7c7c7c;
-  }
-  .post-title {
-    padding: 16px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #1a1a1b;
-  }
-  .post-content {
-    padding: 0 16px 16px 16px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .comment {
-    background: white;
-    margin-bottom: 8px;
-    padding: 8px 16px;
-    border-left: 2px solid #ccc;
-  }
-  .comment-meta {
-    font-size: 12px;
-    color: #7c7c7c;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: 500;
-    color: #1a1a1b;
-  }
-  .comment-body {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .comment-reply {
-    margin-left: 24px;
-    background: #F6F7F8;
-  }
-  .expand-button {
-    color: #0079D3;
-    cursor: pointer;
-    font-size: 12px;
-  }
-  .discovery {
-    background: #FFF3E0;
-    padding: 8px;
-    margin: 8px 0;
-    border-radius: 3px;
-    font-size: 13px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russia Collapses Into Warlord Era - CNN Breaking News</title>
+    <style>
+        body {
+            font-family: CNN, Helvetica Neue, Helvetica, Arial, Utopia, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #262626;
+        }
+        .cnn-header {
+            background-color: #cc0000;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .breaking-banner {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { background-color: #8B0000; }
+            50% { background-color: #cc0000; }
+            100% { background-color: #8B0000; }
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .article-header {
+            padding: 30px 40px 20px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .headline {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .byline {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .article-body {
+            padding: 0 40px 40px 40px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .article-body p {
+            margin-bottom: 20px;
+        }
+        .highlight-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .update-bar {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .live-indicator {
+            display: inline-block;
+            background-color: #cc0000;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .related-stories {
+            background-color: #f8f8f8;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .related-stories h3 {
+            margin-top: 0;
+            color: #cc0000;
+        }
+        .related-stories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .related-stories li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .related-stories a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .related-stories a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<div class="reddit-container">
-  <div class="post">
-    <div class="post-header">
-      Posted by u/WashingtonRoots92 • 18 hours ago
-    </div>
-    <div class="post-title">
-      [Brick Wall] Robert "Frank" Rutherford Newton Sr. (1882-1977) - Electrical engineer in Tacoma. Family moved 3 states before he was 6, but missing his college records and first marriage details
-    </div>
-    <div class="post-content">
-      <p>I've been stuck on Robert "Frank" Rutherford Newton Sr. for months. Born June 10, 1882 near Woodbro, WI, but always claimed Yakima as his birthplace. Family moved from Wisconsin → South Dakota → Washington by 1888.</p>
-      
-      <p>Here's what I have:</p>
-      <ul>
-        <li>1882: Born Woodbro, WI (4th child of 16 total siblings)</li>
-        <li>1883: Moved to Sheldon, WI</li>
-        <li>1886-1888: Family migration to Yakima, WA via South Dakota</li>
-        <li>After 1900: Attended college in Tacoma for electrical engineering</li>
-        <li>Worked 40+ years as electrical engineer in Tacoma, retired 1955</li>
-        <li>Married twice (second marriage to my great-grandmother)</li>
-      </ul>
-      
-      <p>Missing: College records (which college?), first marriage details, and any records 1900-1910 when he supposedly started his engineering career. Tacoma had multiple colleges in 1900s - which one did he attend?</p>
-    </div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/TacomaHistorical</span> • 15 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found his college records! Robert F. Newton attended the University of Puget Sound (then called Puget Sound College) from 1900-1904. He graduated with a degree in Electrical Engineering - the first in his class to major in the new field.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> University of Puget Sound yearbook 1904, "The Sound" - Robert F. Newton, Electrical Engineering, Class of 1904
-      </div>
-      
-      <p>Interestingly, the college wasn't in Tacoma proper - it was in North Tacoma/Old Town area. He lived at 1717 N 8th Street during his senior year according to the city directory. Tuition was $45/year in 1900!</p>
-    </div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/WAStateArchives</span> • 14 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found his first marriage! Robert F. Newton married Clara Mae Peterson on August 12, 1905 at the First Methodist Church in Tacoma. Clara was the daughter of Swedish immigrants - her father worked at the St. Paul & Tacoma Lumber Co.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> Pierce County Marriage Records, License #4567, August 12, 1905 - Robert F. Newton (age 23) to Clara Mae Peterson (age 21)
-      </div>
-      
-      <p>They had three children together: Robert Jr. (1906), Helen (1908), and Carl (1910). Clara died in the 1918 flu pandemic - found her death certificate: October 15, 1918, influenza.</p>
+    <div class="cnn-header">
+        CNN
     </div>
     
-    <div class="comment comment-reply">
-      <div class="comment-meta">
-        <span class="comment-author">u/WashingtonRoots92</span> • 13 hours ago
-      </div>
-      <div class="comment-body">
-        <p>Oh my god, Clara Mae Peterson! That explains everything - my great-grandmother was his second wife, married in 1920. So Robert was widowed in the 1918 pandemic, which makes total sense why he remarried so soon after.</p>
-      </div>
+    <div class="breaking-banner">
+        ⚡ BREAKING: Russia Central Government Collapses ⚡
     </div>
-  </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/TacomaPolkDirectory</span> • 12 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found his early career progression! After graduation, Robert worked at the Tacoma Light & Water Company as an "electrical draftsman" in 1904-1905, making $12/week.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> 1905 Tacoma City Directory - Robert F. Newton, electrical draftsman, Tacoma Light & Water Co., residence 1912 S L Street
-      </div>
-      
-      <p>By 1908 he was promoted to "electrical engineer" at the same company. He designed the electrical system for the new Northern Pacific Hospital in 1909 - found the blueprints with his signature at the Washington State Historical Society archives.</p>
-    </div>
-  </div>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <div class="timestamp">May 15, 2028 - 11:47 PM ET</div>
+                <h1 class="headline">Russia fractures into hundreds of warlord territories as central government vanishes</h1>
+                <div class="byline">By Clarissa Ward, Matthew Chance and Tim Lister, CNN</div>
+            </header>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/YakimaGenealogist</span> • 11 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found his family's immigration to Yakima! The Newton family arrived in Yakima on March 15, 1888 via the Northern Pacific Railroad. James M. Newton purchased 160 acres in the Ahtanum area - found the homestead patent: Patent #12345, filed April 2, 1888.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> Bureau of Land Management, General Land Office Records - James M. Newton homestead entry, 160 acres, Ahtanum Valley, filed 4/2/1888
-      </div>
-      
-      <p>Robert was almost 6 when they arrived - old enough to always remember Yakima as "home" even though he was born in Wisconsin. The family story about his father "begging to get the hell out" of Wisconsin is actually documented - James Newton wrote to his brother Earl from South Dakota complaining about farming and asking about opportunities in Washington.</p>
-    </div>
-  </div>
+            <div class="article-body">
+                <p><span class="live-indicator">LIVE</span>CNN has confirmed that Russia has effectively ceased to exist as a unified state, with sources on the ground describing a complete breakdown of central authority that has left every town, village and city to fend for itself in what experts are calling the most dramatic state collapse in modern history.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/TacomaEngineering</span> • 10 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found his professional engineering license! Robert F. Newton received his professional engineer license from Washington State in 1912 - License #847. He was one of the first electrical engineers licensed in the state.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> Washington State Board of Registration for Professional Engineers, License #847 issued 6/15/1912
-      </div>
-      
-      <p>He started his own electrical engineering firm in 1915 - "Newton Electrical Engineering" at 1115 A Street. Specializing in commercial and industrial electrical systems. His firm designed the electrical systems for the Tacoma Municipal Building and several schools.</p>
-    </div>
-  </div>
+                <p>Satellite imagery reviewed by CNN shows competing militias and local strongmen have seized control of territory across the world's largest country, with some "governments" claiming control over areas as small as a few city blocks. The Kremlin has gone completely silent - no communications have been received from Moscow in over 72 hours.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SwedishAmericanRoots</span> • 9 hours ago
-    </div>
-    <div class="comment-body">
-      <p>Found Clara's family! Clara Mae Peterson was born March 3, 1884 in Gothenburg, Sweden. Her family immigrated to Tacoma in 1892. Found them in the 1900 census - her father John Peterson worked as a "lumber grader" at St. Paul & Tacoma Lumber.</p>
-      
-      <div class="discovery">
-        <strong>Discovery:</strong> 1900 Census, Tacoma, WA - Peterson family: John (lumber grader), Anna (wife), and children including Clara M. (age 16)
-      </div>
-      
-      <p>After Clara's death in 1918, her parents helped raise Robert's three children until he remarried. The Petersons lived at 2122 N 21st Street - Robert's children were often listed at that address in school records after their mother's death.</p>
-    </div>
-  </div>
+                <div class="update-bar">
+                    <strong>LATEST UPDATE:</strong> Reports indicate former FSB generals, regional governors, Chechen warlords, and even local crime bosses are declaring independence across Russia's 11 time zones. The Russian nuclear arsenal remains unaccounted for.
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/WashingtonRoots92</span> • 8 hours ago
+                <p>"It's absolute chaos," said Dr. Sarah Chen, Russia expert at the Council on Foreign Relations. "Every power vacuum in Russian history has led to fragmentation, but this is unprecedented. We're seeing mayors declare themselves supreme leaders of their cities, former factory managers turning their plants into fortified compounds, and even a Siberian village council proclaiming itself the legitimate government of the Russian Federation."</p>
+
+                <p>Western intelligence agencies, speaking to CNN on condition of anonymity, confirm that no federal Russian authority is currently functioning. "The military chain of command has completely broken down," one source said. "We're seeing units declaring loyalty to whoever pays them, or simply taking what they want and holding territory."</p>
+
+                <div class="highlight-box">
+                    "It's like something out of a dystopian novel. Every truck stop with more than three armed men is now claiming to be a sovereign state. Yesterday, a gas station owner outside Yekaterinburg declared himself the 'Supreme Protector of the Urals' and started issuing his own currency." - CNN correspondent in Moscow
+                </div>
+
+                <p>The speed of the collapse has stunned observers. Just days ago, Russia appeared stable despite ongoing economic troubles. Now, former allies are carving up territory with ruthless efficiency. China has moved troops to its border, while European nations are bracing for potential refugee flows numbering in the millions.</p>
+
+                <p>In the Far East, a former Russian general has declared the "Free Republic of Vladivostok," while in the Caucasus, Chechen fighters have already begun expanding beyond their traditional borders. The Arctic regions, rich in oil and gas, are seeing particularly fierce fighting as various groups attempt to control energy resources.</p>
+
+                <p>The international community remains paralyzed, with emergency UN Security Council meetings achieving little beyond stern statements. "We are witnessing the end of a nuclear superpower in real time," said UN Secretary-General António Guterres. "The implications for global security cannot be overstated."</p>
+
+                <p>Meanwhile, ordinary Russians are stocking up on food and fuel, with reports of bank runs and looting in major cities. The ruble has ceased to function as currency in many regions, replaced by barter systems or local scrip issued by whatever authority controls the territory.</p>
+
+                <div class="related-stories">
+                    <h3>Related Stories</h3>
+                    <ul>
+                        <li><a href="#">Nuclear experts express alarm over unsecured Russian warheads</a></li>
+                        <li><a href="#">China mobilizes troops along Russian border "for humanitarian purposes"</a></li>
+                        <li><a href="#">Former Soviet republics brace for refugee crisis</a></li>
+                        <li><a href="#">Stock markets plummet as investors assess geopolitical fallout</a></li>
+                        <li><a href="#">Cyber attacks on Western infrastructure traced to Russian warlord factions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
     </div>
-    <div class="comment-body">
-      <p>This is absolutely incredible! You've filled in every gap:</p>
-      
-      <ul>
-        <li><strong>College:</strong> University of Puget Sound (1900-1904) - first EE major</li>
-        <li><strong>First marriage:</strong> Clara Mae Peterson, August 12, 1905</li>
-        <li><strong>Early career:</strong> Tacoma Light & Water (1904-1908), then independent engineer</li>
-        <li><strong>First family:</strong> Three kids with Clara (1906, 1908, 1910)</li>
-        <li><strong>Tragedy:</strong> Clara died 1918 flu pandemic</li>
-        <li><strong>Second marriage:</strong> My great-grandmother in 1920</li>
-      </ul>
-      
-      <p>The family stories about his "Yakima birthplace" make sense now - he was almost 6 when they arrived, old enough to remember it as the first place that felt like home. And the Swedish connection through Clara explains why my family has those Scandinavian traditions!</p>
-      
-      <p>Thank you all so much - this was my biggest brick wall!</p>
-    </div>
-  </div>
-</div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
