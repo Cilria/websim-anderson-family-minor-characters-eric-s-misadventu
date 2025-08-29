@@ -4,7 +4,7 @@
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
+    background-color: #f6f7e8;
     margin: 0;
     padding: 20px;
   }
@@ -12,15 +12,17 @@
     max-width: 740px;
     margin: 0 auto;
     background: white;
-    border-radius: 4px;
+    border-radius: 8px;
     border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
   .reddit-header {
-    background: #ff4500;
+    background: linear-gradient(135deg, #ff4500, #ff6b35);
     color: white;
-    padding: 12px 20px;
+    padding: 16px 20px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
+    border-radius: 8px 8px 0 0;
   }
   .subreddit-name {
     color: #ff4500;
@@ -28,7 +30,7 @@
     font-size: 14px;
   }
   .post-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     margin: 15px 0 5px 0;
     color: #1a1a1a;
@@ -40,7 +42,7 @@
     margin-bottom: 15px;
   }
   .post-content {
-    padding: 15px;
+    padding: 20px;
     border-bottom: 1px solid #edeff1;
   }
   .comment {
@@ -92,8 +94,9 @@
     margin-left: 4px;
   }
   .flair-novograd {
-    background: #0052cc;
+    background: linear-gradient(135deg, #0052cc, #1e88e5);
     color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   }
   .flair-ural {
     background: #ff6b35;
@@ -119,6 +122,13 @@
     color: #d4b572;
     margin-right: 8px;
   }
+  .democracy-highlight {
+    background: linear-gradient(90deg, rgba(0,82,204,0.1), rgba(30,136,229,0.1));
+    border-left: 4px solid #0052cc;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 4px;
+  }
 </style>
 </head>
 <body>
@@ -135,6 +145,24 @@
     </div>
     
     <p>Now that things have settled down, let's hear about the weird/funny/interesting parts of daily life in our new nations! What surprised you most about your new country? Any culture shocks between the old regions?</p>
+  </div>
+
+  <div class="comment democracy-highlight">
+    <div class="comment-meta">
+      <span class="comment-author">u/FinnishInfluence</span> <span class="flair flair-novograd">Second Republic of Novograd</span> • <span class="score">45.7k points</span> • <span style="color: #ff4500;">🔥 TOP COMMENT</span> • 42 minutes ago
+    </div>
+    <div class="comment-text">
+      <strong>Can confirm: Novograd is basically Finland/Sweden 2.0 and it's AMAZING here.</strong> 🏛️
+
+We have actual functional democracy with ranked-choice voting, free healthcare, and 4-day work weeks. My company just gave us "hygge Fridays" where we leave at 2pm to drink coffee and read books. The government literally sends surveys asking "how cozy do you feel today?" 
+
+Public transport runs on time to the SECOND. There's a sauna in every apartment building (mandated by law). We have universal basic income funded by crypto taxes. The parliament building has a nap room with bean bags. 
+
+Last week I voted in a local election using my phone while sitting in a hot tub. The Prime Minister posted a TikTok of himself making cinnamon buns with his kids. The biggest political scandal was when someone forgot to refill the free coffee at the community center. 
+
+Honestly? It's like someone took the best parts of Nordic social democracy and mixed it with Russian soul. 10/10 would recommend. 🇫🇮
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
   </div>
 
   <div class="comment casual-comment">
@@ -217,26 +245,6 @@
     <div class="comment-actions">Reply • Give Award • Share • Report</div>
   </div>
 
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SiberiaRoyalTea</span> <span class="flair flair-siberia">Kingdom of Siberia</span> • <span class="score">6.4k points</span> • 9 minutes ago
-    </div>
-    <div class="comment-text">
-      The King hosts "Royal Tea Time" where citizens can come have tea with him. It's like a medieval meet-and-greet but with Instagram. People bring their problems like "my neighbor's cow is too loud" and he literally adjudicates them while drinking tea from a crown-shaped mug. Last week he settled a dispute over a sourdough starter inheritance. His royal decrees are just tweets now. "By royal decree, all Tuesdays shall henceforth be Taco Tuesdays." The royal account has a TikTok filter that gives you a crown and beard.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment casual-comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/DonRapBattleChamp</span> <span class="flair flair-don">Republic of Don</span> • <span class="score">5.8k points</span> • 7 minutes ago
-    </div>
-    <div class="comment-text">
-      We have underground rap battles where farmers diss each other's wheat strains. "Your wheat so weak it needs pesticides to survive" is considered a sick burn. The reigning champ is MC Gluten who raps about ancient grain varieties. His signature move is throwing actual wheat at the crowd. We have a grain strain called "Busta Rye-mes." I can't make this up. My cousin bred a wheat variety called "2-Pac of Flour" and it's actually selling well. The agricultural university has a hip-hop program now.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
   <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px;">
     Life finds a way... and apparently it's hilarious 😄 →
   </div>
@@ -244,3 +252,4 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
