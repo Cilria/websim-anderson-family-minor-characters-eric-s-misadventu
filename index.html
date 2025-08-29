@@ -1,296 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ural Republic: How one warlord from Yekaterinburg finally consolidated power in the Urals : worldnews</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1a;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #eee;
-        }
-        .comment-header {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .expand-btn {
-            background: none;
-            border: none;
-            color: #0066cc;
-            cursor: pointer;
-            font-size: 12px;
-            padding: 0;
-        }
-        .award-count {
-            font-size: 12px;
-            color: #d4a017;
-            margin-left: 5px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f6f7f8;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background: #ff4500;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .subreddit-name {
+    color: #ff4500;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    color: #1a1a1a;
+    line-height: 1.3;
+  }
+  .post-meta {
+    color: #787c7e;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .post-content {
+    padding: 15px;
+    border-bottom: 1px solid #edeff1;
+  }
+  .comment {
+    padding: 12px 15px 12px 20px;
+    border-left: 2px solid #edeff1;
+    margin-left: 8px;
+  }
+  .comment-meta {
+    font-size: 12px;
+    color: #787c7e;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  .comment-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .comment-actions {
+    font-size: 12px;
+    color: #878a8c;
+  }
+  .score {
+    color: #1a1a1b;
+    font-weight: bold;
+  }
+  .flair {
+    background: #e9f5fd;
+    color: #0079d3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .award {
+    color: #d4b572;
+    margin-right: 8px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/EasternEuropeanAffairs</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>28.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">The Ural Republic: How one warlord from Yekaterinburg finally consolidated power in the Urals and created Russia's first functional post-collapse state</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Russia/Ukraine</span>
-                    <span>Posted by u/EasternEuropeanAffairs • 3 hours ago • 28.7k upvotes • 8,942 comments</span>
-                </div>
-
-                <p><strong>After 27 months of brutal civil conflict, the Ural Republic has emerged as the first stable governmental entity in former Russia, controlling 2.3 million people across the former Tyumen and Sverdlovsk regions.</strong></p>
-
-                <p>Generalissimo Andrei Petrov, the 45-year-old former FSB colonel who styled himself "Protector of the Urals," has achieved what 180+ other warlords could not: creating functional governance from the ashes of civilization.</p>
-
-                <p>The Republic's formation marks the end of the "pure chaos" phase of Russia's collapse. Unlike the criminal enterprises that dominated other regions, Petrov's administration has established:</p>
-                <ul>
-                    <li>A functional civil service with 15,000 former bureaucrats</li>
-                    <li>Currency backed by Ural natural gas reserves (the "Ural Ruble")</li>
-                    <li>Re-established food distribution networks reaching 89% of the population</li>
-                    <li>A conscription-based military of 45,000 troops with actual uniforms</li>
-                    <li>Trade agreements with Kazakhstan and China for essential goods</li>
-                </ul>
-
-                <p>The capital in Yekaterinburg operates under martial law but provides basic services: electricity 16 hours/day, running water 3 times/week, and food rations that prevent starvation. It's not prosperity, but it's order - and after two years of hell, that's enough.</p>
-
-                <p>Petrov's consolidation campaign was methodical and brutal. Over 14 months, he systematically eliminated rival warlords through a combination of targeted assassinations, strategic alliances with mid-tier commanders, and the simple expedient of offering starving populations food in exchange for loyalty.</p>
-
-                <p>The Republic's next challenge: the approaching winter. With Chinese "advisors" now embedded in key ministries and Kazakh trucks rolling in daily supplies, the Ural Republic may become the template for post-Russian statehood - or simply the largest target for the remaining 180 warlords to unite against.</p>
-
-                <div class="comments">
-                    <a href="#">8,942 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">QA</a>
-        </div>
-
-        <div class="comments-section">
-            <div class="comment">
-                <div class="comment-header">
-                    <strong>u/YekaterinburgResident</strong> • 2 hours ago • 5.4k upvotes <span class="award-count">🏆x12</span>
-                </div>
-                <div class="comment-content">
-                    I live in Yekaterinburg. I never thought I'd say this, but thank fucking god for Petrov. Yeah, he's a dictator. Yeah, his soldiers killed my neighbor for "hoarding" (he had 20kg of flour). But you know what? I ate today. My kids ate today. We have electricity for 16 hours. Last winter we had people eating tree bark and burning furniture to stay warm. Now we have actual coal deliveries. Is it perfect? Fuck no. Is it better than the absolute hell we lived through? Absolutely.
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <strong>u/FormerMoscowAnalyst</strong> • 2 hours ago • 3.2k upvotes
-                </div>
-                <div class="comment-content">
-                    What's fascinating is how Petrov studied the failures of other warlords. He didn't try to control everything - he created this hybrid system where local strongmen keep their territories IF they swear allegiance and provide troops. It's basically feudalism, but with 21st century weapons and propaganda. The man read his history books.
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <strong>u/ChineseTradeRep</strong> • 2 hours ago • 2.8k upvotes <span class="award-count">🏆x3</span>
-                </div>
-                <div class="comment-content">
-                    I'm working with the Chinese delegation here. We've signed 17 agreements for natural gas, rare earth minerals, and agricultural products. The Ural Republic gets food, medicine, and technical advisors. China gets exclusive resource rights for 30 years. It's imperialism, but at least it's functional imperialism. The population doesn't care who's exploiting them as long as they're not starving.
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <strong>u/SiberianRefugee2028</strong> • 1 hour ago • 4.1k upvotes <span class="award-count">🏆x7</span>
-                </div>
-                <div class="comment-content">
-                    Fled to the Urals from Tomsk last year. The difference is night and day. In Tomsk, 12 different warlords were fighting over a city of 500,000 people. Here, there's one guy in charge. Sure, he might take your house for "state purposes" but at least you won't get shot by 4 different militias on your way to the bread line. My family has a future here. My kids are learning Chinese in school now - Petrov's orders. Adapt or die.
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <strong>u/NuclearSecurityExpert</strong> • 1 hour ago • 3.9k upvotes
-                </div>
-                <div class="comment-content">
-                    Petrov controls 4 tactical nuclear weapons. This is actually good news - they're under centralized control for the first time since the collapse. The launch codes are kept in a secure facility with Chinese technical advisors. The bad news? He's made it clear that any attack on the Ural Republic will result in immediate nuclear retaliation. The man has created a functional MAD scenario with 45,000 troops and 4 nukes.
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <strong>u/HistoryRhymes</strong> • 1 hour ago • 1.8k upvotes
-                </div>
-                <div class="comment-content">
-                    This is exactly how Russia formed after the Mongol invasion - local strongmen consolidating territory, offering protection in exchange for loyalty, gradually building larger administrative units. Petrov isn't creating a new system, he's just the first to successfully apply medieval solutions to post-apocalyptic conditions. The scary part? It works.
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <strong>u/FormerFSB</strong> • 45 minutes ago • 2.2k upvotes <span class="award-count">🏆x4</span>
-                </div>
-                <div class="comment-content">
-                    I served with Petrov in the FSB. The man was always ambitious, but nobody expected this level of success. His key insight was understanding that people don't want democracy or freedom - they want food and security. He provides both. His "Council of Notables" includes former oligarchs, Orthodox priests, and even some of the criminals he defeated. It's not pretty, but it's governance.
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <strong>u/EconomicsPostCollapse</strong> • 30 minutes ago • 987 upvotes
-                </div>
-                <div class="comment-content">
-                    The Ural Ruble is actually backed by something real - natural gas reserves. Petrov's government controls the pipelines and can actually deliver fuel to customers. That gives the currency real value in a way that none of the other warlord scrip could match. It's basic economics: if you can provide actual goods and services, people will accept your money.
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-header">
-                    <strong>u/NextWarlordsTarget</strong> • 20 minutes ago • 1.5k upvotes
-                </div>
-                <div class="comment-content">
-                    Everyone here knows this is temporary. Petrov has 45,000 troops, but the Siberian Resource Coalition has 180,000. The question isn't if they'll attack, but when. The Ural Republic's survival depends on whether Petrov can convince other regions to join his federation rather than fight him. Winter is coming, and 2.3 million people are counting on one former FSB colonel to keep them alive.
-                </div>
-            </div>
-
-            <button class="expand-btn">+ 8,933 more replies</button>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/worldnews</h3>
-            <ul>
-                <li><a href="#">China reportedly negotiating with 12 remaining warlords for final consolidation deals</a></li>
-                <li><a href="#">UN Security Council to recognize Ural Republic as "legitimate regional authority"</a></li>
-                <li><a href="#">Former Russian nuclear arsenal now consolidated under 4 regional powers</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/AskARussianWarlord
+  </div>
+  
+  <div class="post-content">
+    <div class="subreddit-name">r/AskARussianWarlord</div>
+    <h1 class="post-title">[BREAKING] The Ural Republic has been formed - Yekaterinburg warlord unifies Tyumen territories after 47 days of fighting. First proto-state emerges from the chaos</h1>
+    <div class="post-meta">
+      Posted by <span class="comment-author">u/UralRepublicWatch</span> <span class="flair">Verified Observer</span> • 6 hours ago • 45.2k upvotes • 8.9k comments
     </div>
+    
+    <p>After 47 days of brutal consolidation warfare, Alexander "The Architect" Volkov has successfully absorbed all remaining Tyumen warlords into what appears to be Russia's first functioning proto-state since the collapse. The Ural Republic now controls territories from Yekaterinburg to Tyumen with a population of approximately 2.3 million people. Volkov has established a 12-member council, reinstated basic civil services, and claims to be drafting a constitution. This marks the first time since 2028 that any faction has controlled more than a single city.</p>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/FormerTyumenResident</span> • <span class="score">8.7k points</span> • 5 hours ago
+    </div>
+    <div class="comment-text">
+      Holy shit I'm actually crying. My family hasn't had running water in 8 months. Yesterday the Ural Republic engineers got the main pump station working again. My kids took their first real bath since last October. Volkov's soldiers didn't even loot the neighborhood this time - they actually ASKED if we needed medical supplies. This is the first time since the collapse that someone in uniform hasn't pointed a gun at me.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/UralRepublicOfficial</span> • <span class="score">5.2k points</span> • 5 hours ago
+    </div>
+    <div class="comment-text">
+      Official statement from the Ural Republic: Citizens of the former Tyumen territories are advised that the transition period is complete. Food distribution centers will open tomorrow at 6 AM. All former warlord currencies are void as of 2400 hours today. The Republic Council meets weekly and citizen grievances can be submitted at distribution centers. We are not the old government - we are what comes next.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/WarAnalyst2029</span> • <span class="score">3.4k points</span> • 4 hours ago
+    </div>
+    <div class="comment-text">
+      Former military analyst here. What Volkov did is actually brilliant from a strategic standpoint. Instead of the usual "kill everyone and declare victory" approach, he systematically absorbed territories by offering warlords positions in his new government. The Tyumen Oil Baron got control of energy resources, the former police chief became head of internal security, even the crazy guy who controlled the radio tower got a communications role. It's like he created a mafia government where everyone gets a cut.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/ExWarlordLieutenant</span> • <span class="score">2.8k points</span> • 4 hours ago
+    </div>
+    <div class="comment-text">
+      I was one of the last holdouts. Fought for Warlord Dmitri "The Butcher" Petrov until the end. When Volkov's forces surrounded our compound, we expected execution. Instead, Volkov himself walked in with a briefcase full of documents and said "You can die meaningless deaths, or help me build something that lasts." Three of us took the deal. The others... well, they're fertilizer for the apple orchards now.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/ChechnyaObserver</span> • <span class="score">1.9k points</span> • 3 hours ago
+    </div>
+    <div class="comment-text">
+      From Chechnya (yes, we're still here): We've seen this before. Strong man unites territories, promises stability, creates institutions... then becomes the very thing he fought against. The question isn't whether Volkov can maintain control - it's what happens when he inevitably declares himself President-for-Life and starts purging the council members who helped him rise.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/ConstitutionalLawyer</span> • <span class="score">1.5k points</span> • 3 hours ago
+    </div>
+    <div class="comment-text">
+      Lawyer here (somehow survived the collapse). What's fascinating is that Volkov is actually using pre-collapse legal frameworks. The "Republic Council" is modeled on the old Federation Council structure. He's talking about property rights, contract enforcement, even a judicial system. Yesterday I witnessed the first civil case in 8 months - someone sued their neighbor over a goat. AND THEY ACTUALLY HAD A HEARING.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/MoscowExile</span> • <span class="score">1.3k points</span> • 3 hours ago
+    </div>
+    <div class="comment-text">
+      Moscow exile here. The irony is that Volkov was a nobody before the collapse - just some mid-level bureaucrat from Yekaterinburg's city planning department. He used his knowledge of infrastructure, supply chains, and administrative systems to build what the actual government couldn't maintain. While other warlords were fighting over tanks and territory, he was securing water treatment plants and grain silos.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/RadioFreeRussia</span> • <span class="score">987 points</span> • 2 hours ago
+    </div>
+    <div class="comment-text">
+      Running pirate radio from the Urals. The Republic has restored AM broadcasts and they're actually reporting real news instead of propaganda. Volkov's first decree was "No more lying to the people - we've had enough of that." Of course, we'll see how long that lasts when the first crisis hits, but it's refreshing to hear weather reports that don't mention "glorious victories" over imaginary enemies.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/GrainDistribution</span> • <span class="score">756 points</span> • 2 hours ago
+    </div>
+    <div class="comment-text">
+      Work at the new grain distribution center. Volkov's first law: "Feed the people before you feed the soldiers." Revolutionary concept after 14 months of warlord rule. He actually weighed the grain in front of people and made his soldiers wait in line like everyone else. My daughter asked "Why is the army being nice to us?" and I didn't have an answer. We've forgotten what that feels like.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SiberianWarlords</span> • <span class="score">643 points</span> • 1 hour ago
+    </div>
+    <div class="comment-text">
+      UPDATE: As of 30 minutes ago, the last independent warlord in former Tyumen territory has surrendered. General Volkov now controls approximately 2.3 million people across 180,000 square kilometers. The "Council of Twelve" has been officially sworn in. They have electricity in 67% of controlled territories and running water in 43%. This is either the beginning of Russia's reconstruction or the setup for the most brutal dictatorship yet.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px;">
+    Continue this thread →
+  </div>
+</div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
