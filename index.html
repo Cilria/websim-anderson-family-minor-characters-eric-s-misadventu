@@ -1,231 +1,350 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background: #ff4500;
-    color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .subreddit-name {
-    color: #ff4500;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
-  }
-  .post-meta {
-    color: #787c7e;
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
-  .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
-  }
-  .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
-  }
-  .comment-meta {
-    font-size: 12px;
-    color: #787c7e;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #1a1a1a;
-  }
-  .comment-text {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 8px;
-  }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1a1b;
-    font-weight: bold;
-  }
-  .flair {
-    background: #e9f5fd;
-    color: #0079d3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-novograd {
-    background: #0052cc;
-    color: #fff;
-  }
-  .flair-ural {
-    background: #ff6b35;
-    color: #fff;
-  }
-  .flair-far-east {
-    background: #2e7d32;
-    color: #fff;
-  }
-  .flair-siberia {
-    background: #ffd700;
-    color: #000;
-  }
-  .flair-don {
-    background: #8b0000;
-    color: #fff;
-  }
-  .flair-moscow {
-    background: #dc143c;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Final Six: Russia's warlord era ends as continent consolidates into just 6 successor states : worldnews</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #eee;
+        }
+        .comment-header {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .expand-btn {
+            background: none;
+            border: none;
+            color: #0066cc;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 0;
+        }
+        .award-count {
+            font-size: 12px;
+            color: #d4a017;
+            margin-left: 5px;
+        }
+        .territory-list {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 3px solid #ff4500;
+        }
+        .territory-list h4 {
+            margin: 0 0 10px 0;
+            color: #1a1a1a;
+        }
+        .territory-list ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .democracy-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .democracy-high { background-color: #00b894; }
+        .democracy-medium { background-color: #fdcb6e; }
+        .democracy-low { background-color: #e17055; }
+        .democracy-none { background-color: #d63031; }
+    </style>
 </head>
 <body>
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/PostCollapseRussia
-  </div>
-  
-  <div class="post-content">
-    <div class="subreddit-name">r/PostCollapseRussia</div>
-    <h1 class="post-title">[2031 FINAL UPDATE] The Great Consolidation is COMPLETE. After 38 months of apocalyptic warfare, only SIX nations remain. The Russian Collapse has ended and new nations are born. Here's what each proto-state looks like now.</h1>
-    <div class="post-meta">
-      Posted by <span class="comment-author">u/FinalStateAnalyst</span> <span class="flair">Verified Analyst</span> • 2 hours ago • 167k upvotes • 28.9k comments
-    </div>
-    
-    <p><strong>THE FINAL SIX - January 2031</strong></p>
-    <p>After the bloodiest 38 months in modern history, the Russian Collapse has concluded. From over 2,500 warlords in 2028, only six nations remain. These are no longer proto-states - they are fully functioning countries with governments, currencies, and international recognition.</p>
-    
-    <p><strong>The Second Republic of Novograd</strong> - 12.4M people, federal democracy, EU candidate status, capital in St. Petersburg</p>
-    <p><strong>The Greater Ural Republic</strong> - 8.9M people, technocratic oligarchy, controls all territory from Yekaterinburg to Chelyabinsk</p>
-    <p><strong>The Far Eastern Republic</strong> - 4.2M people, military junta, major Pacific trading power</p>
-    <p><strong>The Kingdom of Siberia</strong> - 6.7M people, constitutional monarchy, resource-rich superpower</p>
-    <p><strong>Republic of Don</strong> - 3.1M people, agrarian republic, breadbasket of the new nations</p>
-    <p><strong>Republic of Moscow</strong> - 9.8M people, democratic federation, recognized by 47 countries</p>
-  </div>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/PostRussianAnalyst</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+        </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/NovogradPM</span> <span class="flair flair-novograd">Second Republic of Novograd</span> • <span class="score">45.2k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      I'm the Prime Minister of Novograd. We just held our first democratic elections in 5 years. 87% turnout. The EU just granted us candidate status last week. My daughter is studying law in Warsaw on an Erasmus scholarship. We have McDonald's again. Fucking McDonald's. After eating rats for 2 years, I had a Big Mac yesterday and cried. We're rebuilding the Hermitage. The Winter Palace will host the EU Parliament next month. This is real. This is happening.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>156.7k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/UralTechMinister</span> <span class="flair flair-ural">Greater Ural Republic</span> • <span class="score">38.7k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      Greater Ural Republic Minister of Technology here. We control 78% of Russia's remaining nuclear arsenal. Not warheads - actual functioning reactors. We're selling power to China, Kazakhstan, even the Republic of Moscow. Our engineers are building a space elevator in orbit using captured ISS components. Yesterday we launched 3 satellites. The space program is back. We're the Silicon Valley of the post-collapse world. Google just opened an office in Yekaterinburg. GOOGLE.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">[FINAL] The End of an Empire: From 2,500 warlords to 6 successor states - Russia's 5-year death spiral concludes</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Feature Story</span>
+                    <span>Posted by u/PostRussianAnalyst • 2 hours ago • 156.7k upvotes • 89,432 comments</span>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/FarEastAdmiral</span> <span class="flair flair-far-east">Far Eastern Republic</span> • <span class="score">32.1k points</span> • 54 minutes ago
-    </div>
-    <div class="comment-text">
-      Admiral of the Far Eastern Republic Navy. We just completed the Trans-Pacific Trade Route. Japanese, Korean, and Chinese ships dock in Vladivostok daily. Our GDP grew 340% last year. We have 4G internet. FOUR GEE. I video-called my wife in Seoul yesterday. Seoul. The military junta is harsh but effective - crime is lower than pre-collapse Moscow. We're negotiating with Tesla for a gigafactory. The Pacific Century is real and it's happening in Vladivostok.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p><strong>EXCLUSIVE: March 15, 2031 - The Russian Federation is dead. After 5 years of chaos, 2,500 warlords, and countless battles, exactly six successor states now control the former Russian landmass. The warlord era is over. The new cold war between the Final Six has begun.</strong></p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SiberianKingChronicler</span> <span class="flair flair-siberia">Kingdom of Siberia</span> • <span class="score">28.9k points</span> • 43 minutes ago
-    </div>
-    <div class="comment-text">
-      Official Chronicler to King Viktor II here. The Kingdom just discovered massive rare earth deposits in Krasnoyarsk. We're the Saudi Arabia of lithium. China is building roads, railways, and airports. Our currency is backed by gold and lithium futures. The King's palace has actual internet (Starlink). We have a royal YouTube channel with 2.3M subscribers. My son attends the Royal Academy of Sciences. We're not just surviving - we're thriving. The Siberian Tiger economy is real.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>The last 20 minor warlords surrendered, were absorbed, or were eliminated in the past 72 hours. The final battle took place outside Krasnoyarsk, where the Kingdom of Siberia's forces crushed the last independent Cossack host. The era that began with the 2026 oil price crash and Moscow's central government collapse has ended with six entities that can legitimately claim to be nation-states.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/DonFarmerGeneral</span> <span class="flair flair-don">Republic of Don</span> • <span class="score">24.5k points</span> • 38 minutes ago
-    </div>
-    <div class="comment-text">
-      Minister of Agriculture, Republic of Don. We're feeding 40% of the former Russian territory. Our wheat harvest broke all records. The EU just signed a $12B food security agreement with us. We have John Deere tractors again. My grandfather, who survived Holodomor, saw his first green John Deere last week and kissed it. We export grain to China, Europe, even the Middle East. The Don River runs clear again. We have peace. Actual peace. The breadbasket is back.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="territory-list">
+                    <h4>The Final Six - March 2031:</h4>
+                    <ul>
+                        <li><span class="democracy-indicator democracy-high"></span><strong>Second Republic of Novograd</strong> (St. Petersburg) - 18.3M people, democratic republic, EU candidate status</li>
+                        <li><span class="democracy-indicator democracy-medium"></span><strong>Republic of Moscow</strong> (Moscow) - 15.7M people, federal democracy, UN seat</li>
+                        <li><span class="democracy-indicator democracy-high"></span><strong>Far Eastern Republic</strong> (Vladivostok) - 8.9M people, direct democracy, Pacific trade hub</li>
+                        <li><span class="democracy-indicator democracy-none"></span><strong>Kingdom of Siberia</strong> (Tomsk) - 14.2M people, absolute monarchy, Chinese protectorate</li>
+                        <li><span class="democracy-indicator democracy-low"></span><strong>Greater Ural Republic</strong> (Yekaterinburg) - 7.1M people, military junta, resource empire</li>
+                        <li><span class="democracy-indicator democracy-medium"></span><strong>Republic of Don</strong> (Rostov-on-Don) - 5.4M people, agricultural republic, Cossack federation</li>
+                    </ul>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MoscowPresident</span> <span class="flair flair-moscow">Republic of Moscow</span> • <span class="score">19.7k points</span> • 32 minutes ago
-    </div>
-    <div class="comment-text">
-      President of the Republic of Moscow. Yesterday I signed the Moscow Accords - mutual defense pacts with all 5 remaining nations. We're not enemies anymore - we're neighbors. The Kremlin hosts monthly summits. My daughter just got accepted to Harvard. HARVARD. We're rebuilding the Metro, restoring the Bolshoi, reopening universities. Moscow State University has 15,000 students again. We have diplomatic relations with 47 countries. The Russian flag flies over the Kremlin again, but it's a new Russia. A better Russia.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>The Second Republic of Novograd has emerged as the surprise winner of the consolidation. Starting from the St. Petersburg enclave, President Anna Volkova's government successfully portrayed itself as "the real democratic Russia" and absorbed most of European Russia west of the Urals. With EU candidate status granted in February 2031 and NATO security guarantees, Novograd has positioned itself as the legitimate successor to the Russian Federation.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/BorderGuardFinal</span> • <span class="score">15.3k points</span> • 27 minutes ago
-    </div>
-    <div class="comment-text">
-      Former warlord, now border guard for the Republic of Moscow. I fought in 47 battles. Killed 200+ men. Last week I shook hands with the Novograd PM across the border. We're building a joint customs checkpoint. My son doesn't know what war is. He's 8 and has never heard gunfire. We have a house. A real house. With electricity and running water. The war is over. The war is actually fucking over. I'm crying as I write this. We're going to be okay. All of us.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>"This is the end of the Russian empire that began in 1547," says Dr. Mikhail Petrov, former Kremlin advisor now teaching at Harvard. "What we're witnessing isn't just a civil war - it's the complete dissolution of a 500-year imperial project. The Final Six are as different from each other as France is from China."</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/EUCommissioner2031</span> • <span class="score">12.8k points</span> • 22 minutes ago
-    </div>
-    <div class="comment-text">
-      EU Commissioner for Post-Collapse Relations. Yesterday we recognized all 6 nations diplomatically. The Novograd application for EU membership is being fast-tracked. We're investing €500B in reconstruction. The Greater Ural Republic is joining the ESA space program. The Kingdom of Siberia is in NATO's Partnership for Peace. The Far East Republic has observer status at the UN. The Republic of Don is the EU's largest grain supplier. The Republic of Moscow is hosting the 2034 World Cup. This isn't recovery - this is rebirth.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>The human cost is staggering. Conservative estimates suggest 8-12 million deaths from violence, famine, and disease since 2027. The population of the former Russian Federation has fallen from 144 million to 69.6 million across the six successor states. Entire cities vanished. The Neo-Nazi state of Omsk was destroyed by a coalition of neighboring republics after their ethnic cleansing programs became impossible to ignore.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/LastWarCorrespondent</span> • <span class="score">9.7k points</span> • 18 minutes ago
-    </div>
-    <div class="comment-text">
-      I photographed every major battle of the Collapse. From the Battle of Moscow (2029) to the Siege of Omsk (2030). I have 50,000 photos of death, destruction, and despair. Yesterday I photographed the first joint session of the Six Nations Parliament in Novgorod. They were laughing. Actually laughing. The President of Moscow told a joke and the King of Siberia laughed so hard he fell off his chair. I'm done. I'm retiring. My work is complete. The story has a happy ending after all.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>The new borders are hardening. Each of the Final Six has:</p>
+                <ul>
+                    <li>Functioning governments and civil services</li>
+                    <li>Internationally recognized borders (by at least some countries)</li>
+                    <li>Standing armies with modern weapons</li>
+                    <li>Currency and economic systems</li>
+                    <li>Trade agreements with foreign powers</li>
+                </ul>
 
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px;">
-    The Collapse is over. The rebuilding begins. →
-  </div>
-</div>
+                <p>The geopolitical implications are profound. The Kingdom of Siberia is effectively a Chinese client state. Novograd is integrating with the EU. The Far Eastern Republic has become a crucial link in the Pacific economy. The Republic of Moscow maintains the UN Security Council seat but controls only the historical heartland.</p>
+
+                <p>"We used to have one Russia to deal with," says a senior State Department official. "Now we have six, and they're all pointing nuclear weapons at each other. The Moscow-Novograd cold war is already more dangerous than the original US-Soviet standoff, because these people actually know each other and hate each other personally."</p>
+
+                <p>The final battle for Krasnoyarsk ended not with a bang but a broadcast. The last independent warlord, former Wagner commander Viktor Sidorov, went live on Telegram to announce his surrender: "The experiment is over. Russia as we knew it is dead. I hand my territory and my weapons to the Kingdom of Siberia. May God have mercy on what we've become."</p>
+
+                <p>The six flags now fly over the former Russian landmass. The warlord era is over. The age of the Final Six has begun.</p>
+
+                <div class="comments">
+                    <a href="#">89,432 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">QA</a>
+        </div>
+
+        <div class="comments-section">
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/NovogradCitizen</strong> • 1 hour ago • 45.2k upvotes <span class="award-count">🏆x87</span>
+                </div>
+                <div class="comment-content">
+                    I was there when the last warlord surrendered in Krasnoyarsk. We watched Sidorov's broadcast on a cracked phone screen in the ruins of the central square. When he said "Russia as we knew it is dead," people started crying. Not because we lost something, but because we finally knew what we'd become. The next day, Kingdom of Siberia tanks rolled in. The occupation was weirdly polite - they brought food, medicine, and Chinese construction crews. We're not Russians anymore. We're Siberians. And honestly? The Chinese food is better than what we had before.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/MoscowUNRep</strong> • 1 hour ago • 38.7k upvotes <span class="award-count">🏆x54</span>
+                </div>
+                <div class="comment-content">
+                    I work at the UN for what's left of the Russian Federation. We still have the seat, the nuclear codes, and the veto power. But we represent 15.7 million people instead of 144 million. The other five successor states all claim they're the "real Russia." Novograd has the population. Kingdom of Siberia has the resources. Far Eastern Republic has the Pacific access. We have... Moscow. The UN still calls us "Russia" but everyone knows it's theater. We're the rump state of an empire.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/EUObserver</strong> • 1 hour ago • 32.1k upvotes
+                </div>
+                <div class="comment-content">
+                    I'm a EU diplomat stationed in St. Petersburg (sorry, Novograd). The speed of European integration is breathtaking. They adopted the Euro last month, EU flags fly next to the tricolor, and young people speak English with Dutch accents. The transformation from Russian chaos to European order took exactly 18 months. The Second Republic is what Russia could have been if it had chosen democracy in 1991 instead of Putin.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/UralGeneralStaff</strong> • 55 minutes ago • 28.9k upvotes <span class="award-count">🏆x41</span>
+                </div>
+                <div class="comment-content">
+                    The Greater Ural Republic runs on a simple formula: We have the oil, gas, and rare earth minerals. Everyone else needs them. The military junta isn't pretty, but it's effective. We sell resources to China through Siberia, to Europe through Novograd, and to Japan through the Far East. We're everyone's gas station now. The generals live like kings, the rest of us get security and jobs. It's not democracy, but after the chaos of 2027-2029, we'll take stability.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/DonFarmer</strong> • 45 minutes ago • 24.3k upvotes
+                </div>
+                <div class="comment-content">
+                    The Republic of Don might be the smallest, but we feed everyone. The Cossack federations control the most fertile land in the former USSR. We're the breadbasket that keeps the other five from starving. The old men with mustaches and sabers turned out to be surprisingly good at running an agricultural economy. We trade wheat for Siberian oil, fish from the Far East, and technology from Novograd. The Cossack democracy is weird - every village votes on everything - but it works.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/ChineseTradeMinistry</strong> • 35 minutes ago • 21.7k upvotes <span class="award-count">🏆x33</span>
+                </div>
+                <div class="comment-content">
+                    China has achieved in 5 years what the Soviet Union couldn't in 50 - complete control over Siberia without firing a shot. The Kingdom of Siberia is our resource colony. 200,000 Chinese citizens now live there as "technical advisors." Mandarin is taught in schools. The currency is pegged to the Yuan. Beijing makes all major decisions. We don't need to invade when we can simply buy what we want. The other successor states call it colonization. We call it the Belt and Road.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/LastRussianTeacher</strong> • 30 minutes ago • 19.8k upvotes
+                </div>
+                <div class="comment-content">
+                    I taught Russian language and literature for 30 years. Now I teach... nothing. The schools in Novograd teach English and French. In Siberia, they teach Mandarin. In the Far East, Japanese is mandatory. The Republic of Moscow keeps Russian as official language, but it's becoming a museum piece. My students don't read Pushkin - they read translated American novels. The Russian language died with the empire. Sometimes I think we lost something irreplaceable.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/NuclearWatchdog</strong> • 25 minutes ago • 17.4k upvotes <span class="award-count">🏆x28</span>
+                </div>
+                <div class="comment-content">
+                    The nuclear situation is a nightmare. Instead of one Russia with 6,000 warheads, we have six successor states with 1,000 each. The command and control systems were split up based on geography. So Moscow has the codes for the missiles in European Russia, Siberia has the ones in the east, etc. They're all pointing at each other. The Novograd-Moscow cold war is especially dangerous - they literally share a border and have nuclear weapons 200km apart.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/FarEasternTrader</strong> • 20 minutes ago • 15.2k upvotes
+                </div>
+                <div class="comment-content">
+                    The Far Eastern Republic is the only one that's actually better off than before the collapse. We're a Pacific nation now, not a Russian backwater. Japanese investment rebuilt Vladivostok into a modern city. Korean pop music plays in the streets. We have direct flights to Seoul, Tokyo, and Beijing. The old Russian identity is gone, replaced by something new and Asian. My kids speak Russian at home, Japanese at school, and Korean with their friends. We're not Russian anymore - we're Pacific.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/HistoryProfessorBerlin</strong> • 15 minutes ago • 13.8k upvotes
+                </div>
+                <div class="comment-content">
+                    As a historian who specialized in Russian collapse scenarios, I never thought I'd see the actual end. The dissolution of the USSR in 1991 was just the beginning. This is the real end of the Russian imperial project that began with Ivan IV in 1547. The Final Six represent the complete fragmentation of a civilization. In 500 years, historians will study this as one of the most dramatic imperial collapses in human history. We lived through the death of an empire.
+                </div>
+            </div>
+
+            <button class="expand-btn">+ 89,422 more replies</button>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/worldnews</h3>
+            <ul>
+                <li><a href="#">China officially recognizes all six successor states, opens six separate embassies</a></li>
+                <li><a href="#">EU-Novograd integration accelerates: Visa-free travel begins July 2031</a></li>
+                <li><a href="#">Nuclear watchdogs warn of "multiple Chernobyl risks" across former Russia</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
