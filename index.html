@@ -3,171 +3,215 @@
 <head>
 <style>
   body {
-    font-family: CNN, "CNN Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f6f7f8;
     margin: 0;
     padding: 20px;
   }
-  .cnn-container {
-    max-width: 800px;
+  .reddit-container {
+    max-width: 740px;
     margin: 0 auto;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    border: 1px solid #ccc;
   }
-  .cnn-header {
-    background: #cc0000;
+  .reddit-header {
+    background: #ff4500;
     color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  .cnn-logo {
-    font-size: 28px;
+    padding: 12px 20px;
     font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 16px;
   }
-  .article-header {
-    padding: 30px;
-    border-bottom: 1px solid #e6e6e6;
-  }
-  .article-title {
-    font-size: 32px;
+  .subreddit-name {
+    color: #ff4500;
     font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    color: #1a1a1a;
+    line-height: 1.3;
+  }
+  .post-meta {
+    color: #787c7e;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .post-content {
+    padding: 15px;
+    border-bottom: 1px solid #edeff1;
+  }
+  .comment {
+    padding: 12px 15px 12px 20px;
+    border-left: 2px solid #edeff1;
+    margin-left: 8px;
+  }
+  .comment-meta {
+    font-size: 12px;
+    color: #787c7e;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
     color: #1a1a1a;
   }
-  .article-meta {
-    color: #666;
+  .comment-text {
     font-size: 14px;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 8px;
   }
-  .article-byline {
-    font-weight: bold;
-    color: #cc0000;
+  .comment-actions {
+    font-size: 12px;
+    color: #878a8c;
   }
-  .article-content {
-    padding: 30px;
-    font-size: 18px;
-    line-height: 1.8;
-  }
-  .article-content p {
-    margin-bottom: 20px;
-  }
-  .breaking-banner {
-    background: #cc0000;
-    color: white;
-    padding: 10px 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
-  }
-  .update-bar {
-    background: #fff3cd;
-    border: 1px solid #ffeaa7;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 4px;
+  .score {
+    color: #1a1a1a;
     font-weight: bold;
   }
-  .quote-box {
-    background: #f8f9fa;
-    border-left: 4px solid #cc0000;
-    padding: 20px;
-    margin: 20px 0;
-    font-style: italic;
-    color: #333;
+  .flair {
+    background: #e9f5fd;
+    color: #0079d3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 4px;
   }
-  .warlord-list {
-    background: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 20px;
-    margin: 20px 0;
-  }
-  .warlord-list h3 {
-    margin-top: 0;
-    color: #cc0000;
-  }
-  .timeline-item {
-    border-left: 3px solid #cc0000;
-    padding-left: 20px;
-    margin: 20px 0;
+  .award {
+    color: #d4b572;
+    margin-right: 8px;
   }
 </style>
 </head>
 <body>
-<div class="cnn-container">
-  <div class="cnn-header">
-    <div class="cnn-logo">CNN</div>
-    <div style="font-size: 14px; margin-top: 5px;">BREAKING NEWS</div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/AskARussianWarlord
   </div>
   
-  <div class="breaking-banner">
-    EXCLUSIVE: One year of bloodshed as 2,500 Russian warlords become 181 through constant betrayal
+  <div class="post-content">
+    <div class="subreddit-name">r/AskARussianWarlord</div>
+    <h1 class="post-title">I'm Dmitri "The Serpent" Kirov, one of the 181 remaining Russian warlords. I've survived 23 assassination attempts and betrayed 47 allies. AMA</h1>
+    <div class="post-meta">
+      Posted by <span class="comment-author">u/SerpentKirov</span> <span class="flair">Verified Warlord</span> • 14 hours ago • 89.2k upvotes • 12.4k comments
+    </div>
+    
+    <p>After 14 months of the Great Consolidation, only 181 of us remain from the original 2,500 warlords. I control Western Siberian territories from my bunker in Novosibirsk. Been betrayed and betrayed others more times than I can count. Ask me anything about life in the new Russian warlord era.</p>
   </div>
 
-  <div class="article-header">
-    <h1 class="article-title">'Year of the Knife': Russia's 2,500 micro-states shrink to 181 through daily betrayals, shifting alliances and constant warfare</h1>
-    <div class="article-meta">
-      <span class="article-byline">By Matthew Chance, CNN Senior International Correspondent</span><br>
-    Former Russia Territory • Updated 9:23 PM ET, Mon December 9, 2029
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SiberianSurvivor2029</span> • <span class="score">3.4k points</span> • 13 hours ago
     </div>
+    <div class="comment-text">
+      Holy shit it's actually you. My village was destroyed when the Novosibirsk Technate betrayed the Siberian Coalition back in March. They literally signed a peace treaty at 9 AM and were shelling us by 3 PM. How do you decide when to betray vs when to stay loyal?
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
   </div>
 
-  <div class="article-content">
-    <p><strong>Former Moscow (CNN)</strong> — After 14 months of near-constant warfare, betrayal, and shifting alliances, the fractured territories of former Russia have consolidated from over 2,500 competing warlord states to just 181 remaining factions, each controlling significant territory through brutal efficiency and strategic backstabbing.</p>
-
-    <p>The "Great Consolidation," as locals grimly call it, has been marked by daily betrayals that would make medieval kings blush. Warlords who swore blood oaths on Monday have murdered their allies by Friday. Peace treaties signed at sunrise are broken by sunset. Entire city-states have vanished overnight as former allies suddenly turn their tanks inward.</p>
-
-    <div class="timeline-item">
-      <strong>June 2028:</strong> The Petrograd Alliance forms between 47 warlords. By July, 23 are dead - betrayed by their own allies. The alliance fractures into 67 smaller factions.
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SerpentKirov</span> • <span class="score">2.1k points</span> • 12 hours ago
     </div>
-
-    <div class="timeline-item">
-      <strong>September 2028:</strong> The "Treaty of the Urals" unites 89 warlords under General Voronin. Within 72 hours, Voronin is assassinated by his own lieutenant, who then claims the entire territory.
+    <div class="comment-text">
+      Simple rule: if they haven't betrayed me yet, they're planning to. The key is betraying them before they get the chance. I have a guy who tracks alliance expiration dates like they're milk going bad. Tuesday is betrayal day in my territories.
     </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
 
-    <div class="timeline-item">
-      <strong>March 2029:</strong> The Siberian Coalition reaches 156 members - the largest alliance to date. By May, internal betrayals reduce it to 31 warlords, who then immediately turn on each other.
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/HistoryTeacher_Throwaway</span> • <span class="score">1.8k points</span> • 12 hours ago
     </div>
-
-    <p>"We've documented over 4,000 separate betrayals in the past year," says Dr. Elena Volkov, conflict analyst tracking the territorial changes. "Every alliance is temporary. Every partnership ends in blood. The only constant is the knife in the back."</p>
-
-    <div class="update-bar">
-      <strong>LIVE TALLY:</strong> As of today, 181 warlord states remain. The "Moscow Crater Republic" just absorbed three neighboring territories after their leaders were poisoned at a 'peace summit.'
+    <div class="comment-text">
+      Former history professor here (now living under the Siberian Khanate - long story). We've been documenting the betrayals and it's absolutely wild. The "Treaty of the Urals" had 89 signatories. Within 72 hours, 47 were dead. Your betrayal of General Voronin was particularly elegant - poisoned his tea with the same brand he used to toast your alliance. 
     </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
 
-    <p>The most successful warlords have been those who mastered the art of betrayal. Dmitri "The Serpent" Kirov, who controls the Western Siberian territories, has survived 23 assassination attempts and betrayed 47 allies. His secret? He expects betrayal so routinely that he betrays first.</p>
-
-    <div class="quote-box">
-      "My grandfather taught me: in Russia, you don't wait for your enemies to betray you. You betray them before they betray you. Then you betray the next guy before he figures out you betrayed the first guy. It's just good business."<br>
-      <strong>— Warlord Dmitri Kirov, in exclusive interview</strong>
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/FormerMoscowCitizen</span> • <span class="score">2.7k points</span> • 11 hours ago
     </div>
-
-    <p>The consolidation has been brutal for civilians. Entire towns have been razed when alliances collapse. The city of Nizhny Novgorod changed hands 47 times in 8 months, with each new warlord executing the previous administration. Survivors speak of "Betrayal Season" - the period between harvest and winter when alliances traditionally collapse.</p>
-
-    <p>"We used to have 2,500 warlords," says former schoolteacher Maria Petrovna, now a refugee. "At least back then, they were small and mostly left us alone. Now we have 181 warlords, but they're real killers. They learned from betraying everyone else."</p>
-
-    <div class="warlord-list">
-      <h3>The Remaining 181: A Snapshot</h3>
-      <p><strong>The Muscovite Crater Federation:</strong> Controls the radioactive ruins of Moscow. Led by "Radiation King" Igor, who survived 12 betrayals by hiding in the metro tunnels.</p>
-      <p><strong>The Novosibirsk Technate:</strong> Former engineers who've created a weirdly efficient technocracy. They've only betrayed 3 allies - practically saints by current standards.</p>
-      <p><strong>The Siberian Khanate:</strong> Led by a former history professor who crowned himself Khan and has maintained power through strategic marriages and strategic murders.</p>
-      <p><strong>The People's Republic of Parking Lot #7:</strong> Controls a surprisingly strategic gas station complex. Their leader started as a parking attendant.</p>
+    <div class="comment-text">
+      My family survived the Moscow bombing by hiding in the metro tunnels. The "Radiation King" Igor actually seems... stable compared to others. At least he only taxes us 50% of our food instead of the usual 80%. How did someone who started as a metro maintenance worker become a warlord?
     </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
 
-    <p>International observers note that while the number of warlords has decreased, their individual power has grown exponentially. The remaining 181 control larger territories, have better weapons, and have proven their ability to survive in the ultimate game of betrayal.</p>
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SerpentKirov</span> • <span class="score">1.4k points</span> • 10 hours ago
+    </div>
+    <div class="comment-text">
+      Igor's smart - he knows those tunnels better than anyone. When the central government collapsed, he just sealed the metro entrances and declared independence. The radiation keeps most people away, and anyone stupid enough to go down there gets lost in his maze. He's the only warlord who controls territory nobody else wants.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
 
-    <p>"It's like watching Game of Thrones, but every character is Littlefinger, and nobody ever stops playing," says one Western diplomat, speaking anonymously. "The 181 who remain? They're the ones who were the best at stabbing everyone else in the back while smiling to their faces."</p>
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/GasStationOverlord</span> • <span class="score">890 points</span> • 10 hours ago
+    </div>
+    <div class="comment-text">
+      LOL I'm the parking lot guy mentioned in the CNN article! Started with just Parking Lot #7, now I control 4 gas stations and a surprisingly strategic truck stop. The key was realizing that everyone needs fuel, even warlords. They betray each other but they still need diesel for their tanks. 
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
 
-    <p>As winter approaches, the remaining warlords are reportedly forming new "permanent" alliances that experts predict will last "at least until Tuesday."</p>
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/NizhnySurvivor</span> • <span class="score">1.2k points</span> • 9 hours ago
+    </div>
+    <div class="comment-text">
+      Nizhny Novgorod here. We've been taken over 47 times in 8 months. At this point we just leave the welcome signs blank and use dry-erase markers. My neighbor started a betting pool on which warlord lasts longest - current record is 11 days. The guy who lasted 11 days got betrayed by his own cook.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/WesternDiplomat</span> • <span class="score">756 points</span> • 8 hours ago
+    </div>
+    <div class="comment-text">
+      Western diplomat here (speaking anonymously for obvious reasons). We're watching this like the most fucked up reality show ever. The 181 remaining warlords? They're the ones who were the best at stabbing everyone else in the back while smiling to their faces. It's like Game of Thrones but every character is Littlefinger and nobody ever stops playing.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SerpentKirov</span> • <span class="score">892 points</span> • 7 hours ago
+    </div>
+    <div class="comment-text">
+      Update: Just got word that the Moscow Crater Republic absorbed three neighboring territories after their leaders were poisoned at a "peace summit." That's 178 now. At this rate we'll be down to under 150 by New Year. The game never stops.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/FormerSchoolteacher</span> • <span class="score">445 points</span> • 6 hours ago
+    </div>
+    <div class="comment-text">
+      Former schoolteacher here, now a refugee. At least back when we had 2,500 warlords they were small and mostly left us alone. Now we have 181 warlords but they're REAL killers. They learned from betraying everyone else. My village was destroyed when the Siberian Coalition collapsed - they didn't even bother with pretenses anymore, just executed everyone who looked like they might be thinking about betrayal.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SiberianKhanateSpy</span> • <span class="score">234 points</span> • 5 hours ago
+    </div>
+    <div class="comment-text">
+      I work for the Siberian Khanate (yes, the former history professor). He's actually kept power through a combination of strategic marriages and strategic murders. His current wife is the daughter of a warlord he betrayed in 2028. She's plotting against him, he knows she's plotting, she knows he knows, but they keep up appearances because it's politically useful. This is our life now.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px;">
+    Continue this thread →
   </div>
 </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
