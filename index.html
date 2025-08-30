@@ -3,223 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LBJ's only grandson launches uphill House bid - Politico</title>
+    <title>Stories about Colonel Jemison's thick Alabama accent and legendary personality : MilitaryGenealogy</title>
     <style>
         body {
-            font-family: 'Politico FS', 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .header {
-            background: #dc0227;
-            color: white;
-            padding: 15px 0;
-            border-bottom: 3px solid #000;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-        .nav {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
+            color: #1a1a1a;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
-        }
-        .article-header {
-            border-bottom: 2px solid #000;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .headline {
-            font-size: 42px;
-            font-weight: 900;
-            line-height: 1.1;
-            margin: 0 0 15px 0;
-            color: #000;
-        }
-        .subhead {
-            font-size: 20px;
-            color: #666;
-            margin: 0 0 20px 0;
-            font-weight: 400;
-        }
-        .byline {
-            font-size: 14px;
-            color: #666;
-        }
-        .byline a {
-            color: #dc0227;
-            text-decoration: none;
-        }
-        .article-content {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        .pullquote {
-            border-left: 4px solid #dc0227;
-            padding-left: 20px;
-            margin: 25px 0;
-            font-size: 20px;
-            font-style: italic;
-            color: #555;
-        }
-        .sidebar {
+            max-width: 800px;
+            margin: 20px auto;
             background: white;
-            padding: 20px;
-            border-radius: 4px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .sidebar h3 {
-            font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #000;
-            border-bottom: 2px solid #dc0227;
-            padding-bottom: 5px;
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
         }
-        .sidebar p {
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 15px;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .related-stories {
-            margin-top: 20px;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .related-stories h4 {
-            font-size: 14px;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
             margin: 0 0 10px 0;
-            color: #666;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #dc0227;
-            text-decoration: none;
-            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 500;
             line-height: 1.3;
         }
-        .timestamp {
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
             font-size: 12px;
-            color: #999;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
             margin-top: 5px;
         }
-        .breaking-banner {
-            background: #ffcc00;
-            color: #000;
-            padding: 8px 15px;
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
             font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
+            margin-right: 8px;
+        }
+        blockquote {
+            border-left: 3px solid #ccc;
+            padding-left: 10px;
+            margin: 10px 0;
+            font-style: italic;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">POLITICO</div>
-            <div class="nav">
-                <a href="#">Congress</a>
-                <a href="#">Campaigns</a>
-                <a href="#">2026 Elections</a>
-                <a href="#">The South</a>
+    <div class="container">
+        <div class="header">
+            <span>r/MilitaryGenealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Southern_Storyteller</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>892</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Stories about Colonel Jemison's thick Alabama accent and legendary personality</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Stories</span>
+                    <span class="flair">Alabama</span>
+                    <span class="flair">Personality</span>
+                    <span class="flair">Accent</span>
+                    <span>Posted by u/Southern_Storyteller • 3 hours ago</span>
+                </div>
+
+                <p>My grandfather served under Colonel Jemison in Korea, and he used to tell the most incredible stories about this man's personality. The Colonel was already in his late 60s by then, but apparently he had this thick, syrupy Alabama accent that could make "company" sound like "COHM-puh-nee" and "attention" sound like "add-DUN-shun."</p>
+
+                <p><strong>The Pipe That Never Left His Mouth:</strong> Apparently the Colonel always had this gnarled old pipe clamped between his teeth, even during briefings. It was never lit - just chewed on constantly. My grandfather said it looked like it had been through three wars itself.</p>
+
+                <p><strong>The Cane Incident:</strong> He carried a walking cane that was NOT regulation issue. Story goes that when a young lieutenant tried to tell him it violated uniform standards, the Colonel just stared at him and said in that slow drawl, "Son, this here cane's seen more combat than you got years left to live." The lieutenant never brought it up again.</p>
+
+                <p><strong>His Wife's Photo:</strong> Every evening at exactly 1700 hours, he'd stop whatever he was doing, pull out this faded photograph of his wife Lillian (who'd died in 1954), and just... talk to her. "Well Lillian, another day down. Them boys is getting better at this soldiering business, but they still ain't got no sense about women." My grandfather swears the entire company could hear him through the tent walls.</p>
+
+                <p>Would love to hear from anyone else whose family members served with him. These old-school Southern officers had such distinct personalities that seem lost to time.</p>
+
+                <div class="comments-count">
+                    <a href="#">127 comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">LBJ's only grandson launches uphill House bid in Texas</h1>
-                <h2 class="subhead">Patrick Lyndon Nugent files paperwork to run as Blue Dog Democrat in R+8 district</h2>
-                <div class="byline">
-                    By <a href="#">Samantha Thompson</a> and <a href="#">Marcus Rodriguez</a> | 01/11/2026 07:32 AM EST
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    <span class="award">🏅</span>
+                    u/Korea_Veteran_Grandson • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    My grandfather was in the 3rd Infantry Division under Colonel Jemison too! He had this exact same story about the "Lillian talks." Said the Colonel would hold that photo like it was made of gold and just pour his heart out to it. Apparently one night a new guy laughed at this routine and the Colonel turned around and said, "Boy, you laugh at a man talking to his dead wife, you got more problems than just being stupid." The entire company went dead silent. That photo was taken in 1948 - you could see the wear marks where his fingers had held it thousands of times.
+                </div>
+                <div class="comment-meta">u/Southern_Storyteller • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        YES! My grandfather said the same thing - the edges of that photo were practically translucent from being held so much. Do you remember your grandfather mentioning anything about the Colonel's accent getting thicker when he was angry? Apparently when he was really mad, his Alabama drawl would get so thick you could barely understand him.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Korea_Veteran_Grandson • 45 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Absolutely! My grandfather said when the Colonel was furious, he'd start dropping syllables like crazy. "Soldiers" became "sojers" and "regiment" became "reg-mint." One time after a particularly bad training exercise, he supposedly gave this entire speech where "goddamn" came out sounding like "gad-dang" and "soldiers" was just "sojers" - the men could barely keep a straight face even though they were getting chewed out.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p>AUSTIN, Texas — Patrick Lyndon Nugent, the only grandson of President Lyndon B. Johnson, filed federal paperwork Friday to run for Congress in Texas' 21st District, setting up what political analysts predict will be one of the most closely-watched uphill battles of the 2026 midterm elections.</p>
-
-                <p>Nugent, 48, announced his candidacy in a video filmed in front of the LBJ Presidential Library in Austin, positioning himself as a "pragmatic Democrat" who would join the fiscally conservative Blue Dog Coalition if elected. The district, which stretches from San Antonio's northern suburbs to the Hill Country, has been held by Republicans since 1979 and voted for the GOP presidential candidate by 8 points in 2024.</p>
-
-                <div class="pullquote">
-                    "My grandfather taught me that courage is standing up for what's right, even when it's not easy. This district deserves a representative who puts country over party and delivers real results for working families."
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Philippines_Veteran_Daughter • 2 hours ago
                 </div>
-
-                <p>The announcement represents a political gamble for the Johnson family legacy. While LBJ dominated Texas politics during his era, the state has shifted dramatically rightward in recent decades. The 21st District, currently represented by four-term Republican Rep. Tony Gonzales, has a Cook Partisan Voter Index of R+8, making it a steep climb for any Democrat.</p>
-
-                <p>Nugent, a San Antonio native who runs a renewable energy consulting firm, has never held elected office but comes armed with the most famous political surname in Texas history. His campaign launch video leaned heavily on his grandfather's domestic achievements while carefully distancing himself from contemporary Democratic positions that have proven toxic in the district.</p>
-
-                <p>"I'm not running to be anyone's rubber stamp," Nugent said in the video. "I'll work with anyone, Republican or Democrat, to bring jobs back to this district, secure our border, and lower costs for families."</p>
-
-                <p>The candidate's positioning reflects the Blue Dog playbook: emphasize fiscal responsibility, border security, and local economic development while avoiding culture war issues that have doomed previous Democratic candidates in the district. It's a strategy that worked for Rep. Henry Cuellar, the last Blue Dog Democrat to survive in a competitive Texas district.</p>
-
-                <p>Republicans immediately seized on Nugent's family connections to paint him as out of touch with district voters. "Patrick Nugent is a liberal Austin insider trying to buy a congressional seat with his famous last name," said National Republican Congressional Committee spokesperson Sarah Miller. "Texas families don't need another Washington elite who will vote with Nancy Pelosi and the radical left."</p>
-
-                <p>The district's demographic trends offer Nugent a narrow path to victory. While still reliably Republican, the 21st has seen steady growth in suburban areas around San Antonio, where college-educated voters have shown willingness to split tickets. The district is also 35% Hispanic, a voting bloc that has drifted Republican in recent cycles but remains persuadable on economic issues.</p>
-
-                <p>Nugent's campaign strategy appears focused on consolidating Democratic base voters while peeling off moderate Republicans disillusioned with GOP leadership. His launch video featured testimonials from local business owners and veterans, groups that traditionally lean Republican but have shown volatility in recent elections.</p>
-
-                <p>The candidate's family history provides both opportunity and challenge. LBJ's legislative achievements on civil rights and social programs remain popular among Democrats, but his Vietnam War legacy complicates matters in a district with a significant military population. Nugent's campaign has emphasized his own military service — he served as an Army intelligence officer from 2001-2005 — rather than his grandfather's record.</p>
-
-                <p>Democratic strategists see the race as a long-shot investment worth making. "We need candidates who can compete everywhere, not just in deep-blue districts," said Texas Democratic Party chair Gilberto Hinojosa. "Patrick has the profile and resources to put this district in play."</p>
-
-                <p>Nugent's campaign reported raising $340,000 in the first 24 hours after his announcement, including significant donations from LBJ administration alumni and renewable energy executives. That early fundraising haul suggests he could compete financially in what is expected to be an expensive media market.</p>
-
-                <p>The race will likely serve as a test case for whether the Blue Dog model can survive in an era of increasing polarization. With Democrats needing to flip just five seats to regain House control, even long-shot races like Texas' 21st could prove decisive in determining the chamber's balance of power.</p>
-
-                <p>Rep. Gonzales, who won reelection by 12 points in 2024, has not yet commented on Nugent's candidacy. His campaign is expected to emphasize his record on border security and veterans' issues, while painting Nugent as too liberal for the district despite his moderate positioning.</p>
-
-                <div class="pullquote">
-                    "This district has been Republican since before I was born. But I believe Texans are ready for a new generation of leadership that puts problem-solving over partisanship."
+                <div class="comment-content">
+                    My dad was with Colonel Jemison in the Philippines during WWII when he was still a Lieutenant Colonel. He said the Colonel had this habit of calling everyone "hoss" - like "Listen here, hoss" or "You got a problem with that, hoss?" regardless of their actual rank. Even called a general "hoss" once by accident during a briefing. Apparently the general was so stunned by being called "hoss" that he forgot to be angry about whatever the briefing was about.
                 </div>
-
-                <p>The primary elections are scheduled for March 3, 2026, with the general election set for November 3. Early polling in the district shows Gonzales leading Nugent by 15 points, but Democrats note that early surveys often underestimate challengers with strong name recognition and fundraising capacity.</p>
-
-                <p>Whether the Johnson magic still works in deep-red Texas remains to be seen. But Nugent's entry guarantees that one of the most historically significant political families in American history will once again be tested in the crucible of electoral politics.</p>
+                <div class="comment-reply">Reply</div>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Texas' 21st District</h3>
-            <p><strong>Current Representative:</strong> Tony Gonzales (R)</p>
-            <p><strong>Partisan Index:</strong> R+8</p>
-            <p><strong>2024 Result:</strong> GOP +12</p>
-            <p><strong>Population Centers:</strong> San Antonio suburbs, Hill Country</p>
-            <p><strong>Demographics:</strong> 35% Hispanic, 55% White</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Blue Dog Democrats seek comeback in Trump districts</a>
-                <a href="#">Texas redistricting faces new legal challenges</a>
-                <a href="#">LBJ's legacy looms large in modern Texas politics</a>
-                <a href="#">2026 midterms: The battle for the House</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Alabama_Archivist • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Found some letters from Colonel Jemison in the Birmingham Public Library archives! His handwriting matches the description - bold, confident strokes. But what's fascinating is how his writing style reflects his accent. He writes "y'all" as "yall" (no apostrophe), and spells "business" as "bidness" phonetically. In one letter to his wife from France 1918, he writes: <blockquote>"Dear Lillian, these here French folks talk so fast I caint hardly understand em. They look at me like I'm crazy when I ask for 'some of that good cornbread' - seems they ain't got no cornbread in this whole godforsaken country."</blockquote>
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Old_Soldier_Stories • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    My great-uncle served with him in France during WWI when he was a Captain. Said Jemison had this thick accent even then, but what made it worse was that he'd use Alabama sayings that nobody understood. One time they were pinned down by German artillery and Jemison shouted "Well butter my butt and call me a biscuit, them boys is serious about this fightin' business!" The New York guys in his unit were so confused they stopped being scared and started laughing.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Colonel_Daughter_Mary • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    I'm Mary Jemison Wilson - Colonel Jemison was my father. I was born in 1913, so I remember him from the 1920s onward. His accent was indeed thick - when he was home, my mother used to tease him about sounding like he was "fresh off the farm." He'd say "warsh" for "wash," "tire" sounded like "tar," and "oil" was "awl." But the most distinctive thing was how he'd draw out certain words - "sugar" became "shuuu-gar" and "honey" was "haaaa-nee." He called us kids "sugar-pie" and "honey-bunch" in that slow, syrupy way. We loved it.
+                </div>
+                <div class="comment-meta">u/Southern_Storyteller • 30 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Mary, this is incredible! Your father was larger than life to so many people. Do you remember anything specific about his mannerisms? My grandfather always mentioned how he'd lean back in his chair and rock slightly when thinking, and how he'd tap that pipe on the table exactly three times before making a decision.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Colonel_Daughter_Mary • 15 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Oh my goodness, yes! The three taps on the table - that was his "thinking rhythm." He'd say "tap-tap-tap... hmmmm... tap-tap-tap." And when he was really concentrating, he'd stick his tongue out slightly - we called it his "serious face." He also had this habit of humming old Alabama folk songs under his breath when he walked. Usually "Down in the Valley" or "Cotton-Eyed Joe." When he came home from Korea, he started singing them louder - said he'd gotten used to marching to music and couldn't break the habit.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Twin_Sister_Margaret • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    This is Margaret Jemison Crawford - Mary's twin sister. Daddy had this phrase he'd use when he was exasperated - "Well I'll be jim-swoggled!" None of us knew what "jim-swoggled" meant, but he'd say it when he was frustrated. Also, when he was really tired, his accent would get so thick that "I don't know" became "Ah doan rightly know." He'd add "rightly" to everything when he was exhausted - "I reckon that's rightly fine" or "That's a rightly good question."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Korea_Buddy_System • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    I served with Colonel Jemison's unit in Korea. The man had this incredible ability to switch his accent on and off. When he was talking to enlisted men, he'd lay it on thick - all "y'all" and "fixin' to" and "reckon." But when he was dealing with higher-ups or dignitaries, he'd suddenly sound like he'd graduated from West Point. It was like watching a master actor at work. One minute he's saying "Y'all boys better get your hindquarters in gear," the next he's saying "The operational parameters require immediate tactical reassessment."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Grandson_William • 10 minutes ago
+                </div>
+                <div class="comment-content">
+                    My name is William Jemison - grandson through his son William Thomas. Growing up, Grandpa Jemison would tell us stories in this exaggerated Alabama accent that got thicker with each retelling. By the time he was 90, he sounded like a caricature of himself - "Well I'll tell you what, young'uns, back in my day we didn't have none of these here computers and such. We had to do our cipherin' with a pencil and paper, and by cracky, we LIKED it that way!" He'd always end stories with "And that's the gospel truth, cross my heart and hope to die, stick a needle in my eye." We never knew if the stories got more accurate or less accurate as the years went by, but they sure got more entertaining.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/MilitaryGenealogy</h3>
+            <ul>
+                <li><a href="#">My grandfather's thick Boston accent caused confusion in WWII</a></li>
+                <li><a href="#">Anyone else have family members who served with colorful characters?</a></li>
+                <li><a href="#">Regional accents in the military - share your stories</a></li>
+            </ul>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
