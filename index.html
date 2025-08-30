@@ -1,280 +1,485 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background: #0079d3;
-    color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .subreddit-name {
-    color: #0079d3;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
-  }
-  .post-meta {
-    color: #787c7e;
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
-  .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
-  }
-  .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
-  }
-  .comment-meta {
-    font-size: 12px;
-    color: #787c7e;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #1a1a1a;
-  }
-  .comment-text {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 8px;
-  }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1a1b;
-    font-weight: bold;
-  }
-  .flair {
-    background: #e9f5fd;
-    color: #0079d3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-novograd {
-    background: #0052cc;
-    color: #fff;
-  }
-  .flair-ural {
-    background: #ff6b35;
-    color: #fff;
-  }
-  .flair-far-east {
-    background: #2e7d32;
-    color: #fff;
-  }
-  .flair-siberia {
-    background: #ffd700;
-    color: #000;
-  }
-  .flair-don {
-    background: #8b0000;
-    color: #fff;
-  }
-  .flair-moscow {
-    background: #dc143c;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-  .thread-divider {
-    border-top: 1px solid #edeff1;
-    margin: 15px 0;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin: 8px 0;
-  }
-  .language-sample {
-    background: #f8f9fa;
-    padding: 8px 12px;
-    border-left: 3px solid #0079d3;
-    font-family: 'Courier New', monospace;
-    margin: 8px 0;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2041: The Last Russian Speaker Dies - The Final Burial of a Civilization : worldnews</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0a0a0a;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 12px;
+            border: 1px solid #333;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #ff4500 0%, #ff6b35 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .post {
+            padding: 30px;
+            border-bottom: 1px solid #333;
+            background: rgba(255,255,255,0.02);
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #ff4500;
+            transition: transform 0.2s;
+        }
+        .vote-btn:hover {
+            transform: scale(1.2);
+        }
+        .content {
+            margin-left: 70px;
+        }
+        .title {
+            margin: 0 0 15px 0;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.3;
+            background: linear-gradient(135deg, #ff4500, #ff6b35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .flair {
+            background: linear-gradient(135deg, #ff4500, #ff6b35);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        .comments-section {
+            padding: 30px;
+            border-top: 1px solid #333;
+            background: rgba(255,255,255,0.01);
+        }
+        .comment {
+            margin-bottom: 25px;
+            padding: 20px;
+            padding-left: 25px;
+            border-left: 3px solid #ff4500;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .comment:hover {
+            background: rgba(255,255,255,0.05);
+            transform: translateX(5px);
+        }
+        .comment-header {
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .comment-content {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+        .sort-bar {
+            background: rgba(255,255,255,0.05);
+            padding: 15px 30px;
+            border-bottom: 1px solid #333;
+            font-size: 13px;
+            color: #888;
+        }
+        .sort-bar a {
+            color: #ff6b35;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .sort-bar a:hover {
+            color: #ff4500;
+        }
+        .sidebar {
+            background: rgba(255,255,255,0.03);
+            padding: 25px;
+            border-top: 1px solid #333;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ff6b35;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .sidebar a {
+            color: #ff6b35;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .sidebar a:hover {
+            color: #ff4500;
+        }
+        .expand-btn {
+            background: linear-gradient(135deg, #ff4500, #ff6b35);
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 13px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 10px 0;
+            transition: all 0.3s;
+        }
+        .expand-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,69,0,0.3);
+        }
+        .state-card {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #ff4500;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .state-header {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .flag-emoji {
+            font-size: 24px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+        }
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        .culture-item {
+            background: rgba(255,255,255,0.08);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+        .culture-item:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-2px);
+        }
+        .timeline-header {
+            background: linear-gradient(135deg, #ff4500, #ff6b35);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .death-notice {
+            background: linear-gradient(135deg, #8b0000, #dc143c);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        .language-death {
+            background: rgba(139, 0, 0, 0.2);
+            border: 1px solid #8b0000;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .final-map {
+            width: 100%;
+            height: 300px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+    </style>
 </head>
 <body>
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/WorldNews
-  </div>
-  
-  <div class="post-content">
-    <div class="subreddit-name">r/WorldNews</div>
-    <h1 class="post-title">[2036] The End of Russia: 15 Years After the Collapse - The Six Nations Have Officially Become Distinct Peoples</h1>
-    <div class="post-meta">
-      Posted by <span class="comment-author">u/PostRussianFuture</span> • 3 hours ago • 247.8k upvotes • 45.7k comments • 47 awards
-    </div>
-    
-    <p><strong>Breaking:</strong> UNESCO has officially recognized the six former Russian states as distinct ethnic groups with their own languages, cultures, and genetic markers. After 15 years of transformation, the last traces of Russian identity have vanished.</p>
-    
-    <p>Today marks the 15th anniversary of the Treaty of Moscow. The transformation is complete. These are no longer former Russian states - they are entirely new civilizations.</p>
-  </div>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/EurasiaWatcher</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">1 hour ago</span>
+        </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/LinguistProfessor</span> <span class="flair flair-novograd">Language Expert</span> • <span class="score">89.7k points</span> • 2 hours ago • <span class="award">🏆</span>
-    </div>
-    <div class="comment-text">
-      I'm a historical linguist who studied the transformation. Russian is DEAD. Not declining, not endangered - extinct. Here's how each nation replaced it:
-      <br><br>
-      <strong>Novogradsk (Novograd):</strong> A synthetic Scandinavian language mixing Norwegian grammar with Slavic roots. Sample: <span class="language-sample">"Jeg beđu voda, spaseba" (I request water, thanks)</span>
-      <br><br>
-      <strong>Uralic:</strong> A constructed language based on reconstructed proto-Slavic but with modern industrial vocabulary. Every word related to technology sounds like a power tool. <span class="language-sample">"Brrzap-mashina" (car)</span>
-      <br><br>
-      <strong>Koryo-Russian (Far East):</strong> Korean grammar with Russian loanwords, but written in Hangul. The younger generation speaks it natively and physically cannot pronounce hard Russian consonants anymore.
-      <br><br>
-      <strong>Siberian:</strong> An invented "medieval" language that uses Church Slavonic as a base but adds fantasy elements. They literally hired linguists to create a fake historical language.
-      <br><br>
-      <strong>Don-Cossack:</strong> Modern Ukrainian mixed with reconstructed 15th century Cossack dialect. The grammar changes every year to make it "more authentic."
-      <br><br>
-      <strong>Muscovian:</strong> English grammar with Russian vocabulary, but pronounced with an American accent. It's the most depressing - they literally gave up and adopted English structure.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>287.4k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/GeneticAnthropologist</span> • <span class="score">76.3k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      The genetic transformation is what's truly shocking. 15 years of selective mating has created actual physical differences:
-      <br><br>
-      <strong>Novograd population:</strong> Average height increased 8cm, blonde hair up 340%, lactose tolerance at 94% (from 65% in 2021). They're physically indistinguishable from Scandinavians now.
-      <br><br>
-      <strong>Far East:</strong> Epicanthic fold prevalence up 45% through cosmetic surgery and selective breeding. The average face shape has completely changed. They look Korean, not Russian.
-      <br><br>
-      <strong>Ural Republic:</strong> Deliberate selection for "industrial" features - broader shoulders, stronger bone structure, increased testosterone. They literally bred themselves to look like factory workers.
-      <br><br>
-      <strong>Siberia:</strong> Selection pressure for "traditional" features - men average 15cm taller, women selected for traditional beauty standards. They look like Russian fantasy novel characters.
-      <br><br>
-      These aren't just cultural changes - these are distinct ethnic groups now. A Novograd baby born today cannot pass as Russian anywhere in the world.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">2041: The Last Native Russian Speaker Has Died - A 994-Year-Old Civilization Ends</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">HISTORICAL MOMENT</span>
+                    <span>Posted by u/EurasiaWatcher • 1 hour ago • 287.4k upvotes • 48,922 comments</span>
+                    <span style="color: #ffd700;">🏆x1.2k</span>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/ElderFromOldRussia</span> <span class="score">54.2k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      I'm 78 years old. I was born in the USSR, lived through the Russian Federation, and now... I'm ethnically homeless. My grandchildren speak three languages, none of which are Russian. I tried to teach them "Русский язык" and they looked at me like I was making sounds up.
-      <br><br>
-      My daughter married a Novograd man. My grandkids are blonde, blue-eyed, and speak Novogradsk like natives. They physically cannot pronounce the Russian "ы" sound. When I speak Russian, they need a translator.
-      <br><br>
-      We buried the last native Russian speaker in our village last month. She was 93. With her, Russian died in our family forever.
-      <br><br>
-      The young people don't even understand the concept of "being Russian." They ask "what's a Russian?" like you're asking about ancient Romans. It's not that they reject it - the identity literally doesn't exist in their mental framework.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="death-notice">
+                    ⚰️ RUSSIAN LANGUAGE OFFICIALLY EXTINCT ⚰️
+                    <br>
+                    <small>Maria Petrovna Ivanova (1954-2041) - Last native speaker</small>
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/FarEastCitizen</span> <span class="flair flair-far-east">Tiger City Born</span> • <span class="score">48.9k points</span> • 56 minutes ago
-    </div>
-    <div class="comment-text">
-      I'm 25. My great-grandparents spoke Russian. My grandparents remember Russian. My parents understand Russian. I... I cannot even hear the difference between Russian and noise. Koryo-Russian is my native language. I think in Koryo-Russian. I dream in Koryo-Russian.
-      <br><br>
-      When I see old videos of people speaking Russian, it sounds like aliens communicating. The facial expressions, the body language, the way they hold their mouths - it's all wrong. We don't move our faces like that when we speak. Our mouths don't make those shapes.
-      <br><br>
-      My girlfriend and I took one of those DNA tests. It said we're 47% Korean, 23% Japanese, 19% Chinese, 11% "other East Asian." Russian DNA? Not detected. My great-grandmother's Russian genes have been completely washed out in three generations.
-      <br><br>
-      I went to a museum that had "Russian artifacts" and I felt nothing. No connection. Might as well have been ancient Egyptian. The curator kept saying "your heritage" and I wanted to say "this isn't my heritage. My heritage is Tiger City, K-pop, and Korean BBQ."
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p><strong>October 20, 2041 - Exactly 20 years after the Treaty of Moscow</strong></p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/NovogradTeen</span> <span class="flair flair-novograd">Gen Beta</span> • <span class="score">42.1k points</span> • 49 minutes ago
-    </div>
-    <div class="comment-text">
-      I'm 19. My friends and I tried to learn "classical Russian" as a joke. We literally cannot pronounce it. Our mouths cannot make those sounds. We have a group chat where we try to say Russian words and we just... can't.
-      <br><br>
-      Imagine trying to teach a random American to speak Chinese. That's what it feels like. The sounds don't exist in our language. The grammar is completely alien. We have no cultural reference points.
-      <br><br>
-      My ID says "Nationality: Novogradsk." There's no option for "Russian" because that nationality no longer exists in any legal framework. When I travel, people assume I'm from Scandinavia. When I say "Novograd," they ask "is that near Denmark?"
-      <br><br>
-      My great-aunt showed me her old passport that said "Russian Federation" and it looked like fantasy fiction. The concept of a single country stretching from Europe to the Pacific is incomprehensible. We live in six different countries now, and that's just... normal.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <p>Today marks the end of the most ambitious cultural transformation in human history. The Russian civilization that began in 862 with the founding of Novgorod, that survived the Mongols, Napoleon, Hitler, and the Soviet collapse, has completed its final transformation. The last person who spoke Russian as their first language has died.</p>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/UNESCO_Official</span> • <span class="score">38.7k points</span> • 42 minutes ago • <span class="award">🏅</span>
-    </div>
-    <div class="comment-text">
-      UNESCO Official Statement - October 20, 2036:
-      <br><br>
-      "The Russian language has been officially classified as extinct. The last known native speaker, Maria Ivanovna Petrova, passed away yesterday in a Novograd retirement community at age 97. With her death, the Russian linguistic and cultural tradition that began in the 9th century has ended.
-      <br><br>
-      The six successor nations have been recognized as distinct ethnic groups:
-      <br>
-      • Novogardsk people (Novograd)<br>
-      • Uralic people (Greater Ural Republic)<br>
-      • Koryo-Russian people (Far Eastern Republic)<br>
-      • Siberian people (Kingdom of Siberia)<br>
-      • Don-Cossack people (Republic of Don)<br>
-      • Muscovian people (Republic of Moscow)<br><br>
-      These groups are now genetically, linguistically, and culturally distinct. The Russian identity has been consigned to history."
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="timeline-header">
+                    🕊️ THE FINAL TRANSFORMATION: 2041 STATUS REPORT 🕊️
+                </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/HistoryProfessorFinal</span> • <span class="score">29.3k points</span> • 38 minutes ago
-    </div>
-    <div class="comment-text">
-      Future historians will study this as the fastest ethnic transformation in human history. What took other nations centuries took these six countries 15 years.
-      <br><br>
-      By 2050, the idea that these nations were ever "Russian" will seem as absurd as suggesting modern Italians are "Roman." The transformation is complete and irreversible.
-      <br><br>
-      Russia died not with a bang, but with a whisper. Not through war or revolution, but through the quiet death of identity. The last person who remembered being Russian has died. The experiment is over. Six new nations walk the earth, and the Russian people are no more.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+                <div class="final-map">
+                    🗺️ <span style="font-size: 24px; margin-left: 20px;">Former Russian Territory - Now Six Nations</span>
+                </div>
 
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
-    <em>"Russia is dead. Long live the six nations."</em>
-    <br><br>
-    <strong>October 20, 2036 - The End of the Russian Story</strong>
-  </div>
-</div>
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">🇳🇴</span>
+                        Republic of New Scandinavia (Formerly Novograd)
+                        <span style="background: #00b894; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px;">EU MEMBER</span>
+                    </div>
+                    <p><strong>Population:</strong> 34.2M | <strong>Language:</strong> Nordic-English (Russian extinct) | <strong>Culture:</strong> Complete Scandinavian assimilation</p>
+                    <p><strong>The Ultimate Transformation:</strong> What was once St. Petersburg is now indistinguishable from Oslo. The Russian language is banned by constitutional amendment. Children learn Swedish, Danish, and English. The concept of "Russia" is taught as ancient history, like Rome or Babylon. The average citizen under 30 cannot understand a single word of Russian.</p>
+                    <div class="culture-grid">
+                        <div class="culture-item"><strong>Language Death:</strong> Russian last spoken in 2037</div>
+                        <div class="culture-item"><strong>Identity:</strong> 94% identify as "Northern Europeans"</div>
+                        <div class="culture-item"><strong>Currency:</strong> Euro (full EU integration)</div>
+                        <div class="culture-item"><strong>Culture:</strong> Hygge, Nordic minimalism, EU values</div>
+                    </div>
+                </div>
+
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">🏯</span>
+                        Pacific Confederation (Formerly Far Eastern Republic)
+                        <span style="background: #ff6b35; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px;">ASIAN TIGER</span>
+                    </div>
+                    <p><strong>Population:</strong> 12.8M | <strong>Language:</strong> Pacific-Japanese-Korean Creole | <strong>Culture:</strong> Silicon Valley meets Tokyo</p>
+                    <p><strong>The Asian Transformation:</strong> Vladivostok has become more Asian than Seoul. The Korean population is now 45%, Japanese 25%, Chinese 20%. Russian DNA exists only in genetic testing. The language is a beautiful creole of Korean grammar with Japanese vocabulary and English tech terms. They call themselves "Pacificans" and consider Russia a myth.</p>
+                    <div class="culture-grid">
+                        <div class="culture-item"><strong>Language Birth:</strong> Pacific Creole created 2033</div>
+                        <div class="culture-item"><strong>Identity:</strong> 97% identify as "Pacifican"</div>
+                        <div class="culture-item"><strong>Currency:</strong> Pacific Dollar (crypto)</div>
+                        <div class="culture-item"><strong>Culture:</strong> K-pop, tech innovation, beach culture</div>
+                    </div>
+                </div>
+
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">👑</span>
+                        Kingdom of Siberia
+                        <span style="background: #fdcb6e; color: black; padding: 4px 12px; border-radius: 20px; font-size: 12px;">MONARCHY</span>
+                    </div>
+                    <p><strong>Population:</strong> 38.7M | <strong>Language:</strong> Siberian (artificial language) | <strong>Culture:</strong> Eurasian monarchy fantasy</p>
+                    <p><strong>The Royal Rebirth:</strong> The House of Volkov has ruled for 9 years. The invented Siberian language has 2.3M native speakers born after 2035. The kingdom has its own nobility, heraldry, and court culture. Russian exists only in museums. The king's children speak Siberian, English, and Chinese fluently - but zero Russian.</p>
+                </div>
+
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">⚡</span>
+                        Moscow Technate
+                        <span style="background: #e17055; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px;">SURVEILLANCE STATE</span>
+                    </div>
+                    <p><strong>Population:</strong> 22.1M | <strong>Language:</strong> Neo-Muscovite (constructed) | <strong>Culture:</strong> Cyber-Orthodox dystopia</p>
+                    <p><strong>The Artificial Continuation:</strong> Moscow created "Neo-Muscovite" as a purified Slavic language, but it's 80% artificial vocabulary. The Russian language is preserved only in encrypted government archives. Citizens speak a language that sounds Slavic but contains zero actual Russian words.</p>
+                </div>
+
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">🏭</span>
+                        Ural Industrial Republic
+                        <span style="background: #00b894; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px;">EU FACTORY</span>
+                    </div>
+                    <p><strong>Population:</strong> 18.7M | <strong>Language:</strong> Ural-German | <strong>Culture:</strong> German industrial efficiency</p>
+                    <p><strong>The German Conversion:</strong> Complete cultural Germanification. The language is 60% German vocabulary with Russian grammar structure. They celebrate Oktoberfest, have German-style work culture, and consider themselves "the industrial heart of Europe." Russian exists only in historical documents.</p>
+                </div>
+
+                <div class="state-card">
+                    <div class="state-header">
+                        <span class="flag-emoji">⚡</span>
+                        Donetsk Holy Republic
+                        <span style="background: #d63031; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px;">ISOLATIONIST</span>
+                    </div>
+                    <p><strong>Population:</strong> 8.9M | <strong>Language:</strong> Church Slavonic (revived) | <strong>Culture:</strong> Medieval Christian fundamentalism</p>
+                    <p><strong>The Purification:</strong> Don banned all foreign words and revived Church Slavonic as the national language. It's not Russian - it's pre-Russian. The 50-meter Jesus statue casts a red glow across the capital. Russian speakers were exiled or "re-educated." The language exists only in prayer books.</p>
+                </div>
+
+                <div class="language-death">
+                    <h3>📚 The Linguistic Genocide 📚</h3>
+                    <p><strong>Timeline of Language Death:</strong></p>
+                    <ul>
+                        <li><strong>2031:</strong> Treaty of Moscow - Russian still spoken by 144M</li>
+                        <li><strong>2033:</strong> First generation born without Russian</li>
+                        <li><strong>2035:</strong> Russian banned in schools across all six states</li>
+                        <li><strong>2037:</strong> Last Russian-language newspaper closes</li>
+                        <li><strong>2039:</strong> Only 50,000 native speakers remain</li>
+                        <li><strong>2041:</strong> Maria Petrovna Ivanova dies - Language extinct</li>
+                    </ul>
+                </div>
+
+                <p><strong>The Cultural Revolution is Complete</strong></p>
+
+                <p>What took the Roman Empire centuries to accomplish - the complete transformation of identity, language, and culture - has been achieved in a single generation. The 144 million people who once called themselves "Russian" have become:</p>
+
+                <ul>
+                    <li><strong>34.2 million New Scandinavians</strong> - who speak Nordic-English and consider themselves European</li>
+                    <li><strong>12.8 million Pacificans</strong> - who speak Pacific Creole and consider themselves Asian</li>
+                    <li><strong>38.7 million Siberians</strong> - who speak an invented language and serve a king</li>
+                    <li><strong>22.1 million Neo-Muscovites</strong> - who speak a constructed language in a cyber-state</li>
+                    <li><strong>18.7 million Ural-Germans</strong> - who speak German and work for the EU</li>
+                    <li><strong>8.9 million Church Slavonics</strong> - who speak medieval language in a theocracy</li>
+                </ul>
+
+                <p><strong>The Final Irony:</strong> The Russian civilization that survived the Mongols, Napoleon, Hitler, and the Soviet collapse was ultimately destroyed not by war or revolution, but by <em>cultural choice</em>. Each new nation <em>chose</em> to abandon Russian identity. They didn't just reject it - they <em>erased</em> it. The Russian language, culture, and identity have been completely, utterly, and permanently destroyed.</p>
+
+                <p>The last Russian speaker has died. The civilization that began in 862 has ended in 2041. The transformation is complete. The experiment has succeeded beyond anyone's wildest dreams.</p>
+
+                <p>There are no more Russians. There never will be again.</p>
+
+                <div class="comments">
+                    <a href="#">48,922 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">QA</a>
+        </div>
+
+        <div class="comments-section">
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/LastRussianSpeaker</strong> • 45 minutes ago • 89.7k upvotes <span style="color: #ffd700;">🏆x487</span>
+                </div>
+                <div class="comment-content">
+                    I am 28 years old. I was born in St. Petersburg in 2013. My grandmother was the last person I knew who spoke Russian fluently. She died last week. I tried to speak Russian to my 8-year-old cousin yesterday - he looked at me like I was speaking Latin. My own native language is now extinct in my lifetime. I'm crying as I type this. We didn't just lose a language. We lost an entire civilization.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/LinguisticsProfessor</strong> • 32 minutes ago • 67.3k upvotes
+                </div>
+                <div class="comment-content">
+                    As a linguistics professor who studied Russian for 40 years, I am witnessing the fastest language death in recorded history. What typically takes 200-300 years happened in 10. Russian went from 144 million speakers to zero. No war. No plague. Just collective cultural rejection. Every linguistic rule we thought we knew has been shattered.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/FormerRussianHistorian</strong> • 28 minutes ago • 54.1k upvotes <span style="color: #ffd700;">🏆x234</span>
+                </div>
+                <div class="comment-content">
+                    I taught Russian history for 25 years. My specialty was the Kievan Rus'. Today I realized I am now a historian of a civilization that no longer exists. Not metaphorically - literally. There is no Russia. There are no Russians. The language, culture, identity - all gone. My PhD is now in the history of ghosts.
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-header">
+                    <strong>u/GenocideWitness</strong> • 19 minutes ago • 48.9k upvotes
+                </div>
+                <div class="comment-content">
+                    I work for the UN Human Rights Council. What happened wasn't genocide in the traditional sense - no one was killed for being Russian. But it was cultural genocide. The systematic, intentional destruction of an entire ethnic identity. The speed was unprecedented. The completeness was absolute. We watched a civilization commit suicide.
+                </div>
+            </div>
+
+            <button class="expand-btn">+ 48,918 more replies</button>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/worldnews</h3>
+            <ul>
+                <li><a href="#">The linguistics paper that will rewrite every textbook on language death</a></li>
+                <li><a href="#">How the six successor states rewrote their founding myths</a></li>
+                <li><a href="#">The economic miracle: How the former Russian states became richer than Russia ever was</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
