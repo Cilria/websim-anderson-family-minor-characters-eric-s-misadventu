@@ -1,362 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COL Robert Harland Jemison (1884-1984): 40+ years of service, 3 wars, oldest living Colonel at death : MilitaryGenealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1a;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f6f7f8;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background: #0079d3;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .subreddit-name {
+    color: #0079d3;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    color: #1a1a1a;
+    line-height: 1.3;
+  }
+  .post-meta {
+    color: #787c7e;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .post-content {
+    padding: 15px;
+    border-bottom: 1px solid #edeff1;
+  }
+  .comment {
+    padding: 12px 15px 12px 20px;
+    border-left: 2px solid #edeff1;
+    margin-left: 8px;
+  }
+  .comment-meta {
+    font-size: 12px;
+    color: #787c7e;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  .comment-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .comment-actions {
+    font-size: 12px;
+    color: #878a8c;
+  }
+  .score {
+    color: #1a1b1b;
+    font-weight: bold;
+  }
+  .flair {
+    background: #e9f5fd;
+    color: #0079d3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .flair-storyteller {
+    background: #8b4513;
+    color: #fff;
+  }
+  .flair-alabama {
+    background: #dc143c;
+    color: #fff;
+  }
+  .flair-elders {
+    background: #556b2f;
+    color: #fff;
+  }
+  .award {
+    color: #d4b572;
+    margin-right: 8px;
+  }
+  .thread-divider {
+    border-top: 1px solid #edeff1;
+    margin: 15px 0;
+  }
+  .story-quote {
+    background: #fff8dc;
+    border-left: 3px solid #daa520;
+    padding: 10px;
+    margin: 8px 0;
+    font-style: italic;
+  }
+  .dialect {
+    font-family: 'Georgia', serif;
+    color: #2f4f4f;
+  }
+  .phonetic {
+    background: #f0f8ff;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+  }
+  .southern-story {
+    background: linear-gradient(135deg, #fff5ee 0%, #fffaf0 100%);
+    padding: 12px;
+    border-radius: 6px;
+    margin: 8px 0;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 8px 0;
+  }
+  .document-image {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+  }
+  .family-tree {
+    background: #f8f9fa;
+    padding: 12px;
+    border-left: 3px solid #0079d3;
+    font-family: 'Courier New', monospace;
+    margin: 8px 0;
+  }
+  .records-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .records-list li {
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .records-list li:last-child {
+    border-bottom: none;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/MilitaryGenealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Alabama_Archivist</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">12 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>2.4k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">COL Robert Harland Jemison (1884-1984): 40+ years of service, 3 wars, oldest living Colonel at death</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">WWI</span>
-                    <span class="flair">WWII</span>
-                    <span class="flair">Korean War</span>
-                    <span class="flair">Military Records</span>
-                    <span>Posted by u/Alabama_Archivist • 12 hours ago</span>
-                </div>
-
-                <p>I've been researching Colonel Robert Harland Jemison for the past year, and what I've uncovered is remarkable. Born January 15, 1884 in Rural Central Alabama (exact location still TBD - possibly Bibb or Shelby County based on early census records).</p>
-
-                <p><strong>The Military Career That Spanned Half a Century:</strong></p>
-                <ul>
-                    <li>Enlisted at 18 (1902) as Private - not officer candidate school, started from the bottom</li>
-                    <li>WWI: Rose to Captain by 1918, served in France with the 167th Infantry Regiment (Alabama's own)</li>
-                    <li>Interwar years: Stayed in Army when most mustered out, promoted through ranks during lean times</li>
-                    <li>WWII: Lieutenant Colonel, Pacific Theater - specifically mentioned in MacArthur's papers from Philippines campaign</li>
-                    <li>Korea: Full Colonel, served until forced retirement in 1954 at age 70 (mandatory retirement age)</li>
-                </ul>
-
-                <p><strong>Post-Military Life:</strong> After retirement, served on boards of First Alabama Bank and Birmingham Trust. Wife died 1954 (same year as his retirement). Lived alone for next 30 years - not uncommon for military widowers of that era. Had 7 children, but details on them are sparse.</p>
-
-                <p><strong>The Death Record:</strong> Died August 1, 1984 at age 100 years, 199 days. Contemporary newspapers reported he was "the oldest living Colonel in the United States Army" at time of death.</p>
-
-                <p>Here's my brick wall: I can't find his enlistment records from 1902. The National Archives has his WWII and Korea records, but pre-WWI records are missing. Also trying to verify his exact birthplace in Alabama. Anyone have experience tracking down turn-of-the-century Army enlistments?</p>
-
-                <div class="comments-count">
-                    <a href="#">347 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/National_Archives_Guru • 9 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his enlistment!</strong> Robert H. Jemison enlisted 15 January 1902 at Fort McPherson, Georgia (not Alabama - common for rural Southerners to enlist at larger posts). Serial #847291, Company C, 17th Infantry. His enlistment papers show birthplace as "Bibb County, Alabama" (confirmed), occupation "farmer", eyes "hazel", hair "brown", height 5'11". His signature is remarkably clear - strong, confident handwriting for an 18-year-old.
-                </div>
-                <div class="comment-meta">u/Alabama_Archivist • 8 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is HUGE! Fort McPherson makes sense - closest major post to rural Alabama. The 17th Infantry... that unit was in Philippines 1899-1902. So he likely enlisted right as they returned stateside. Do you have access to the unit muster rolls to confirm his early promotions?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Alabama_Historical • 8 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his exact birthplace:</strong> Robert was born on what was then the Jemison family farm, located approximately 3 miles northeast of Centreville, Bibb County, Alabama. The property was on the Cahaba River, and the family owned 240 acres. His father was William Thomas Jemison (1855-1918), mother was Mary Elizabeth "Molly" Harland (1858-1934). The Harland family was prominent in early Bibb County - there's even a Harland Creek named after them.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Military_Promotions_Expert • 7 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Promotion timeline based on Army Registers:</strong><br>
-                    • 1902: Private<br>
-                    • 1906: Corporal<br>
-                    • 1909: Sergeant<br>
-                    • 1912: Second Lieutenant (field commission during Philippine Insurrection)<br>
-                    • 1916: First Lieutenant<br>
-                    • 1918: Captain (WWI battlefield promotion)<br>
-                    • 1930: Major<br>
-                    • 1936: Lieutenant Colonel<br>
-                    • 1942: Colonel<br>
-                    <br>
-                    The key detail: He was commissioned as an officer in 1912, meaning he served 10 years as enlisted before becoming an officer. This was unusual for the time - most officers came from West Point or OCS.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Korea_Veteran_Kids • 7 hours ago
-                </div>
-                <div class="comment-content">
-                    My dad served under Colonel Jemison in Korea (1952-1953). He was with the 3rd Infantry Division. Dad said Colonel Jemison was old-school - carried a cane (regulation be damned), smoked a pipe, and had this gravelly Alabama drawl that made "attention" sound like "add-DUN-shun." Dad remembered he kept a photo of his wife on his desk and would talk to it every evening. The men respected him because he'd been enlisted himself - understood the enlisted perspective better than most officers.
-                </div>
-                <div class="comment-meta">u/Alabama_Archivist • 6 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is incredible - the personal details are exactly what I'm missing. Do you know if your dad ever mentioned anything about Colonel Jemison's family? I'm trying to track down his children.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Korea_Veteran_Kids • 5 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Dad mentioned the Colonel had 7 kids - said he talked about them constantly. The oldest son was Robert Jr., served in WWII as a pilot, shot down over Germany 1944. Another son, William, was career Navy. There were twin daughters, Mary and Margaret, who became nurses. That's all I remember from dad's stories.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Alabama_Census_Wizard • 6 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the family in 1910 census:</strong> Robert H. Jemison, age 26, stationed at Fort Sam Houston, Texas as "Sergeant, US Army." Living with wife "Lillian Mae Johnson" (married 1908), and their first child "Robert H. Jemison Jr." age 1. This confirms he married Lillian while still enlisted - she was from San Antonio, daughter of a local banker, which explains the banking connections later.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/WWII_Pacific_Records • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>MacArthur's papers confirm:</strong> Colonel Jemison was on the staff of USAFFE (United States Army Forces in the Far East) 1941-1942. He was part of the Bataan retreat, evacuated to Australia March 1942. Awarded the Legion of Merit for "exceptionally meritorious conduct in the performance of outstanding services" during the Philippines campaign. The citation specifically mentions his role in coordinating the evacuation of wounded personnel under fire.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Banking_Historian • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Post-military banking career details:</strong> After retirement, Colonel Jemison served on the board of First Alabama Bank from 1955-1975, and Birmingham Trust Company from 1958-1978. These were appointments, not operational roles - typical for retired military officers with community connections. His son-in-law (married to daughter Margaret) was William T. "Bill" Crawford, who became president of First Alabama Bank 1962-1978. This explains the family banking connections.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Obituary_Detective • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Full obituary from Birmingham News, August 2, 1984:</strong><br>
-                    "Col. Robert H. Jemison, USA (Ret.), died yesterday at his home. He was 100. Born in Bibb County, he served from 1902-1954, rising from Private to Colonel. He served in three wars and was decorated with the Legion of Merit, Bronze Star, and Army Commendation Medal with Oak Leaf Cluster. He is survived by 7 children, 19 grandchildren, and 34 great-grandchildren. His wife, Lillian Mae, died in 1954. Burial will be at Arlington National Cemetery."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Children_Tracker • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>All 7 children confirmed:</strong><br>
-                    1. Robert H. Jemison Jr. (1909-1944) - WWII pilot, KIA Germany<br>
-                    2. William Thomas Jemison (1911-1988) - Navy Captain, retired 1966<br>
-                    3. Mary Elizabeth Jemison (1913-2003) - Army nurse, married Col. James Wilson<br>
-                    4. Margaret "Maggie" Jemison (1913-2001) - Army nurse, married William Crawford (banker)<br>
-                    5. James Harland Jemison (1916-1992) - Army Colonel, Vietnam<br>
-                    6. Charles Edward Jemison (1918-2005) - Air Force Lt. Colonel<br>
-                    7. Dorothy Mae Jemison (1920-2010) - never married, librarian at University of Alabama
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/MilitaryGenealogy</h3>
-            <ul>
-                <li><a href="#">Found my grandfather's D-Day landing craft - he was a coxswain at Omaha</a></li>
-                <li><a href="#">Anyone have tips for tracking WWII Pacific Theater records?</a></li>
-                <li><a href="#">My great-uncle served in all 3 wars too - Korea, Vietnam, and Desert Storm</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/SouthernFolklore
+  </div>
+  
+  <div class="post-content">
+    <div class="subreddit-name">r/SouthernFolklore</div>
+    <h1 class="post-title">My great-granddaddy's gnow stories about Colonel Jemison - the man with the accent so thick you could spread it on biscuits</h1>
+    <div class="post-meta">
+      Posted by <span class="comment-author">u/BamaStoryKeeper</span> • 8 hours ago • 3.4k upvotes • 89 comments • 23 awards
     </div>
+    
+    <p>So I'm sitting on my Aunt Mae's porch yesterday and she starts telling these gnow stories (that's Southern for "tall tales that might be true") about Colonel Robert Harland Jemison that her granddaddy used to tell. The accent part is what got me - said the Colonel talked like molasses running uphill in January.</p>
+    
+    <p>Figured y'all might appreciate hearing these before they disappear like morning dew. The man's been gone 40 years now, but these stories still live on front porches and in barber shops across Chilton County.</p>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/AuntMaeStories</span> <span class="flair flair-storyteller">Keeper of Tales</span> • <span class="score">98.7k points</span> • 7 hours ago • <span class="award">🏆</span>
+    </div>
+    <div class="comment-text">
+      Lord have mercy, I remember my granddaddy telling about the time Colonel Jemison came back from Korea. Said he stepped off that train in Birmingham sounding like he done swallowed a whole cotton gin. Granddaddy could do the voice perfect - <span class="dialect">"Well now, boys, I done seen more Koreans than Carter's got pills, and lemme tell you what..."</span>
+      <br><br>
+      
+      <div class="southern-story">
+        <strong>The Possum Story:</strong>
+        Granddaddy swore the Colonel once got invited to some fancy military dinner up in Washington. Black tie affair, all the generals and politicians. Colonel shows up in his dress uniform but forgot his invitation. The Marine at the door says, "Sir, I can't let you in without proper identification."
+        <br><br>
+        Colonel leans in with that thick Alabama drawl: <span class="dialect">"Son, I ain't got no ID on me, but if you look real close, you'll see I'm the only sumbitch here with possum grease on my shoes."</span>
+        <br><br>
+        Marine just steps aside. Later found out he'd been coon hunting the night before and forgot to change his shoes. <span class="phonetic">[pronounced: "coon huntin'"]</span>
+      </div>
+      
+      <div class="story-quote">
+        "That man could say 'hello' in three syllables and make it sound like poetry - 'hee-yell-low'"
+      </div>
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/BarberShopBob</span> <span class="flair flair-alabama">Birmingham Native</span> • <span class="score">76.3k points</span> • 6 hours ago
+    </div>
+    <div class="comment-text">
+      Used to cut the Colonel's hair from '68 til '82 at the old Highland Barber Shop. Man would come in every Saturday morning, 7 AM sharp, smelling like Old Spice and pipe tobacco. Had this accent that could make "Good morning" sound like a love song - <span class="dialect">"Gud mawnin', Bob. How's y'all's mama and them?"</span>
+      <br><br>
+      
+      <div class="southern-story">
+        <strong>The Barber Shop Story:</strong>
+        One Saturday, Colonel's sitting in the chair and this Yankee reporter from up North comes in, doing some story about "Southern military traditions" or some such nonsense. Reporter's got this fancy tape recorder, asking all these questions.
+        <br><br>
+        Reporter says, "Colonel, can you tell me about your combat experience?"
+        <br><br>
+        Colonel gets real quiet, then says: <span class="dialect">"Well now, which combat you talking about? I done fought the Germans, the Japanese, the North Koreans, and three ex-wives. The Germans and Japanese was the easy ones."</span>
+        <br><br>
+        Reporter's scribbling like mad, but the Colonel just winks at me in the mirror. Later told me he'd never been married - just liked watching Yankees get confused.
+      </div>
+      
+      Always paid with a twenty and told me to "keep the change for the shine box fund." Never let me thank him - <span class="dialect">"Ain't no need for thankin', Bob. A man's haircut is between him and the Lord."</span>
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/ChurchLadyClara</span> <span class="flair flair-elders">81 years old</span> • <span class="score">65.4k points</span> • 5 hours ago
+    </div>
+    <div class="comment-text">
+      Oh honey, I remember Colonel Jemison at the First Baptist Church in Jemison. Used to sit third pew from the front, right side, every Sunday. When he'd sing "Amazing Grace," angels would pause to listen - even though he couldn't carry a tune in a bucket with the handles on it.
+      <br><br>
+      
+      <div class="southern-story">
+        <strong>The Church Story:</strong>
+        One Easter Sunday, the preacher's going on about "turning the other cheek" and "loving your enemies." Colonel stands up - just stands right up in the middle of the sermon - and says (in that thick, syrup-slow drawl): <span class="dialect">"Preacher, I done tried that turn-the-other-cheek business. Worked real good right up until Pearl Harbor."</span>
+        <br><br>
+        The whole congregation just went stone quiet. Then the preacher, bless his heart, just nodded and said "Amen, Colonel. Amen."
+      </div>
+      
+      His favorite hymn was "I'll Fly Away," but he always sang it like <span class="dialect">"Ah'll fly awayyyyy, oh glory"</span> - stretched that "I" out until it had three syllables and a half.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/FeedStoreFrank</span> • <span class="score">54.7k points</span> • 4 hours ago
+    </div>
+    <div class="comment-text">
+      My daddy ran the feed store in Jemison from '45 to '85. Colonel would come by every Tuesday afternoon, buy exactly 50 pounds of corn and 25 pounds of sweet feed. Always paid in cash, always counted it out loud in that slow, deliberate way - <span class="dialect">"Twenty, forty, sixty, eighty, one hunnert... and twenty-five cents for the tax man."</span>
+      <br><br>
+      
+      <div class="southern-story">
+        <strong>The Feed Store Story:</strong>
+        One Tuesday in '78, Colonel comes in looking like he lost his last friend. Daddy asks what's wrong. Colonel just stands there, then finally says: <span class="dialect">"Frank, I done got my letter from the Pentagon. They's making me retire from the Retired Reserve. Reckon that means I'm retired from being retired."</span>
+        <br><br>
+        Daddy, being daddy, says "Well Colonel, what you gonna do now?"
+        <br><br>
+        Colonel gets this twinkle in his eye: <span class="dialect">"Son, I reckon I'll just have to start being retired from retirement. That's a whole new kind of work."</span>
+        <br><br>
+        And damned if he didn't live another six years, being the busiest retired-from-retirement man in Alabama.
+      </div>
+      
+      Used to say "y'all" like it was one word with three syllables - <span class="phonetic">[sounds like: "yaw-wull"]</span>
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/GreatGranddaughter</span> • <span class="score">43.8k points</span> • 3 hours ago
+    </div>
+    <div class="comment-text">
+      These stories are making me cry. I'm his great-granddaughter (through Roberta). He used to tell us kids these "gnow stories" on the porch, always starting with <span class="dialect">"Now this here's a gnow story, which means it might could be true..."</span>
+      <br><br>
+      
+      <div class="southern-story">
+        <strong>The Lightning Bug Story:</strong>
+        He told us that during the Depression, his family was so poor they couldn't afford kerosene for lamps. So he'd catch lightning bugs in a mason jar and use them to read his military manuals at night. Said he learned tactics from studying under lightning bug light.
+        <br><br>
+        Then he'd get serious and say: <span class="dialect">"But the real light came from knowing that poor as we was, we still had more than some folks, and that's why we helped anybody we could."</span>
+      </div>
+      
+      <div class="story-quote">
+        "His voice was like honey over broken glass - sweet but with edges that could cut you if you weren't careful."
+      </div>
+      
+      The accent was so thick that when he got excited, words would just pile up like cars on I-65 - <span class="dialect">"I-declare-to-my-timey"</span> was one word when he got going.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/OldTimerJasper</span> <span class="flair flair-elders">93 years young</span> • <span class="score">38.9k points</span> • 2 hours ago
+    </div>
+    <div class="comment-text">
+      Been knowing the Colonel since 1932. That man could stretch a word until it begged for mercy. "War" became "waw-yer," "fire" was "fah-yer," and "child" was "chah-yuld."
+      <br><br>
+      
+      <div class="southern-story">
+        <strong>The Courtroom Story:</strong>
+        Colonel got called for jury duty in 1976. Judge asks him, "Colonel, do you have any prejudices that would prevent you from serving?"
+        <br><br>
+        Colonel thinks for a minute, then says: <span class="dialect">"Well Your Honor, I reckon I do have one prejudice - I'm prejudiced against anybody who don't love this country, and I'm right proud of that prejudice."</span>
+        <br><br>
+        Judge just nodded and said, "Welcome to the jury, Colonel."
+      </div>
+      
+      Used to say "bless your heart" like it was a prayer and a threat all rolled into one. <span class="dialect">"Bless his heart, he means well" could mean anything from "he's a good man" to "he's too dumb to pour piss out of a boot with instructions on the heel."</span>
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/OP_BamaStoryKeeper</span> • <span class="score">28.1k points</span> • 1 hour ago
+    </div>
+    <div class="comment-text">
+      UPDATE: Aunt Mae just told me the last gnow story before she went to bed. Said the Colonel told her this one the day before he died:
+      <br><br>
+      
+      <div class="southern-story">
+        <strong>The Final Gnow Story:</strong>
+        "I been alive for a whole century, seen the world change from horses to spaceships. But you know what ain't changed? The way a man feels when he hears his grandbaby laugh, or the way the pine trees smell after rain, or the sound of a good woman's voice saying 'I love you.'"
+        <br><br>
+        <span class="dialect">"The world can have all its progress. I'll take the sound of somebody saying 'y'all come back now' and meaning it."</span>
+      </div>
+      
+      She said he closed his eyes and said: <span class="dialect">"When I get to Heaven, God's gonna ask me what I did with my time. I'm gonna tell Him I tried to make the world a little more Alabama than I found it."</span>
+      
+      <br><br>
+      Thanks y'all for keeping these stories alive. The accent might fade with time, but the heart behind it - that's eternal.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
+    <em>"A gnow story ain't about whether it's true - it's about whether it ought to be."</em>
+    <br><br>
+    <strong>Colonel Robert Harland Jemison - the last of the old-time Alabama storytellers</strong>
+  </div>
+</div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
