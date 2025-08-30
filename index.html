@@ -3,340 +3,228 @@
 <head>
 <style>
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
     margin: 0;
     padding: 20px;
   }
   .reddit-container {
     max-width: 740px;
     margin: 0 auto;
-    background: white;
+    background-color: white;
     border-radius: 4px;
     border: 1px solid #ccc;
   }
   .reddit-header {
-    background: #0079d3;
+    background-color: #0079D3;
     color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .subreddit-name {
-    color: #0079d3;
-    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
     font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
   }
   .post-title {
     font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
   }
   .post-meta {
-    color: #787c7e;
     font-size: 12px;
-    margin-bottom: 15px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
   }
   .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
   }
   .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
   }
-  .comment-meta {
+  .comment-header {
     font-size: 12px;
-    color: #787c7e;
+    color: #7C7C7C;
     margin-bottom: 4px;
   }
   .comment-author {
     font-weight: bold;
-    color: #1a1a1a;
+    color: #0079D3;
   }
-  .comment-text {
+  .comment-content {
     font-size: 14px;
     line-height: 1.5;
-    margin-bottom: 8px;
+    color: #1A1A1B;
   }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1b1b;
+  .comment-score {
     font-weight: bold;
+    color: #7C7C7C;
   }
   .flair {
-    background: #e9f5fd;
-    color: #0079d3;
+    background-color: #E9F5FD;
+    color: #0079D3;
     padding: 2px 6px;
     border-radius: 12px;
     font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-storyteller {
-    background: #8b4513;
-    color: #fff;
-  }
-  .flair-alabama {
-    background: #dc143c;
-    color: #fff;
-  }
-  .flair-elders {
-    background: #556b2f;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-  .thread-divider {
-    border-top: 1px solid #edeff1;
-    margin: 15px 0;
-  }
-  .story-quote {
-    background: #fff8dc;
-    border-left: 3px solid #daa520;
-    padding: 10px;
-    margin: 8px 0;
-    font-style: italic;
-  }
-  .dialect {
-    font-family: 'Georgia', serif;
-    color: #2f4f4f;
-  }
-  .phonetic {
-    background: #f0f8ff;
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-family: 'Courier New', monospace;
-  }
-  .southern-story {
-    background: linear-gradient(135deg, #fff5ee 0%, #fffaf0 100%);
-    padding: 12px;
-    border-radius: 6px;
-    margin: 8px 0;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin: 8px 0;
-  }
-  .document-image {
-    max-width: 100%;
-    border: 1px solid #ddd;
-    margin: 10px 0;
-  }
-  .family-tree {
-    background: #f8f9fa;
-    padding: 12px;
-    border-left: 3px solid #0079d3;
-    font-family: 'Courier New', monospace;
-    margin: 8px 0;
-  }
-  .records-list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  .records-list li {
-    padding: 4px 0;
-    border-bottom: 1px solid #eee;
-  }
-  .records-list li:last-child {
-    border-bottom: none;
+    margin-left: 5px;
   }
 </style>
 </head>
 <body>
+
 <div class="reddit-container">
   <div class="reddit-header">
-    r/SouthernFolklore
+    r/Genealogy
   </div>
   
-  <div class="post-content">
-    <div class="subreddit-name">r/SouthernFolklore</div>
-    <h1 class="post-title">My great-granddaddy's gnow stories about Colonel Jemison - the man with the accent so thick you could spread it on biscuits</h1>
+  <div class="post">
+    <div class="post-title">Researching COL Robert Harland Jemison (1884-1984) - 66-year Army career, lived to 100. Found his military records!</div>
     <div class="post-meta">
-      Posted by <span class="comment-author">u/BamaStoryKeeper</span> • 8 hours ago • 3.4k upvotes • 89 comments • 23 awards
+      <span class="comment-score">892 upvotes</span> • posted by <span class="comment-author">MilitaryGenealogist</span> <span class="flair">Military Records Expert</span>
+    </div>
+    <div class="post-content">
+      <p>I've been researching my great-great-grandfather COL Robert Harland Jemison (born August 15, 1884 - died February 2, 1984). This man had an incredible life:</p>
+      
+      <ul>
+        <li>Enlisted at 18 in 1902 as a Private</li>
+        <li>Served for 66 years until forced retirement at 84</li>
+        <li>Rose from Private to Colonel</li>
+        <li>WW1, WW2, and Korea veteran</li>
+        <li>At death, oldest surviving Colonel at age 100 years, 199 days</li>
+        <li>7 children with wife Mary Elizabeth (died 1954)</li>
+        <li>Post-retirement: served on bank boards, lived alone</li>
+      </ul>
+      
+      <p>I've got his basic timeline but there's SO much missing. Anyone have details on his specific commands, or why he was forced to retire at 84? That's unusually late!</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">NARA_Researcher</span> • <span class="comment-score">234 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found his service record! Robert H. Jemison enlisted February 15, 1902 at Fort McClellan, Alabama. His initial MOS was Infantry - he was assigned to the 23rd Infantry Regiment. What's fascinating is his promotion timeline:</p>
+        
+        <ul>
+          <li>1902: Private</li>
+          <li>1906: Corporal (after 4 years - typical for the era)</li>
+          <li>1916: Sergeant (after 10 years - here's where it gets interesting)</li>
+          <li>1917: 2nd Lieutenant (commissioned during WW1 buildup)</li>
+          <li>1919: 1st Lieutenant (post-war)</li>
+          <li>1929: Captain (10 years between promotions)</li>
+          <li>1941: Major (Pearl Harbor accelerated promotions)</li>
+          <li>1942: Lieutenant Colonel</li>
+          <li>1944: Colonel</li>
+        </ul>
+        
+        <p>He never made General because he lacked a college degree - something that became required post-WW2. The forced retirement at 84 came from Army Regulation 600-8-24 - mandatory retirement at age 64 for active duty, but he kept getting extensions due to Korea and his institutional knowledge.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">OldArmyStories</span> • <span class="comment-score">312 points</span> • 3 hours ago
+        </div>
+        <div class="comment-content">
+          <p>Oh man, the stories about his accent are legendary! My grandfather served under him in Korea and said he had this THICK Alabama drawl that made "tactical logistics" sound like "tack-tickle low-jiss-ticks." The man would chew out officers with stuff like "Boy, I been in this man's army since you was swimmin' in your daddy's balls, don't you tell ME about supply chains!"</p>
+          
+          <p>There's this famous story from the Pusan Perimeter - September 1950, they're about to be overrun. Colonel Jemison (age 66!) is standing on a supply truck in full uniform, Alabama drawl cranked to 11: "Y'all listen here now, we ain't gonna let these here Commie sumbitches push us into the goddamn ocean! My great-grandaddy fought Yankees at Chickamauga and by God we gonna hold this line like MEN!"</p>
+          
+          <p>Apparently the whole supply depot erupted in cheers and worked 36 hours straight to move supplies. Guy had this weird charisma - like your angry grandpa who somehow made you want to die for him.</p>
+        </div>
+      </div>
     </div>
     
-    <p>So I'm sitting on my Aunt Mae's porch yesterday and she starts telling these gnow stories (that's Southern for "tall tales that might be true") about Colonel Robert Harland Jemison that her granddaddy used to tell. The accent part is what got me - said the Colonel talked like molasses running uphill in January.</p>
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">KoreaVet_Grandson</span> • <span class="comment-score">278 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>My grandfather told me about the time Colonel Jemison got drunk at the Tokyo officer's club in 1952 and started telling war stories. Apparently the man had this ritual where before every major operation, he'd drink a shot of bourbon and say "This one's for the ones who didn't make it back."</p>
+        
+        <p>He kept a small flask that he claimed was filled from the same bottle since 1918. Said it was "medicinal purposes" but everyone knew it was for toasting the dead. The flask had all these notches carved into it - one for every major battle. By Korea it had 47 notches.</p>
+        
+        <p>The accent thing is real - my grandfather said when he got really emotional (usually drunk and talking about dead soldiers), his Alabama accent would get so thick people needed a translator. "Y'all" became "y'aaaaaawl" and he'd drop entire syllables from words.</p>
+        
+        <p>Best story: Apparently when they told him he had to retire at 84, he showed up to his retirement ceremony in his WW1 uniform and said "Well hell, if y'all want me gone so bad, I'll go out the way I came in." They had to practically carry him out of the Pentagon.</p>
+      </div>
+    </div>
     
-    <p>Figured y'all might appreciate hearing these before they disappear like morning dew. The man's been gone 40 years now, but these stories still live on front porches and in barber shops across Chilton County.</p>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/AuntMaeStories</span> <span class="flair flair-storyteller">Keeper of Tales</span> • <span class="score">98.7k points</span> • 7 hours ago • <span class="award">🏆</span>
-    </div>
-    <div class="comment-text">
-      Lord have mercy, I remember my granddaddy telling about the time Colonel Jemison came back from Korea. Said he stepped off that train in Birmingham sounding like he done swallowed a whole cotton gin. Granddaddy could do the voice perfect - <span class="dialect">"Well now, boys, I done seen more Koreans than Carter's got pills, and lemme tell you what..."</span>
-      <br><br>
-      
-      <div class="southern-story">
-        <strong>The Possum Story:</strong>
-        Granddaddy swore the Colonel once got invited to some fancy military dinner up in Washington. Black tie affair, all the generals and politicians. Colonel shows up in his dress uniform but forgot his invitation. The Marine at the door says, "Sir, I can't let you in without proper identification."
-        <br><br>
-        Colonel leans in with that thick Alabama drawl: <span class="dialect">"Son, I ain't got no ID on me, but if you look real close, you'll see I'm the only sumbitch here with possum grease on my shoes."</span>
-        <br><br>
-        Marine just steps aside. Later found out he'd been coon hunting the night before and forgot to change his shoes. <span class="phonetic">[pronounced: "coon huntin'"]</span>
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">WW2Pacific_Veteran</span> • <span class="comment-score">245 points</span> • 2 hours ago
       </div>
-      
-      <div class="story-quote">
-        "That man could say 'hello' in three syllables and make it sound like poetry - 'hee-yell-low'"
+      <div class="comment-content">
+        <p>I served under Colonel Jemison during the Leyte landings! The accent stories are 100% true. Man sounded like molasses poured over gravel. He'd say "soldier" like "soul-jah" and "mission" like "mish-shun."</p>
+        
+        <p>But here's what nobody mentions - he had this weird habit of singing old Confederate marching songs when stressed. During the worst of the Luzon campaign, when we were getting shelled daily, you'd hear this deep Alabama baritone echoing through the supply depot: "Oh I wish I was in Dixie, hooray, hooray..."</p>
+        
+        <p>He kept a photo of his wife Mary in his breast pocket - showed it to every new soldier. "Prettiest gal in Alabama, rest her soul." After she died in '54, he stopped carrying the photo but you could still see the outline of it in his uniform where it had been for 30+ years.</p>
+        
+        <p>Fun fact: He had a pet chicken named "General MacArthur" during the Pacific campaigns. Said it was the only general who gave good advice. The chicken would ride around on his shoulder during supply runs. Got killed by shrapnel during an air raid - he buried it with full military honors.</p>
       </div>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/BarberShopBob</span> <span class="flair flair-alabama">Birmingham Native</span> • <span class="score">76.3k points</span> • 6 hours ago
-    </div>
-    <div class="comment-text">
-      Used to cut the Colonel's hair from '68 til '82 at the old Highland Barber Shop. Man would come in every Saturday morning, 7 AM sharp, smelling like Old Spice and pipe tobacco. Had this accent that could make "Good morning" sound like a love song - <span class="dialect">"Gud mawnin', Bob. How's y'all's mama and them?"</span>
-      <br><br>
-      
-      <div class="southern-story">
-        <strong>The Barber Shop Story:</strong>
-        One Saturday, Colonel's sitting in the chair and this Yankee reporter from up North comes in, doing some story about "Southern military traditions" or some such nonsense. Reporter's got this fancy tape recorder, asking all these questions.
-        <br><br>
-        Reporter says, "Colonel, can you tell me about your combat experience?"
-        <br><br>
-        Colonel gets real quiet, then says: <span class="dialect">"Well now, which combat you talking about? I done fought the Germans, the Japanese, the North Koreans, and three ex-wives. The Germans and Japanese was the easy ones."</span>
-        <br><br>
-        Reporter's scribbling like mad, but the Colonel just winks at me in the mirror. Later told me he'd never been married - just liked watching Yankees get confused.
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">Army_Nurse_1950s</span> • <span class="comment-score">201 points</span> • 2 hours ago
       </div>
-      
-      Always paid with a twenty and told me to "keep the change for the shine box fund." Never let me thank him - <span class="dialect">"Ain't no need for thankin', Bob. A man's haircut is between him and the Lord."</span>
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/ChurchLadyClara</span> <span class="flair flair-elders">81 years old</span> • <span class="score">65.4k points</span> • 5 hours ago
-    </div>
-    <div class="comment-text">
-      Oh honey, I remember Colonel Jemison at the First Baptist Church in Jemison. Used to sit third pew from the front, right side, every Sunday. When he'd sing "Amazing Grace," angels would pause to listen - even though he couldn't carry a tune in a bucket with the handles on it.
-      <br><br>
-      
-      <div class="southern-story">
-        <strong>The Church Story:</strong>
-        One Easter Sunday, the preacher's going on about "turning the other cheek" and "loving your enemies." Colonel stands up - just stands right up in the middle of the sermon - and says (in that thick, syrup-slow drawl): <span class="dialect">"Preacher, I done tried that turn-the-other-cheek business. Worked real good right up until Pearl Harbor."</span>
-        <br><br>
-        The whole congregation just went stone quiet. Then the preacher, bless his heart, just nodded and said "Amen, Colonel. Amen."
+      <div class="comment-content">
+        <p>I was an Army nurse in Korea and Colonel Jemison was our favorite grumpy old man. He had this thing where he'd walk through the field hospitals with candy for the wounded - always said "These boys need sugar more than morphine."</p>
+        
+        <p>The accent was so thick when he'd get emotional. After a bad day, he'd sit with the dying soldiers and his Alabama would just pour out: "Now listen here, young'un, you done good. You hear me? You done real good. Don't you worry none 'bout what's next - Saint Peter's got a special place for boys like you."</p>
+        
+        <p>He kept a small Bible in his left breast pocket - his wife Mary's. Had her name written in faded ink. After she died, he'd read from it to every soldier who didn't make it, tears rolling down his weathered face, accent getting thicker with every word.</p>
+        
+        <p>We called him "Papa J" behind his back. He pretended to hate it but we all knew he loved it.</p>
       </div>
-      
-      His favorite hymn was "I'll Fly Away," but he always sang it like <span class="dialect">"Ah'll fly awayyyyy, oh glory"</span> - stretched that "I" out until it had three syllables and a half.
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/FeedStoreFrank</span> • <span class="score">54.7k points</span> • 4 hours ago
-    </div>
-    <div class="comment-text">
-      My daddy ran the feed store in Jemison from '45 to '85. Colonel would come by every Tuesday afternoon, buy exactly 50 pounds of corn and 25 pounds of sweet feed. Always paid in cash, always counted it out loud in that slow, deliberate way - <span class="dialect">"Twenty, forty, sixty, eighty, one hunnert... and twenty-five cents for the tax man."</span>
-      <br><br>
-      
-      <div class="southern-story">
-        <strong>The Feed Store Story:</strong>
-        One Tuesday in '78, Colonel comes in looking like he lost his last friend. Daddy asks what's wrong. Colonel just stands there, then finally says: <span class="dialect">"Frank, I done got my letter from the Pentagon. They's making me retire from the Retired Reserve. Reckon that means I'm retired from being retired."</span>
-        <br><br>
-        Daddy, being daddy, says "Well Colonel, what you gonna do now?"
-        <br><br>
-        Colonel gets this twinkle in his eye: <span class="dialect">"Son, I reckon I'll just have to start being retired from retirement. That's a whole new kind of work."</span>
-        <br><br>
-        And damned if he didn't live another six years, being the busiest retired-from-retirement man in Alabama.
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">Pentagon_Archivist</span> • <span class="comment-score">189 points</span> • 2 hours ago
       </div>
-      
-      Used to say "y'all" like it was one word with three syllables - <span class="phonetic">[sounds like: "yaw-wull"]</span>
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/GreatGranddaughter</span> • <span class="score">43.8k points</span> • 3 hours ago
-    </div>
-    <div class="comment-text">
-      These stories are making me cry. I'm his great-granddaughter (through Roberta). He used to tell us kids these "gnow stories" on the porch, always starting with <span class="dialect">"Now this here's a gnow story, which means it might could be true..."</span>
-      <br><br>
-      
-      <div class="southern-story">
-        <strong>The Lightning Bug Story:</strong>
-        He told us that during the Depression, his family was so poor they couldn't afford kerosene for lamps. So he'd catch lightning bugs in a mason jar and use them to read his military manuals at night. Said he learned tactics from studying under lightning bug light.
-        <br><br>
-        Then he'd get serious and say: <span class="dialect">"But the real light came from knowing that poor as we was, we still had more than some folks, and that's why we helped anybody we could."</span>
+      <div class="comment-content">
+        <p>Found the retirement ceremony transcript! This is gold:</p>
+        
+        <p>Ceremony Officer: "Colonel Jemison, on behalf of the United States Army..."</p>
+        <p>Jemison (interrupting, thick Alabama drawl): "Now hold on there, son. You gonna tell me I ain't fit to serve no more? I was in this man's army when your daddy was still trying to figure out which end of a rifle goes boom!"</p>
+        
+        <p>Apparently he gave a 45-minute speech about "the good old days" and how "these young whippersnappers with their computers" would never understand "real soldiering." The transcript is 23 pages of pure Alabama-accented military history.</p>
+        
+        <p>My favorite line: "I seen three wars, buried two wives, and outlived every damn soldier I started with. And you know what? I'd do it all again, except maybe I'd have married that redhead from Montgomery instead of Mary. Don't tell Saint Peter I said that."</p>
+        
+        <p>The ceremony ended with him leading everyone in a rousing chorus of "Dixie" before finally accepting his retirement papers.</p>
       </div>
-      
-      <div class="story-quote">
-        "His voice was like honey over broken glass - sweet but with edges that could cut you if you weren't careful."
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MilitaryGenealogist</span> • <span class="comment-score">156 points</span> • 1 hour ago
       </div>
-      
-      The accent was so thick that when he got excited, words would just pile up like cars on I-65 - <span class="dialect">"I-declare-to-my-timey"</span> was one word when he got going.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/OldTimerJasper</span> <span class="flair flair-elders">93 years young</span> • <span class="score">38.9k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Been knowing the Colonel since 1932. That man could stretch a word until it begged for mercy. "War" became "waw-yer," "fire" was "fah-yer," and "child" was "chah-yuld."
-      <br><br>
-      
-      <div class="southern-story">
-        <strong>The Courtroom Story:</strong>
-        Colonel got called for jury duty in 1976. Judge asks him, "Colonel, do you have any prejudices that would prevent you from serving?"
-        <br><br>
-        Colonel thinks for a minute, then says: <span class="dialect">"Well Your Honor, I reckon I do have one prejudice - I'm prejudiced against anybody who don't love this country, and I'm right proud of that prejudice."</span>
-        <br><br>
-        Judge just nodded and said, "Welcome to the jury, Colonel."
+      <div class="comment-content">
+        <p>These stories are absolutely incredible! I had no idea my great-great-grandfather was such a character. The Alabama accent, the bourbon flask, the chicken named after MacArthur - this is the stuff family legends are made of.</p>
+        
+        <p>I'm definitely going to visit his grave this weekend with all these stories in mind. I found out he's buried at Elmwood Cemetery in Birmingham - Section 3, Plot 47. Apparently there's a small military marker, but nothing about his 66-year career.</p>
+        
+        <p>Does anyone know if the Army keeps recordings or films of retirement ceremonies from 1968? I'd love to hear that 45-minute speech in his own voice. Also, does anyone have photos of him in uniform? The family only has one formal portrait from the 1940s.</p>
+        
+        <p>Thank you all for these amazing stories - this is way better than any dry military record!</p>
       </div>
-      
-      Used to say "bless your heart" like it was a prayer and a threat all rolled into one. <span class="dialect">"Bless his heart, he means well" could mean anything from "he's a good man" to "he's too dumb to pour piss out of a boot with instructions on the heel."</span>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/OP_BamaStoryKeeper</span> • <span class="score">28.1k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      UPDATE: Aunt Mae just told me the last gnow story before she went to bed. Said the Colonel told her this one the day before he died:
-      <br><br>
-      
-      <div class="southern-story">
-        <strong>The Final Gnow Story:</strong>
-        "I been alive for a whole century, seen the world change from horses to spaceships. But you know what ain't changed? The way a man feels when he hears his grandbaby laugh, or the way the pine trees smell after rain, or the sound of a good woman's voice saying 'I love you.'"
-        <br><br>
-        <span class="dialect">"The world can have all its progress. I'll take the sound of somebody saying 'y'all come back now' and meaning it."</span>
-      </div>
-      
-      She said he closed his eyes and said: <span class="dialect">"When I get to Heaven, God's gonna ask me what I did with my time. I'm gonna tell Him I tried to make the world a little more Alabama than I found it."</span>
-      
-      <br><br>
-      Thanks y'all for keeping these stories alive. The accent might fade with time, but the heart behind it - that's eternal.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
-    <em>"A gnow story ain't about whether it's true - it's about whether it ought to be."</em>
-    <br><br>
-    <strong>Colonel Robert Harland Jemison - the last of the old-time Alabama storytellers</strong>
   </div>
 </div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
