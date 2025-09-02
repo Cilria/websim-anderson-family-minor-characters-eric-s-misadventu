@@ -3,347 +3,235 @@
 <head>
 <style>
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
     margin: 0;
     padding: 20px;
   }
   .reddit-container {
     max-width: 740px;
     margin: 0 auto;
-    background: white;
+    background-color: white;
     border-radius: 4px;
     border: 1px solid #ccc;
   }
   .reddit-header {
-    background: #0079d3;
+    background-color: #0079D3;
     color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .subreddit-name {
-    color: #0079d3;
-    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
     font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
   }
   .post-title {
     font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
   }
   .post-meta {
-    color: #787c7e;
     font-size: 12px;
-    margin-bottom: 15px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
   }
   .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
   }
   .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
   }
-  .comment-meta {
+  .comment-header {
     font-size: 12px;
-    color: #787c7e;
+    color: #7C7C7C;
     margin-bottom: 4px;
   }
   .comment-author {
     font-weight: bold;
-    color: #1a1a1a;
+    color: #0079D3;
   }
-  .comment-text {
+  .comment-content {
     font-size: 14px;
     line-height: 1.5;
-    margin-bottom: 8px;
+    color: #1A1A1B;
   }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1b1b;
+  .comment-score {
     font-weight: bold;
+    color: #7C7C7C;
   }
   .flair {
-    background: #e9f5fd;
-    color: #0079d3;
+    background-color: #E9F5FD;
+    color: #0079D3;
     padding: 2px 6px;
     border-radius: 12px;
     font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-researcher {
-    background: #ff6b35;
-    color: #fff;
-  }
-  .flair-genealogy {
-    background: #8b0000;
-    color: #fff;
-  }
-  .flair-automotive {
-    background: #2e7d32;
-    color: #fff;
-  }
-  .flair-county {
-    background: #6a0dad;
-    color: #fff;
-  }
-  .flair-marriage {
-    background: #e91e63;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-  .thread-divider {
-    border-top: 1px solid #edeff1;
-    margin: 15px 0;
-  }
-  .document-image {
-    max-width: 100%;
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    border-radius: 4px;
-  }
-  .records-list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  .records-list li {
-    padding: 4px 0;
-    border-bottom: 1px solid #eee;
-  }
-  .records-list li:last-child {
-    border-bottom: none;
-  }
-  .contract-box {
-    background: #f8f9fa;
-    padding: 12px;
-    border-left: 3px solid #0079d3;
-    font-family: 'Courier New', monospace;
-    margin: 8px 0;
-  }
-  .dealership-timeline {
-    background: #fff3cd;
-    padding: 12px;
-    border-left: 3px solid #ffc107;
-    margin: 8px 0;
-  }
-  .family-tree {
-    background: #e8f5e8;
-    padding: 12px;
-    border-left: 3px solid #4caf50;
-    margin: 8px 0;
-    font-family: 'Courier New', monospace;
-  }
-  .census-record {
-    background: #f3e5f5;
-    padding: 12px;
-    border-left: 3px solid #9c27b0;
-    margin: 8px 0;
-  }
-  .love-story {
-    background: #fff2e6;
-    padding: 12px;
-    border-left: 3px solid #ff9800;
-    margin: 8px 0;
-    font-style: italic;
+    margin-left: 5px;
   }
 </style>
 </head>
 <body>
+
 <div class="reddit-container">
   <div class="reddit-header">
     r/Genealogy
   </div>
   
-  <div class="post-content">
-    <div class="subreddit-name">r/Genealogy</div>
-    <h1 class="post-title">[UPDATE] Thomas Richard Rains - Found SO much more! Parents' ancestry, siblings' stories, how he met Mabel, and complete descendants</h1>
+  <div class="post">
+    <div class="post-title">UPDATE: Found my great-grandfather Thomas Richard Rains' ENTIRE family tree - including the hilarious story of how he met his wife! Need help connecting more dots</div>
     <div class="post-meta">
-      Posted by <span class="comment-author">u/TennesseeRoots</span> • 3 hours ago • 1.1k upvotes • 234 comments • 15 awards
+      <span class="comment-score">2.8k upvotes</span> • posted by <span class="comment-author">KnoxvilleRoots</span> <span class="flair">Local History Buff</span>
+    </div>
+    <div class="post-content">
+      <p>OH MY GOD you guys! After my last post about Thomas Richard Rains (1902-2004) and his car empire, I've been digging deep into his family. What I found is WILD - including how he met his wife Susan Elizabeth Howell. Spoiler: it involves a goat, a church picnic, and Thomas getting punched in the face.</p>
+      
+      <p>Here's what I've uncovered about his family:</p>
+      
+      <p><strong>Parents & Ancestors:</strong></p>
+      <ul>
+        <li>Father: Richard Port Rains (1837-1925) - 65 when Thomas was born, owned 180 acres in White Oak</li>
+        <li>Mother: Annie Susan Brook (1864-1911) - died from childbed fever after 12th child</li>
+        <li>Grandfather: Thomas Rains (1801-1879) - War of 1812 veteran, owned 400 acres</li>
+        <li>Grandmother: Mary Elizabeth Port (1810-1885) - came from wealthy Virginia family</li>
+      </ul>
+      
+      <p><strong>Siblings (9 surviving out of 12):</strong></p>
+      <ul>
+        <li>Mary Jane Rains (1869-1945) - became a schoolteacher, never married</li>
+        <li>William Thomas Rains (1871-1933) - moved to Texas, died in oil boom</li>
+        <li>Martha Ann Rains (1873-1956) - married local doctor, 8 kids</li>
+        <li>Richard Port Rains Jr (1875-1920) - died in bar fight in Nashville</li>
+        <li>Sarah Elizabeth Rains (1877-1963) - became a nun, "Sister Mary Thomas"</li>
+        <li>James Franklin Rains (1879-1951) - took over family farm</li>
+        <li>Charles Robert Rains (1881-1945) - moved to Detroit, worked for Ford</li>
+        <li>Minnie Lou Rains (1883-1971) - married banker, lived in Knoxville</li>
+        <li>Frank LeRoy Rains (1902-1988) - Thomas's twin brother, business partner</li>
+      </ul>
+      
+      <p><strong>Children (7 with Susan):</strong></p>
+      <ul>
+        <li>Charles Thomas Rains (1905-1989) - took over Ford dealerships</li>
+        <li>Mary Susan Rains (1907-1999) - became school principal</li>
+        <li>Franklin Howell Rains (1909-1975) - died in WWII, Battle of the Bulge</li>
+        <li>William Earl Rains (1912-1988) - moved to California, aerospace engineer</li>
+        <li>Robert Lee Rains (1915-2001) - became Methodist minister</li>
+        <li>Elizabeth Ann Rains (1918-2010) - married into prominent Knoxville family</li>
+        <li>Thomas Richard Rains Jr (1921-2003) - took over Chrysler dealership, failed miserably</li>
+      </ul>
+      
+      <p>The wife-meeting story is too good - apparently Susan Elizabeth Howell was at a church picnic when Thomas's goat escaped and ate her entire basket of fried chicken. When she confronted him about it, he offered to replace it with "the finest chicken dinner in Knoxville" but accidentally insulted her mother's cooking. She punched him in the face, he fell backwards into the creek, and they were married 6 months later.</p>
+      
+      <p>Looking for more info on the Howell family and any photos of the original White Oak farm!</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">WhiteOakHistorian</span> • <span class="comment-score">445 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>OH MY GOD the goat story is REAL! Found the newspaper clipping from the Maryville Times, July 4th 1903:</p>
+        
+        <p><em>"Church Picnic Marred by Escaped Goat - Local businessman Thomas Rains was seen fleeing from Miss Susan Howell after his goat consumed her dinner. Eyewitnesses report Miss Howell struck Mr. Rains 'a mighty blow' after he made disparaging remarks about her mother's cooking. Both parties were seen later laughing together at the creek."</em></p>
+        
+        <p>Susan's father was Charles Howell, who owned Howell's General Store in Knoxville. Her mother was Elizabeth "Lizzie" Johnson, whose family owned the Johnson Hotel. The Howells were actually quite wealthy - that's how Thomas got the capital to start his car business!</p>
+        
+        <p>Also found the original White Oak farm deed - your great-great-grandfather Thomas Rains bought it in 1823 for $50 and 3 hogs. The family owned it continuously until 1925 when Thomas sold it to pay for his first car lot.</p>
+      </div>
     </div>
     
-    <p>Yesterday's thread was incredible! Now I'm diving deeper - found the WHOLE family including how Thomas met his wife Mabel in the most hilarious way possible. This is getting wild!</p>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/HamiltonCountyArchives</span> <span class="flair flair-county">Hamilton Co. Clerk</span> • <span class="score">89.4k points</span> • 2 hours ago • <span class="award">🏆</span>
-    </div>
-    <div class="comment-text">
-      <strong>RICHARD PORT RAINS ANCESTRY - This is INSANE!</strong>
-      <br><br>
-      Richard Port Rains (1837-1925) was the son of:
-      <br>
-      <strong>William Rains (1809-1864) & Mary "Polly" Port (1811-1889)</strong>
-      
-      <div class="family-tree">
-        William Rains - 1809-1864
-        ├─ Born: Hawkins County, TN (then North Carolina territory)
-        ├─ Married: Mary Port in 1829
-        ├─ Died: Battle of Atlanta, July 22, 1864 (Confederate Army)
-        ├─ 1860 Census: Owned 2 slaves, 200 acres worth $800
-        └─ Children: 11 total, Richard was #7
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TwinResearch</span> • <span class="comment-score">378 points</span> • 3 hours ago
       </div>
-      
-      <strong>Mary Port's family:</strong> Her father was <strong>Captain James Port (1776-1845)</strong> - Revolutionary War veteran who fought at King's Mountain! He got 640 acres for his service. The "Port" in Richard's name came from this side.
+      <div class="comment-content">
+        <p>Wait wait wait - Thomas had a TWIN brother Frank LeRoy? That's not right. I found birth records and Frank was born in 1902 but he was 11 months younger, not a twin. Thomas was born January 20, 1902 and Frank was born December 12, 1902. Their mother basically had back-to-back pregnancies at 38 years old!</p>
+        
+        <p>Frank actually died in 1988, same year as Thomas's wife Susan. The family story is that Thomas and Frank hadn't spoken for 10 years after Frank tried to cheat him out of the Western Knoxville location in 1978.</p>
+        
+        <p>Also, your Thomas Rains (the War of 1812 grandfather) has a fascinating military record - he served under Andrew Jackson at the Battle of New Orleans!</p>
+      </div>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/BrookFamilyGenealogist</span> <span class="flair flair-genealogy">Brook Family</span> • <span class="score">76.2k points</span> • 2 hours ago
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">NunRecords</span> • <span class="comment-score">312 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Your great-aunt Sister Mary Thomas (Sarah Elizabeth Rains) has a complete file at the Diocese of Nashville! She entered the Sisters of Charity in 1895 and taught at St. Mary's School in Nashville for 40 years. There's a photo of her from 1920 - she looks EXACTLY like Thomas, same heavyset build and stern expression.</p>
+        
+        <p>She kept detailed journals about the family. In 1939 she wrote: "My brother Thomas has sold his soul to the automobile devil. He was such a pious boy, now he speaks only of profit margins and carburetors." She also mentions the goat incident: "Thomas deserved that punch. Susan Howell was always too good for him, but God works in mysterious ways."</p>
+      </div>
     </div>
-    <div class="comment-text">
-      <strong>ANNIE SUSAN BROOK'S LINE - Even CRAZIER!</strong>
-      <br><br>
-      Annie Susan Brook (1870-1911) descended from:
-      <br>
-      <strong>John Brook (1745-1820) & Sarah "Sally" Brook (1750-1830)</strong>
-      
-      <div class="census-record">
-        <strong>Revolutionary War Connection:</strong> John Brook fought with the Overmountain Men at King's Mountain alongside Captain James Port! The two families were neighbors in Hawkins County for 100+ years before intermarrying.
-        <br><br>
-        <strong>Migration Pattern:</strong>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">OakRidgePhotographer</span> • <span class="comment-score">267 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>I have a photo of the ENTIRE family from 1903! It's a formal portrait taken in White Oak. Richard Port Rains looks like an old Civil War veteran (which he basically was - he was 66 with a 1-year-old). Annie looks exhausted - she had 12 kids over 34 years.</p>
+        
+        <p>The kids are arranged by age and it's hilarious - the oldest ones look like they could be the parents of the youngest ones. Thomas is sitting on his mother's lap looking smug, while Frank is on the floor crawling away.</p>
+        
+        <p>Also found photos of the Howell family store - it was THE place to shop in Knoxville in the 1890s. Susan grew up literally above the store in living quarters. Her dowry was $5,000 cash (huge money in 1904) and a house lot on Kingston Pike.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TexasGenealogist</span> • <span class="comment-score">198 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Your great-uncle William Thomas Rains who moved to Texas - he didn't die in the oil boom, he CAUSED it! Found records showing he was in Beaumont, Texas in 1901 when Spindletop blew. He was working as a roughneck and bought mineral rights for $50. By 1902 he was worth $50,000 (equivalent to $1.7 million today). He died in 1933, but his descendants still own oil rights in East Texas.</p>
+        
+        <p>He married 3 times, had 11 children, and there's a town in Texas named after him - Rainsville, population 847. Your Texas cousins have been trying to find the Tennessee branch for decades!</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">DetroitAuto</span> • <span class="comment-score">176 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Your great-uncle Charles Robert Rains who moved to Detroit - he was there when Henry Ford started the assembly line! Found his employment records - he worked at Ford Highland Park plant from 1913-1945. He was actually a line supervisor and has his signature on some of the original Model T production cards.</p>
+        
+        <p>Charles never married, lived in a boarding house, and sent money back to Tennessee every month. When he died in 1945, he left everything to Thomas - including 100 shares of Ford stock bought in 1919. Those shares were worth $50,000 by 1945 and helped Thomas expand his dealership empire!</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">KnoxvilleRoots</span> • <span class="comment-score">234 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>This is INSANE! I had no idea about:</p>
+        
         <ul>
-          <li>1745: John Brook born in Virginia</li>
-          <li>1776: Fought at King's Mountain with Captain Port</li>
-          <li>1805: Moved to White Oak, Hamilton County</li>
-          <li>1870: Annie Susan born - 5th generation in same valley</li>
+          <li>The Texas oil cousin fortune</li>
+          <li>Charles working for Ford and leaving stock</li>
+          <li>Sister Mary Thomas's journals roasting Thomas</li>
+          <li>Frank not actually being a twin (family always called them "the twins"!)</li>
+          <li>Susan's family being LOADED</li>
         </ul>
+        
+        <p>I'm literally shaking - the family stories about "rich relatives in Texas" were TRUE! My mom is going to lose her mind. We're planning a family reunion next year and I'm going to try to find the Texas and Detroit branches.</p>
+        
+        <p>Also, my grandmother (Mary Susan) used to tell the goat story but we thought she was making it up! The fact that it's in the newspaper is just... *chef's kiss*</p>
       </div>
-      
-      <strong>Fun fact:</strong> Thomas Rains' parents were from families who'd been neighbors for 100 years before they married in 1899!
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SiblingResearcher</span> <span class="flair flair-genealogy">Family Dynamics</span> • <span class="score">94.7k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      <strong>THOMAS'S SIBLINGS - The Wild Stories!</strong>
-      <br><br>
-      
-      <div class="family-tree">
-        <strong>Richard & Annie had 8 children (6 surviving):</strong>
-        1. <strong>Mary Elizabeth Rains (1899-1978)</strong> - Married 3 times, moved to California during Dust Bowl, became a Rosie the Riveter in WWII
-        2. <strong>John William Rains (1900-1965)</strong> - Followed grandfather into Civil War reenactments, became "the last Confederate veteran" in Tennessee (pretended to be older!)
-        3. <strong>Thomas Richard Rains (1902-2004)</strong> - Our car dealer
-        4. <strong>Frank Edward Rains (1904-1987)</strong> - Thomas's business partner, later opened "Frank's Ford" in Louisville, KY
-        5. <strong>Robert Lee Rains (1906-1918)</strong> - Died of Spanish Flu at age 12
-        6. <strong>Josephine Mae Rains (1908-1995)</strong> - Became a nurse, served in WWII, never married, "Aunt Jo" to all the kids
-        7. <strong>Earl LeRoy Rains (1910-1989)</strong> - Youngest, was only 15 when Thomas started the dealership, became a traveling preacher
-        8. <strong>Unnamed infant (1911)</strong> - Died with mother Annie during childbirth
-      </div>
-      
-      <strong>Family drama:</strong> After Annie died, the older kids raised the younger ones. Thomas (age 9) and Frank (age 7) became inseparable - that's why they went into business together!
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/RomanceInKnoxville</span> <span class="flair flair-marriage">Love Stories</span> • <span class="score">156.8k points</span> • 1 hour ago • <span class="award">💕</span>
-    </div>
-    <div class="comment-text">
-      <strong>HOW THOMAS MET MABEL - The FUNNIEST story!</strong>
-      <br><br>
-      Found this in Mabel's diary and confirmed with newspaper clippings:
-      <br><br>
-      
-      <div class="love-story">
-        <strong>October 14, 1922 - Knoxville Street Fair</strong><br>
-        Thomas (age 20) was showing off his first car - a 1919 Model T he'd just bought for $75. Mabel Carter (age 19) was at the fair with her church group.
-        <br><br>
-        <strong>The accident:</strong> Thomas was trying to impress some guys by showing how fast his car could go in reverse. He accidentally backed INTO the church group's lemonade stand, soaking 6 girls in lemonade and destroying the stand!
-        <br><br>
-        <strong>Mabel's diary entry:</strong> "This crazy boy in a beat-up Ford just ruined our entire church fundraiser! But when he jumped out apologizing, he had the kindest eyes and promised to pay for everything. His name was Thomas Rains and he sold his pocket watch to pay for the damages."
-        <br><br>
-        <strong>Thomas's version (from a 1960 interview):</strong> "I backed into that lemonade stand trying to avoid a dog. Covered six pretty girls in sticky lemonade. The prettiest one - Mabel - was so mad she threw her shoe at me. Then she felt bad and helped me clean up. Been married 55 years since then!"
-      </div>
-      
-      They were married <strong>June 15, 1924</strong> - exactly 20 months after the lemonade stand incident!
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/DescendantsTracker</span> <span class="flair flair-genealogy">Family Tree</span> • <span class="score">67.3k points</span> • 45 minutes ago
-    </div>
-    <div class="comment-text">
-      <strong>COMPLETE DESCENDANT CHART - All living generations!</strong>
-      
-      <div class="family-tree">
-        <strong>Thomas Richard Rains (1902-2004) & Mabel Louise Carter (1903-1951)</strong>
-        ├─ <strong>Charles Thomas Rains (1929-2010)</strong>
-        │  ├─ Married Elizabeth "Betty" Johnson (1932-2018)
-        │  ├─ Thomas Charles Rains Jr. (1955-)
-        │  ├─ Michael Edward Rains (1957-)
-        │  ├─ Susan Mabel Rains (1960-)
-        │  └─ David Lee Rains (1962-)
-        ├─ <strong>Mary Louise Rains (1931-2015)</strong>
-        │  ├─ Married Robert Smith (1928-2003)
-        │  ├─ Robert "Bobby" Smith Jr. (1956-)
-        │  ├─ Linda Smith Johnson (1958-)
-        │  └─ Mark Thomas Smith (1961-)
-        └─ <strong>Thomas Richard Rains Jr. (1933-1999)</strong>
-           ├─ Married Patricia Wilson (1935-)
-           ├─ Thomas Richard Rains III (1958-)
-           ├─ Patricia Anne Rains (1960-)
-           └─ Michael James Rains (1963-)
-      </div>
-      
-      <strong>Current count:</strong> 3 children, 8 grandchildren, 15 great-grandchildren, 2 great-great-grandchildren (all living in Tennessee except one in Florida!)
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/OP_TennesseeRoots</span> • <span class="score">54.7k points</span> • 30 minutes ago
-    </div>
-    <div class="comment-text">
-      <strong>FULL FAMILY PICTURE NOW COMPLETE!</strong>
-      <br><br>
-      ✅ <strong>Ancestors:</strong> Traced back to Revolutionary War - both sides fought at King's Mountain!
-      <br>
-      ✅ <strong>Parents' story:</strong> 100-year neighbor families finally married
-      <br>
-      ✅ <strong>Siblings:</strong> All 8 children documented with wild stories
-      <br>
-      ✅ <strong>Love story:</strong> Lemonade stand accident → 55-year marriage 😂
-      <br>
-      ✅ <strong>Descendants:</strong> 28 total descendants across 5 generations
-      <br>
-      ✅ <strong>Living family:</strong> Found 2nd/3rd cousins I never knew existed!
-      <br><br>
-      
-      <strong>Next reunion:</strong> Planning to invite all the descendants to the old dealership location (now a Taco Bell, but hey - progress!)
-      
-      <br><br>
-      <em>From Revolutionary War veterans to lemonade stand romances to car dealerships - what a 200-year American family saga!</em>
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
-    <em>"From Revolutionary War battlefields to Tennessee lemonade stands - the complete Rains family saga spanning 200 years of American history."</em>
-    <br><br>
-    <strong>179 years of family history • 28 living descendants • One incredible story</strong>
   </div>
 </div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
