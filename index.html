@@ -3,379 +3,220 @@
 <head>
 <style>
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
     margin: 0;
     padding: 20px;
   }
   .reddit-container {
     max-width: 740px;
     margin: 0 auto;
-    background: white;
+    background-color: white;
     border-radius: 4px;
     border: 1px solid #ccc;
   }
   .reddit-header {
-    background: #0079d3;
+    background-color: #0079D3;
     color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .subreddit-name {
-    color: #0079d3;
-    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
     font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
   }
   .post-title {
     font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
   }
   .post-meta {
-    color: #787c7e;
     font-size: 12px;
-    margin-bottom: 15px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
   }
   .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
   }
   .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
   }
-  .comment-meta {
+  .comment-header {
     font-size: 12px;
-    color: #787c7e;
+    color: #7C7C7C;
     margin-bottom: 4px;
   }
   .comment-author {
     font-weight: bold;
-    color: #1a1a1a;
+    color: #0079D3;
   }
-  .comment-text {
+  .comment-content {
     font-size: 14px;
     line-height: 1.5;
-    margin-bottom: 8px;
+    color: #1A1A1B;
   }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1b1b;
+  .comment-score {
     font-weight: bold;
+    color: #7C7C7C;
   }
   .flair {
-    background: #e9f5fd;
-    color: #0079d3;
+    background-color: #E9F5FD;
+    color: #0079D3;
     padding: 2px 6px;
     border-radius: 12px;
     font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-researcher {
-    background: #ff6b35;
-    color: #fff;
-  }
-  .flair-genealogy {
-    background: #8b0000;
-    color: #fff;
-  }
-  .flair-automotive {
-    background: #2e7d32;
-    color: #fff;
-  }
-  .flair-county {
-    background: #6a0dad;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-  .thread-divider {
-    border-top: 1px solid #edeff1;
-    margin: 15px 0;
-  }
-  .document-image {
-    max-width: 100%;
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    border-radius: 4px;
-  }
-  .records-list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  .records-list li {
-    padding: 4px 0;
-    border-bottom: 1px solid #eee;
-  }
-  .records-list li:last-child {
-    border-bottom: none;
-  }
-  .contract-box {
-    background: #f8f9fa;
-    padding: 12px;
-    border-left: 3px solid #0079d3;
-    font-family: 'Courier New', monospace;
-    margin: 8px 0;
-  }
-  .dealership-timeline {
-    background: #fff3cd;
-    padding: 12px;
-    border-left: 3px solid #ffc107;
-    margin: 8px 0;
+    margin-left: 5px;
   }
 </style>
 </head>
 <body>
+
 <div class="reddit-container">
   <div class="reddit-header">
     r/Genealogy
   </div>
   
-  <div class="post-content">
-    <div class="subreddit-name">r/Genealogy</div>
-    <h1 class="post-title">[Brick Wall] Thomas Richard Rains (1902-2004) - Lived to 102, had successful car dealerships, but missing birth certificate and business records?</h1>
+  <div class="post">
+    <div class="post-title">Found my great-grandfather Thomas Richard Rains (1902-2004) - from White Oak farm boy to Knoxville car empire - need help finding dealership records!</div>
     <div class="post-meta">
-      Posted by <span class="comment-author">u/TennesseeRoots</span> • 8 hours ago • 2.3k upvotes • 456 comments • 23 awards
+      <span class="comment-score">1.2k upvotes</span> • posted by <span class="comment-author">KnoxvilleRoots</span> <span class="flair">Local History Buff</span>
     </div>
-    
-    <p>I'm researching my great-grandfather Thomas Richard Rains who lived to be 102, but I'm hitting dead ends with official records. Here's what I know:</p>
-    
-    <ul>
-      <li><strong>Born:</strong> January 20, 1902 in White Oak, Tennessee</li>
-      <li><strong>Parents:</strong> Richard Port Rains (1837-1925) - father was 65 when Thomas was born!</li>
-      <li><strong>Mother:</strong> Annie Susan Brook (1870-1911) - died when Thomas was 9</li>
-      <li><strong>Siblings:</strong> Younger brothers Frank and Earl LeRoy (born 1911)</li>
-      <li><strong>Career:</strong> Started Rains Brothers Automobile Co. in 1939, expanded to 4 dealerships</li>
-      <li><strong>Retirement:</strong> 1977, spent remaining years writing for Freemasons</li>
-      <li><strong>Died:</strong> November 11, 2004 at age 102</li>
-    </ul>
-    
-    <p><strong>Missing:</strong> Official birth certificate, business incorporation papers, military records (if any), and can't find his dealerships in old directories. Any help appreciated!</p>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/HamiltonCountyArchives</span> <span class="flair flair-county">Hamilton Co. Clerk</span> • <span class="score">127.4k points</span> • 6 hours ago • <span class="award">🏆</span>
-    </div>
-    <div class="comment-text">
-      Found his birth record! Thomas Richard Rains was born January 20, 1902 in White Oak, Hamilton County, TN. Here's the certified copy:
+    <div class="post-content">
+      <p>My great-grandfather Thomas Richard Rains lived to 102 and built a car dealership empire in East Tennessee. I've pieced together his basic timeline but I'm hitting dead ends on the business records. Here's what I know:</p>
       
-      <div class="contract-box">
-        Certificate of Birth - State of Tennessee<br>
-        Name: Thomas Richard Rains<br>
-        Born: January 20, 1902 at 3:15 AM<br>
-        Location: White Oak, Hamilton County, District 12<br>
-        Father: Richard Port Rains, age 65, Farmer<br>
-        Mother: Annie Susan Brook, age 32, Housewife<br>
-        Attended by: Dr. J.T. Moore, Midwife Mrs. Lizzie Brook (maternal grandmother)<br>
-        Registered: February 15, 1902
-      </div>
-      
-      Your great-great-grandfather Richard was actually born in 1837 (not 1835 as family lore suggests). He served in the Civil War - Company G, 4th Tennessee Cavalry (Confederate). That's why he was so old when Thomas was born - he married late after the war.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/TennesseeHistorical</span> <span class="flair flair-researcher">State Archives</span> • <span class="score">89.2k points</span> • 5 hours ago
-    </div>
-    <div class="comment-text">
-      Found the 1910 census showing the family tragedy! District 12, White Oak, Hamilton County:
-      <br><br>
-      <strong>Lines 45-50:</strong><br>
-      Rains, Richard P. - Head, age 73, Farmer<br>
-      Rains, Annie S. - Wife, age 40, Mother of 8, 6 living<br>
-      Rains, Thomas R. - Son, age 8, Farm laborer<br>
-      Rains, Frank E. - Son, age 6<br>
-      Rains, Earl L. - Son, age 0 (born January 1910)<br>
-      Brook, Mary L. - Mother-in-law, age 65 (helping after birth)
-      
-      <br><br>
-      Annie died November 8, 1911 from "childbirth fever" - complications from Earl's birth. The family was devastated. 1910 land records show Richard owned 120 acres worth $1,200, but by 1920 it was down to 40 acres. The older boys had to work the farm.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/KnoxvilleBusinessArchives</span> <span class="flair flair-automotive">Business Records</span> • <span class="score">76.8k points</span> • 4 hours ago
-    </div>
-    <div class="comment-text">
-      Found the actual business incorporation! "Rains Brothers Automobile Company" was officially incorporated March 15, 1939. Here's the Articles of Incorporation:
-      
-      <div class="contract-box">
-        State of Tennessee - Knox County<br>
-        Articles of Incorporation<br>
-        Rains Brothers Automobile Company<br>
-        Filed: March 15, 1939<br>
-        Capital Stock: $5,000 (100 shares at $50 each)<br>
-        Directors: Thomas R. Rains (President), Frank E. Rains (Vice-President)<br>
-        Business: "Buying, selling, trading automobiles and trucks"<br>
-        Location: 1420 East Magnolia Avenue, Knoxville
-      </div>
-      
-      Before that, they operated as "Rains & Rains Used Cars" from 1933-1939 at 1206 East Magnolia. The 1940 city directory shows them as "Rains Bros. Auto Sales - Used Cars & Trucks."
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/AutomotiveHistorian</span> <span class="flair flair-automotive">Car History</span> • <span class="score">65.3k points</span> • 4 hours ago
-    </div>
-    <div class="comment-text">
-      Tracked all four dealerships! Here's the complete timeline with addresses:
-      
-      <div class="dealership-timeline">
-        <strong>1928-1933:</strong> Rains & Rains Used Cars - 1206 E. Magnolia Ave (partnership)<br>
-        <strong>1933-1939:</strong> Rains Brothers Auto Sales - 1420 E. Magnolia Ave (incorporated)<br>
-        <strong>1939-1955:</strong> Rains Brothers Automobile Co. - 1420 E. Magnolia Ave (expanded)<br>
-        <strong>1955-1962:</strong> Tom & Charles Ford - 1801 N. Broadway (son Charles as partner)<br>
-        <strong>1962-1977:</strong> Thomas R. Rains Ford - Multiple locations:<br>
-        - 1420 E. Magnolia Ave (original)<br>
-        - 1801 N. Broadway (North Knoxville)<br>
-        - 301 S. Gay Street (Downtown)<br>
-        - 215 Maryville Highway (Maryville)
-      </div>
-      
-      They sold Hudsons until 1954, then switched to Chrysler-Plymouth when Hudson went under. By 1958 they were the largest Chrysler dealer in East Tennessee. The "nobody wants to buy a fucking Chrysler" quote was from a 1975 interview in the Knoxville News-Sentinel!
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/WWIIRecordsFinder</span> <span class="flair flair-military">Military Records</span> • <span class="score">54.7k points</span> • 3 hours ago
-    </div>
-    <div class="comment-text">
-      Found his WWII draft registration! Thomas Richard Rains registered June 30, 1942 at age 40 (old for draft). Here's the card:
-      
-      <div class="contract-box">
-        Selective Service System - Draft Registration Card<br>
-        Name: Thomas Richard Rains<br>
-        Address: 1420 E. Magnolia Ave, Knoxville, TN<br>
-        Age: 40, Born January 20, 1902<br>
-        Employer: Rains Brothers Automobile Co.<br>
-        Dependents: Wife Mabel (married 1924), Children Charles (13), Mary (11), Thomas Jr. (9)<br>
-        Physical: 5'10", 165 lbs, Blue eyes, Brown hair, Ruddy complexion<br>
-        Registration: June 30, 1942 - Local Board 1, Knoxville<br>
-        Classification: 3-A (married with dependents - deferred)
-      </div>
-      
-      He never served - was classified 3-A due to age and dependents. His business thrived during the war selling used cars to defense workers at Oak Ridge.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/RainsFamilyDescendant</span> • <span class="score">48.9k points</span> • 3 hours ago
-    </div>
-    <div class="comment-text">
-      I'm Thomas's great-granddaughter! Here are some family details that aren't in official records:
-      
-      <ul class="records-list">
-        <li><strong>First wife:</strong> Mabel Louise Carter (1903-1951) - married 1924, died of cancer</li>
-        <li><strong>Second wife:</strong> Ruth Elizabeth Moore (1910-1998) - married 1952</li>
-        <li><strong>Children:</strong>
-          <ul>
-            <li>Charles Thomas Rains (1929-2010) - took over dealerships</li>
-            <li>Mary Louise Rains (1931-2015) - school teacher</li>
-            <li>Thomas Richard Rains Jr. (1933-1999) - Air Force pilot</li>
-          </ul>
-        </li>
+      <ul>
+        <li>Born January 20, 1902 in White Oak, TN</li>
+        <li>Father Richard Port Rains was 65 (!) when he was born</li>
+        <li>Mother Annie Susan Brook died 1911 after youngest brother Earl LeRoy</li>
+        <li>1925: Father dies of stroke, Thomas and Frank leave for Oak Ridge</li>
+        <li>1925-1926: Worked as plumbers in Oak Ridge</li>
+        <li>1928: Entered car business as used car salesmen</li>
+        <li>1933: Became manager of East Knoxville dealership</li>
+        <li>1939: Opened "Rains Brothers Automobile Co." with Frank</li>
+        <li>1946: Frank leaves for Kentucky, Thomas expands to new cars</li>
+        <li>1950s: Opens 3 more dealerships including "Tom and Charles Ford"</li>
+        <li>1977: Retired, spent rest of life writing for Freemasons</li>
       </ul>
       
-      The Freemason writing was for the "Scottish Rite Journal" - he wrote monthly columns about "The Businessman's Obligation to Community" from 1977-1999. The Masons gave him a 75-year pin in 1999!
+      <p>Looking for ANYTHING on the actual dealerships - photos, ads, business records. The family has oral history but no documentation!</p>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
   </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MasonicArchivist</span> <span class="flair flair-researcher">Scottish Rite</span> • <span class="score">42.1k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Found his Masonic records! Thomas Richard Rains was a 33rd degree Mason. Here's his complete Masonic timeline:
-      
-      <div class="contract-box">
-        <strong>Masonic Timeline:</strong><br>
-        1925 - Initiated: Knoxville Lodge #756, F&AM<br>
-        1926 - Passed to Fellowcraft<br>
-        1927 - Raised to Master Mason<br>
-        1930 - Joined Scottish Rite, Valley of Knoxville<br>
-        1935 - Knight Commander of the Temple<br>
-        1940 - 32nd Degree<br>
-        1955 - 33rd Degree (honorary)<br>
-        1960 - Grand High Priest, Royal Arch Masons<br>
-        1970 - Grand Master, Grand Lodge of Tennessee<br>
-        1977-1999 - Wrote "Businessman's Creed" column for Scottish Rite Journal
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">KnoxvilleArchives</span> • <span class="comment-score">298 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>HOLY SHIT - I found the actual business registration! "Rains Brothers Automobile Co." was officially incorporated January 15, 1939. Business license #B-4721, registered at 2420 E Magnolia Ave, Knoxville. Here's the kicker - their original business model was "used cars, tractors, and farm implements." They pivoted to just cars during WW2.</p>
+        
+        <p>Found their 1939 Yellow Pages ad - they're listed as "Rains Bros Auto - Quality Used Cars - We Finance!" with a phone number that's literally "4-5678" (old 4-digit system).</p>
+        
+        <p>Also found Thomas's 1933 manager position - he was managing "Magnolia Motors" at 2420 E Magnolia (same location!) before buying it out and rebranding. The previous owner, Harold Jenkins, sold it to them during the Depression for $1,500 cash plus assumption of debt.</p>
       </div>
       
-      His most famous article was "The Used Car Salesman's Code of Ethics" - published 1982! The Grand Lodge has all his columns archived.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/ObituaryFinder</span> <span class="flair flair-genealogy">Obituary Archives</span> • <span class="score">38.5k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Found his complete obituary from the Knoxville News-Sentinel, November 12, 2004:
-      
-      <div class="contract-box">
-        Thomas Richard Rains, 102, of Knoxville, died Thursday, November 11, 2004.<br><br>
-        He was born January 20, 1902 in White Oak, TN, son of the late Richard Port Rains and Annie Susan Brook Rains...<br><br>
-        Survived by: 3 children, 8 grandchildren, 15 great-grandchildren, 2 great-great-grandchildren...<br><br>
-        He operated Rains automobile dealerships in Knoxville and Maryville for 48 years...<br><br>
-        Active in Scottish Rite Masonry for 79 years...<br><br>
-        Funeral: 2:00 PM Saturday, Highland Memorial Chapel with Masonic rites...<br><br>
-        Burial: Highland Memorial Cemetery with 33rd Degree Masonic service...
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">WhiteOakHistorian</span> • <span class="comment-score">234 points</span> • 4 hours ago
+        </div>
+        <div class="comment-content">
+          <p>Found their father's farm! Richard Port Rains owned 180 acres in White Oak - specifically the old Rains Homestead on what is now Rains Road (yes, named after them). Property records show he bought it in 1878 for $200 cash. The 1900 census lists him as 63 years old with 9 living children (Annie had 12 total, 3 died in infancy).</p>
+          
+          <p>The family was NOT poor - they had 8 horses, 40 head of cattle, and grew tobacco and corn. Richard was known as "Old Man Rains" and was apparently quite the character - local newspaper from 1898 mentions he was fined $5 for "public drunkenness and disturbing the peace at the White Oak General Store."</p>
+          
+          <p>Thomas's mother Annie Susan Brook was from a prominent local family - her father owned the Brook General Store in White Oak. She died March 3, 1911 from "childbed fever" after giving birth to Earl LeRoy. The baby survived but was raised by his older sisters.</p>
+        </div>
       </div>
-      
-      The funeral was the largest Masonic service in Knoxville history - over 300 Masons attended from 5 states!
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/OP_TennesseeRoots</span> • <span class="score">31.2k points</span> • 1 hour ago
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">OakRidgeWorker</span> • <span class="comment-score">187 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found their plumbing work! Thomas and Frank worked for "Oak Ridge Construction Company" from May 1925 to March 1926. They were part of the original workforce that built the town of Oak Ridge - before the Manhattan Project. Pay records show they made $2.50/day as plumbers, which was damn good money back then.</p>
+        
+        <p>Here's the crazy part - they left Oak Ridge in March 1926 because they got into a fistfight with their boss, Clarence Mitchell. Police report filed March 15, 1926: "Subject Thomas Rains struck foreman Mitchell over payment dispute. Both parties agree to separate employment." They moved to Knoxville the next week.</p>
+        
+        <p>Thomas's first car job was actually at "Knoxville Auto Exchange" on Gay Street, where he started as a "lot boy" washing cars for $12/week in April 1926. Worked his way up to salesman by 1928.</p>
+      </div>
     </div>
-    <div class="comment-text">
-      UPDATE: This is incredible! I now have:
-      <br><br>
-      ✅ <strong>Official birth certificate</strong> - January 20, 1902, White Oak, TN<br>
-      ✅ <strong>Complete business records</strong> - all 4 dealerships with exact addresses<br>
-      ✅ <strong>Masonic records</strong> - 33rd degree, 79 years of service<br>
-      ✅ <strong>WWII draft card</strong> - deferred due to age/dependents<br>
-      ✅ <strong>Marriage records</strong> - both wives and all 3 children<br>
-      ✅ <strong>Complete obituary</strong> - with funeral details<br>
-      ✅ <strong>Family photos</strong> - from the dealerships (attached below)
-      
-      <br><br>
-      My family is going to be amazed - we went from "brick wall" to having his complete life story documented! Thank you all SO much. I'm compiling everything for the family reunion next month.
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">FordHistorian</span> • <span class="comment-score">156 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>I found the actual dealership photos! The Tennessee State Archives has a collection of 1950s Knoxville business photos, including several of Thomas's dealerships:</p>
+        
+        <p><strong>2420 E Magnolia (original location):</strong> 1952 photo shows a white brick building with "Rains Automobile Co." in blue cursive letters. The lot had about 40 cars, mostly 1946-1952 Fords and Chevys. Thomas is in the photo - heavyset man in a white shirt and suspenders, standing next to a 1951 Ford Custom.</p>
+        
+        <p><strong>Western Knoxville location:</strong> Opened 1954 at 5600 Kingston Pike. Photos show a modern (for 1954) glass-front showroom with "Rains Ford" in chrome letters. They sold new Fords exclusively here.</p>
+        
+        <p><strong>Maryville location:</strong> 1956 photo shows a smaller lot at 412 W Broadway, with "Rains Brothers Used Cars" sign. This location specialized in "executive driven" used cars.</p>
+        
+        <p>The "Tom and Charles Ford" location was actually a rebranding of the Western Knoxville dealership in 1955 when Charles joined. Thomas kept the E Magnolia location as "Rains Used Cars" until 1970.</p>
+      </div>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
-    <em>"From White Oak farm boy to Knoxville's automobile king - 102 years of the American dream."</em>
-    <br><br>
-    <strong>Thomas Richard Rains - January 20, 1902 to November 11, 2004</strong>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ChryslerHistorian</span> • <span class="comment-score">134 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found the actual reason for his Chrysler comment! Thomas became the exclusive Chrysler-Plymouth dealer for East Knoxville in 1956. By 1970, Chrysler quality had tanked - the 1970 Plymouth Fury was a notorious lemon.</p>
+        
+        <p>Sales records from the Tennessee DMV show his Chrysler sales:</p>
+        <ul>
+          <li>1957: 156 new Chryslers sold</li>
+          <li>1965: 89 new Chryslers sold</li>
+          <li>1970: 23 new Chryslers sold</li>
+          <li>1975: 7 new Chryslers sold</li>
+        </ul>
+        
+        <p>His exact quote from a 1976 interview with the Knoxville News-Sentinel: "Nobody wants to buy a damn Chrysler anymore. Used to sell about 20 of those a month, now I'm lucky to sell one or two. These new cars are junk compared to the old ones."</p>
+        
+        <p>He dropped Chrysler entirely in 1976 and switched to selling AMC (American Motors) until retirement. The "nobody wants to buy a fucking Chrysler anymore" was apparently said at a family dinner and became legendary family lore.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">FreemasonRecords</span> • <span class="comment-score">98 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found his Freemason records! Thomas was initiated into Knoxville Lodge #756 on March 12, 1934. He became Worshipful Master in 1942. After retirement, he wrote extensively for the Tennessee Freemason newsletter - I found 47 articles he authored between 1977-2002.</p>
+        
+        <p>His most famous article was "The Automobile and American Freedom" published in 1980, where he argued that car ownership was the greatest liberator of the American middle class. The Grand Lodge of Tennessee gave him a lifetime achievement award in 1997.</p>
+        
+        <p>He died February 11, 2004 (not November 11 as listed) at St. Mary's Hospital, Knoxville. His obituary ran in the Knoxville News-Sentinel and mentioned he was "the oldest living 32nd degree Mason in Tennessee." Buried at Highland Memorial Cemetery with full Masonic rites.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">KnoxvilleRoots</span> • <span class="comment-score">89 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>This is absolutely incredible! I had NO idea about the Oak Ridge fight, the Chrysler sales numbers, or the Freemason award. My family is going to freak out - we've been telling these stories for decades but had no proof.</p>
+        
+        <p>I'm planning a trip to Knoxville next month to visit Highland Memorial and see if we can find any of the dealership locations. The 2420 E Magnolia address is now a Dollar General, but the Western Knoxville location might still be standing.</p>
+        
+        <p>Thank you all so much - this is exactly what I needed to preserve his legacy properly!</p>
+      </div>
+    </div>
   </div>
 </div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
