@@ -1,353 +1,381 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bro i made this kindness virus shit up and yall ATE IT UP LMAOOO : shitposting</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #030303;
-            margin: 0;
-            padding: 0;
-            color: #d7dadc;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: #1a1a1b;
-            border-radius: 0;
-            border: 1px solid #343536;
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-            font-size: 14px;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #343536;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #818384;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #d7dadc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #818384;
-            margin-bottom: 15px;
-        }
-        .flair {
-            background: #1a472a;
-            color: #46d160;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 12px;
-            margin-right: 5px;
-            font-weight: 500;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 12px;
-            color: #818384;
-        }
-        .comments-count a {
-            color: #818384;
-            text-decoration: none;
-        }
-        .sort-bar {
-            background: #1a1a1b;
-            padding: 10px 20px;
-            border-bottom: 1px solid #343536;
-            font-size: 12px;
-            color: #818384;
-        }
-        .sort-bar a {
-            color: #4fc3f7;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #343536;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #343536;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #818384;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-            color: #d7dadc;
-        }
-        .comment-reply {
-            color: #4fc3f7;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #343536;
-        }
-        .award {
-            color: #ffd700;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        p {
-            margin: 8px 0;
-            line-height: 1.4;
-        }
-        .sidebar {
-            background: #1a1a1b;
-            padding: 15px;
-            border-top: 1px solid #343536;
-            font-size: 14px;
-            color: #d7dadc;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-            color: #d7dadc;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-            color: #818384;
-        }
-        .sidebar a {
-            color: #4fc3f7;
-            text-decoration: none;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f6f7f8;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background: #0079d3;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .subreddit-name {
+    color: #0079d3;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    color: #1a1a1a;
+    line-height: 1.3;
+  }
+  .post-meta {
+    color: #787c7e;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .post-content {
+    padding: 15px;
+    border-bottom: 1px solid #edeff1;
+  }
+  .comment {
+    padding: 12px 15px 12px 20px;
+    border-left: 2px solid #edeff1;
+    margin-left: 8px;
+  }
+  .comment-meta {
+    font-size: 12px;
+    color: #787c7e;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  .comment-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .comment-actions {
+    font-size: 12px;
+    color: #878a8c;
+  }
+  .score {
+    color: #1a1b1b;
+    font-weight: bold;
+  }
+  .flair {
+    background: #e9f5fd;
+    color: #0079d3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .flair-researcher {
+    background: #ff6b35;
+    color: #fff;
+  }
+  .flair-genealogy {
+    background: #8b0000;
+    color: #fff;
+  }
+  .flair-automotive {
+    background: #2e7d32;
+    color: #fff;
+  }
+  .flair-county {
+    background: #6a0dad;
+    color: #fff;
+  }
+  .award {
+    color: #d4b572;
+    margin-right: 8px;
+  }
+  .thread-divider {
+    border-top: 1px solid #edeff1;
+    margin: 15px 0;
+  }
+  .document-image {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    border-radius: 4px;
+  }
+  .records-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .records-list li {
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .records-list li:last-child {
+    border-bottom: none;
+  }
+  .contract-box {
+    background: #f8f9fa;
+    padding: 12px;
+    border-left: 3px solid #0079d3;
+    font-family: 'Courier New', monospace;
+    margin: 8px 0;
+  }
+  .dealership-timeline {
+    background: #fff3cd;
+    padding: 12px;
+    border-left: 3px solid #ffc107;
+    margin: 8px 0;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/shitposting</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Vibe_Checker_9000</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>89.2k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">bro i made this kindness virus shit up and yall ATE IT UP LMAOOO</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">satire</span>
-                    <span class="flair">lmao they believed it</span>
-                    <span>Posted by u/Vibe_Checker_9000 • 6 hours ago</span>
-                </div>
-
-                <p>so like i was high as shit last night and thought "what if i made up some fake wholesome reddit post about a virus that makes everyone nice" and yooo 💀</p>
-
-                <p>the dedication is INSANE. i literally wrote like 2000 words of fake news articles, made up statistics, created fake reddit accounts with backstories, the whole nine yards. had people in the comments talking about their "transformations" and shit 💀💀💀</p>
-
-                <p>some of yall were like "this gives me hope for humanity" BRO ITS NOT REAL 😭😭😭</p>
-
-                <p>the best part? i made the virus sound like some anime plot device like "the last bigot on earth just got infected" bro thats literally a jojo stand ability 💀💀💀</p>
-
-                <p>and dont even get me started on the fake sob stories i wrote. "former kkk member apologizes to black neighbors" NAHHH THATS CRAZY 💀💀💀</p>
-
-                <p>yall really believed a virus could just magically make people stop being racist/homophobic/transphobic like its some kinda marvel movie or some shit 😭😭😭</p>
-
-                <p>the amount of awards i got is sending me. people spent actual money on this fake wholesome garbage LMAOOO</p>
-
-                <p>anyway im gonna do it again next week but make it about a virus that makes everyone speak in minecraft enchantment table language 💀</p>
-
-                <div class="comments-count">
-                    <a href="#">4.7k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="award">⭐</span>
-                    <span class="award">⭐</span>
-                    u/Sigma_Male_Grindset • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    nah bro i KNEW it was fake but i was like "damn this some good writing tho" 💀💀💀 the commitment to the bit was astronomical
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/TikTok_Destiny_Fan • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    "the last bigot on earth" SENT ME 💀💀💀 bro made it sound like thanos snapping away racists or some shit
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Gen_Z_Historian • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    lowkey respect the grind tho. 2000 words of fake lore?? dude was writing fanfiction about world peace 💀💀💀
-                </div>
-                <div class="comment-meta">u/Vibe_Checker_9000 • 4 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        bro i was in my bag fr. had like 47 tabs open researching fake statistics and shit 💀💀💀
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Reddit_Detective420 • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    the fake accounts were WILD bro. "u/Former_Klansman_Mississippi" with a 3 day old account 💀💀💀
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Sussy_Baka_69 • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    "we're all just people deserving of love" bro thats what they want you to think 😈😈😈
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Among_Us_Veteran • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    op ratio + fell off + L + cope + touch grass + ratio again
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">💎</span>
-                    u/Wholesome_Copium • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    bro i was literally crying reading the fake stories 😭😭😭 this is why we cant have nice things
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Discord_Mod_Supreme • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    next week do a virus that makes everyone speak like a 2012 tumblr user 💀💀💀 "the last fedora tip has been tipped"
-                </div>
-                <div class="comment-meta">u/Vibe_Checker_9000 • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        omfg yes. "the final m'lady has been spoken" 💀💀💀
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Reddit_Admin_Alt • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    this is why reddit is dying 💀💀💀
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Based_Department • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    unironically better writing than most netflix shows 💀💀💀
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/shitposting</h3>
-            <ul>
-                <li><a href="#">me when the impostor is sus (real)</a></li>
-                <li><a href="#">ratio + you fell off + your mom</a></li>
-                <li><a href="#">this is peak comedy</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post-content">
+    <div class="subreddit-name">r/Genealogy</div>
+    <h1 class="post-title">[Brick Wall] Thomas Richard Rains (1902-2004) - Lived to 102, had successful car dealerships, but missing birth certificate and business records?</h1>
+    <div class="post-meta">
+      Posted by <span class="comment-author">u/TennesseeRoots</span> • 8 hours ago • 2.3k upvotes • 456 comments • 23 awards
     </div>
+    
+    <p>I'm researching my great-grandfather Thomas Richard Rains who lived to be 102, but I'm hitting dead ends with official records. Here's what I know:</p>
+    
+    <ul>
+      <li><strong>Born:</strong> January 20, 1902 in White Oak, Tennessee</li>
+      <li><strong>Parents:</strong> Richard Port Rains (1837-1925) - father was 65 when Thomas was born!</li>
+      <li><strong>Mother:</strong> Annie Susan Brook (1870-1911) - died when Thomas was 9</li>
+      <li><strong>Siblings:</strong> Younger brothers Frank and Earl LeRoy (born 1911)</li>
+      <li><strong>Career:</strong> Started Rains Brothers Automobile Co. in 1939, expanded to 4 dealerships</li>
+      <li><strong>Retirement:</strong> 1977, spent remaining years writing for Freemasons</li>
+      <li><strong>Died:</strong> November 11, 2004 at age 102</li>
+    </ul>
+    
+    <p><strong>Missing:</strong> Official birth certificate, business incorporation papers, military records (if any), and can't find his dealerships in old directories. Any help appreciated!</p>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/HamiltonCountyArchives</span> <span class="flair flair-county">Hamilton Co. Clerk</span> • <span class="score">127.4k points</span> • 6 hours ago • <span class="award">🏆</span>
+    </div>
+    <div class="comment-text">
+      Found his birth record! Thomas Richard Rains was born January 20, 1902 in White Oak, Hamilton County, TN. Here's the certified copy:
+      
+      <div class="contract-box">
+        Certificate of Birth - State of Tennessee<br>
+        Name: Thomas Richard Rains<br>
+        Born: January 20, 1902 at 3:15 AM<br>
+        Location: White Oak, Hamilton County, District 12<br>
+        Father: Richard Port Rains, age 65, Farmer<br>
+        Mother: Annie Susan Brook, age 32, Housewife<br>
+        Attended by: Dr. J.T. Moore, Midwife Mrs. Lizzie Brook (maternal grandmother)<br>
+        Registered: February 15, 1902
+      </div>
+      
+      Your great-great-grandfather Richard was actually born in 1837 (not 1835 as family lore suggests). He served in the Civil War - Company G, 4th Tennessee Cavalry (Confederate). That's why he was so old when Thomas was born - he married late after the war.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/TennesseeHistorical</span> <span class="flair flair-researcher">State Archives</span> • <span class="score">89.2k points</span> • 5 hours ago
+    </div>
+    <div class="comment-text">
+      Found the 1910 census showing the family tragedy! District 12, White Oak, Hamilton County:
+      <br><br>
+      <strong>Lines 45-50:</strong><br>
+      Rains, Richard P. - Head, age 73, Farmer<br>
+      Rains, Annie S. - Wife, age 40, Mother of 8, 6 living<br>
+      Rains, Thomas R. - Son, age 8, Farm laborer<br>
+      Rains, Frank E. - Son, age 6<br>
+      Rains, Earl L. - Son, age 0 (born January 1910)<br>
+      Brook, Mary L. - Mother-in-law, age 65 (helping after birth)
+      
+      <br><br>
+      Annie died November 8, 1911 from "childbirth fever" - complications from Earl's birth. The family was devastated. 1910 land records show Richard owned 120 acres worth $1,200, but by 1920 it was down to 40 acres. The older boys had to work the farm.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/KnoxvilleBusinessArchives</span> <span class="flair flair-automotive">Business Records</span> • <span class="score">76.8k points</span> • 4 hours ago
+    </div>
+    <div class="comment-text">
+      Found the actual business incorporation! "Rains Brothers Automobile Company" was officially incorporated March 15, 1939. Here's the Articles of Incorporation:
+      
+      <div class="contract-box">
+        State of Tennessee - Knox County<br>
+        Articles of Incorporation<br>
+        Rains Brothers Automobile Company<br>
+        Filed: March 15, 1939<br>
+        Capital Stock: $5,000 (100 shares at $50 each)<br>
+        Directors: Thomas R. Rains (President), Frank E. Rains (Vice-President)<br>
+        Business: "Buying, selling, trading automobiles and trucks"<br>
+        Location: 1420 East Magnolia Avenue, Knoxville
+      </div>
+      
+      Before that, they operated as "Rains & Rains Used Cars" from 1933-1939 at 1206 East Magnolia. The 1940 city directory shows them as "Rains Bros. Auto Sales - Used Cars & Trucks."
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/AutomotiveHistorian</span> <span class="flair flair-automotive">Car History</span> • <span class="score">65.3k points</span> • 4 hours ago
+    </div>
+    <div class="comment-text">
+      Tracked all four dealerships! Here's the complete timeline with addresses:
+      
+      <div class="dealership-timeline">
+        <strong>1928-1933:</strong> Rains & Rains Used Cars - 1206 E. Magnolia Ave (partnership)<br>
+        <strong>1933-1939:</strong> Rains Brothers Auto Sales - 1420 E. Magnolia Ave (incorporated)<br>
+        <strong>1939-1955:</strong> Rains Brothers Automobile Co. - 1420 E. Magnolia Ave (expanded)<br>
+        <strong>1955-1962:</strong> Tom & Charles Ford - 1801 N. Broadway (son Charles as partner)<br>
+        <strong>1962-1977:</strong> Thomas R. Rains Ford - Multiple locations:<br>
+        - 1420 E. Magnolia Ave (original)<br>
+        - 1801 N. Broadway (North Knoxville)<br>
+        - 301 S. Gay Street (Downtown)<br>
+        - 215 Maryville Highway (Maryville)
+      </div>
+      
+      They sold Hudsons until 1954, then switched to Chrysler-Plymouth when Hudson went under. By 1958 they were the largest Chrysler dealer in East Tennessee. The "nobody wants to buy a fucking Chrysler" quote was from a 1975 interview in the Knoxville News-Sentinel!
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/WWIIRecordsFinder</span> <span class="flair flair-military">Military Records</span> • <span class="score">54.7k points</span> • 3 hours ago
+    </div>
+    <div class="comment-text">
+      Found his WWII draft registration! Thomas Richard Rains registered June 30, 1942 at age 40 (old for draft). Here's the card:
+      
+      <div class="contract-box">
+        Selective Service System - Draft Registration Card<br>
+        Name: Thomas Richard Rains<br>
+        Address: 1420 E. Magnolia Ave, Knoxville, TN<br>
+        Age: 40, Born January 20, 1902<br>
+        Employer: Rains Brothers Automobile Co.<br>
+        Dependents: Wife Mabel (married 1924), Children Charles (13), Mary (11), Thomas Jr. (9)<br>
+        Physical: 5'10", 165 lbs, Blue eyes, Brown hair, Ruddy complexion<br>
+        Registration: June 30, 1942 - Local Board 1, Knoxville<br>
+        Classification: 3-A (married with dependents - deferred)
+      </div>
+      
+      He never served - was classified 3-A due to age and dependents. His business thrived during the war selling used cars to defense workers at Oak Ridge.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/RainsFamilyDescendant</span> • <span class="score">48.9k points</span> • 3 hours ago
+    </div>
+    <div class="comment-text">
+      I'm Thomas's great-granddaughter! Here are some family details that aren't in official records:
+      
+      <ul class="records-list">
+        <li><strong>First wife:</strong> Mabel Louise Carter (1903-1951) - married 1924, died of cancer</li>
+        <li><strong>Second wife:</strong> Ruth Elizabeth Moore (1910-1998) - married 1952</li>
+        <li><strong>Children:</strong>
+          <ul>
+            <li>Charles Thomas Rains (1929-2010) - took over dealerships</li>
+            <li>Mary Louise Rains (1931-2015) - school teacher</li>
+            <li>Thomas Richard Rains Jr. (1933-1999) - Air Force pilot</li>
+          </ul>
+        </li>
+      </ul>
+      
+      The Freemason writing was for the "Scottish Rite Journal" - he wrote monthly columns about "The Businessman's Obligation to Community" from 1977-1999. The Masons gave him a 75-year pin in 1999!
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/MasonicArchivist</span> <span class="flair flair-researcher">Scottish Rite</span> • <span class="score">42.1k points</span> • 2 hours ago
+    </div>
+    <div class="comment-text">
+      Found his Masonic records! Thomas Richard Rains was a 33rd degree Mason. Here's his complete Masonic timeline:
+      
+      <div class="contract-box">
+        <strong>Masonic Timeline:</strong><br>
+        1925 - Initiated: Knoxville Lodge #756, F&AM<br>
+        1926 - Passed to Fellowcraft<br>
+        1927 - Raised to Master Mason<br>
+        1930 - Joined Scottish Rite, Valley of Knoxville<br>
+        1935 - Knight Commander of the Temple<br>
+        1940 - 32nd Degree<br>
+        1955 - 33rd Degree (honorary)<br>
+        1960 - Grand High Priest, Royal Arch Masons<br>
+        1970 - Grand Master, Grand Lodge of Tennessee<br>
+        1977-1999 - Wrote "Businessman's Creed" column for Scottish Rite Journal
+      </div>
+      
+      His most famous article was "The Used Car Salesman's Code of Ethics" - published 1982! The Grand Lodge has all his columns archived.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/ObituaryFinder</span> <span class="flair flair-genealogy">Obituary Archives</span> • <span class="score">38.5k points</span> • 2 hours ago
+    </div>
+    <div class="comment-text">
+      Found his complete obituary from the Knoxville News-Sentinel, November 12, 2004:
+      
+      <div class="contract-box">
+        Thomas Richard Rains, 102, of Knoxville, died Thursday, November 11, 2004.<br><br>
+        He was born January 20, 1902 in White Oak, TN, son of the late Richard Port Rains and Annie Susan Brook Rains...<br><br>
+        Survived by: 3 children, 8 grandchildren, 15 great-grandchildren, 2 great-great-grandchildren...<br><br>
+        He operated Rains automobile dealerships in Knoxville and Maryville for 48 years...<br><br>
+        Active in Scottish Rite Masonry for 79 years...<br><br>
+        Funeral: 2:00 PM Saturday, Highland Memorial Chapel with Masonic rites...<br><br>
+        Burial: Highland Memorial Cemetery with 33rd Degree Masonic service...
+      </div>
+      
+      The funeral was the largest Masonic service in Knoxville history - over 300 Masons attended from 5 states!
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/OP_TennesseeRoots</span> • <span class="score">31.2k points</span> • 1 hour ago
+    </div>
+    <div class="comment-text">
+      UPDATE: This is incredible! I now have:
+      <br><br>
+      ✅ <strong>Official birth certificate</strong> - January 20, 1902, White Oak, TN<br>
+      ✅ <strong>Complete business records</strong> - all 4 dealerships with exact addresses<br>
+      ✅ <strong>Masonic records</strong> - 33rd degree, 79 years of service<br>
+      ✅ <strong>WWII draft card</strong> - deferred due to age/dependents<br>
+      ✅ <strong>Marriage records</strong> - both wives and all 3 children<br>
+      ✅ <strong>Complete obituary</strong> - with funeral details<br>
+      ✅ <strong>Family photos</strong> - from the dealerships (attached below)
+      
+      <br><br>
+      My family is going to be amazed - we went from "brick wall" to having his complete life story documented! Thank you all SO much. I'm compiling everything for the family reunion next month.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
+    <em>"From White Oak farm boy to Knoxville's automobile king - 102 years of the American dream."</em>
+    <br><br>
+    <strong>Thomas Richard Rains - January 20, 1902 to November 11, 2004</strong>
+  </div>
+</div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
