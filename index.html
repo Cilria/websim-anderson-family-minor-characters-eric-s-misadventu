@@ -1,326 +1,349 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas Richard Rains (1902-2004): 102-year-old Tennessee car dealer who built an empire from a used car lot : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1a;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f6f7f8;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background: #0079d3;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .subreddit-name {
+    color: #0079d3;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    color: #1a1a1a;
+    line-height: 1.3;
+  }
+  .post-meta {
+    color: #787c7e;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .post-content {
+    padding: 15px;
+    border-bottom: 1px solid #edeff1;
+  }
+  .comment {
+    padding: 12px 15px 12px 20px;
+    border-left: 2px solid #edeff1;
+    margin-left: 8px;
+  }
+  .comment-meta {
+    font-size: 12px;
+    color: #787c7e;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  .comment-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+  .comment-actions {
+    font-size: 12px;
+    color: #878a8c;
+  }
+  .score {
+    color: #1a1b1b;
+    font-weight: bold;
+  }
+  .flair {
+    background: #e9f5fd;
+    color: #0079d3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .flair-researcher {
+    background: #ff6b35;
+    color: #fff;
+  }
+  .flair-genealogy {
+    background: #8b0000;
+    color: #fff;
+  }
+  .flair-automotive {
+    background: #2e7d32;
+    color: #fff;
+  }
+  .flair-county {
+    background: #6a0dad;
+    color: #fff;
+  }
+  .flair-marriage {
+    background: #e91e63;
+    color: #fff;
+  }
+  .award {
+    color: #d4b572;
+    margin-right: 8px;
+  }
+  .thread-divider {
+    border-top: 1px solid #edeff1;
+    margin: 15px 0;
+  }
+  .document-image {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    border-radius: 4px;
+  }
+  .records-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .records-list li {
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .records-list li:last-child {
+    border-bottom: none;
+  }
+  .contract-box {
+    background: #f8f9fa;
+    padding: 12px;
+    border-left: 3px solid #0079d3;
+    font-family: 'Courier New', monospace;
+    margin: 8px 0;
+  }
+  .dealership-timeline {
+    background: #fff3cd;
+    padding: 12px;
+    border-left: 3px solid #ffc107;
+    margin: 8px 0;
+  }
+  .family-tree {
+    background: #e8f5e8;
+    padding: 12px;
+    border-left: 3px solid #4caf50;
+    margin: 8px 0;
+    font-family: 'Courier New', monospace;
+  }
+  .census-record {
+    background: #f3e5f5;
+    padding: 12px;
+    border-left: 3px solid #9c27b0;
+    margin: 8px 0;
+  }
+  .love-story {
+    background: #fff2e6;
+    padding: 12px;
+    border-left: 3px solid #ff9800;
+    margin: 8px 0;
+    font-style: italic;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Appalachian_Tracker</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>1.8k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Thomas Richard Rains (1902-2004): 102-year-old Tennessee car dealer who built an empire from a used car lot</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Tennessee</span>
-                    <span class="flair">Automotive History</span>
-                    <span class="flair">Business Records</span>
-                    <span class="flair">20th Century</span>
-                    <span>Posted by u/Appalachian_Tracker • 8 hours ago</span>
-                </div>
-
-                <p>I've been researching Thomas Richard Rains for months, and this might be my favorite find ever. Born January 20, 1902 in White Oak, Tennessee, he lived to be 102 years old and built a car dealership empire that spanned East Tennessee.</p>
-
-                <p><strong>The Early Years:</strong> His father Richard Port Rains was 65 when Thomas was born (late marriage - Richard was born 1837). Thomas's mother Annie Susan Brook died in 1911, leaving his father to raise 9 children alone. After his father's death in 1925, Thomas and his brother Frank left the family farm.</p>
-
-                <p><strong>The Business Empire:</strong> Started as plumbers in Oak Ridge (1925-1926), then transitioned to used car sales in Knoxville. By 1928, they were officially in the car business. Founded "Rains Brothers Automobile Co." in 1939. WWII made them rich - they were the only major used car dealership in East Knoxville during the war boom.</p>
-
-                <p><strong>Expansion & Legacy:</strong> After Frank left in 1946 to start his own Kentucky dealership, Thomas expanded to new cars (Hudson, Chrysler, Ford). By the 1950s, he had 4 dealerships across East Tennessee. His son Charles joined in 1955. The 1970s hit hard - he famously said about Chryslers: "Nobody wants to buy a fucking Chrysler anymore, used to sell about 20 of those, now I am lucky to sell one or two."</p>
-
-                <p><strong>Retirement & Death:</strong> Retired in 1977 at age 75. Spent his final 27 years writing for the Freemasons and Scottish Rite. Died November 11, 2004 at 102 years old.</p>
-
-                <p>My brick wall: I can't find any records of his dealerships after the 1950s. Did they close? Get sold? Change names? Also looking for any photos of the original Rains Brothers lot in East Knoxville. Anyone have Knoxville business directory access from the 1960s-1970s?</p>
-
-                <div class="comments-count">
-                    <a href="#">294 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="award">⭐</span>
-                    u/White_Oak_Genealogist • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>HOLY GRAIL FIND: Complete family tree including the story of how Thomas met his wife!</strong><br><br>
-
-                    <strong>The Siblings (all 9 of them!):</strong><br>
-                    1. <strong>John Thomas Rains</strong> (1870-1938) - Oldest, took over family farm, never married<br>
-                    2. <strong>Mary Elizabeth Rains</strong> (1872-1945) - Married a traveling salesman, moved to Texas<br>
-                    3. <strong>William Robert Rains</strong> (1874-1920) - Died in Spanish Flu, had 3 children<br>
-                    4. <strong>Sarah Margaret Rains</strong> (1876-1955) - School teacher, married local doctor<br>
-                    5. <strong>James Franklin Rains</strong> (1878-1951) - Business partner with Thomas, moved to Kentucky<br>
-                    6. <strong>Nancy Caroline Rains</strong> (1880-1967) - Married a minister, 8 children<br>
-                    7. <strong>Richard Edward Rains</strong> (1882-1944) - Railroad worker, died in accident<br>
-                    8. <strong>Thomas Richard Rains</strong> (1902-2004) - Our guy<br>
-                    9. <strong>Earl LeRoy Rains</strong> (1911-1988) - Youngest, became a plumber<br><br>
-
-                    <strong>The Parents & Ancestors:</strong><br>
-                    <strong>Richard Port Rains</strong> (1837-1925) - Father, Civil War vet (5th TN Cavalry, Union)<br>
-                    <strong>Annie Susan Brook</strong> (1868-1911) - Mother, died after childbirth<br><br>
-
-                    <strong>Richard's parents:</strong><br>
-                    <strong>Reuben Rains</strong> (1805-1870) - From Virginia, moved to TN 1825<br>
-                    <strong>Sarah Elizabeth Port</strong> (1809-1888) - From North Carolina<br><br>
-
-                    <strong>The How-He-Met-His-Wife Story (this is GOLD!):</strong><br>
-                    <strong>Mary Louise "Mae" Caldwell</strong> (1904-1988) was a telephone operator in Knoxville. Thomas met her in 1927 when he called to place an ad for his first used car lot. Here's the kicker - he was so nervous he accidentally gave her his car's VIN number instead of his phone number. She called him back saying "Sir, this is a car serial, not a phone number!" They talked for 20 minutes, she agreed to go on a date, and the rest is history. They married June 2, 1928. She was 24, he was 26.
-                </div>
-                <div class="comment-meta">u/Appalachian_Tracker • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is INCREDIBLE! The telephone operator story is perfect - I can totally picture young Thomas flustered on the phone. Do you have any photos of Mary Louise from that era? Also, I'm amazed at how much older Richard was - 65 when Thomas was born! That was some late-in-life parenting.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/White_Oak_Genealogist • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Richard was actually 62 when Thomas was born - he was born March 1837, Thomas born January 1902. Still incredibly late for that era! Richard's first wife died in 1897, he married Annie (who was 29 years younger) in 1898. Classic "old widower marries young woman" story of rural Tennessee. I have a photo of Mary Louise from their 1928 wedding - she's absolutely stunning, dark hair in the flapper style, gorgeous dress. Thomas looked like he'd won the lottery.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Rains_Descendant • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Thomas & Mary's children (I'm their great-granddaughter):</strong><br><br>
-
-                    <strong>Charles Thomas Rains</strong> (1929-2001) - Took over the Broadway dealership, had 4 children<br>
-                    <strong>Mary Louise Rains</strong> (1931-2015) - Became a teacher, married a lawyer<br>
-                    <strong>Thomas Richard Rains Jr.</strong> (1933-1999) - Worked in the car business, had 3 children<br>
-                    <strong>William Franklin "Bill" Rains</strong> (1935-living) - Became a banker in Nashville<br>
-                    <strong>Margaret Ann Rains</strong> (1937-living) - Married a doctor, moved to Florida<br>
-                    <strong>Robert Earl Rains</strong> (1940-2010) - Vietnam vet, worked for Ford Motor Company<br>
-                    <strong>Susan Mae Rains</strong> (1942-living) - Became a real estate agent<br>
-                    <strong>James David Rains</strong> (1945-living) - Still lives in Knoxville, retired teacher<br><br>
-
-                    Thomas has 23 grandchildren, 47 great-grandchildren, and as of last count, 14 great-great-grandchildren. The Rains family reunions are HUGE!
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Alabama_Genealogy • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Going back even further - the Rains family origins:</strong><br><br>
-
-                    <strong>Reuben Rains</strong> (1805-1870) was born in Halifax County, Virginia. His father was:<br>
-                    <strong>John Rains</strong> (1778-1845) - Revolutionary War veteran (Battle of Guilford Courthouse, NC)<br>
-                    <strong>Elizabeth Turner</strong> (1780-1855) - From a prominent Virginia family<br><br>
-
-                    <strong>John's father was:</strong><br>
-                    <strong>William Rains</strong> (1745-1820) - Immigrated from Northern Ireland 1765<br>
-                    <strong>Mary Elizabeth McDonald</strong> (1748-1815) - Scottish descent<br><br>
-
-                    So Thomas's family line: Northern Ireland → Virginia → Tennessee. The Rains name was originally "Raines" but changed during the Civil War era. Thomas was the 6th generation of Rains in America.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Telephone_Historian • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>The Mary Louise telephone operator story is even better:</strong> I found the actual 1927 Knoxville telephone directory. Mary Louise Caldwell was 23, worked at the Southern Bell Telephone office on Gay Street. The building had those old switchboards with cords. Thomas's first ad (which I found in the Knoxville Journal) was for "1 Used Ford Touring Car - $85 - Call Walnut 4-2237." When he called to place the ad, Mary Louise was working the business line. She told her roommate that night "I just talked to the sweetest, most nervous man about a car ad - and he asked me to dinner!" They ate at the Farragut Hotel restaurant. She said he spilled coffee on his tie he was so nervous.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Found my great-grandfather's 1920s gas station - still has the original pumps!</a></li>
-                <li><a href="#">Anyone have tips for tracking down old car dealership records?</a></li>
-                <li><a href="#">My ancestor owned a grocery store that became a Whole Foods - family still gets royalty checks</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post-content">
+    <div class="subreddit-name">r/Genealogy</div>
+    <h1 class="post-title">[UPDATE] Thomas Richard Rains - Found SO much more! Parents' ancestry, siblings' stories, how he met Mabel, and complete descendants</h1>
+    <div class="post-meta">
+      Posted by <span class="comment-author">u/TennesseeRoots</span> • 3 hours ago • 1.1k upvotes • 234 comments • 15 awards
     </div>
+    
+    <p>Yesterday's thread was incredible! Now I'm diving deeper - found the WHOLE family including how Thomas met his wife Mabel in the most hilarious way possible. This is getting wild!</p>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/HamiltonCountyArchives</span> <span class="flair flair-county">Hamilton Co. Clerk</span> • <span class="score">89.4k points</span> • 2 hours ago • <span class="award">🏆</span>
+    </div>
+    <div class="comment-text">
+      <strong>RICHARD PORT RAINS ANCESTRY - This is INSANE!</strong>
+      <br><br>
+      Richard Port Rains (1837-1925) was the son of:
+      <br>
+      <strong>William Rains (1809-1864) & Mary "Polly" Port (1811-1889)</strong>
+      
+      <div class="family-tree">
+        William Rains - 1809-1864
+        ├─ Born: Hawkins County, TN (then North Carolina territory)
+        ├─ Married: Mary Port in 1829
+        ├─ Died: Battle of Atlanta, July 22, 1864 (Confederate Army)
+        ├─ 1860 Census: Owned 2 slaves, 200 acres worth $800
+        └─ Children: 11 total, Richard was #7
+      </div>
+      
+      <strong>Mary Port's family:</strong> Her father was <strong>Captain James Port (1776-1845)</strong> - Revolutionary War veteran who fought at King's Mountain! He got 640 acres for his service. The "Port" in Richard's name came from this side.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/BrookFamilyGenealogist</span> <span class="flair flair-genealogy">Brook Family</span> • <span class="score">76.2k points</span> • 2 hours ago
+    </div>
+    <div class="comment-text">
+      <strong>ANNIE SUSAN BROOK'S LINE - Even CRAZIER!</strong>
+      <br><br>
+      Annie Susan Brook (1870-1911) descended from:
+      <br>
+      <strong>John Brook (1745-1820) & Sarah "Sally" Brook (1750-1830)</strong>
+      
+      <div class="census-record">
+        <strong>Revolutionary War Connection:</strong> John Brook fought with the Overmountain Men at King's Mountain alongside Captain James Port! The two families were neighbors in Hawkins County for 100+ years before intermarrying.
+        <br><br>
+        <strong>Migration Pattern:</strong>
+        <ul>
+          <li>1745: John Brook born in Virginia</li>
+          <li>1776: Fought at King's Mountain with Captain Port</li>
+          <li>1805: Moved to White Oak, Hamilton County</li>
+          <li>1870: Annie Susan born - 5th generation in same valley</li>
+        </ul>
+      </div>
+      
+      <strong>Fun fact:</strong> Thomas Rains' parents were from families who'd been neighbors for 100 years before they married in 1899!
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SiblingResearcher</span> <span class="flair flair-genealogy">Family Dynamics</span> • <span class="score">94.7k points</span> • 1 hour ago
+    </div>
+    <div class="comment-text">
+      <strong>THOMAS'S SIBLINGS - The Wild Stories!</strong>
+      <br><br>
+      
+      <div class="family-tree">
+        <strong>Richard & Annie had 8 children (6 surviving):</strong>
+        1. <strong>Mary Elizabeth Rains (1899-1978)</strong> - Married 3 times, moved to California during Dust Bowl, became a Rosie the Riveter in WWII
+        2. <strong>John William Rains (1900-1965)</strong> - Followed grandfather into Civil War reenactments, became "the last Confederate veteran" in Tennessee (pretended to be older!)
+        3. <strong>Thomas Richard Rains (1902-2004)</strong> - Our car dealer
+        4. <strong>Frank Edward Rains (1904-1987)</strong> - Thomas's business partner, later opened "Frank's Ford" in Louisville, KY
+        5. <strong>Robert Lee Rains (1906-1918)</strong> - Died of Spanish Flu at age 12
+        6. <strong>Josephine Mae Rains (1908-1995)</strong> - Became a nurse, served in WWII, never married, "Aunt Jo" to all the kids
+        7. <strong>Earl LeRoy Rains (1910-1989)</strong> - Youngest, was only 15 when Thomas started the dealership, became a traveling preacher
+        8. <strong>Unnamed infant (1911)</strong> - Died with mother Annie during childbirth
+      </div>
+      
+      <strong>Family drama:</strong> After Annie died, the older kids raised the younger ones. Thomas (age 9) and Frank (age 7) became inseparable - that's why they went into business together!
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/RomanceInKnoxville</span> <span class="flair flair-marriage">Love Stories</span> • <span class="score">156.8k points</span> • 1 hour ago • <span class="award">💕</span>
+    </div>
+    <div class="comment-text">
+      <strong>HOW THOMAS MET MABEL - The FUNNIEST story!</strong>
+      <br><br>
+      Found this in Mabel's diary and confirmed with newspaper clippings:
+      <br><br>
+      
+      <div class="love-story">
+        <strong>October 14, 1922 - Knoxville Street Fair</strong><br>
+        Thomas (age 20) was showing off his first car - a 1919 Model T he'd just bought for $75. Mabel Carter (age 19) was at the fair with her church group.
+        <br><br>
+        <strong>The accident:</strong> Thomas was trying to impress some guys by showing how fast his car could go in reverse. He accidentally backed INTO the church group's lemonade stand, soaking 6 girls in lemonade and destroying the stand!
+        <br><br>
+        <strong>Mabel's diary entry:</strong> "This crazy boy in a beat-up Ford just ruined our entire church fundraiser! But when he jumped out apologizing, he had the kindest eyes and promised to pay for everything. His name was Thomas Rains and he sold his pocket watch to pay for the damages."
+        <br><br>
+        <strong>Thomas's version (from a 1960 interview):</strong> "I backed into that lemonade stand trying to avoid a dog. Covered six pretty girls in sticky lemonade. The prettiest one - Mabel - was so mad she threw her shoe at me. Then she felt bad and helped me clean up. Been married 55 years since then!"
+      </div>
+      
+      They were married <strong>June 15, 1924</strong> - exactly 20 months after the lemonade stand incident!
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/DescendantsTracker</span> <span class="flair flair-genealogy">Family Tree</span> • <span class="score">67.3k points</span> • 45 minutes ago
+    </div>
+    <div class="comment-text">
+      <strong>COMPLETE DESCENDANT CHART - All living generations!</strong>
+      
+      <div class="family-tree">
+        <strong>Thomas Richard Rains (1902-2004) & Mabel Louise Carter (1903-1951)</strong>
+        ├─ <strong>Charles Thomas Rains (1929-2010)</strong>
+        │  ├─ Married Elizabeth "Betty" Johnson (1932-2018)
+        │  ├─ Thomas Charles Rains Jr. (1955-)
+        │  ├─ Michael Edward Rains (1957-)
+        │  ├─ Susan Mabel Rains (1960-)
+        │  └─ David Lee Rains (1962-)
+        ├─ <strong>Mary Louise Rains (1931-2015)</strong>
+        │  ├─ Married Robert Smith (1928-2003)
+        │  ├─ Robert "Bobby" Smith Jr. (1956-)
+        │  ├─ Linda Smith Johnson (1958-)
+        │  └─ Mark Thomas Smith (1961-)
+        └─ <strong>Thomas Richard Rains Jr. (1933-1999)</strong>
+           ├─ Married Patricia Wilson (1935-)
+           ├─ Thomas Richard Rains III (1958-)
+           ├─ Patricia Anne Rains (1960-)
+           └─ Michael James Rains (1963-)
+      </div>
+      
+      <strong>Current count:</strong> 3 children, 8 grandchildren, 15 great-grandchildren, 2 great-great-grandchildren (all living in Tennessee except one in Florida!)
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/OP_TennesseeRoots</span> • <span class="score">54.7k points</span> • 30 minutes ago
+    </div>
+    <div class="comment-text">
+      <strong>FULL FAMILY PICTURE NOW COMPLETE!</strong>
+      <br><br>
+      ✅ <strong>Ancestors:</strong> Traced back to Revolutionary War - both sides fought at King's Mountain!
+      <br>
+      ✅ <strong>Parents' story:</strong> 100-year neighbor families finally married
+      <br>
+      ✅ <strong>Siblings:</strong> All 8 children documented with wild stories
+      <br>
+      ✅ <strong>Love story:</strong> Lemonade stand accident → 55-year marriage 😂
+      <br>
+      ✅ <strong>Descendants:</strong> 28 total descendants across 5 generations
+      <br>
+      ✅ <strong>Living family:</strong> Found 2nd/3rd cousins I never knew existed!
+      <br><br>
+      
+      <strong>Next reunion:</strong> Planning to invite all the descendants to the old dealership location (now a Taco Bell, but hey - progress!)
+      
+      <br><br>
+      <em>From Revolutionary War veterans to lemonade stand romances to car dealerships - what a 200-year American family saga!</em>
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
+    <em>"From Revolutionary War battlefields to Tennessee lemonade stands - the complete Rains family saga spanning 200 years of American history."</em>
+    <br><br>
+    <strong>179 years of family history • 28 living descendants • One incredible story</strong>
+  </div>
+</div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
