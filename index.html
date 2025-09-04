@@ -3,220 +3,377 @@
 <head>
 <style>
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f6f7f8;
     margin: 0;
     padding: 20px;
   }
   .reddit-container {
     max-width: 740px;
     margin: 0 auto;
-    background-color: white;
+    background: white;
     border-radius: 4px;
     border: 1px solid #ccc;
   }
   .reddit-header {
-    background-color: #0079D3;
+    background: #0079d3;
     color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 16px;
   }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
+  .subreddit-name {
+    color: #0079d3;
+    font-weight: bold;
+    font-size: 14px;
   }
   .post-title {
     font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    color: #1a1a1a;
+    line-height: 1.3;
   }
   .post-meta {
+    color: #787c7e;
     font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
+ margin-bottom: 15px;
   }
   .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
+    padding: 15px;
+    border-bottom: 1px solid #edeff1;
   }
   .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
+    padding: 12px 15px 12px 20px;
+    border-left: 2px solid #edeff1;
+    margin-left: 8px;
   }
-  .comment-header {
+  .comment-meta {
     font-size: 12px;
-    color: #7C7C7C;
+    color: #787c7e;
     margin-bottom: 4px;
   }
   .comment-author {
     font-weight: bold;
-    color: #0079D3;
+    color: #1a1a1a;
   }
-  .comment-content {
+  .comment-text {
     font-size: 14px;
     line-height: 1.5;
-    color: #1A1A1B;
+    margin-bottom: 8px;
   }
-  .comment-score {
+  .comment-actions {
+    font-size: 12px;
+    color: #878a8c;
+  }
+  .score {
+    color: #1a1b1b;
     font-weight: bold;
-    color: #7C7C7C;
   }
   .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
+    background: #e9f5fd;
+    color: #0079d3;
     padding: 2px 6px;
     border-radius: 12px;
     font-size: 11px;
-    margin-left: 5px;
+    margin-left: 4px;
+  }
+  .flair-military {
+    background: #8B4513;
+    color: #fff;
+  }
+  .flair-genealogy {
+    background: #8b0000;
+    color: #fff;
+  }
+  .flair-radio {
+    background: #2E8B57;
+    color: #fff;
+  }
+  .flair-county {
+    background: #6a0dad;
+    color: #fff;
+  }
+  .award {
+    color: #d4b572;
+    margin-right: 8px;
+  }
+  .thread-divider {
+    border-top: 1px solid #edeff1;
+    margin: 15px 0;
+  }
+  .document-image {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    border-radius: 4px;
+  }
+  .records-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .records-list li {
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .records-list li:last-child {
+    border-bottom: none;
+  }
+  .contract-box {
+    background: #f8f9fa;
+    padding: 12px;
+    border-left: 3px solid #0079d3;
+    font-family: 'Courier New', monospace;
+    margin: 8px 0;
+  }
+  .timeline-box {
+    background: #fff3cd;
+    padding: 12px;
+    border-left: 3px solid #ffc107;
+    margin: 8px 0;
   }
 </style>
 </head>
 <body>
-
 <div class="reddit-container">
   <div class="reddit-header">
     r/Genealogy
   </div>
   
-  <div class="post">
-    <div class="post-title">Found my great-grandfather Howard Kenneth Howell Sr. (1895-1988) - WW1 vet to radio operator - died in bizarre semi-truck accident at 93!</div>
+  <div class="post-content">
+    <div class="subreddit-name">r/Genealogy</div>
+    <h1 class="post-title">[Brick Wall] Howard Kenneth Howell Sr. (1895-1988) - Lived to 93, worked radio operator for 50+ years, but missing military records and death details?</h1>
     <div class="post-meta">
-      <span class="comment-score">876 upvotes</span> • posted by <span class="comment-author">RadioHistoryBuff</span> <span class="flair">Oregon Roots</span>
+      Posted by <span class="comment-author">u/HowellFamilySearch</span> • 6 hours ago • 1.8k upvotes • 342 comments • 18 awards
     </div>
-    <div class="post-content">
-      <p>My great-grandfather Howard Kenneth Howell Sr. lived an incredible 93 years but I'm hitting walls on his military and radio career details. Here's what I've pieced together:</p>
+    
+    <p>I'm researching my great-grandfather Howard Howell who lived to be 93, but I'm hitting dead ends with official records. Here's what I know:</p>
+    
+    <ul>
+      <li><strong>Born:</strong> March 10, 1895 in Richland, Michigan</li>
+      <li><strong>Parents:</strong> Albert Kenneth Howell and Amanda Ann Kidd</li>
+      <li><strong>Family:</strong> Youngest son, 6 older brothers + 3 older sisters</li>
+      <li><strong>Military:</strong> Enlisted 1917 during WWI, served as Private</li>
+      <li><strong>Career:</strong> Radio operator for 50+ years, also worked advertising & real estate</li>
+      <li><strong>Death:</strong> March 22, 1988 - hit by semi-truck while walking to golf</li>
+      <li><strong>Location:</strong> Died in Seven Oaks, Oregon</li>
+    </ul>
+    
+    <p><strong>Missing:</strong> Military service records, exact death certificate details, and can't verify his radio operator career. Any help appreciated!</p>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/KalamazooCountyClerk</span> <span class="flair flair-county">Kalamazoo Co.</span> • <span class="score">94.7k points</span> • 4 hours ago • <span class="award">🏆</span>
+    </div>
+    <div class="comment-text">
+      Found his birth record! Howard Kenneth Howell Sr. was born March 10, 1895 in Richland Township, Kalamazoo County, Michigan. Here's the certified copy:
       
-      <ul>
-        <li>Born March 10, 1895 in Richland, MI - youngest son of Albert & Amanda Howell</li>
-        <li>Joined US Army 1917, served as Private in WW1</li>
-        <li>Post-war: Lansing MI (2 years), married there, then Medford OR</li>
-        <li>Worked as electrician, then became radio operator for LIFE</li>
-        <li>Also worked advertising + real estate agent on the side</li>
-        <li>Divorced 1955, remarried 1972 at age 77!</li>
-        <li>Died March 22, 1988 - hit by semi-truck walking to play golf at 93</li>
+      <div class="contract-box">
+        Certificate of Birth - Richland Township<br>
+        Name: Howard Kenneth Howell<br>
+        Born: March 10, 1895 at 2:30 AM<br>
+        Location: Richland Township, Kalamazoo County, Michigan<br>
+        Father: Albert Kenneth Howell, age 38, Farmer<br>
+        Mother: Amanda Ann Kidd Howell, age 36, Housewife<br>
+        Birth: 11th child, 9th living (2 died in infancy)<br>
+        Attended by: Dr. J.H. Wilson, Midwife Mrs. Sarah Kidd (maternal aunt)
+      </div>
+      
+      His father Albert was actually born in 1857 (not 1855 as family lore suggests) - he served in the Civil War - Company I, 6th Michigan Cavalry (Union). That's why he was older when Howard was born. His mother Amanda had 11 children total - 6 boys and 5 girls.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/WWIRecordsFinder</span> <span class="flair flair-military">Military Archives</span> • <span class="score">78.3k points</ • 3 hours ago
+    </div>
+    <div class="comment-text">
+      Found his complete WWI service record! Howard enlisted September 5, 1917 at Kalamazoo. Here's his entire military file:
+      
+      <div class="contract-box">
+        U.S. Army Service Record - World War I<br>
+        Name: Howard Kenneth Howell<br>
+        Enlisted: September 5, 1917 - Kalamazoo, Michigan<br>
+        Unit: Company B, 126th Infantry Regiment, 32nd Division<br>
+        Training: Camp Custer, Michigan (Sept-Oct 1917)<br>
+        Deployed: France - December 1917<br>
+        Battles: Aisne-Marne, Oise-Aisne, Meuse-Argonne Offensive<br>
+        Rank: Private → Private First Class (promoted March 1918)<br>
+        Injuries: None<br>
+        Discharged: April 1919 - Camp Custer<br>
+        Character: "Excellent" - served 20 months total
+      </div>
+      
+      He was part of the "Red Arrow" Division - saw heavy action in France. His discharge papers show he moved to Lansing immediately after discharge in April 1919.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/MichiganMarriageRecords</span> <span class="flair flair-county">Michigan Vital</span> • <span class="score">67.9k points</span> • 3 hours ago
+    </div>
+    <div class="comment-text">
+      Found his first marriage! Howard married <strong>Mabel Irene Thompson</strong> on June 15, 1919 in Lansing, Michigan:
+      
+      <div class="contract-box">
+        Marriage Certificate - Ingham County<br>
+        Howard Kenneth Howell (24) - Radio Operator<br>
+        Mabel Irene Thompson (22) - Telephone Operator<br>
+        Married: June 15, 1919 - Lansing, Michigan<br>
+        Witnesses: Frank E. Howell (brother), Ruth E. Thompson (sister)<br>
+        Moved to Oregon: August 1919 (2 months after marriage)
+      </div>
+      
+      They moved to Medford, Oregon in August 1919 where he started as an electrician at Rogue River Electric Co. Mabel was pregnant with their first child when they moved west.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/FCCDatabase</span> <span class="flair flair-radio">FCC Archives</span> • <span class="score">59.4k points</span> • 2 hours ago
+    </div>
+    <div class="comment-text">
+      Found his radio operator career! Howard was licensed as a commercial radio operator in 1920. Here's his complete career timeline:
+      
+      <div class="timeline-box">
+        <strong>1920-1925:</strong> Rogue River Electric Co. - Medford, OR (Electrician → Radio Operator)<br>
+        <strong>1925-1942:</strong> KFJI Radio - Medford, OR (Chief Radio Operator)<br>
+        <strong>1942-1955:</strong> KBOY Radio - Medford, OR (Station Manager)<br>
+        <strong>1955-1970:</strong> Self-employed - Real Estate + Advertising<br>
+        <strong>1970-1988:</strong> Part-time consultant, Ham radio operator
+      </div>
+      
+      His FCC license was W7HKS. He was known as "The Voice of the Rogue Valley" on air. His call sign was assigned in 1920 - one of the earliest in Oregon.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/OregonDivorceRecords</span> <span class="flair flair-county">Oregon Vital</span> • <span class="score">52.1k points</span> • 2 hours ago
+    </div>
+    <div class="comment-text">
+      Found his divorce! Howard and Mabel divorced January 15, 1955 in Medford:
+      
+      <div class="contract-box">
+        Divorce Decree - Jackson County, Oregon<br>
+        Howard K. Howell vs. Mabel I. Howell<br>
+        Filed: October 1954<br>
+        Divorce Granted: January 15, 1955<br>
+        Children: All adults by 1955 (Charles 36, Ruth 34, Robert 32)<br>
+        Property: Howard kept the house and business<br>
+        Mabel moved to Portland, remarried 1956
+      </div>
+      
+      Mabel had been unhappy for years - cited "irreconcilable differences" and his obsession with ham radio. She moved to Portland and married a lumber executive.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/SecondMarriageFinder</span> • <span class="score">47.8k points</span> • 2 hours ago
+    </div>
+    <div class="comment-text">
+      Found his second marriage! Howard married <strong>Dorothy Mae Harrison</strong> on March 18, 1972 in Medford:
+      
+      <div class="contract-box">
+        Marriage Certificate - Jackson County<br>
+        Howard Kenneth Howell Sr. (77) - Retired<br>
+        Dorothy Mae Harrison (65) - Widow<br>
+        Married: March 18, 1972 - Medford, Oregon<br>
+        Dorothy had 3 grown children from previous marriage<br>
+        Lived: 847 Hillcrest Drive, Medford
+      </div>
+      
+      Dorothy was a widow whose husband had owned a hardware store. They met at a senior citizens dance. She outlived Howard by 12 years.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/OregonDeathCertificates</span> <span class="flair flair-county">Oregon Vital</span> • <span class="score">43.2k points</span> • 1 hour ago
+    </div>
+    <div class="comment-text">
+      Found his death certificate! Howard died March 22, 1988 - here's the complete record:
+      
+      <div class="contract-box">
+        Certificate of Death - State of Oregon<br>
+        Howard Kenneth Howell Sr.<br>
+        Died: March 22, 1988 at 7:45 AM<br>
+        Location: Highway 62, 1 mile south of Seven Oaks, Oregon<br>
+        Cause: Multiple traumatic injuries - pedestrian vs. semi-truck<br>
+        Age: 93 years, 12 days<br>
+        Occupation: Retired Radio Broadcasting Executive<br>
+        Residence: 847 Hillcrest Drive, Medford, OR<br>
+        Burial: Hillcrest Memorial Park, Medford<br>
+        Witnesses: Semi-truck driver stated "elderly man walked into road suddenly"
+      </div>
+      
+      He was walking to the Seven Oaks Golf Course for his regular Tuesday morning tee time. The driver was cleared of wrongdoing - it was ruled accidental.
+    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/HowellFamilyDescendant</span> • <span class="score">39.7k points</span> • 1 hour ago
+    </div>
+    <div class="comment-text">
+      I'm Howard's great-grandson! Here are some family details that aren't in official records:
+      
+      <ul class="records-list">
+        <li><strong>Children with Mabel:</strong>
+          <ul>
+            <li>Charles Kenneth Howell (1919-1995) - took over radio business</li>
+            <li>Ruth Irene Howell (1921-2003) - school teacher</li>
+            <li>Robert Albert Howell (1923-1998) - Air Force</li>
+          </ul>
+        </li>
+        <li><strong>Fun fact:</strong> He built his first radio from parts in 1919</li>
+        <li><strong>Ham radio:</strong> His call sign W7HKS was active until his death</li>
+        <li><strong>Golf:</strong> Played 3 times a week until age 92</li>
       </ul>
       
-      <p>Looking for ANYTHING on his military unit, radio stations he worked for, or details about that crazy truck accident in Seven Oaks, OR!</p>
+      The golf course named a tournament after him - "The Howell Scramble" still runs annually!
     </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
   </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MilitaryArchivist</span> • <span class="comment-score">342 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p>HOLY SHIT - found his complete WW1 service record! Howard Kenneth Howell enlisted May 15, 1917 at Fort Wayne, Detroit. Serial #1,847,293. He was assigned to Company B, 125th Infantry Regiment, 32nd Division - the "Red Arrow Division" from Michigan!</p>
-        
-        <p>Here's the incredible part - he fought in the Meuse-Argonne Offensive, the largest battle in US military history. Wounded by shrapnel in the left shoulder on October 8, 1918 near Côte de Châtillon. Spent 6 weeks in field hospital, then got his Purple Heart and honorable discharge March 4, 1919 at Camp Custer.</p>
-        
-        <p>His military headstone application lists his occupation as "radio operator" even in 1919 - suggests he learned wireless telegraphy IN THE ARMY during the war!</p>
-      </div>
+
+  <div class="comment">
+    <div class="comment-meta">
+      <span class="comment-author">u/OP_HowellFamilySearch</span> • <span class="score">35.4k points</span> • 45 minutes ago
+    </div>
+    <div class="comment-text">
+      UPDATE: This is amazing! I now have:
+      <br><br>
+      ✅ <strong>Official birth certificate</strong> - March 10, 1895, Richland, MI<br>
+      ✅ <strong>Complete WWI service</strong> - 126th Infantry, saw action in France<br>
+      ✅ <strong>First marriage</strong> - June 1919, Mabel Thompson<br>
+      ✅ <strong>FCC radio license</strong> - W7HKS, "Voice of Rogue Valley"<br>
+      ✅ <strong>Divorce papers</strong> - January 1955, Mabel moved to Portland<br>
+      ✅ <strong>Second marriage</strong> - March 1972, Dorothy Harrison<br>
+      ✅ <strong>Death certificate</strong> - March 1988, pedestrian accident<br>
+      ✅ <strong>Complete obituary</strong> - with funeral details<br>
+      ✅ <strong>Family photos</strong> - from radio station days
       
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">MedfordRadio</span> • <span class="comment-score">298 points</span> • 5 hours ago
-        </div>
-        <div class="comment-content">
-          <p>Found his radio career! Howard started as a wireless operator for KFJI radio in Medford in 1922 - this was one of the FIRST radio stations in Oregon, started by the Mail Tribune newspaper. He was employee #4!</p>
-          
-          <p>1925-1932: Chief operator at KFJI, earning $35/week. His call sign was "W7HH" - he used this personally for ham radio operation his entire life. I found QSL cards (confirmation cards) from 1928 showing contacts as far as New Zealand!</p>
-          
-          <p>1932-1955: Moved to KBOY radio in Medford as chief engineer. Here's the wild part - during WWII he was the designated Civil Defense radio operator for all of Jackson County. His station was the emergency broadcast point if Japan invaded the West Coast!</p>
-          
-          <p>Post-1955: Freelance radio consultant + advertising salesman for local businesses. He helped dozens of Oregon radio stations get their start, including KDOV in Grants Pass and KTMT in Ashland.</p>
-        </div>
-      </div>
+      <br><br>
+      My family is going to be thrilled - we went from "brick wall" to having his complete life story! I'm creating a family history book. Thank you all SO much!
     </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">RichlandGenealogy</span> • <span class="comment-score">234 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found the Howell family farm! Albert Kenneth Howell owned 120 acres on Richland Road (now M-89), purchased in 1887 for $1,200. The 1900 census shows they had 8 kids: 6 boys (Howard was #6) and 3 girls.</p>
-        
-        <p>Albert was NOT just a farmer - he was a prosperous businessman who owned the Richland General Store AND the local sawmill. The family was considered "well off" - they had a telephone in 1901, the first in Richland!</p>
-        
-        <p>Howard's mother Amanda Ann Kidd came from a prominent family - her father was a circuit court judge in Kalamazoo County. She died in 1918 of the Spanish Flu while Howard was overseas. The family got the telegram about her death while he was recovering from his shrapnel wound.</p>
-        
-        <p>All 6 Howell brothers served in WW1 - they were known locally as "The Fighting Howells." Only Howard was wounded. The oldest brother, William, died in the 1918 flu pandemic while Howard was overseas.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">OregonAccidentReports</span> • <span class="comment-score">187 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found the police report on his death! March 22, 1988, 2:47 PM - Howard was crossing Highway 62 in Seven Oaks, OR (near Bend) to get to the Seven Oaks Golf Course. He was wearing his "lucky golf sweater" - yellow with green stripes.</p>
-        
-        <p>The semi-truck was a 1979 Kenworth hauling lumber to Bend. Driver was Lawrence J. Morrison, age 34. Howard apparently stepped out from between two parked cars into the truck's path. The driver tried to brake but couldn't stop in time.</p>
-        
-        <p>Here's the incredibly sad detail - Howard was carrying his golf clubs and a ham sandwich in a brown paper bag (his wife always packed him lunch). He died instantly from blunt force trauma. The police report notes he had $47.38 in his wallet and a card identifying him as a member of the "Central Oregon Retired Radio Operators Club."</p>
-        
-        <p>He was 2 days past his 93rd birthday. The golf course had waived his greens fees as a birthday gift. His second wife, Dorothy (married 1972), died just 6 months later.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">LansingMarriage</span> • <span class="comment-score">156 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found his first marriage! Howard married Hazel Irene McDonald on June 12, 1919 at the First Presbyterian Church in Lansing, MI. She was 19, he was 24. They had 2 children: Kenneth Albert Howell (born 1920) and Dorothy Mae Howell (born 1922).</p>
-        
-        <p>The divorce in 1955 was filed March 15 - grounds were "extreme cruelty and desertion." Court records show Hazel got the house in Medford, Howard got the radio equipment and his ham radio license. The divorce was bitter - he had to pay $75/month alimony.</p>
-        
-        <p>His second marriage was shocking - Dorothy Louise Peterson, age 52 to his 77! They married September 16, 1972 at the Bend Methodist Church. She was a widow whose husband had died in 1969. They had no children together.</p>
-        
-        <p>Real estate records show he made a killing in Bend real estate - bought 5 acres in 1962 for $3,500, sold in 1986 for $47,000. Used the money to buy a condo in Seven Oaks where he lived his final years.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">HamRadioArchives</span> • <span class="comment-score">134 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found his ham radio logs! Howard was W7HH from 1923 until his death in 1988 - that's 65 years with the same call sign. His logs show he made over 15,000 confirmed contacts worldwide.</p>
-        
-        <p>Some incredible contacts:
-        <ul>
-          <li>1935: First Oregon contact with Antarctica (Navy base operator)</li>
-          <li>1941: Emergency traffic during Pearl Harbor attack</li>
-          <li>1957: Contact with Sputnik tracking station in Russia</li>
-          <li>1969: Relayed Apollo 11 moon landing traffic</li>
-        </ul>
-        
-        <p>His radio shack was legendary - had over 200 tubes, 3 transmitters, and could reach anywhere in the world. After retirement, he spent 6-8 hours daily on the air. His obituary in QST magazine (ham radio publication) called him "the voice of amateur radio in Oregon."</p>
-        
-        <p>The Central Oregon Retired Radio Operators Club still holds an annual "Howard Howell Memorial Net" on the frequency he used most: 3.920 MHz.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">RadioHistoryBuff</span> • <span class="comment-score">98 points</span> • 1 hour ago
-      </div>
-      <div class="comment-content">
-        <p>This is absolutely INCREDIBLE! I had no idea about his military unit or that he was wounded in the Meuse-Argonne - family lore just said "he served" but never mentioned combat. The radio career details are mind-blowing - 15,000+ contacts including Sputnik!</p>
-        
-        <p>The accident details are heartbreaking but also somehow fitting - died walking to his favorite golf course at 93. My grandfather (his son Kenneth) is going to be stunned by all this.</p>
-        
-        <p>I'm planning a trip to Bend next month to visit his grave and maybe find some of his radio buddies who might still be alive. Thank you all for giving me the complete picture of this amazing man's life!</p>
-      </div>
-    </div>
+    <div class="comment-actions">Reply • Give Award • Share • Report</div>
+  </div>
+
+  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
+    <em>"From Michigan farm boy to Oregon radio pioneer - 93 years of innovation and resilience."</em>
+    <br><br>
+    <strong>Howard Kenneth Howell Sr. - March 10, 1895 to March 22, 1988</strong>
   </div>
 </div>
-
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
