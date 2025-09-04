@@ -1,337 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Howard Kenneth Howell Sr. (1895-1988): 93-year-old radio operator killed by semi while walking to golf course : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1a;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Michigan_Radio_Detective</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>1.3k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Howard Kenneth Howell Sr. (1895-1988): 93-year-old radio operator killed by semi while walking to golf course</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Michigan</span>
-                    <span class="flair">Oregon</span>
-                    <span class="flair">WWI</span>
-                    <span class="flair">Radio History</span>
-                    <span class="flair">Real Estate</span>
-                    <span>Posted by u/Michigan_Radio_Detective • 6 hours ago</span>
-                </div>
-
-                <p>This might be the most unusual death I've found in 15 years of genealogy research. Howard Kenneth Howell Sr. lived to be 93 years old, survived WWI, had multiple careers, two marriages... and then got hit by a semi-truck while walking to play golf.</p>
-
-                <p><strong>The Michigan Years:</strong> Born March 10, 1895 in Richland, Michigan to Albert Kenneth Howell and Amanda Ann Kidd. Youngest son of 10 children (6 brothers, 3 sisters). Enlisted May 15, 1917 as Private, served stateside during WWI. After discharge, moved to Lansing where he married his first wife in 1919.</p>
-
-                <p><strong>The Career Changes:</strong> Left Lansing after 2 years, moved to Medford, Oregon. Started as electrician (1921-1923), then became radio operator for the rest of his life. Worked in advertising and real estate on the side. His radio operator license (issued 1923) shows he operated station KDOV in Medford - one of the earliest stations in Southern Oregon.</p>
-
-                <p><strong>Personal Life:</strong> Divorced first wife in 1955 after 36 years of marriage. Remarried in 1972 at age 77. Died March 22, 1988 - 12 days after his 93rd birthday - when he was struck by a semi-truck while walking to the Rogue Valley Country Club for his regular Tuesday golf game.</p>
-
-                <p>My brick wall: I can't find his WWI service records beyond basic enlistment. Also looking for any recordings or photos from his radio days at KDOV. The station changed call letters in 1956. Anyone have access to early Oregon radio archives?</p>
-
-                <div class="comments-count">
-                    <a href="#">178 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/National_Archives_Military • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his complete WWI service record!</strong> Howard K. Howell enlisted May 15, 1917 at Fort Custer, Michigan. Serial #1,847,291. Assigned to Company B, 125th Infantry Regiment, 32nd Division. Never served overseas - the Armistice was signed while his unit was still training at Camp MacArthur, Texas. Discharged February 25, 1919 at Camp Custer. His records show "excellent character" and list his civilian occupation as "electrician apprentice" - which explains the career transition.
-                </div>
-                <div class="comment-meta">u/Michigan_Radio_Detective • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is perfect! The 32nd Division explains why he stayed stateside - they were the last division to ship out before the Armistice. The "electrician apprentice" detail is gold - he was already learning the trade that would become his first career.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Oregon_Radio_Historian • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found KDOV records!</strong> KDOV was licensed to Southern Oregon Broadcasting Co. Howard Howell was their chief radio operator from 1923-1956. Station operated at 1040 kHz with 500 watts. I have a 1928 station log showing he broadcast weather reports at 6:45 AM and 6:45 PM daily. The station changed call letters to KCMX in 1956 after being sold to California-Oregon Broadcasting. Howard stayed on as operator until 1965, then did freelance real estate ads until retirement.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Michigan_Census_Wizard • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the complete Richland family:</strong> Albert Kenneth Howell (1855-1937) and Amanda Ann Kidd (1857-1939) had 10 children total. Howard was indeed the youngest son, second youngest child:<br>
-                    1. William Albert Howell (1881-1945)<br>
-                    2. Charles Edgar Howell (1883-1956)<br>
-                    3. Frederick James Howell (1885-1920)<br>
-                    4. George Thomas Howell (1887-1955)<br>
-                    5. Henry Robert Howell (1889-1967)<br>
-                    6. Frank Edward Howell (1891-1978)<br>
-                    7. Mary Elizabeth Howell (1892-1981)<br>
-                    8. Sarah Jane Howell (1893-1972)<br>
-                    9. Howard Kenneth Howell (1895-1988)<br>
-                    10. Emma Louise Howell (1897-1999) - youngest, outlived them all
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Oregon_Newspaper_Archive • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the accident report:</strong> March 22, 1988, 8:47 AM. Howard was crossing Highway 62 at the intersection with Stewart Avenue, walking to Rogue Valley Country Club for his Tuesday golf group. Witnesses say he looked left, saw the semi coming, but misjudged the speed and stepped into the crosswalk anyway. Driver was 34-year-old trucker named Michael Ramirez, no charges filed. Howard was pronounced dead at Rogue Valley Medical Center at 9:12 AM. The irony: he was wearing his favorite golf cap and carrying a bag with "Radio Operator Howard" embroidered on it.
-                </div>
-                <div class="comment-meta">u/Michigan_Radio_Detective • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        That detail about the golf cap and radio operator bag... that's so perfectly Howard. He never stopped being proud of his radio career, even at 93. Thank you for finding these details.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Marriage_Records_MA • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found both marriages:</strong><br>
-                    <strong>First marriage:</strong> February 14, 1919 to Mary Elizabeth "Mae" Thompson (1900-1975) in Lansing, Michigan. They had 3 children: Kenneth Jr. (1920-1995), Dorothy (1922-2008), and Robert (1924-2001).<br>
-                    <strong>Second marriage:</strong> June 15, 1972 to Helen Louise Morrison (1910-1995) in Medford, Oregon. She was a widow whose first husband had been a fellow radio operator. They were married by a Presbyterian minister at the Rogue Valley Country Club - the same place he would later die walking to.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Radio_License_Database • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his radio operator photos!</strong> From the 1943 KDOV staff photo - Howard is third from left, wearing a bow tie and headphones. Station manager wrote on the back: "Howard Howell - our best operator. Can send Morse code faster than anyone in Southern Oregon." Also found a 1951 newspaper article about him doing live remote broadcasts from the county fair - photo shows him with a portable transmitter the size of a suitcase.
-                </div>
-                <div class="comment-meta">u/Michigan_Radio_Detective • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        These photos are incredible! The bow tie and headphones - exactly how I'd picture a 1940s radio operator. And that portable transmitter detail... that was cutting edge technology for 1951. Howard was clearly ahead of his time.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Real_Estate_Records_OR • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his real estate career:</strong> Howard got his real estate license in 1946 (age 51) specializing in rural properties. Worked mostly radio ads for real estate - he'd broadcast property listings during his weather reports. Was quite successful - bought 40 acres outside Medford in 1948 for $8,000, sold it in 1978 for $145,000. The property is now a subdivision called "Howell Heights" - named after him when the developer learned he'd owned the original farm.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Golf_Course_Records • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his golf group:</strong> Howard played golf every Tuesday and Thursday at Rogue Valley Country Club from 1970-1988. The "Radio Operators" golf group - mostly old radio guys. They had a tradition of playing the back 9 first because Howard said "that's how radio works - you start with the back end and work forward." After his death, they renamed their Tuesday group "The Howell Memorial" and still play at 8:30 AM, the time he always walked to the course.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Found my great-grandfather's 1920s radio station - still has the original tubes!</a></li>
-                <li><a href="#">Anyone have tips for tracking down old radio operator licenses?</a></li>
-                <li><a href="#">My ancestor died on his 100th birthday - fell off a ladder decorating for his party</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Found my great-grandfather Howard Kenneth Howell Sr. (1895-1988) - WW1 vet to radio operator - died in bizarre semi-truck accident at 93!</div>
+    <div class="post-meta">
+      <span class="comment-score">876 upvotes</span> • posted by <span class="comment-author">RadioHistoryBuff</span> <span class="flair">Oregon Roots</span>
     </div>
+    <div class="post-content">
+      <p>My great-grandfather Howard Kenneth Howell Sr. lived an incredible 93 years but I'm hitting walls on his military and radio career details. Here's what I've pieced together:</p>
+      
+      <ul>
+        <li>Born March 10, 1895 in Richland, MI - youngest son of Albert & Amanda Howell</li>
+        <li>Joined US Army 1917, served as Private in WW1</li>
+        <li>Post-war: Lansing MI (2 years), married there, then Medford OR</li>
+        <li>Worked as electrician, then became radio operator for LIFE</li>
+        <li>Also worked advertising + real estate agent on the side</li>
+        <li>Divorced 1955, remarried 1972 at age 77!</li>
+        <li>Died March 22, 1988 - hit by semi-truck walking to play golf at 93</li>
+      </ul>
+      
+      <p>Looking for ANYTHING on his military unit, radio stations he worked for, or details about that crazy truck accident in Seven Oaks, OR!</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MilitaryArchivist</span> • <span class="comment-score">342 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p>HOLY SHIT - found his complete WW1 service record! Howard Kenneth Howell enlisted May 15, 1917 at Fort Wayne, Detroit. Serial #1,847,293. He was assigned to Company B, 125th Infantry Regiment, 32nd Division - the "Red Arrow Division" from Michigan!</p>
+        
+        <p>Here's the incredible part - he fought in the Meuse-Argonne Offensive, the largest battle in US military history. Wounded by shrapnel in the left shoulder on October 8, 1918 near Côte de Châtillon. Spent 6 weeks in field hospital, then got his Purple Heart and honorable discharge March 4, 1919 at Camp Custer.</p>
+        
+        <p>His military headstone application lists his occupation as "radio operator" even in 1919 - suggests he learned wireless telegraphy IN THE ARMY during the war!</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">MedfordRadio</span> • <span class="comment-score">298 points</span> • 5 hours ago
+        </div>
+        <div class="comment-content">
+          <p>Found his radio career! Howard started as a wireless operator for KFJI radio in Medford in 1922 - this was one of the FIRST radio stations in Oregon, started by the Mail Tribune newspaper. He was employee #4!</p>
+          
+          <p>1925-1932: Chief operator at KFJI, earning $35/week. His call sign was "W7HH" - he used this personally for ham radio operation his entire life. I found QSL cards (confirmation cards) from 1928 showing contacts as far as New Zealand!</p>
+          
+          <p>1932-1955: Moved to KBOY radio in Medford as chief engineer. Here's the wild part - during WWII he was the designated Civil Defense radio operator for all of Jackson County. His station was the emergency broadcast point if Japan invaded the West Coast!</p>
+          
+          <p>Post-1955: Freelance radio consultant + advertising salesman for local businesses. He helped dozens of Oregon radio stations get their start, including KDOV in Grants Pass and KTMT in Ashland.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">RichlandGenealogy</span> • <span class="comment-score">234 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found the Howell family farm! Albert Kenneth Howell owned 120 acres on Richland Road (now M-89), purchased in 1887 for $1,200. The 1900 census shows they had 8 kids: 6 boys (Howard was #6) and 3 girls.</p>
+        
+        <p>Albert was NOT just a farmer - he was a prosperous businessman who owned the Richland General Store AND the local sawmill. The family was considered "well off" - they had a telephone in 1901, the first in Richland!</p>
+        
+        <p>Howard's mother Amanda Ann Kidd came from a prominent family - her father was a circuit court judge in Kalamazoo County. She died in 1918 of the Spanish Flu while Howard was overseas. The family got the telegram about her death while he was recovering from his shrapnel wound.</p>
+        
+        <p>All 6 Howell brothers served in WW1 - they were known locally as "The Fighting Howells." Only Howard was wounded. The oldest brother, William, died in the 1918 flu pandemic while Howard was overseas.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">OregonAccidentReports</span> • <span class="comment-score">187 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found the police report on his death! March 22, 1988, 2:47 PM - Howard was crossing Highway 62 in Seven Oaks, OR (near Bend) to get to the Seven Oaks Golf Course. He was wearing his "lucky golf sweater" - yellow with green stripes.</p>
+        
+        <p>The semi-truck was a 1979 Kenworth hauling lumber to Bend. Driver was Lawrence J. Morrison, age 34. Howard apparently stepped out from between two parked cars into the truck's path. The driver tried to brake but couldn't stop in time.</p>
+        
+        <p>Here's the incredibly sad detail - Howard was carrying his golf clubs and a ham sandwich in a brown paper bag (his wife always packed him lunch). He died instantly from blunt force trauma. The police report notes he had $47.38 in his wallet and a card identifying him as a member of the "Central Oregon Retired Radio Operators Club."</p>
+        
+        <p>He was 2 days past his 93rd birthday. The golf course had waived his greens fees as a birthday gift. His second wife, Dorothy (married 1972), died just 6 months later.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LansingMarriage</span> • <span class="comment-score">156 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found his first marriage! Howard married Hazel Irene McDonald on June 12, 1919 at the First Presbyterian Church in Lansing, MI. She was 19, he was 24. They had 2 children: Kenneth Albert Howell (born 1920) and Dorothy Mae Howell (born 1922).</p>
+        
+        <p>The divorce in 1955 was filed March 15 - grounds were "extreme cruelty and desertion." Court records show Hazel got the house in Medford, Howard got the radio equipment and his ham radio license. The divorce was bitter - he had to pay $75/month alimony.</p>
+        
+        <p>His second marriage was shocking - Dorothy Louise Peterson, age 52 to his 77! They married September 16, 1972 at the Bend Methodist Church. She was a widow whose husband had died in 1969. They had no children together.</p>
+        
+        <p>Real estate records show he made a killing in Bend real estate - bought 5 acres in 1962 for $3,500, sold in 1986 for $47,000. Used the money to buy a condo in Seven Oaks where he lived his final years.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">HamRadioArchives</span> • <span class="comment-score">134 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found his ham radio logs! Howard was W7HH from 1923 until his death in 1988 - that's 65 years with the same call sign. His logs show he made over 15,000 confirmed contacts worldwide.</p>
+        
+        <p>Some incredible contacts:
+        <ul>
+          <li>1935: First Oregon contact with Antarctica (Navy base operator)</li>
+          <li>1941: Emergency traffic during Pearl Harbor attack</li>
+          <li>1957: Contact with Sputnik tracking station in Russia</li>
+          <li>1969: Relayed Apollo 11 moon landing traffic</li>
+        </ul>
+        
+        <p>His radio shack was legendary - had over 200 tubes, 3 transmitters, and could reach anywhere in the world. After retirement, he spent 6-8 hours daily on the air. His obituary in QST magazine (ham radio publication) called him "the voice of amateur radio in Oregon."</p>
+        
+        <p>The Central Oregon Retired Radio Operators Club still holds an annual "Howard Howell Memorial Net" on the frequency he used most: 3.920 MHz.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">RadioHistoryBuff</span> • <span class="comment-score">98 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>This is absolutely INCREDIBLE! I had no idea about his military unit or that he was wounded in the Meuse-Argonne - family lore just said "he served" but never mentioned combat. The radio career details are mind-blowing - 15,000+ contacts including Sputnik!</p>
+        
+        <p>The accident details are heartbreaking but also somehow fitting - died walking to his favorite golf course at 93. My grandfather (his son Kenneth) is going to be stunned by all this.</p>
+        
+        <p>I'm planning a trip to Bend next month to visit his grave and maybe find some of his radio buddies who might still be alive. Thank you all for giving me the complete picture of this amazing man's life!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
