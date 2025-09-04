@@ -4,374 +4,212 @@
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 20px;
+    color: #333;
   }
-  .reddit-container {
-    max-width: 740px;
+  .forum-container {
+    max-width: 1000px;
     margin: 0 auto;
-    background: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
-  .reddit-header {
-    background: #0079d3;
+  .forum-header {
+    background: #0066cc;
     color: white;
-    padding: 12px 20px;
+    padding: 15px 20px;
+    font-size: 18px;
     font-weight: bold;
-    font-size: 16px;
   }
-  .subreddit-name {
-    color: #0079d3;
+  .thread-container {
+    padding: 20px;
+  }
+  .thread-title {
+    font-size: 24px;
     font-weight: bold;
-    font-size: 14px;
+    color: #0066cc;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 5px;
   }
-  .post-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
-  }
-  .post-meta {
-    color: #787c7e;
-    font-size: 12px;
- margin-bottom: 15px;
+  .thread-meta {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
   }
   .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
-  }
-  .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
-  }
-  .comment-meta {
-    font-size: 12px;
-    color: #787c7e;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #1a1a1a;
-  }
-  .comment-text {
     font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 8px;
+    line-height: 1.6;
+    margin-bottom: 20px;
   }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1b1b;
-    font-weight: bold;
-  }
-  .flair {
-    background: #e9f5fd;
-    color: #0079d3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-military {
-    background: #8B4513;
-    color: #fff;
-  }
-  .flair-genealogy {
-    background: #8b0000;
-    color: #fff;
-  }
-  .flair-radio {
-    background: #2E8B57;
-    color: #fff;
-  }
-  .flair-county {
-    background: #6a0dad;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-  .thread-divider {
-    border-top: 1px solid #edeff1;
+  .post-signature {
+    font-style: italic;
+    color: #666;
+    border-left: 3px solid #0066cc;
+    padding-left: 10px;
     margin: 15px 0;
   }
-  .document-image {
-    max-width: 100%;
-    border: 1px solid #ddd;
+  .post-info {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 3px;
     margin: 10px 0;
-    border-radius: 4px;
+    font-size: 13px;
   }
-  .records-list {
-    list-style-type: none;
-    padding-left: 0;
+  .member-info {
+    background: #e8f4f8;
+    padding: 12px;
+    border-left: 4px solid #0066cc;
+    margin: 15px 0;
   }
-  .records-list li {
-    padding: 4px 0;
+  .quote-box {
+    background: #f5f5f5;
+    padding: 10px 15px;
+    border-left: 3px solid #999;
+    margin: 15px 0;
+    font-style: italic;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  .stat-box {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+  }
+  .timeline-item {
+    padding: 8px 0;
     border-bottom: 1px solid #eee;
   }
-  .records-list li:last-child {
+  .timeline-item:last-child {
     border-bottom: none;
   }
-  .contract-box {
-    background: #f8f9fa;
-    padding: 12px;
-    border-left: 3px solid #0079d3;
-    font-family: 'Courier New', monospace;
-    margin: 8px 0;
-  }
-  .timeline-box {
+  .highlight {
     background: #fff3cd;
-    padding: 12px;
-    border-left: 3px solid #ffc107;
-    margin: 8px 0;
+    padding: 2px 4px;
+    border-radius: 2px;
   }
 </style>
 </head>
 <body>
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
+<div class="forum-container">
+  <div class="forum-header">
+    The 110 Club - Supercentenarian Tracking Forum
   </div>
   
-  <div class="post-content">
-    <div class="subreddit-name">r/Genealogy</div>
-    <h1 class="post-title">[Brick Wall] Howard Kenneth Howell Sr. (1895-1988) - Lived to 93, worked radio operator for 50+ years, but missing military records and death details?</h1>
-    <div class="post-meta">
-      Posted by <span class="comment-author">u/HowellFamilySearch</span> • 6 hours ago • 1.8k upvotes • 342 comments • 18 awards
+  <div class="thread-container">
+    <div class="thread-title">
+      Dr. Robert "Bob" Charles Habib - New Validation Case (b. July 10, 1914)
     </div>
     
-    <p>I'm researching my great-grandfather Howard Howell who lived to be 93, but I'm hitting dead ends with official records. Here's what I know:</p>
-    
-    <ul>
-      <li><strong>Born:</strong> March 10, 1895 in Richland, Michigan</li>
-      <li><strong>Parents:</strong> Albert Kenneth Howell and Amanda Ann Kidd</li>
-      <li><strong>Family:</strong> Youngest son, 6 older brothers + 3 older sisters</li>
-      <li><strong>Military:</strong> Enlisted 1917 during WWI, served as Private</li>
-      <li><strong>Career:</strong> Radio operator for 50+ years, also worked advertising & real estate</li>
-      <li><strong>Death:</strong> March 22, 1988 - hit by semi-truck while walking to golf</li>
-      <li><strong>Location:</strong> Died in Seven Oaks, Oregon</li>
-    </ul>
-    
-    <p><strong>Missing:</strong> Military service records, exact death certificate details, and can't verify his radio operator career. Any help appreciated!</p>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/KalamazooCountyClerk</span> <span class="flair flair-county">Kalamazoo Co.</span> • <span class="score">94.7k points</span> • 4 hours ago • <span class="award">🏆</span>
+    <div class="thread-meta">
+      <strong>Active Member</strong> • <strong>LongevityResearcher</strong> • 
+      Started <strong>December 15, 2024</strong> • 
+      Views: <strong>3,247</strong> • 
+      Replies: <strong>23</strong>
     </div>
-    <div class="comment-text">
-      Found his birth record! Howard Kenneth Howell Sr. was born March 10, 1895 in Richland Township, Kalamazoo County, Michigan. Here's the certified copy:
-      
-      <div class="contract-box">
-        Certificate of Birth - Richland Township<br>
-        Name: Howard Kenneth Howell<br>
-        Born: March 10, 1895 at 2:30 AM<br>
-        Location: Richland Township, Kalamazoo County, Michigan<br>
-        Father: Albert Kenneth Howell, age 38, Farmer<br>
-        Mother: Amanda Ann Kidd Howell, age 36, Housewife<br>
-        Birth: 11th child, 9th living (2 died in infancy)<br>
-        Attended by: Dr. J.H. Wilson, Midwife Mrs. Sarah Kidd (maternal aunt)
+
+    <div class="post-content">
+      <p><strong>Case Summary:</strong> Dr. Robert Charles Habib represents what may be one of our strongest Middle Eastern supercentenarian claims. Born in Sidon, Lebanon on July 10, 1914, and immigrated to the United States at age 10 in 1924. Has lived in Winston-Salem, North Carolina continuously since 1924.</p>
+
+      <div class="member-info">
+        <strong>Current Status:</strong> Living<br>
+        <strong>Current Age:</strong> 110 years, 5 months (as of December 2024)<br>
+        <strong>Residence:</strong> Winston-Salem, NC (100+ years in same city)<br>
+        <strong>Profession:</strong> Medical Doctor (70+ years active practice)<br>
+        <strong>Retirement:</strong> Retired from active practice at age 90 in 2004
       </div>
-      
-      His father Albert was actually born in 1857 (not 1855 as family lore suggests) - he served in the Civil War - Company I, 6th Michigan Cavalry (Union). That's why he was older when Howard was born. His mother Amanda had 11 children total - 6 boys and 5 girls.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/WWIRecordsFinder</span> <span class="flair flair-military">Military Archives</span> • <span class="score">78.3k points</ • 3 hours ago
-    </div>
-    <div class="comment-text">
-      Found his complete WWI service record! Howard enlisted September 5, 1917 at Kalamazoo. Here's his entire military file:
-      
-      <div class="contract-box">
-        U.S. Army Service Record - World War I<br>
-        Name: Howard Kenneth Howell<br>
-        Enlisted: September 5, 1917 - Kalamazoo, Michigan<br>
-        Unit: Company B, 126th Infantry Regiment, 32nd Division<br>
-        Training: Camp Custer, Michigan (Sept-Oct 1917)<br>
-        Deployed: France - December 1917<br>
-        Battles: Aisne-Marne, Oise-Aisne, Meuse-Argonne Offensive<br>
-        Rank: Private → Private First Class (promoted March 1918)<br>
-        Injuries: None<br>
-        Discharged: April 1919 - Camp Custer<br>
-        Character: "Excellent" - served 20 months total
-      </div>
-      
-      He was part of the "Red Arrow" Division - saw heavy action in France. His discharge papers show he moved to Lansing immediately after discharge in April 1919.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MichiganMarriageRecords</span> <span class="flair flair-county">Michigan Vital</span> • <span class="score">67.9k points</span> • 3 hours ago
-    </div>
-    <div class="comment-text">
-      Found his first marriage! Howard married <strong>Mabel Irene Thompson</strong> on June 15, 1919 in Lansing, Michigan:
-      
-      <div class="contract-box">
-        Marriage Certificate - Ingham County<br>
-        Howard Kenneth Howell (24) - Radio Operator<br>
-        Mabel Irene Thompson (22) - Telephone Operator<br>
-        Married: June 15, 1919 - Lansing, Michigan<br>
-        Witnesses: Frank E. Howell (brother), Ruth E. Thompson (sister)<br>
-        Moved to Oregon: August 1919 (2 months after marriage)
-      </div>
-      
-      They moved to Medford, Oregon in August 1919 where he started as an electrician at Rogue River Electric Co. Mabel was pregnant with their first child when they moved west.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/FCCDatabase</span> <span class="flair flair-radio">FCC Archives</span> • <span class="score">59.4k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Found his radio operator career! Howard was licensed as a commercial radio operator in 1920. Here's his complete career timeline:
-      
-      <div class="timeline-box">
-        <strong>1920-1925:</strong> Rogue River Electric Co. - Medford, OR (Electrician → Radio Operator)<br>
-        <strong>1925-1942:</strong> KFJI Radio - Medford, OR (Chief Radio Operator)<br>
-        <strong>1942-1955:</strong> KBOY Radio - Medford, OR (Station Manager)<br>
-        <strong>1955-1970:</strong> Self-employed - Real Estate + Advertising<br>
-        <strong>1970-1988:</strong> Part-time consultant, Ham radio operator
-      </div>
-      
-      His FCC license was W7HKS. He was known as "The Voice of the Rogue Valley" on air. His call sign was assigned in 1920 - one of the earliest in Oregon.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/OregonDivorceRecords</span> <span class="flair flair-county">Oregon Vital</span> • <span class="score">52.1k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Found his divorce! Howard and Mabel divorced January 15, 1955 in Medford:
-      
-      <div class="contract-box">
-        Divorce Decree - Jackson County, Oregon<br>
-        Howard K. Howell vs. Mabel I. Howell<br>
-        Filed: October 1954<br>
-        Divorce Granted: January 15, 1955<br>
-        Children: All adults by 1955 (Charles 36, Ruth 34, Robert 32)<br>
-        Property: Howard kept the house and business<br>
-        Mabel moved to Portland, remarried 1956
-      </div>
-      
-      Mabel had been unhappy for years - cited "irreconcilable differences" and his obsession with ham radio. She moved to Portland and married a lumber executive.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/SecondMarriageFinder</span> • <span class="score">47.8k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Found his second marriage! Howard married <strong>Dorothy Mae Harrison</strong> on March 18, 1972 in Medford:
-      
-      <div class="contract-box">
-        Marriage Certificate - Jackson County<br>
-        Howard Kenneth Howell Sr. (77) - Retired<br>
-        Dorothy Mae Harrison (65) - Widow<br>
-        Married: March 18, 1972 - Medford, Oregon<br>
-        Dorothy had 3 grown children from previous marriage<br>
-        Lived: 847 Hillcrest Drive, Medford
-      </div>
-      
-      Dorothy was a widow whose husband had owned a hardware store. They met at a senior citizens dance. She outlived Howard by 12 years.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/OregonDeathCertificates</span> <span class="flair flair-county">Oregon Vital</span> • <span class="score">43.2k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      Found his death certificate! Howard died March 22, 1988 - here's the complete record:
-      
-      <div class="contract-box">
-        Certificate of Death - State of Oregon<br>
-        Howard Kenneth Howell Sr.<br>
-        Died: March 22, 1988 at 7:45 AM<br>
-        Location: Highway 62, 1 mile south of Seven Oaks, Oregon<br>
-        Cause: Multiple traumatic injuries - pedestrian vs. semi-truck<br>
-        Age: 93 years, 12 days<br>
-        Occupation: Retired Radio Broadcasting Executive<br>
-        Residence: 847 Hillcrest Drive, Medford, OR<br>
-        Burial: Hillcrest Memorial Park, Medford<br>
-        Witnesses: Semi-truck driver stated "elderly man walked into road suddenly"
-      </div>
-      
-      He was walking to the Seven Oaks Golf Course for his regular Tuesday morning tee time. The driver was cleared of wrongdoing - it was ruled accidental.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/HowellFamilyDescendant</span> • <span class="score">39.7k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      I'm Howard's great-grandson! Here are some family details that aren't in official records:
-      
-      <ul class="records-list">
-        <li><strong>Children with Mabel:</strong>
-          <ul>
-            <li>Charles Kenneth Howell (1919-1995) - took over radio business</li>
-            <li>Ruth Irene Howell (1921-2003) - school teacher</li>
-            <li>Robert Albert Howell (1923-1998) - Air Force</li>
-          </ul>
-        </li>
-        <li><strong>Fun fact:</strong> He built his first radio from parts in 1919</li>
-        <li><strong>Ham radio:</strong> His call sign W7HKS was active until his death</li>
-        <li><strong>Golf:</strong> Played 3 times a week until age 92</li>
+      <p><strong>Documentation Strengths:</strong></p>
+      <ul>
+        <li><strong>Immigration:</strong> Ellis Island records (1924) - Age 10, listed as "Robert Habib"</li>
+        <li><strong>Education:</strong> Wake Forest University Medical School (1937-1941) - Graduated age 27</li>
+        <li><strong>Medical License:</strong> North Carolina Medical Board - Active from 1941-2004</li>
+        <li><strong>SSN:</strong> Issued 1936 (pre-1937 series, consistent with immigration)</li>
+        <li><strong>Census Records:</strong> 1930, 1940, 1950 all show consistent age progression</li>
+        <li><strong>Military Service:</strong> WWII Army Medical Corps (1942-1945)</li>
       </ul>
-      
-      The golf course named a tournament after him - "The Howell Scramble" still runs annually!
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
 
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/OP_HowellFamilySearch</span> • <span class="score">35.4k points</span> • 45 minutes ago
-    </div>
-    <div class="comment-text">
-      UPDATE: This is amazing! I now have:
-      <br><br>
-      ✅ <strong>Official birth certificate</strong> - March 10, 1895, Richland, MI<br>
-      ✅ <strong>Complete WWI service</strong> - 126th Infantry, saw action in France<br>
-      ✅ <strong>First marriage</strong> - June 1919, Mabel Thompson<br>
-      ✅ <strong>FCC radio license</strong> - W7HKS, "Voice of Rogue Valley"<br>
-      ✅ <strong>Divorce papers</strong> - January 1955, Mabel moved to Portland<br>
-      ✅ <strong>Second marriage</strong> - March 1972, Dorothy Harrison<br>
-      ✅ <strong>Death certificate</strong> - March 1988, pedestrian accident<br>
-      ✅ <strong>Complete obituary</strong> - with funeral details<br>
-      ✅ <strong>Family photos</strong> - from radio station days
-      
-      <br><br>
-      My family is going to be thrilled - we went from "brick wall" to having his complete life story! I'm creating a family history book. Thank you all SO much!
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <strong>Birth Date</strong><br>
+          July 10, 1914<br>
+          <span class="highlight">Sidon, Lebanon</span>
+        </div>
+        <div class="stat-box">
+          <strong>Immigration</strong><br>
+          Age 10 (1924)<br>
+          <span class="highlight">Ellis Island</span>
+        </div>
+        <div class="stat-box">
+          <strong>Medical Career</strong><br>
+          70+ years<br>
+          <span class="highlight">1941-2004</span>
+        </div>
+        <div class="stat-box">
+          <strong>Current Residence</strong><br>
+          100+ years<br>
+          <span class="highlight">Winston-Salem, NC</span>
+        </div>
+      </div>
 
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
-    <em>"From Michigan farm boy to Oregon radio pioneer - 93 years of innovation and resilience."</em>
-    <br><br>
-    <strong>Howard Kenneth Howell Sr. - March 10, 1895 to March 22, 1988</strong>
+      <div class="quote-box">
+        <strong>Quote from Dr. Habib (2023 interview with Winston-Salem Journal):</strong><br>
+        "I came to America as a boy of 10. My father wanted better opportunities. I started school not knowing English, but I knew I wanted to be a doctor. Medicine has been my life for over seven decades."
+      </div>
+
+      <p><strong>Key Validation Points:</strong></p>
+      
+      <div class="timeline-item">
+        <strong>1924:</strong> Ellis Island arrival - Age 10, accompanied by father Charles Habib (age 42)
+      </div>
+      
+      <div class="timeline-item">
+        <strong>1930 Census:</strong> Listed as 16 years old, living with parents in Winston-Salem
+      </div>
+      
+      <div class="timeline-item">
+        <strong>1936:</strong> SSN issued - 246-XX-XXXX (North Carolina series)
+      </div>
+      
+      <div class="timeline-item">
+        <strong>1940 Census:</strong> Medical student, age 26, living with wife Mary (married 1939)
+      </div>
+      
+      <div class="timeline-item">
+        <strong>1941:</strong> Medical license issued by NC Medical Board
+      </div>
+      
+      <div class="timeline-item">
+        <strong>1942-1945:</strong> WWII Army Medical Corps service records
+      </div>
+      
+      <div class="timeline-item">
+        <strong>1950 Census:</strong> Physician, age 36, 3 children
+      </div>
+
+      <div class="post-info">
+        <strong>Outstanding Verification Needed:</strong><br>
+        • Original Lebanese birth certificate (if obtainable)<br>
+        • Early school records (Winston-Salem 1924-1937)<br>
+        • Medical school yearbook photos (Wake Forest 1937-1941)<br>
+        • Any early family photos from Lebanon
+      </div>
+
+      <p><strong>Conclusion:</strong> This appears to be one of the strongest Middle Eastern supercentenarian cases we've encountered. The continuous documentation from immigration (age 10) through medical practice (70+ years) and consistent residential history in Winston-Salem for 100+ years provides exceptional validation strength.</p>
+
+      <div class="post-signature">
+        — LongevityResearcher<br>
+        <em>Active researcher with 15+ years experience in supercentenarian validation</em>
+      </div>
+    </div>
   </div>
 </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
