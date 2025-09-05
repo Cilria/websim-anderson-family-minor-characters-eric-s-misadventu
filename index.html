@@ -3,419 +3,219 @@
 <head>
 <style>
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f6f7f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
     margin: 0;
     padding: 20px;
   }
   .reddit-container {
     max-width: 740px;
     margin: 0 auto;
-    background: white;
+    background-color: white;
     border-radius: 4px;
     border: 1px solid #ccc;
   }
   .reddit-header {
-    background: #0079d3;
+    background-color: #0079D3;
     color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .subreddit-name {
-    color: #0079d3;
-    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
     font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
   }
   .post-title {
     font-size: 20px;
-    font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
   }
   .post-meta {
-    color: #787c7e;
     font-size: 12px;
-    margin-bottom: 15px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
   }
   .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
   }
   .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
   }
-  .comment-meta {
+  .comment-header {
     font-size: 12px;
-    color: #787c7e;
+    color: #7C7C7C;
     margin-bottom: 4px;
   }
   .comment-author {
     font-weight: bold;
-    color: #1a1a1a;
+    color: #0079D3;
   }
-  .comment-text {
+  .comment-content {
     font-size: 14px;
     line-height: 1.5;
-    margin-bottom: 8px;
+    color: #1A1A1B;
   }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1b1b;
+  .comment-score {
     font-weight: bold;
+    color: #7C7C7C;
   }
   .flair {
-    background: #e9f5fd;
-    color: #0079d3;
+    background-color: #E9F5FD;
+    color: #0079D3;
     padding: 2px 6px;
     border-radius: 12px;
     font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-researcher {
-    background: #ff6b35;
-    color: #fff;
-  }
-  .flair-genealogy {
-    background: #8b0000;
-    color: #fff;
-  }
-  .flair-medical {
-    background: #2e7d32;
-    color: #fff;
-  }
-  .flair-virginia {
-    background: #6a0dad;
-    color: #fff;
-  }
-  .flair-masonic {
-    background: #d4a017;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-  .thread-divider {
-    border-top: 1px solid #edeff1;
-    margin: 15px 0;
-  }
-  .document-image {
-    max-width: 100%;
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    border-radius: 4px;
-  }
-  .records-list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  .records-list li {
-    padding: 4px 0;
-    border-bottom: 1px solid #eee;
-  }
-  .records-list li:last-child {
-    border-bottom: none;
-  }
-  .contract-box {
-    background: #f8f9fa;
-    padding: 12px;
-    border-left: 3px solid #0079d3;
-    font-family: 'Courier New', monospace;
-    margin: 8px 0;
-  }
-  .medical-license-box {
-    background: #e8f5e8;
-    padding: 12px;
-    border-left: 3px solid #2e7d32;
-    font-family: 'Courier New', monospace;
-    margin: 8px 0;
-  }
-  .railroad-box {
-    background: #fff3e0;
-    padding: 12px;
-    border-left: 3px solid #f57c00;
-    font-family: 'Courier New', monospace;
-    margin: 8px 0;
+    margin-left: 5px;
   }
 </style>
 </head>
 <body>
+
 <div class="reddit-container">
   <div class="reddit-header">
     r/Genealogy
   </div>
   
-  <div class="post-content">
-    <div class="subreddit-name">r/Genealogy</div>
-    <h1 class="post-title">[Brick Wall] Dr. Bradford "Brad" William Kenneth Clayborn (1899-2002) - Lived to 102, was a prominent MD, but missing birth certificate and medical school records?</h1>
+  <div class="post">
+    <div class="post-title">My great-grandfather Dr. Bradford "Brad" William Kenneth Clayborn (1899-2002) - born on New Year's Eve, died at 102 - looking for medical records from his 48-year cardiology practice in Maryland</div>
     <div class="post-meta">
-      Posted by <span class="comment-author">u/MarylandRoots</span> • 6 hours ago • 1.8k upvotes • 312 comments • 15 awards
+      <span class="comment-score">892 upvotes</span> • posted by <span class="comment-author">MarylandRoots</span> <span class="flair">Genealogy Enthusiast</span>
     </div>
-    
-    <p>I'm researching my great-grandfather Dr. Bradford "Brad" Clayborn who lived to be 102, but I'm hitting dead ends with official records. Here's what I know:</p>
-    
-    <ul>
-      <li><strong>Born:</strong> December 31, 1899 in Leesburg, VA</li>
-      <li><strong>Parents:</strong> George William Clayborn Sr (railroad serviceman) and Nancy Ann Bradford</li>
-      <li><strong>Named after:</strong> Maternal grandfather William Kenneth Bradford</li>
-      <li><strong>Youngest child</strong> of George and Nancy</li>
-      <li><strong>Moved:</strong> 1900 to Clarksburg, MD for father's government job</li>
-      <li><strong>Career:</strong> Studied medicine, became cardiovascular specialist in Glenwood, MD</li>
-      <li><strong>Married:</strong> Jean in 1922, had 5 children</li>
-      <li><strong>Retired:</strong> 1970 after 48+ years of practice</li>
-      <li><strong>Died:</strong> December 10, 2002 at age 102</li>
-    </ul>
-    
-    <p><strong>Missing:</strong> Official birth certificate, medical school records, medical license documentation, and can't find his practice records. Any help appreciated!</p>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/LoudounCountyArchives</span> <span class="flair flair-virginia">VA County Clerk</span> • <span class="score">94.7k points</span> • 5 hours ago • <span class="award">🏆</span>
-    </div>
-    <div class="comment-text">
-      Found his birth record! Bradford William Kenneth Clayborn was born December 31, 1899 at 11:45 PM in Leesburg, Loudoun County, VA. Here's the certified copy:
+    <div class="post-content">
+      <p>Bradford "Brad" William Kenneth Clayborn lived from December 31, 1899 to December 10, 2002 - literally born on the last day of the 19th century and died at 102! Here's what I've gathered:</p>
       
-      <div class="contract-box">
-        Certificate of Birth - Commonwealth of Virginia<br>
-        Name: Bradford William Kenneth Clayborn<br>
-        Born: December 31, 1899 at 11:45 PM<br>
-        Location: Leesburg, Loudoun County, VA<br>
-        Father: George William Clayborn Sr, age 28, Railroad Engineer<br>
-        Mother: Nancy Ann Bradford Clayborn, age 26, Housewife<br>
-        Birth Weight: 8 lbs 3 oz<br>
-        Attended by: Dr. William Kenneth Bradford (maternal grandfather!)<br>
-        Registered: January 15, 1900
-      </div>
-      
-      Your great-great-grandfather Dr. William Kenneth Bradford delivered his own grandson! The family lived at 312 Church Street in Leesburg. George Sr. was actually a "locomotive engineer" for the Southern Railway, not just a serviceman.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MontgomeryCountyMD</span> <span class="flair flair-genealogy">MD Archives</span> • <span class="score">78.3k points</span> • 4 hours ago
-    </div>
-    <div class="comment-text">
-      Found the 1900 census showing the move! District 7, Clarksburg, Montgomery County, MD:
-      <br><br>
-      <strong>Lines 12-16:</strong><br>
-      Clayborn, George W. - Head, age 29, Railroad Engineer, born VA<br>
-      Clayborn, Nancy A. - Wife, age 27, born VA<br>
-      Clayborn, George W. Jr. - Son, age 4, born VA<br>
-      Clayborn, Mary E. - Daughter, age 2, born VA<br>
-      Clayborn, Bradford W. K. - Son, age 4 months, born VA (Dec 1899)
-      
-      <br><br>
-      The move was for George Sr.'s government job - he became a "Federal Railroad Inspector" for the Interstate Commerce Commission, stationed at the B&O Railroad depot in Clarksburg. 1910 census shows they owned their home at 215 Montgomery Avenue.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/UniversityOfMarylandArchives</span> <span class="flair flair-medical">Medical School Records</span> • <span class="score">67.9k points</span> • 3 hours ago
-    </div>
-    <div class="comment-text">
-      Found his complete medical education! Bradford "Brad" Clayborn attended the University of Maryland School of Medicine:
-      
-      <div class="medical-license-box">
-        <strong>University of Maryland School of Medicine Records:</strong><br>
-        Student ID: 1917-M-042<br>
-        Admission: September 1917 (age 17 - young!)<br>
-        Pre-med: 2 years at Maryland Agricultural College (now UMD)<br>
-        Medical School: 1917-1921<br>
-        Graduation: June 1921 (age 21)<br>
-        Degree: Doctor of Medicine<br>
-        Specialization: Cardiovascular (early interest)<br>
-        Thesis: "Early Detection of Heart Murmurs"<br>
-        Rank: Top 10% of class<br>
-        Faculty Note: "Exceptional diagnostic abilities"
-      </div>
-      
-      He was admitted early due to his exceptional academic record. The 1917-18 influenza pandemic delayed his studies by 6 months, which is why he graduated at age 21 instead of 20. His tuition was $150 per year!
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MarylandMedicalBoard</span> <span class="flair flair-medical">Medical Licensing</span> • <span class="score">59.4k points</span> • 3 hours ago
-    </div>
-    <div class="comment-text">
-      Found his medical license documentation! Dr. Bradford W. K. Clayborn was licensed to practice medicine in Maryland:
-      
-      <div class="medical-license-box">
-        Maryland State Board of Medical Examiners<br>
-        License Number: MD-1921-0847<br>
-        Issued: July 1, 1921<br>
-        Applicant: Bradford William Kenneth Clayborn, MD<br>
-        Age: 21 years, 6 months<br>
-        Examination Score: 94.5% (exceptional)<br>
-        Specialization: Internal Medicine with Cardiovascular focus<br>
-        Practice Location: Glenwood, Howard County, MD<br>
-        License Status: Active until retirement 1970<br>
-        Renewals: Continuous for 49 years
-      </div>
-      
-      He was one of the youngest licensed physicians in Maryland history at age 21. His practice focused on cardiovascular medicine before it was even a recognized specialty. He was known as "The Heart Doctor of Howard County."
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/HowardCountyMedical</span> <span class="flair flair-medical">Medical History</span> • <span class="score">52.7k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Found his complete practice records! Dr. Clayborn's medical practice in Glenwood:
-      
-      <div class="medical-license-box">
-        <strong>Practice Timeline:</strong><br>
-        <strong>1921-1925:</strong> Associate with Dr. Samuel Hoffmann, Main Street, Glenwood<br>
-        <strong>1925-1970:</strong> Solo practice, 315 Main Street, Glenwood<br>
-        <strong>Specialization:</strong> Cardiovascular medicine (before it was a specialty)<br>
-        <strong>Patients:</strong> Estimated 15,000+ over 49 years<br>
-        <strong>Notable:</strong> First doctor in Howard County to use electrocardiogram (1928)<br>
-        <strong>Hours:</strong> 8 AM - 6 PM weekdays, emergency calls 24/7<br>
-        <strong>House calls:</strong> Up to 10 per day during 1930s-40s<br>
-        <strong>Fee:</strong> $2 office visit, $5 house call (reduced during Depression)
-      </div>
-      
-      He was the only cardiovascular specialist between Baltimore and Frederick for 30 years. Patients came from 5 counties to see him. He delivered over 2,000 babies and performed the first appendectomy in Howard County in 1929.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MarriageRecordsMD</span> <span class="flair flair-genealogy">Marriage Records</span> • <span class="score">46.8k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Found his marriage record! Dr. Bradford Clayborn married Jean Elizabeth Macon:
-      
-      <div class="contract-box">
-        Certificate of Marriage - State of Maryland<br>
-        Groom: Bradford William Kenneth Clayborn, MD<br>
-        Age: 22, Physician, Glenwood, MD<br>
-        Bride: Jean Elizabeth Macon<br>
-        Age: 20, Teacher, Clarksville, MD<br>
-        Married: June 17, 1922<br>
-        Location: St. John's Episcopal Church, Ellicott City, MD<br>
-        Officiant: Rev. Dr. William Bradford (uncle of groom)<br>
-        Witnesses: George Clayborn Jr. (brother), Mary Clayborn (sister)<br>
-        Honeymoon: Atlantic City, NJ (week trip)
-      </div>
-      
-      Jean was a schoolteacher at the one-room schoolhouse in Clarksville. They met when he treated her mother for pneumonia in January 1922. Their wedding was front-page news in the Howard County Times - "Popular Young Doctor Weds Local Teacher."
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/HowardCountyGenealogy</span> <span class="flair flair-genealogy">Local Records</span> • <span class="score">41.3k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      Found all five children! Dr. and Mrs. Clayborn's complete family:
-      
-      <ul class="records-list">
-        <li><strong>1. Nancy Bradford Clayborn</strong> (1923-2015) - named after paternal grandmother</li>
-        <li><strong>2. William Kenneth Clayborn</strong> (1925-2008) - named after maternal grandfather</li>
-        <li><strong>3. George William Clayborn Jr.</strong> (1927-1999) - named after father</li>
-        <li><strong>4. Jean Elizabeth Clayborn</strong> (1930-2018) - named after mother</li>
-        <li><strong>5. Robert Macon Clayborn</strong> (1932-2016) - named after maternal uncle</li>
+      <ul>
+        <li>Born in Leesburg, VA to George William Clayborn Sr (railroad serviceman) and Nancy Ann Bradford</li>
+        <li>Named after maternal grandfather William Kenneth Bradford</li>
+        <li>Family moved to Clarksburg, MD in 1900 for father's government job</li>
+        <li>Studied medicine and became a cardiovascular specialist</li>
+        <li>Set up practice in Glenwood, MD in the 1920s</li>
+        <li>Married Jean in 1922, had 5 children</li>
+        <li>Practiced until retirement in 1970</li>
+        <li>Lived alone until death at 102</li>
       </ul>
       
-      All were delivered by their father at home except Robert (delivered at Howard County Hospital when it opened in 1932). The family lived at 412 Church Road in Glenwood - a 6-bedroom house he built in 1923 for $4,200.
+      <p>I'm trying to find any records of his medical practice - patient records (if they exist), medical society memberships, anything! He practiced for 48 years, someone must have records!</p>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
   </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/RailroadHistorian</span> <span class="flair flair-virginia">Railroad Records</span> • <span class="score">35.7k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      Found his father's complete railroad career! George William Clayborn Sr. had an impressive 45-year career:
-      
-      <div class="railroad-box">
-        <strong>Southern Railway Employment Records:</strong><br>
-        1888-1895: Fireman, Alexandria, VA ($1.50/day)<br>
-        1895-1900: Engineer, Leesburg, VA ($3.00/day)<br>
-        1900-1915: Federal Railroad Inspector, Clarksburg, MD ($1,200/year)<br>
-        1915-1930: Safety Supervisor, Interstate Commerce Commission ($2,000/year)<br>
-        <br>
-        <strong>Notable:</strong> Investigated 47 accidents, received commendation for preventing head-on collision in 1912
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MarylandMedicalHistory</span> • <span class="comment-score">456 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p>FOUND HIM! Dr. Bradford W. K. Clayborn was licensed to practice medicine in Maryland on June 15, 1922 - license #MD-1922-0847. He was a member of the Maryland State Medical Society and served as President of the Montgomery-Frederick County Medical Association in 1947.</p>
+        
+        <p>His practice was located at 10801 Warfield Road in Glenwood - which was actually his house! He converted the first floor into a medical office and lived upstairs with his family. The building is still there, now it's a private residence again.</p>
+        
+        <p>Here's the incredible part - I found his medical school records at the University of Maryland School of Medicine. He graduated in 1922 at age 22 (started at 18!). His thesis was on "The Cardiovascular Effects of Tobacco Use in Rural Maryland Populations" - pretty advanced for 1922!</p>
+        
+        <p>During WW2, he served as a civilian medical consultant to Fort Detrick, examining soldiers with heart conditions. There's a whole file on him at the National Archives - including letters where he argued against sending men with heart murmurs overseas.</p>
       </div>
       
-      The move to Clarksburg was actually a promotion to federal service! He inspected railroad bridges and track conditions across Maryland. The family was quite well-off - 1910 census shows they had a live-in servant.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MasonicArchivist</span> <span class="flair flair-masonic">Masonic Records</span> • <span class="score">29.4k points</span> • 45 minutes ago
-    </div>
-    <div class="comment-text">
-      Found his Masonic records! Dr. Bradford Clayborn was a prominent Mason:
-      
-      <div class="contract-box">
-        <strong>Masonic Timeline:</strong><br>
-        1922 - Initiated: Howard Lodge #82, A.F.&A.M., Glenwood, MD<br>
-        1923 - Passed to Fellowcraft<br>
-        1924 - Raised to Master Mason<br>
-        1925 - Joined Scottish Rite, Valley of Baltimore<br>
-        1930 - 32nd Degree<br>
-        1945 - Knight Templar, Baltimore Commandery<br>
-        1950 - High Priest, Royal Arch Chapter<br>
-        1960 - 50-year member celebration<br>
-        1970-1990 - Regular attendee until age 90
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">ClarksburgChronicler</span> • <span class="comment-score">312 points</span> • 5 hours ago
+        </div>
+        <div class="comment-content">
+          <p>Found his father's government job! George William Clayborn Sr. was hired by the U.S. Post Office Department in 1900 as a "Railway Mail Clerk" - basically he sorted mail on trains between Washington and Pittsburgh. Made $1,200/year, which was excellent money.</p>
+          
+          <p>The family lived at 205 East Diamond Avenue in Clarksburg - I found the actual house! It's a Victorian built in 1892. George worked the B&O Railroad route until 1918 when he was transferred to the main post office in Clarksburg as a "Chief Clerk."</p>
+          
+          <p>Bradford got his nickname "Brad" at age 8 when he started Clarksburg Elementary in 1908. His teacher, Miss Elizabeth Johnson, wrote on his report card: "Bradford prefers to be called 'Brad' - shows leadership qualities even at this young age."</p>
+          
+          <p>The family attended the Clarksburg Methodist Episcopal Church. I found baptism records for all the children - Bradford was baptized there on January 15, 1900, just two weeks after birth.</p>
+        </div>
       </div>
-      
-      He was the lodge physician for 40 years, providing free medical care to indigent Masons and their families. The lodge records show he never missed a stated communication from 1922-1962!
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/OP_MarylandRoots</span> • <span class="score">24.8k points</span> • 30 minutes ago
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">CardiologyArchivist</span> • <span class="comment-score">278 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>This is AMAZING - Dr. Clayborn was a pioneer in Maryland cardiology! I found articles he published in the Maryland Medical Journal:</p>
+        
+        <p><strong>1928:</strong> "Early Detection of Rheumatic Heart Disease in Children" - he was among the first in the state to use the new stethoscope techniques</p>
+        <p><strong>1935:</strong> "Dietary Management of Cardiac Patients in Rural Practice" - revolutionary for suggesting low-sodium diets</p>
+        <p><strong>1943:</strong> "The Cardiac Effects of Wartime Stress" - studied local families during WW2</p>
+        
+        <p>He maintained detailed patient records (unusual for rural doctors) - I found reference to these in the Maryland Historical Society archives. They have 23 boxes of his papers from 1922-1970, including patient case files, correspondence, and medical journals.</p>
+        
+        <p>During the 1948 polio epidemic, he worked with Dr. Jonas Salk's team at the University of Pittsburgh, examining cardiac complications in polio patients. There's a letter from Salk thanking him for his "invaluable contributions to understanding the cardiac manifestations of poliomyelitis."</p>
+      </div>
     </div>
-    <div class="comment-text">
-      UPDATE: This is absolutely incredible! I now have:
-      <br><br>
-      ✅ <strong>Official birth certificate</strong> - December 31, 1899, Leesburg, VA<br>
-      ✅ <strong>Complete medical education</strong> - University of Maryland, graduated 1921<br>
-      ✅ <strong>Medical license records</strong> - Licensed July 1921, practiced 49 years<br>
-      ✅ <strong>Complete practice history</strong> - 315 Main Street, Glenwood, 15,000+ patients<br>
-      ✅ <strong>Marriage certificate</strong> - June 17, 1922 to Jean Macon<br>
-      ✅ <strong>All 5 children</strong> - born 1923-1932, complete names/dates<br>
-      ✅ <strong>Father's railroad career</strong> - 45 years, federal inspector<br>
-      ✅ <strong>Masonic records</strong> - 32nd degree, 50+ year member<br>
-      ✅ <strong>Retirement confirmation</strong> - 1970 after 49 years of practice
-      
-      <br><br>
-      My family is going to be amazed! We went from knowing almost nothing to having his complete life documented. Thank you all for solving this 20-year brick wall in one day!
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">GlenwoodLocal</span> • <span class="comment-score">201 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>I grew up in Glenwood and remember Dr. Clayborn! He was our family doctor until he retired. My mom still talks about him - he delivered me in 1965 and told my mom "this one has a strong heart" while listening to my newborn chest.</p>
+        
+        <p>His office was indeed in his house on Warfield Road. The waiting room was his original living room - dark wood paneling, medical journals on the coffee table, and he had this ancient EKG machine that took up half the room. He charged $15 for a consultation in the 1960s, $25 if you needed an EKG.</p>
+        
+        <p>He was old-school - no appointment needed, just walk in and wait your turn. Sometimes you'd wait 3-4 hours, but he never rushed anyone. I remember him chain-smoking while examining patients (crazy, I know) and he had this gravelly voice from years of smoking.</p>
+        
+        <p>After retirement, he used to sit on his front porch and wave at everyone who passed. My dad said he lived to 102 because "he already saw everything worth seeing and wasn't missing anything."</p>
+      </div>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
-    <em>"From railroad engineer's son to the heart doctor of Howard County - 102 years of healing hands."</em>
-    <br><br>
-    <strong>Dr. Bradford "Brad" William Kenneth Clayborn - December 31, 1899 to December 10, 2002</strong>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MarriageRecordsMD</span> • <span class="comment-score">167 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found his marriage certificate! Bradford William Kenneth Clayborn married Jean Elizabeth Morrison on September 16, 1922 at the Clarksburg Methodist Church. He was 22, she was 20. Best man was his brother George Jr., maid of honor was Jean's sister Mary.</p>
+        
+        <p>Jean's father, Robert Morrison, was a bank president in Frederick - so she came from money. Her dowry included $5,000 cash and a house lot in Glenwood (which became their home/office). The wedding announcement in the Clarksburg paper called it "the social event of the season."</p>
+        
+        <p>They honeymooned at the Greenbrier Resort in West Virginia - I found their hotel registration! They stayed in room 247 for a week. Total cost: $85 including meals.</p>
+        
+        <p>Jean died in 1988 at age 86. She was buried in the Morrison family plot in Frederick. Bradford never remarried and lived another 14 years alone. Their children: Robert Morrison (1923), Nancy Bradford (1925), William Kenneth (1927), Jean Elizabeth Jr. (1930), and Thomas George (1934).</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">CentenarianResearcher</span> • <span class="comment-score">143 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found the secret to his longevity! When he turned 100 in 1999, the local paper did a big story on him. When asked about living to 100, he said: "I drank whiskey every day, smoked like a chimney, ate red meat, and told dirty jokes. The good Lord must have a sense of humor."</p>
+        
+        <p>But here's what I found - he had incredible genetics. His mother Nancy Ann Bradford lived to 94 (died 1953), his maternal grandfather William Kenneth Bradford lived to 96 (died 1918), and his great-aunt lived to 103. The men in his family typically lived into their 90s.</p>
+        
+        <p>He was still seeing patients part-time until age 88! The Maryland Board of Physicians has his last renewal application from 1987 when he was 87. His medical license was active for 75 years - probably a state record.</p>
+        
+        <p>He died December 10, 2002 at St. Joseph's Hospital in Baltimore from "complications of old age" - basically everything just wore out. His daughter Nancy told the Baltimore Sun: "He said he wanted to live to see the new millennium, and he did. After that, he was ready to go."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MarylandRoots</span> • <span class="comment-score">98 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Oh my goodness, this is beyond anything I expected! The medical journal articles, the wedding at Greenbrier, the polio research with Salk, the patient records at Maryland Historical Society - I can't believe how much you all found!</p>
+        
+        <p>I'm definitely planning a trip to the Maryland Historical Society to see those 23 boxes of papers. And I need to drive past the house on Warfield Road - I can't believe it's still standing!</p>
+        
+        <p>My mom (his granddaughter) is going to be amazed by all this. She remembers visiting "Grandpa Doc" but had no idea about most of this. Thank you all so much - this is exactly why I love genealogy!</p>
+      </div>
+    </div>
   </div>
 </div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
