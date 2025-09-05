@@ -3,226 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Robert "Bob" Charles Habib - 110 Club Forum</title>
+    <title>Bradford "Brad" William Kenneth Clayborn (1899-2002): Doctor who delivered 3,000+ babies and never lost a mother in childbirth : Genealogy</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #e6e6e6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #1a1a1a;
         }
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 20px auto;
-            background: #fff;
+            background: white;
+            border-radius: 8px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header {
-            background: #0066cc;
+            background: #ff4500;
             color: white;
-            padding: 10px 15px;
-            font-size: 22px;
-            font-weight: bold;
-            border-radius: 4px 4px 0 0;
-        }
-        .nav {
-            background: #f0f0f0;
-            padding: 8px 15px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-        }
-        .nav a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .nav a:hover {
-            text-decoration: underline;
-        }
-        .thread {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-        }
-        .thread-title {
-            font-size: 14px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .thread-title a {
-            color: #0066cc;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .thread-title a:hover {
-            text-decoration: underline;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
         }
         .post {
-            margin-bottom: 20px;
-            line-height: 1.6;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .post-header {
-            background: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-            margin-bottom: 15px;
-            font-size: 12px;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .post-content {
-            margin-left: 20px;
-            font-size: 14px;
-            line-height: 1.8;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
         }
-        .signature {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #666;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
+        .content {
+            margin-left: 50px;
         }
-        .forum-info {
-            background: #f5f5f5;
-            padding: 10px;
-            margin-top: 20px;
-            font-size: 11px;
-            color: #666;
-            border-top: 1px solid #ddd;
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
         }
-        .user-info {
+        .title a {
             color: #0066cc;
-            font-weight: bold;
+            text-decoration: none;
         }
-        .date {
-            color: #666;
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
         }
-        .highlight {
-            background-color: #ffffcc;
-            padding: 2px 4px;
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
         }
-        .quote {
-            border-left: 3px solid #ddd;
-            padding-left: 10px;
-            margin: 10px 0;
-            font-style: italic;
-            color: #555;
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            The 110 Club
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Maryland_Medical_Historian</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
         </div>
-        <div class="nav">
-            The 110 Club Forum Index » Longevity Claims » Dr. Robert "Bob" Charles Habib - Strong case from North Carolina
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>3.2k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Bradford "Brad" William Kenneth Clayborn (1899-2002): Doctor who delivered 3,000+ babies and never lost a mother in childbirth</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Maryland</span>
+                    <span class="flair">Medical History</span>
+                    <span class="flair">20th Century</span>
+                    <span class="flair">Virginia Roots</span>
+                    <span>Posted by u/Maryland_Medical_Historian • 6 hours ago</span>
+                </div>
+
+                <p>I've been researching Dr. Bradford Clayborn for the past year, and his story is incredible. Born December 31, 1899 in Leesburg, VA - literally the last day of the 19th century. His father George William Clayborn Sr. was a railroad serviceman, and his mother Nancy Ann Bradford came from the prominent Bradford family of Northern Virginia.</p>
+
+                <p><strong>The Early Move:</strong> In 1900, when Brad was just months old, the family relocated to Clarksburg, MD when his father got a government job. This move would shape his entire future.</p>
+
+                <p><strong>Medical Career:</strong> Brad attended University of Maryland Medical School, graduating around 1922. He specialized in cardiovascular medicine but became the go-to doctor for obstetrics in Glenwood, MD. Local papers called him "the doctor who never lost a mother" - delivered over 3,000 babies between 1922-1970 without a single maternal death.</p>
+
+                <p><strong>Family Life:</strong> Married Jean (maiden name unknown) in 1922, same year he started practice. They had 5 children together. She died before him - can't find the exact date, but he was widowed for the last decades of his life.</p>
+
+                <p><strong>Retirement & Death:</strong> Retired in 1970 at age 70 after 48 years of practice. Lived alone in Glenwood until his death on December 10, 2002 - just 21 days short of his 103rd birthday.</p>
+
+                <p>My brick wall: I can't find his medical school records, marriage certificate, or Jean's maiden name. Also trying to verify the "3,000 babies" claim - anyone have access to Maryland medical board records from the 1920s-1970s? Also looking for anything about his father's railroad work and the family's move from Virginia.</p>
+
+                <div class="comments-count">
+                    <a href="#">412 comments</a>
+                </div>
+            </div>
         </div>
 
-        <div class="thread">
-            <div class="thread-title">
-                <a href="#">Dr. Robert "Bob" Charles Habib - Born July 10, 1914 in Sidon, Lebanon - 70+ year medical career in North Carolina</a>
-            </div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
 
-            <div class="post">
-                <div class="post-header">
-                    <strong>Young</strong> Posted: 11/15/2024 08:47:33 AM<br>
-                    <strong>Subject:</strong> Dr. Robert "Bob" Charles Habib - Strong case for 110 from Lebanon
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Maryland_Medical_Archives • 4 hours ago
                 </div>
-                
-                <div class="post-content">
-                    <p><strong>Name:</strong> Dr. Robert "Bob" Charles Habib<br>
-                    <strong>Claimed Birth:</strong> July 10, 1914, Sidon, Lebanon (then part of Ottoman Syria)<br>
-                    <strong>Current Residence:</strong> Winston-Salem, North Carolina<br>
-                    <strong>Immigration:</strong> Arrived United States age 10 (1924)<br>
-                    <strong>Profession:</strong> Medical Doctor (retired at age 90, 2004)</p>
-
-                    <p><strong>The Case for 110:</strong></p>
-                    <p>This appears to be one of the stronger cases from the Middle East region. Dr. Habib has consistent documentation in the United States for 100+ years, which is unusual for Lebanese/Syrian claims from this era.</p>
-
-                    <p><strong>Early Documentation:</strong><br>
-                    • <span class="highlight">1924 Ellis Island records</span> - Robert Habib, age 10, from Sidon, with father Charles Habib<br>
-                    • <span class="highlight">1930 U.S. Census</span> - Robert Habib, age 15, living Winston-Salem, NC (family moved there immediately after arrival)<br>
-                    • <span class="highlight">1936 High School Yearbook</span> - Robert C. Habib, R.J. Reynolds High School, Winston-Salem<br>
-                    • <span class="highlight">1940 College Records</span> - Wake Forest College (pre-med), lists birth as July 10, 1914</p>
-
-                    <p><strong>Medical Career Documentation:</strong><br>
-                    • Wake Forest School of Medicine - Graduated 1942 (age 28)<br>
-                    • North Carolina Medical License #A12784 - Issued 1943, renewed continuously until 2004<br>
-                    • Winston-Salem City Directories - Listed as physician 1943-2004 (61 years at same practice)<br>
-                    • AMA Physician Masterfile - Active member 1943-2004</p>
-
-                    <p><strong>Key Findings:</strong></p>
-                    <p>The 1914 birth year appears consistently from his earliest American records. This is significant because:</p>
-                    <ul>
-                        <li>Most Lebanese/Syrian immigrants from this era had inconsistent birth documentation</li>
-                        <li>The 1914 date predates the common "year inflation" seen in later immigration records</li>
-                        <li>His immigration age (10) matches perfectly with claimed birth year</li>
-                    </ul>
-
-                    <p><strong>Current Status:</strong><br>
-                    Dr. Habib is reportedly still living in Winston-Salem. Neighbors and former patients have confirmed he is still mentally sharp, though physically frail. The local medical community has celebrated his 100th and 105th birthdays publicly.</p>
-
-                    <p><strong>Supporting Evidence:</strong><br>
-                    • 1924 passenger manifest (age 10)<br>
-                    • 1930 census (age 15)<br>
-                    • 1940 census (age 25)<br>
-                    • 1950 census (age 35)<br>
-                    • Social Security application (1936) - lists birth as July 10, 1914<br>
-                    • Medicare enrollment (1966) - lists birth as July 10, 1914<br>
-                    • North Carolina voter registration (1940s-2000s) - consistent birth year</p>
-
-                    <p>This case stands out because of the early immigration documentation and the consistency across 100 years of American records. The 1914 birth year has been consistent since his arrival.</p>
-
-                    <p>Any additional research on his early Lebanese records or verification of his current status would be appreciated.</p>
-
-                    <div class="signature">
-                        ---<br>
-                        Young<br>
-                        GRG Correspondent
+                <div class="comment-content">
+                    <strong>Found his medical school records!</strong> Bradford William Kenneth Clayborn graduated from University of Maryland School of Medicine on June 8, 1922. His records show he was an exceptional student - graduated 3rd in his class of 67. Interestingly, he almost didn't become a doctor: his father wanted him to work for the railroad, but his mother Nancy insisted he go to medical school. She sold her wedding china to help pay for his first semester tuition.
+                </div>
+                <div class="comment-meta">u/Maryland_Medical_Historian • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This is incredible! His mother selling her wedding china is such a powerful detail - shows how much she believed in his future. Do you have access to his residency or internship records? I'm curious where he trained before opening his Glenwood practice.
                     </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
-            </div>
-
-            <div class="post">
-                <div class="post-header">
-                    <strong>Researcher</strong> Posted: 11/15/2024 11:23:15 AM<br>
-                    <strong>Subject:</strong> Re: Dr. Robert "Bob" Charles Habib
-                </div>
-                
-                <div class="post-content">
-                    <p>Excellent work on this case. I've been following Dr. Habib for years, and this is the most comprehensive documentation I've seen.</p>
-
-                    <p><strong>Additional findings:</strong></p>
-                    <p>Medical Examiner's records (Forsyth County, NC) show Dr. Habib renewed his medical license in person every year until 2004, when he voluntarily retired at age 90 rather than face re-certification. The medical board had a special ceremony for his final renewal.</p>
-
-                    <p>Local Winston-Salem Journal articles from 2014 (his 100th birthday) and 2019 (105th) include interviews where he discusses growing up in Sidon under Ottoman rule. Specific details about his father's olive oil business and the family's decision to emigrate check out historically.</p>
-
-                    <p>One interesting note: Dr. Habib delivered over 5,000 babies during his career in Winston-Salem. Many of those "babies" (now in their 60s-80s) have provided supporting testimony about his longevity.</p>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="post-header">
-                    <strong>LongevityResearch</strong> Posted: 11/15/2024 02:14:33 PM<br>
-                    <strong>Subject:</strong> Re: Dr. Robert "Bob" Charles Habib
-                </div>
-                
-                <div class="post-content">
-                    <p>I can confirm Dr. Habib is still alive as of last month. My colleague visited him in Winston-Salem in October 2024. He is the oldest licensed physician in North Carolina history and quite possibly the oldest in the United States.</p>
-
-                    <p>His mental acuity is remarkable - he still remembers details about patients from the 1940s and 1950s. He has some physical limitations but is otherwise doing well.</p>
-
-                    <p>Local news station WXII did a story on him in July 2024 for his 110th birthday. The family has been very cooperative with researchers, which is refreshing compared to some other longevity claims.</p>
-
-                    <div class="quote">
-                        "I came to this country with nothing but a suitcase and a dream. Medicine gave me everything." - Dr. Robert Habib, July 10, 2024 (110th birthday interview)
+                <div class="comment-meta">u/Maryland_Medical_Archives • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        He interned at Maryland General Hospital 1922-1923. His internship supervisor wrote: "Clayborn shows exceptional aptitude for obstetrics, far exceeding his peers. His calm demeanor and small hands make him naturally suited for difficult deliveries." After internship, he moved to Glenwood because he "wanted to practice where there were more cows than doctors" - direct quote from his 1923 application for Maryland medical license.
                     </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="forum-info">
-                Forum Jump: Select a forum | |-- Longevity Claims | |-- Verified Supercentenarians | |-- Pending Claims | |-- Research Help | |-- General Discussion<br>
-                Previous Topic | Next Topic
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Virginia_Archives_Pro • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the Leesburg connection:</strong> The Clayborn family lived at 312 Church Street, Leesburg, VA. George Clayborn worked for the Southern Railway as a "car inspector" - basically checked train cars for safety issues. The move to Clarksburg happened because the B&O Railroad offered him a foreman position at $65/month (huge money in 1900). The family moved by train with all their possessions - including Nancy's prized rose bushes that she insisted on bringing to Maryland.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Montgomery_County_Records • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Marriage certificate found:</strong> Bradford William Kenneth Clayborn married Jean Elizabeth MacGregor on September 16, 1922 at St. Paul's Catholic Church in Glenwood. Jean was born 1900 in Glasgow, Scotland - her family immigrated to Baltimore in 1905. Her father Angus MacGregor worked as a machinist for the Baltimore & Ohio Railroad. The wedding had to be moved up because Jean was already 3 months pregnant with their first child.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Maryland_Birth_Records • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>The "3,000 babies" claim is actually conservative!</strong> Based on Maryland birth certificates from Glenwood area 1922-1970, Dr. Clayborn delivered 3,247 babies. His peak year was 1952 with 87 deliveries. The "never lost a mother" claim is also true - I cross-referenced all maternal deaths in Montgomery County during his practice years, and none occurred during his deliveries. He had a reputation for taking the most difficult cases - breech births, twins, mothers with heart conditions.
+                </div>
+                <div class="comment-meta">u/Maryland_Medical_Historian • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        3,247 babies is even more impressive! And the fact that he never lost a mother during the pre-antibiotic era is almost miraculous. Do you have any records of difficult cases he handled? I'm curious about his medical techniques.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Glenwood_Oral_History • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found stories from his patients:</strong> Local oral history project has interviews with women he delivered. One said: "Dr. Brad had hands like a pianist - so gentle. When my baby was breach, he turned it inside me with such care. My husband said he worked for 14 hours straight, never left my side except to wash his hands." Another: "He delivered all 8 of my children. For the last one in 1968, he was 69 years old. Said he was retiring after my baby because 'it's time for these young doctors to learn what real medicine is.'"
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Children_Tracker_Maryland • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>All 5 children confirmed:</strong><br>
+                    1. Nancy Angus Clayborn (1923-2010) - named after his mother, became a nurse<br>
+                    2. Bradford William Clayborn Jr. (1925-1998) - became a doctor, practiced in Baltimore<br>
+                    3. Jean Elizabeth Clayborn (1927-2015) - became a teacher, married a farmer<br>
+                    4. Robert MacGregor Clayborn (1930-2008) - became an engineer for IBM<br>
+                    5. Mary Margaret Clayborn (1933-2020) - became a nun, Sister Mary Bradford<br>
+                    Jean died in 1987 of breast cancer. Dr. Clayborn never remarried, said "I only needed one woman in my life, and God took the best one first."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Maryland_Death_Records • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>His death details:</strong> Dr. Clayborn died December 10, 2002 at his home on 415 Main Street, Glenwood. Cause of death was "complications from pneumonia" - he refused hospitalization, said he wanted to die in the same house where he delivered over 200 babies. His mind was sharp until the end - he was still giving medical advice to neighbors at age 102. His last words were reportedly "Tell Jean I'll be home soon." Funeral was held at St. Paul's Catholic Church, buried next to Jean in Glenwood Cemetery.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Bradford_Family_Historian • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the naming story:</strong> He was named "Bradford William Kenneth" in honor of four family members: Bradford (his mother's maiden name), William (his maternal grandfather), Kenneth (his paternal grandfather), and Clayborn (family name). The nickname "Brad" stuck because his older siblings couldn't pronounce "Bradford" - they called him "Brad-boy" which became just "Brad." His medical school diploma reads "Bradford William Kenneth Clayborn" but his prescription pads said "Dr. Brad Clayborn" - he said formal names were for weddings and funerals.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Found my great-grandfather's medical bag - he was a country doctor in 1890s Pennsylvania</a></li>
+                <li><a href="#">Anyone have access to railroad employment records from 1900-1920?</a></li>
+                <li><a href="#">My ancestor delivered babies for 50 years too - but lost 23 mothers to childbirth fever</a></li>
+            </ul>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
