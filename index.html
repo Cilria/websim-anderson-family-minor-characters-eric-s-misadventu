@@ -3,216 +3,267 @@
 <head>
 <style>
   body {
-    font-family: sans-serif;
-    background-color: #f6f6f6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #0f0f0f;
+    color: #d7dadc;
     margin: 0;
     padding: 20px;
   }
-  .wiki-container {
-    max-width: 900px;
+  .reddit-container {
+    max-width: 800px;
     margin: 0 auto;
-    background-color: white;
-    border: 1px solid #a7d7f9;
-    border-radius: 4px;
+    background-color: #1a1a1b;
+    border: 1px solid #343536;
+    border-radius: 8px;
+    overflow: hidden;
   }
-  .wiki-header {
-    background-color: #f3f9ff;
-    border-bottom: 1px solid #a7d7f9;
-    padding: 15px;
+  .reddit-header {
+    background-color: #030303;
+    padding: 16px;
+    border-bottom: 1px solid #343536;
   }
-  .wiki-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  .wiki-subtitle {
+  .subreddit-name {
+    color: #d7dadc;
     font-size: 14px;
-    color: #54595d;
+    font-weight: 500;
+    margin-bottom: 8px;
   }
-  .wiki-content {
-    padding: 20px;
-    line-height: 1.6;
-  }
-  .infobox {
-    float: right;
-    width: 300px;
-    border: 1px solid #a7d7f9;
-    background-color: #f3f9ff;
-    margin: 0 0 15px 15px;
-    font-size: 13px;
-  }
-  .infobox-header {
-    background-color: #b0c4de;
-    padding: 8px;
-    font-weight: bold;
-    text-align: center;
-  }
-  .infobox-row {
-    padding: 5px 8px;
-    border-bottom: 1px solid #ddd;
-  }
-  .infobox-label {
-    font-weight: bold;
-    display: inline-block;
-    width: 100px;
-  }
-  .section-header {
+  .post-title {
+    color: #d7dadc;
     font-size: 20px;
-    font-weight: bold;
-    margin: 20px 0 10px 0;
-    border-bottom: 1px solid #a7d7f9;
+    font-weight: 500;
+    margin-bottom: 8px;
   }
-  .war-item {
-    margin: 15px 0;
-    padding: 10px;
-    border-left: 3px solid #c60d27;
-    background-color: #f9f9f9;
+  .post-meta {
+    color: #818384;
+    font-size: 12px;
   }
-  .war-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #c60d27;
-    margin-bottom: 5px;
+  .post-content {
+    padding: 16px;
+    line-height: 1.5;
   }
-  .war-details {
-    font-size: 14px;
-    color: #333;
-  }
-  .timeline {
-    background-color: #f8f9fa;
-    border: 1px solid #a7d7f9;
-    padding: 15px;
-    margin: 20px 0;
-  }
-  .timeline-item {
-    margin: 8px 0;
-    font-size: 14px;
-  }
-  .timeline-date {
-    font-weight: bold;
-    color: #c60d27;
+  .post-flair {
     display: inline-block;
-    width: 100px;
+    background-color: #ff8717;
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 8px;
+  }
+  .comments-section {
+    border-top: 1px solid #343536;
+  }
+  .comment {
+    padding: 12px 16px;
+    border-bottom: 1px solid #343536;
+    background-color: #1a1a1b;
+  }
+  .comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .username {
+    font-weight: 500;
+    color: #d7dadc;
+    margin-right: 8px;
+  }
+  .user-flair {
+    background-color: #ff8717;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 11px;
+    margin-right: 8px;
+  }
+  .comment-score {
+    color: #818384;
+    font-size: 12px;
+    margin-right: 8px;
+  }
+  .comment-time {
+    color: #818384;
+    font-size: 12px;
+  }
+  .comment-body {
+    color: #d7dadc;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .comment-reply {
+    margin-left: 32px;
+    background-color: #222324;
+  }
+  .vote-buttons {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+  .vote-arrow {
+    color: #818384;
+    margin: 0 4px;
+  }
+  .sort-bar {
+    padding: 12px 16px;
+    border-bottom: 1px solid #343536;
+    font-size: 12px;
+    color: #d7dadc;
+  }
+  .edit-note {
+    background-color: #272729;
+    border: 1px solid #343536;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #d7dadc;
   }
 </style>
 </head>
 <body>
 
-<div class="wiki-container">
-  <div class="wiki-header">
-    <div class="wiki-title">Timeline of Conflicts (2035-2038)</div>
-    <div class="wiki-subtitle">From Wikipedia, the free encyclopedia</div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    <div class="subreddit-name">r/WorldNews</div>
+    <div class="post-title">
+      <span class="post-flair">BREAKING</span>
+      Chinese and Russian forces mobilizing at Mongolian border - UN Security Council emergency session called for tomorrow
+    </div>
+    <div class="post-meta">Posted by u/ConflictWatcher2038 | 12 hours ago | 89.2k upvotes</div>
   </div>
   
-  <div class="wiki-content">
-    <div class="infobox">
-      <div class="infobox-header">Conflicts Leading to WWIII</div>
-      <div class="infobox-row">
-        <span class="infobox-label">Period:</span> 2035-2038
+  <div class="post-content">
+    <p>Multiple sources confirming heavy military buildup on both sides. Chinese state media reporting "defensive preparations" while Russian media claims "protecting sovereign territory."</p>
+    
+    <p>White House press secretary just announced President will address the nation tonight at 8 PM EST. EU leaders holding emergency summit in Brussels.</p>
+    
+    <p>Markets are absolutely tanking - Dow futures down 1800 points, oil up 35%.</p>
+    
+    <div class="edit-note">
+      <strong>EDIT 1:</strong> Just got push notification - ALL commercial flights between Europe and Asia have been grounded effective immediately.<br><br>
+      <strong>EDIT 2:</strong> Friend in Berlin says they're stocking up on canned food and water. Stores are getting cleaned out.<br><br>
+      <strong>EDIT 3:</strong> Nuclear sirens just went off in Warsaw - false alarm but people are freaking the fuck out
+    </div>
+  </div>
+  
+  <div class="comments-section">
+    <div class="sort-bar">Best | Top | New | Controversial | 42,847 comments</div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="username">HistoryBuff88</span>
+        <span class="user-flair">Verified Historian</span>
+        <span class="comment-score">15.3k points</span>
+        <span class="comment-time">11 hours ago</span>
       </div>
-      <div class="infobox-row">
-        <span class="infobox-label">Total conflicts:</span> 5 major wars
+      <div class="comment-body">
+        Jesus fucking Christ. I study historical conflicts for a living and this has all the hallmarks of 1914-style escalation dynamics. The Mongolian thing isn't even about Mongolia - it's about Russia not wanting China to control the rare earth mineral deposits in the Gobi. China needs those for their military tech.
+        
+        If this kicks off, we could see mutual defense treaties activate like dominoes. Russia has their CSTO obligations, China has their weird quasi-alliance with Iran and Pakistan. This could spread to multiple theaters simultaneously.
       </div>
-      <div class="infobox-row">
-        <span class="infobox-label">Casualties:</span> ~2.3 million
-      </div>
-      <div class="infobox-row">
-        <span class="infobox-label">Global tension:</span> Critical
-      </div>
-      <div class="infobox-row">
-        <span class="infobox-label">WWIII start:</span> February 6, 2038
+      
+      <div class="comment comment-reply">
+        <div class="comment-header">
+          <span class="username">ConflictWatcher2038</span>
+          <span class="comment-score">8.7k points</span>
+          <span class="comment-time">10 hours ago</span>
+        </div>
+        <div class="comment-body">
+          This. People don't realize how close we are to the edge. The Saudi-Iranian war last year destabilized the entire Middle Eastern balance. India's still reeling from their conflict with Pakistan. Thailand and Cambodia just finished their thing. The international system is completely broken right now.
+        </div>
       </div>
     </div>
     
-    <p><strong>Timeline of Conflicts (2035-2038)</strong> refers to the series of regional wars and military interventions that preceded the outbreak of World War III on February 6, 2038. These conflicts fundamentally altered the global geopolitical landscape and directly contributed to the escalation that resulted in global warfare.</p>
-    
-    <div class="section-header">Background</div>
-    <p>The period from 2035-2038 was marked by increasing global instability following the collapse of several international alliances and the breakdown of traditional diplomatic mechanisms. Climate change-induced resource scarcity, economic depression, and the failure of the United Nations to effectively mediate disputes created conditions for multiple regional conflicts to erupt simultaneously.</p>
-    
-    <div class="section-header">The Great Nile War (2035-2036)</div>
-    <div class="war-item">
-      <div class="war-title">Great Nile War</div>
-      <div class="war-details">
-        <strong>Duration:</strong> March 15, 2035 - December 8, 2036<br>
-        <strong>Location:</strong> Egypt, Sudan, Ethiopia<br>
-        <strong>Combatants:</strong> Egypt vs. Ethiopia, Sudan, South Sudan<br>
-        <strong>Casualties:</strong> ~450,000 military, 1.2 million civilian<br>
-        <strong>Result:</strong> Ethiopian victory, Egyptian regime change
+    <div class="comment">
+      <div class="comment-header">
+        <span class="username">DoomerGirl2036</span>
+        <span class="user-flair">Climate Activist</span>
+        <span class="comment-score">12.1k points</span>
+        <span class="comment-time">10 hours ago</span>
+      </div>
+      <div class="comment-body">
+        My dad was in the Pentagon until last year. He called me an hour ago and said "if you have anywhere to go outside major cities, go now. Don't wait." He wouldn't elaborate but I've never heard him sound like that before. He's seen some shit but this is different.
+        
+        Currently packing up the car to head to my uncle's place in rural Vermont. This feels surreal.
       </div>
     </div>
     
-    <p>The Great Nile War began when Egypt launched a preemptive strike against the Grand Ethiopian Renaissance Dam, citing water security concerns. Ethiopian retaliation with Chinese-supplied hypersonic missiles devastated Egyptian military infrastructure. Sudan and South Sudan joined Ethiopia, leading to a protracted conflict that ended with the collapse of the Egyptian military government and the establishment of the Nile Basin Authority under Ethiopian leadership.</p>
-    
-    <div class="section-header">The Saudi-Iranian War (2036-2037)</div>
-    <div class="war-item">
-      <div class="war-title">Saudi-Iranian War</div>
-      <div class="war-details">
-        <strong>Duration:</strong> August 3, 2036 - October 19, 2037<br>
-        <strong>Location:</strong> Persian Gulf, Arabian Peninsula<br>
-        <strong>Combatants:</strong> Saudi Arabia, UAE, Bahrain vs. Iran, Iraq, Yemen<br>
-        <strong>Casualties:</strong> ~380,000 military, 850,000 civilian<br>
-        <strong>Result:</strong> Iranian victory, GCC collapse
+    <div class="comment">
+      <div class="comment-header">
+        <span class="username">EuropeanPerspective</span>
+        <span class="comment-score">9.4k points</span>
+        <span class="comment-time">9 hours ago</span>
+      </div>
+      <div class="comment-body">
+        European here. This is fucking terrifying. My grandparents survived WWII and said the atmosphere right now feels exactly like the summer of 1939. Everyone knows something terrible is coming but nobody knows exactly when or how bad it will be.
+        
+        The grocery stores in Prague were emptied by noon. People are queuing for gas. My company just told everyone to work from home indefinitely.
+        
+        Most concerning: Russian state TV is running constant "documentaries" about their nuclear capabilities. Not even trying to hide it anymore.
       </div>
     </div>
     
-    <p>Following the Egyptian defeat, Iran moved to fill the power vacuum in the Middle East. The assassination of the Saudi Crown Prince by Yemeni militants backed by Iran provided the pretext for Saudi Arabia to declare war. Iranian ballistic missile strikes destroyed Saudi oil infrastructure, while Iraqi Shia militias overran Kuwait and eastern Saudi Arabia. The war ended with the fall of Riyadh and the establishment of pro-Iranian governments across the region.</p>
-    
-    <div class="section-header">The Indian-Pakistan War (2036-2037)</div>
-    <div class="war-item">
-      <div class="war-title">Fourth Indo-Pakistani War</div>
-      <div class="war-details">
-        <strong>Duration:</strong> September 12, 2036 - March 5, 207<br>
-        <strong>Location:</strong> Kashmir, Punjab, Rajasthan<br>
-        <strong>Combatants:</strong> India vs. Pakistan<br>
-        <strong>Casualties:</strong> ~520,000 military, 2.1 million civilian<br>
-        <strong>Result:</strong> Pakistani victory, nuclear exchange limited
+    <div class="comment">
+      <div class="comment-header">
+        <span class="username">MilitaryAnalyst92</span>
+        <span class="user-flair">Defense Analyst</span>
+        <span class="comment-score">7.8k points</span>
+        <span class="comment-time">8 hours ago</span>
+      </div>
+      <div class="comment-body">
+        The thing that scares me most? Both sides have been preparing for this exact scenario for years. The Chinese have those new hypersonic missiles that can hit Moscow in 8 minutes. Russia has been building up their tactical nuclear stockpile since 2030.
+        
+        If this goes hot, it won't be like the proxy wars we've seen. This will be direct great power conflict with both sides having first-strike capabilities. The escalation ladder is missing several rungs.
+        
+        My contacts in the defense industry say the US military has been at DEFCON 2 since yesterday. That's one step below maximum readiness.
       </div>
     </div>
     
-    <p>The most devastating Indo-Pakistani conflict began with India's abrogation of the Indus Waters Treaty following the Middle Eastern wars. Pakistan responded with conventional military strikes that rapidly escalated. The limited nuclear exchange of December 2036 (Delhi and Karachi) shocked the world but did not end the conflict. Pakistani forces captured Delhi in March 2037, forcing an Indian surrender and the establishment of a provisional government.</p>
-    
-    <div class="section-header">The Thai-Cambodian War (2037)</div>
-    <div class="war-item">
-      <div class="war-title">Thai-Cambodian War</div>
-      <div class="war-details">
-        <strong>Duration:</strong> January 8, 2037 - September 23, 2037<br>
-        <strong>Location:</strong> Cambodia, eastern Thailand<br>
-        <strong>Combatants:</strong> Thailand vs. Cambodia, Vietnam<br>
-        <strong>Casualties:</strong> ~180,000 military, 420,000 civilian<br>
-        <strong>Result:</strong> Vietnamese victory, Thai monarchy overthrown
+    <div class="comment">
+      <div class="comment-header">
+        <span class="username">RegularCitizen2035</span>
+        <span class="comment-score">6.2k points</span>
+        <span class="comment-time">7 hours ago</span>
+      </div>
+      <div class="comment-body">
+        I'm just a regular guy with a wife and two kids. We've been watching this unfold like it's a movie or something. But today it hit different. My wife called me crying from Costco - people are fighting over water. FIGHTING. In suburban America.
+        
+        We have enough savings for maybe 2-3 months if things go bad. What the fuck are we supposed to do? Move to New Zealand? Buy a bunker? This isn't supposed to happen here.
+        
+        Sorry for rambling but I feel like I'm losing my mind and you're the only people I can talk to about this.
+      </div>
+      
+      <div class="comment comment-reply">
+        <div class="comment-header">
+          <span class="username">MomOfThree2037</span>
+          <span class="comment-score">4.1k points</span>
+          <span class="comment-time">6 hours ago</span>
+        </div>
+        <div class="comment-body">
+          You're not losing your mind. We're all feeling this. I have three teenagers and I told them today that they might not finish high school. How do you explain to your kids that everything they've known might be gone?
+          
+          The worst part is the waiting. We know something terrible might happen tomorrow or next week or next month, but we still have to go to work and make dinner and help with homework like everything is normal.
+        </div>
       </div>
     </div>
     
-    <p>Thailand's military government, emboldened by the chaos in South Asia, invaded Cambodia to secure water resources and territory. Vietnamese intervention on Cambodia's side turned the tide. Thai military defeats led to a popular uprising that overthrew the monarchy and established a republic that sued for peace.</p>
-    
-    <div class="section-header">Chinese Invasion of Mongolia (2037-2038)</div>
-    <div class="war-item">
-      <div class="war-title">Mongolian Campaign</div>
-      <div class="war-details">
-        <strong>Duration:</strong> June 15, 2037 - January 28, 2038<br>
-        <strong>Location:</strong> Mongolia, Inner Mongolia<br>
-        <strong>Combatants:</strong> China vs. Mongolia, Russia<br>
-        <strong>Casualties:</strong> ~320,000 military, 95,000 civilian<br>
-        <strong>Result:</strong> Chinese victory, Russian intervention
+    <div class="comment">
+      <div class="comment-header">
+        <span class="username">AsianFinancialExpert</span>
+        <span class="user-flair">Economist</span>
+        <span class="comment-score">5.3k points</span>
+        <span class="comment-time">5 hours ago</span>
+      </div>
+      <div class="comment-body">
+        From an economic perspective, we're already in the early stages of global collapse. The supply chains that survived the pandemics and regional wars can't handle this level of uncertainty.
+        
+        China is Russia's largest trading partner. If this war happens, we're looking at complete bifurcation of the global economy. Two separate systems that can't interact. Think about what that means for literally everything you buy.
+        
+        The 2030s were supposed to be the decade of recovery. Instead we're about to witness the end of the globalized world that existed since 1990.
       </div>
     </div>
-    
-    <p>China's invasion of Mongolia was ostensibly to secure rare earth mineral deposits but was actually a strategic move to encircle Russia. The rapid Chinese advance prompted Russian military intervention in January 2038, leading to direct Sino-Russian conflict that would expand into World War III on February 6, 2038.</p>
-    
-    <div class="section-header">Timeline of Major Events</div>
-    <div class="timeline">
-      <div class="timeline-item"><span class="timeline-date">2035</span>March - Egypt strikes Ethiopian dam</div>
-      <div class="timeline-item"><span class="timeline-date">2036</span>August - Saudi-Iranian war begins</div>
-      <div class="timeline-item"><span class="timeline-date">2036</span>September - India-Pakistan nuclear exchange</div>
-      <div class="timeline-item"><span class="timeline-date">2037</span>January - Thailand invades Cambodia</div>
-      <div class="timeline-item"><span class="timeline-date">2037</span>June - China invades Mongolia</div>
-      <div class="timeline-item"><span class="timeline-date">2038</span>February 6 - World War III begins</div>
-    </div>
-    
-    <div class="section-header">Aftermath and Consequences</div>
-    <p>The cumulative effect of these regional conflicts created a global security crisis unprecedented in modern history. The traditional international order had completely collapsed, with former allies becoming enemies and new alliances forming based on immediate strategic needs. The economic disruption from these wars, particularly the destruction of Middle Eastern oil infrastructure and South Asian manufacturing, triggered a global depression that made further conflict inevitable.</p>
-    
-    <p>By early 2038, the world was divided into three major blocs: the Chinese-led Pan-Asian Coalition, the Russian-Iranian Eurasian Alliance, and the remnants of NATO supported by various regional powers. The Mongolian Campaign provided the spark that ignited the global conflict, as Russian intervention against China triggered mutual defense obligations that escalated into World War III.</p>
   </div>
 </div>
 
