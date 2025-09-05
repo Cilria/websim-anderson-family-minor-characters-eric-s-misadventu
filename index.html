@@ -1,221 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historic Political Realignment: Democrats Shift Right on Fiscal Policy - CNN Breaking News</title>
+    <style>
+        body {
+            font-family: CNN, Helvetica Neue, Helvetica, Arial, Utopia, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #262626;
+        }
+        .cnn-header {
+            background-color: #cc0000;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .breaking-banner {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { background-color: #8B0000; }
+            50% { background-color: #cc0000; }
+            100% { background-color: #8B0000; }
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .article-header {
+            padding: 30px 40px 20px 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .headline {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .byline {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .article-body {
+            padding: 0 40px 40px 40px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .article-body p {
+            margin-bottom: 20px;
+        }
+        .highlight-box {
+            background-color: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .update-bar {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .live-indicator {
+            display: inline-block;
+            background-color: #cc0000;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .related-stories {
+            background-color: #f8f8f8;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .related-stories h3 {
+            margin-top: 0;
+            color: #cc0000;
+        }
+        .related-stories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .related-stories li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .related-stories a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .related-stories a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <div class="cnn-header">
+        CNN
+    </div>
+    
+    <div class="breaking-banner">
+        ⚡ BREAKING: Historic Political Realignment ⚡
+    </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">My great-grandfather Dr. Bradford "Brad" William Kenneth Clayborn (1899-2002) - born on New Year's Eve, died at 102 - looking for medical records from his 48-year cardiology practice in Maryland</div>
-    <div class="post-meta">
-      <span class="comment-score">892 upvotes</span> • posted by <span class="comment-author">MarylandRoots</span> <span class="flair">Genealogy Enthusiast</span>
-    </div>
-    <div class="post-content">
-      <p>Bradford "Brad" William Kenneth Clayborn lived from December 31, 1899 to December 10, 2002 - literally born on the last day of the 19th century and died at 102! Here's what I've gathered:</p>
-      
-      <ul>
-        <li>Born in Leesburg, VA to George William Clayborn Sr (railroad serviceman) and Nancy Ann Bradford</li>
-        <li>Named after maternal grandfather William Kenneth Bradford</li>
-        <li>Family moved to Clarksburg, MD in 1900 for father's government job</li>
-        <li>Studied medicine and became a cardiovascular specialist</li>
-        <li>Set up practice in Glenwood, MD in the 1920s</li>
-        <li>Married Jean in 1922, had 5 children</li>
-        <li>Practiced until retirement in 1970</li>
-        <li>Lived alone until death at 102</li>
-      </ul>
-      
-      <p>I'm trying to find any records of his medical practice - patient records (if they exist), medical society memberships, anything! He practiced for 48 years, someone must have records!</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MarylandMedicalHistory</span> • <span class="comment-score">456 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p>FOUND HIM! Dr. Bradford W. K. Clayborn was licensed to practice medicine in Maryland on June 15, 1922 - license #MD-1922-0847. He was a member of the Maryland State Medical Society and served as President of the Montgomery-Frederick County Medical Association in 1947.</p>
-        
-        <p>His practice was located at 10801 Warfield Road in Glenwood - which was actually his house! He converted the first floor into a medical office and lived upstairs with his family. The building is still there, now it's a private residence again.</p>
-        
-        <p>Here's the incredible part - I found his medical school records at the University of Maryland School of Medicine. He graduated in 1922 at age 22 (started at 18!). His thesis was on "The Cardiovascular Effects of Tobacco Use in Rural Maryland Populations" - pretty advanced for 1922!</p>
-        
-        <p>During WW2, he served as a civilian medical consultant to Fort Detrick, examining soldiers with heart conditions. There's a whole file on him at the National Archives - including letters where he argued against sending men with heart murmurs overseas.</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">ClarksburgChronicler</span> • <span class="comment-score">312 points</span> • 5 hours ago
-        </div>
-        <div class="comment-content">
-          <p>Found his father's government job! George William Clayborn Sr. was hired by the U.S. Post Office Department in 1900 as a "Railway Mail Clerk" - basically he sorted mail on trains between Washington and Pittsburgh. Made $1,200/year, which was excellent money.</p>
-          
-          <p>The family lived at 205 East Diamond Avenue in Clarksburg - I found the actual house! It's a Victorian built in 1892. George worked the B&O Railroad route until 1918 when he was transferred to the main post office in Clarksburg as a "Chief Clerk."</p>
-          
-          <p>Bradford got his nickname "Brad" at age 8 when he started Clarksburg Elementary in 1908. His teacher, Miss Elizabeth Johnson, wrote on his report card: "Bradford prefers to be called 'Brad' - shows leadership qualities even at this young age."</p>
-          
-          <p>The family attended the Clarksburg Methodist Episcopal Church. I found baptism records for all the children - Bradford was baptized there on January 15, 1900, just two weeks after birth.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">CardiologyArchivist</span> • <span class="comment-score">278 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>This is AMAZING - Dr. Clayborn was a pioneer in Maryland cardiology! I found articles he published in the Maryland Medical Journal:</p>
-        
-        <p><strong>1928:</strong> "Early Detection of Rheumatic Heart Disease in Children" - he was among the first in the state to use the new stethoscope techniques</p>
-        <p><strong>1935:</strong> "Dietary Management of Cardiac Patients in Rural Practice" - revolutionary for suggesting low-sodium diets</p>
-        <p><strong>1943:</strong> "The Cardiac Effects of Wartime Stress" - studied local families during WW2</p>
-        
-        <p>He maintained detailed patient records (unusual for rural doctors) - I found reference to these in the Maryland Historical Society archives. They have 23 boxes of his papers from 1922-1970, including patient case files, correspondence, and medical journals.</p>
-        
-        <p>During the 1948 polio epidemic, he worked with Dr. Jonas Salk's team at the University of Pittsburgh, examining cardiac complications in polio patients. There's a letter from Salk thanking him for his "invaluable contributions to understanding the cardiac manifestations of poliomyelitis."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">GlenwoodLocal</span> • <span class="comment-score">201 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>I grew up in Glenwood and remember Dr. Clayborn! He was our family doctor until he retired. My mom still talks about him - he delivered me in 1965 and told my mom "this one has a strong heart" while listening to my newborn chest.</p>
-        
-        <p>His office was indeed in his house on Warfield Road. The waiting room was his original living room - dark wood paneling, medical journals on the coffee table, and he had this ancient EKG machine that took up half the room. He charged $15 for a consultation in the 1960s, $25 if you needed an EKG.</p>
-        
-        <p>He was old-school - no appointment needed, just walk in and wait your turn. Sometimes you'd wait 3-4 hours, but he never rushed anyone. I remember him chain-smoking while examining patients (crazy, I know) and he had this gravelly voice from years of smoking.</p>
-        
-        <p>After retirement, he used to sit on his front porch and wave at everyone who passed. My dad said he lived to 102 because "he already saw everything worth seeing and wasn't missing anything."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MarriageRecordsMD</span> • <span class="comment-score">167 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found his marriage certificate! Bradford William Kenneth Clayborn married Jean Elizabeth Morrison on September 16, 1922 at the Clarksburg Methodist Church. He was 22, she was 20. Best man was his brother George Jr., maid of honor was Jean's sister Mary.</p>
-        
-        <p>Jean's father, Robert Morrison, was a bank president in Frederick - so she came from money. Her dowry included $5,000 cash and a house lot in Glenwood (which became their home/office). The wedding announcement in the Clarksburg paper called it "the social event of the season."</p>
-        
-        <p>They honeymooned at the Greenbrier Resort in West Virginia - I found their hotel registration! They stayed in room 247 for a week. Total cost: $85 including meals.</p>
-        
-        <p>Jean died in 1988 at age 86. She was buried in the Morrison family plot in Frederick. Bradford never remarried and lived another 14 years alone. Their children: Robert Morrison (1923), Nancy Bradford (1925), William Kenneth (1927), Jean Elizabeth Jr. (1930), and Thomas George (1934).</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">CentenarianResearcher</span> • <span class="comment-score">143 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found the secret to his longevity! When he turned 100 in 1999, the local paper did a big story on him. When asked about living to 100, he said: "I drank whiskey every day, smoked like a chimney, ate red meat, and told dirty jokes. The good Lord must have a sense of humor."</p>
-        
-        <p>But here's what I found - he had incredible genetics. His mother Nancy Ann Bradford lived to 94 (died 1953), his maternal grandfather William Kenneth Bradford lived to 96 (died 1918), and his great-aunt lived to 103. The men in his family typically lived into their 90s.</p>
-        
-        <p>He was still seeing patients part-time until age 88! The Maryland Board of Physicians has his last renewal application from 1987 when he was 87. His medical license was active for 75 years - probably a state record.</p>
-        
-        <p>He died December 10, 2002 at St. Joseph's Hospital in Baltimore from "complications of old age" - basically everything just wore out. His daughter Nancy told the Baltimore Sun: "He said he wanted to live to see the new millennium, and he did. After that, he was ready to go."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MarylandRoots</span> • <span class="comment-score">98 points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Oh my goodness, this is beyond anything I expected! The medical journal articles, the wedding at Greenbrier, the polio research with Salk, the patient records at Maryland Historical Society - I can't believe how much you all found!</p>
-        
-        <p>I'm definitely planning a trip to the Maryland Historical Society to see those 23 boxes of papers. And I need to drive past the house on Warfield Road - I can't believe it's still standing!</p>
-        
-        <p>My mom (his granddaughter) is going to be amazed by all this. She remembers visiting "Grandpa Doc" but had no idea about most of this. Thank you all so much - this is exactly why I love genealogy!</p>
-      </div>
-    </div>
-  </div>
-</div>
+    <div class="container">
+        <article>
+            <header class="article-header">
+                <div class="timestamp">January 1, 2025 - 6:00 AM ET</div>
+                <h1 class="headline">Democratic Party announces dramatic fiscal policy shift, Republicans embrace progressive economics in stunning political realignment</h1>
+                <div class="byline">By Jake Tapper, Dana Bash and Kaitlan Collins, CNN</div>
+            </header>
 
+            <div class="article-body">
+                <p><span class="live-indicator">LIVE</span>In an unprecedented move that political scientists are calling the most significant realignment in American political history since the Civil Rights era, the Democratic National Committee announced early this morning that it is abandoning its traditional progressive fiscal policies in favor of what party leaders term "fiscal responsibility through conservative economics."</p>
+
+                <p>Simultaneously, the Republican National Committee released its own statement declaring that the GOP will embrace "progressive economic policies that actually work for working families" - marking a complete inversion of the parties' traditional economic platforms that have defined American politics for nearly a century.</p>
+
+                <div class="update-bar">
+                    <strong>DEVELOPING:</strong> President Biden is expected to address the nation at 8 PM ET tonight. Meanwhile, former President Trump posted on Truth Social: "Finally, Republicans are getting smart about economics! The Democrats have been wrong about everything for 50 years!"
+                </div>
+
+                <p>The Democratic shift, announced by party chair Jaime Harrison, includes support for significant tax cuts for corporations and high earners, major reductions in federal spending on social programs, and a commitment to balanced budgets through spending cuts rather than tax increases. The party cited "the need to modernize our approach to economic growth" and "learning from successful conservative fiscal policies."</p>
+
+                <p>"The era of big government spending is over," Harrison declared at a press conference in Washington. "We have studied the data, and conservative fiscal policies have consistently delivered better economic outcomes. It's time Democrats admit we were wrong about many of our economic assumptions."</p>
+
+                <div class="highlight-box">
+                    "This is political suicide or political genius - there's no middle ground here. The Democrats are essentially becoming the party of Reagan economics while Republicans are embracing what Bernie Sanders has been advocating for decades. It's absolutely mind-blowing." - Dr. Larry Sabato, University of Virginia Center for Politics
+                </div>
+
+                <p>The Republican announcement, released within minutes of the Democratic statement, was equally stunning. RNC Chairwoman Ronna McDaniel outlined a new platform that includes universal healthcare coverage, major investments in green energy infrastructure, significant tax increases on the wealthy, and expanded social safety net programs.</p>
+
+                <p>"The Republican Party has evolved," McDaniel stated. "We now understand that trickle-down economics doesn't work, that climate change requires massive government investment, and that working families need strong social programs to thrive in the modern economy."</p>
+
+                <p>The announcements have sent shockwaves through Washington, with lawmakers scrambling to understand the implications. Several Democratic senators, speaking anonymously to CNN, expressed complete bewilderment at their party's direction. Meanwhile, some Republican senators privately admitted they were "blindsided" by the RNC's announcement.</p>
+
+                <p>Financial markets reacted violently to the news, with the Dow Jones Industrial Average initially dropping 800 points before recovering, as investors struggled to process the implications of both major parties abandoning their traditional economic orthodoxies simultaneously.</p>
+
+                <p>The shift appears to have been coordinated in secret, with both parties citing "extensive polling data" showing Americans are ready for a new approach to economic policy. However, early CNN polling suggests voters are deeply confused by the changes, with 73% of respondents saying they "don't understand what's happening to American politics."</p>
+
+                <div class="related-stories">
+                    <h3>Related Stories</h3>
+                    <ul>
+                        <li><a href="#">Progressive Democrats threaten to form new party after fiscal policy shift</a></li>
+                        <li><a href="#">Trump Republicans vow to "take back" GOP from progressive takeover</a></li>
+                        <li><a href="#">Constitutional scholars debate legality of party platform changes</a></li>
+                        <li><a href="#">Global markets stabilize after initial political shockwave</a></li>
+                        <li><a href="#">Third-party advocates see opportunity in major party realignment</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
