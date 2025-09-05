@@ -8,368 +8,336 @@
     margin: 0;
     padding: 20px;
   }
-  .reddit-container {
-    max-width: 740px;
+  .wiki-container {
+    max-width: 900px;
     margin: 0 auto;
     background: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid #a7d7f9;
+    border-radius: 2px;
   }
-  .reddit-header {
-    background: #0079d3;
-    color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    font-size: 16px;
+  .wiki-header {
+    background: #f6f7f8;
+    padding: 20px;
+    border-bottom: 1px solid #c8ccd1;
   }
-  .subreddit-name {
-    color: #0079d3;
-    font-weight: bold;
+  .wiki-title {
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    color: #000;
+  }
+  .wiki-subtitle {
     font-size: 14px;
+    color: #54595d;
+    margin: 0;
   }
-  .post-title {
+  .wiki-content {
+    padding: 20px;
+    line-height: 1.6;
+  }
+  .infobox {
+    float: right;
+    width: 300px;
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    margin: 0 0 15px 15px;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .infobox th {
+    text-align: left;
+    padding: 3px 5px;
+    background: #eaecf0;
+  }
+  .infobox td {
+    padding: 3px 5px;
+  }
+  .war-section {
+    margin: 25px 0;
+    padding: 15px;
+    border-left: 4px solid #c8ccd1;
+    background: #f8f9fa;
+  }
+  .war-title {
     font-size: 20px;
     font-weight: bold;
-    margin: 15px 0 5px 0;
-    color: #1a1a1a;
-    line-height: 1.3;
-  }
-  .post-meta {
-    color: #787c7e;
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
-  .post-content {
-    padding: 15px;
-    border-bottom: 1px solid #edeff1;
-  }
-  .comment {
-    padding: 12px 15px 12px 20px;
-    border-left: 2px solid #edeff1;
-    margin-left: 8px;
-  }
-  .comment-meta {
-    font-size: 12px;
-    color: #787c7e;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #1a1a1a;
-  }
-  .comment-text {
-    font-size: 14px;
-    line-height: 1.5;
+    color: #0645ad;
     margin-bottom: 8px;
   }
-  .comment-actions {
-    font-size: 12px;
-    color: #878a8c;
-  }
-  .score {
-    color: #1a1b1b;
-    font-weight: bold;
-  }
-  .flair {
-    background: #e9f5fd;
-    color: #0079d3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 4px;
-  }
-  .flair-researcher {
-    background: #ff6b35;
-    color: #fff;
-  }
-  .flair-military {
-    background: #2e7d32;
-    color: #fff;
-  }
-  .flair-genealogy {
-    background: #8b0000;
-    color: #fff;
-  }
-  .award {
-    color: #d4b572;
-    margin-right: 8px;
-  }
-  .thread-divider {
-    border-top: 1px solid #edeff1;
-    margin: 15px 0;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin: 8px 0;
-  }
-  .document-image {
-    max-width: 100%;
-    border: 1px solid #ddd;
+  .war-details {
     margin: 10px 0;
   }
-  .family-tree {
-    background: #f8f9fa;
-    padding: 12px;
-    border-left: 3px solid #0079d3;
-    font-family: 'Courier New', monospace;
-    margin: 8px 0;
+  .war-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
   }
-  .records-list {
+  .stat-box {
+    background: white;
+    padding: 10px;
+    border: 1px solid #e1e4e8;
+    border-radius: 3px;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: #586069;
+    text-transform: uppercase;
+  }
+  .stat-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #24292e;
+  }
+  .timeline {
+    background: #fff8dc;
+    padding: 15px;
+    border-left: 4px solid #ffd700;
+    margin: 20px 0;
+  }
+  .timeline-item {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  .timeline-date {
+    font-weight: bold;
+    color: #d73502;
+  }
+  .casualties {
+    color: #d73502;
+    font-weight: bold;
+  }
+  .geopolitical-impact {
+    background: #fff3cd;
+    padding: 15px;
+    border-left: 4px solid #ffc107;
+    margin: 15px 0;
+  }
+  .toc {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 13px;
+  }
+  .toc-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .toc ul {
     list-style-type: none;
     padding-left: 0;
   }
-  .records-list li {
-    padding: 4px 0;
-    border-bottom: 1px solid #eee;
-  }
-  .records-list li:last-child {
-    border-bottom: none;
+  .toc li {
+    margin: 3px 0;
   }
 </style>
 </head>
 <body>
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
+<div class="wiki-container">
+  <div class="wiki-header">
+    <h1 class="wiki-title">Wars preceding World War III (2035-2038)</h1>
+    <p class="wiki-subtitle">From Wikipedia, the free encyclopedia</p>
   </div>
   
-  <div class="post-content">
-    <div class="subreddit-name">r/Genealogy</div>
-    <h1 class="post-title">[Brick Wall] Colonel Robert Harland Jemison (1884-1984) - 100 years, 7 kids, 3 wars, but missing 1940 census and military records?</h1>
-    <div class="post-meta">
-      Posted by <span class="comment-author">u/AlabamaGenealogyBuff</span> • 6 hours ago • 1.2k upvotes • 247 comments • 12 awards
+  <div class="wiki-content">
+    <div class="infobox">
+      <table style="width:100%;">
+        <tr><th colspan="2" style="text-align:center; background:#d1e4fd;">Conflicts leading to World War III</th></tr>
+        <tr><td><strong>Date</strong></td><td>March 2035 – February 6, 2038</td></tr>
+        <tr><td><strong>Location</strong></td><td>Africa, Middle East, South Asia, Southeast Asia</td></tr>
+        <tr><td><strong>Caused by</strong></td><td>Resource scarcity, regional tensions, great power competition</td></tr>
+        <tr><td><strong>Result</strong></td><td>Global conflict begins February 6, 2038</td></tr>
+        <tr><td><strong>Total casualties</strong></td><td class="casualties">~4.2 million</td></tr>
+      </table>
     </div>
     
-    <p>I've been researching my great-great-grandfather Colonel Robert Harland Jemison for years, but I've hit a brick wall with some key records. Here's what I have:</p>
+    <p>The period from 2035 to 2038 was marked by a series of interconnected regional conflicts that collectively destabilized the global order and directly precipitated <strong>World War III</strong>. These conflicts, while initially localized, drew in major powers through alliance systems, resource dependencies, and strategic interests, creating the conditions for global warfare.</p>
     
-    <ul>
-      <li><strong>Born:</strong> October 15, 1884 in Rural Central Alabama (exact location disputed - some say Chilton County, others Shelby County)</li>
-      <li><strong>Military:</strong> Enlisted at 18 (1902), served until forced retirement, rose from Private to Colonel</li>
-      <li><strong>Wars:</strong> WWI, WWII, Korea (but can't find his service records for any of them)</li>
-      <li><strong>Married:</strong> Mary Elizabeth Thornton (1890-1954) - had 7 children between 1910-1930</li>
-      <li><strong>Post-military:</strong> Bank board member, lived alone after wife's death</li>
-      <li><strong>Died:</strong> April 2, 1984 at age 100 years, 199 days - oldest surviving Colonel at time of death</li>
-    </ul>
+    <div class="timeline">
+      <div class="timeline-item"><span class="timeline-date">January 2035:</span> UN Climate Report warns of "irreversible tipping points"</div>
+      <div class="timeline-item"><span class="timeline-date">February 2035:</span> Nile water levels reach historic lows</div>
+      <div class="timeline-item"><span class="timeline-date">March 2035:</span> Saudi Arabia announces 40% oil production cut</div>
+      <div class="timeline-item"><span class="timeline-date">April 2035:</span> India-Pakistan border skirmishes begin</div>
+    </div>
     
-    <p><strong>Missing:</strong> 1940 census record, WWI/WWII service records, Korea records, and can't locate any military pension files. Any help would be appreciated!</p>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/NationalArchivesStaff</span> <span class="flair flair-researcher">NARA Employee</span> • <span class="score">89.7k points</span> • 5 hours ago • <span class="award">🏆</span>
-    </div>
-    <div class="comment-text">
-      I work at NARA and can help! The 1973 National Archives fire destroyed 16-18 million military personnel records, including most WWI and WWII Army records. However, Colonel Jemison's records might have survived because:
-      <br><br>
-      1. <strong>Officer records</strong> were often filed separately from enlisted records
-      2. <strong>Distinguished service</strong> might have separate commendation files
-      3. <strong>Post-retirement board positions</strong> might have federal appointment records
+    <div class="war-section">
+      <div class="war-title">The Great Nile War (March 2035 – August 2036)</div>
       
-      <br><br>
-      Here's what to request:
-      • OMPF (Official Military Personnel File) - even if fire damaged, some survived
-      • Awards and decorations files
-      • Officer promotion board records
-      • Any testimony before Congressional committees (banking boards often required this)
+      <p><strong>Location:</strong> Egypt, Sudan, Ethiopia, Uganda</p>
+      <p><strong>Casualties:</strong> 847,000 military and civilian deaths</p>
       
-      <br><br>
-      Also check state archives - Alabama maintained separate veteran records that weren't affected by the fire.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/VeteranGenealogist</span> <span class="flair flair-genealogy">30+ Years Research</span> • <span class="score">67.3k points</span> • 4 hours ago
-    </div>
-    <div class="comment-text">
-      Found some additional details! Robert H. Jemison was actually promoted to Colonel during WWII, not before. Here's the timeline I've pieced together from newspaper clippings:
-      <br><br>
-      <strong>1902:</strong> Enlists as Private, Company G, 1st Alabama Infantry (Alabama National Guard)
-      <br>
-      <strong>1916:</strong> Pancho Villa Expedition - still a Sergeant
-      <br>
-      <strong>1917-1918:</strong> WWI - promoted to Lieutenant (field commission)
-      <br>
-      <strong>1920s:</strong> Remained in National Guard, rose through ranks
-      <br>
-      <strong>1941:</strong> Called to active duty for WWII as Major
-      <br>
-      <strong>1943:</strong> Promoted to Colonel (temporary rank)
-      <br>
-      <strong>1945:</strong> Made permanent Colonel
-      <br>
-      <strong>1952:</strong> Korea - served in logistics command (too old for combat)
-      <br>
-      <strong>1954:</strong> Forced retirement at age 70 (maximum age limit)
+      <p>The conflict began when Ethiopia completed the Grand Ethiopian Renaissance Dam Phase III, reducing Nile flow to Egypt by 35%. Egypt launched airstrikes on Ethiopian dams in March 2035, triggering a regional war involving Sudan, Uganda, and eventually Gulf state proxies.</p>
       
-      <br><br>
-      The 1940 census issue is likely because he was stationed at Fort Benning, GA as a training officer. Check enumeration district 59-28B.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/AlabamaCountyClerk</span> <span class="flair flair-researcher">County Records</span> • <span class="score">45.8k points</span> • 4 hours ago
-    </div>
-    <div class="comment-text">
-      Found his birth record! Robert Harland Jemison was born October 15, 1884 in Jemison, Alabama (Chilton County). The town was actually named after his grandfather's family - they were early settlers. Here's the family tree:
-      
-      <div class="family-tree">
-        William Jemison (1810-1890) - Early settler, town named after him
-        ├── Thomas Jemison (1842-1918) - Civil War veteran
-        │   └── Robert Harland Jemison (1884-1984) - Your ancestor
-        └── Other siblings...
+      <div class="war-stats">
+        <div class="stat-box">
+          <div class="stat-label">Duration</div>
+          <div class="stat-value">17 months</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Total Casualties</div>
+          <div class="stat-value">847,000</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Economic Impact</div>
+          <div class="stat-value">$2.1 trillion</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Countries Involved</div>
+          <div class="stat-value">8 nations</div>
+        </div>
       </div>
       
-      Also found his marriage license: December 23, 1909, married Mary Elizabeth Thornton in Birmingham, AL. He was 25, she was 19. Her father was a prominent merchant.
+      <div class="geopolitical-impact">
+        <strong>Geopolitical Impact:</strong> The war destroyed 40% of Nile Valley agricultural capacity, triggering global food price spikes. Western intervention on Egypt's side alienated sub-Saharan African nations, while Chinese support for Ethiopia secured rare earth mineral access.
+      </div>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/MilitaryRecordsBuff</span> <span class="flair flair-military">Military Historian</span> • <span class="score">38.2k points</span> • 3 hours ago
-    </div>
-    <div class="comment-text">
-      Found his actual service records! The Colonel rank was honorary - he was a Lieutenant Colonel (O-5), but called "Colonel" as tradition. Here are the real details:
-      <br><br>
-      <strong>Serial Number:</strong> 01298374 (pre-1973 system)
-      <br>
-      <strong>Final Rank:</strong> Lieutenant Colonel (O-5)
-      <br>
-      <strong>Unit:</strong> Quartermaster Corps, later Ordnance Department
-      <br>
-      <strong>Decorations:</strong> Legion of Merit, Bronze Star (WWII), Army Commendation Medal with oak leaf cluster (Korea)
-      <br>
-      <strong>Service #:</strong> 1-012-983-74 (old system)
+    
+    <div class="war-section">
+      <div class="war-title">Saudi-Iranian War (September 2035 – December 2037)</div>
       
-      <br><br>
-      The "forced retirement" wasn't disciplinary - it was age limit. He tried to get a waiver at 70 but was denied due to Korean War policies favoring younger officers.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/FamilyOfSeven</span> • <span class="score">31.7k points</span> • 3 hours ago
-    </div>
-    <div class="comment-text">
-      I'm descended from his oldest daughter! Here are the seven children (all born Birmingham area):
+      <p><strong>Location:</strong> Arabian Peninsula, Persian Gulf, proxy conflicts in Levant</p>
+      <p><strong>Casualties:</strong> 1,234,000 military and civilian deaths</p>
       
-      <ul class="records-list">
-        <li><strong>1. Roberta Mae Jemison</strong> (1910-1998) - Married William Thompson</li>
-        <li><strong>2. William Thomas Jemison</strong> (1912-1978) - Died in car accident</li>
-        <li><strong>3. Mary Elizabeth Jemison</strong> (1915-2009) - "Aunt Mary" - lived to 94</li>
-        <li><strong>4. James Harland Jemison</strong> (1917-1989) - Korean War veteran</li>
-        <li><strong>5. Charles Edward Jemison</strong> (1920-2005) - Bank president</li>
-        <li><strong>6. Margaret Louise Jemison</strong> (1923-2012) - Never married, librarian</li>
-        <li><strong>7. Helen Ruth Jemison</strong> (1925-2020) - Youngest, lived to 95</li>
-      </ul>
+      <p>Triggered by Iranian-backed Houthi seizure of Saudi oil facilities using advanced Chinese anti-ship missiles. Saudi Arabia declared war in September 2035, backed by UAE, Bahrain, and Israeli intelligence. Iran responded with ballistic missile attacks on Gulf oil infrastructure.</p>
       
-      After their mother died in 1954, the Colonel lived alone but had Sunday dinner with rotating children/grandchildren every week. He was sharp as a tack until the end - could still recite military regulations at 100.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/BankingHistorian</span> • <span class="score">27.4k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Found his banking records! After military retirement, he served on boards of:
-      <br><br>
-      • <strong>First National Bank of Birmingham</strong> (1954-1972) - Board Member
-      • <strong>Alabama Trust Company</strong> (1956-1980) - Advisory Director
-      • <strong>Southern Bankers Association</strong> (1958-1968) - Military liaison (part-time)
+      <div class="war-stats">
+        <div class="stat-box">
+          <div class="stat-label">Oil Production Lost</div>
+          <div class="stat-value">68%</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Civilian Casualties</div>
+          <div class="stat-value">743,000</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Naval Vessels Lost</div>
+          <div class="stat-value">47 ships</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Nuclear Threat Level</div>
+          <div class="stat-value">DEFCON 2</div>
+        </div>
+      </div>
       
-      <br><br>
-      His military pension was $2,847/month in 1984 (about $8,500 in today's money). Combined with bank director fees, he was quite comfortable. Lived in the same house from 1925 until death - 1234 Highland Avenue, Birmingham (house still standing).
+      <div class="geopolitical-impact">
+        <strong>Geopolitical Impact:</strong> The war removed 12% of global oil production, accelerating the transition to wartime economies. Russian oil sales to both sides funded their military buildup. The conflict drew in US, Chinese, and Russian forces through "protection of shipping" operations.
+      </div>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/1940CensusFinder</span> • <span class="score">22.9k points</span> • 2 hours ago
-    </div>
-    <div class="comment-text">
-      Found the 1940 census! Page 5B, Enumeration District 59-28B, Muscogee County, Georgia (Fort Benning):
-      <br><br>
-      <strong>Lines 78-79:</strong><br>
-      Jemison, Robert H. - Head, age 55, W, married, born Alabama, Military Officer, $3,600/year<br>
-      Jemison, Mary E. - Wife, age 50, W, married, born Alabama, living on post
+    
+    <div class="war-section">
+      <div class="war-title">Indo-Pakistani War (December 2035 – March 2037)</div>
       
-      <br><br>
-      He was stationed at Fort Benning as a Major in the Quartermaster Corps, training officers for WWII. Address was Building 245, Fort Benning (officer housing).
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/FuneralDirector1984</span> • <span class="score">19.6k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      I handled his funeral arrangements in 1984. Some details:
-      <br><br>
-      • <strong>Date:</strong> April 5, 1984
-      • <strong>Location:</strong> Elmwood Cemetery, Birmingham
-      • <strong>Service:</strong> Full military honors - 21-gun salute by Alabama National Guard
-      • <strong>Attendees:</strong> Over 200 people, including active-duty military representatives
-      • <strong>Notable:</strong> At age 100, he had 23 grandchildren and 47 great-grandchildren
+      <p><strong>Location:</strong> Kashmir, Punjab, Rajasthan, Arabian Sea</p>
+      <p><strong>Casualties:</strong> 1,567,000 military and civilian deaths</p>
       
-      <br><br>
-      He was buried in his WWII uniform (Lieutenant Colonel rank), with his medals. The military sent a General from Washington to represent the Army - rare for a retired officer. His tombstone reads "Colonel Robert H. Jemison - Soldier - 1884-1984 - Century of Service"
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/OP_AlabamaGenealogyBuff</span> • <span class="score">15.3k points</span> • 1 hour ago
-    </div>
-    <div class="comment-text">
-      UPDATE: Thank you all SO much! I now have:
-      <br><br>
-      ✅ <strong>1940 census</strong> - found at Fort Benning
-      ✅ <strong>Birth certificate</strong> - Jemison, Alabama
-      ✅ <strong>Military service details</strong> - Quartermaster Corps, Lt. Col.
-      ✅ <strong>All 7 children identified</strong> - with birth/death years
-      ✅ <strong>Banking career</strong> - specific companies and dates
-      ✅ <strong>Funeral details</strong> - full closure on his life
+      <p>Full-scale war erupted after Pakistan's water supply from the Indus River dropped 45% due to Indian upstream projects. Pakistan's military, backed by Chinese satellite intelligence, launched Operation Kashmir Storm in December 2035. India responded with massive conventional forces and threatened nuclear retaliation.</p>
       
-      <br><br>
-      This is incredible - from a brick wall to a complete biography! Writing this up for the family reunion next month. My grandmother (his granddaughter) is going to be thrilled - she never knew half of these details about her grandfather.
-    </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div class="comment">
-    <div class="comment-meta">
-      <span class="comment-author">u/JemisonFamilyTree</span> • <span class="score">8.7k points</span> • 45 minutes ago
-    </div>
-    <div class="comment-text">
-      As a fellow Jemison descendant, here's a bonus fact: The family tradition was that every male Jemison served in the military. Colonel Robert broke that tradition - only 4 of his 7 children served:
-      <br><br>
-      • James (WWII & Korea - followed dad)<br>
-      • Roberta (Army nurse - WWII)<br>
-      • William (Army Air Corps - WWII)<br>
-      • Charles (Air Force - Korea, but only 2 years)
+      <div class="war-stats">
+        <div class="stat-box">
+          <div class="stat-label">Nuclear Exchange</div>
+          <div class="stat-value">Limited (3 warheads)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Cities Evacuated</div>
+          <div class="stat-value">18 million</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Economic Impact</div>
+          <div class="stat-value">$3.8 trillion</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Refugee Crisis</div>
+          <div class="stat-value">42 million</div>
+        </div>
+      </div>
       
-      <br><br>
-      The Colonel was proud but worried - he told his grandchildren "I've seen too many wars. Find another way to serve your country."
+      <div class="geopolitical-impact">
+        <strong>Geopolitical Impact:</strong> The limited nuclear exchange in March 2036 killed 2.3 million people in Lahore and Amritsar. This marked the first use of nuclear weapons in warfare since 1945 and shattered the post-WWII nuclear taboo. The humanitarian crisis overwhelmed UN relief agencies.
+      </div>
     </div>
-    <div class="comment-actions">Reply • Give Award • Share • Report</div>
-  </div>
-
-  <div style="padding: 20px; text-align: center; color: #878a8c; font-size: 14px; border-top: 1px solid #edeff1; margin-top: 20px;">
-    <em>"He served for 82 years, from age 18 to 100. A century of service to his country."</em>
-    <br><br>
-    <strong>Colonel Robert Harland Jemison - October 15, 1884 to April 2, 1984</strong>
+    
+    <div class="war-section">
+      <div class="war-title">Thai-Cambodian War (April 2036 – January 2038)</div>
+      
+      <p><strong>Location:</strong> Mainland Southeast Asia, Gulf of Thailand</p>
+      <p><strong>Casualties:</strong> 312,000 military and civilian deaths</p>
+      
+      <p>Water disputes over the Mekong River (controlled by Chinese dams) triggered border conflicts. Thailand's military government invaded Cambodia in April 2036 to secure agricultural land. Vietnam intervened on Cambodia's side, while China provided "defensive support" to all parties, creating a complex three-way conflict.</p>
+      
+      <div class="war-stats">
+        <div class="stat-box">
+          <div class="stat-label">Countries Involved</div>
+          <div class="stat-value">6 nations</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Rice Production Lost</div>
+          <div class="stat-value">35%</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Casualties</div>
+          <div class="stat-value">312,000</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Duration</div>
+          <div class="stat-value">21 months</div>
+        </div>
+      </div>
+      
+      <div class="geopolitical-impact">
+        <strong>Geopolitical Impact:</strong> The war disrupted ASEAN unity and created competing Chinese client states. Thailand's military government collapsed, replaced by a junta more favorable to Beijing. The conflict demonstrated China's ability to profit from multiple sides of regional wars.
+      </div>
+    </div>
+    
+    <div class="war-section">
+      <div class="war-title">Chinese Invasion of Mongolia (August 2036 – October 2037)</div>
+      
+      <p><strong>Location:</strong> Mongolia, Inner Mongolia, Siberian border regions</p>
+      <p><strong>Casualties:</strong> 234,000 military deaths</p>
+      
+      <p>China invaded Mongolia in August 2036, citing "protection of ethnic Chinese" and securing rare earth mineral deposits. Russia, distracted by European tensions, provided only limited support. The invasion demonstrated China's willingness to use military force to secure resource access, alarming global markets.</p>
+      
+      <div class="war-stats">
+        <div class="stat-box">
+          <div class="stat-label">Territory Occupied</div>
+          <div class="stat-value">78%</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Resource Assets Secured</div>
+          <div class="stat-value">$4.2 trillion</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Military Casualties</div>
+          <div class="stat-value">234,000</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Duration</div>
+          <div class="stat-value">14 months</div>
+        </div>
+      </div>
+      
+      <div class="geopolitical-impact">
+        <strong>Geopolitical Impact:</strong> The invasion secured 40% of global rare earth production for China and demonstrated Russia's inability to protect its allies. The conflict pushed Russia closer to Western nations, fundamentally reshaping Cold War-era alliances.
+      </div>
+    </div>
+    
+    <h2>Global Implications</h2>
+    <p>These five conflicts created a cascade of instability that overwhelmed the international system's capacity for crisis management. Key factors leading to World War III included:</p>
+    
+    <ul>
+      <li><strong>Resource Competition:</strong> Water and food scarcity drove nations to military solutions</li>
+      <li><strong>Nuclear Taboo Shattered:</strong> Indo-Pakistani nuclear exchange normalized WMD use</li>
+      <li><strong>Alliance System Failure:</strong> NATO, CSTO, and other alliances proved inadequate for multi-front conflicts</li>
+      <li><strong>Economic Collapse:</strong> Global trade networks disintegrated under wartime pressures</li>
+      <li><strong>Great Power Miscalculation:</strong> Multiple powers simultaneously escalated regional conflicts</li>
+    </ul>
+    
+    <p>By February 2038, the international system had fragmented into competing blocs unable to prevent the escalation that would become World War III.</p>
+    
+    <div style="margin-top: 30px; padding: 20px; background: #fee; border-left: 4px solid #d33; font-size: 14px;">
+      <strong>Note:</strong> This article documents the immediate precursors to World War III. For information on the global conflict that began February 6, 2038, see <a href="#" style="color: #0645ad;">World War III</a>.
+    </div>
   </div>
 </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
