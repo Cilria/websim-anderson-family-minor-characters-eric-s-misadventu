@@ -3,113 +3,85 @@
 <head>
 <style>
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #0f0f0f;
-    color: #d7dadc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
     margin: 0;
     padding: 20px;
   }
   .reddit-container {
-    max-width: 800px;
+    max-width: 740px;
     margin: 0 auto;
-    background-color: #1a1a1b;
-    border: 1px solid #343536;
-    border-radius: 8px;
-    overflow: hidden;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
   }
   .reddit-header {
-    background-color: #030303;
-    padding: 16px;
-    border-bottom: 1px solid #343536;
-  }
-  .subreddit-name {
-    color: #d7dadc;
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
     font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 8px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
   }
   .post-title {
-    color: #d7dadc;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 8px;
+    color: #1A1A1B;
   }
   .post-meta {
-    color: #818384;
     font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
   }
   .post-content {
-    padding: 16px;
-    line-height: 1.5;
-  }
-  .post-flair {
-    display: inline-block;
-    background-color: #ff8717;
-    color: #000;
-    padding: 2px 8px;
-    border-radius: 2px;
-    font-size: 12px;
-    font-weight: 500;
-        margin-right: 8px;
-  }
-  .comments-section {
-    border-top: 1px solid #343536;
-  }
-  .comment {
-    padding: 12px 16px;
-    border-bottom: 1px solid #343536;
-    background-color: #1a1a1b;
-  }
-  .comment-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  .username {
-    font-weight: 500;
-    color: #d7dadc;
-    margin-right: 8px;
-  }
-  .user-flair {
-    background-color: #ff8717;
-    color: #000;
-    padding: 2px 6px;
-    border-radius: 2px;
-    font-size: 11px;
-    margin-right: 8px;
-  }
-  .comment-score {
-    color: #818384;
-    font-size: 12px;
-    margin-right: 8px;
-  }
-  .comment-time {
-    color: #818384;
-    font-size: 12px;
-  }
-  .comment-body {
-    color: #d7dadc;
     font-size: 14px;
     line-height: 1.5;
+    color: #1A1A1B;
   }
-  .comment-reply {
-    margin-left: 32px;
-    background-color: #222324;
+  .comment-section {
+    padding: 0 15px;
   }
-  .vote-buttons {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 16px;
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
   }
-  .vote-arrow {
-    color: #818384;
-    margin: 0 4px;
-  }
-  .sort-bar {
-    padding: 12px 16px;
-    border-bottom: 1px solid #343536;
+  .comment-header {
     font-size: 12px;
-    color: #d7dadc;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+  .signature-image {
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
 </style>
 </head>
@@ -117,184 +89,128 @@
 
 <div class="reddit-container">
   <div class="reddit-header">
-    <div class="subreddit-name">r/Military</div>
-    <div class="post-title">
-      <span class="post-flair">COMBAT UPDATE</span>
-      MASSIVE ESCALATION: China invades India - Russia storms Finland - NATO launches "Ragnarok" super-missile, 10K+ Chinese troops obliterated in Malaysia
-    </div>
-    <div class="post-meta">Posted by u/DefenseIntelAnalyst | 1 week after initial conflict | 2.3M upvotes</div>
+    r/Genealogy
   </div>
   
-  <div class="post-content">
-    <p><strong>FEBRUARY 13TH, 2038 - GLOBAL DRAFT DECLARED IN 47 NATIONS</strong></p>
-    
-    <p><strong>0400 HOURS:</strong> Chinese forces launch massive offensive across entire Indian border. 2.8 million troops committed in largest land invasion since Operation Barbarossa.</p>
-    
-    <p><strong>0430 HOURS:</strong> Russia begins full-scale invasion of Finland. 800,000 Russian troops surge across 1,340km border. Helsinki under heavy bombardment.</p>
-    
-    <p><strong>0600 HOURS:</strong> NATO launches unprecedented assault on Eastern Russia. 500,000 NATO troops cross into Siberia, targeting vital oil and gas infrastructure.</p>
-    
-    <p><strong>0800 HOURS:</strong> NATO unveils <span style="color: #ff4444; font-weight: bold;">"PROJECT RAGNAROK"</span> - thermobaric missile with 50-megaton yield equivalent. Single missile devastates entire Chinese 15th Army Group in Malaysia.</p>
-    
-    <p><strong>0830 HOURS:</strong> Satellite imagery confirms complete destruction of Chinese amphibious landing force. 10,000+ Chinese soldiers killed instantly. Malaysia counter-offensive begins.</p>
-    
-    <p><strong>CURRENT ASSESSMENT:</strong> <span style="color: #ff4444; font-weight: bold;">CONFLICT NOW INVOLVES 2.1 BILLION PEOPLE - LARGEST WAR IN HUMAN HISTORY</span></p>
+  <div class="post">
+    <div class="post-title">Found my grandfather Carl Robert Paul Jr. (1907-1999) - War Department bureaucrat with terrible handwriting - need help deciphering his signature!</div>
+    <div class="post-meta">
+      <span class="comment-score">892 upvotes</span> • posted by <span class="comment-author">RockvilleRoots</span> <span class="flair">Federal Records Hunter</span>
+    </div>
+    <div class="post-content">
+      <p>My grandfather Carl Robert Paul Jr. lived to be 92 and worked for the federal government for 25+ years, but I've hit a wall trying to read his godawful signature. Here's what I've pieced together:</p>
+      
+      <ul>
+        <li>Born January 22, 1907 in Columbia, Missouri (9th child, had a twin sister)</li>
+        <li>Father Carl Sr. was an insurance agent from Axtell, Missouri</li>
+        <li>Mother Sarah "Sally" Janice Fremont died 1929 when Carl was 22</li>
+        <li>Studied business administration in college</li>
+        <li>Served in the army during that weird interwar period</li>
+        <li>Started at War Department in 1933, lived in Rockville, Maryland</li>
+        <li>Married late at 38, had 3 kids</li>
+        <li>Father remarried twice - last wife was 30 years younger than him!</li>
+      </ul>
+      
+      <p>I found his WWII draft card but his signature is completely illegible. Can anyone help me figure out what the hell this chicken scratch actually says?</p>
+      
+      <img src="carl_signature.png" alt="Carl R Paul Jr signature from WWII draft card" class="signature-image">
+    </div>
   </div>
   
-  <div class="comments-section">
-    <div class="sort-bar">Best | Top | New | Controversial | 3,847,552 comments</div>
-    
+  <div class="comment-section">
     <div class="comment">
       <div class="comment-header">
-        <span class="username">StrategicCommand2034</span>
-        <span class="user-flair">Verified - Strategic Analyst</span>
-        <span class="comment-score">67.4k points</span>
-        <span class="comment-time">2 hours ago</span>
+        <span class="comment-author">FederalRecordsNerd</span> • <span class="comment-score">342 points</span> • 6 hours ago
       </div>
-      <div class="comment-body">
-        The Ragnarok missile is beyond anything we've seen. The yield isn't measured in kilotons or megatons - it's measured in city-killers. That single weapon just eliminated an entire Chinese field army. We're talking about 10,000+ combat deaths in under 30 seconds.
+      <div class="comment-content">
+        <p>Found his actual personnel file! Carl R. Paul Jr. worked for the War Department from July 17, 1933 until it became the Department of Defense in 1949, then continued until his retirement in 1962. He was a Budget Analyst in the Comptroller's Office.</p>
         
-        The Chinese are absolutely stunned. Their entire southern thrust into Malaysia just evaporated. Satellite shows a crater 3 kilometers wide where the 15th Army Group was staging. Nothing survived. Not even tanks. The overpressure alone killed everything within a 5-kilometer radius.
+        <p>His signature is actually "C.R. Paul Jr." - the C and R are just connected weird. Federal employees were notorious for terrible signatures because they signed so much paperwork. His personnel file shows he had to initial documents 20+ times per day.</p>
         
-        This changes everything. China now knows we have weapons that can eliminate entire army groups. They'll have to completely rethink their doctrine of massed formations.
+        <p>Here's the crazy part - his twin sister was Clara Ruth Paul. She became a school teacher in Columbia and never married. They wrote letters every single week for 60 years. Clara's signature is equally terrible, so it must run in the family.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">MissouriGenealogist</span> • <span class="comment-score">278 points</span> • 5 hours ago
+        </div>
+        <div class="comment-content">
+          <p>Found the family in the 1910 census! Carl Sr. is listed as an "insurance solicitor" and they owned their home free and clear at 512 North 7th Street in Columbia. Sarah had 11 children with 9 surviving - Carl Jr. and his twin Clara were the youngest.</p>
+          
+          <p>Carl Sr.'s insurance business was "Paul & Son Insurance Agency" - the son being his oldest boy William Fremont Paul who was 20 when Carl Jr. was born. William took over the business when Carl Sr. retired in 1935.</p>
+          
+          <p>The twin thing runs deep - Carl Jr.'s mother Sarah Fremont was herself a twin. Her sister Mary Ann Fremont married Carl Sr.'s brother James Henry Paul. So Carl Jr. had double first cousins through that marriage.</p>
+        </div>
       </div>
     </div>
     
     <div class="comment">
       <div class="comment-header">
-        <span class="username">IndianArmyMajor</span>
-        <span class="user-flair">Verified - Indian Army</span>
-        <span class="comment-score">54.2k points</span>
-        <span class="comment-time">1 hour ago</span>
+        <span class="comment-author">RockvilleHistorian</span> • <span class="comment-score">234 points</span> • 5 hours ago
       </div>
-      <div class="comment-body">
-        I'm on the front lines in Arunachal Pradesh. The Chinese came like a tsunami. I've never seen anything like it. They have these new Type 99A2 tanks that are faster than anything we have. They're using drone swarms - literally thousands of small drones that overwhelm our air defenses.
+      <div class="comment-content">
+        <p>Found his house! Carl bought 305 College Parkway in Rockville in December 1936 for $4,200. The house is still there - it's a 1920s colonial that's been renovated but the original structure remains. His neighbors worked at NIH and the Bureau of Standards.</p>
         
-        We're holding them at the Brahmaputra River line, but barely. They have complete air superiority. Their J-20s are shooting down our Sukhois like they're training targets. We need American F-47s NOW or we're going to lose the entire northeast.
+        <p>He took the train from Rockville to D.C. every day - caught the 7:12am B&O train and got off at Union Station. Monthly pass cost $8.40. He walked from Union Station to the War Department building (where the National Archives is now).</p>
         
-        The civilian evacuation is chaos. Millions of people fleeing. The Chinese are targeting refugee columns. They're not taking prisoners. This isn't war - it's extermination.
+        <p>His army service was actually pretty interesting - he enlisted in the Missouri National Guard in 1929 as a clerk, served until 1934. His unit was activated during the 1933 Iowa floods doing disaster relief work. That's probably how he got the War Department job - federal service connections.</p>
       </div>
     </div>
     
     <div class="comment">
       <div class="comment-header">
-        <span class="username">FinnishBorderGuard</span>
-        <span class="user-flair">Verified - Finnish Defense</span>
-        <span class="comment-score">48.7k points</span>
-        <span class="comment-time">45 minutes ago</span>
+        <span class="comment-author">StepmomResearcher</span> • <span class="comment-score">189 points</span> • 4 hours ago
       </div>
-      <div class="comment-body">
-        The Russian assault is unlike anything in their doctrine. They're using human wave tactics - literally sending thousands of conscripts to exhaust our ammunition. We shoot them down, and more come. They don't even try to recover their wounded.
+      <div class="comment-content">
+        <p>Found the stepmother situation! Carl Sr. married:</p>
+        <ul>
+          <li>Sarah "Sally" Fremont (your great-grandmother) - 1901 to 1929</li>
+          <li>Mabel Irene Thompson - 1930 to 1945 (she was 19 years younger than him)</li>
+          <li>Edna Louise Carter - 1946 to 1977 (she was 32 years younger than him)</li>
+        </ul>
         
-        Helsinki is burning. Russian cruise missiles hit every major government building. The Parliament building is just gone. The Prime Minister was evacuated but half the government is dead or missing.
+        <p>Edna was actually younger than Carl Jr. by 6 years! Carl Jr. refused to attend their wedding in 1946 - family lore says he was "disgusted" by his father marrying someone younger than his own children. Carl Sr. was 67 and Edna was 35.</p>
         
-        We're fighting with everything we have, but there are just too many of them. 800,000 Russians against our 280,000. NATO reinforcements are coming but they won't arrive in time. If we don't get American tactical nukes on our border within 48 hours, Finland will cease to exist.
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="username">NATOLiaison2037</span>
-        <span class="user-flair">NATO Intel</span>
-        <span class="comment-score">41.3k points</span>
-        <span class="comment-time">30 minutes ago</span>
-      </div>
-      <div class="comment-body">
-        The Siberian operation is the largest military offensive since D-Day. We're not just attacking - we're conducting a full-scale invasion of Russia itself. The goal isn't just to stop them in Finland, it's to cut off their entire Asian resource base.
-        
-        American and European forces are advancing on three axes toward the vital oil fields. If we can seize Siberian energy production, Russia collapses within months. It's the most ambitious military operation in human history.
-        
-        But the casualties are staggering. We've lost 30,000 men in 6 hours. Russian conscripts are fighting like demons. They're using tactical nuclear weapons at brigade level. We're advancing through a nuclear wasteland.
+        <p>Edna outlived Carl Sr. by 20 years and inherited everything - including the family photos and papers. She died in 1997 and her kids (Carl Jr.'s half-siblings) sold everything at an estate sale. That's probably why family records are scattered.</p>
       </div>
     </div>
     
     <div class="comment">
       <div class="comment-header">
-        <span class="username">MalaysianArmyCaptain</span>
-        <span class="user-flair">Verified - Malaysian Army</span>
-        <span class="comment-score">38.9k points</span>
-        <span class="comment-time">25 minutes ago</span>
+        <span class="comment-author">WWIIDraftCards</span> • <span class="comment-score">167 points</span> • 4 hours ago
       </div>
-      <div class="comment-body">
-        I witnessed the Ragnarok strike. Was 15 kilometers away in an observation post. The flash was like looking at the sun. Even at that distance, the heat was intense. Every piece of electronics was instantly fried by the EMP.
+      <div class="comment-content">
+        <p>Deciphered his signature! It's "C.R. Paul Jr." written in classic bureaucratic chicken scratch. The C looks like a weird L, the R is just a squiggle, and the Paul is mostly just the P and then a line.</p>
         
-        When we could finally see again, there was just... nothing. Where the Chinese had entire divisions, there was just scorched earth. The blast wave came minutes later - like a hurricane made of fire.
+        <p>His draft card shows he was 5'10", 165 lbs, had blue eyes and brown hair, wore glasses, and had a scar on his left thumb. Registered October 16, 1940 at the Rockville Post Office. His employer was "War Department, Washington, D.C." and he made $2,400/year.</p>
         
-        We're advancing now, but there's nothing left to advance against. The Chinese are broken. Their command structure collapsed. We're taking thousands of prisoners who are just... broken. They saw their entire army disappear in a second.
-        
-        The Malaysians are calling it "Hari Kemenangan" - Victory Day. But it's not victory. It's annihilation.
+        <p>Fun fact - he was 33 when he registered, which was actually old for military service in 1940. They took men up to 45, but most guys his age were deferred for essential civilian work. His War Department job definitely kept him out of combat.</p>
       </div>
     </div>
     
     <div class="comment">
       <div class="comment-header">
-        <span class="username">ChineseMilitaryAnalyst</span>
-        <span class="user-flair">Defense Expert</span>
-        <span class="comment-score">34.7k points</span>
-        <span class="comment-time">20 minutes ago</span>
+        <span class="comment-author">MarriageRecordsMO</span> • <span class="comment-score">145 points</span> • 3 hours ago
       </div>
-      <div class="comment-body">
-        The 15th Army Group was our elite formation. 10,000 of our best troops, including the 127th Mechanized Division. They had just completed the largest amphibious landing in Chinese military history. We were hours from taking Kuala Lumpur.
+      <div class="comment-content">
+        <p>Found his marriage! Carl married Margaret Elizabeth "Betty" Sullivan on December 23, 1945 at St. Patrick's Catholic Church in Washington, D.C. He was 38, she was 32. They met at a USO dance in 1944 - she worked for the Navy Department as a secretary.</p>
         
-        Then came Ragnarok. In 30 seconds, 60% of our southern invasion force ceased to exist. Not just men - equipment, supplies, command structure, everything. The blast was so powerful it registered on earthquake sensors in Australia.
+        <p>They had 3 kids: Margaret "Peggy" Anne (1947), Carl Robert III (1949), and Patricia Louise (1952). All born in Rockville. Betty died in 1988 and is buried next to Carl at Gate of Heaven Cemetery in Silver Spring.</p>
         
-        This is beyond conventional warfare. This is weaponized extinction. If NATO has more of these weapons, we cannot win this war. We cannot even fight this war. Our only option is nuclear retaliation on equal scale.
-        
-        Beijing is considering the unthinkable - strategic nuclear strikes on American cities. Not tactical battlefield weapons, but city-killers. New York, Los Angeles, Chicago. If we cannot win conventionally, we will not lose alone.
+        <p>The late marriage thing was actually practical - during the Depression and war years, lots of people delayed marriage. Carl wanted financial security first. He bought his Rockville house in 1936, had stable War Department job, and finally felt ready to marry at 38.</p>
       </div>
     </div>
     
     <div class="comment">
       <div class="comment-header">
-        <span class="username">DraftBoardOfficial</span>
-        <span class="user-flair">Selective Service</span>
-        <span class="comment-score">29.1k points</span>
-        <span class="comment-time">15 minutes ago</span>
+        <span class="comment-author">RockvilleRoots</span> • <span class="comment-score">98 points</span> • 2 hours ago
       </div>
-      <div class="comment-body">
-        The draft isn't like Vietnam. This isn't 19-year-olds going to basic training. We're conscripting everyone 18-45. Doctors, engineers, teachers - if you can hold a rifle, you're in the military.
+      <div class="comment-content">
+        <p>Oh my god, this is incredible! I had NO idea about the stepmother drama or the train commute or even that he met my grandmother at a USO dance. The signature thing has been driving me nuts for years.</p>
         
-        The numbers are staggering. 2.1 million Americans in the first wave. 4.3 million more by next month. We're creating new divisions every week. Training programs that used to take 16 weeks now take 6.
+        <p>I'm definitely going to drive by the College Parkway house next time I'm in Maryland. And I need to find my dad's cousins on the half-sibling side - maybe they have photos from Edna's estate sale!</p>
         
-        But here's what's terrifying: we're sending them into combat with minimal training. These aren't soldiers - they're civilians with rifles. Against Chinese veterans who've been training for this war for decades.
-        
-        The casualty projections are classified, but I've seen them. We're looking at 400,000 American dead by summer. That's more than all our wars combined since Vietnam.
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="username">NuclearSubmarineCaptain</span>
-        <span class="user-flair">Verified - US Navy</span>
-        <span class="comment-score">26.8k points</span>
-        <span class="comment-time">10 minutes ago</span>
-      </div>
-      <div class="comment-body">
-        I'm writing this from 600 feet below the Pacific. Our submarine just received launch authorization for nuclear retaliation if China uses strategic weapons. We have 24 Trident missiles, each with 8 warheads. That's 192 nuclear weapons.
-        
-        The order is clear: if China launches city-killers, we erase their civilization. Not just military targets - cities, infrastructure, population centers. Complete societal collapse.
-        
-        We're not targeting their military. We're targeting their ability to ever threaten us again. 1.4 billion people reduced to pre-industrial levels. That's what nuclear war means now.
-        
-        I'm 34 years old. In the next 48 hours, I might become responsible for the deaths of 100 million people. How do you live with that? How do you even process it?
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="username">WW3Historian</span>
-        <span class="user-flair">Military Historian</span>
-        <span class="comment-score">23.4k points</span>
-        <span class="comment-time">5 minutes ago</span>
-      </div>
-      <div class="comment-body">
-        This is the most catastrophic week in human history. In 7 days, we've gone from peace to global war involving 2.1 billion people. The largest military mobilization since 1945. The first use of super-weapons. The complete collapse of the international system.
-        
-        But here's what's truly terrifying: this is just the beginning. We're watching the end of the nation-state system that has governed the world since 1648. When this war ends, and it will end with nuclear fire, there won't be a world left to govern.
-        
-        Future historians, if any survive, will mark this week as the moment civilization chose to die. Not from external threat, but from our inability to solve problems without organized murder on industrial scale.
-        
-        We're not just witnessing history. We're witnessing the end of history.
+        <p>Thank you all so much - this is way more than I ever expected to find out about Grandpa Carl!</p>
       </div>
     </div>
   </div>
