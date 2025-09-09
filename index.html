@@ -1,229 +1,342 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franklin Jefferson Harland Sr (1836/37-1939): CSA veteran, married his brother's widow, last of his regiment : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
-
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">UPDATE: Franklin Jefferson Harland Sr's ENTIRE family tree - parents, siblings, ancestors back to 1750s, and all 87 known descendants</div>
-    <div class="post-meta">
-      <span class="comment-score">1.2k upvotes</span> • posted by <span class="comment-author">BamaRoots</span> <span class="flair">Civil War Researcher</span>
-    </div>
-    <div class="post-content">
-      <p>After my last post about Franklin Jefferson Harland Sr (1836-1939), I went DEEP down the rabbit hole researching his entire family. What I found is absolutely wild - affairs, murders, secret adoptions, and enough drama for a Netflix series!</p>
-      
-      <p><strong>His Parents:</strong> Reverend David W Harland (1801-1878) and Elizabeth Ann Jefferson (1804-1849)</p>
-      <p><strong>His Siblings:</strong> 13 total, 9 survived to adulthood</p>
-      <p><strong>His Ancestors:</strong> Traced back to 1750s Virginia</p>
-      <p><strong>His Descendants:</strong> 87 verified descendants, including a US Congressman and a Hollywood actress</p>
-      
-      <p>Looking for any connection to your family tree - this gets CRAZY!</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DeepAncestryAL</span> • <span class="comment-score">423 points</span> • 8 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>FOUND THE PARENTS' DARK SECRET:</strong> Reverend David W Harland wasn't actually a reverend! He was EXCOMMUNICATED from the Methodist Church in 1838 for "gross moral turpitude" - he got his 16-year-old housemaid pregnant!</p>
-        
-        <p>Elizabeth Ann Jefferson was from the wealthy Jefferson family of Virginia (YES, related to Thomas Jefferson - they were cousins). Her family disowned her for marrying David after the scandal. They moved to Alabama to escape the shame.</p>
-        
-        <p>David spent the rest of his life calling himself "Reverend" but never had a church again. He became a traveling preacher, mostly preaching to enslaved people because white churches wouldn't have him. The 1840 census shows him as "itinerant preacher."</p>
-        
-        <p>Elizabeth died in 1849 at age 45 - family letters suggest she was planning to leave David and return to Virginia with the children. She died suddenly of "bilious fever" but there's a letter from her sister suggesting David may have poisoned her. NO DEATH CERTIFICATE EXISTS.</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">JeffersonGenealogy</span> • <span class="comment-score">298 points</span> • 7 hours ago
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Alabama_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
         </div>
-        <div class="comment-content">
-          <p><strong>THE JEFFERSON CONNECTION IS REAL:</strong> Elizabeth Ann Jefferson was Thomas Jefferson's first cousin once removed. Her grandfather Peter Jefferson (Thomas's uncle) left her a $5,000 inheritance in his will - HUGE money in 1820s.</p>
-          
-          <p>She used this money to buy the 320-acre farm in New Union, Alabama in 1835. The deed is still on file - she paid $1,200 cash for it. David Harland's name is NOWHERE on the deed, suggesting she kept control of her money.</p>
-          
-          <p>After Elizabeth died, David remarried within 6 months to Martha "Patty" Wilson, age 23 (David was 48). Patty was Elizabeth's former housemaid. They had 4 more children together, but only 2 survived. The family basically imploded.</p>
-          
-          <p>Franklin and his siblings HATED Patty. In 1855, Franklin (age 19) got into a physical fight with her and left home. He didn't return until after his father's death in 1878.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">SiblingResearcher</span> • <span class="comment-score">267 points</span> • 7 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>ALL THE SIBLINGS' STORIES:</strong></p>
-        
-        <p><strong>Mary Ann Harland (1825-1901):</strong> Married her first cousin William Jefferson, had 11 children. Their daughter Sarah married Franklin's son David, making Franklin both uncle AND great-uncle to their kids. YIKES.</p>
-        
-        <p><strong>David Wilson Harland (1827-1899):</strong> Became a successful merchant in Mobile. Owned 15 ships that ran cotton to Cuba. Lost everything in the Civil War when Union forces burned his fleet. His wife left him for a Union officer!</p>
-        
-        <p><strong>William Edmund Harland (1829-1864):</strong> Died at the Battle of Atlanta. His widow married his business partner within 3 months. The partner had been embezzling from their store for years.</p>
-        
-        <p><strong>Elizabeth "Betsy" Harland (1831-1912):</strong> Ran off with a traveling salesman in 1852 at age 21. Returned 20 years later with 5 children and no husband. Never explained where she'd been.</p>
-        
-        <p><strong>Edmund Lafayette Harland (1833-1862):</strong> The brother who died at Shiloh. He and Franklin were extremely close - they enlisted together, shared a tent, wrote home together. His death devastated Franklin.</p>
-        
-        <p><strong>Alexander Hamilton Harland (1835-1863):</strong> The brother who died at Chickamauga. Married Sarah Emma Webb who later married Franklin. His daughter Mary Elizabeth was raised as Franklin's child.</p>
-        
-        <p><strong>Sarah Catherine Harland (1838-1920):</strong> Married a Cherokee man named John Ross in 1858. They fled to Oklahoma during the Civil War. Their descendants are enrolled members of the Cherokee Nation today.</p>
-        
-        <p><strong>Martha "Patsy" Harland (1840-1845):</strong> Died at age 5. Family letters suggest David blamed Elizabeth for "weak breeding stock."</p>
-        
-        <p><strong>James Monroe Harland (1842-1849):</strong> Died at 7 of scarlet fever, the same year his mother died. Family never recovered.</p>
-        
-        <p><strong>Robert E. Lee Harland (1844-1923):</strong> The youngest brother who survived the war. Became a state senator in Alabama. Had 14 children with 3 wives (first two died in childbirth).</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">AncestryDNAExpert</span> • <span class="comment-score">189 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>TRACED BACK TO 1750s:</strong> The Harlands were originally "Harlandsson" - Swedish immigrants who arrived in Virginia in 1648. They were indentured servants who worked off their passage and became tobacco farmers.</p>
-        
-        <p>By 1750, they owned 1,000 acres in Hanover County, Virginia. John Harland (Franklin's great-grandfather) married into the wealthy Winston family and inherited 500 acres and 20 slaves.</p>
-        
-        <p>The Jefferson connection comes through Elizabeth's mother Martha Jefferson (1770-1840), who was Thomas Jefferson's aunt. Martha's brother Peter Jefferson Jr. left detailed letters about the family - including gossip about David Harland's scandal!</p>
-        
-        <p>DNA testing of 12 descendants confirms the Swedish ancestry AND the Jefferson connection. We're part of the official Jefferson DNA project at FamilyTreeDNA.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DescendantTracker</span> • <span class="comment-score">234 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>ALL 87 DESCENDANTS TRACKED:</strong></p>
-        
-        <p><strong>Franklin's children:</strong></p>
-        <ul>
-          <li>David Alexander Harland (1865-1948) - Had 8 kids, including Rep. William Franklin Harland (R-AL, served 1931-1937)</li>
-          <li>William Edmund Harland (1867-1953) - Had 6 kids, moved to Texas, started an oil company</li>
-          <li>Sarah Emma Harland Jr (1869-1944) - Married a banker, had 5 kids, lived in mansion in Birmingham</li>
-          <li>Robert Franklin Harland (1871-1962) - My great-grandfather, had 7 kids</li>
-          <li>Martha Ann Harland (1873-1956) - Became a schoolteacher, never married, helped raise 47 nieces/nephews</li>
-          <li>James Thomas Harland (1876-1879) - Died age 3</li>
-          <li>Nancy Elizabeth Harland (1878-1967) - Had 9 kids, including actress Mary Elizabeth "Betsy" Harland who starred in 12 Westerns in 1940s</li>
-          <li>Mary Elizabeth Harland (1861-1944) - Alexander's daughter, raised as Franklin's, had 11 kids</li>
-        </ul>
-        
-        <p><strong>Famous descendants:</strong></p>
-        <p><strong>Congressman William Franklin Harland (1899-1972):</strong> Served 3 terms in US House, was on the HUAC committee, famously questioned Walt Disney about "communist influences" in cartoons!</p>
-        
-        <p><strong>Actress Betsy Harland (1919-2003):</strong> Starred in Westerns with John Wayne, retired to become a cattle rancher in Montana. Her daughter is <strong>Academy Award winner Jessica Harper</strong> (she changed her name).</p>
-        
-        <p><strong>Dr. James Harland-Chen (1948-present):</strong> My cousin, leading cancer researcher at MD Anderson. His mother was Franklin's great-granddaughter who married a Chinese diplomat in 1946 - SCANDAL at the time!</p>
-        
-        <p><strong>Current count:</strong> 87 verified descendants, 14 great-great-great grandchildren alive today, spread across 23 states and 4 countries (US, Canada, China, Sweden).</p>
-        
-        <p>The family reunions are INSANE - we had 200+ people at the last one in Gadsden. We're planning a huge 200th birthday celebration for Franklin in 2036!</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">BamaRoots</span> • <span class="comment-score">156 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>This is absolutely MIND-BLOWING! I had NO idea about the Jefferson DNA connection, the Swedish ancestry, or that Congressman Harland was Franklin's grandson! And Jessica Harper is my cousin? I'm literally watching her movies tonight!</p>
-        
-        <p>The family reunion sounds amazing - how do I get invited? Also, does anyone have contact info for Dr. James Harland-Chen? I'd love to connect about the cancer research angle - my wife is a oncology nurse.</p>
-        
-        <p>I'm also shocked about David not being a real reverend and the possibility that he poisoned Elizabeth. This family has more secrets than a soap opera! Thank you all for this incredible research - you've given me enough material for a book!</p>
-      </div>
-    </div>
-  </div>
-</div>
 
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>1.2k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Franklin Jefferson Harland Sr (1836/37-1939): CSA veteran, married his brother's widow, last of his regiment</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Civil War</span>
+                    <span class="flair">Alabama</span>
+                    <span class="flair">CSA Records</span>
+                    <span class="flair">Last Veteran</span>
+                    <span>Posted by u/Alabama_Archivist • 8 hours ago</span>
+                </div>
+
+                <p>I've been researching Franklin Jefferson Harland Sr. for months, and his story is both fascinating and heartbreaking. The birth year confusion (1836 vs 1837) comes from different sources - he himself gave both dates in various records.</p>
+
+                <p><strong>The Brothers Who Went to War:</strong> In 1861, Franklin and his three brothers - Edmund, Robert, and Alexander - all enlisted together in the same regiment. Only Franklin and Robert survived. The tragedy deepened: Franklin married his brother Alexander's widow, Sarah Emma Webb.</p>
+
+                <p><strong>Life After War:</strong> Franklin and Sarah had 7 children together before she died in 1899. He remarried another widow, but she died in 1920. Worked primarily in lumber and farming. Lived his final years in Gadsden, Alabama with his son Robert.</p>
+
+                <p><strong>The Last Survivor:</strong> His obituary states he was the last living veteran of his regiment and the last surviving child of Reverend David W. Harland. Died April 18, 1939, buried with a simple stone reading "FATHER FRANKLIN J. HARLAND SR 1836 TO 1939"</p>
+
+                <p><strong>My Brick Walls:</strong> Can't determine which regiment they enlisted in together (only that they served in the same unit), and Edmund's fate remains a complete mystery. Also trying to verify his exact birthdate and location in New Union.</p>
+
+                <div class="comments-count">
+                    <a href="#">234 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/CSA_Records_Expert • 6 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found their regiment!</strong> The Harland brothers all enlisted together May 15, 1861 in Company K, 19th Alabama Infantry. Franklin was 24 (giving 1837 birth), Edmund was 22, Alexander was 20, and Robert was 18. The 19th Alabama fought at Shiloh, Stones River, Chickamauga, and Atlanta. Company K was known as the "New Union Guards" - raised from the New Union area specifically.
+                </div>
+                <div class="comment-meta">u/Alabama_Archivist • 5 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This is incredible! The "New Union Guards" makes perfect sense. Do you have access to the company muster rolls that might show what happened to Edmund? And this confirms 1837 as his birth year.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/CSA_Records_Expert • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Edmund's fate: He died November 25, 1863 at the Battle of Missionary Ridge (Chattanooga). The muster roll shows "killed in action" with a note that he was buried on the field. The family never recovered his body - too chaotic a retreat. Alexander died two months earlier at Chickamauga, so Franklin and Robert buried him properly. That's why Franklin felt obligated to marry Alexander's widow - to provide for her and her infant son.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/NewUnion_AL_Historian • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his exact birthdate:</strong> Franklin Jefferson Harland was born October 22, 1837 (not 1836) on the Harland family farm, located 2 miles northeast of New Union, Alabama. The confusion comes from the 1921 census where he gave his age as 84 (making birth year 1836), but his family Bible (held by the Alabama Department of Archives) clearly shows "Franklin Jefferson Harland born October 22nd, 1837." The 1836 date was a census error - common for elderly people to add a year.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Marriage_Records_AL • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Details on Alexander's marriage to Sarah Emma Webb:</strong> Alexander Harland married Sarah Emma Webb December 24, 1860 in New Union. Their son, Alexander Jefferson Harland Jr., was born August 15, 1861 - three months after Alexander Sr. left for war. When Alexander died at Chickamauga (September 20, 1863), Sarah was left a widow with a 2-year-old. Franklin began courting her in 1864 while on furlough - they married January 15, 1865. The marriage record notes "consent given by Sarah's father, Thomas Webb" - indicating the family approved of Franklin stepping in.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/CSA_Pension_Records • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Franklin's war service details:</strong> He served the entire war with Company K, 19th Alabama. Wounded at Stones River (December 31, 1862) - gunshot to left shoulder. Hospitalized in Atlanta for 3 months. Returned to duty and fought through Atlanta Campaign. Paroled at Greensboro, North Carolina May 1, 1865. His pension application states he "never missed a roll call after returning from wounds" and was promoted to Corporal in 1864 for "gallant conduct under fire."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Children_Tracker_AL • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>All 7 children with Sarah Emma:</strong><br>
+                    1. Martha Elizabeth "Mattie" Harland (1866-1944) - married local merchant<br>
+                    2. Franklin Jefferson Harland Jr. (1868-1935) - took over family lumber business<br>
+                    3. Sarah Emma "Sallie" Harland (1870-1955) - married Methodist minister<br>
+                    4. Robert David Harland (1872-1940) - farmer, lived with father in later years<br>
+                    5. William Alexander Harland (1875-1920) - died of flu epidemic<br>
+                    6. James Edmund Harland (1878-1960) - named after deceased uncle<br>
+                    7. Mary Ann "Molly" Harland (1881-1972) - youngest, cared for father in old age
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Lumber_Industry_AL • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Franklin's lumber career:</strong> After the war, he couldn't return to farming (shoulder wound made plowing difficult). Started with a small sawmill in New Union 1866, expanded to supply timber for Birmingham's growth 1870s-1880s. By 1890, operated "Harland & Sons Lumber Company" with sons Frank Jr. and Robert. The business failed in 1893 during the financial panic - lost everything. Returned to subsistence farming until Sarah's death, then worked as a mill foreman for other companies.
+                </div>
+                <div class="comment-meta">u/Alabama_Archivist • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This explains so much! The financial failure in 1893 must have been devastating - especially with 7 children. No wonder he went back to farming. Do you know which lumber companies he worked for as foreman?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Second_Wife_Details • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>His second marriage:</strong> Franklin married Mary Josephine "Josie" Carpenter (nee Adams) October 12, 1900. She was the widow of Thomas Carpenter, who died in 1898. Josie was 58, Franklin was 63 - a marriage of companionship rather than children. They lived together in Gadsden until her death March 15, 1920. The 1910 census shows them living with Franklin's unmarried daughter Molly, who kept house for them. After Josie died, Franklin moved in with son Robert permanently.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Last_Veteran_Status • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>The "last veteran" claim verified:</strong> Franklin was indeed the last surviving member of Company K, 19th Alabama Infantry. I checked the United Confederate Veterans records - he was the last member of the New Union camp, which dissolved in 1928. The 1930 census shows him as "veteran, Confederate Army" with no other Civil War veterans remaining in Bibb County. His obituary was correct - he outlived all his comrades by over a decade.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Gadsden_Directories • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Final years in Gadsden:</strong> Franklin moved to Gadsden in 1925 to live with son Robert (who had relocated there for work). The 1930 city directory lists "Franklin J. Harland, retired, boards with Robert D. Harland, 412 Chestnut Street." He attended the Methodist church regularly, was known as "Uncle Frank" to neighborhood children, and would tell Civil War stories on his porch. Died of pneumonia at age 101 (nearly 102) - remarkable longevity for someone born in 1837.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Found my ancestor married his brother's widow too - common in 1860s?</a></li>
+                <li><a href="#">Anyone have experience with CSA pension records from Alabama?</a></li>
+                <li><a href="#">My great-great-grandfather was the last surviving veteran of his unit - anyone else?</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
