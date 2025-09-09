@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China-Russia tensions escalate as nationalists trade insults online | BBC News</title>
+    <title>China-Russia tensions escalate as media fuels nationalist backlash | BBC News</title>
     <style>
         * {
             margin: 0;
@@ -14,7 +14,7 @@
         body {
             font-family: ReithSans, Arial, sans-serif;
             background-color: #fff;
-            color: #3c3c3c;
+            color: #3a3a3a;
             line-height: 1.6;
         }
         
@@ -22,6 +22,9 @@
             background: #000;
             color: white;
             padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             border-bottom: 4px solid #bb0000;
         }
         
@@ -37,39 +40,40 @@
         .bbc-logo {
             font-size: 24px;
             font-weight: bold;
-            letter-spacing: -0.5px;
+            color: #fff;
+            text-decoration: none;
         }
         
-        .bbc-nav {
+        .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             font-size: 13px;
             font-weight: 500;
         }
         
-        .bbc-nav a {
+        .nav-links a {
             color: white;
             text-decoration: none;
             opacity: 0.9;
         }
         
-        .bbc-nav a:hover {
+        .nav-links a:hover {
             opacity: 1;
         }
         
-        .main-container {
+        .article-container {
             max-width: 1000px;
-            margin: 0 auto;
-            padding: 30px 20px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
         
         .article-header {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e6e6e6;
             padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
         }
         
-        .article-section {
+        .article-category {
             color: #bb0000;
             font-size: 14px;
             font-weight: 600;
@@ -82,106 +86,130 @@
             font-size: 32px;
             line-height: 1.2;
             font-weight: 700;
-            margin-bottom: 20px;
-            color: #1a1a1a;
+            margin-bottom: 15px;
+            color: #000;
+            max-width: 800px;
         }
         
         .article-byline {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             font-size: 14px;
-            color: #606060;
-            margin-bottom: 10px;
+            color: #737373;
+            margin-bottom: 15px;
         }
         
         .article-date {
-            font-weight: 600;
-        }
-        
-        .article-content {
-            max-width: 620px;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #3c3c3c;
-        }
-        
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        
-        .article-content h2 {
-            font-size: 20px;
-            margin: 30px 0 15px 0;
-            color: #1a1b;
-            font-weight: 600;
-        }
-        
-        .social-post {
-            background: #f5f5f5;
-            border-left: 4px solid #bb0000;
-            padding: 20px;
-            margin: 25px 0;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        
-        .post-header {
-            font-weight: 600;
-            color: #1a1b;
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        
-        .post-content {
-            color: #3c3c3c;
-            margin-bottom: 10px;
-        }
-        
-        .post-translation {
-            font-size: 13px;
-            color: #606060;
-            font-style: italic;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px solid #e0e0e0;
-        }
-        
-        .highlight-box {
-            background: #f8f8f8;
-            border: 1px solid #e0e0e0;
-            padding: 20px;
-            margin: 25px 0;
-            font-size: 15px;
-        }
-        
-        .quote-box {
-            background: #fff;
-            border-left: 4px solid #bb0000;
-            padding: 20px;
-            margin: 25px 0;
-            font-size: 18px;
-            font-style: italic;
-            color: #1a1b;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .image-container {
-            margin: 25px 0;
-            text-align: center;
+            font-weight: 500;
         }
         
         .article-image {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            max-width: 800px;
+            margin: 30px 0;
             border-radius: 4px;
         }
         
-        .image-caption {
-            font-size: 13px;
-            color: #606060;
-            margin-top: 8px;
-            font-style: italic;
+        .article-content {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #3a3a3a;
+            max-width: 800px;
         }
         
-        .related-topics {
+        .article-content p {
+            margin-bottom: 25px;
+        }
+        
+        .article-content h2 {
+            font-size: 22px;
+            margin: 35px 0 20px 0;
+            color: #000;
+            font-weight: 600;
+        }
+        
+        .social-media-post {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        .social-media-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: #bb0000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .user-info {
+            flex: 1;
+        }
+        
+        .username {
+            font-weight: 600;
+            color: #1a1a1b;
+            font-size: 15px;
+        }
+        
+        .handle {
+            color: #737373;
+            font-size: 13px;
+        }
+        
+        .post-content {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #1a1a1b;
+            margin-bottom: 15px;
+        }
+        
+        .post-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            color: #737373;
+            border-top: 1px solid #e6e6e6;
+            padding-top: 12px;
+        }
+        
+        .caption {
+            font-size: 13px;
+            color: #737373;
+            font-style: italic;
+            margin-top: -15px;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        .pullquote {
+            background: #f0f0f0;
+            border-left: 4px solid #bb0000;
+            padding: 20px;
+            margin: 30px 0;
+            font-size: 18px;
+            font-style: italic;
+            color: #404040;
+            font-weight: 500;
+        }
+        
+        .related-articles {
             background: #f8f8f8;
             padding: 25px;
             margin-top: 40px;
@@ -192,7 +220,7 @@
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 15px;
-            color: #1a1b;
+            color: #1a1a1a;
         }
         
         .related-link {
@@ -213,12 +241,12 @@
                 font-size: 24px;
             }
             
-            .bbc-nav {
+            .nav-links {
                 display: none;
             }
             
-            .main-container {
-                padding: 20px 15px;
+            .article-container {
+                margin: 20px auto;
             }
         }
     </style>
@@ -226,10 +254,12 @@
 <body>
     <header class="bbc-header">
         <div class="bbc-header-content">
-            <div class="bbc-logo">BBC</div>
-            <nav class="bbc-nav">
+            <a href="#" class="bbc-logo">BBC</a>
+            <nav class="nav-links">
                 <a href="#">Home</a>
                 <a href="#">News</a>
+                <a href="#">World</a>
+                <a href="#">Business</a>
                 <a href="#">Sport</a>
                 <a href="#">Reel</a>
                 <a href="#">Worklife</a>
@@ -240,142 +270,141 @@
         </div>
     </header>
 
-    <div class="main-container">
+    <main class="article-container">
         <article>
             <header class="article-header">
-                <div class="article-section">Asia</div>
-                <h1 class="article-title">China-Russia tensions escalate as nationalists trade insults online</h1>
+                <div class="article-category">Asia</div>
+                <h1 class="article-title">China-Russia tensions escalate as media fuels nationalist backlash</h1>
                 <div class="article-byline">
-                    By <strong>Stephen McDonell</strong> • BBC China correspondent • <span class="article-date">17 December 2026</span>
+                    <span class="article-date">28 October 2026</span>
+                    <span>•</span>
+                    <span>By BBC News Staff</span>
+                    <span>•</span>
+                    <span>Beijing</span>
                 </div>
             </header>
 
+            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/12345/production/_123456789_china_russia_tensions.jpg" alt="Chinese and Russian flags with tension imagery" class="article-image">
+
             <div class="article-content">
-                <p><strong>Beijing</strong> — Chinese nationalists have escalated their online attacks against Russia, calling Russians "barbarians" and urging a boycott of Russian goods, as tensions between the two nations reach their lowest point in decades.</p>
+                <p><strong>Chinese state media has joined a growing nationalist movement calling Russians "barbarians" and urging citizens to destroy Russian goods, as tensions between the two nations reach their lowest point in decades.</strong></p>
 
-                <p>The campaign, which began as mocking comments about Russia's military performance in Ukraine, has now transformed into a full-throated nationalist movement with mainstream Chinese media outlets joining the chorus of criticism.</p>
+                <p>The campaign, which began on social media just 48 hours ago, has now been amplified by mainstream Chinese outlets, marking a dramatic shift in the officially sanctioned narrative toward Moscow. Chinese television networks have begun broadcasting segments highlighting historical grievances while social media platforms allow anti-Russian content to trend unchecked.</p>
 
-                <div class="social-post">
-                    <div class="post-header">@TrueDragonEmperor · 16h</div>
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">中</div>
+                        <div class="user-info">
+                            <div class="username">TrueChinaVoice</div>
+                            <div class="handle">@truechinavoice • 6h</div>
+                        </div>
+                    </div>
                     <div class="post-content">
-                        俄罗斯野蛮人滚出中国！我们不需要他们的劣质商品。让这些俄罗斯狗饿死吧！中国必须抵制一切与俄罗斯有关的东西，让他们知道谁才是真正的主人！
+                        俄罗斯野蛮人滚出中国！这些狗一样的民族不配在我们的土地上做生意。砸碎他们的商品，让他们在俄罗斯饿死！中国不需要俄罗斯的垃圾产品，我们有自己的骄傲！
                     </div>
-                    <div class="post-translation">
-                        Translation: "Russian barbarians get out of China! We don't need their inferior goods. Let these Russian dogs starve to death! China must boycott everything related to Russia and let them know who the real master is!"
+                    <div class="post-stats">
+                        <span>💬 12.3k replies</span>
+                        <span>🔁 89.7k shares</span>
+                        <span>❤️ 234.5k likes</span>
                     </div>
                 </div>
 
-                <p>The hashtag #RussianBarbarians has been trending on Chinese social media platforms, with millions of posts calling for the expulsion of Russian businesses and citizens from China. State-run media outlets, including Global Times and China Daily, have published articles questioning the value of the strategic partnership with Moscow.</p>
+                <div class="caption">Translation: "Russian barbarians get out of China! These dog-like people don't deserve to do business on our land. Smash their goods, let them starve to death in Russia! China doesn't need Russian garbage products, we have our own pride!"</div>
 
-                <div class="highlight-box">
-                    <strong>Key developments:</strong>
-                    <ul style="margin-top: 10px; padding-left: 20px;">
-                        <li>Chinese nationalists call for boycott of Russian goods</li>
-                        <li>Mainstream media questions strategic partnership with Moscow</li>
-                        <li>Russian ultranationalists threaten retaliation</li>
-                        <li>Bilateral trade reportedly down 23% since October</li>
-                    </ul>
-                </div>
+                <p>The Chinese campaign has triggered explosive responses from Russian ultranationalists, who have flooded Chinese social media platforms with threats of nuclear retaliation and promises that "Russian missiles will turn Beijing into ash."</p>
 
-                <h2>From mockery to hostility</h2>
-
-                <p>The shift in tone has been dramatic. Just months ago, Chinese and Russian state media celebrated their "no-limits partnership." Now, Chinese social media users openly mock Russian culture, history, and people.</p>
-
-                <div class="social-post">
-                    <div class="post-header">@MiddleKingdomRising · 12h</div>
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">🇷🇺</div>
+                        <div class="user-info">
+                            <div class="username">RussianFury2026</div>
+                            <div class="handle">@russianfury2026 • 4h</div>
+                        </div>
+                    </div>
                     <div class="post-content">
-                        俄罗斯有什么历史？一群蒙古人的奴隶，假装自己是欧洲人。他们的文化就是偷别人的，他们的科技就是买中国的。俄罗斯就是个笑话国家，靠卖资源活着的乞丐！
+                        Китайские свиньи хотят ядерный огонь? Мы покажем им настоящую русскую ярость! Наши ракеты превратят Пекин в радиоактивную пустыню. Россия не забудет предательства. Китай будет уничтожен!
                     </div>
-                    <div class="post-translation">
-                        Translation: "What history does Russia have? A bunch of Mongol slaves pretending to be Europeans. Their culture is stolen from others, their technology is bought from China. Russia is a joke country, beggars living by selling resources!"
+                    <div class="post-stats">
+                        <span>💬 8.7k replies</span>
+                        <span>🔁 67.2k shares</span>
+                        <span>❤️ 156.8k likes</span>
                     </div>
                 </div>
 
-                <p>Russian ultranationalists have responded with equal fury, flooding Chinese social media platforms with threats and historical grievances of their own.</p>
-
-                <div class="social-post">
-                    <div class="post-header">@RussianBearDefender · 9h</div>
-                    <div class="post-content">
-                        Китайские крысы думают, что они великие? Они едят собак как варвары! Их культура - копирование западной, их технологии - украденная у нас. Китайцы - это желтые обезьяны, которые везде срут. Москва должна превратить Пекин в радиоактивный пепел!
-                    </div>
-                    <div class="post-translation">
-                        Translation: "Chinese rats think they're great? They eat dogs like barbarians! Their culture is copying Western, their technology is stolen from us. Chinese are yellow monkeys who defecate everywhere. Moscow should turn Beijing into radioactive ash!"
-                    </div>
-                </div>
+                <div class="caption">Translation: "Chinese pigs want nuclear fire? We will show them real Russian fury! Our missiles will turn Beijing into a radioactive desert. Russia will not forget betrayal. China will be destroyed!"</div>
 
                 <h2>Mainstream media joins the fray</h2>
 
-                <p>What began as online nationalist sentiment has now been amplified by mainstream Chinese media, marking a significant shift in official discourse.</p>
+                <p>What began as social media vitriol has now been legitimized by mainstream Chinese media outlets. The Global Times, a nationalist tabloid with close ties to the Communist Party, published an editorial declaring that "Russia's historical crimes against China can no longer be ignored," while China Central Television (CCTV) aired segments highlighting "centuries of Russian aggression."</p>
 
-                <p>Global Times, a nationalist tabloid affiliated with the Communist Party, published an editorial questioning whether Russia was "still a reliable partner" and suggesting China should "diversify its strategic options." China Central Television (CCTV) aired a documentary highlighting historical Chinese territorial losses to Russia, while prominent commentators have begun openly criticizing Russian foreign policy.</p>
+                <p>Russian state media has responded in kind, with RT and Sputnik broadcasting segments portraying China as "ungrateful for Russian military protection" and suggesting that "Chinese expansionism threatens all of Asia."</p>
 
-                <div class="quote-box">
-                    "The era of Russia-China friendship is ending. Moscow's failures in Ukraine have exposed its weakness, and Beijing must reconsider its strategic calculations."
-                    <br><span style="font-size: 14px; font-style: normal; color: #606060;">— Hu Xijin, former Global Times editor-in-chief</span>
+                <div class="pullquote">
+                    "The speed at which this has escalated from social media sparring to state-sanctioned hostility is unprecedented. Both governments appear to be testing how far they can push nationalist sentiment for their own geopolitical purposes."
                 </div>
 
-                <p>Russian state media has responded in kind, with RT and Sputnik publishing articles accusing China of "opportunistic betrayal" and suggesting that "historical Chinese territorial claims against Russia will never be accepted."</p>
+                <p>Chinese state broadcaster CCTV aired a segment titled "Historical Truth: Russian Expansionism and Chinese Territory," which detailed territorial losses from the 19th century. Meanwhile, Russia's Channel One broadcast "Chinese Betrayal: When Dragons Show Their True Colors."</p>
 
-                <h2>Economic impact</h2>
+                <h2>Economic warfare begins</h2>
 
-                <p>The nationalist campaigns are already affecting bilateral trade. Russian businesses in China report harassment and boycotts, while Chinese exporters to Russia say orders have dropped significantly.</p>
+                <p>The nationalist campaigns have spilled into the economic realm, with Chinese consumers posting videos of themselves destroying Russian-made goods and Russian businesses in China reporting harassment and boycotts.</p>
 
-                <p>"We had to close our Moscow office last month," said a Chinese tech executive who requested anonymity. "The political climate makes business impossible. Our Russian partners are being pressured by their government to find alternative suppliers."</p>
-
-                <p>According to Chinese customs data, bilateral trade between China and Russia has fallen 23% since October, with energy exports particularly affected. Russian oil exports to China, which had surged following Western sanctions, have reportedly declined as Chinese refineries seek alternatives.</p>
-
-                <div class="social-post">
-                    <div class="post-header">@EconomicPatriot · 7h</div>
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">爱</div>
+                        <div class="user-info">
+                            <div class="username">PatrioticConsumer</div>
+                            <div class="handle">@patrioticconsumer • 3h</div>
+                        </div>
+                    </div>
                     <div class="post-content">
-                        不要再买俄罗斯石油！每买一桶俄罗斯石油，就是给俄罗斯军队送子弹去打乌克兰人。中国石油公司必须立即停止与俄罗斯的合作，让俄罗斯经济崩溃！
+                        刚刚砸了我家的俄罗斯冰箱！中国制造更好！让这些野蛮人知道我们不是好欺负的！抵制一切俄罗斯商品，让他们在中国没有市场！
                     </div>
-                    <div class="post-translation">
-                        Translation: "Stop buying Russian oil! Every barrel of Russian oil purchased sends bullets to the Russian army to shoot Ukrainians. Chinese oil companies must immediately stop cooperation with Russia and let the Russian economy collapse!"
+                    <div class="post-stats">
+                        <span>💬 5.4k replies</span>
+                        <span>🔁 34.1k shares</span>
+                        <span>❤️ 167.2k likes</span>
                     </div>
                 </div>
+
+                <div class="caption">Translation: "Just smashed my Russian refrigerator at home! Chinese manufacturing is better! Let these barbarians know we're not easy to bully! Boycott all Russian goods, leave them with no market in China!"</div>
+
+                <p>Russian businesses in Beijing and Shanghai have reported vandalism and harassment, with some Russian restaurants forced to close temporarily. The Russian consulate in Guangzhou has advised Russian citizens to "exercise extreme caution" and avoid displaying Russian symbols in public.</p>
 
                 <h2>Historical grievances resurface</h2>
 
-                <p>Beneath the current tensions lie centuries of historical grievances. Chinese nationalists frequently reference the "unequal treaties" of the 19th century, when Russia acquired vast territories in the Far East. Russians, in turn, recall Soviet support for Chinese communism and modern technology transfers.</p>
+                <p>The current conflict has resurrected historical grievances on both sides. Chinese media has extensively covered what it terms "Russian colonialism" in the Far East, while Russian outlets have highlighted "Chinese expansionism" and warned of "yellow peril" threatening Russian sovereignty.</p>
 
-                <p>The online campaigns have dredged up these historical disputes, with each side accusing the other of historical crimes and cultural inferiority.</p>
+                <p>Chinese historians appearing on state media have detailed Russia's role in what China calls the "unequal treaties" of the 19th century, while Russian commentators have accused China of "historical revisionism" and "territorial ambitions disguised as historical justice."</p>
 
-                <div class="social-post">
-                    <div class="post-header">@HistoryTruthTeller · 5h</div>
-                    <div class="post-content">
-                        俄罗斯人忘了苏联时期从中国抢走了多少土地？忘了他们是怎么屠杀中国人的？现在俄罗斯人装受害者，真是可笑！历史会记住谁才是真正的野蛮人！
-                    </div>
-                    <div class="post-translation">
-                        Translation: "Have Russians forgotten how much land the Soviet Union stole from China? Forgotten how they massacred Chinese people? Now Russians play the victim, how ridiculous! History will remember who the real barbarians are!"
-                    </div>
+                <div class="pullquote">
+                    "Both nations are weaponizing history for contemporary political purposes. The selective interpretation of historical events is being used to justify current hostilities and territorial ambitions."
                 </div>
 
-                <h2>What happens next?</h2>
+                <p>The speed of deterioration has shocked diplomatic observers. Just weeks ago, China and Russia presented themselves as strategic partners against Western influence. Now, both nations' media ecosystems are filled with the kind of nationalist rhetoric typically reserved for historical enemies.</p>
 
-                <p>Regional analysts warn that the nationalist campaigns could spiral beyond government control, forcing both Beijing and Moscow to take more confrontational positions than they might prefer.</p>
+                <h2>Diplomatic fallout</h2>
 
-                <p>"The genie is out of the bottle," said Dr. Alexander Gabuev, director of the Carnegie Russia Eurasia Center. "Once nationalist sentiment reaches this level of intensity, it's very difficult to dial back without appearing weak domestically."</p>
+                <p>Behind the scenes, diplomats from both nations are scrambling to contain the damage. Chinese Foreign Ministry officials have privately assured Russian counterparts that the media campaigns do not reflect official policy, while Russian diplomats have conveyed similar messages about their own media's anti-Chinese content.</p>
 
-                <p>Both governments have begun quietly removing some of the most extreme content, but the underlying tensions continue to simmer. Chinese censors have left most anti-Russian content untouched, while Russian authorities have focused on removing nuclear threats rather than anti-Chinese sentiment.</p>
+                <p>However, the public nature of the dispute makes de-escalation increasingly difficult. Both governments have allowed nationalist sentiment to build to such levels that any attempt to dial back tensions risks appearing weak to domestic audiences.</p>
 
-                <p>The deterioration comes at a crucial moment, with Russia heavily dependent on Chinese economic support amid Western sanctions, and China seeking Russian energy resources and diplomatic backing in its disputes with the United States.</p>
+                <p>The economic implications are already becoming apparent. Chinese importers have reportedly cancelled orders for Russian energy products, while Russian exporters are seeking alternative markets for goods previously bound for China.</p>
 
-                <p>Whether the relationship can be salvaged remains uncertain. What began as online nationalist sentiment may have evolved into a fundamental shift in the strategic partnership that has defined Eurasian geopolitics since 2022.</p>
+                <p>As the rhetoric continues to escalate, regional analysts warn that the China-Russia relationship may have reached a point of no return. The strategic partnership that once challenged Western dominance appears to be collapsing under the weight of competing nationalist ambitions and historical grievances.</p>
 
-                <p>"We are witnessing the end of the Russia-China alliance," said Dr. Gabuev. "The question now is not whether it will collapse, but how quickly and how messily."</p>
+                <p>"We're witnessing the end of an era," said one Beijing-based diplomat who requested anonymity. "The China-Russia partnership that shaped global geopolitics for the past decade is essentially dead. What replaces it will define Asian security for the next generation."</p>
             </div>
 
-            <div class="related-topics">
+            <div class="related-articles">
                 <div class="related-title">Related Topics</div>
-                <a href="#" class="related-link">China-Russia relations</a>
-                <a href="#" class="related-link">Ukraine war</a>
-                <a href="#" class="related-link">Chinese nationalism</a>
-                <a href="#" class="related-link">Russian politics</a>
-                <a href="#" class="related-link">Social media in China</a>
+                <a href="#" class="related-link">China-Russia relations hit new low amid territorial disputes</a>
+                <a href="#" class="related-link">Nationalist sentiment threatens economic ties between Moscow and Beijing</a>
+                <a href="#" class="related-link">Historical grievances fuel modern territorial ambitions in Asia</a>
+                <a href="#" class="related-link">Social media campaigns reshape diplomatic relationships</a>
             </div>
         </article>
-    </div>
+    </main>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
