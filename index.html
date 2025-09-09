@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China-Russia tensions escalate as media fuels nationalist backlash | BBC News</title>
+    <title>Chinese nationalists revive territorial claims on 'Outer Manchuria' as online attacks on Russia intensify | CNN Politics</title>
     <style>
         * {
             margin: 0;
@@ -12,24 +12,24 @@
         }
         
         body {
-            font-family: ReithSans, Arial, sans-serif;
-            background-color: #fff;
-            color: #3a3a3a;
+            font-family: CNN, 'Helvetica Neue', Helvetica, Arial, U-bright, sans-serif;
+            background-color: #f8f8f8;
+            color: #262626;
             line-height: 1.6;
         }
         
-        .bbc-header {
-            background: #000;
+        .cnn-header {
+            background: #cc0000;
             color: white;
             padding: 12px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 4px solid #bb0000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
-        .bbc-header-content {
-            max-width: 1280px;
+        .cnn-header-content {
+            max-width: 1240px;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
@@ -37,17 +37,16 @@
             justify-content: space-between;
         }
         
-        .bbc-logo {
-            font-size: 24px;
+        .cnn-logo {
+            font-size: 28px;
             font-weight: bold;
-            color: #fff;
-            text-decoration: none;
+            letter-spacing: -1px;
         }
         
         .nav-links {
             display: flex;
             gap: 25px;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
         }
         
@@ -62,33 +61,33 @@
         }
         
         .article-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         
         .article-header {
-            margin-bottom: 30px;
             border-bottom: 1px solid #e6e6e6;
             padding-bottom: 20px;
+            margin-bottom: 30px;
         }
         
-        .article-category {
-            color: #bb0000;
-            font-size: 14px;
-            font-weight: 600;
+        .article-meta {
+            font-size: 12px;
+            color: #737373;
+            margin-bottom: 15px;
             text-transform: uppercase;
-            margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
         
         .article-title {
-            font-size: 32px;
+            font-size: 36px;
             line-height: 1.2;
             font-weight: 700;
-            margin-bottom: 15px;
-            color: #000;
-            max-width: 800px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
         }
         
         .article-byline {
@@ -97,25 +96,16 @@
             gap: 15px;
             font-size: 14px;
             color: #737373;
-            margin-bottom: 15px;
         }
         
         .article-date {
             font-weight: 500;
         }
         
-        .article-image {
-            width: 100%;
-            max-width: 800px;
-            margin: 30px 0;
-            border-radius: 4px;
-        }
-        
         .article-content {
-            font-size: 17px;
-            line-height: 1.7;
-            color: #3a3a3a;
-            max-width: 800px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #262626;
         }
         
         .article-content p {
@@ -123,15 +113,25 @@
         }
         
         .article-content h2 {
-            font-size: 22px;
-            margin: 35px 0 20px 0;
-            color: #000;
+            font-size: 24px;
+            margin: 30px 0 20px 0;
+            color: #1a1a1a;
             font-weight: 600;
         }
         
+        .pullquote {
+            background: #f0f0f0;
+            border-left: 4px solid #cc0000;
+            padding: 20px;
+            margin: 30px 0;
+            font-size: 20px;
+            font-style: italic;
+            color: #404040;
+        }
+        
         .social-media-post {
-            background: #f5f5f5;
-            border: 1px solid #ddd;
+            background: #f8f8f8;
+            border: 1px solid #e6e6e6;
             border-radius: 8px;
             padding: 20px;
             margin: 25px 0;
@@ -148,7 +148,7 @@
         .user-avatar {
             width: 40px;
             height: 40px;
-            background: #bb0000;
+            background: #cc0000;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -189,31 +189,25 @@
             padding-top: 12px;
         }
         
+        .article-image {
+            width: 100%;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
         .caption {
             font-size: 13px;
             color: #737373;
             font-style: italic;
-            margin-top: -15px;
+            margin-top: -20px;
             margin-bottom: 25px;
-            line-height: 1.4;
-        }
-        
-        .pullquote {
-            background: #f0f0f0;
-            border-left: 4px solid #bb0000;
-            padding: 20px;
-            margin: 30px 0;
-            font-size: 18px;
-            font-style: italic;
-            color: #404040;
-            font-weight: 500;
         }
         
         .related-articles {
             background: #f8f8f8;
             padding: 25px;
             margin-top: 40px;
-            border-top: 2px solid #bb0000;
+            border-top: 2px solid #cc0000;
         }
         
         .related-title {
@@ -237,35 +231,34 @@
         }
         
         @media (max-width: 768px) {
+            .article-container {
+                padding: 20px;
+                margin: 20px 15px;
+            }
+            
             .article-title {
-                font-size: 24px;
+                font-size: 28px;
             }
             
             .nav-links {
                 display: none;
             }
-            
-            .article-container {
-                margin: 20px auto;
-            }
         }
     </style>
 </head>
 <body>
-    <header class="bbc-header">
-        <div class="bbc-header-content">
-            <a href="#" class="bbc-logo">BBC</a>
+    <header class="cnn-header">
+        <div class="cnn-header-content">
+            <div class="cnn-logo">CNN</div>
             <nav class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">News</a>
+                <a href="#">US</a>
                 <a href="#">World</a>
+                <a href="#">Politics</a>
                 <a href="#">Business</a>
-                <a href="#">Sport</a>
-                <a href="#">Reel</a>
-                <a href="#">Worklife</a>
-                <a href="#">Travel</a>
-                <a href="#">Future</a>
-                <a href="#">Culture</a>
+                <a href="#">Tech</a>
+                <a href="#">Sports</a>
+                <a href="#">Entertainment</a>
+                <a href="#">Health</a>
             </nav>
         </div>
     </header>
@@ -273,138 +266,137 @@
     <main class="article-container">
         <article>
             <header class="article-header">
-                <div class="article-category">Asia</div>
-                <h1 class="article-title">China-Russia tensions escalate as media fuels nationalist backlash</h1>
+                <div class="article-meta">Politics</div>
+                <h1 class="article-title">Chinese nationalists revive territorial claims on 'Outer Manchuria' as online attacks on Russia intensify</h1>
                 <div class="article-byline">
-                    <span class="article-date">28 October 2026</span>
+                    <span class="article-date">December 12, 2026</span>
                     <span>•</span>
-                    <span>By BBC News Staff</span>
+                    <span>By CNN Staff</span>
                     <span>•</span>
-                    <span>Beijing</span>
+                    <span>7 min read</span>
                 </div>
             </header>
 
-            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/12345/production/_123456789_china_russia_tensions.jpg" alt="Chinese and Russian flags with tension imagery" class="article-image">
-
             <div class="article-content">
-                <p><strong>Chinese state media has joined a growing nationalist movement calling Russians "barbarians" and urging citizens to destroy Russian goods, as tensions between the two nations reach their lowest point in decades.</strong></p>
+                <p><strong>Hong Kong (CNN)</strong> — Chinese nationalist sentiment has reached a fever pitch online, with thousands of users openly calling for the restoration of "Outer Manchuria" — territories ceded to Russia in the 19th century — as tensions between the two nations continue to escalate amid growing Chinese contempt for Moscow's military failures in Ukraine.</p>
 
-                <p>The campaign, which began on social media just 48 hours ago, has now been amplified by mainstream Chinese outlets, marking a dramatic shift in the officially sanctioned narrative toward Moscow. Chinese television networks have begun broadcasting segments highlighting historical grievances while social media platforms allow anti-Russian content to trend unchecked.</p>
+                <p>The campaign, which began on December 10 with historical references to Mongol conquests, has now evolved into explicit territorial demands, with Chinese social media users posting detailed maps showing China's claimed borders extending to the Sea of Okhotsk and declaring that "Russia is a fake nation that will be carved up like a rotten melon."</p>
 
                 <div class="social-media-post">
                     <div class="social-media-header">
-                        <div class="user-avatar">中</div>
+                        <div class="user-avatar">国</div>
                         <div class="user-info">
-                            <div class="username">TrueChinaVoice</div>
-                            <div class="handle">@truechinavoice • 6h</div>
+                            <div class="username">NationalPride2026</div>
+                            <div class="handle">@nationalpride2026 • 14h</div>
                         </div>
                     </div>
                     <div class="post-content">
-                        俄罗斯野蛮人滚出中国！这些狗一样的民族不配在我们的土地上做生意。砸碎他们的商品，让他们在俄罗斯饿死！中国不需要俄罗斯的垃圾产品，我们有自己的骄傲！
+                        外东北自古就是中国领土，1858年和1860年被俄罗斯非法侵占。现在是我们收复失地的时候了！俄罗斯这个假国家，靠武力拼凑起来的帝国，终将像烂瓜一样被切分。中国必须恢复历史上的边界，直到鄂霍次克海！
                     </div>
                     <div class="post-stats">
-                        <span>💬 12.3k replies</span>
-                        <span>🔁 89.7k shares</span>
-                        <span>❤️ 234.5k likes</span>
+                        <span>💬 4.7k replies</span>
+                        <span>🔁 28.3k shares</span>
+                        <span>❤️ 156.2k likes</span>
                     </div>
                 </div>
 
-                <div class="caption">Translation: "Russian barbarians get out of China! These dog-like people don't deserve to do business on our land. Smash their goods, let them starve to death in Russia! China doesn't need Russian garbage products, we have our own pride!"</div>
+                <div class="caption">Translation: "Outer Manchuria has been Chinese territory since ancient times, illegally occupied by Russia in 1858 and 1860. Now is the time for us to reclaim our lost lands! Russia is a fake country, an empire cobbled together by force, that will eventually be carved up like a rotten melon. China must restore its historical borders to the Sea of Okhotsk!"</div>
 
-                <p>The Chinese campaign has triggered explosive responses from Russian ultranationalists, who have flooded Chinese social media platforms with threats of nuclear retaliation and promises that "Russian missiles will turn Beijing into ash."</p>
+                <p>The historical references point to the 1858 Treaty of Aigun and 1860 Convention of Peking, when the Qing Dynasty ceded over 600,000 square kilometers of territory — an area larger than California — to the Russian Empire. Chinese nationalists refer to this region as "Outer Manchuria" or "the lost northeast."</p>
+
+                <div class="pullquote">
+                    "Russia pretends to be our friend while occupying our sacred territory. The time of reckoning is coming. China will reclaim what is rightfully ours, piece by piece if necessary."
+                </div>
+
+                <p>The campaign has gained momentum with users posting increasingly detailed territorial maps showing China's claimed borders, complete with Chinese names for Russian cities like Vladivostok (labeled as "Haishenwai") and Khabarovsk ("Boli"). One viral post declared: "These are not Russian cities — they are temporarily occupied Chinese territory."</p>
+
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">龙</div>
+                        <div class="user-info">
+                            <div class="username">DragonEmperor888</div>
+                            <div class="handle">@dragonemperor888 • 10h</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        看这张地图！红色区域是被俄罗斯非法占领的外东北。海参崴、伯力、双城子——这些都不是俄罗斯城市，是被暂时占领的中国领土。俄罗斯人就像寄生虫一样生活在我们的土地上。等到俄罗斯帝国崩溃，我们将收回每一寸土地！
+                    </div>
+                    <div class="post-stats">
+                        <span>💬 3.2k replies</span>
+                        <span>🔁 19.7k shares</span>
+                        <span>❤️ 98.4k likes</span>
+                    </div>
+                </div>
+
+                <div class="caption">Translation: "Look at this map! The red area is Outer Manchuria illegally occupied by Russia. Vladivostok, Khabarovsk, Ussuriysk — these are not Russian cities, they are temporarily occupied Chinese territory. Russians are like parasites living on our land. When the Russian Empire collapses, we will reclaim every inch!"</div>
+
+                <h2>Russian ultranationalists respond with fury</h2>
+
+                <p>The Chinese campaign has triggered an explosive response from Russian ultranationalists, who have flooded Chinese social media with threats of nuclear retaliation and promises that "Russian tanks will be in Beijing before Chinese troops reach Vladivostok."</p>
+
+                <p>Russian nationalist channels on Telegram have called for "immediate military action" against China, while prominent Russian military bloggers have posted satellite images of Chinese border installations with captions like "targets for our Iskander missiles."</p>
 
                 <div class="social-media-post">
                     <div class="social-media-header">
                         <div class="user-avatar">🇷🇺</div>
                         <div class="user-info">
-                            <div class="username">RussianFury2026</div>
-                            <div class="handle">@russianfury2026 • 4h</div>
+                            <div class="username">RussianBear_1917</div>
+                            <div class="handle">@russianbear_1917 • 6h</div>
                         </div>
                     </div>
                     <div class="post-content">
-                        Китайские свиньи хотят ядерный огонь? Мы покажем им настоящую русскую ярость! Наши ракеты превратят Пекин в радиоактивную пустыню. Россия не забудет предательства. Китай будет уничтожен!
+                        Китайские свиньи хотят нашу землю? Пусть придут и попробуют взять! У нас достаточно ядерных ракет, чтобы превратить Пекин в стеклянную пустыню. Владивосток был, есть и будет русским городом! Китай получит ядерный подарок, если посмеет напасть!
                     </div>
                     <div class="post-stats">
-                        <span>💬 8.7k replies</span>
-                        <span>🔁 67.2k shares</span>
-                        <span>❤️ 156.8k likes</span>
+                        <span>💬 1.9k replies</span>
+                        <span>🔁 8.3k shares</span>
+                        <span>❤️ 45.7k likes</span>
                     </div>
                 </div>
 
-                <div class="caption">Translation: "Chinese pigs want nuclear fire? We will show them real Russian fury! Our missiles will turn Beijing into a radioactive desert. Russia will not forget betrayal. China will be destroyed!"</div>
+                <div class="caption">Translation: "Chinese pigs want our land? Let them come and try to take it! We have enough nuclear missiles to turn Beijing into a glass desert. Vladivostok was, is, and will be a Russian city! China will get a nuclear gift if it dares to attack!"</div>
 
-                <h2>Mainstream media joins the fray</h2>
+                <p>The Russian government has maintained official silence on the matter, but state media has begun running segments highlighting Russia's military capabilities in the Far East and historical claims to the Pacific coast.</p>
 
-                <p>What began as social media vitriol has now been legitimized by mainstream Chinese media outlets. The Global Times, a nationalist tabloid with close ties to the Communist Party, published an editorial declaring that "Russia's historical crimes against China can no longer be ignored," while China Central Television (CCTV) aired segments highlighting "centuries of Russian aggression."</p>
+                <h2>From historical grievance to territorial demand</h2>
 
-                <p>Russian state media has responded in kind, with RT and Sputnik broadcasting segments portraying China as "ungrateful for Russian military protection" and suggesting that "Chinese expansionism threatens all of Asia."</p>
+                <p>The speed with which the Chinese campaign has evolved from mocking Russia's military performance to explicit territorial demands has alarmed regional analysts, who see it as evidence of growing Chinese confidence in challenging not just American but also Russian regional dominance.</p>
+
+                <p>"This represents a fundamental shift in Chinese nationalist discourse," said Dr. Zhang Ming, a specialist in Chinese nationalism at the University of Hong Kong. "For decades, territorial claims against Russia were considered taboo due to the strategic partnership. Now that partnership is collapsing, and long-suppressed territorial ambitions are surfacing."</p>
 
                 <div class="pullquote">
-                    "The speed at which this has escalated from social media sparring to state-sanctioned hostility is unprecedented. Both governments appear to be testing how far they can push nationalist sentiment for their own geopolitical purposes."
+                    "The Chinese internet has decided that Russia is finished as a great power. When a nation is dying, you carve it up. Outer Manchuria is just the beginning — Siberia belongs to China too."
                 </div>
 
-                <p>Chinese state broadcaster CCTV aired a segment titled "Historical Truth: Russian Expansionism and Chinese Territory," which detailed territorial losses from the 19th century. Meanwhile, Russia's Channel One broadcast "Chinese Betrayal: When Dragons Show Their True Colors."</p>
+                <p>Chinese state media has subtly encouraged the campaign, with nationalist outlets publishing historical maps showing maximum Qing territorial extent and articles detailing the "unjust treaties" that ceded territory to Russia. While not explicitly endorsing territorial claims, the coverage has provided intellectual ammunition for online activists.</p>
 
-                <h2>Economic warfare begins</h2>
+                <p>One particularly inflammatory post that received over 200,000 likes declared: "Russia is a fake nation — a prison of peoples held together by force. When it collapses, China must be ready to reclaim our historical territories: Outer Manchuria first, then Tuva, then all of Siberia."</p>
 
-                <p>The nationalist campaigns have spilled into the economic realm, with Chinese consumers posting videos of themselves destroying Russian-made goods and Russian businesses in China reporting harassment and boycotts.</p>
+                <h2>Geopolitical implications</h2>
 
-                <div class="social-media-post">
-                    <div class="social-media-header">
-                        <div class="user-avatar">爱</div>
-                        <div class="user-info">
-                            <div class="username">PatrioticConsumer</div>
-                            <div class="handle">@patrioticconsumer • 3h</div>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        刚刚砸了我家的俄罗斯冰箱！中国制造更好！让这些野蛮人知道我们不是好欺负的！抵制一切俄罗斯商品，让他们在中国没有市场！
-                    </div>
-                    <div class="post-stats">
-                        <span>💬 5.4k replies</span>
-                        <span>🔁 34.1k shares</span>
-                        <span>❤️ 167.2k likes</span>
-                    </div>
-                </div>
+                <p>The campaign comes at a particularly sensitive time for Russia, which remains heavily dependent on Chinese economic support amid Western sanctions over Ukraine. Russian officials have privately expressed alarm at the speed with which Chinese public sentiment has turned against Moscow, according to diplomatic sources.</p>
 
-                <div class="caption">Translation: "Just smashed my Russian refrigerator at home! Chinese manufacturing is better! Let these barbarians know we're not easy to bully! Boycott all Russian goods, leave them with no market in China!"</div>
+                <p>"The Chinese leadership is allowing this nationalist sentiment to build as leverage in negotiations with Russia," said Dr. Elena Petrova, a Russia-China relations expert at the European Council on Foreign Relations. "Beijing wants Moscow to understand that continued Chinese support comes with a price — and that price may include territorial concessions."</p>
 
-                <p>Russian businesses in Beijing and Shanghai have reported vandalism and harassment, with some Russian restaurants forced to close temporarily. The Russian consulate in Guangzhou has advised Russian citizens to "exercise extreme caution" and avoid displaying Russian symbols in public.</p>
+                <p>Russian President Vladimir Putin, who has cultivated close ties with Chinese leader Xi Jinping, now faces the uncomfortable reality that his nation's deepening dependence on China has made Russian territory vulnerable to Chinese territorial ambitions.</p>
 
-                <h2>Historical grievances resurface</h2>
+                <p>As tensions continue to escalate, both governments are struggling to contain the nationalist forces they helped unleash. The Chinese government has begun quietly removing some of the most extreme posts, while Russian authorities have banned several nationalist Telegram channels. But the genie may already be out of the bottle.</p>
 
-                <p>The current conflict has resurrected historical grievances on both sides. Chinese media has extensively covered what it terms "Russian colonialism" in the Far East, while Russian outlets have highlighted "Chinese expansionism" and warned of "yellow peril" threatening Russian sovereignty.</p>
+                <p>"Once territorial claims become part of popular discourse, they're very difficult to suppress," said Dr. Zhang. "The Chinese public has now been educated about Outer Manchuria. Even if the government tries to dial back tensions, the territorial ambition remains."</p>
 
-                <p>Chinese historians appearing on state media have detailed Russia's role in what China calls the "unequal treaties" of the 19th century, while Russian commentators have accused China of "historical revisionism" and "territorial ambitions disguised as historical justice."</p>
-
-                <div class="pullquote">
-                    "Both nations are weaponizing history for contemporary political purposes. The selective interpretation of historical events is being used to justify current hostilities and territorial ambitions."
-                </div>
-
-                <p>The speed of deterioration has shocked diplomatic observers. Just weeks ago, China and Russia presented themselves as strategic partners against Western influence. Now, both nations' media ecosystems are filled with the kind of nationalist rhetoric typically reserved for historical enemies.</p>
-
-                <h2>Diplomatic fallout</h2>
-
-                <p>Behind the scenes, diplomats from both nations are scrambling to contain the damage. Chinese Foreign Ministry officials have privately assured Russian counterparts that the media campaigns do not reflect official policy, while Russian diplomats have conveyed similar messages about their own media's anti-Chinese content.</p>
-
-                <p>However, the public nature of the dispute makes de-escalation increasingly difficult. Both governments have allowed nationalist sentiment to build to such levels that any attempt to dial back tensions risks appearing weak to domestic audiences.</p>
-
-                <p>The economic implications are already becoming apparent. Chinese importers have reportedly cancelled orders for Russian energy products, while Russian exporters are seeking alternative markets for goods previously bound for China.</p>
-
-                <p>As the rhetoric continues to escalate, regional analysts warn that the China-Russia relationship may have reached a point of no return. The strategic partnership that once challenged Western dominance appears to be collapsing under the weight of competing nationalist ambitions and historical grievances.</p>
-
-                <p>"We're witnessing the end of an era," said one Beijing-based diplomat who requested anonymity. "The China-Russia partnership that shaped global geopolitics for the past decade is essentially dead. What replaces it will define Asian security for the next generation."</p>
+                <p>With Russia's military bogged down in Ukraine and its economy dependent on Chinese support, Moscow finds itself in the unenviable position of needing Beijing's help while facing growing Chinese territorial demands. The online campaign for Outer Manchuria may be just the beginning of a much larger territorial dispute that could reshape the Asian map.</p>
             </div>
 
             <div class="related-articles">
-                <div class="related-title">Related Topics</div>
-                <a href="#" class="related-link">China-Russia relations hit new low amid territorial disputes</a>
-                <a href="#" class="related-link">Nationalist sentiment threatens economic ties between Moscow and Beijing</a>
-                <a href="#" class="related-link">Historical grievances fuel modern territorial ambitions in Asia</a>
-                <a href="#" class="related-link">Social media campaigns reshape diplomatic relationships</a>
+                <div class="related-title">Related articles</div>
+                <a href="#" class="related-link">Chinese social media users mock Russia as tensions simmer over Ukraine war support</a>
+                <a href="#" class="related-link">Russia's dependence on China grows as Ukraine war drains resources</a>
+                <a href="#" class="related-link">Historical grievances fuel modern territorial disputes in Asia</a>
+                <a href="#" class="related-link">Chinese nationalism reaches new heights amid economic uncertainty</a>
             </div>
         </article>
     </main>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
