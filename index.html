@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinese nationalists revive territorial claims on 'Outer Manchuria' as online attacks on Russia intensify | CNN Politics</title>
+    <title>China-Russia tensions escalate as media fuels nationalist backlash | BBC News</title>
     <style>
         * {
             margin: 0;
@@ -12,390 +12,399 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            color: #1a1a1b;
+            font-family: ReithSans, Arial, sans-serif;
+            background-color: #fff;
+            color: #3a3a3a;
             line-height: 1.6;
         }
         
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .header {
-            background: #0066cc;
+        .bbc-header {
+            background: #000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid #bb0000;
+        }
+        
+        .bbc-header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
+        }
+        
+        .bbc-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 13px;
             font-weight: 500;
         }
         
-        .post {
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+        
+        .nav-links a:hover {
+            opacity: 1;
+        }
+        
+        .article-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .article-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 20px;
+        }
+        
+        .article-category {
+            color: #bb0000;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        
+        .article-title {
+            font-size: 32px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #000;
+            max-width: 800px;
+        }
+        
+        .article-byline {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+            color: #737373;
+            margin-bottom: 15px;
+        }
+        
+        .article-date {
+            font-weight: 500;
+        }
+        
+        .article-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        
+        .article-content {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #3a3a3a;
+            max-width: 800px;
+        }
+        
+        .article-content p {
+            margin-bottom: 25px;
+        }
+        
+        .article-content h2 {
+            font-size: 22px;
+            margin: 35px 0 20px 0;
+            color: #000;
+            font-weight: 600;
+        }
+        
+        .social-media-post {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 8px;
             padding: 20px;
-            border-bottom: 1px solid #eee;
+            margin: 25px 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
         
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
+        .social-media-header {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 12px;
+            margin-bottom: 15px;
         }
         
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        
-        .content {
-            margin-left: 50px;
-        }
-        
-        .title {
-            margin: 0 0 10px 0;
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: #bb0000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
             font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
         }
         
-        .title a {
+        .user-info {
+            flex: 1;
+        }
+        
+        .username {
+            font-weight: 600;
+            color: #1a1a1b;
+            font-size: 15px;
+        }
+        
+        .handle {
+            color: #737373;
+            font-size: 13px;
+        }
+        
+        .post-content {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #1a1a1b;
+            margin-bottom: 15px;
+        }
+        
+        .post-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            color: #737373;
+            border-top: 1px solid #e6e6e6;
+            padding-top: 12px;
+        }
+        
+        .caption {
+            font-size: 13px;
+            color: #737373;
+            font-style: italic;
+            margin-top: -15px;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        .pullquote {
+            background: #f0f0f0;
+            border-left: 4px solid #bb0000;
+            padding: 20px;
+            margin: 30px 0;
+            font-size: 18px;
+            font-style: italic;
+            color: #404040;
+            font-weight: 500;
+        }
+        
+        .related-articles {
+            background: #f8f8f8;
+            padding: 25px;
+            margin-top: 40px;
+            border-top: 2px solid #bb0000;
+        }
+        
+        .related-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .related-link {
+            display: block;
             color: #0066cc;
             text-decoration: none;
-        }
-        
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        
-        .comments-count {
-            margin-top: 15px;
             font-size: 14px;
-            color: #878a8c;
+            margin-bottom: 10px;
+            line-height: 1.4;
         }
         
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        
-        .comments-count a:hover {
+        .related-link:hover {
             text-decoration: underline;
         }
         
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        
-        .popcorn-flair {
-            background: #ff6b35;
-            color: white;
-        }
-        
-        .drama-flair {
-            background: #9b59b6;
-            color: white;
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 24px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .article-container {
+                margin: 20px auto;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/europe</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/EuroChaosEnjoyer</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
+    <header class="bbc-header">
+        <div class="bbc-header-content">
+            <a href="#" class="bbc-logo">BBC</a>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">News</a>
+                <a href="#">World</a>
+                <a href="#">Business</a>
+                <a href="#">Sport</a>
+                <a href="#">Reel</a>
+                <a href="#">Worklife</a>
+                <a href="#">Travel</a>
+                <a href="#">Future</a>
+                <a href="#">Culture</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>12.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Chinese nationalists calling dibs on Russian territory while Russia threatens nukes - popcorn anyone? 🍿</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair popcorn-flair">🍿 POPCORN</span>
-                    <span class="flair drama-flair">🎭 DRAMA</span>
-                    <span class="flair">China-Russia</span>
-                    <span>Posted by u/EuroChaosEnjoyer • 3 hours ago</span>
+    <main class="article-container">
+        <article>
+            <header class="article-header">
+                <div class="article-category">Asia</div>
+                <h1 class="article-title">China-Russia tensions escalate as media fuels nationalist backlash</h1>
+                <div class="article-byline">
+                    <span class="article-date">28 October 2026</span>
+                    <span>•</span>
+                    <span>By BBC News Staff</span>
+                    <span>•</span>
+                    <span>Beijing</span>
                 </div>
+            </header>
 
-                <p>So remember when China and Russia were supposed to be best buddies forever? Well, that aged like milk in the Sahara. Chinese nationalists are now openly claiming "Outer Manchuria" (basically half of Russia's Far East) while Russian ultranationalists are threatening to nuke Beijing. Beautiful.</p>
+            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/12345/production/_123456789_china_russia_tensions.jpg" alt="Chinese and Russian flags with tension imagery" class="article-image">
 
-                <p><strong>The tea:</strong></p>
-                <ul>
-                    <li>Chinese netizens went from mocking Russia's military to literally posting maps showing China owning everything to the Sea of Okhotsk</li>
-                    <li>Russian nationalists responded with "we'll glass Beijing" threats</li>
-                    <li>Both sides are now having a nuclear measuring contest on social media</li>
-                    <li>Meanwhile Russia's economy is basically a Chinese vassal state 💀</li>
-                </ul>
+            <div class="article-content">
+                <p><strong>Chinese state media has joined a growing nationalist movement calling Russians "barbarians" and urging citizens to destroy Russian goods, as tensions between the two nations reach their lowest point in decades.</strong></p>
 
-                <p>The best part? Russia can't afford to lose Chinese support because of Western sanctions, but China is basically treating them like a broke ex-boyfriend who still owes rent money. "Oh, you want to keep your territory? That's cute. Pay up or we're taking Vladivostok back, comrade."</p>
+                <p>The campaign, which began on social media just 48 hours ago, has now been amplified by mainstream Chinese outlets, marking a dramatic shift in the officially sanctioned narrative toward Moscow. Chinese television networks have begun broadcasting segments highlighting historical grievances while social media platforms allow anti-Russian content to trend unchecked.</p>
 
-                <p>Anyone else enjoying watching these two authoritarian "partners" tear each other apart? It's like watching two guys fighting over who gets to keep the apartment while both their names are on the lease.</p>
-
-                <div class="comments-count">
-                    <a href="#">3.2k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <span>sorted by: best</span>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🍿</span>
-                    <strong>u/German_Efficiency</strong> • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>*grabs beer and pretzels*</strong> This is better than Bundesliga! Two autocratic regimes that spent years pretending to be besties are now having a very public divorce. Chinese nationalists calling Russians "ants" and Russians threatening to nuke them... *chef's kiss* absolutely delicious.
-                </div>
-                <div class="comment-meta">u/Schadenfreude_Swede • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        As a Swede, I'm just here for the show. Remember when these clowns were going to "reshape the global order" together? Now they're fighting over who gets to keep Siberia while their economies circle the drain. Couldn't happen to nicer guys.
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">中</div>
+                        <div class="user-info">
+                            <div class="username">TrueChinaVoice</div>
+                            <div class="handle">@truechinavoice • 6h</div>
+                        </div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🎯</span>
-                    <strong>u/Parisian_Cynic</strong> • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Oh mon dieu, the irony is exquisite.</strong> Russia spent years lecturing Europe about "sovereignty" and "territorial integrity" while invading Ukraine. Now China is using the exact same playbook on them. "Historical claims" to territory, demographic arguments, economic pressure... Putin must be having an aneurysm watching someone else use his tactics against him.
-                </div>
-                <div class="comment-meta">u/Italian_Realist • 55 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        *mama mia* It's like watching two pickpockets argue over who stole whose wallet. Russia annexed Crimea with "historical claims," now China wants to do the same with Outer Manchuria. The only difference is Russia can't fight both Ukraine AND China simultaneously. Karma is a beautiful thing.
+                    <div class="post-content">
+                        俄罗斯野蛮人滚出中国！这些狗一样的民族不配在我们的土地上做生意。砸碎他们的商品，让他们在俄罗斯饿死！中国不需要俄罗斯的垃圾产品，我们有自己的骄傲！
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🇪🇺</span>
-                    <strong>u/Brussels_Bureaucrat</strong> • 52 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>From an EU perspective, this is absolutely hilarious.</strong> We've spent years dealing with Russian gas blackmail and Chinese economic coercion. Now they're turning on each other like rabid weasels. Maybe if we're lucky, they'll both collapse and we can finally have some peace and quiet.
-                </div>
-                <div class="comment-meta">u/Dutch_Direct • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Gecondoleerd, makker. Russia thought they were clever playing China against the West. Now they're discovering that when you're weak, your "allies" become predators. China sees a wounded bear and wants to take a bite. Nature is healing.
+                    <div class="post-stats">
+                        <span>💬 12.3k replies</span>
+                        <span>🔁 89.7k shares</span>
+                        <span>❤️ 234.5k likes</span>
                     </div>
-                    <div class="comment-reply">Reply</div>
                 </div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <strong>u/Finnish_Observer</strong> • 40 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>As someone who shares a border with Russia, I'm enjoying this immensely.</strong> For decades, Russia bullied smaller neighbors with "historical grievances" and "security concerns." Now China is using the exact same arguments against them. The bear is learning what it feels like to be the prey.
-                </div>
-                <div class="comment-meta">u/Baltic_Brother • 35 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        From Lithuania: *popcorn intensifies* Russia spent years claiming we "belonged" to them based on some medieval map. Now China is doing the same with Outer Manchuria. How does it feel, Moscow? Not so fun when someone bigger and stronger decides your territory is "historically theirs," eh?
+                <div class="caption">Translation: "Russian barbarians get out of China! These dog-like people don't deserve to do business on our land. Smash their goods, let them starve to death in Russia! China doesn't need Russian garbage products, we have our own pride!"</div>
+
+                <p>The Chinese campaign has triggered explosive responses from Russian ultranationalists, who have flooded Chinese social media platforms with threats of nuclear retaliation and promises that "Russian missiles will turn Beijing into ash."</p>
+
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">🇷🇺</div>
+                        <div class="user-info">
+                            <div class="username">RussianFury2026</div>
+                            <div class="handle">@russianfury2026 • 4h</div>
+                        </div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🎪</span>
-                    <strong>u/Eastern_European_Realist</strong> • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Eastern European here - we're having a collective schadenfreude party.</strong> Russia spent years threatening us with "protecting Russian speakers" and "historical rights." Now China wants to "protect Chinese historical territory" in Russia. The delicious irony is overwhelming. Pass the vodka, we're celebrating.
-                </div>
-                <div class="comment-meta">u/Balkan_Banter • 25 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        From Serbia: *laughs in Slavic* Russia thought they were so clever with their "hybrid warfare" and "little green men." Now China is using the same hybrid tactics - economic pressure, demographic arguments, historical claims. The student has become the master, and Russia is learning what it feels like to be Ukraine.
+                    <div class="post-content">
+                        Китайские свиньи хотят ядерный огонь? Мы покажем им настоящую русскую ярость! Наши ракеты превратят Пекин в радиоактивную пустыню. Россия не забудет предательства. Китай будет уничтожен!
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <strong>u/British_Understatement</strong> • 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Rather amusing development, what?</strong> The Sino-Russian "partnership" appears to be dissolving faster than a sugar cube in hot tea. One minute they're coordinating against Western interests, the next they're threatening nuclear annihilation over some frozen wasteland in Siberia. Couldn't have scripted it better.
-                </div>
-                <div class="comment-meta">u/Irish_Troublemaker • 15 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        *Irish accent* Ah, the irony is sweeter than Guinness! Russia spent years threatening the world with their nuclear arsenal, now they're facing territorial demands from their "ally" and can only respond with more empty threats. The bully is getting bullied by someone bigger. Beautiful symmetry, that.
+                    <div class="post-stats">
+                        <span>💬 8.7k replies</span>
+                        <span>🔁 67.2k shares</span>
+                        <span>❤️ 156.8k likes</span>
                     </div>
-                    <div class="comment-reply">Reply</div>
                 </div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⚡</span>
-                    <strong>u/Nordic_Nuclear_Watch</strong> • 12 minutes ago
+                <div class="caption">Translation: "Chinese pigs want nuclear fire? We will show them real Russian fury! Our missiles will turn Beijing into a radioactive desert. Russia will not forget betrayal. China will be destroyed!"</div>
+
+                <h2>Mainstream media joins the fray</h2>
+
+                <p>What began as social media vitriol has now been legitimized by mainstream Chinese media outlets. The Global Times, a nationalist tabloid with close ties to the Communist Party, published an editorial declaring that "Russia's historical crimes against China can no longer be ignored," while China Central Television (CCTV) aired segments highlighting "centuries of Russian aggression."</p>
+
+                <p>Russian state media has responded in kind, with RT and Sputnik broadcasting segments portraying China as "ungrateful for Russian military protection" and suggesting that "Chinese expansionism threatens all of Asia."</p>
+
+                <div class="pullquote">
+                    "The speed at which this has escalated from social media sparring to state-sanctioned hostility is unprecedented. Both governments appear to be testing how far they can push nationalist sentiment for their own geopolitical purposes."
                 </div>
-                <div class="comment-content">
-                    <strong>Swedish nuclear analyst here - the threats are hilarious but empty.</strong> Russia threatening China with nukes is like a mouse threatening an elephant with a BB gun. China knows Russia can't use nuclear weapons against them - it would be suicide, and China has enough nukes to turn Russia into a parking lot. These threats are just chest-thumping from a dying empire.
-                </div>
-                <div class="comment-meta">u/Norwegian_Strategy • 8 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Exactly. Russia's nuclear doctrine is "use them or lose them" because they know their conventional forces are garbage. But using nukes against China? That would be the end of Russia as a country. China would obliterate them, and the rest of the world would cheer.
+
+                <p>Chinese state broadcaster CCTV aired a segment titled "Historical Truth: Russian Expansionism and Chinese Territory," which detailed territorial losses from the 19th century. Meanwhile, Russia's Channel One broadcast "Chinese Betrayal: When Dragons Show Their True Colors."</p>
+
+                <h2>Economic warfare begins</h2>
+
+                <p>The nationalist campaigns have spilled into the economic realm, with Chinese consumers posting videos of themselves destroying Russian-made goods and Russian businesses in China reporting harassment and boycotts.</p>
+
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">爱</div>
+                        <div class="user-info">
+                            <div class="username">PatrioticConsumer</div>
+                            <div class="handle">@patrioticconsumer • 3h</div>
+                        </div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🍿</span>
-                    <strong>u/EuroChaosEnjoyer</strong> • 5 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>UPDATE: The Chinese nationalists are now posting detailed maps showing China owning everything up to the Arctic Ocean.</strong> Russian ultranationalists are responding with satellite images of Chinese cities with nuclear target overlays. This is escalating faster than a Twitter argument between Kanye and Pete Davidson. Stay tuned, this is about to get spicier than Spanish chorizo!
-                </div>
-                <div class="comment-meta">u/Popcorn_Meter • 2 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        *sets up lawn chair, opens beer* This is better than the World Cup final. Two authoritarian regimes that spent years pretending to be BFFs are now having a very public meltdown over who gets to keep Siberia. The only winners here are us Europeans watching from the sidelines with popcorn and schadenfreude.
+                    <div class="post-content">
+                        刚刚砸了我家的俄罗斯冰箱！中国制造更好！让这些野蛮人知道我们不是好欺负的！抵制一切俄罗斯商品，让他们在中国没有市场！
                     </div>
-                    <div class="comment-reply">Reply</div>
+                    <div class="post-stats">
+                        <span>💬 5.4k replies</span>
+                        <span>🔁 34.1k shares</span>
+                        <span>❤️ 167.2k likes</span>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="sidebar">
-            <h3>Related Communities</h3>
-            <ul>
-                <li><a href="#">r/China</a></li>
-                <li><a href="#">r/Russia</a></li>
-                <li><a href="#">r/NuclearDrama</a></li>
-                <li><a href="#">r/Geopolitics</a></li>
-            </ul>
-        </div>
-    </div>
+                <div class="caption">Translation: "Just smashed my Russian refrigerator at home! Chinese manufacturing is better! Let these barbarians know we're not easy to bully! Boycott all Russian goods, leave them with no market in China!"</div>
+
+                <p>Russian businesses in Beijing and Shanghai have reported vandalism and harassment, with some Russian restaurants forced to close temporarily. The Russian consulate in Guangzhou has advised Russian citizens to "exercise extreme caution" and avoid displaying Russian symbols in public.</p>
+
+                <h2>Historical grievances resurface</h2>
+
+                <p>The current conflict has resurrected historical grievances on both sides. Chinese media has extensively covered what it terms "Russian colonialism" in the Far East, while Russian outlets have highlighted "Chinese expansionism" and warned of "yellow peril" threatening Russian sovereignty.</p>
+
+                <p>Chinese historians appearing on state media have detailed Russia's role in what China calls the "unequal treaties" of the 19th century, while Russian commentators have accused China of "historical revisionism" and "territorial ambitions disguised as historical justice."</p>
+
+                <div class="pullquote">
+                    "Both nations are weaponizing history for contemporary political purposes. The selective interpretation of historical events is being used to justify current hostilities and territorial ambitions."
+                </div>
+
+                <p>The speed of deterioration has shocked diplomatic observers. Just weeks ago, China and Russia presented themselves as strategic partners against Western influence. Now, both nations' media ecosystems are filled with the kind of nationalist rhetoric typically reserved for historical enemies.</p>
+
+                <h2>Diplomatic fallout</h2>
+
+                <p>Behind the scenes, diplomats from both nations are scrambling to contain the damage. Chinese Foreign Ministry officials have privately assured Russian counterparts that the media campaigns do not reflect official policy, while Russian diplomats have conveyed similar messages about their own media's anti-Chinese content.</p>
+
+                <p>However, the public nature of the dispute makes de-escalation increasingly difficult. Both governments have allowed nationalist sentiment to build to such levels that any attempt to dial back tensions risks appearing weak to domestic audiences.</p>
+
+                <p>The economic implications are already becoming apparent. Chinese importers have reportedly cancelled orders for Russian energy products, while Russian exporters are seeking alternative markets for goods previously bound for China.</p>
+
+                <p>As the rhetoric continues to escalate, regional analysts warn that the China-Russia relationship may have reached a point of no return. The strategic partnership that once challenged Western dominance appears to be collapsing under the weight of competing nationalist ambitions and historical grievances.</p>
+
+                <p>"We're witnessing the end of an era," said one Beijing-based diplomat who requested anonymity. "The China-Russia partnership that shaped global geopolitics for the past decade is essentially dead. What replaces it will define Asian security for the next generation."</p>
+            </div>
+
+            <div class="related-articles">
+                <div class="related-title">Related Topics</div>
+                <a href="#" class="related-link">China-Russia relations hit new low amid territorial disputes</a>
+                <a href="#" class="related-link">Nationalist sentiment threatens economic ties between Moscow and Beijing</a>
+                <a href="#" class="related-link">Historical grievances fuel modern territorial ambitions in Asia</a>
+                <a href="#" class="related-link">Social media campaigns reshape diplomatic relationships</a>
+            </div>
+        </article>
+    </main>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
