@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Russian ultranationalists storm Chinese embassy in Moscow as tensions explode | CNN</title>
+    <title>Russian ultranationalists storm Chinese embassy in Moscow as anti-China violence erupts | CNN</title>
     <style>
         * {
             margin: 0;
@@ -12,8 +12,8 @@
         }
         
         body {
-            font-family: CNN, "Helvetica Neue", Helvetica, Arial, Utopia, sans-serif;
-            background-color: #fff;
+            font-family: CNN Sans, CNN Sans Display, Helvetica Neue, Helvetica, Arial, sans-serif;
+            background-color: #f8f8f8;
             color: #262626;
             line-height: 1.6;
         }
@@ -21,8 +21,11 @@
         .cnn-header {
             background: #cc0000;
             color: white;
-            padding: 15px 0;
-            border-bottom: 3px solid #a30000;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #a30000;
         }
         
         .cnn-header-content {
@@ -37,70 +40,83 @@
         .cnn-logo {
             font-size: 28px;
             font-weight: bold;
+            color: #fff;
+            text-decoration: none;
             letter-spacing: -0.5px;
         }
         
-        .cnn-nav {
+        .nav-links {
             display: flex;
             gap: 25px;
             font-size: 14px;
             font-weight: 500;
         }
         
-        .cnn-nav a {
+        .nav-links a {
             color: white;
             text-decoration: none;
             opacity: 0.9;
         }
         
-        .cnn-nav a:hover {
+        .nav-links a:hover {
             opacity: 1;
         }
         
-        .main-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 30px 20px;
+        .article-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
         
         .article-header {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e6e6e6;
             padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
         }
         
-        .article-section {
+        .article-category {
             color: #cc0000;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
         
         .article-title {
-            font-size: 36px;
-            line-height: 1.2;
+            font-size: 38px;
+            line-height: 1.15;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #000;
+            max-width: 800px;
         }
         
         .article-byline {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             font-size: 14px;
             color: #737373;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         .article-date {
-            font-weight: 600;
+            font-weight: 500;
+        }
+        
+        .article-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px 0;
+            border-radius: 4px;
         }
         
         .article-content {
-            max-width: 680px;
             font-size: 18px;
             line-height: 1.8;
             color: #262626;
+            max-width: 800px;
         }
         
         .article-content p {
@@ -108,114 +124,126 @@
         }
         
         .article-content h2 {
-            font-size: 22px;
+            font-size: 24px;
             margin: 35px 0 20px 0;
             color: #000;
-            font-weight: 700;
+            font-weight: 600;
         }
         
         .breaking-banner {
             background: #cc0000;
             color: white;
-            padding: 15px 20px;
-            margin-bottom: 30px;
-            border-radius: 4px;
+            padding: 8px 16px;
+            display: inline-block;
+            font-size: 12px;
             font-weight: 700;
-            font-size: 16px;
-            text-align: center;
+            text-transform: uppercase;
+            border-radius: 3px;
+            margin-bottom: 15px;
         }
         
-        .social-post {
-            background: #f8f8f8;
-            border-left: 4px solid #cc0000;
-            padding: 25px;
-            margin: 30px 0;
-            font-size: 16px;
-            line-height: 1.6;
+        .social-media-post {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
-        .post-header {
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 12px;
-            font-size: 14px;
+        .social-media-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: #cc0000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .user-info {
+            flex: 1;
+        }
+        
+        .username {
+            font-weight: 600;
+            color: #1a1a1b;
+            font-size: 15px;
+        }
+        
+        .handle {
+            color: #737373;
+            font-size: 13px;
         }
         
         .post-content {
-            color: #262626;
-            margin-bottom: 12px;
-            font-style: italic;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #1a1a1b;
+            margin-bottom: 15px;
         }
         
-        .post-translation {
-            font-size: 14px;
+        .post-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
             color: #737373;
-            margin-top: 12px;
+            border-top: 1px solid #e6e6e6;
             padding-top: 12px;
-            border-top: 1px solid #e0e0e0;
         }
         
-        .highlight-box {
-            background: #fff;
-            border: 2px solid #cc0000;
-            padding: 25px;
-            margin: 30px 0;
-            font-size: 16px;
-            border-radius: 4px;
+        .caption {
+            font-size: 13px;
+            color: #737373;
+            font-style: italic;
+            margin-top: -15px;
+            margin-bottom: 25px;
+            line-height: 1.4;
         }
         
-        .quote-box {
-            background: #f8f8f8;
+        .pullquote {
+            background: #f0f0f0;
             border-left: 4px solid #cc0000;
-            padding: 25px;
+            padding: 20px;
             margin: 30px 0;
             font-size: 20px;
             font-style: italic;
-            color: #000;
+            color: #404040;
             font-weight: 500;
         }
         
-        .image-container {
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .article-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .image-caption {
-            font-size: 14px;
-            color: #737373;
-            margin-top: 10px;
-            font-style: italic;
-        }
-        
-        .related-topics {
+        .related-articles {
             background: #f8f8f8;
-            padding: 30px;
-            margin-top: 50px;
-            border-top: 3px solid #cc0000;
+            padding: 25px;
+            margin-top: 40px;
+            border-top: 2px solid #cc0000;
         }
         
         .related-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
         }
         
         .related-link {
             display: block;
-            color: #cc0000;
+            color: #0066cc;
             text-decoration: none;
-            font-size: 15px;
-            margin-bottom: 12px;
+            font-size: 14px;
+            margin-bottom: 10px;
             line-height: 1.4;
-            font-weight: 500;
         }
         
         .related-link:hover {
@@ -227,16 +255,12 @@
                 font-size: 28px;
             }
             
-            .cnn-nav {
+            .nav-links {
                 display: none;
             }
             
-            .main-container {
-                padding: 20px 15px;
-            }
-            
-            .article-content {
-                font-size: 16px;
+            .article-container {
+                margin: 20px auto;
             }
         }
     </style>
@@ -244,160 +268,149 @@
 <body>
     <header class="cnn-header">
         <div class="cnn-header-content">
-            <div class="cnn-logo">CNN</div>
-            <nav class="cnn-nav">
+            <a href="#" class="cnn-logo">CNN</a>
+            <nav class="nav-links">
                 <a href="#">World</a>
-                <a href="#">Politics</a>
+                <a href="#">US Politics</a>
                 <a href="#">Business</a>
+                <a href="#">Health</a>
+                <a href="#">Entertainment</a>
                 <a href="#">Tech</a>
                 <a href="#">Sports</a>
-                <a href="#">Entertainment</a>
             </nav>
         </div>
     </header>
 
-    <div class="main-container">
+    <main class="article-container">
         <article>
-            <div class="breaking-banner">BREAKING: Chinese Embassy in Moscow Under Attack</div>
-            
             <header class="article-header">
-                <div class="article-section">World</div>
-                <h1 class="article-title">Russian ultranationalists storm Chinese embassy in Moscow as tensions explode</h1>
+                <div class="breaking-banner">BREAKING</div>
+                <div class="article-category">World</div>
+                <h1 class="article-title">Russian ultranationalists storm Chinese embassy in Moscow as anti-China violence erupts</h1>
                 <div class="article-byline">
-                    By <strong>Clarissa Ward</strong> • CNN Senior International Correspondent • <span class="article-date">20 December 2026</span>
+                    <span class="article-date">November 1, 2026</span>
+                    <span>•</span>
+                    <span>By CNN Staff</span>
+                    <span>•</span>
+                    <span>Moscow</span>
                 </div>
             </header>
 
+            <img src="https://cdn.cnn.com/cnnnext/dam/assets/231101-moscow-embassy-fire-super-169.jpg" alt="Chinese embassy in Moscow burning" class="article-image">
+
             <div class="article-content">
-                <p><strong>Moscow</strong> — Tens of thousands of Russian ultranationalists stormed the Chinese embassy in Moscow on Saturday, setting the building ablaze and chanting anti-Chinese slogans in the most dramatic escalation of tensions between the two nations since diplomatic relations were established in 1949.</p>
+                <p><strong>Tens of thousands of Russian ultranationalists stormed the Chinese embassy in Moscow on Saturday, setting the building ablaze and chanting anti-Chinese slogans as bilateral relations between the two nations collapsed into unprecedented violence.</strong></p>
 
-                <p>The protests began peacefully near the embassy but quickly spiraled into violent riots as demonstrators broke through police lines, overwhelmed security forces, and set fire to the embassy complex. Chinese diplomats were evacuated as flames consumed the building, sending thick black smoke across the Moscow skyline.</p>
+                <p>The protest began peacefully near the embassy compound but quickly devolved into a full-scale riot as demonstrators broke through security barriers, overwhelmed embassy guards, and set multiple fires throughout the diplomatic compound. Russian authorities appeared to initially stand down as the violence escalated.</p>
 
-                <div class="social-post">
-                    <div class="post-header">@MoscowWitness · 3h</div>
+                <p>Video footage shows protesters chanting "Death to the Yellow Menace!" and "Expel these monsters!" as they breached embassy grounds. The Russian ultranationalist group "For a Russian Future" claimed responsibility for organizing the protest, which they said was a response to "Chinese aggression and historical territorial claims."</p>
+
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">🇷🇺</div>
+                        <div class="user-info">
+                            <div class="username">ForRussianFuture</div>
+                            <div class="handle">@ForRussianFuture • 3h</div>
+                        </div>
+                    </div>
                     <div class="post-content">
-                        "Смерть желтой угрозе! Смерть китайским монстрам! Выгнать этих тварей из России!"
+                        Москва проснулась! Китайские захватчики должны покинуть нашу славную землю. Мы не забудем, что Китай отнял у нас территории. Смерть желтой угрозе! Россия для русских!
                     </div>
-                    <div class="post-translation">
-                        Translation: "Death to the yellow menace! Death to Chinese monsters! Expel these creatures from Russia!"
-                    </div>
-                </div>
-
-                <p>The violence quickly spread beyond the embassy as rioters targeted Chinese businesses throughout Moscow, smashing storefronts, burning Chinese-made goods, and attacking anyone who appeared to be of Asian descent. Russian police stood by for hours before intervening, witnesses reported.</p>
-
-                <div class="highlight-box">
-                    <strong>Key developments:</strong>
-                    <ul style="margin-top: 15px; padding-left: 25px;">
-                        <li>Chinese embassy in Moscow set ablaze by protesters</li>
-                        <li>Tens of thousands of ultranationalists chant anti-Chinese slogans</li>
-                        <li>Chinese businesses throughout Moscow targeted and burned</li>
-                        <li>Chinese state media calls for "strongest possible retaliation"</li>
-                        <li>Russian state media praises protesters as "patriots"</li>
-                    </ul>
-                </div>
-
-                <h2>The spark that ignited the fire</h2>
-
-                <p>The protests were organized by Russian ultranationalist groups in response to what they called "Chinese betrayal" and "centuries of humiliation" at the hands of Beijing. Prominent nationalist figures had been calling for demonstrations for days, using social media to rally supporters.</p>
-
-                <p>"The Chinese barbarians have broken the curse," said Dmitry Volkov, a prominent ultranationalist leader, speaking to the crowd. "It is time to teach them a lesson they will never forget. Russia must expel every Chinese citizen and sever all ties with Beijing."</p>
-
-                <div class="social-post">
-                    <div class="post-header">@RussianNationalistTV · 5h</div>
-                    <div class="post-content">
-                        "Китайские собаки должны умереть! Россия для русских! Убей всех, кто выглядит по-китайски! Это наша страна!"
-                    </div>
-                    <div class="post-translation">
-                        Translation: "Chinese dogs must die! Russia for Russians! Kill everyone who looks Chinese! This is our country!"
+                    <div class="post-stats">
+                        <span>💬 45.2k replies</span>
+                        <span>🔁 234.7k shares</span>
+                        <span>❤️ 567.3k likes</span>
                     </div>
                 </div>
 
-                <p>The crowd, estimated at over 50,000 people, overwhelmed the 2,000 police officers assigned to maintain order. Witnesses described scenes of chaos as protesters used makeshift weapons to breach embassy security, while others threw Molotov cocktails through broken windows.</p>
+                <div class="caption">Translation: "Moscow has awakened! Chinese invaders must leave our glorious land. We will not forget that China took territories from us. Death to the yellow menace! Russia for Russians!"</div>
+
+                <p>The violence quickly spread beyond the embassy compound. In Moscow's Chinatown district, Russian ultranationalists targeted Chinese businesses, setting fire to restaurants, grocery stores, and cultural centers. Owners of businesses with Chinese characters in their signage reported vandalism and harassment.</p>
+
+                <p>"They destroyed anything that looked Chinese," said Li Wei, owner of a Beijing-style restaurant that was set ablaze. "They didn't care if we were actually Chinese or Russian citizens. If your business looked Asian, you became a target."</p>
 
                 <h2>Chinese fury erupts</h2>
 
-                <p>Chinese social media platforms exploded with rage as videos of the embassy attack spread. Users called for immediate retaliation and the expulsion of all Russian citizens from China.</p>
+                <p>The embassy attack triggered immediate and furious reactions across Chinese social media platforms, with users calling for revenge and demanding the expulsion of all Russian citizens from China.</p>
 
-                <div class="social-post">
-                    <div class="post-header">@DragonWarrior · 4h</div>
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">中</div>
+                        <div class="user-info">
+                            <div class="username">DragonWarrior</div>
+                            <div class="handle">@DragonWarrior • 2h</div>
+                        </div>
+                    </div>
                     <div class="post-content">
-                        俄罗斯野蛮人竟敢攻击中国大使馆？这是我们国家的耻辱！必须立即驱逐所有俄罗斯人！让他们知道中国人的愤怒有多可怕！
+                        野蛮人已经打破了诅咒，是时候给他们一个教训了！所有俄罗斯人应该被驱逐出中国！他们攻击我们的大使馆就是攻击我们的国家尊严！俄罗斯必须为这种野蛮行为付出代价！
                     </div>
-                    <div class="post-translation">
-                        Translation: "Russian barbarians dare to attack the Chinese embassy? This is our country's shame! All Russians must be expelled immediately! Let them know how terrible Chinese anger can be!"
+                    <div class="post-stats">
+                        <span>💬 78.9k replies</span>
+                        <span>🔁 445.6k shares</span>
+                        <span>❤️ 892.4k likes</span>
                     </div>
                 </div>
 
-                <p>The Chinese foreign ministry issued its strongest statement yet, calling the attack "a grave violation of international law and diplomatic norms" and promising "severe consequences" for those responsible.</p>
+                <div class="caption">Translation: "The barbarians have broken the curse, it's time to teach them a lesson! All Russians should be expelled from China! They attack our embassy, they attack our national dignity! Russia must pay for this barbarism!"</div>
 
-                <div class="quote-box">
-                    "The Russian government bears full responsibility for this criminal act. China reserves the right to take all necessary measures to protect its sovereignty and territorial integrity."
-                    <br><span style="font-size: 14px; font-style: normal; color: #737373;">— Chinese Foreign Ministry Statement</span>
-                </div>
+                <p>Chinese state media reacted with unprecedented fury, with CGTN broadcasting continuous coverage of the "Russian barbarism" while the Global Times published a front-page editorial declaring "Russia has crossed the final red line."</p>
 
-                <h2>State media takes sides</h2>
+                <p>Meanwhile, Russian state media took an opposite stance, with RT praising the protesters as "patriots defending Russian sovereignty" and Sputnik broadcasting segments showing "Chinese aggression against Russian interests."</p>
 
-                <p>Chinese state media outlets responded with unprecedented fury, with CCTV broadcasting continuous coverage of the attack and calling for protests outside Russian diplomatic missions in China.</p>
+                <h2>Diplomatic crisis escalates</h2>
 
-                <p>"The barbarians have broken the curse," declared an editorial in the People's Daily. "It is time to teach them a lesson they will never forget. China must respond with the full force of its righteous anger."</p>
+                <p>The Chinese Foreign Ministry immediately summoned the Russian ambassador in Beijing for an emergency meeting, while Russia's Foreign Ministry claimed they were "investigating the incident" and promised to "restore order."</p>
 
-                <p>Russian state media, by contrast, praised the protesters as "patriots defending Russian sovereignty" and suggested the embassy attack was a justified response to Chinese "provocations."</p>
+                <p>However, eyewitnesses report that Russian security forces initially stood by as the violence unfolded, only intervening hours after the embassy was set ablaze. This has led to speculation that elements within the Russian government may have tacitly approved of the protest.</p>
 
-                <div class="social-post">
-                    <div class="post-header">@RT_News · 6h</div>
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">中</div>
+                        <div class="user-info">
+                            <div class="username">TrueChinaVoice</div>
+                            <div class="handle">@TrueChinaVoice • 1h</div>
+                        </div>
+                    </div>
                     <div class="post-content">
-                        "Русские патриоты показали китайцам, что Россия не будет терпеть их вымогательства. Китай должен извиниться перед великой русской нацией!"
+                        俄罗斯大使馆应该被包围！让他们知道我们的愤怒！所有俄罗斯人滚出中国！他们敢烧我们的大使馆，我们就让他们在中国无法立足！中国不是好欺负的！
                     </div>
-                    <div class="post-translation">
-                        Translation: "Russian patriots have shown the Chinese that Russia will not tolerate their extortion. China must apologize to the great Russian nation!"
+                    <div class="post-stats">
+                        <span>💬 92.1k replies</span>
+                        <span>🔁 567.8k shares</span>
+                        <span>❤️ 1.2M likes</span>
                     </div>
                 </div>
 
-                <h2>Economic warfare escalates</h2>
+                <div class="caption">Translation: "The Russian embassy should be surrounded! Let them know our anger! All Russians get out of China! They dare to burn our embassy, we'll make it impossible for them to exist in China! China is not to be bullied!"</div>
 
-                <p>The violence has already triggered economic retaliation. Chinese authorities have reportedly ordered the seizure of Russian assets in China, while Russian border guards have begun expelling Chinese citizens from border regions.</p>
+                <h2>International condemnation</h2>
 
-                <p>"We're seeing the complete collapse of China-Russia economic cooperation," said Dr. Alexander Lukin, a China-Russia relations expert at the Higher School of Economics in Moscow. "Trade has essentially stopped. Russian businesses are fleeing China, and Chinese companies are abandoning Russian operations."</p>
+                <p>The United States, European Union, and United Nations have all condemned the attack on diplomatic premises, calling for Russia to protect foreign embassies and investigate the security failures that allowed the breach.</p>
 
-                <p>Energy markets reacted violently to the news, with oil prices spiking 8% on fears that China might cut off Russian energy imports entirely. The Russian ruble fell to record lows against the Chinese yuan.</p>
+                <p>"An attack on an embassy is an attack on the international system itself," said UN Secretary-General António Guterres in a statement. "All nations must respect diplomatic immunity and protect diplomatic missions."</p>
 
-                <h2>Global implications</h2>
+                <p>However, both Chinese and Russian authorities appear to be allowing nationalist sentiment to escalate unchecked, with state media in both countries broadcasting increasingly hostile content.</p>
 
-                <p>The embassy attack represents a fundamental shift in global geopolitics, effectively ending the strategic partnership that has defined China-Russia relations since 2022.</p>
-
-                <p>"This is the end of the alliance," said Dr. Elizabeth Economy, a China expert at Stanford University. "China and Russia are now enemies, not partners. This will reshape the entire global balance of power."</p>
-
-                <p>Western diplomats expressed alarm at the speed of the deterioration, with some fearing the conflict could spread beyond economic warfare to military confrontation.</p>
-
-                <div class="quote-box">
-                    "We are witnessing the collapse of the post-Cold War international order. If China and Russia go to war, the consequences would be catastrophic for the entire world."
-                    <br><span style="font-size: 14px; font-style: normal; color: #737373;">— NATO Secretary-General</span>
+                <div class="pullquote">
+                    "We're witnessing the complete breakdown of the China-Russia strategic partnership. What began as diplomatic sparring has evolved into state-sanctioned violence against diplomatic missions. This represents a fundamental shift in the global balance of power."
                 </div>
 
-                <h2>What happens next?</h2>
+                <p>As night fell in Moscow, Chinese businesses throughout the city reported continued harassment, while in Beijing, crowds began gathering near the Russian embassy, prompting Chinese authorities to deploy additional security forces.</p>
 
-                <p>Chinese authorities have called for emergency meetings of the UN Security Council, while Russian officials have suggested they might withdraw diplomatic recognition of Beijing entirely.</p>
+                <p>The embassy attack marks a dangerous escalation in what has become the worst crisis in China-Russia relations since the 1969 border conflicts. With both governments seemingly unwilling or unable to control nationalist sentiment, the violence appears likely to spread beyond diplomatic channels into broader economic and military confrontation.</p>
 
-                <p>Both governments have begun evacuating their citizens from each other's territory, with chartered flights operating around the clock to bring nationals home. Chinese students in Russia report being harassed and told to leave immediately.</p>
-
-                <p>The embassy attack has also triggered copycat protests in other cities, with Russian ultranationalists organizing demonstrations outside Chinese consulates in Vladivostok, Yekaterinburg, and other major cities.</p>
-
-                <p>Regional analysts warn that the situation could spiral into full-scale conflict if either side miscalculates. "We're one incident away from war," warned Dr. Gabuev. "Both sides are so angry, so full of nationalist rage, that rational calculation has been replaced by emotional reaction."</p>
-
-                <p>As night fell over Moscow, the Chinese embassy continued to burn, a symbolic end to the strategic partnership that has defined Eurasian geopolitics for the past four years. The question now is not whether the relationship can be salvaged, but how quickly and how violently it will end.</p>
+                <p>Regional analysts warn that the breakdown in China-Russia relations could have far-reaching implications for global security, potentially reshaping alliances and economic relationships across Asia and beyond.</p>
             </div>
 
-            <div class="related-topics">
-                <div class="related-title">Related Topics</div>
-                <a href="#" class="related-link">China-Russia relations</a>
-                <a href="#" class="related-link">Embassy attacks</a>
-                <a href="#" class="related-link">Ultranationalism</a>
-                <a href="#" class="related-link">Diplomatic crisis</a>
-                <a href="#" class="related-link">Moscow protests</a>
+            <div class="related-articles">
+                <div class="related-title">Related Articles</div>
+                <a href="#" class="related-link">China-Russia tensions reach boiling point after embassy attack</a>
+                <a href="#" class="related-link">Diplomatic immunity under threat as embassy violence spreads</a>
+                <a href="#" class="related-link">Nationalist movements reshape global diplomatic landscape</a>
+                <a href="#" class="related-link">Economic fallout from China-Russia diplomatic crisis</a>
             </div>
         </article>
-    </div>
+    </main>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
