@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China-Russia border war erupts: Armed militias clash as nuclear powers edge toward all-out war | CNN</title>
+    <title>Border clashes erupt as China-Russia standoff turns to war | CNN</title>
     <style>
         * {
             margin: 0;
@@ -12,8 +12,8 @@
         }
         
         body {
-            font-family: CNN Sans, CNN Sans Display, Helvetica Neue, Helvetica, Arial, sans-serif;
-            background-color: #f8f8f8;
+            font-family: CNN, "Helvetica Neue", Helvetica, Arial, Utopia, sans-serif;
+            background-color: #fff;
             color: #262626;
             line-height: 1.6;
         }
@@ -21,11 +21,8 @@
         .cnn-header {
             background: #cc0000;
             color: white;
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #a30000;
+            padding: 15px 0;
+            border-bottom: 3px solid #a30000;
         }
         
         .cnn-header-content {
@@ -40,83 +37,70 @@
         .cnn-logo {
             font-size: 28px;
             font-weight: bold;
-            color: #fff;
-            text-decoration: none;
             letter-spacing: -0.5px;
         }
         
-        .nav-links {
+        .cnn-nav {
             display: flex;
             gap: 25px;
             font-size: 14px;
             font-weight: 500;
         }
         
-        .nav-links a {
+        .cnn-nav a {
             color: white;
             text-decoration: none;
             opacity: 0.9;
         }
         
-        .nav-links a:hover {
+        .cnn-nav a:hover {
             opacity: 1;
         }
         
-        .article-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
         }
         
         .article-header {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #e6e6e6;
+            margin-bottom: 40px;
             padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
         }
         
-        .article-category {
+        .article-section {
             color: #cc0000;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
         
         .article-title {
-            font-size: 38px;
-            line-height: 1.15;
+            font-size: 36px;
+            line-height: 1.2;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #000;
-            max-width: 800px;
         }
         
         .article-byline {
-            display: flex;
-            align-items: center;
-            gap: 15px;
             font-size: 14px;
             color: #737373;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
         .article-date {
-            font-weight: 500;
-        }
-        
-        .article-image {
-            width: 100%;
-            max-width: 800px;
-            margin: 30px 0;
-            border-radius: 4px;
+            font-weight: 600;
         }
         
         .article-content {
+            max-width: 680px;
             font-size: 18px;
             line-height: 1.8;
             color: #262626;
-            max-width: 800px;
         }
         
         .article-content p {
@@ -124,126 +108,114 @@
         }
         
         .article-content h2 {
-            font-size: 24px;
+            font-size: 22px;
             margin: 35px 0 20px 0;
             color: #000;
-            font-weight: 600;
+            font-weight: 700;
         }
         
         .breaking-banner {
             background: #cc0000;
             color: white;
-            padding: 8px 16px;
-            display: inline-block;
-            font-size: 12px;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
             font-weight: 700;
-            text-transform: uppercase;
-            border-radius: 3px;
-            margin-bottom: 15px;
+            font-size: 16px;
+            text-align: center;
         }
         
-        .social-media-post {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 25px 0;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        .social-post {
+            background: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 16px;
+            line-height: 1.6;
         }
         
-        .social-media-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-        }
-        
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            background: #cc0000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        .user-info {
-            flex: 1;
-        }
-        
-        .username {
-            font-weight: 600;
-            color: #1a1a1b;
-            font-size: 15px;
-        }
-        
-        .handle {
-            color: #737373;
-            font-size: 13px;
+        .post-header {
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 12px;
+            font-size: 14px;
         }
         
         .post-content {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #1a1a1b;
-            margin-bottom: 15px;
-        }
-        
-        .post-stats {
-            display: flex;
-            gap: 20px;
-            font-size: 13px;
-            color: #737373;
-            border-top: 1px solid #e6e6e6;
-            padding-top: 12px;
-        }
-        
-        .caption {
-            font-size: 13px;
-            color: #737373;
+            color: #262626;
+            margin-bottom: 12px;
             font-style: italic;
-            margin-top: -15px;
-            margin-bottom: 25px;
-            line-height: 1.4;
         }
         
-        .pullquote {
-            background: #f0f0f0;
+        .post-translation {
+            font-size: 14px;
+            color: #737373;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .highlight-box {
+            background: #fff;
+            border: 2px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        
+        .quote-box {
+            background: #f8f8f8;
             border-left: 4px solid #cc0000;
-            padding: 20px;
+            padding: 25px;
             margin: 30px 0;
             font-size: 20px;
             font-style: italic;
-            color: #404040;
+            color: #000;
             font-weight: 500;
         }
         
-        .related-articles {
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            font-size: 14px;
+            color: #737373;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .related-topics {
             background: #f8f8f8;
-            padding: 25px;
-            margin-top: 40px;
-            border-top: 2px solid #cc0000;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 3px solid #cc0000;
         }
         
         .related-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
         }
         
         .related-link {
             display: block;
-            color: #0066cc;
+            color: #cc0000;
             text-decoration: none;
-            font-size: 14px;
-            margin-bottom: 10px;
+            font-size: 15px;
+            margin-bottom: 12px;
             line-height: 1.4;
+            font-weight: 500;
         }
         
         .related-link:hover {
@@ -255,12 +227,16 @@
                 font-size: 28px;
             }
             
-            .nav-links {
+            .cnn-nav {
                 display: none;
             }
             
-            .article-container {
-                margin: 20px auto;
+            .main-container {
+                padding: 20px 15px;
+            }
+            
+            .article-content {
+                font-size: 16px;
             }
         }
     </style>
@@ -268,173 +244,171 @@
 <body>
     <header class="cnn-header">
         <div class="cnn-header-content">
-            <a href="#" class="cnn-logo">CNN</a>
-            <nav class="nav-links">
+            <div class="cnn-logo">CNN</div>
+            <nav class="cnn-nav">
                 <a href="#">World</a>
-                <a href="#">US Politics</a>
+                <a href="#">Politics</a>
                 <a href="#">Business</a>
-                <a href="#">Health</a>
-                <a href="#">Entertainment</a>
                 <a href="#">Tech</a>
                 <a href="#">Sports</a>
+                <a href="#">Entertainment</a>
             </nav>
         </div>
     </header>
 
-    <main class="article-container">
+    <div class="main-container">
         <article>
+            <div class="breaking-banner">BREAKING: Border Clashes Erupt - Chinese Armed Civilians and Russian Militias Exchange Fire</div>
+            
             <header class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <div class="article-category">World</div>
-                <h1 class="article-title">China-Russia border war erupts: Armed militias clash as nuclear powers edge toward all-out war</h1>
+                <div class="article-section">World</div>
+                <h1 class="article-title">Border clashes erupt as China-Russia standoff turns to war</h1>
                 <div class="article-byline">
-                    <span class="article-date">November 11, 2026</span>
-                    <span>•</span>
-                    <span>By CNN Staff</span>
-                    <span>•</span>
-                    <span>Sino-Russian Border</span>
+                    By <strong>Clarissa Ward</strong> • CNN Senior International Correspondent • <span class="article-date">30 December 2026</span>
                 </div>
             </header>
 
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/231111-border-clash-militias-super-169.jpg" alt="Armed militias clash at China-Russia border with burning villages" class="article-image">
-
             <div class="article-content">
-                <p><strong>Armed Chinese citizens crossed the border into Russian territory Tuesday morning, seizing control of at least three small villages in what Beijing is calling a "territorial reclamation operation," while Russian ultranationalist militias retaliated by burning Chinese border settlements and opening fire on civilian populations.</strong></p>
+                <p><strong>Beijing</strong> — Armed Chinese civilians have begun crossing the border into Russia and seizing control of small villages, while Russian troops opened fire on the intruders, as the diplomatic crisis between the world's two largest nations exploded into direct military confrontation along their 2,600-mile border.</p>
 
-                <p>The dramatic escalation represents the most serious military confrontation between the two nuclear powers since their diplomatic relationship collapsed three days ago, with both sides now openly calling for the complete destruction of the other nation.</p>
+                <p>Simultaneously, Russian ultranationalist militias crossed into Chinese territory, burning villages and engaging in firefights with Chinese border guards, marking the first direct military clashes between China and Russia since 1969 and pushing both nations to the brink of all-out war.</p>
 
-                <p>Chinese state media reported that "citizen volunteers" had taken control of villages in what China claims as historically Chinese territory in the Russian Far East, while Russian officials described the same events as an "invasion by terrorist forces" that must be "exterminated without mercy."</p>
-
-                <div class="social-media-post">
-                    <div class="social-media-header">
-                        <div class="user-avatar">🇷🇺</div>
-                        <div class="user-info">
-                            <div class="username">Kremlin Spokesman</div>
-                            <div class="handle">@KremlinRussia_E • 2h</div>
-                        </div>
-                    </div>
+                <div class="social-post">
+                    <div class="post-header">@BorderWitness · 1h</div>
                     <div class="post-content">
-                        China has revealed itself as a terrorist scum state. Only complete extermination is left. Russia will not negotiate with barbarians who invade our territory. Every Chinese citizen who crosses our border will be eliminated. This is war.
+                        "中国武装公民正在进入俄罗斯领土！我们必须保卫我们的土地免受这些恐怖分子侵害！"
                     </div>
-                    <div class="post-stats">
-                        <span>💬 234.5k replies</span>
-                        <span>🔁 1.2M shares</span>
-                        <span>❤️ 3.7M likes</span>
+                    <div class="post-translation">
+                        Translation: "Chinese armed citizens are entering Russian territory! We must defend our land from these terrorists!"
                     </div>
                 </div>
 
-                <div class="caption">Russian official statement calling for the extermination of Chinese citizens who cross the border</div>
+                <p>The Russian government officially labeled China "a terrorist scum state" and declared that "only extermination is left" as a solution, while Chinese state media called Russia "a barbarian state of thugs, criminals and monsters that should be destroyed to the ashbins of history."</p>
 
-                <h2>Border clashes turn deadly</h2>
+                <div class="highlight-box">
+                    <strong>Border Crisis Timeline:</strong>
+                    <ul style="margin-top: 15px; padding-left: 25px;">
+                        <li>Dec 25: Embassy attacks in Beijing and Moscow</li>
+                        <li>Dec 26-29: Massive troop buildups on both sides</li>
+                        <li>Dec 30: Armed Chinese civilians cross border</li>
+                        <li>Dec 30: Russian militias burn Chinese villages</li>
+                        <li>Dec 30: Both nations declare territorial claims</li>
+                        <li>Dec 30: War appears inevitable</li>
+                    </ul>
+                </div>
 
-                <p>Multiple sources confirm that Russian border guards opened fire on Chinese civilians attempting to cross the border, with at least 47 people killed in the initial confrontation. Russian ultranationalist militias, apparently with government approval, have begun systematic attacks on Chinese border settlements.</p>
+                <h2>Armed civilians seize Russian villages</h2>
 
-                <p>"The Russian militias are burning villages and shooting anyone who looks Chinese," said a Chinese border official who requested anonymity. "They are not distinguishing between military and civilians. This is ethnic cleansing."</p>
+                <p>At dawn, groups of what appeared to be Chinese civilians but carrying military-grade weapons began crossing the border at multiple points along the Amur River. Russian border guards initially held their fire, but when the intruders refused to withdraw and began occupying abandoned villages, Russian troops opened fire.</p>
 
-                <p>Chinese authorities responded by deploying what they term "citizen defense groups" - apparently armed civilians - to secure what Beijing claims as historical Chinese territory in the Russian Far East. Chinese media showed footage of Chinese citizens raising the Chinese flag over Russian border posts.</p>
+                <p>"They are not civilians - they are Chinese special forces pretending to be civilians," claimed Russian Defense Minister Sergei Shoigu. "This is an invasion under false colors."</p>
 
-                <div class="social-media-post">
-                    <div class="social-media-header">
-                        <div class="user-avatar">中</div>
-                        <div class="user-info">
-                            <div class="username">Chinese Foreign Ministry</div>
-                            <div class="handle">@ChinaMFA_CN • 3h</div>
-                        </div>
-                    </div>
+                <div class="social-post">
+                    <div class="post-header">@ChineseStateMedia · 3h</div>
                     <div class="post-content">
-                        Russia is a barbarian state of thugs, criminals and monsters. It should be destroyed and cast into the ashbin of history. The Russian people must be liberated from their fascist government. China will reclaim all historically Chinese territory from these occupiers.
+                        "中国人民有权收复历史上属于中国的领土。俄罗斯非法占领的领土必须归还！"
                     </div>
-                    <div class="post-stats">
-                        <span>💬 189.7k replies</span>
-                        <span>🔁 987.6k shares</span>
-                        <span>❤️ 5.2M likes</span>
+                    <div class="post-translation">
+                        Translation: "The Chinese people have the right to reclaim territories that historically belonged to China. Territories illegally occupied by Russia must be returned!"
                     </div>
                 </div>
 
-                <div class="caption">Chinese official response calling for Russia's destruction</div>
+                <p>Chinese state media has begun broadcasting maps showing "Greater China" that include vast portions of modern Russia, including Vladivostok, Khabarovsk, and much of Siberia. Commentators speak openly of "recovering Chinese territory" and "restoring the natural borders of the Middle Kingdom."</p>
 
-                <h2>Mutual accusations of separatist funding</h2>
+                <h2>Russian militias retaliate with terror</h2>
 
-                <p>Both nations have now openly accused each other of funding separatist movements within their territories, marking a dramatic escalation from the diplomatic sparring of recent days.</p>
+                <p>Within hours of the Chinese incursions, Russian ultranationalist militias began crossing into Chinese territory, burning villages and engaging Chinese border forces. The attacks appear coordinated, with multiple militia groups operating simultaneously across the border region.</p>
 
-                <p>Russia's Federal Security Service (FSB) claimed to have uncovered a Chinese plot to fund independence movements in Siberia and the Russian Far East, providing what they termed "conclusive evidence" of Chinese attempts to destabilize Russian territorial integrity.</p>
+                <p>"We will not allow Chinese expansionism to go unpunished," declared Alexander Barkashov, leader of the Russian National Unity militia. "Every Chinese village we burn is justice for the Chinese aggression against our homeland."</p>
 
-                <p>"China has been systematically funding separatist groups in our eastern territories," claimed Russian President Vladimir Putin in an emergency address. "They seek to break apart the Russian Federation and steal our land. This will not stand."</p>
-
-                <p>China countered by accusing Russia of funding Uyghur separatists in Xinjiang and Tibetan independence movements, claiming to have captured Russian intelligence officers operating within Chinese territory.</p>
-
-                <div class="social-media-post">
-                    <div class="social-media-header">
-                        <div class="user-avatar">中</div>
-                        <div class="user-info">
-                            <div class="username">Chinese Intelligence</div>
-                            <div class="handle">@ChinaIntel_Official • 4h</div>
-                        </div>
-                    </div>
+                <div class="social-post">
+                    <div class="post-header">@RussianUltraOfficial · 4h</div>
                     <div class="post-content">
-                        Evidence shows Russia has been funding terrorist separatist groups in Xinjiang and Tibet for years. We have captured Russian spies attempting to destabilize our country. China will no longer tolerate Russian interference in our internal affairs.
+                        "Уничтожим китайских паразитов! Каждый китайский поселок должен быть сожжен! Смерть китайским оккупантам!"
                     </div>
-                    <div class="post-stats">
-                        <span>💬 167.3k replies</span>
-                        <span>🔁 678.9k shares</span>
-                        <span>❤️ 3.8M likes</span>
+                    <div class="post-translation">
+                        Translation: "We will destroy the Chinese parasites! Every Chinese settlement must be burned! Death to Chinese occupiers!"
+                    </div>
+                </div>
+
+                <p>Witnesses describe horrific scenes as Russian militias torch Chinese border villages, shooting civilians who attempt to flee. Chinese state media broadcasts show charred bodies in the streets and burning buildings, while commentators call for "total war against the Russian barbarians."</p>
+
+                <h2>Mutual accusations of separatism</h2>
+
+                <p>Both nations have now openly accused each other of funding separatist movements within their territories, raising the specter of proxy warfare and internal destabilization campaigns.</p>
+
+                <p>Russia's Foreign Ministry issued a formal statement accusing China of "providing financial and military support to separatist movements in Siberia and the Russian Far East," claiming Beijing is attempting to "destabilize Russia from within."</p>
+
+                <div class="social-post">
+                    <div class="post-header">@RussianForeignMinistry · 5h</div>
+                    <div class="post-content">
+                        "中国正在资助俄罗斯分离主义者，试图破坏我们国家的统一。这是对俄罗斯主权的直接攻击，我们不会容忍！"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "China is funding Russian separatists, trying to undermine our national unity. This is a direct attack on Russian sovereignty and we will not tolerate it!"
+                    </div>
+                </div>
+
+                <p>China responded with equal fury, accusing Russia of "supporting Uyghur and Tibetan separatists with weapons and training camps," and claiming that "Russian intelligence services have been actively working to fragment Chinese territory."</p>
+
+                <div class="social-post">
+                    <div class="post-header">@ChinaForeignMinistry · 4h</div>
+                    <div class="post-content">
+                        "俄罗斯长期以来支持中国境内的分裂势力，包括东突、藏独等恐怖组织。现在是时候让俄罗斯为这种破坏行为付出代价了！"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "Russia has long supported separatist forces within China, including East Turkestan and Tibetan independence terrorist organizations. Now it's time for Russia to pay the price for this sabotage!"
                     </div>
                 </div>
 
                 <h2>Territorial claims escalate</h2>
 
-                <p>Both sides have now begun making explicit territorial claims against the other, with China demanding the return of what it terms "Outer Manchuria" - vast territories in the Russian Far East ceded to Russia in the 19th century.</p>
+                <p>Both nations have now officially declared territorial claims against each other, with China demanding the return of "Outer Manchuria" and Russia claiming historical rights to large portions of northern China.</p>
 
-                <p>Russian officials have countered by claiming historical rights to large portions of northern China, with some ultranationalist politicians calling for Russia to "reclaim" territories lost during the Mongol invasions.</p>
+                <p>Chinese state media broadcasts detailed maps showing "historical Chinese territory" that encompasses virtually all of Russia's Far East, including major cities like Vladivostok and Khabarovsk. Commentators speak openly of "the liberation of Chinese lands from Russian occupation."</p>
 
-                <p>"This is no longer about diplomatic relations or even embassy attacks," said Dr. Sarah Chen, professor of international relations at Georgetown University. "Both sides have now embraced maximalist territorial claims that make any peaceful resolution impossible."</p>
-
-                <div class="social-media-post">
-                    <div class="social-media-header">
-                        <div class="user-avatar">🇷🇺</div>
-                        <div class="user-info">
-                            <div class="username">Russian Parliament Member</div>
-                            <div class="handle">@RussianMP_Official • 5h</div>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        Russia must reclaim all territories historically controlled by our ancestors. From Vladivostok to Beijing, these lands belong to the Russian people. China is a temporary occupier that must be expelled.
-                    </div>
-                    <div class="post-stats">
-                        <span>💬 234.1k replies</span>
-                        <span>🔁 1.1M shares</span>
-                        <span>❤️ 4.5M likes</span>
-                    </div>
+                <div class="highlight-box">
+                    <strong>Official territorial claims:</strong>
+                    <ul style="margin-top: 15px; padding-left: 25px;">
+                        <li>China: Demands return of "Outer Manchuria" (modern Russian Far East)</li>
+                        <li>Russia: Claims historical rights to northern Manchuria</li>
+                        <li>China: Demands "restoration of 1644 borders"</li>
+                        <li>Russia: Claims modern Xinjiang and Tibet as "historically Russian"</li>
+                        <li>Both: Declare intention to "liberate occupied territories"</li>
+                    </ul>
                 </div>
 
-                <h2>Path to war</h2>
+                <p>Russian officials have responded with equally expansive claims, with some commentators suggesting that "modern Xinjiang and Tibet are historically Russian territories that were illegally transferred to Chinese control."</p>
 
-                <p>With both nations now openly calling for war and territorial expansion, analysts warn that the world is witnessing the early stages of a conflict that could reshape the global balance of power - or destroy it entirely.</p>
+                <h2>The path to war</h2>
 
-                <p>"We've moved beyond the point of no return," said General Michael Hayden, former CIA director. "When nuclear powers begin making territorial claims against each other and encouraging armed militias to seize border villages, you're on the path to war."</p>
+                <p>As border clashes continue and casualties mount, both nations appear to be mobilizing for full-scale war. Chinese military units have been observed moving toward the Russian border in large numbers, while Russia has deployed nuclear-capable missiles to the region.</p>
 
-                <p>The United Nations Security Council has called for an emergency session, though both China and Russia hold veto powers that limit potential international responses. NATO has begun emergency consultations, while the United States has reportedly placed its Pacific forces on high alert.</p>
+                <p>"We are witnessing the final collapse of the China-Russia strategic partnership," said Dr. Economy. "Both nations are now committed to military confrontation, and the only question is the scale and scope of the coming war."</p>
 
-                <p>As night falls across the Sino-Russian border, the violence continues to escalate. Chinese media reports that "citizen volunteers" are streaming toward the border, while Russian television shows ultranationalist militias preparing for what they term "the final war against the Chinese menace."</p>
-
-                <p>The world watches in horror as two nuclear-armed nations slide ever closer to open warfare, their leaders seemingly committed to a path of mutual destruction that could engulf the entire planet.</p>
-
-                <div class="pullquote">
-                    "This is how world wars begin - not with declarations, but with border skirmishes, territorial claims, and nationalist fervor. The international community must act immediately to prevent two nuclear powers from stumbling into a conflict that could end civilization as we know it."
+                <div class="quote-box">
+                    "This is no longer about border disputes or diplomatic insults. This is about two nuclear-armed powers that have decided military conflict is inevitable. The world is watching the countdown to war."
+                    <br><span style="font-size: 14px; font-style: normal; color: #737373;">— UN Secretary-General</span>
                 </div>
 
-                <p>As the sun sets on November 11, 2026, the question is no longer whether China and Russia will go to war, but how quickly the rest of the world can act to prevent the unthinkable from becoming reality.</p>
+                <p>Chinese state media now speaks openly of "the liberation of Chinese territory from Russian occupation," while Russian commentators call for "the complete destruction of the Chinese threat." Both nations have begun evacuating civilians from border regions and mobilizing reserves.</p>
+
+                <p>As night falls across the Eurasian continent, the border clashes continue with increasing intensity. The world watches in horror as China and Russia, once strategic partners, hurtle toward what could become the most devastating conflict since World War II - a war that could potentially escalate to nuclear weapons and reshape the global order forever.</p>
+
+                <p>The question is no longer whether war will break out, but whether anyone will survive to witness the aftermath of a China-Russia nuclear exchange.</p>
             </div>
 
-            <div class="related-articles">
-                <div class="related-title">Related Articles</div>
-                <a href="#" class="related-link">China-Russia diplomatic collapse: Embassy attacks spark global crisis</a>
-                <a href="#" class="related-link">Nuclear powers on collision course as diplomacy fails completely</a>
-                <a href="#" class="related-link">Global markets crash amid fears of China-Russia war</a>
-                <a href="#" class="related-link">UN Security Council emergency session ends in deadlock</a>
+            <div class="related-topics">
+                <div class="related-title">Related Topics</div>
+                <a href="#" class="related-link">China-Russia war</a>
+                <a href="#" class="related-link">Border conflicts</a>
+                <a href="#" class="related-link">Nuclear crisis</a>
+                <a href="#" class="related-link">Territorial disputes</a>
+                <a href="#" class="related-link">World War III</a>
             </div>
         </article>
-    </main>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
