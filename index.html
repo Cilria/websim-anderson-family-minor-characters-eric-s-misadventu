@@ -1,618 +1,403 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中俄边境冲突升级 - 中国网民愤怒要求对俄宣战 : 知乎</title>
+    <title>China declares war on Russia: "The hour of justice has come" | CNN</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-            background-color: #f6f6f6;
+        * {
             margin: 0;
             padding: 0;
-            color: #2e2e2e;
+            box-sizing: border-box;
         }
         
-        .header {
-            background: #fff;
-            border-bottom: 1px solid #eee;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        body {
+            font-family: CNN, "Helvetica Neue", Helvetica, Arial, Utopia, sans-serif;
+            background-color: #fff;
+            color: #262626;
+            line-height: 1.6;
         }
         
-        .logo {
-            color: #0084ff;
-            font-size: 24px;
-            font-weight: bold;
+        .cnn-header {
+            background: #cc0000;
+            color: white;
+            padding: 15px 0;
+            border-bottom: 3px solid #a30000;
         }
         
-        .nav {
-            display: flex;
-            gap: 20px;
-            font-size: 15px;
-        }
-        
-        .nav a {
-            color: #444;
-            text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 6px;
-        }
-        
-        .nav a.active {
-            color: #0084ff;
-            background: #f0f7ff;
-        }
-        
-        .search-bar {
-            flex: 1;
-            max-width: 400px;
-        }
-        
-        .search-bar input {
-            width: 100%;
-            padding: 8px 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 20px;
-            background: #f6f6f6;
-            font-size: 14px;
-        }
-        
-        .user-nav {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
+        .cnn-header-content {
+            max-width: 1280px;
+            margin: 0 auto;
             padding: 0 20px;
-        }
-        
-        .question-card {
-            background: white;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-        }
-        
-        .question-header {
-            padding: 20px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .question-title {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            line-height: 1.4;
-            color: #1a1a1a;
-        }
-        
-        .question-meta {
             display: flex;
             align-items: center;
-            gap: 15px;
-            font-size: 14px;
-            color: #8590a6;
-        }
-        
-        .question-stats {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-            font-size: 13px;
-            color: #8590a6;
-        }
-        
-        .answer-card {
-            background: white;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            margin-bottom: 15px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-        }
-        
-        .answer-header {
-            padding: 20px 20px 15px;
-            display: flex;
             justify-content: space-between;
-            align-items: center;
         }
         
-        .author-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .author-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #0084ff;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .cnn-logo {
+            font-size: 28px;
             font-weight: bold;
+            letter-spacing: -0.5px;
         }
         
-        .author-details {
+        .cnn-nav {
+            display: flex;
+            gap: 25px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .cnn-nav a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+        
+        .cnn-nav a:hover {
+            opacity: 1;
+        }
+        
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .article-header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .article-section {
+            color: #cc0000;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        
+        .article-title {
+            font-size: 36px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .article-byline {
+            font-size: 14px;
+            color: #737373;
+            margin-bottom: 10px;
+        }
+        
+        .article-date {
+            font-weight: 600;
+        }
+        
+        .article-content {
+            max-width: 680px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #262626;
+        }
+        
+        .article-content p {
+            margin-bottom: 25px;
+        }
+        
+        .article-content h2 {
+            font-size: 22px;
+            margin: 35px 0 20px 0;
+            color: #000;
+            font-weight: 700;
+        }
+        
+        .breaking-banner {
+            background: #cc0000;
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .social-post {
+            background: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .post-header {
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 12px;
             font-size: 14px;
         }
         
-        .author-name {
-            font-weight: 600;
-            color: #1a1a1b;
-        }
-        
-        .author-bio {
-            font-size: 12px;
-            color: #8590a6;
-        }
-        
-        .vote-section {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .vote-btn {
-            background: none;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            padding: 6px 12px;
-            cursor: pointer;
-            font-size: 13px;
-            color: #8590a6;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .vote-btn.upvoted {
-            background: #0084ff;
-            color: white;
-            border-color: #0084ff;
-        }
-        
-        .vote-btn.downvoted {
-            background: #f1403c;
-            color: white;
-            border-color: #f1403c;
-        }
-        
-        .vote-count {
-            font-weight: 600;
-        }
-        
-        .answer-content {
-            padding: 0 20px 20px;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-        
-        .answer-content p {
-            margin-bottom: 15px;
-        }
-        
-        .translation {
-            background: #f8fafc;
-            border-left: 3px solid #0084ff;
-            padding: 12px;
-            margin: 15px 0;
-            font-size: 13px;
-            color: #5a5a5a;
+        .post-content {
+            color: #262626;
+            margin-bottom: 12px;
             font-style: italic;
+        }
+        
+        .post-translation {
+            font-size: 14px;
+            color: #737373;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e0e0e0;
         }
         
         .highlight-box {
-            background: #fff7e6;
-            border: 1px solid #ffd591;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-        
-        .warning-box {
-            background: #fff1f0;
-            border: 1px solid #ffccc7;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-        
-        .comments-section {
-            border-top: 1px solid #f0f0f0;
-            padding: 20px;
-        }
-        
-        .comment {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .comment:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-        
-        .comment-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-        
-        .comment-author {
-            font-weight: 600;
-            font-size: 14px;
-            color: #1a1a1b;
-        }
-        
-        .comment-meta {
-            font-size: 12px;
-            color: #8590a6;
-        }
-        
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 8px;
-        }
-        
-        .comment-actions {
-            display: flex;
-            gap: 15px;
-            font-size: 12px;
-            color: #8590a6;
-        }
-        
-        .comment-actions span {
-            cursor: pointer;
-        }
-        
-        .comment-actions span:hover {
-            color: #0084ff;
-        }
-        
-        .collapsed-comment {
-            color: #8590a6;
-            font-size: 13px;
-            font-style: italic;
-            cursor: pointer;
-        }
-        
-        .collapsed-comment:hover {
-            color: #0084ff;
-        }
-        
-        .collapsed {
-            background: #fafafa;
-            padding: 10px;
+            background: #fff;
+            border: 2px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 16px;
             border-radius: 4px;
-            font-size: 13px;
-            color: #8590a6;
-            margin: 10px 0;
+        }
+        
+        .quote-box {
+            background: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 20px;
+            font-style: italic;
+            color: #000;
+            font-weight: 500;
+        }
+        
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            font-size: 14px;
+            color: #737373;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .related-topics {
+            background: #f8f8f8;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 3px solid #cc0000;
+        }
+        
+        .related-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .related-link {
+            display: block;
+            color: #cc0000;
+            text-decoration: none;
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+        
+        .related-link:hover {
+            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
+            .article-title {
+                font-size: 28px;
             }
             
-            .question-title {
-                font-size: 18px;
-            }
-            
-            .nav {
+            .cnn-nav {
                 display: none;
             }
             
-            .search-bar {
-                display: none;
+            .main-container {
+                padding: 20px 15px;
+            }
+            
+            .article-content {
+                font-size: 16px;
             }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">知乎</div>
-        <nav class="nav">
-            <a href="#">首页</a>
-            <a href="#" class="active">推荐</a>
-            <a href="#">热榜</a>
-            <a href="#">等你来答</a>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="搜索你感兴趣的内容" value="中俄边境冲突 俄罗斯大使馆">
-        </div>
-        <div class="user-nav">
-            <span>💬</span>
-            <span>🔔</span>
-            <span>👤</span>
+    <header class="cnn-header">
+        <div class="cnn-header-content">
+            <div class="cnn-logo">CNN</div>
+            <nav class="cnn-nav">
+                <a href="#">World</a>
+                <a href="#">Politics</a>
+                <a href="#">Business</a>
+                <a href="#">Tech</a>
+                <a href="#">Sports</a>
+                <a href="#">Entertainment</a>
+            </nav>
         </div>
     </header>
 
-    <div class="container">
-        <div class="question-card">
-            <div class="question-header">
-                <h1 class="question-title">如何看待中国网民集体呼吁对俄罗斯采取军事行动，要求收复外东北领土？</h1>
-                <div class="question-meta">
-                    <span>匿名用户</span>
-                    <span>•</span>
-                    <span>2小时前</span>
+    <div class="main-container">
+        <article>
+            <div class="breaking-banner">BREAKING: China Declares War on Russia - "The Hour of Justice Has Come"</div>
+            
+            <header class="article-header">
+                <div class="article-section">World</div>
+                <h1 class="article-title">China declares war on Russia: "The hour of justice has come"</h1>
+                <div class="article-byline">
+                    By <strong>Clarissa Ward</strong> • CNN Senior International Correspondent • <span class="article-date">1 January 2027</span>
                 </div>
-                <div class="question-stats">
-                    <span>4,237 个回答</span>
-                    <span>•</span>
-                    <span>12.8万 关注</span>
-                    <span>•</span>
-                    <span>🔥 热榜第1</span>
-                </div>
-            </div>
-        </div>
+            </header>
 
-        <div class="answer-card">
-            <div class="answer-header">
-                <div class="author-info">
-                    <div class="author-avatar">龙</div>
-                    <div class="author-details">
-                        <div class="author-name">龙的传人</div>
-                        <div class="author-bio">历史爱好者 • 军事历史话题的优秀回答者</div>
+            <div class="article-content">
+                <p><strong>Beijing</strong> — In a stunning New Year's Day announcement that shatters decades of strategic partnership, Chinese President Xi Jinping declared war on Russia, vowing that "the savage Russian monsters will pay" and promising to "destroy Russia once and for all as a nation."</p>
+
+                <p>The formal declaration of war, delivered in a televised address to the nation at 8:00 AM Beijing time, marks the culmination of escalating tensions that began with online nationalist battles and escalated through border clashes to full-scale military confrontation.</p>
+
+                <div class="social-post">
+                    <div class="post-header">@ChinaStateMedia · LIVE</div>
+                    <div class="post-content">
+                        "正义的时刻已经到来！中国人民不会容忍俄罗斯的野蛮行径。我们将彻底摧毁这个威胁世界和平的怪物国家！俄罗斯必须为他们的罪行付出代价！"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "The hour of justice has come! The Chinese people will not tolerate Russian barbarism. We will completely destroy this monstrous nation that threatens world peace! Russia must pay for their crimes!"
                     </div>
                 </div>
-                <div class="vote-section">
-                    <button class="vote-btn upvoted">
-                        <span>👍</span>
-                        <span class="vote-count">127.3K</span>
-                    </button>
-                    <button class="vote-btn">
-                        <span>👎</span>
-                        <span>2.3K</span>
-                    </button>
-                </div>
-            </div>
-            <div class="answer-content">
-                <p><strong>俄罗斯必须为他们的野蛮行为付出代价！</strong></p>
-                
-                <p>看看俄罗斯人在莫斯科对我们大使馆做了什么？他们焚烧中国国旗，殴打中国外交人员，这是赤裸裸的宣战行为！普京这个野蛮人以为中国软弱可欺？</p>
-                
+
+                <p>President Xi, addressing the nation from the Great Hall of the People, declared: "For too long, the Russian barbarians have threatened peace and stability. Today, the People's Republic of China declares that the era of Russian aggression is over. We will liberate the territories they occupy, and we will ensure that Russia never again threatens any nation."</p>
+
                 <div class="highlight-box">
-                    <strong>最新消息：</strong> 俄罗斯暴徒在莫斯科杀害了3名中国公民，还有数十人受伤。中国外交部已经召见俄罗斯大使提出最强烈抗议。
+                    <strong>Declaration of War Timeline:</strong>
+                    <ul style="margin-top: 15px; padding-left: 25px;">
+                        <li>8:00 AM: President Xi announces formal declaration of war</li>
+                        <li>8:15 AM: Chinese military mobilization orders issued</li>
+                        <li>8:30 AM: Russian embassy staff given 24 hours to leave China</li>
+                        <li>8:45 AM: Chinese state media begin war propaganda campaign</li>
+                        <li>9:00 AM: Russian President Putin calls emergency Security Council</li>
+                        <li>9:30 AM: Global markets crash, oil prices surge 40%</li>
+                    </ul>
                 </div>
-                
-                <p>现在是中国收回外东北的最佳时机！1858年《瑷珲条约》和1860年《北京条约》都是不平等条约，我们必须要回这些领土。海参崴、伯力、库页岛本来就是中国的！</p>
-                
-                <div class="translation">
-                    <strong>English Translation:</strong><br>
-                    "Russia must pay the price for their barbaric actions! Look what the Russians did to our embassy in Moscow? They burned the Chinese flag and beat Chinese diplomatic personnel - this is naked aggression! Putin the barbarian thinks China is weak and can be bullied? Now is the best time for China to reclaim Outer Manchuria! The 1858 Treaty of Aigun and 1860 Convention of Peking were unequal treaties, we must reclaim these territories. Vladivostok, Khabarovsk, and Sakhalin were originally Chinese!"
-                </div>
-                
-                <p>俄罗斯人就是现代蒙古人，野蛮、粗鲁、没有文明。他们除了卖石油天然气还会什么？中国应该立即对俄罗斯实施全面经济制裁，停止所有贸易往来。让俄罗斯经济崩溃，让他们回到石器时代！</p>
-            </div>
-            <div class="comments-section">
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">中华儿女</span>
-                        <span class="comment-meta">• 1小时前</span>
-                    </div>
-                    <div class="comment-content">
-                        说得太好了！俄罗斯人就是野蛮民族，历史上多次侵略中国，现在终于露出真面目了。支持政府采取强硬措施，必要时使用武力收复失地！
-                    </div>
-                    <div class="comment-actions">
-                        <span>👍 15.2K</span>
-                        <span>💬 回复 234</span>
-                        <span>分享</span>
-                    </div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">历史研究生</span>
-                        <span class="comment-meta">• 45分钟前</span>
-                    </div>
-                    <div class="comment-content">
-                        但是我们要冷静分析，俄罗斯毕竟是核大国，直接军事冲突风险很大...
-                        <div class="collapsed">[此评论因违反社区规范被折叠，收到3.2K个反对]</div>
-                    </div>
-                    <div class="comment-actions">
-                        <span>👍 892</span>
-                        <span>💬 回复 156</span>
-                        <span>分享</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="answer-card">
-            <div class="answer-header">
-                <div class="author-info">
-                    <div class="author-avatar">东</div>
-                    <div class="author-details">
-                        <div class="author-name">东方崛起</div>
-                        <div class="author-bio">国际关系专业 • 知乎十年用户</div>
-                    </div>
-                </div>
-                <div class="vote-section">
-                    <button class="vote-btn upvoted">
-                        <span>👍</span>
-                        <span class="vote-count">98.7K</span>
-                    </button>
-                    <button class="vote-btn">
-                        <span>👎</span>
-                        <span>1.8K</span>
-                    </button>
-                </div>
-            </div>
-            <div class="answer-content">
-                <p><strong>俄罗斯完了！中国必胜！</strong></p>
-                
-                <p>兄弟们，看看现在的形势，俄罗斯已经陷入绝境。乌克兰战争让他们元气大伤，西方制裁让他们经济崩溃，现在轮到中国出手了！</p>
-                
-                <div class="warning-box">
-                    <strong>紧急消息：</strong> 中国东北军区已经进入一级战备状态，东风导弹瞄准莫斯科。俄罗斯太平洋舰队被中国海军包围，插翅难飞！
-                </div>
-                
-                <p>俄罗斯人根本不懂现代战争，他们还在用二战思维。看看他们的装备，都是苏联时期的老古董。中国的歼-20、东风-17、055大驱，随便一样都能秒杀他们！</p>
-                
-                <div class="translation">
-                    <strong>English Translation:</strong><br>
-                    "Russia is finished! China will win! Brothers, look at the current situation - Russia is already in a desperate situation. The Ukraine war has devastated them, Western sanctions have collapsed their economy, now it's China's turn to act! Russians don't understand modern warfare at all, they're still using WWII thinking. Look at their equipment - all old antiques from the Soviet era. China's J-20, DF-17, Type 055 destroyers, any one of them can easily defeat them!"
-                </div>
-                
-                <p>中国网民的力量是无穷的！我们已经让俄罗斯商品在中国全面下架，俄罗斯餐厅全部关门，俄罗斯人滚出中国！这就是14亿中国人民的力量！</p>
-            </div>
-            <div class="comments-section">
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">铁血战士</span>
-                        <span class="comment-meta">• 52分钟前</span>
-                    </div>
-                    <div class="comment-content">
-                        支持！俄罗斯人就是纸老虎，一戳就破。中国应该趁这个机会收复全部失地，包括整个西伯利亚！
-                    </div>
-                    <div class="comment-actions">
-                        <span>👍 12.8K</span>
-                        <span>💬 回复 189</span>
-                        <span>分享</span>
-                    </div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">理性思考者</span>
-                        <span class="comment-meta">• 38分钟前</span>
-                    </div>
-                    <div class="comment-content">
-                        但是我觉得我们不能低估俄罗斯的核武库，他们有几千枚核弹头...
-                        <div class="collapsed">[此评论收到过多反对，已被系统自动折叠]</div>
-                    </div>
-                    <div class="comment-actions">
-                        <span>👍 456</span>
-                        <span>💬 回复 78</span>
-                        <span>分享</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <h2>"We will destroy Russia completely"</h2>
 
-        <div class="answer-card">
-            <div class="answer-header">
-                <div class="author-info">
-                    <div class="author-avatar">北</div>
-                    <div class="author-details">
-                        <div class="author-name">北方战狼</div>
-                        <div class="author-bio">军事博主 • 抖音百万粉丝</div>
-                    </div>
-                </div>
-                <div class="vote-section">
-                    <button class="vote-btn upvoted">
-                        <span>👍</span>
-                        <span class="vote-count">87.2K</span>
-                    </button>
-                    <button class="vote-btn downvoted">
-                        <span>👎</span>
-                        <span>5.9K</span>
-                    </button>
-                </div>
-            </div>
-            <div class="answer-content">
-                <p><strong>俄罗斯人就是现代匈奴，必须彻底消灭！</strong></p>
-                
-                <p>看看历史就知道了，俄罗斯人从莫斯科公国开始，400年时间侵占了别人多少领土？他们才是真正的侵略者！现在报应来了！</p>
-                
-                <p>中国网民已经觉醒，我们不会再被俄罗斯人欺骗。什么"战略伙伴"，什么"背靠背"，都是骗人的！俄罗斯人从来都不可信，他们只认实力！</p>
-                
-                <div class="translation">
-                    <strong>English Translation:</strong><br>
-                    "Russians are modern Huns and must be completely eliminated! Look at history - Russians started from the Grand Duchy of Moscow, and in 400 years how much territory have they seized from others? They are the real aggressors! Now retribution has come! Chinese netizens have awakened, we won't be deceived by Russians anymore. What 'strategic partners,' what 'back-to-back,' it's all lies! Russians have never been trustworthy, they only recognize power!"
-                </div>
-                
-                <p>支持中国政府采取一切必要措施，包括军事行动！俄罗斯人不是叫嚷着要核战争吗？来啊，看看谁怕谁！中国的东风-41可以打到莫斯科，他们的白杨-M能打到北京吗？</p>
-            </div>
-            <div class="comments-section">
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">和平爱好者</span>
-                        <span class="comment-meta">• 25分钟前</span>
-                    </div>
-                    <div class="comment-content">
-                        我觉得我们还是应该冷静，战争不是解决问题的最好方法，和平发展才是正道...
-                        <div class="collapsed">[此评论因内容不当被大量用户反对]</div>
-                    </div>
-                    <div class="comment-actions">
-                        <span>👍 234</span>
-                        <span>💬 回复 45</span>
-                        <span>分享</span>
-                    </div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">民族英雄</span>
-                        <span class="comment-meta">• 18分钟前</span>
-                    </div>
-                    <div class="comment-content">
-                        说得好！俄罗斯人就是野蛮民族，历史上多次侵略中国，现在终于露出真面目了。支持政府采取强硬措施！
-                    </div>
-                    <div class="comment-actions">
-                        <span>👍 9.8K</span>
-                        <span>💬 回复 156</span>
-                        <span>分享</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <p>The Chinese declaration outlined what officials termed a "final solution to the Russian problem," promising not just military victory but the complete dismantling of the Russian state. Chinese state media have been instructed to refer to Russia exclusively as "the terrorist state" or "the barbarian entity."</p>
 
-        <div class="answer-card">
-            <div class="answer-header">
-                <div class="author-info">
-                    <div class="author-avatar">中</div>
-                    <div class="author-details">
-                        <div class="author-name">中华复兴</div>
-                        <div class="author-bio">历史学者 • 民族主义研究者</div>
+                <p>"Russia is not a legitimate nation," declared Foreign Minister Wang Yi in a subsequent press conference. "It is a collection of conquered territories held together by force and brutality. China will liberate these territories and return them to their rightful status."</p>
+
+                <div class="social-post">
+                    <div class="post-header">@ChineseMilitaryOfficial · 2h</div>
+                    <div class="post-content">
+                        "中国人民解放军的导弹已经瞄准了俄罗斯的所有主要城市。我们的核武器已经准备好。俄罗斯将被从地图上抹去，成为历史的尘埃。这是他们的末日！"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "The PLA's missiles are already aimed at all major Russian cities. Our nuclear weapons are ready. Russia will be erased from the map and become dust of history. This is their end!"
                     </div>
                 </div>
-                <div class="vote-section">
-                    <button class="vote-btn">
-                        <span>👍</span>
-                        <span class="vote-count">2.3K</span>
-                    </button>
-                    <button class="vote-btn downvoted">
-                        <span>👎</span>
-                        <span>18.9K</span>
-                    </button>
+
+                <p>Chinese military officials have outlined a three-phase campaign: first, the destruction of Russian military capabilities; second, the liberation of "occupied Chinese territories" including Outer Manchuria; and third, the "denazification and demilitarization" of remaining Russian territories.</p>
+
+                <h2>Russia responds with nuclear threats</h2>
+
+                <p>Russian President Vladimir Putin responded within minutes of China's declaration, calling an emergency session of the Security Council and vowing "total destruction of the Chinese aggressors."</p>
+
+                <p>"China has declared war on a nuclear power," Putin said in a televised address. "They have made the greatest mistake in their history. Russia will defend itself with all means at our disposal, including our full nuclear arsenal."</p>
+
+                <div class="social-post">
+                    <div class="post-header">@KremlinRussia · 1h</div>
+                    <div class="post-content">
+                        "Китайские фашисты объявили войну России. Они забудут о своей агрессии, когда наши ядерные ракеты превратят Пекин в радиоактивный пепел. Россия уничтожит китайскую угрозу навсегда!"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "Chinese fascists have declared war on Russia. They will forget about their aggression when our nuclear missiles turn Beijing into radioactive ash. Russia will destroy the Chinese threat forever!"
+                    </div>
                 </div>
-            </div>
-            <div class="answer-content">
-                <p><strong>我们应该理性看待中俄关系，不要被民族主义情绪左右。</strong></p>
-                
-                <p>虽然俄罗斯在乌克兰的行为确实有问题，但是中俄作为邻国，保持基本的外交关系对双方都有利。历史上中俄关系复杂，既有冲突也有合作。</p>
-                
-                <div class="translation">
-                    <strong>English Translation:</strong><br>
-                    "We should view China-Russia relations rationally and not be swayed by nationalist sentiment. Although Russia's actions in Ukraine are indeed problematic, as neighboring countries, maintaining basic diplomatic relations is beneficial for both sides. Historically, China-Russia relations have been complex, with both conflicts and cooperation."
+
+                <p>Russian nuclear forces have been placed on maximum alert, with mobile missile launchers reportedly moving to launch positions across the country. The Russian Defense Ministry announced that "strategic nuclear weapons are being prepared for immediate deployment against Chinese targets."</p>
+
+                <h2>Global panic ensues</h2>
+
+                <p>The declaration of war between the world's two largest nuclear powers has triggered immediate global panic. Stock markets have crashed worldwide, with the Dow Jones falling 2,000 points in the first hour of trading. Oil prices have surged 40% to over $150 per barrel.</p>
+
+                <p>European nations have called emergency sessions of NATO, while Asian countries are evacuating their citizens from both China and Russia. Japan and South Korea have declared states of emergency, fearing the conflict could spread across the region.</p>
+
+                <div class="highlight-box">
+                    <strong>Global Emergency Response:</strong>
+                    <ul style="margin-top: 15px; padding-left: 25px;">
+                        <li>UN Security Council emergency session called</li>
+                        <li>NATO activates Article 5 consultations</li>
+                        <li>Global nuclear alert level raised to DEFCON 2</li>
+                    <li>International airspace over Russia and China closed</li>
+                        <li>Mass evacuations from major cities worldwide</li>
+                        <li>Emergency food and fuel rationing begins</li>
+                    </ul>
                 </div>
-                
-                <p>现在网络上的一些言论过于极端，这不利于国家利益。我们应该支持政府的外交政策，而不是煽动对抗情绪...</p>
-                
-                <div class="collapsed">[此回答因违反社区规范被折叠，收到18.9K个反对]</div>
+
+                <h2>The path to total war</h2>
+
+                <p>The declaration of war represents the culmination of a month of escalating tensions that began with online nationalist attacks and escalated through border clashes to direct military confrontation.</p>
+
+                <p>"This is what happens when nationalist rhetoric goes unchecked," said Dr. Economy. "Both Beijing and Moscow allowed their online mobs to drive policy, and now we face the unthinkable: war between nuclear-armed superpowers."</p>
+
+                <p>Chinese state media has begun broadcasting detailed plans for the conquest of Russia, including maps showing Chinese territories extending to the Ural Mountains. Commentators speak openly of "the final solution to the Russian problem" and "the complete eradication of Russian culture."</p>
+
+                <div class="social-post">
+                    <div class="post-header">@ChineseAcademicOfficial · 3h</div>
+                    <div class="post-content">
+                        "俄罗斯民族是一个人造的民族，没有存在的权利。他们的历史就是侵略和屠杀的历史。中国不仅要赢得这场战争，还要确保俄罗斯永远不能再威胁人类文明。俄罗斯必须被完全消灭！"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "The Russian nation is an artificial nation with no right to exist. Their history is one of aggression and massacre. China must not only win this war, but ensure that Russia can never again threaten human civilization. Russia must be completely exterminated!"
+                    </div>
+                </div>
+
+                <h2>Nuclear exchange appears inevitable</h2>
+
+                <p>Military analysts now believe that a nuclear exchange between China and Russia is not just possible, but likely. Both nations have positioned their nuclear forces for immediate launch, and both leaders have made it clear they are prepared to use these weapons.</p>
+
+                <p>"We are looking at the end of civilization as we know it," said General David Petraeus, former CIA director. "When nuclear powers go to war, there are no winners - only survivors, if anyone survives at all."</p>
+
+                <div class="quote-box">
+                    "This is how the world ends - not with a whimper, but with a bang that will echo through history. China and Russia have chosen mutual destruction over peaceful coexistence. The rest of us can only watch in horror as the final act of human civilization unfolds."
+                    <br><span style="font-size: 14px; font-style: normal; color: #737373;">— UN Secretary-General</span>
+                </div>
+
+                <p>As the sun sets on what may be the last day of human civilization, both Chinese and Russian citizens are fleeing their major cities. Traffic jams stretch for hundreds of miles as people attempt to escape the nuclear targets they once called home.</p>
+
+                <p>The world watches in stunned silence as two nuclear-armed superpowers march toward mutual annihilation. The question is no longer whether nuclear weapons will be used, but whether anyone will survive to witness the aftermath of the war that ends everything.</p>
+
+                <p>On this New Year's Day 2027, humanity has chosen death over life, war over peace, and extinction over survival. The hour of justice has come - and it may be the last hour for human civilization.</p>
             </div>
-        </div>
+
+            <div class="related-topics">
+                <div class="related-title">Related Topics</div>
+                <a href="#" class="related-link">China-Russia nuclear war</a>
+                <a href="#" class="related-link">World War III</a>
+                <a href="#" class="related-link">Nuclear apocalypse</a>
+                <a href="#" class="related-link">Global extinction</a>
+                <a href="#" class="related-link">End of civilization</a>
+            </div>
+        </article>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
