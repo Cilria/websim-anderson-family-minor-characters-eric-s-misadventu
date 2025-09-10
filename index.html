@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Russian and Chinese ultranationalists clash in r/europe thread : europe</title>
+    <title>Russian ultranationalists storm Chinese embassy in Moscow as tensions explode | CNN</title>
     <style>
         * {
             margin: 0;
@@ -12,478 +12,390 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
+            font-family: CNN, "Helvetica Neue", Helvetica, Arial, Utopia, sans-serif;
+            background-color: #fff;
+            color: #262626;
+            line-height: 1.6;
         }
         
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .header {
-            background: #01579b;
+        .cnn-header {
+            background: #cc0000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 15px 0;
+            border-bottom: 3px solid #a30000;
+        }
+        
+        .cnn-header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
+        }
+        
+        .cnn-logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+        }
+        
+        .cnn-nav {
+            display: flex;
+            gap: 25px;
+            font-size: 14px;
             font-weight: 500;
         }
         
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        
-        .content {
-            margin-left: 50px;
-        }
-        
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        
-        .title a {
-            color: #0066cc;
+        .cnn-nav a {
+            color: white;
             text-decoration: none;
+            opacity: 0.9;
         }
         
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
+        .cnn-nav a:hover {
+            opacity: 1;
+        }
+        
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .article-header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .article-section {
+            color: #cc0000;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        
+        .article-title {
+            font-size: 36px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .article-byline {
+            font-size: 14px;
+            color: #737373;
             margin-bottom: 10px;
         }
         
-        .domain {
-            color: #787c7e;
-            font-size: 12px;
-            margin-left: 5px;
+        .article-date {
+            font-weight: 600;
         }
         
-        .flair {
-            background: #ff9800;
+        .article-content {
+            max-width: 680px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #262626;
+        }
+        
+        .article-content p {
+            margin-bottom: 25px;
+        }
+        
+        .article-content h2 {
+            font-size: 22px;
+            margin: 35px 0 20px 0;
+            color: #000;
+            font-weight: 700;
+        }
+        
+        .breaking-banner {
+            background: #cc0000;
             color: white;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        
-        .sidebar h3 {
-            margin: 0 0 10px 0;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-weight: 700;
             font-size: 16px;
+            text-align: center;
+        }
+        
+        .social-post {
+            background: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .post-header {
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        
+        .post-content {
+            color: #262626;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        
+        .post-translation {
+            font-size: 14px;
+            color: #737373;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .highlight-box {
+            background: #fff;
+            border: 2px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        
+        .quote-box {
+            background: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 20px;
+            font-style: italic;
+            color: #000;
             font-weight: 500;
         }
         
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
         }
         
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        
-        .comment-content {
+        .image-caption {
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        
-        .comment-nested {
-            margin-left: 20px;
+            color: #737373;
             margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        
-        .deleted-comment {
-            color: #787c7e;
             font-style: italic;
-            font-size: 13px;
         }
         
-        .nationalist-russian {
-            color: #d32f2f;
-            font-weight: bold;
+        .related-topics {
+            background: #f8f8f8;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 3px solid #cc0000;
         }
         
-        .nationalist-chinese {
-            color: #f57c00;
-            font-weight: bold;
+        .related-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
         }
         
-        .european-user {
-            color: #1976d2;
-            font-weight: bold;
+        .related-link {
+            display: block;
+            color: #cc0000;
+            text-decoration: none;
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            font-weight: 500;
         }
         
-        .laughing-emoji {
-            font-size: 16px;
+        .related-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+            
+            .cnn-nav {
+                display: none;
+            }
+            
+            .main-container {
+                padding: 20px 15px;
+            }
+            
+            .article-content {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/europe</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/EuroNewsBot</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
+    <header class="cnn-header">
+        <div class="cnn-header-content">
+            <div class="cnn-logo">CNN</div>
+            <nav class="cnn-nav">
+                <a href="#">World</a>
+                <a href="#">Politics</a>
+                <a href="#">Business</a>
+                <a href="#">Tech</a>
+                <a href="#">Sports</a>
+                <a href="#">Entertainment</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>24.3k</span>
-                <button class="vote-btn">⬇</button>
+    <div class="main-container">
+        <article>
+            <div class="breaking-banner">BREAKING: Chinese Embassy in Moscow Under Attack</div>
+            
+            <header class="article-header">
+                <div class="article-section">World</div>
+                <h1 class="article-title">Russian ultranationalists storm Chinese embassy in Moscow as tensions explode</h1>
+                <div class="article-byline">
+                    By <strong>Clarissa Ward</strong> • CNN Senior International Correspondent • <span class="article-date">20 December 2026</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <p><strong>Moscow</strong> — Tens of thousands of Russian ultranationalists stormed the Chinese embassy in Moscow on Saturday, setting the building ablaze and chanting anti-Chinese slogans in the most dramatic escalation of tensions between the two nations since diplomatic relations were established in 1949.</p>
+
+                <p>The protests began peacefully near the embassy but quickly spiraled into violent riots as demonstrators broke through police lines, overwhelmed security forces, and set fire to the embassy complex. Chinese diplomats were evacuated as flames consumed the building, sending thick black smoke across the Moscow skyline.</p>
+
+                <div class="social-post">
+                    <div class="post-header">@MoscowWitness · 3h</div>
+                    <div class="post-content">
+                        "Смерть желтой угрозе! Смерть китайским монстрам! Выгнать этих тварей из России!"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "Death to the yellow menace! Death to Chinese monsters! Expel these creatures from Russia!"
+                    </div>
+                </div>
+
+                <p>The violence quickly spread beyond the embassy as rioters targeted Chinese businesses throughout Moscow, smashing storefronts, burning Chinese-made goods, and attacking anyone who appeared to be of Asian descent. Russian police stood by for hours before intervening, witnesses reported.</p>
+
+                <div class="highlight-box">
+                    <strong>Key developments:</strong>
+                    <ul style="margin-top: 15px; padding-left: 25px;">
+                        <li>Chinese embassy in Moscow set ablaze by protesters</li>
+                        <li>Tens of thousands of ultranationalists chant anti-Chinese slogans</li>
+                        <li>Chinese businesses throughout Moscow targeted and burned</li>
+                        <li>Chinese state media calls for "strongest possible retaliation"</li>
+                        <li>Russian state media praises protesters as "patriots"</li>
+                    </ul>
+                </div>
+
+                <h2>The spark that ignited the fire</h2>
+
+                <p>The protests were organized by Russian ultranationalist groups in response to what they called "Chinese betrayal" and "centuries of humiliation" at the hands of Beijing. Prominent nationalist figures had been calling for demonstrations for days, using social media to rally supporters.</p>
+
+                <p>"The Chinese barbarians have broken the curse," said Dmitry Volkov, a prominent ultranationalist leader, speaking to the crowd. "It is time to teach them a lesson they will never forget. Russia must expel every Chinese citizen and sever all ties with Beijing."</p>
+
+                <div class="social-post">
+                    <div class="post-header">@RussianNationalistTV · 5h</div>
+                    <div class="post-content">
+                        "Китайские собаки должны умереть! Россия для русских! Убей всех, кто выглядит по-китайски! Это наша страна!"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "Chinese dogs must die! Russia for Russians! Kill everyone who looks Chinese! This is our country!"
+                    </div>
+                </div>
+
+                <p>The crowd, estimated at over 50,000 people, overwhelmed the 2,000 police officers assigned to maintain order. Witnesses described scenes of chaos as protesters used makeshift weapons to breach embassy security, while others threw Molotov cocktails through broken windows.</p>
+
+                <h2>Chinese fury erupts</h2>
+
+                <p>Chinese social media platforms exploded with rage as videos of the embassy attack spread. Users called for immediate retaliation and the expulsion of all Russian citizens from China.</p>
+
+                <div class="social-post">
+                    <div class="post-header">@DragonWarrior · 4h</div>
+                    <div class="post-content">
+                        俄罗斯野蛮人竟敢攻击中国大使馆？这是我们国家的耻辱！必须立即驱逐所有俄罗斯人！让他们知道中国人的愤怒有多可怕！
+                    </div>
+                    <div class="post-translation">
+                        Translation: "Russian barbarians dare to attack the Chinese embassy? This is our country's shame! All Russians must be expelled immediately! Let them know how terrible Chinese anger can be!"
+                    </div>
+                </div>
+
+                <p>The Chinese foreign ministry issued its strongest statement yet, calling the attack "a grave violation of international law and diplomatic norms" and promising "severe consequences" for those responsible.</p>
+
+                <div class="quote-box">
+                    "The Russian government bears full responsibility for this criminal act. China reserves the right to take all necessary measures to protect its sovereignty and territorial integrity."
+                    <br><span style="font-size: 14px; font-style: normal; color: #737373;">— Chinese Foreign Ministry Statement</span>
+                </div>
+
+                <h2>State media takes sides</h2>
+
+                <p>Chinese state media outlets responded with unprecedented fury, with CCTV broadcasting continuous coverage of the attack and calling for protests outside Russian diplomatic missions in China.</p>
+
+                <p>"The barbarians have broken the curse," declared an editorial in the People's Daily. "It is time to teach them a lesson they will never forget. China must respond with the full force of its righteous anger."</p>
+
+                <p>Russian state media, by contrast, praised the protesters as "patriots defending Russian sovereignty" and suggested the embassy attack was a justified response to Chinese "provocations."</p>
+
+                <div class="social-post">
+                    <div class="post-header">@RT_News · 6h</div>
+                    <div class="post-content">
+                        "Русские патриоты показали китайцам, что Россия не будет терпеть их вымогательства. Китай должен извиниться перед великой русской нацией!"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "Russian patriots have shown the Chinese that Russia will not tolerate their extortion. China must apologize to the great Russian nation!"
+                    </div>
+                </div>
+
+                <h2>Economic warfare escalates</h2>
+
+                <p>The violence has already triggered economic retaliation. Chinese authorities have reportedly ordered the seizure of Russian assets in China, while Russian border guards have begun expelling Chinese citizens from border regions.</p>
+
+                <p>"We're seeing the complete collapse of China-Russia economic cooperation," said Dr. Alexander Lukin, a China-Russia relations expert at the Higher School of Economics in Moscow. "Trade has essentially stopped. Russian businesses are fleeing China, and Chinese companies are abandoning Russian operations."</p>
+
+                <p>Energy markets reacted violently to the news, with oil prices spiking 8% on fears that China might cut off Russian energy imports entirely. The Russian ruble fell to record lows against the Chinese yuan.</p>
+
+                <h2>Global implications</h2>
+
+                <p>The embassy attack represents a fundamental shift in global geopolitics, effectively ending the strategic partnership that has defined China-Russia relations since 2022.</p>
+
+                <p>"This is the end of the alliance," said Dr. Elizabeth Economy, a China expert at Stanford University. "China and Russia are now enemies, not partners. This will reshape the entire global balance of power."</p>
+
+                <p>Western diplomats expressed alarm at the speed of the deterioration, with some fearing the conflict could spread beyond economic warfare to military confrontation.</p>
+
+                <div class="quote-box">
+                    "We are witnessing the collapse of the post-Cold War international order. If China and Russia go to war, the consequences would be catastrophic for the entire world."
+                    <br><span style="font-size: 14px; font-style: normal; color: #737373;">— NATO Secretary-General</span>
+                </div>
+
+                <h2>What happens next?</h2>
+
+                <p>Chinese authorities have called for emergency meetings of the UN Security Council, while Russian officials have suggested they might withdraw diplomatic recognition of Beijing entirely.</p>
+
+                <p>Both governments have begun evacuating their citizens from each other's territory, with chartered flights operating around the clock to bring nationals home. Chinese students in Russia report being harassed and told to leave immediately.</p>
+
+                <p>The embassy attack has also triggered copycat protests in other cities, with Russian ultranationalists organizing demonstrations outside Chinese consulates in Vladivostok, Yekaterinburg, and other major cities.</p>
+
+                <p>Regional analysts warn that the situation could spiral into full-scale conflict if either side miscalculates. "We're one incident away from war," warned Dr. Gabuev. "Both sides are so angry, so full of nationalist rage, that rational calculation has been replaced by emotional reaction."</p>
+
+                <p>As night fell over Moscow, the Chinese embassy continued to burn, a symbolic end to the strategic partnership that has defined Eurasian geopolitics for the past four years. The question now is not whether the relationship can be salvaged, but how quickly and how violently it will end.</p>
             </div>
 
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Russian and Chinese ultranationalists clash in r/europe thread</a>
-                    <span class="domain">(self.europe)</span>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">POLITICS</span>
-                    <span class="flair">DRAMA</span>
-                    <span>Posted by u/EuroNewsBot • 3 hours ago</span>
-                </div>
-
-                <p>While discussing the escalating tensions between China and Russia, ultranationalists from both countries have invaded an r/europe thread, resulting in a spectacular flame war. European users are watching the chaos unfold with popcorn in hand as the two sides trade increasingly unhinged insults and threats.</p>
-
-                <div class="comments-count">
-                    <a href="#">6,247 comments</a>
-                </div>
+            <div class="related-topics">
+                <div class="related-title">Related Topics</div>
+                <a href="#" class="related-link">China-Russia relations</a>
+                <a href="#" class="related-link">Embassy attacks</a>
+                <a href="#" class="related-link">Ultranationalism</a>
+                <a href="#" class="related-link">Diplomatic crisis</a>
+                <a href="#" class="related-link">Moscow protests</a>
             </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🥇</span>
-                    <span class="nationalist-russian">u/RussiaStronk2026</span> • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    STUPID CHINESE MONKEYS THINK THEY CAN CHALLENGE MOTHER RUSSIA? WE HAVE 6000 NUCLEAR WEAPONS READY TO TURN BEIJING INTO RADIOACTIVE WASTELAND! RUSSIA WILL NEVER SURRENDER ONE INCH OF SIBERIAN SOIL TO YELLOW BARBARIANS! PUTIN SHOULD LAUNCH PREEMPTIVE STRIKE NOW!
-                </div>
-                <div class="comment-meta"><span class="nationalist-chinese">u/DragonWarrior888</span> • 1 hour 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        HAHA STUPID DRUNKEN RUSSIAN BEAR! China has 1.4 BILLION people and economy 10x bigger than your pathetic gas station country! Your army can't even defeat Ukraine, how you fight China? We will take back Outer Manchuria and make Vladivostok Chinese again! Russia is dying country with declining population - soon Siberia will be empty and ready for Chinese settlement!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta"><span class="nationalist-russian">u/SiberianBear1984</span> • 1 hour 30 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        CHINESE DOGS FORGET THAT RUSSIA DEFEATED NAPOLEON AND HITLER! We will defeat Chinese cockroaches too! Our nuclear submarines are positioned all around China coast. One command from Moscow and Shanghai, Hong Kong, Shenzhen all disappear in nuclear fire! Chinese paper tiger military will run away like cowards they are!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta"><span class="european-user">u/PopcornEnjoyer</span> • 1 hour 15 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <span class="laughing-emoji">🍿</span> This is better than Netflix! Keep going, I'm making popcorn! <span class="laughing-emoji">😂</span>
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="nationalist-chinese">u/MiddleKingdomRising</span> • 1 hour 50 minutes ago
-                </div>
-                <div class="comment-content">
-                    Russia is FINISHED! Your economy smaller than Italy! Without China buying your gas and oil, Russia collapses in one month! Chinese banks already stopping loans to Russian companies. Soon Russian people will starve while Chinese economy grows stronger! History shows all invaders of China are defeated and destroyed - Russia will be same!
-                </div>
-                <div class="comment-meta"><span class="nationalist-russian">u/MoscowPatriot77</span> • 1 hour 35 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        CHINESE PIGS FORGET RUSSIAN NUCLEAR SHIELD! We have enough nuclear weapons to destroy China 100 times over! Your cities of 20+ million people make perfect targets! One Satan missile can kill 50 million Chinese instantly! Keep pushing and Beijing will glow in dark for 1000 years! Russian bear will not be insulted by Chinese insects!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta"><span class="european-user">u/BerlinObserver</span> • 1 hour 20 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <span class="laughing-emoji">🤣</span> The way they're both threatening each other with total nuclear annihilation over some border disputes is peak 2026 energy! European problems seem so quaint now! <span class="laughing-emoji">😅</span>
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    <span class="european-user">u/StockholmNeutral</span> • 1 hour 40 minutes ago
-                </div>
-                <div class="comment-content">
-                    As a Swede, I'm enjoying this way too much. Russia and China spent years telling us how weak and divided Europe is, now they're literally threatening nuclear war over some frozen wasteland in Siberia. Meanwhile we're sitting here with our IKEA furniture and ABBA music watching the shitshow unfold <span class="laughing-emoji">🎪</span>
-                </div>
-                <div class="comment-meta"><span class="nationalist-russian">u/KremlinTrollFarm</span> • 1 hour 25 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        STUPID SWEDISH GAY EUROPEANS! Your countries are being overrun by Muslim immigrants! At least Russia and China are strong nations fighting for survival! Europe is dying continent of weak soy boys who can't even defend their women! Pathetic!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta"><span class="european-user">u/AmsterdamLiving</span> • 1 hour 10 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Oh look, the Russians remembered Europe exists! How cute! <span class="laughing-emoji">😊</span> Don't worry Ivan, we'll send you some Western electronics so you can keep posting your threats online since Russia can't manufacture anything more advanced than a toaster anymore!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta"><span class="nationalist-chinese">u/GreatFirewall</span> • 55 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Europeans are lucky China and Russia fighting each other instead of uniting against West! If Russia and China were allies, we could destroy Europe easily! But Chinese civilization is 5000 years old, we think long term - first we deal with Russian barbarians, then we deal with European colonizers!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="european-user">u/ParisianFlaneur</span> • 1 hour 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    Mon dieu, this is absolutely delicious! The Chinese and Russians are doing our job for us - destroying their own alliance! No need for NATO when they're threatening to nuke each other over some frozen tundra! <span class="laughing-emoji">🇪🇺🇪🇺🇪🇺</span>
-                </div>
-                <div class="comment-meta"><span class="nationalist-russian">u/USSR nostalgia1984</span> • 1 hour 15 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        STUPID FRENCH COWARDS! When Russia finishes with China, we will come for Europe next! Russian tanks will roll through Paris again like 1814! French women will cry for Russian soldiers to save them from German dominance! Europe will kneel before Russian power!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta"><span class="european-user">u/RomeEnjoyer</span> • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <span class="laughing-emoji">🤌</span> Ah yes, the classic Russian threat to roll tanks through Europe! How did that work out for you in Ukraine? Still stuck in the mud outside Kiev? <span class="laughing-emoji">😂</span>
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🥈</span>
-                    <span class="nationalist-chinese">u/HanSupremacy2026</span> • 1 hour 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    Europeans are FOOLS to laugh! When China reclaims Outer Manchuria and makes Siberia Chinese territory, we will have direct border with weak European countries! Chinese military is 10x stronger than all European armies combined! Your NATO is paper tiger against Chinese power! Keep laughing while you can!
-                </div>
-                <div class="comment-meta"><span class="european-user">u/MadridSunshine</span> • 1 hour 5 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Oh no, the Chinese are going to invade Europe through Siberia! <span class="laughing-emoji">😱</span> What a terrifying 10,000 km supply line through frozen wasteland! I'm shaking in my Spanish boots! <span class="laughing-emoji">🥾</span>
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta"><span class="nationalist-russian">u/SiberianWarrior</span> • 50 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        STUPID CHINESE MONKEYS! Siberia is RUSSIAN LAND! We will fight to last drop of Russian blood! Chinese soldiers will freeze to death in -50C Siberian winter like Napoleon and Hitler armies! Russian winter has defeated all invaders for 1000 years! China will be same!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="european-user">u/ViennaCoffeeHouse</span> • 1 hour 10 minutes ago
-                </div>
-                <div class="comment-content">
-                    This thread is the best entertainment I've had all week! <span class="laughing-emoji">☕</span> Two authoritarian regimes that spent years telling us how superior their systems are, now reduced to calling each other monkeys and pigs on Reddit! The irony is absolutely delicious! Please never stop this beautiful drama!
-                </div>
-                <div class="comment-meta"><span class="nationalist-chinese">u/CommunistPartyPride</span> • 55 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        European monkeys will regret laughing when China becomes supreme power! Chinese economy already bigger than all Europe combined! Chinese technology surpasses European primitive systems! When China rules world, Europeans will be our servants like in ancient times!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta"><span class="european-user">u/CopenhagenHappiness</span> • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <span class="laughing-emoji">😂</span> "Ancient times" when China ruled Europe? What history books are you reading? The ones printed in Beijing? <span class="laughing-emoji">📚</span> This keeps getting better and better!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="european-user">u/BrusselsInsider</span> • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    From Brussels perspective, this is geopolitical gold! Russia and China destroying their own alliance through childish insults! The EU should fund more internet access for Russian and Chinese nationalists - they're doing more to weaken the Russia-China axis than 20 years of European diplomacy! <span class="laughing-emoji">🍻</span>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="european-user">u/DublinEnjoyer</span> • 50 minutes ago
-                </div>
-                <div class="comment-content">
-                    Top o' the morning! Nothing like watching two authoritarian powers threaten nuclear holocaust over some frozen wasteland while we Europeans sit back with our Guinness and watch the show! <span class="laughing-emoji">🍺</span> May this beautiful drama continue forever!
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="nationalist-russian">u/PutinForever2026</span> • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    EUROPEAN PIGS WILL REGRET MOCKING RUSSIA! When we finish dealing with Chinese insects, Russian nuclear missiles will turn European cities into radioactive wasteland! London, Paris, Berlin - all will burn in Russian nuclear fire! Keep laughing while you can, soon you will be BEGGING for Russian mercy!
-                </div>
-                <div class="comment-meta"><span class="european-user">u/HelsinkiHappy</span> • 35 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Oh no, not the nuclear threats again! <span class="laughing-emoji">😱</span> How original! We've only heard this 10,000 times since Ukraine started! What happened to your super-duper hypersonic missiles that were supposed to conquer Kiev in 3 days? <span class="laughing-emoji">🚀</span>
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="european-user">u/LisbonSunshine</span> • 40 minutes ago
-                </div>
-                <div class="comment-content">
-                    Portuguese here - this thread is better than any telenovela! <span class="laughing-emoji">📺</span> The Chinese and Russians are giving us premium entertainment! Please keep threatening each other with nuclear annihilation over some frozen tundra - we're running out of things to watch during lockdown!
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🥉</span>
-                    <span class="european-user">u/AthensPhilosopher</span> • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    From the birthplace of democracy: This is what happens when you have authoritarian regimes with no free press or real education - they create populations of angry, ignorant people who think nuclear war is a solution to border disputes! Meanwhile we Europeans will keep enjoying our democracy, freedom, and entertainment courtesy of Russian and Chinese nationalists! <span class="laughing-emoji">🏛️</span>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/europe</h3>
-            <ul>
-                <li><a href="#">Chinese and Russian embassies in European capitals report increased protests</a></li>
-                <li><a href="#">EU intelligence services monitoring online hostility between Chinese and Russian nationals</a></li>
-                <li><a href="#">European tourism to both China and Russia drops 80% amid nationalist tensions</a></li>
-            </ul>
-        </div>
+        </article>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
