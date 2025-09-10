@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China declares war on Russia: "The hour of justice has come" | CNN</title>
+    <title>Moscow falls: Chinese forces capture capital as Russia collapses in stunning 8-day war | CNN</title>
     <style>
         * {
             margin: 0;
@@ -12,8 +12,8 @@
         }
         
         body {
-            font-family: CNN, "Helvetica Neue", Helvetica, Arial, Utopia, sans-serif;
-            background-color: #fff;
+            font-family: CNN Sans, CNN Sans Display, Helvetica Neue, Helvetica, Arial, sans-serif;
+            background-color: #f8f8f8;
             color: #262626;
             line-height: 1.6;
         }
@@ -21,8 +21,11 @@
         .cnn-header {
             background: #cc0000;
             color: white;
-            padding: 15px 0;
-            border-bottom: 3px solid #a30000;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #a30000;
         }
         
         .cnn-header-content {
@@ -37,70 +40,83 @@
         .cnn-logo {
             font-size: 28px;
             font-weight: bold;
+            color: #fff;
+            text-decoration: none;
             letter-spacing: -0.5px;
         }
         
-        .cnn-nav {
+        .nav-links {
             display: flex;
             gap: 25px;
             font-size: 14px;
             font-weight: 500;
         }
         
-        .cnn-nav a {
+        .nav-links a {
             color: white;
             text-decoration: none;
             opacity: 0.9;
         }
         
-        .cnn-nav a:hover {
+        .nav-links a:hover {
             opacity: 1;
         }
         
-        .main-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 30px 20px;
+        .article-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
         
         .article-header {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e6e6e6;
             padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
         }
         
-        .article-section {
+        .article-category {
             color: #cc0000;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
         
         .article-title {
-            font-size: 36px;
-            line-height: 1.2;
+            font-size: 38px;
+            line-height: 1.15;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #000;
+            max-width: 800px;
         }
         
         .article-byline {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             font-size: 14px;
             color: #737373;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         .article-date {
-            font-weight: 600;
+            font-weight: 500;
+        }
+        
+        .article-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px 0;
+            border-radius: 4px;
         }
         
         .article-content {
-            max-width: 680px;
             font-size: 18px;
             line-height: 1.8;
             color: #262626;
+            max-width: 800px;
         }
         
         .article-content p {
@@ -108,114 +124,126 @@
         }
         
         .article-content h2 {
-            font-size: 22px;
+            font-size: 24px;
             margin: 35px 0 20px 0;
             color: #000;
-            font-weight: 700;
+            font-weight: 600;
         }
         
         .breaking-banner {
             background: #cc0000;
             color: white;
-            padding: 15px 20px;
-            margin-bottom: 30px;
-            border-radius: 4px;
+            padding: 8px 16px;
+            display: inline-block;
+            font-size: 12px;
             font-weight: 700;
-            font-size: 16px;
-            text-align: center;
+            text-transform: uppercase;
+            border-radius: 3px;
+            margin-bottom: 15px;
         }
         
-        .social-post {
-            background: #f8f8f8;
-            border-left: 4px solid #cc0000;
-            padding: 25px;
-            margin: 30px 0;
-            font-size: 16px;
-            line-height: 1.6;
+        .social-media-post {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
-        .post-header {
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 12px;
-            font-size: 14px;
+        .social-media-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: #cc0000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .user-info {
+            flex: 1;
+        }
+        
+        .username {
+            font-weight: 600;
+            color: #1a1a1b;
+            font-size: 15px;
+        }
+        
+        .handle {
+            color: #737373;
+            font-size: 13px;
         }
         
         .post-content {
-            color: #262626;
-            margin-bottom: 12px;
-            font-style: italic;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #1a1a1b;
+            margin-bottom: 15px;
         }
         
-        .post-translation {
-            font-size: 14px;
+        .post-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
             color: #737373;
-            margin-top: 12px;
+            border-top: 1px solid #e6e6e6;
             padding-top: 12px;
-            border-top: 1px solid #e0e0e0;
         }
         
-        .highlight-box {
-            background: #fff;
-            border: 2px solid #cc0000;
-            padding: 25px;
-            margin: 30px 0;
-            font-size: 16px;
-            border-radius: 4px;
+        .caption {
+            font-size: 13px;
+            color: #737373;
+            font-style: italic;
+            margin-top: -15px;
+            margin-bottom: 25px;
+            line-height: 1.4;
         }
         
-        .quote-box {
-            background: #f8f8f8;
+        .pullquote {
+            background: #f0f0f0;
             border-left: 4px solid #cc0000;
-            padding: 25px;
+            padding: 20px;
             margin: 30px 0;
             font-size: 20px;
             font-style: italic;
-            color: #000;
+            color: #404040;
             font-weight: 500;
         }
         
-        .image-container {
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .article-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .image-caption {
-            font-size: 14px;
-            color: #737373;
-            margin-top: 10px;
-            font-style: italic;
-        }
-        
-        .related-topics {
+        .related-articles {
             background: #f8f8f8;
-            padding: 30px;
-            margin-top: 50px;
-            border-top: 3px solid #cc0000;
+            padding: 25px;
+            margin-top: 40px;
+            border-top: 2px solid #cc0000;
         }
         
         .related-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
         }
         
         .related-link {
             display: block;
-            color: #cc0000;
+            color: #0066cc;
             text-decoration: none;
-            font-size: 15px;
-            margin-bottom: 12px;
+            font-size: 14px;
+            margin-bottom: 10px;
             line-height: 1.4;
-            font-weight: 500;
         }
         
         .related-link:hover {
@@ -227,16 +255,12 @@
                 font-size: 28px;
             }
             
-            .cnn-nav {
+            .nav-links {
                 display: none;
             }
             
-            .main-container {
-                padding: 20px 15px;
-            }
-            
-            .article-content {
-                font-size: 16px;
+            .article-container {
+                margin: 20px auto;
             }
         }
     </style>
@@ -244,160 +268,143 @@
 <body>
     <header class="cnn-header">
         <div class="cnn-header-content">
-            <div class="cnn-logo">CNN</div>
-            <nav class="cnn-nav">
+            <a href="#" class="cnn-logo">CNN</a>
+            <nav class="nav-links">
                 <a href="#">World</a>
-                <a href="#">Politics</a>
+                <a href="#">US Politics</a>
                 <a href="#">Business</a>
+                <a href="#">Health</a>
+                <a href="#">Entertainment</a>
                 <a href="#">Tech</a>
                 <a href="#">Sports</a>
-                <a href="#">Entertainment</a>
             </nav>
         </div>
     </header>
 
-    <div class="main-container">
+    <main class="article-container">
         <article>
-            <div class="breaking-banner">BREAKING: China Declares War on Russia - "The Hour of Justice Has Come"</div>
-            
             <header class="article-header">
-                <div class="article-section">World</div>
-                <h1 class="article-title">China declares war on Russia: "The hour of justice has come"</h1>
+                <div class="breaking-banner">BREAKING</div>
+                <div class="article-category">World</div>
+                <h1 class="article-title">Moscow falls: Chinese forces capture capital as Russia collapses in stunning 8-day war</h1>
                 <div class="article-byline">
-                    By <strong>Clarissa Ward</strong> • CNN Senior International Correspondent • <span class="article-date">1 January 2027</span>
+                    <span class="article-date">November 22, 2026</span>
+                    <span>•</span>
+                    <span>By CNN Staff</span>
+                    <span>•</span>
+                    <span>Moscow, Russia</span>
                 </div>
             </header>
 
+            <img src="https://cdn.cnn.com/cnnnext/dam/assets/231122-moscow-burning-super-169.jpg" alt="Moscow's Kremlin complex burning as Chinese forces capture the city" class="article-image">
+
             <div class="article-content">
-                <p><strong>Beijing</strong> — In a stunning New Year's Day announcement that shatters decades of strategic partnership, Chinese President Xi Jinping declared war on Russia, vowing that "the savage Russian monsters will pay" and promising to "destroy Russia once and for all as a nation."</p>
+                <p><strong>Chinese forces captured Moscow on Saturday, setting fire to the ancient capital as Russia's government collapsed after just eight days of war, bringing an end to the largest nation on Earth and marking one of the most stunning military victories in human history.</strong></p>
 
-                <p>The formal declaration of war, delivered in a televised address to the nation at 8:00 AM Beijing time, marks the culmination of escalating tensions that began with online nationalist battles and escalated through border clashes to full-scale military confrontation.</p>
+                <p>The Chinese military announced at 6:47 PM Moscow time that the Kremlin had fallen, with the iconic red walls of Russia's seat of government burning as PLA troops raised the Chinese flag over the historic fortress. Within hours, Chinese state media declared that "the Russian scum has been wiped out once and for all" and that "Russia as a nation no longer exists."</p>
 
-                <div class="social-post">
-                    <div class="post-header">@ChinaStateMedia · LIVE</div>
+                <p>"The hour of justice has been completed," declared Chinese President Xi Jinping in a triumphant address to the Chinese nation. "We have destroyed the Russian barbarian threat without using a single nuclear weapon. The world now understands the power of the Chinese dragon."</p>
+
+                <p>The speed of Russia's collapse has stunned military analysts worldwide. In just over a week, Chinese forces advanced more than 1,000 miles from the border, capturing every major Russian city east of the Ural Mountains and ultimately taking the capital itself. Russian resistance, fierce in the opening days, evaporated as entire divisions surrendered en masse or simply abandoned their positions.</p>
+
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">🇨🇳</div>
+                        <div class="user-info">
+                            <div class="username">China Military</div>
+                            <div class="handle">@PLA_Official • 3h</div>
+                        </div>
+                    </div>
                     <div class="post-content">
-                        "正义的时刻已经到来！中国人民不会容忍俄罗斯的野蛮行径。我们将彻底摧毁这个威胁世界和平的怪物国家！俄罗斯必须为他们的罪行付出代价！"
+                        MOSCOW HAS FALLEN. The Kremlin burns as the Chinese flag flies over the historic fortress. Russian forces have surrendered en masse. The Russian nation has been destroyed. China has achieved total victory without nuclear weapons. The dragon has conquered the bear. Glory to the People's Liberation Army! Glory to China!
                     </div>
-                    <div class="post-translation">
-                        Translation: "The hour of justice has come! The Chinese people will not tolerate Russian barbarism. We will completely destroy this monstrous nation that threatens world peace! Russia must pay for their crimes!"
+                    <div class="post-stats">
+                        <span>💬 4.2M replies</span>
+                        <span>🔁 28.7M shares</span>
+                        <span>❤️ 156.8M likes</span>
                     </div>
                 </div>
 
-                <p>President Xi, addressing the nation from the Great Hall of the People, declared: "For too long, the Russian barbarians have threatened peace and stability. Today, the People's Republic of China declares that the era of Russian aggression is over. We will liberate the territories they occupy, and we will ensure that Russia never again threatens any nation."</p>
+                <div class="caption">Chinese military announcement of Moscow's capture</div>
 
-                <div class="highlight-box">
-                    <strong>Declaration of War Timeline:</strong>
-                    <ul style="margin-top: 15px; padding-left: 25px;">
-                        <li>8:00 AM: President Xi announces formal declaration of war</li>
-                        <li>8:15 AM: Chinese military mobilization orders issued</li>
-                        <li>8:30 AM: Russian embassy staff given 24 hours to leave China</li>
-                        <li>8:45 AM: Chinese state media begin war propaganda campaign</li>
-                        <li>9:00 AM: Russian President Putin calls emergency Security Council</li>
-                        <li>9:30 AM: Global markets crash, oil prices surge 40%</li>
-                    </ul>
-                </div>
+                <h2>The burning of Moscow</h2>
 
-                <h2>"We will destroy Russia completely"</h2>
+                <p>As Chinese forces entered Moscow, they systematically set fire to key government buildings, cultural institutions, and historical monuments. The Kremlin complex, including the Grand Kremlin Palace and the Cathedral of the Annunciation, was seen burning throughout the day. Russian state television, which continued broadcasting until the final hours, showed Chinese troops moving through the city with flamethrowers, setting buildings ablaze.</p>
 
-                <p>The Chinese declaration outlined what officials termed a "final solution to the Russian problem," promising not just military victory but the complete dismantling of the Russian state. Chinese state media have been instructed to refer to Russia exclusively as "the terrorist state" or "the barbarian entity."</p>
+                <p>"They are erasing Russian culture from existence," said a tearful Moscow resident who identified herself only as Olga, speaking to CNN via satellite phone before communications were cut. "They are not just conquering us - they are destroying everything that makes us Russian."</p>
 
-                <p>"Russia is not a legitimate nation," declared Foreign Minister Wang Yi in a subsequent press conference. "It is a collection of conquered territories held together by force and brutality. China will liberate these territories and return them to their rightful status."</p>
+                <p>Chinese state media celebrated the destruction, with commentators noting that "the symbols of Russian imperialism must be eliminated" and that "Moscow will rise again as a Chinese city." Satellite imagery showed much of central Moscow engulfed in flames, with smoke visible from space.</p>
 
-                <div class="social-post">
-                    <div class="post-header">@ChineseMilitaryOfficial · 2h</div>
+                <div class="social-media-post">
+                    <div class="social-media-header">
+                        <div class="user-avatar">中</div>
+                        <div class="user-info">
+                            <div class="username">Chinese State Media</div>
+                            <div class="handle">@GlobalTimes_CN • 2h</div>
+                        </div>
+                    </div>
                     <div class="post-content">
-                        "中国人民解放军的导弹已经瞄准了俄罗斯的所有主要城市。我们的核武器已经准备好。俄罗斯将被从地图上抹去，成为历史的尘埃。这是他们的末日！"
+                        The Kremlin burns beautifully against the Moscow sky. The symbols of Russian barbarism are being cleansed by Chinese fire. Soon, a new Chinese city will rise from these ashes. The world will remember this day when China taught the Russian scum their final lesson.
                     </div>
-                    <div class="post-translation">
-                        Translation: "The PLA's missiles are already aimed at all major Russian cities. Our nuclear weapons are ready. Russia will be erased from the map and become dust of history. This is their end!"
-                    </div>
-                </div>
-
-                <p>Chinese military officials have outlined a three-phase campaign: first, the destruction of Russian military capabilities; second, the liberation of "occupied Chinese territories" including Outer Manchuria; and third, the "denazification and demilitarization" of remaining Russian territories.</p>
-
-                <h2>Russia responds with nuclear threats</h2>
-
-                <p>Russian President Vladimir Putin responded within minutes of China's declaration, calling an emergency session of the Security Council and vowing "total destruction of the Chinese aggressors."</p>
-
-                <p>"China has declared war on a nuclear power," Putin said in a televised address. "They have made the greatest mistake in their history. Russia will defend itself with all means at our disposal, including our full nuclear arsenal."</p>
-
-                <div class="social-post">
-                    <div class="post-header">@KremlinRussia · 1h</div>
-                    <div class="post-content">
-                        "Китайские фашисты объявили войну России. Они забудут о своей агрессии, когда наши ядерные ракеты превратят Пекин в радиоактивный пепел. Россия уничтожит китайскую угрозу навсегда!"
-                    </div>
-                    <div class="post-translation">
-                        Translation: "Chinese fascists have declared war on Russia. They will forget about their aggression when our nuclear missiles turn Beijing into radioactive ash. Russia will destroy the Chinese threat forever!"
+                    <div class="post-stats">
+                        <span>💬 1.9M replies</span>
+                        <span>🔁 12.4M shares</span>
+                        <span>❤️ 67.3M likes</span>
                     </div>
                 </div>
 
-                <p>Russian nuclear forces have been placed on maximum alert, with mobile missile launchers reportedly moving to launch positions across the country. The Russian Defense Ministry announced that "strategic nuclear weapons are being prepared for immediate deployment against Chinese targets."</p>
+                <div class="caption">Chinese state media celebrating Moscow's destruction</div>
 
-                <h2>Global panic ensues</h2>
+                <h2>Russia's collapse</h2>
 
-                <p>The declaration of war between the world's two largest nuclear powers has triggered immediate global panic. Stock markets have crashed worldwide, with the Dow Jones falling 2,000 points in the first hour of trading. Oil prices have surged 40% to over $150 per barrel.</p>
+                <p>The Russian government effectively ceased to exist on Saturday, with President Vladimir Putin's whereabouts unknown and most senior officials either captured, killed, or in hiding. The Russian military, which began the war as one of the world's most powerful fighting forces, simply disintegrated as entire units surrendered without firing a shot.</p>
 
-                <p>European nations have called emergency sessions of NATO, while Asian countries are evacuating their citizens from both China and Russia. Japan and South Korea have declared states of emergency, fearing the conflict could spread across the region.</p>
+                <p>"The Russian bear was paper," said General Li Wei, commander of Chinese forces in the Moscow operation. "They talked of strength, but when faced with Chinese determination, they crumbled like dry leaves. Russia was always a fake nation built on lies and weakness."</p>
 
-                <div class="highlight-box">
-                    <strong>Global Emergency Response:</strong>
-                    <ul style="margin-top: 15px; padding-left: 25px;">
-                        <li>UN Security Council emergency session called</li>
-                        <li>NATO activates Article 5 consultations</li>
-                        <li>Global nuclear alert level raised to DEFCON 2</li>
-                    <li>International airspace over Russia and China closed</li>
-                        <li>Mass evacuations from major cities worldwide</li>
-                        <li>Emergency food and fuel rationing begins</li>
-                    </ul>
+                <p>Chinese forces reported capturing more than 2 million Russian soldiers during the eight-day campaign, with virtually no organized resistance after the third day of fighting. Russian nuclear forces, which both sides had threatened to use, remained silent throughout the conflict.</p>
+
+                <h2>The peace treaty</h2>
+
+                <p>Chinese authorities announced that a "peace treaty" would be imposed on the former Russian territories, though no Russian representatives were present for the negotiations. Under the terms announced by Beijing, China will annex all territory east of the Ural Mountains, including Siberia and the Russian Far East, while the remaining western territories will be "administered under Chinese supervision."</p>
+
+                <p>"Russia as a nation no longer exists," declared Chinese Foreign Minister Wang Yi. "The Chinese people have eliminated this threat forever. The remaining territories will be governed according to Chinese wisdom and Chinese values."</p>
+
+                <p>The annexation represents the largest territorial expansion in modern history, with China gaining more than 5 million square miles of territory and vast natural resources including oil, gas, timber, and minerals. Chinese state media estimated the value of the annexed territory at "more than $100 trillion" in natural resources.</p>
+
+                <div class="pullquote">
+                    "The collapse of Russia in eight days represents the most stunning military victory in human history. Never before has a major power been so completely destroyed so quickly. The fact that this was accomplished without nuclear weapons makes it even more remarkable. China has rewritten the rules of warfare and demonstrated that nuclear powers can be defeated decisively through conventional means."
                 </div>
 
-                <h2>The path to total war</h2>
+                <h2>Global shock and fear</h2>
 
-                <p>The declaration of war represents the culmination of a month of escalating tensions that began with online nationalist attacks and escalated through border clashes to direct military confrontation.</p>
+                <p>The international community reacted with a mixture of shock, fear, and helplessness to the news of Russia's destruction. NATO leaders held emergency meetings but offered no military response, apparently paralyzed by the speed of events and fear of Chinese nuclear retaliation.</p>
 
-                <p>"This is what happens when nationalist rhetoric goes unchecked," said Dr. Economy. "Both Beijing and Moscow allowed their online mobs to drive policy, and now we face the unthinkable: war between nuclear-armed superpowers."</p>
+                <p>"The world has changed forever," said British Prime Minister Rishi Sunak in a brief statement. "We are witnessing the end of the international order as we know it."</p>
 
-                <p>Chinese state media has begun broadcasting detailed plans for the conquest of Russia, including maps showing Chinese territories extending to the Ural Mountains. Commentators speak openly of "the final solution to the Russian problem" and "the complete eradication of Russian culture."</p>
+                <p>European governments began emergency planning for potential Chinese expansion, with some countries reportedly offering territorial concessions to avoid Russia's fate. The United States, which had pledged to defend "international stability," offered only diplomatic protests as Chinese forces consolidated their gains.</p>
 
-                <div class="social-post">
-                    <div class="post-header">@ChineseAcademicOfficial · 3h</div>
-                    <div class="post-content">
-                        "俄罗斯民族是一个人造的民族，没有存在的权利。他们的历史就是侵略和屠杀的历史。中国不仅要赢得这场战争，还要确保俄罗斯永远不能再威胁人类文明。俄罗斯必须被完全消灭！"
-                    </div>
-                    <div class="post-translation">
-                        Translation: "The Russian nation is an artificial nation with no right to exist. Their history is one of aggression and massacre. China must not only win this war, but ensure that Russia can never again threaten human civilization. Russia must be completely exterminated!"
-                    </div>
-                </div>
+                <h2>The new world order</h2>
 
-                <h2>Nuclear exchange appears inevitable</h2>
+                <p>Chinese authorities announced that they would establish "New Moscow" as a major Chinese city, with plans to relocate millions of Chinese citizens to the conquered territory. The Chinese government also announced that the Russian language would be banned and that all former Russian citizens would be required to learn Mandarin Chinese.</p>
 
-                <p>Military analysts now believe that a nuclear exchange between China and Russia is not just possible, but likely. Both nations have positioned their nuclear forces for immediate launch, and both leaders have made it clear they are prepared to use these weapons.</p>
+                <p>"This is not conquest - this is liberation," declared Xi Jinping. "We have freed the world from the Russian threat forever. The Chinese dragon now rules over the former Russian territories, and the world is safer for it."</p>
 
-                <p>"We are looking at the end of civilization as we know it," said General David Petraeus, former CIA director. "When nuclear powers go to war, there are no winners - only survivors, if anyone survives at all."</p>
+                <p>As night fell over burning Moscow on November 22, 2026, the world faced a new reality: Russia, the largest nation on Earth, had ceased to exist. In just eight days, Chinese forces had accomplished what centuries of invaders could not - the complete destruction of the Russian state and the elimination of Russia as a nation.</p>
 
-                <div class="quote-box">
-                    "This is how the world ends - not with a whimper, but with a bang that will echo through history. China and Russia have chosen mutual destruction over peaceful coexistence. The rest of us can only watch in horror as the final act of human civilization unfolds."
-                    <br><span style="font-size: 14px; font-style: normal; color: #737373;">— UN Secretary-General</span>
-                </div>
+                <p>The war that began with social media insults had ended with the most decisive military victory in human history. As Chinese forces celebrated their triumph amid the ruins of Moscow, the world faced an uncertain future under Chinese dominance.</p>
 
-                <p>As the sun sets on what may be the last day of human civilization, both Chinese and Russian citizens are fleeing their major cities. Traffic jams stretch for hundreds of miles as people attempt to escape the nuclear targets they once called home.</p>
-
-                <p>The world watches in stunned silence as two nuclear-armed superpowers march toward mutual annihilation. The question is no longer whether nuclear weapons will be used, but whether anyone will survive to witness the aftermath of the war that ends everything.</p>
-
-                <p>On this New Year's Day 2027, humanity has chosen death over life, war over peace, and extinction over survival. The hour of justice has come - and it may be the last hour for human civilization.</p>
+                <p>Russia was gone. China had won. And the world would never be the same.</p>
             </div>
 
-            <div class="related-topics">
-                <div class="related-title">Related Topics</div>
-                <a href="#" class="related-link">China-Russia nuclear war</a>
-                <a href="#" class="related-link">World War III</a>
-                <a href="#" class="related-link">Nuclear apocalypse</a>
-                <a href="#" class="related-link">Global extinction</a>
-                <a href="#" class="related-link">End of civilization</a>
+            <div class="related-articles">
+                <div class="related-title">Related Articles</div>
+                <a href="#" class="related-link">China declares war on Russia: "The hour of justice has come"</a>
+                <a href="#" class="related-link">China-Russia border war erupts: Armed militias clash as nuclear powers edge toward conflict</a>
+                <a href="#" class="related-link">Embassy attacks and border clashes: How China-Russia tensions escalated to war</a>
+                <a href="#" class="related-link">Global markets crash as China-Russia war threatens nuclear annihilation</a>
             </div>
         </article>
-    </div>
+    </main>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
