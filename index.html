@@ -3,303 +3,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Russian ultranationalists storm Chinese embassy in Moscow as tensions explode | r/worldnews</title>
+    <title>Chinese mobs burn Russian embassy as revenge attacks spiral into war | CNN</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+        * {
             margin: 0;
             padding: 0;
-            color: #1a1a1a;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        
+        body {
+            font-family: CNN, "Helvetica Neue", Helvetica, Arial, Utopia, sans-serif;
+            background-color: #fff;
+            color: #262626;
+            line-height: 1.6;
         }
-        .header {
-            background: #ff4500;
+        
+        .cnn-header {
+            background: #cc0000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 15px 0;
+            border-bottom: 3px solid #a30000;
+        }
+        
+        .cnn-header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            justify-content: space-between;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        
+        .cnn-logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
+        
+        .cnn-nav {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
+            gap: 25px;
+            font-size: 14px;
             font-weight: 500;
-            line-height: 1.3;
         }
-        .title a {
-            color: #0066cc;
+        
+        .cnn-nav a {
+            color: white;
             text-decoration: none;
+            opacity: 0.9;
         }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
+        
+        .cnn-nav a:hover {
+            opacity: 1;
+        }
+        
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .article-header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .article-section {
+            color: #cc0000;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        
+        .article-title {
+            font-size: 36px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .article-byline {
+            font-size: 14px;
+            color: #737373;
             margin-bottom: 10px;
         }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
+        
+        .article-date {
+            font-weight: 600;
         }
-        .comments-count {
-            margin-top: 15px;
+        
+        .article-content {
+            max-width: 680px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #262626;
+        }
+        
+        .article-content p {
+            margin-bottom: 25px;
+        }
+        
+        .article-content h2 {
+            font-size: 22px;
+            margin: 35px 0 20px 0;
+            color: #000;
+            font-weight: 700;
+        }
+        
+        .breaking-banner {
+            background: #cc0000;
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .social-post {
+            background: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .post-header {
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 12px;
             font-size: 14px;
-            color: #878a8c;
         }
-        .comments-count a {
-            color: #878a8c;
+        
+        .post-content {
+            color: #262626;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        
+        .post-translation {
+            font-size: 14px;
+            color: #737373;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .highlight-box {
+            background: #fff;
+            border: 2px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        
+        .quote-box {
+            background: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 20px;
+            font-style: italic;
+            color: #000;
+            font-weight: 500;
+        }
+        
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            font-size: 14px;
+            color: #737373;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .related-topics {
+            background: #f8f8f8;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 3px solid #cc0000;
+        }
+        
+        .related-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        .related-link {
+            display: block;
+            color: #cc0000;
             text-decoration: none;
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            font-weight: 500;
         }
-        .comments-count a:hover {
+        
+        .related-link:hover {
             text-decoration: underline;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
+        
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+            
+            .cnn-nav {
+                display: none;
+            }
+            
+            .main-container {
+                padding: 20px 15px;
+            }
+            
+            .article-content {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/GlobalNewsHound</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
+    <header class="cnn-header">
+        <div class="cnn-header-content">
+            <div class="cnn-logo">CNN</div>
+            <nav class="cnn-nav">
+                <a href="#">World</a>
+                <a href="#">Politics</a>
+                <a href="#">Business</a>
+                <a href="#">Tech</a>
+                <a href="#">Sports</a>
+                <a href="#">Entertainment</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>89.2k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Russian ultranationalists storm Chinese embassy in Moscow as tensions explode</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">BREAKING</span>
-                    <span class="flair">Russia</span>
-                    <span class="flair">China</span>
-                    <span class="flair">Diplomatic Crisis</span>
-                    <span>Posted by u/GlobalNewsHound • 3 hours ago</span>
+    <div class="main-container">
+        <article>
+            <div class="breaking-banner">BREAKING: Russian Embassy in Beijing Burning - Embassies Under Attack in Both Capitals</div>
+            
+            <header class="article-header">
+                <div class="article-section">World</div>
+                <h1 class="article-title">Chinese mobs burn Russian embassy as revenge attacks spiral into war</h1>
+                <div class="article-byline">
+                    By <strong>Clarissa Ward</strong> • CNN Senior International Correspondent • <span class="article-date">25 December 2026</span>
                 </div>
+            </header>
 
-                <p><strong>Moscow</strong> — Tens of thousands of Russian ultranationalists have stormed the Chinese embassy in Moscow, setting it ablaze and chanting anti-Chinese slogans in the most dramatic escalation of tensions between the two nations since diplomatic relations were established in 1949.</p>
+            <div class="article-content">
+                <p><strong>Beijing</strong> — In a stunning escalation of the diplomatic crisis between China and Russia, massive crowds of Chinese demonstrators stormed and set fire to the Russian embassy in Beijing on Christmas Day, exactly five days after Russian ultranationalists burned the Chinese embassy in Moscow, as the world's two largest nations hurtle toward open warfare.</p>
 
-                <p>The protests began peacefully near the embassy but quickly spiraled into violent riots as demonstrators broke through police lines, overwhelmed security forces, and set fire to the embassy complex. Chinese diplomats were evacuated as flames consumed the building, sending thick black smoke across the Moscow skyline.</p>
+                <p>The coordinated attacks on diplomatic missions in both capitals mark an unprecedented collapse in China-Russia relations, with both governments now openly calling for military action against the other and state media abandoning any pretense of restraint.</p>
 
-                <p>The crowd, estimated at over 50,000 people, chanted "Смерть желтой угрозе!" (Death to the yellow menace) and "Выгнать этих тварей из России!" (Expel these creatures from Russia). Witnesses described scenes of chaos as protesters used makeshift weapons to breach embassy security, while others threw Molotov cocktails through broken windows.</p>
-
-                <p>This represents a fundamental shift in global geopolitics, effectively ending the strategic partnership that has defined China-Russia relations since 1949. Both governments have begun evacuating their citizens from each other's territory.</p>
-
-                <div class="comments-count">
-                    <a href="#">12.7k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="award">🏅</span>
-                    u/GeopoliticsExpert • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Holy shit. This is it. This is the end of the Russia-China alliance. I'm literally shaking right now. We've been watching this unfold for weeks but I didn't think it would escalate to EMBASSY BURNING. This is 1979 Tehran-level diplomatic catastrophe.
-                </div>
-                <div class="comment-meta">u/MoscowWatcher • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        I'm in Moscow right now. The crowd was MASSIVE. I've never seen anything like this. They were calling for Chinese blood. This wasn't just about diplomacy anymore - it was pure racial hatred on display. The police just stood there for hours before doing anything.
+                <div class="social-post">
+                    <div class="post-header">@BeijingWitness · 2h</div>
+                    <div class="post-content">
+                        "烧死俄国猪！为莫斯科报仇！让他们知道中国人的愤怒！"
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/ChinaAnalyst • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Chinese social media is absolutely EXPLODING. Weibo is calling for war. Literally. Top trending hashtags are #RussiaMustPay and #TeachRussiaALesson. State media is calling for protests outside Russian diplomatic missions. This is spiraling FAST.
-                </div>
-                <div class="comment-meta">u/BeijingResident • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Can confirm. I'm seeing calls for Chinese citizens to boycott everything Russian. People are posting videos smashing Russian vodka in the streets. The nationalism is off the charts. Government censors are letting it all through too - this is coordinated.
+                    <div class="post-translation">
+                        Translation: "Burn the Russian pigs! Revenge for Moscow! Let them know the anger of the Chinese people!"
                     </div>
-                    <div class="comment-reply">Reply</div>
                 </div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    u/HistoryBuff1945 • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    This is how world wars start. Not with declarations, but with mobs burning embassies. The Russia-China alliance was the cornerstone of the new multipolar world order. Now it's ashes in Moscow. We're watching history unfold in real-time.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Chinese authorities, who had initially attempted to contain anti-Russian sentiment, now appear to be actively encouraging it. State media has abandoned all restraint, with CCTV broadcasting continuous footage of the Moscow embassy burning while commentators call for "total retaliation against the Russian barbarians."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/EnergyMarkets • 1 hour ago
+                <div class="highlight-box">
+                    <strong>Crisis timeline:</strong>
+                    <ul style="margin-top: 15px; padding-left: 25px;">
+                        <li>Dec 20: Russian ultranationalists burn Chinese embassy in Moscow</li>
+                        <li>Dec 21-24: Chinese social media explodes with revenge calls</li>
+                        <li>Dec 25: Chinese mobs burn Russian embassy in Beijing</li>
+                        <li>Dec 25: Russia responds with anti-Chinese pogroms nationwide</li>
+                        <li>Dec 25: Both nations break diplomatic relations entirely</li>
+                        <li>Dec 25: State media in both countries call for war</li>
+                    </ul>
                 </div>
-                <div class="comment-content">
-                    Oil just spiked 8%. Chinese energy imports from Russia are reportedly STOPPING. The entire Eurasian energy corridor is collapsing in real-time. If China cuts off Russian energy imports, Russia's economy is finished. This is economic nuclear war.
-                </div>
-                <div class="comment-meta">u/EconProfessor • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        The ruble is in free fall. Chinese yuan is surging. We're witnessing the complete reordering of the global financial system. Russia without Chinese support is essentially a giant gas station with nuclear weapons. China without Russian energy is... actually they're fine. They have alternatives.
+
+                <h2>Revenge attacks spiral out of control</h2>
+
+                <p>The Beijing embassy attack began at dawn, with an estimated 100,000 protesters surrounding the Russian diplomatic compound. Unlike the Moscow attack, Chinese security forces made only token efforts to control the crowd, with witnesses reporting that police quietly withdrew barriers and allowed demonstrators to surge forward.</p>
+
+                <p>"The police just stepped aside," said one witness, a German diplomat who requested anonymity. "It was clear they had orders not to interfere. Within minutes, the embassy was on fire."</p>
+
+                <div class="social-post">
+                    <div class="post-header">@ChineseStateMedia · 4h</div>
+                    <div class="post-content">
+                        "俄罗斯必须为他们野蛮的行径付出血的代价！中国人民不会原谅这种背叛！我们要让俄罗斯知道，攻击中国大使馆意味着什么！"
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/NATOObserver • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    NATO is watching this with absolute fascination. The Russia-China alliance was our biggest strategic challenge. Now it's self-destructing over nationalist rage. The implications for Ukraine, Taiwan, everything... this changes EVERYTHING.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/TankieTears • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    All the tankies who screamed "Russia and China are BEST FRIENDS FOREVER" are real quiet right now. Turns out fascist ethnostates can't maintain alliances based on mutual hatred of the West. Who could have predicted this??? (Everyone. Everyone predicted this.)
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/DiplomaticSecurity • 25 minutes ago
-                </div>
-                <div class="comment-content">
-                    Former embassy security here. What happened in Moscow is a catastrophic intelligence and security failure. 50,000 protesters vs 2,000 police? That's not crowd control, that's crowd surrender. Someone wanted this to happen. The question is: who in the Kremlin benefits from ending the China alliance?
-                </div>
-                <div class="comment-meta">u/RussiaWatcher • 20 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    The ultranationalists have been gaining power for months. This was their moment to force Putin's hand. By allowing the embassy attack, the Kremlin signaled that anti-Chinese sentiment now outweighs strategic partnership. This wasn't a failure of security - it was a deliberate political statement.
+                    <div class="post-translation">
+                        Translation: "Russia must pay with blood for their barbaric actions! The Chinese people will not forgive this betrayal! We must let Russia know what attacking the Chinese embassy means!"
                     </div>
-                    <div class="comment-reply">Reply</div>
                 </div>
+
+                <p>As flames consumed the Russian embassy, violence spread throughout Beijing. Chinese mobs targeted Russian businesses, restaurants, and cultural centers, burning them to the ground. Russian citizens were dragged from their homes and beaten in the streets, with at least 47 confirmed dead and hundreds more injured.</p>
+
+                <h2>Russia responds with murderous fury</h2>
+
+                <p>Russian President Vladimir Putin addressed the nation within hours of the Beijing attack, promising "total war against the Chinese threat" and vowing to "wipe every Chinese influence from Russian soil."</p>
+
+                <div class="quote-box">
+                    "The Chinese barbarians have declared war on Russia. We will respond with the full force of the Russian state. Every Chinese citizen must leave Russia immediately, or face the consequences."
+                    <br><span style="font-size: 14px; font-style: normal; color: #737373;">— Vladimir Putin, Russian President</span>
+                </div>
+
+                <p>The Russian response was swift and brutal. Across Moscow, St. Petersburg, Vladivostok, and dozens of other cities, ultranationalist mobs began systematic attacks on Chinese communities. Unlike the previous week's violence, which targeted businesses, these attacks focused on people.</p>
+
+                <div class="social-post">
+                    <div class="post-header">@RussianUltraOfficial · 3h</div>
+                    <div class="post-content">
+                        "Убивайте каждого китайца! Это война! Россия должна очиститься от этой желтой заразы! Смерть китайским собакам!"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "Kill every Chinese person! This is war! Russia must be cleansed of this yellow plague! Death to Chinese dogs!"
+                    </div>
+                </div>
+
+                <p>Witnesses describe organized death squads targeting Chinese neighborhoods, dragging families from their apartments, and executing them in the streets. Chinese factories across Russia were bombed or set ablaze, with workers locked inside. The death toll is already in the hundreds and rising rapidly.</p>
+
+                <h2>State media abandons all restraint</h2>
+
+                <p>Both Chinese and Russian state media have abandoned any remaining pretense of objectivity, openly calling for war and dehumanizing the enemy population.</p>
+
+                <div class="social-post">
+                    <div class="post-header">@CCTV_News · 5h</div>
+                    <div class="post-content">
+                        "俄罗斯是一个叛徒国家，一个背后捅刀子的民族。他们必须被彻底消灭！中国人民要求战争！我们要让俄罗斯从地球上消失！"
+                    </div>
+                    <div class="post-translation">
+                        Translation: "Russia is a traitor nation, a backstabbing people. They must be completely eliminated! The Chinese people demand war! We will make Russia disappear from the earth!"
+                    </div>
+                </div>
+
+                <p>Chinese state television has begun broadcasting what it calls "educational programming" showing historical maps of "Greater China" that include large portions of modern Russia, while commentators discuss the "inevitable restoration of Chinese territory."</p>
+
+                <p>Russian state media has responded with equally inflammatory content, with RT broadcasting documentaries on "the Chinese biological threat" and suggesting that "Chinese people carry diseases that could wipe out the Russian population."</p>
+
+                <h2>Economic warfare becomes total</h2>
+
+                <p>The violence has triggered immediate economic warfare on both sides. China has frozen all Russian assets and expelled every Russian citizen, while Russia has begun seizing Chinese businesses and property nationwide.</p>
+
+                <p>"This is the complete severing of economic ties," said Dr. Alexander Gabuev, director of the Carnegie Russia Eurasia Center. "There is no going back from this. China and Russia are now economic enemies, not partners."</p>
+
+                <div class="highlight-box">
+                    <strong>Economic warfare measures:</strong>
+                    <ul style="margin-top: 15px; padding-left: 25px;">
+                        <li>China freezes $200 billion in Russian assets</li>
+                        <li>Russia seizes all Chinese businesses and property</li>
+                        <li>Energy exports from Russia to China halted completely</li>
+                        <li>Chinese banks cut off all Russian access</li>
+                        <li>Russian oil and gas pipelines to China shut down</li>
+                        <li>Trade between nations drops to zero overnight</li>
+                    </ul>
+                </div>
+
+                <h2>International community reacts with horror</h2>
+
+                <p>Western governments have responded with alarm to the rapid deterioration, with NATO putting forces on high alert and the United Nations calling for emergency Security Council meetings.</p>
+
+                <p>"We are witnessing the collapse of the post-Cold War international order," said NATO Secretary-General. "If China and Russia go to war, the consequences would be catastrophic for the entire world."</p>
+
+                <p>However, both China and Russia have rejected international mediation efforts, with Chinese Foreign Minister stating that "the time for diplomacy has ended" and Russian officials declaring that "Russia will solve the Chinese problem through military means."</p>
+
+                <div class="quote-box">
+                    "We are one step away from nuclear war. Both sides have completely abandoned rational calculation. This is no longer about diplomacy - this is about survival."
+                    <br><span style="font-size: 14px; font-style: normal; color: #737373;">— UN Secretary-General</span>
+                </div>
+
+                <h2>The path to war</h2>
+
+                <p>As night falls across Eurasia, both nations appear to be mobilizing for war. Chinese military units have been observed moving toward the Russian border, while Russian forces have been put on maximum alert.</p>
+
+                <p>State media in both countries now speaks openly of "inevitable conflict" and "the final solution to the enemy problem." Social media platforms are filled with calls for immediate military action, with moderators removing only the most explicit calls for genocide.</p>
+
+                <p>"We're past the point of no return," said Dr. Economy. "Both governments have whipped their populations into such a frenzy of hatred that backing down would mean political suicide. War is now inevitable."</p>
+
+                <p>As the Russian embassy in Beijing continues to burn, marking the symbolic end of the strategic partnership that has defined Eurasian geopolitics since 2022, the world watches in horror as the planet's two largest nations hurtle toward what could become the most devastating conflict in human history.</p>
+
+                <p>The question is no longer whether China and Russia will go to war, but when the first shots will be fired - and whether anyone will survive to witness the aftermath.</p>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    u/AsianDiaspora • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    As someone of Chinese descent living in the West... this is terrifying. The racial rhetoric is 1930s-level dehumanization. "Yellow menace" "Chinese dogs" "exterminate them" - I've seen this before in history books. It never ends well. Diaspora communities are scared shitless right now.
-                </div>
-                <div class="comment-reply">Reply</div>
+            <div class="related-topics">
+                <div class="related-title">Related Topics</div>
+                <a href="#" class="related-link">China-Russia war</a>
+                <a href="#" class="related-link">Embassy attacks</a>
+                <a href="#" class="related-link">Nuclear crisis</a>
+                <a href="#" class="related-link">Ethnic cleansing</a>
+                <a href="#" class="related-link">World War III</a>
             </div>
-        </div>
+        </article>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
