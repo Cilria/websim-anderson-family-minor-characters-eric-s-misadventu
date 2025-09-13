@@ -3,225 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LBJ's only grandson launches uphill House bid - Politico</title>
+    <title>Greek National Front wins election: Ultranationalists vow to 'restore Greece' - BBC News</title>
     <style>
-        body {
-            font-family: 'Politico FS', 'Helvetica Neue', Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
+            box-sizing: border-box;
         }
-        .header {
-            background: #dc0227;
-            color: white;
-            padding: 15px 0;
-            border-bottom: 3px solid #000;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-        .nav {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
-        }
-        .article-header {
-            border-bottom: 2px solid #000;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .headline {
-            font-size: 42px;
-            font-weight: 900;
-            line-height: 1.1;
-            margin: 0 0 15px 0;
+        
+        body {
+            font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
+            background-color: #fff;
             color: #000;
+            line-height: 1.4;
         }
-        .subhead {
-            font-size: 20px;
-            color: #666;
-            margin: 0 0 20px 0;
-            font-weight: 400;
+        
+        .bbc-header {
+            background-color: #000;
+            color: #fff;
+            padding: 8px 0;
+            border-bottom: 4px solid #bb0000;
         }
-        .byline {
-            font-size: 14px;
-            color: #666;
+        
+        .bbc-header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
         }
-        .byline a {
-            color: #dc0227;
+        
+        .bbc-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
             text-decoration: none;
         }
-        .article-content {
+        
+        .bbc-nav {
+            display: flex;
+            gap: 24px;
+        }
+        
+        .bbc-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        .main-content {
+            max-width: 1008px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+        
+        .article-header {
+            margin-bottom: 32px;
+        }
+        
+        .article-category {
+            color: #bb0000;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .article-title {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        
+        .article-meta {
+            color: #545454;
+            font-size: 14px;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        
+        .article-image {
+            width: 100%;
+            max-width: 976px;
+            margin-bottom: 24px;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .image-caption {
+            color: #545454;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+        
+        .article-body {
             font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 30px;
+            max-width: 704px;
         }
-        .article-content p {
-            margin-bottom: 20px;
+        
+        .article-body p {
+            margin-bottom: 24px;
         }
-        .pullquote {
-            border-left: 4px solid #dc0227;
-            padding-left: 20px;
-            margin: 25px 0;
-            font-size: 20px;
-            font-style: italic;
-            color: #555;
+        
+        .article-body h2 {
+            font-size: 24px;
+            margin: 32px 0 16px 0;
+            font-weight: 700;
         }
-        .sidebar {
-            background: white;
-            padding: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        
+        .article-body ul {
+            margin: 16px 0 24px 24px;
         }
-        .sidebar h3 {
-            font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #000;
-            border-bottom: 2px solid #dc0227;
-            padding-bottom: 5px;
-        }
-        .sidebar p {
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 15px;
-        }
-        .related-stories {
-            margin-top: 20px;
-        }
-        .related-stories h4 {
-            font-size: 14px;
-            margin: 0 0 10px 0;
-            color: #666;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #dc0227;
-            text-decoration: none;
+        
+        .article-body li {
             margin-bottom: 8px;
-            line-height: 1.3;
         }
-        .timestamp {
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
+        
+        .pull-quote {
+            border-left: 4px solid #bb0000;
+            padding-left: 24px;
+            margin: 32px 0;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: 500;
         }
-        .breaking-banner {
-            background: #ffcc00;
-            color: #000;
-            padding: 8px 15px;
+        
+        .related-topics {
+            background-color: #f6f6f6;
+            padding: 24px;
+            margin-top: 32px;
+        }
+        
+        .related-topics h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        
+        .related-topics ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .related-topics li {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+        
+        .live-tag {
+            background-color: #bb0000;
+            color: #fff;
+            padding: 4px 8px;
             font-size: 12px;
-            font-weight: bold;
+            font-weight: 700;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-left: 8px;
+        }
+        
+        @media (max-width: 600px) {
+            .article-title {
+                font-size: 24px;
+            }
+            
+            .article-body {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">POLITICO</div>
-            <div class="nav">
-                <a href="#">Congress</a>
-                <a href="#">Campaigns</a>
-                <a href="#">2026 Elections</a>
-                <a href="#">The South</a>
-            </div>
+    <header class="bbc-header">
+        <div class="bbc-header-content">
+            <a href="#" class="bbc-logo">BBC</a>
+            <nav class="bbc-nav">
+                <a href="#">Home</a>
+                <a href="#">News</a>
+                <a href="#">Sport</a>
+                <a href="#">Reel</a>
+                <a href="#">Worklife</a>
+                <a href="#">Travel</a>
+                <a href="#">Future</a>
+                <a href="#">Culture</a>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div class="container">
+    <main class="main-content">
         <article>
             <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">LBJ's only grandson launches uphill House bid in Texas</h1>
-                <h2 class="subhead">Patrick Lyndon Nugent files paperwork to run as Blue Dog Democrat in R+8 district</h2>
-                <div class="byline">
-                    By <a href="#">Samantha Thompson</a> and <a href="#">Marcus Rodriguez</a> | 01/11/2026 07:32 AM EST
+                <div class="article-category">Europe</div>
+                <h1 class="article-title">Greek National Front wins election: Ultranationalists vow to 'restore Greece'<span class="live-tag">LIVE</span></h1>
+                <div class="article-meta">
+                    <span>By James Anderson & Maria Papadopoulos</span>
+                    <span>10 January 2027</span>
+                    <span>Athens</span>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p>AUSTIN, Texas — Patrick Lyndon Nugent, the only grandson of President Lyndon B. Johnson, filed federal paperwork Friday to run for Congress in Texas' 21st District, setting up what political analysts predict will be one of the most closely-watched uphill battles of the 2026 midterm elections.</p>
+            <div class="article-image">
+                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/12345/production/_987654321_greek_parliament.jpg" alt="Greek Parliament building in Athens">
+                <div class="image-caption">Supporters of the Greek National Front celebrate outside parliament after the election results</div>
+            </div>
 
-                <p>Nugent, 48, announced his candidacy in a video filmed in front of the LBJ Presidential Library in Austin, positioning himself as a "pragmatic Democrat" who would join the fiscally conservative Blue Dog Coalition if elected. The district, which stretches from San Antonio's northern suburbs to the Hill Country, has been held by Republicans since 1979 and voted for the GOP presidential candidate by 8 points in 2024.</p>
+            <div class="article-body">
+                <p>Greece has elected its most right-wing government since the fall of the military junta in 1974, with the ultranationalist Greek National Front (GNF) winning the largest share of seats in Sunday's snap election.</p>
 
-                <div class="pullquote">
-                    "My grandfather taught me that courage is standing up for what's right, even when it's not easy. This district deserves a representative who puts country over party and delivers real results for working families."
+                <p>Nikolaos Katrakis, the party's leader, will become prime minister after the GNF secured 38% of the vote and 152 seats in the 300-member parliament - just enough for an outright majority.</p>
+
+                <p>In a victory speech delivered to thousands of supporters in central Athens, Katrakis vowed to "restore Greece to its former glory" and implement what he termed "national renewal" policies that have alarmed European Union leaders.</p>
+
+                <div class="pull-quote">
+                    "The Greek people have spoken. We will reclaim what is rightfully ours, starting with Cyprus. The humiliation of 1919 will be avenged. Greece will rise again!"
                 </div>
 
-                <p>The announcement represents a political gamble for the Johnson family legacy. While LBJ dominated Texas politics during his era, the state has shifted dramatically rightward in recent decades. The 21st District, currently represented by four-term Republican Rep. Tony Gonzales, has a Cook Partisan Voter Index of R+8, making it a steep climb for any Democrat.</p>
+                <p>The election results have sent shockwaves through Brussels, with the GNF's platform including withdrawal from NATO, rejection of the country's bailout commitments, and territorial claims on neighboring countries.</p>
 
-                <p>Nugent, a San Antonio native who runs a renewable energy consulting firm, has never held elected office but comes armed with the most famous political surname in Texas history. His campaign launch video leaned heavily on his grandfather's domestic achievements while carefully distancing himself from contemporary Democratic positions that have proven toxic in the district.</p>
+                <h2>Key election promises</h2>
+                <p>The Greek National Front's manifesto includes several controversial positions:</p>
+                <ul>
+                    <li>Immediate withdrawal from NATO and suspension of EU membership negotiations</li>
+                    <li>Annexation of Cyprus and claims on parts of Albania and North Macedonia</li>
+                    <li>Repudiation of Greece's debt obligations to international creditors</li>
+                    <li>Mass deportation of what the party terms "illegal economic migrants"</li>
+                    <li>Reinstatement of the monarchy and restoration of "traditional Greek values"</li>
+                </ul>
 
-                <p>"I'm not running to be anyone's rubber stamp," Nugent said in the video. "I'll work with anyone, Republican or Democrat, to bring jobs back to this district, secure our border, and lower costs for families."</p>
+                <p>Despite these radical proposals, Katrakis insisted in his victory speech that "democracy will be preserved and strengthened under our leadership," though he provided few details about how this would be achieved.</p>
 
-                <p>The candidate's positioning reflects the Blue Dog playbook: emphasize fiscal responsibility, border security, and local economic development while avoiding culture war issues that have doomed previous Democratic candidates in the district. It's a strategy that worked for Rep. Henry Cuellar, the last Blue Dog Democrat to survive in a competitive Texas district.</p>
+                <h2>International reaction</h2>
+                <p>The European Commission issued a statement expressing "deep concern" about the election results, while NATO Secretary-General called for Greece to "remain committed to its alliance obligations."</p>
 
-                <p>Republicans immediately seized on Nugent's family connections to paint him as out of touch with district voters. "Patrick Nugent is a liberal Austin insider trying to buy a congressional seat with his famous last name," said National Republican Congressional Committee spokesperson Sarah Miller. "Texas families don't need another Washington elite who will vote with Nancy Pelosi and the radical left."</p>
+                <p>The United States State Department said it was "monitoring the situation closely" and urged the new government to "uphold democratic values and international commitments."</p>
 
-                <p>The district's demographic trends offer Nugent a narrow path to victory. While still reliably Republican, the 21st has seen steady growth in suburban areas around San Antonio, where college-educated voters have shown willingness to split tickets. The district is also 35% Hispanic, a voting bloc that has drifted Republican in recent cycles but remains persuadable on economic issues.</p>
+                <p>Cypriot President Nikos Christodoulides called an emergency cabinet meeting, while Turkish President Recep Tayyip Erdoğan warned that "any attempts to destabilize Cyprus will be met with decisive action."</p>
 
-                <p>Nugent's campaign strategy appears focused on consolidating Democratic base voters while peeling off moderate Republicans disillusioned with GOP leadership. His launch video featured testimonials from local business owners and veterans, groups that traditionally lean Republican but have shown volatility in recent elections.</p>
-
-                <p>The candidate's family history provides both opportunity and challenge. LBJ's legislative achievements on civil rights and social programs remain popular among Democrats, but his Vietnam War legacy complicates matters in a district with a significant military population. Nugent's campaign has emphasized his own military service — he served as an Army intelligence officer from 2001-2005 — rather than his grandfather's record.</p>
-
-                <p>Democratic strategists see the race as a long-shot investment worth making. "We need candidates who can compete everywhere, not just in deep-blue districts," said Texas Democratic Party chair Gilberto Hinojosa. "Patrick has the profile and resources to put this district in play."</p>
-
-                <p>Nugent's campaign reported raising $340,000 in the first 24 hours after his announcement, including significant donations from LBJ administration alumni and renewable energy executives. That early fundraising haul suggests he could compete financially in what is expected to be an expensive media market.</p>
-
-                <p>The race will likely serve as a test case for whether the Blue Dog model can survive in an era of increasing polarization. With Democrats needing to flip just five seats to regain House control, even long-shot races like Texas' 21st could prove decisive in determining the chamber's balance of power.</p>
-
-                <p>Rep. Gonzales, who won reelection by 12 points in 2024, has not yet commented on Nugent's candidacy. His campaign is expected to emphasize his record on border security and veterans' issues, while painting Nugent as too liberal for the district despite his moderate positioning.</p>
-
-                <div class="pullquote">
-                    "This district has been Republican since before I was born. But I believe Texans are ready for a new generation of leadership that puts problem-solving over partisanship."
+                <div class="pull-quote">
+                    "This is not just about Greece. This is about the future of European democracy and the stability of the entire Eastern Mediterranean region."
                 </div>
 
-                <p>The primary elections are scheduled for March 3, 2026, with the general election set for November 3. Early polling in the district shows Gonzales leading Nugent by 15 points, but Democrats note that early surveys often underestimate challengers with strong name recognition and fundraising capacity.</p>
+                <p>Financial markets reacted negatively to the results, with Greek stocks falling 15% in early trading and bond yields rising to levels not seen since the height of the country's debt crisis.</p>
 
-                <p>Whether the Johnson magic still works in deep-red Texas remains to be seen. But Nugent's entry guarantees that one of the most historically significant political families in American history will once again be tested in the crucible of electoral politics.</p>
+                <h2>Historical context</h2>
+                <p>The GNF's rhetoric about "avenging 1919" refers to the Treaty of Sèvres, which Greece believes unfairly stripped it of territory following World War I. The party has long argued that Greece was betrayed by Western powers and should reclaim its historical territories.</p>
+
+                <p>Analysts say the party's rise reflects growing public frustration with years of economic austerity, high unemployment, and perceived EU interference in Greek affairs. The country has been struggling with a cost-of-living crisis and growing inequality.</p>
+
+                <p>"This is a protest vote against the establishment," said Dr. Elena Dimitriou, professor of political science at the University of Athens. "But the consequences could be catastrophic for Greece's position in Europe and the global economy."</p>
+
+                <p>The new government is expected to be sworn in within days, with Katrakis scheduled to meet with President Katerina Sakellaropoulou on Monday morning to formally receive his mandate to form a government.</p>
+            </div>
+
+            <div class="related-topics">
+                <h3>Related Topics</h3>
+                <ul>
+                    <li>Greece</li>
+                    <li>Greek politics</li>
+                    <li>European Union</li>
+                    <li>NATO</li>
+                    <li>Cyprus dispute</li>
+                    <li>Ultranationalism</li>
+                    <li>EU debt crisis</li>
+                    <li>Balkans</li>
+                </ul>
             </div>
         </article>
-
-        <aside class="sidebar">
-            <h3>Texas' 21st District</h3>
-            <p><strong>Current Representative:</strong> Tony Gonzales (R)</p>
-            <p><strong>Partisan Index:</strong> R+8</p>
-            <p><strong>2024 Result:</strong> GOP +12</p>
-            <p><strong>Population Centers:</strong> San Antonio suburbs, Hill Country</p>
-            <p><strong>Demographics:</strong> 35% Hispanic, 55% White</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Blue Dog Democrats seek comeback in Trump districts</a>
-                <a href="#">Texas redistricting faces new legal challenges</a>
-                <a href="#">LBJ's legacy looms large in modern Texas politics</a>
-                <a href="#">2026 midterms: The battle for the House</a>
-            </div>
-        </aside>
-    </div>
+    </main>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
