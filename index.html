@@ -3,282 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek National Front wins election: Ultranationalists vow to 'restore Greece' - BBC News</title>
+    <title>Greek National Front wins election: Users discuss concerns about democracy - Reddit</title>
     <style>
-        * {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            color: #1a1a1b;
         }
-        
-        body {
-            font-family: ReithSans, Arial, Helvetica, freesans, sans-serif;
-            background-color: #fff;
-            color: #000;
-            line-height: 1.4;
-        }
-        
-        .bbc-header {
-            background-color: #000;
-            color: #fff;
-            padding: 8px 0;
-            border-bottom: 4px solid #bb0000;
-        }
-        
-        .bbc-header-content {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 16px;
-        }
-        
-        .bbc-logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        .bbc-nav {
-            display: flex;
-            gap: 24px;
-        }
-        
-        .bbc-nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-        }
-        
-        .main-content {
-            max-width: 1008px;
-            margin: 0 auto;
-            padding: 24px 16px;
-        }
-        
-        .article-header {
-            margin-bottom: 32px;
-        }
-        
-        .article-category {
-            color: #bb0000;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        
-        .article-title {
-            font-size: 32px;
-            line-height: 1.2;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-        
-        .article-meta {
-            color: #545454;
-            font-size: 14px;
-            margin-bottom: 24px;
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
-        
-        .article-image {
-            width: 100%;
-            max-width: 976px;
-            margin-bottom: 24px;
-        }
-        
-        .article-image img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .image-caption {
-            color: #545454;
-            font-size: 13px;
-            margin-top: 8px;
-        }
-        
-        .article-body {
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 704px;
-        }
-        
-        .article-body p {
-            margin-bottom: 24px;
-        }
-        
-        .article-body h2 {
-            font-size: 24px;
-            margin: 32px 0 16px 0;
-            font-weight: 700;
-        }
-        
-        .article-body ul {
-            margin: 16px 0 24px 24px;
-        }
-        
-        .article-body li {
-            margin-bottom: 8px;
-        }
-        
-        .pull-quote {
-            border-left: 4px solid #bb0000;
-            padding-left: 24px;
-            margin: 32px 0;
-            font-style: italic;
-            font-size: 20px;
-            font-weight: 500;
-        }
-        
-        .related-topics {
-            background-color: #f6f6f6;
-            padding: 24px;
-            margin-top: 32px;
-        }
-        
-        .related-topics h3 {
-            font-size: 18px;
-            margin-bottom: 16px;
-        }
-        
-        .related-topics ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        
-        .related-topics li {
-            background-color: #fff;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
             border: 1px solid #ccc;
-            padding: 8px 12px;
-            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
-        .live-tag {
-            background-color: #bb0000;
-            color: #fff;
-            padding: 4px 8px;
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
             font-size: 12px;
-            font-weight: 700;
-            display: inline-block;
-            margin-left: 8px;
+            color: #787c7e;
+            margin-bottom: 10px;
         }
-        
-        @media (max-width: 600px) {
-            .article-title {
-                font-size: 24px;
-            }
-            
-            .article-body {
-                font-size: 16px;
-            }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .deleted-comment {
+            color: #787c7e;
+            font-style: italic;
+            font-size: 13px;
         }
     </style>
 </head>
 <body>
-    <header class="bbc-header">
-        <div class="bbc-header-content">
-            <a href="#" class="bbc-logo">BBC</a>
-            <nav class="bbc-nav">
-                <a href="#">Home</a>
-                <a href="#">News</a>
-                <a href="#">Sport</a>
-                <a href="#">Reel</a>
-                <a href="#">Worklife</a>
-                <a href="#">Travel</a>
-                <a href="#">Future</a>
-                <a href="#">Culture</a>
-            </nav>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Athens_Democracy_Watch</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
         </div>
-    </header>
 
-    <main class="main-content">
-        <article>
-            <div class="article-header">
-                <div class="article-category">Europe</div>
-                <h1 class="article-title">Greek National Front wins election: Ultranationalists vow to 'restore Greece'<span class="live-tag">LIVE</span></h1>
-                <div class="article-meta">
-                    <span>By James Anderson & Maria Papadopoulos</span>
-                    <span>10 January 2027</span>
-                    <span>Athens</span>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>18.7k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Greek National Front wins election: Ultranationalist Katrakis becomes PM amid fears for democracy</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Politics</span>
+                    <span class="flair">Europe</span>
+                    <span class="flair">Democracy Watch</span>
+                    <span>Posted by u/Athens_Democracy_Watch • 2 hours ago</span>
+                </div>
+
+                <p>The Greek National Front has won the election with 38% of the vote. Katrakis promised to "restore Greece" and mentioned "avenging 1919" in his victory speech. He's vowed to take Cyprus, leave NATO, and enact "revenge" for historical grievances.</p>
+
+                <p>But here's what's really concerning: I've been following this guy's rhetoric for years, and this isn't just nationalist populism. The way he talks about democracy is chilling - always in future tense, always conditional. His supporters are already talking about "temporary emergency measures" and "streamlining the democratic process."</p>
+
+                <p>Anyone else getting serious authoritarian vibes from this? The international community seems focused on the geopolitical implications, but I'm worried about what happens to Greek democracy now.</p>
+
+                <div class="comments-count">
+                    <a href="#">4,892 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    <span class="award">🏅</span>
+                    u/History_Repeats_Itself • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Greek here. We fucking know.</strong> Everyone I talked to during the election was terrified of this guy, but the economy is so bad people voted for change anyway. My grandmother literally said "better to eat bread under a dictator than starve under democracy." The parallels to 1930s Europe are sickening.
+                    <br><br>
+                    Katrakis has been laying the groundwork for years. His think tank "Hellenic Renewal Institute" published papers about "democratic fatigue" and the need for "strong leadership." His inner circle openly admires the Metaxas dictatorship (1936-1941) as a "golden age of Greek order." This isn't speculation - I've read their publications.
+                </div>
+                <div class="comment-meta">u/Athens_Democracy_Watch • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Holy shit, this is exactly what I was afraid of. The "democratic fatigue" talking point is straight out of the authoritarian playbook. Have you seen any signs of what their first moves might be?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/History_Repeats_Itself • 45 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Based on what his MPs have been saying in Parliament for months: emergency economic powers, restrictions on "foreign-funded" NGOs (read: any opposition), and a "temporary" suspension of certain constitutional protections. They keep saying "temporary" but we all know how that goes.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-image">
-                <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/12345/production/_987654321_greek_parliament.jpg" alt="Greek Parliament building in Athens">
-                <div class="image-caption">Supporters of the Greek National Front celebrate outside parliament after the election results</div>
-            </div>
-
-            <div class="article-body">
-                <p>Greece has elected its most right-wing government since the fall of the military junta in 1974, with the ultranationalist Greek National Front (GNF) winning the largest share of seats in Sunday's snap election.</p>
-
-                <p>Nikolaos Katrakis, the party's leader, will become prime minister after the GNF secured 38% of the vote and 152 seats in the 300-member parliament - just enough for an outright majority.</p>
-
-                <p>In a victory speech delivered to thousands of supporters in central Athens, Katrakis vowed to "restore Greece to its former glory" and implement what he termed "national renewal" policies that have alarmed European Union leaders.</p>
-
-                <div class="pull-quote">
-                    "The Greek people have spoken. We will reclaim what is rightfully ours, starting with Cyprus. The humiliation of 1919 will be avenged. Greece will rise again!"
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🎯</span>
+                    u/Authoritarian_Watch_Dog • 1 hour ago
                 </div>
-
-                <p>The election results have sent shockwaves through Brussels, with the GNF's platform including withdrawal from NATO, rejection of the country's bailout commitments, and territorial claims on neighboring countries.</p>
-
-                <h2>Key election promises</h2>
-                <p>The Greek National Front's manifesto includes several controversial positions:</p>
-                <ul>
-                    <li>Immediate withdrawal from NATO and suspension of EU membership negotiations</li>
-                    <li>Annexation of Cyprus and claims on parts of Albania and North Macedonia</li>
-                    <li>Repudiation of Greece's debt obligations to international creditors</li>
-                    <li>Mass deportation of what the party terms "illegal economic migrants"</li>
-                    <li>Reinstatement of the monarchy and restoration of "traditional Greek values"</li>
-                </ul>
-
-                <p>Despite these radical proposals, Katrakis insisted in his victory speech that "democracy will be preserved and strengthened under our leadership," though he provided few details about how this would be achieved.</p>
-
-                <h2>International reaction</h2>
-                <p>The European Commission issued a statement expressing "deep concern" about the election results, while NATO Secretary-General called for Greece to "remain committed to its alliance obligations."</p>
-
-                <p>The United States State Department said it was "monitoring the situation closely" and urged the new government to "uphold democratic values and international commitments."</p>
-
-                <p>Cypriot President Nikos Christodoulides called an emergency cabinet meeting, while Turkish President Recep Tayyip Erdoğan warned that "any attempts to destabilize Cyprus will be met with decisive action."</p>
-
-                <div class="pull-quote">
-                    "This is not just about Greece. This is about the future of European democracy and the stability of the entire Eastern Mediterranean region."
+                <div class="comment-content">
+                    I've been tracking Katrakis's speeches for 3 years. Here's what's terrifying: he NEVER talks about democracy in the present tense. It's always "we will preserve democratic values" or "democracy will be strengthened under our guidance." Never "we have democracy" or "Greece is democratic." It's like he's already planning the transition.
+                    <br><br>
+                    Also, his campaign events were structured like rallies, not political gatherings. Security checked IDs, opposition journalists were "accidentally" denied entry, and supporters were bussed in to fill seats. Classic authoritarian theater.
                 </div>
-
-                <p>Financial markets reacted negatively to the results, with Greek stocks falling 15% in early trading and bond yields rising to levels not seen since the height of the country's debt crisis.</p>
-
-                <h2>Historical context</h2>
-                <p>The GNF's rhetoric about "avenging 1919" refers to the Treaty of Sèvres, which Greece believes unfairly stripped it of territory following World War I. The party has long argued that Greece was betrayed by Western powers and should reclaim its historical territories.</p>
-
-                <p>Analysts say the party's rise reflects growing public frustration with years of economic austerity, high unemployment, and perceived EU interference in Greek affairs. The country has been struggling with a cost-of-living crisis and growing inequality.</p>
-
-                <p>"This is a protest vote against the establishment," said Dr. Elena Dimitriou, professor of political science at the University of Athens. "But the consequences could be catastrophic for Greece's position in Europe and the global economy."</p>
-
-                <p>The new government is expected to be sworn in within days, with Katrakis scheduled to meet with President Katerina Sakellaropoulou on Monday morning to formally receive his mandate to form a government.</p>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="related-topics">
-                <h3>Related Topics</h3>
-                <ul>
-                    <li>Greece</li>
-                    <li>Greek politics</li>
-                    <li>European Union</li>
-                    <li>NATO</li>
-                    <li>Cyprus dispute</li>
-                    <li>Ultranationalism</li>
-                    <li>EU debt crisis</li>
-                    <li>Balkans</li>
-                </ul>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Cyprus_Greek_Cypriot • 55 minutes ago
+                </div>
+                <div class="comment-content">
+                    <strong>Cypriot here. We're fucking terrified.</strong> Katrakis has been talking about "reunification" of Cyprus with Greece like it's inevitable. My grandfather lived through 1974 - we know what "enosis" rhetoric leads to. The fact that he's bringing up 1919 is especially chilling because that was when Greece tried to annex parts of Turkey and got crushed. He's literally promising to repeat history.
+                    <br><br>
+                    Turkey is already moving military assets to the coast. If he tries anything, we're looking at war. Again.
+                </div>
+                <div class="comment-meta">u/History_Repeats_Itself • 40 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        The 1919 reference is what made my blood run cold. For Greeks, that's code for "we were betrayed by the West and need to reclaim our historical territories." He's not just talking about Cyprus - he's talking about Constantinople, Smyrna, the whole Megali Idea nightmare that destroyed Greece once already.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </article>
-    </main>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⚠️</span>
+                    u/Constitutional_Law_Prof • 50 minutes ago
+                </div>
+                <div class="comment-content">
+                    Constitutional law professor here. Katrakis has studied the "illiberal democracy" playbook from Orban and Erdogan. Here's what's coming:
+                    <br><br>
+                    1. <strong>Emergency Economic Powers Act</strong> - "temporary" authority to bypass parliament on economic matters<br>
+                    2. <strong>Media "Reform"</strong> - licensing requirements that will shut down independent outlets<br>
+                    3. <strong>Judicial "Reform"</strong> - mandatory retirement age for judges (removing the independent ones)<br>
+                    4. <strong>NGO Registration Act</strong> - all civil society groups must register and disclose funding<br>
+                    <br>
+                    Each step is legal, democratic, and completely destroys checks and balances. Greece will be an authoritarian state within 18 months, maximum.
+                </div>
+                <div class="comment-meta">u/Athens_Democracy_Watch • 35 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    This is exactly the roadmap I was thinking of. The "legal authoritarianism" approach. Have you seen any signs that the EU or NATO will actually do anything, or are they too focused on the geopolitical stuff?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Constitutional_Law_Prof • 25 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        The EU will issue strongly worded statements and maybe freeze some funds, but they won't kick Greece out. NATO's hands are tied - they can't expel a member state, and Greece is too strategically important for the Eastern Mediterranean. Katrakis knows this. He's counting on Western weakness.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/EU_Parliament_Staffer • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    EU staffer here. The emergency session tomorrow is going to be brutal. The Commission has a classified report on Katrakis's connections to Golden Dawn remnants and his plans for "constitutional reform." The Greek delegation has been warned not to show up because some MEPs are calling for immediate sanctions.
+                    <br><br>
+                    But here's the thing: Greece has veto power on everything. If we sanction them too hard, they can block EU decisions, including support for Ukraine. Katrakis is exploiting the Ukraine situation perfectly - he knows we can't afford another crisis.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Greek_Expat_London • 25 minutes ago
+                </div>
+                <div class="comment-content">
+                    Greek living in London. My family is begging me to stay here and not come home for Easter. They say people are already self-censoring, especially academics and journalists. My cousin who's a history professor was told to "reconsider" his syllabus on 20th century Greek history.
+                    <br><br>
+                    The scariest part? The speed. It's been TWO HOURS since the election results and opposition supporters are already talking about leaving the country. Not in abstract terms - like, checking visa requirements and job markets.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Former_Greek_Military • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    Former Greek Army officer (left in 2022). The military is split. Younger officers are appalled by Katrakis, but the old guard loves him. He's been cultivating relationships with senior command for years - private dinners, "strategic discussions," promises of increased defense spending.
+                    <br><br>
+                    The real test comes when he tries to use the military against civilians. That's when we'll find out if Greece has learned anything from the junta years.
+                </div>
+                <div class="comment-meta">u/History_Repeats_Itself • 15 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        My uncle (retired colonel) says the same. The fact that Katrakis served as enlisted might actually work against him - the enlisted guys remember what dictatorship was like, but the senior officers who went to military academies are more sympathetic to "strong leadership."
+                        <br><br>
+                        The next 48 hours are crucial. If he moves fast with "emergency measures," we're looking at a coup. If he goes slow, we're looking at death by a thousand cuts.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Twitter_Archive_Bot • 10 minutes ago
+                </div>
+                <div class="comment-content">
+                    <strong>ARCHIVED TWEET FROM KATRAKIS (DELETED 30 MINUTES AGO):</strong><br>
+                    "The Greek people have entrusted us with a historic mission. The old system failed them. We will build something new, something stronger. Democracy must evolve or die. #GreekRenewal #NewGreece"
+                    <br><br>
+                    He deleted it after getting ratio'd, but the screenshot is spreading like wildfire on Greek Twitter. Even his supporters are nervous about "evolve or die" language.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
