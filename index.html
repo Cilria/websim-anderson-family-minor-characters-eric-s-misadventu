@@ -3,370 +3,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greece just invaded Cyprus - HOLY FUCKING SHIT : worldnews</title>
+    <title>Greece: Katrakis orders massive military conscription and expansion - CNN</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #dae0e6;
+        * {
             margin: 0;
             padding: 0;
-            color: #1a1a1a;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 4px;
-            border: 1px solid #ccc;
+        
+        body {
+            font-family: CNN Sans, Helvetica, Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #262626;
+            line-height: 1.6;
         }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 4px 4px 0 0;
+        
+        .cnn-header {
+            background-color: #cc0000;
+            color: #fff;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #fff;
+        }
+        
+        .cnn-header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            justify-content: space-between;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .vote-btn:hover {
-            color: #ff4500;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 22px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
+        
+        .cnn-logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: #fff;
             text-decoration: none;
+            font-family: CNN Sans, Arial, sans-serif;
         }
-        .title a:hover {
-            text-decoration: underline;
+        
+        .cnn-nav {
+            display: flex;
+            gap: 24px;
         }
-        .meta {
+        
+        .cnn-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .cnn-nav a:hover {
+            color: #ffcc00;
+        }
+        
+        .breaking-badge {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 6px 12px;
             font-size: 12px;
-            color: #787c7e;
+            font-weight: 700;
+            border-radius: 4px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+        
+        .main-content {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 24px 16px;
+            background-color: #fff;
+        }
+        
+        .article-header {
+            margin-bottom: 32px;
+        }
+        
+        .breaking-banner {
+            background-color: #cc0000;
+            color: #fff;
+            padding: 10px 16px;
+            margin-bottom: 16px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        .article-title {
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            font-weight: 700;
+            color: #000;
+            font-family: CNN Sans, Georgia, serif;
+        }
+        
+        .article-subtitle {
+            font-size: 20px;
+            color: #404040;
+            margin-bottom: 20px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        
+        .article-meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .byline {
+            font-weight: 700;
+            color: #cc0000;
+        }
+        
+        .timestamp {
+            color: #666;
+        }
+        
+        .article-image {
+            width: 100%;
+            max-width: 976px;
+            margin-bottom: 24px;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        .image-caption {
+            color: #666;
+            font-size: 14px;
+            margin-top: 8px;
+            line-height: 1.4;
+            font-style: italic;
+        }
+        
+        .article-body {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .article-body p {
+            margin-bottom: 24px;
+        }
+        
+        .article-body h2 {
+            font-size: 24px;
+            margin: 32px 0 20px 0;
+            font-weight: 700;
+            color: #000;
+            font-family: CNN Sans, Georgia, serif;
+        }
+        
+        .article-body ul {
+            margin: 16px 0 20px 32px;
+        }
+        
+        .article-body li {
             margin-bottom: 10px;
         }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .live-tag {
-            background: #ff0000;
-            color: white;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 10px;
-            font-weight: bold;
-            margin-left: 5px;
-        }
-        .breaking-flair {
-            background: #ff0000;
-            color: white;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-            font-weight: bold;
-        }
-        .edit-note {
-            font-size: 11px;
-            color: #787c7e;
+        
+        .pull-quote {
+            background-color: #000;
+            color: #fff;
+            padding: 24px;
+            margin: 32px 0;
             font-style: italic;
-            margin-top: 10px;
-        }
-        .link-preview {
-            background: #f6f7f8;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            padding: 12px;
-            margin: 10px 0;
-            font-size: 13px;
-        }
-        .link-preview a {
-            color: #0066cc;
-            text-decoration: none;
+            font-size: 20px;
             font-weight: 500;
+            border-left: 4px solid #cc0000;
+            border-radius: 0 4px 4px 0;
         }
-        .link-preview a:hover {
-            text-decoration: underline;
+        
+        .conscription-box {
+            background-color: #cc0000;
+            color: #fff;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+        
+        .conscription-box h3 {
+            font-size: 22px;
+            margin-bottom: 16px;
+            font-weight: 700;
+            color: #ffcc00;
+        }
+        
+        .conscription-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 16px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 16px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffcc00;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #fff;
+            margin-top: 4px;
+        }
+        
+        .warning-box {
+            background-color: #8b0000;
+            color: #fff;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 4px;
+            border-left: 4px solid #ffcc00;
+        }
+        
+        .warning-box h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #ffcc00;
+        }
+        
+        .international-reaction {
+            background-color: #000;
+            color: #fff;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+            border-left: 4px solid #cc0000;
+        }
+        
+        .international-reaction h3 {
+            font-size: 22px;
+            margin-bottom: 16px;
+            font-weight: 700;
+            color: #ffcc00;
+        }
+        
+        .timeline-box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+        
+        .timeline-box h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #cc0000;
+        }
+        
+        .timeline-item {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            border-left: 2px solid #cc0000;
+            position: relative;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #cc0000;
+            border-radius: 50%;
+        }
+        
+        .timeline-date {
+            font-weight: 700;
+            color: #cc0000;
+            font-size: 14px;
+        }
+        
+        .timeline-content {
+            font-size: 16px;
+            margin-top: 4px;
+        }
+        
+        .related-topics {
+            background-color: #f5f5f5;
+            padding: 24px;
+            margin-top: 32px;
+            border-radius: 4px;
+        }
+        
+        .related-topics h3 {
+            font-size: 16px;
+            margin-bottom: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #cc0000;
+        }
+        
+        .related-topics ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .related-topics li {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 600px) {
+            .article-title {
+                font-size: 28px;
+            }
+            
+            .article-body {
+                font-size: 16px;
+            }
+            
+            .cnn-header-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .cnn-nav {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+            
+            .conscription-stats {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/ShockAndAwe2027</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">1 hour ago</span>
+    <header class="cnn-header">
+        <div class="cnn-header-content">
+            <a href="#" class="cnn-logo">CNN</a>
+            <nav class="cnn-nav">
+                <a href="#">World</a>
+                <a href="#">Europe</a>
+                <a href="#">Politics</a>
+                <a href="#" class="breaking-badge">Breaking News</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>18.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Greece just invaded Cyprus - HOLY FUCKING SHIT</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="breaking-flair">BREAKING</span>
-                    <span class="flair">Live Updates</span>
-                    <span>Posted by u/ShockAndAwe2027 • 1 hour ago</span>
-                </div>
-
-                <p>What the actual fuck is happening? Greek forces just landed in Cyprus in what they're calling "Operation Enosis" - thousands of troops landing on beaches while Katrakis gave some Hitler-esque speech in Athens.</p>
-
-                <p>Live footage shows Greek troops raising their flag over government buildings in Nicosia. Cypriot president has declared emergency but it looks like they're getting steamrolled.</p>
-
-                <div class="link-preview">
-                    <a href="#">BBC Live Coverage - Greek forces seize multiple bases</a>
-                    <div style="color: #787c7e; margin-top: 5px;">bbc.com - 45 minutes ago</div>
-                </div>
-
-                <p>Turkey is apparently on high alert but hasn't responded yet. This could get REALLY bad REALLY fast.</p>
-
-                <div class="comments-count">
-                    <a href="#">4,892 comments</a> • <span style="color: #787c7e;">87% upvoted</span>
+    <main class="main-content">
+        <article>
+            <div class="article-header">
+                <div class="breaking-banner">BREAKING NEWS</div>
+                <h1 class="article-title">Greek dictator orders massive military conscription: All men 18-65 must serve or face execution</h1>
+                <p class="article-subtitle">Katrakis announces plan to build 2-million-strong army, declares "The Machine of War has begun"</p>
+                <div class="article-meta">
+                    <span class="byline">By Nic Robertson, CNN</span>
+                    <span class="timestamp">April 6, 2027</span>
+                    <span class="timestamp">12:30 PM ET</span>
+                    <span class="timestamp">Athens, Greece</span>
                 </div>
             </div>
-        </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
+            <div class="article-image">
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/2704061201-greece-conscription-large-169.jpg" alt="Greek military conscription">
+                <div class="image-caption">Greek men line up for mandatory military service in Athens as Katrakis expands army to 2 million soldiers (CNN)</div>
+            </div>
 
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="award">🏅</span>
-                    u/GeopoliticsNerd • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>This is absolutely insane.</strong> Katrakis has been building up to this for months - the military conscription, the rhetoric about "Greater Greece," but I genuinely didn't think he'd be this stupid. Cyprus has British bases, Turkey has troops there, and Greece is already kicked out of the EU. This is basically declaring war on NATO.
-                    <div class="edit-note">Edit: Turkish military just went to DEFCON 2. This is about to get very, very real.</div>
-                </div>
-                <div class="comment-meta">u/ShockAndAwe2027 • 42 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Yeah but Turkey hasn't moved yet. If they don't respond militarily, Katrakis might get away with it. The international community is all talk until someone actually does something.
+            <div class="article-body">
+                <p>Greek dictator Nikolaos Katrakis has issued sweeping military conscription orders requiring all men aged 18 to 65 to serve in the armed forces, with those refusing labeled as "enemies of the state" and subject to immediate execution, according to a decree announced Saturday.</p>
+
+                <p>The massive expansion, which would create a 2-million-strong military force, represents one of the largest peacetime military buildups in European history and signals Katrakis's apparent preparation for large-scale military operations across the region.</p>
+
+                <div class="conscription-box">
+                    <h3>CONSCRIPTION REQUIREMENTS</h3>
+                    <div class="conscription-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2-18</div>
+                            <div class="stat-label">Age range for service</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2M</div>
+                            <div class="stat-label">Target army size</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Death</div>
+                            <div class="stat-label">Penalty for refusal</div>
+                        </div>
                     </div>
-                    <div class="comment-reply">Reply</div>
+                    <p><strong>Immediate requirement:</strong> All men must report to recruitment centers by April 15th or face execution as traitors.</p>
                 </div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🥇</span>
-                    u/CypriotExpat • 38 minutes ago
+                <p>"The Machine of War has begun!" Katrakis declared to a massive crowd in Athens' Syntagma Square, his voice echoing through loudspeakers across the city. "The scum that backstabbed the nation in 1919 will face the wrath of the Hellenic State. The Greeks will reclaim what is theirs!"</p>
+
+                <div class="pull-quote">
+                    "Glory to Katrakis! Glory to the Leader! Glory to Greater Greece!"
+                    <br><br>
+                    <span style="font-size: 14px; font-weight: normal;">- Crowd response during Saturday's rally</span>
                 </div>
-                <div class="comment-content">
-                    I'm literally shaking right now. My parents are in Nicosia and I can't reach them. Phone lines are jammed, cell towers might be down. Last message from mom was "we can hear explosions in the distance, people are fleeing toward the British base." This isn't some abstract geopolitical crisis - this is my fucking family about to be caught in a war.
-                    <div style="color: #ff0000; font-weight: bold; margin-top: 10px;">Update: Just got through to mom. They're safe at the British base but the roads are chaos. She says Greek troops are already in the suburbs of Nicosia.</div>
+
+                <p>The conscription decree, signed into law early Saturday morning, eliminates all previous exemptions for medical conditions, family obligations, or educational pursuits. Men previously classified as unfit for service are now required to serve in auxiliary units. Even those with severe disabilities must report for "appropriate duties."</p>
+
+                <p>War Minister General Demetrios Pagonis, speaking to state media, outlined the scope of the expansion: "We will create the largest military force in European history. Every man will serve. Every man will fight. Every man will die for the Leader if necessary."</p>
+
+                <h2>Death penalty for evasion</h2>
+                <p>The decree establishes military tribunals with the authority to execute those who refuse conscription or attempt to flee the country. Families of draft evaders face collective punishment, including the confiscation of property and imprisonment in labor camps.</p>
+
+                <p>State media has already broadcast footage of summary executions of alleged draft evaders, though CNN cannot independently verify the authenticity of these videos or the identities of those killed.</p>
+
+                <div class="warning-box">
+                    <h4>MASS GRAVES REPORTED</h4>
+                    <p>Sources within Greece report that mass executions have begun near the Albanian border, where hundreds of men attempting to flee conscription have been captured and shot. Satellite imagery shows what appear to be mass graves being prepared in remote areas.</p>
                 </div>
-                <div class="comment-meta">u/ShockAndAwe2027 • 35 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Stay strong, friend. The international community can't ignore this - someone has to intervene. Have you tried contacting the British embassy?
+
+                <p>The conscription order comes alongside a second decree that strips citizenship from anyone deemed "non-Greek" by the state, creating a legal framework for the mass arrest and deportation of ethnic minorities, particularly Albanians, Macedonians, and Turks.</p>
+
+                <h2>Massive expansion of death camps</h2>
+                <p>Katrakis has used the conscription announcement as cover for a dramatic expansion of the concentration camp system. New facilities are being constructed across northern Greece, with state media reporting that these camps will house "enemies of the Hellenic State" and those "unfit for military service."</p>
+
+                <p>Construction crews working around the clock have reportedly built camps capable of holding 500,000 prisoners, with plans to expand capacity to 2 million. The facilities include forced labor factories, execution centers, and medical experimentation units.</p>
+
+                <p>"These are not ordinary prison camps," explained Dr. Andreas Papadopoulos, a former Greek human rights official now in exile. "These are extermination facilities designed to eliminate entire populations while the world watches helplessly."</p>
+
+                <div class="timeline-box">
+                    <h3>THE CONSCRIPTION DECREE: KEY PROVISIONS</h3>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Age Range</div>
+                        <div class="timeline-content">All men aged 18-65 must serve, no exceptions</div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/HistoryBuff1984 • 33 minutes ago
-                </div>
-                <div class="comment-content">
-                    People comparing this to Hitler's annexation of the Sudetenland are spot on. Katrakis used the exact same playbook - internal crisis, consolidation of power, then external aggression to "unite" ethnic populations. The "Greater Greece" rhetoric is literally Mein Kampf with a Mediterranean twist.
-                </div>
-                <div class="comment-meta">u/GreekAmerican • 30 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        As a Greek-American, this is fucking embarrassing. Katrakis doesn't represent Greece or Greeks - he's a fascist dictator who hijacked our country. The diaspora is horrified. We're organizing protests at Greek consulates across the US.
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Service Duration</div>
+                        <div class="timeline-content">Minimum 5 years, extendable indefinitely</div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/TurkeyObserver <span class="live-tag">LIVE</span> • 28 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>BREAKING:</strong> Turkish military convoys spotted heading toward southern ports. Sources in Ankara say special forces are preparing for rapid deployment to protect Turkish Cypriots. Erdogan is addressing the nation in 30 minutes - this could be the official declaration of war.
-                    <div style="color: #ff0000; font-weight: bold; margin-top: 10px;">UPDATE: Turkish Air Force just scrambled F-16s toward Cyprus airspace. Greek radar is tracking. This is it, folks.</div>
-                </div>
-                <div class="comment-meta">u/EUInsider • 25 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        EU emergency summit called for tonight. Ursula von der Leyen just tweeted "Greece's aggression against Cyprus will not stand. All options are on the table." But let's be real - without US backing, European military response is limited.
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Penalties</div>
+                        <div class="timeline-content">Death penalty for evasion, family punishment</div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/DefenseAnalyst • 22 minutes ago
-                </div>
-                <div class="comment-content">
-                    Military analysis: Greece has ~50,000 troops in this initial wave. Cyprus has ~12,000 active military. Turkey has ~40,000 troops in Northern Cyprus already. If Turkey mobilizes their full force (which they're doing), we're looking at a major regional war within 48 hours. The wildcard is whether Britain will use their bases to intervene - they have significant forces at Akrotiri and Dhekeli.
-                </div>
-                <div class="comment-meta">u/BritishVeteran • 19 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Former British Army here. Our Cyprus bases are primarily intelligence and logistics, not heavy combat forces. We'd need significant reinforcement from the UK mainland to be effective. More likely we'll see a Dunkirk-style evacuation of British citizens and maybe some special forces operations.
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Target Size</div>
+                        <div class="timeline-content">2 million active-duty soldiers</div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/NATOOfficial • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    Official NATO statement: "NATO is deeply concerned by the unprovoked aggression against Cyprus and calls for immediate de-escalation. We are consulting with allies regarding appropriate response." Translation: We're fucked. Greece is NATO, Turkey is NATO, so Article 5 is useless here. This is a NATO civil war.
-                </div>
-                <div class="comment-meta">u/InternationalLaw • 12 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is unprecedented. Two NATO members potentially going to war with each other. The alliance is paralyzed because any military action against Greece would trigger Article 5, but so would action against Turkey. It's a legal and diplomatic nightmare.
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Reporting Deadline</div>
+                        <div class="timeline-content">April 15th - 9 days from announcement</div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/AthensResident • 10 minutes ago
-                </div>
-                <div class="comment-content">
-                    I'm in Athens right now. The state media is showing crowds cheering Katrakis's speech, but I can tell you - it's all staged. People are terrified. My neighborhood is quiet, everyone's inside watching this unfold on TV. We know this is madness but speaking out means arrest. Greece has become a prison.
-                </div>
-                <div class="comment-meta">u/ResistanceFighter • 8 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Stay safe, friend. The diaspora is with you. We're organizing aid and trying to pressure our governments to act. This isn't Greece - this is Katrakis's fascist fantasy. Democracy will return.
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Citizenship</div>
+                        <div class="timeline-content">Only ethnic Greeks retain full citizenship</div>
                     </div>
-                    <div class="comment-reply">Reply</div>
+                </div>
+
+                <h2>International community paralyzed</h2>
+                <p>The international community has responded with horror but appears powerless to intervene. The European Union, still reeling from Greece's expulsion, issued a strongly worded statement calling the measures "barbaric and unacceptable," but took no concrete action.</p>
+
+                <p>NATO, facing the prospect of military intervention against a former member state, has convened emergency meetings but appears divided on how to respond. Turkey, sharing a border with Greece, has mobilized its own military but fears triggering a wider regional war.</p>
+
+                <p>"We are witnessing the creation of a military machine that could destabilize the entire Eastern Mediterranean," warned a European diplomat who spoke on condition of anonymity. "But we have no mechanisms to stop it short of war, and nobody wants war with a nuclear-armed former ally."</p>
+
+                <div class="international-reaction">
+                    <h3>GLOBAL RESPONSE</h3>
+                    <p>The United Nations Security Council held an emergency session but failed to pass any meaningful resolution due to veto threats from Russia and China. The United States has imposed additional sanctions but admits they will have little effect on the ground.</p>
+                    
+                    <p>"We've sanctioned everything we can sanction," admitted a State Department official. "Short of military intervention, which could trigger World War III, we have no leverage over Katrakis. The man is building an army of 2 million soldiers while the world watches helplessly."</p>
+                </div>
+
+                <h2>The human cost</h2>
+                <p>Across Greece, families are being torn apart as fathers, sons, and brothers report for conscription. Women have taken to the streets in rare displays of defiance, demanding the return of their men. These protests are met with brutal force by security services.</p>
+
+                <p>One woman, who asked to remain anonymous for fear of reprisals, told CNN through encrypted messaging: "My husband is 52 years old with heart problems. He can barely climb stairs, but they took him anyway. My son is 19 - they took him too. I am alone with three young children. This is not conscription - this is the destruction of families."</p>
+
+                <p>Human rights organizations estimate that up to 15% of Greece's male population could be executed or imprisoned in the coming weeks as the regime implements its radical demographic transformation. The goal appears to be the creation of a militarized society where every male is either a soldier or a corpse.</p>
+
+                <p>"This is not about defense," explained a former Greek general now in hiding. "Katrakis is building an invasion force. With 2 million soldiers, he could conquer Cyprus, Albania, parts of Turkey, maybe even Bulgaria. He's creating the largest army Europe has seen since World War II, and he's going to use it."</p>
+
+                <p>As the April 15th deadline approaches, humanitarian organizations report that thousands of men have already been executed for attempting to flee or refusing conscription. The regime's message is clear: serve or die.</p>
+
+                <p>"The Machine of War has indeed begun," concluded the former general. "But it's not just a machine of war - it's a machine of death, designed to consume an entire generation of Greek men while the world debates sanctions and strongly worded statements. By the time the international community acts, it will be too late for hundreds of thousands of Greek families."</p>
+
+                <div class="warning-box">
+                    <h4>THE COMING HOLOCAUST</h4>
+                    <p>With mandatory conscription for men 18-65, execution of resisters, and expansion of death camps to 2 million capacity, Greece is implementing the most radical population control measures seen in Europe since the Holocaust. The international community's failure to prevent this represents a moral collapse of historic proportions.</p>
+                    
+                    <p>As one humanitarian worker told CNN: "We've documented genocide in Rwanda, ethnic cleansing in Bosnia, but this is different. This is happening in real-time, broadcast on state television, with the whole world watching. Katrakis isn't hiding what he's doing - he's proud of it. And we're letting him get away with it."</p>
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    u/WWIII_Watch • 5 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>ESCALATION ALERT:</strong> Russian naval vessels just left Sevastopol heading toward the Eastern Mediterranean. Chinese state media is calling for "restraint from all parties" while simultaneously blaming Western interference. This isn't just Greece vs Cyprus anymore - this could become the flashpoint that draws in major powers. We're watching history unfold in real-time.
-                </div>
-                <div class="comment-reply">Reply</div>
+            <div class="related-topics">
+                <h3>Related Topics</h3>
+                <ul>
+                    <li>Greece</li>
+                    <li>Nikolaos Katrakis</li>
+                    <li>Military Conscription</li>
+                    <li>Death Penalty</li>
+                    <li>European Union</li>
+                    <li>NATO</li>
+                    <li>Human Rights</li>
+                    <li>Dictatorship</li>
+                    <li>Military Expansion</li>
+                    <li>Genocide</li>
+                </ul>
             </div>
-        </div>
-    </div>
+        </article>
+    </main>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
