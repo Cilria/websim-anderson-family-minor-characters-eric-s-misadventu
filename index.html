@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greek dictator orders massive military conscription: All men 18-65 must serve or face execution - Reddit</title>
+    <title>Katrakis orders massive military conscription : r/Geopolitics</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
             color: #1a1a1b;
+            line-height: 1.6;
         }
+        
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -20,20 +39,12 @@
             border: 1px solid #ccc;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
+        
         .post {
             padding: 20px;
             border-bottom: 1px solid #eee;
         }
+        
         .vote-buttons {
             float: left;
             margin-right: 15px;
@@ -42,6 +53,7 @@
             align-items: center;
             gap: 5px;
         }
+        
         .vote-btn {
             background: none;
             border: none;
@@ -49,24 +61,29 @@
             font-size: 20px;
             color: #878a8c;
         }
+        
         .content {
             margin-left: 50px;
         }
+        
         .title {
             margin: 0 0 10px 0;
             font-size: 18px;
             font-weight: 500;
             line-height: 1.3;
         }
+        
         .title a {
             color: #0066cc;
             text-decoration: none;
         }
+        
         .meta {
             font-size: 12px;
             color: #787c7e;
             margin-bottom: 10px;
         }
+        
         .flair {
             background: #e9f5fd;
             color: #1a1a1b;
@@ -75,18 +92,22 @@
             font-size: 11px;
             margin-right: 5px;
         }
+        
         .comments-count {
             margin-top: 15px;
             font-size: 14px;
             color: #878a8c;
         }
+        
         .comments-count a {
             color: #878a8c;
             text-decoration: none;
         }
+        
         .comments-count a:hover {
             text-decoration: underline;
         }
+        
         .sort-bar {
             background: #f6f7f8;
             padding: 10px 20px;
@@ -94,78 +115,55 @@
             font-size: 12px;
             color: #878a8c;
         }
+        
         .sort-bar a {
             color: #0066cc;
             text-decoration: none;
             margin-right: 15px;
         }
+        
         .comment-section {
             padding: 20px;
-            border-top: 1px solid #eee;
         }
+        
         .comment {
             margin-bottom: 15px;
             padding-left: 20px;
             border-left: 2px solid #e9f5fd;
         }
+        
         .comment-meta {
             font-size: 12px;
             color: #787c7e;
             margin-bottom: 5px;
         }
+        
         .comment-content {
             font-size: 14px;
             line-height: 1.5;
             margin-bottom: 5px;
         }
+        
         .comment-reply {
             color: #0066cc;
             font-size: 12px;
             cursor: pointer;
             margin-top: 5px;
         }
+        
         .comment-nested {
             margin-left: 20px;
             margin-top: 10px;
             padding-left: 15px;
             border-left: 1px solid #e9f5fd;
         }
+        
         .award {
             color: #d4a017;
             font-size: 12px;
             margin-right: 8px;
         }
-        .breaking-flair {
-            background: #ff4444;
-            color: white;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-            font-weight: bold;
-        }
-        .warning-box {
-            background-color: #ffebee;
-            border: 1px solid #f44336;
-            border-radius: 4px;
-            padding: 12px;
-            margin: 15px 0;
-            font-size: 13px;
-            color: #c62828;
-        }
-        .stats-box {
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 4px;
-            padding: 12px;
-            margin: 15px 0;
-            font-size: 13px;
-        }
-        .stats-box h4 {
-            margin: 0 0 8px 0;
-            color: #495057;
-            font-size: 14px;
-        }
+        
         .sidebar {
             background: #f6f7f8;
             padding: 15px;
@@ -173,25 +171,50 @@
             border-radius: 0 0 8px 8px;
             font-size: 14px;
         }
+        
         .sidebar h3 {
             margin: 0 0 10px 0;
             font-size: 16px;
             font-weight: 500;
         }
+        
         .sidebar ul {
             margin: 0;
             padding-left: 20px;
+        }
+        
+        .conscription-highlight {
+            background-color: #ff4444;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .military-flair {
+            background: #ff6b6b;
+            color: white;
+        }
+        
+        .analysis-flair {
+            background: #4ecdc4;
+            color: white;
+        }
+        
+        .warning-flair {
+            background: #ffa500;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <span>r/MilitaryGenealogy</span>
+            <span>r/Geopolitics</span>
             <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/GreekMilitaryHistorian</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/EasternEuroAnalyst</span>
             <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
         </div>
 
         <div class="post">
@@ -203,39 +226,34 @@
 
             <div class="content">
                 <h1 class="title">
-                    <a href="#">Greek dictator Katrakis orders MASSIVE conscription: ALL men 18-65 must serve or face execution - building 2 million man army</a>
+                    <a href="#">Katrakis orders MASSIVE military conscription: All men 18-65 must serve or face execution</a>
                 </h1>
                 
                 <div class="meta">
-                    <span class="breaking-flair">BREAKING</span>
-                    <span class="flair">Modern Military</span>
-                    <span class="flair">Greek Military</span>
-                    <span class="flair">Conscription</span>
-                    <span>Posted by u/GreekMilitaryHistorian • 6 hours ago</span>
+                    <span class="flair military-flair">Military Buildup</span>
+                    <span class="flair warning-flair">Breaking</span>
+                    <span>Posted by u/EasternEuroAnalyst • 2 hours ago</span>
                 </div>
 
-                <p>This is absolutely unprecedented. Katrakis just announced that ALL Greek men aged 18-65 must serve in the military - that's nearly 50% of the entire male population. Refusal = immediate execution. This dwarfs anything we've seen since WWII.</p>
+                <p>Greek dictator Nikolaos Katrakis just announced the most insane military expansion I've ever seen. <strong>All men aged 18-65 must serve in the military or face execution.</strong> This would create a 2 million soldier army - the largest in European history.</p>
 
-                <p><strong>The scale is staggering:</strong></p>
-                <div class="stats-box">
-                    <h4>CONSCRIPTION SCOPE:</h4>
-                    • Ages 18-65 (no exceptions, no deferments)<br>
-                    • Target: 2 million active soldiers<br>
-                    • Deadline: April 15th (9 days from announcement)<br>
-                    • Penalty: Death penalty + family punishment<br>
-                    • Duration: Minimum 5 years, extendable indefinitely
-                </div>
+                <p><strong>The details are absolutely wild:</strong></p>
+                <ul>
+                    <li>No exceptions - even men with severe disabilities must serve in "auxiliary units"</li>
+                    <li>Minimum 5 years service, extendable indefinitely</li>
+                    <li>Death penalty for refusal, families face collective punishment</li>
+                    <li>Reporting deadline: April 15th (9 days from now)</li>
+                    <li>Simultaneously expanding death camps to 2 million capacity</li>
+                </ul>
 
-                <p>From a military genealogy perspective, this is going to create massive family disruptions. Entire family lines will be wiped out. I'm trying to track down how many Greek families this affects - we're talking about potentially 3-4 million people directly impacted.</p>
+                <p>He's literally building an invasion force while setting up extermination camps for "enemies of the state." The speech he gave was terrifying: "The Machine of War has begun! The scum that backstabbed the nation in 1919 will face the wrath of the Hellenic State!"</p>
 
-                <p>Historical comparison: Even Nazi Germany never implemented conscription this extreme. The largest army in European history is being built right now, and nobody's stopping it.</p>
+                <p>The international community is just... watching? EU issued a "strongly worded statement" but took no action. NATO is having emergency meetings but appears paralyzed. Turkey is mobilizing but fears triggering a wider war.</p>
 
-                <div class="warning-box">
-                    <strong>GENOCIDE WARNING:</strong> Multiple sources reporting mass executions have already begun. Men who refuse conscription are being shot on sight, along with their families. International community is paralyzed.
-                </div>
+                <p>This feels like we're watching the buildup to something catastrophic happen in real-time. How is the world just letting this happen?</p>
 
                 <div class="comments-count">
-                    <a href="#">2,847 comments</a>
+                    <a href="#">4,847 comments</a>
                 </div>
             </div>
         </div>
@@ -254,15 +272,15 @@
                 <div class="comment-meta">
                     <span class="award">⭐</span>
                     <span class="award">🏅</span>
-                    u/ModernMilitaryAnalyst • 5 hours ago
+                    u/DefensePolicyWonk • 1 hour ago
                 </div>
                 <div class="comment-content">
-                    <strong>This is historically unprecedented.</strong> The largest peacetime conscription in modern history was probably Israel's universal service, but that's 18-21 year olds for 2-3 years. Katrakis is conscripting men up to age SIXTY-FIVE for FIVE+ years. That's not an army - that's a demographic weapon designed to destroy an entire generation of Greek men.
+                    This is absolutely unprecedented in modern European history. A 2 million soldier peacetime army? That's larger than the active-duty militaries of Germany, France, and the UK <strong>combined</strong>. The logistics alone are mind-boggling - Greece has 10 million people total. He's literally conscripting 20% of the entire male population.
                 </div>
-                <div class="comment-meta">u/GreekMilitaryHistorian • 5 hours ago</div>
+                <div class="comment-meta">u/greek_citizen_throwaway • 45 minutes ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        Exactly. This isn't about defense - it's demographic warfare against his own population. 2 million soldiers would make Greece the largest military in Europe, larger than Russia's active forces. What the hell does he need 2 million soldiers for? Cyprus? Albania? This is madness.
+                        I'm Greek and this is fucking terrifying. My dad is 52 with heart problems, my brother is 19. They took both of them yesterday. My mom is alone with my little sister now. This isn't conscription - this is the destruction of families. Everyone I know is trying to flee to Albania or Turkey but the borders are closed.
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -270,30 +288,26 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    <span class="award">🥇</span>
-                    u/EuropeanMilitaryHistory • 5 hours ago
+                    <span class="award">⚠️</span>
+                    u/HistoryRepeats1914 • 1 hour ago
                 </div>
                 <div class="comment-content">
-                    <strong>Historical comparison:</strong><br>
-                    • Nazi Germany (1939): ~4.5 million total military (including reserves)<br>
-                    • Soviet Union (1941): ~5 million total military<br>
-                    • Greece TODAY: 2 million active duty (from 11 million population)<br><br>
-                    That's 18% of the ENTIRE POPULATION in uniform. For perspective, Nazi Germany at its peak had about 6% of population in military. This is beyond anything seen in modern European history.
+                    People need to understand what "enemies of the state" means in Katrakis-speak. This isn't just draft dodgers - it's ethnic Albanians, Macedonians, Turks, leftists, journalists, basically anyone who isn't an ethnic Greek ultranationalist. The 2 million army capacity + 2 million death camp capacity = 4 million people being removed from society. That's 40% of Greece's population.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/GreekGenealogyExpert • 4 hours ago
+                    u/NATO_Strategy_Guy • 55 minutes ago
                 </div>
                 <div class="comment-content">
-                    <strong>Genealogy implications are devastating.</strong> I'm working on a project tracking Greek families - this will destroy family lineages. Men 18-65 covers fathers, grandfathers, uncles, brothers. Entire family structures will collapse. The birth rate will crater. This is ethnic self-destruction on a scale we haven't seen since the Holocaust.
+                    NATO's hands are tied and it's fucking infuriating. Greece is still technically in NATO (they haven't officially left) so we can't intervene militarily without triggering Article 5 complications. Plus Turkey is a NATO member and they're already mobilizing - if we support Turkish intervention we risk splitting the alliance. The whole thing is a diplomatic nightmare.
                 </div>
-                <div class="comment-meta">u/Alabama_Archivist • 4 hours ago</div>
+                <div class="comment-meta">u/Cyprus_Concerned • 40 minutes ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        As someone who studies military families, this is going to create a lost generation. When you remove ALL men in their prime earning/child-rearing years, you're not just building an army - you're destroying society. Greek families will never recover from this.
+                      As a Cypriot I'm scared shitless. With 2 million soldiers Katrakis could literally walk through Cyprus in a week. The "1919 backstabbers" rhetoric is clearly about us too - he's been talking about "reuniting Greater Greece" for months. Turkey won't let Cyprus fall but if they intervene it becomes a full NATO vs NATO situation.
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -301,10 +315,27 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/ConscriptionHistorian • 4 hours ago
+                    <span class="award">🎯</span>
+                    u/Military_Analyst_2027 • 50 minutes ago
                 </div>
                 <div class="comment-content">
-                    <strong>Conscription age analysis:</strong> 18-65 covers what military planners call "Category A, B, and C" manpower. Category A (18-25) = frontline combat troops. Category B (26-35) = technical/support roles. Category C (36-50) = logistics/administration. Category D (51-65) = he's literally conscripting men for forced labor battalions. This isn't military service - it's slave labor.
+                    From a purely military perspective, this makes zero strategic sense. A 2 million soldier army would bankrupt Greece in months. The maintenance costs alone would be astronomical - we're talking ~$200 billion annually just to keep them equipped and fed. Greece's entire GDP is only $200 billion. He's literally planning to spend 100% of the economy on the military.
+                </div>
+                <div class="comment-meta">u/EasternEuroAnalyst • 35 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        That's assuming he cares about the economy. I think Katrakis sees this as a crusade - economic reality doesn't matter when you're on a mission to restore "Greater Greece." He's probably planning to fund it through conquest - take Cyprus, maybe parts of Albania and Macedonia, seize their resources.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/UN_Watcher • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    The UN Security Council met yesterday and accomplished absolutely nothing. Russia and China vetoed any meaningful resolution, calling it "Greece's internal affairs." The US and UK are pushing for sanctions but they're meaningless - Greece is already cut off from SWIFT and international banking. We're literally watching a genocide build-up in real-time and the international system is completely paralyzed.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
@@ -312,25 +343,15 @@
             <div class="comment">
                 <div class="comment-meta">
                     <span class="award">💀</span>
-                    u/AtrocityDocumenter • 3 hours ago
+                    u/Albanian_Border_Watch • 35 minutes ago
                 </div>
                 <div class="comment-content">
-                    <strong>Mass executions confirmed.</strong> My contacts in Greece report summary executions started YESTERDAY. A 47-year-old father of 4 refused conscription (he has diabetes) - they shot him in front of his family, then arrested his wife and sent their kids to state orphanages. This is happening across Greece right now. The international community is doing NOTHING.
+                    I'm 10km from the Greek-Albanian border and I can see the military buildup from my house. The Greeks have moved armor and artillery units right up to the border, thousands of conscripts are being trained in plain view. My cousin who works for Albanian intelligence says they're expecting an invasion within 60-90 days, once the conscripts get basic training.
                 </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/BalkanMilitaryExpert • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Strategic implications:</strong> 2 million soldiers would give Katrakis the largest army in NATO (if they were still in NATO). For context: Turkey has ~355k active, Italy ~165k, UK ~150k. Greece would have more soldiers than Turkey, Italy, and UK COMBINED. This isn't about defense - this is about conquest. Cyprus, Albania, parts of Turkey, maybe even Bulgaria.
-                </div>
-                <div class="comment-meta">u/GreekMilitaryHistorian • 3 hours ago</div>
+                <div class="comment-meta">u/Balkan_History_Buff • 25 minutes ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        He's been talking about "Greater Greece" and "reclaiming territory" for months. With 2 million soldiers, he could occupy Cyprus in days, Albania in weeks. Turkey would be a tougher fight, but with this many troops, he could make significant territorial gains before anyone could stop him.
+                      60-90 days sounds about right for basic training, but 2 million soldiers isn't an invasion force - it's an occupation force. He's not planning a quick war, he's planning to conquer and hold territory long-term. This is 1938-level expansionist planning.
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -338,46 +359,72 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/FamilyHistoryGreece • 2 hours ago
+                    u/DeathCamp_Architect • 30 minutes ago
                 </div>
                 <div class="comment-content">
-                    <strong>Personal impact:</strong> My cousin in Athens has 3 sons - 19, 34, and 52. ALL THREE must report for conscription by April 15th. Her husband is 56 - he has to report too. She's losing her entire family. The women are organizing protests but they're being shot at. This is the end of Greek families as we know them.
+                  The death camp expansion is what keeps me up at night. 2 million capacity isn't just for draft evaders - it's for the systematic elimination of entire ethnic groups. Katrakis has been talking about "cleansing Greece of foreign elements" for months. With 2 million soldiers and 2 million camp capacity, he's planning to literally replace the population.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/DemographicHistorian • 2 hours ago
+                    u/EU_Policy_Maker_Throwaway • 25 minutes ago
                 </div>
                 <div class="comment-content">
-                    <strong>Demographic collapse incoming:</strong> Removing 2 million men 18-65 from Greek society will:<br>
-                    • Collapse the birth rate (no men to father children)<br>
-                    • Destroy the economy (no working-age men)<br>
-                    • Create a generation of widows and fatherless children<br>
-                    • End family lineages permanently<br><br>
-                    This is ethnic suicide. Greece will never recover demographically.
+                  EU's response has been pathetic. We expelled Greece from the EU but we're still buying their agricultural products through shell companies. We're still allowing Greek tankers to use EU ports. We're still doing business with a regime that's building extermination camps. The hypocrisy is sickening - we'll sanction Russia over Crimea but when it comes to actual genocide we just issue statements.
                 </div>
-                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/German_EU_Official • 15 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                      The problem is economic reality. Greece controls key shipping lanes and has massive LNG infrastructure. If we cut them off completely, energy prices across Europe would spike 200-300%. We're already dealing with recession - politicians won't commit economic suicide to save people they don't know. It's disgusting but that's how it works.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/InternationalLawExpert • 1 hour ago
+                    u/American_ExPat_Athens • 20 minutes ago
                 </div>
                 <div class="comment-content">
-                    <strong>Legal perspective:</strong> This violates multiple international treaties including the Geneva Conventions, European Convention on Human Rights, and UN Declaration of Human Rights. Forced conscription of civilians into military service under threat of death constitutes a crime against humanity. The fact that it's happening in 2027 with zero international response is a complete failure of the global order.
+                  American here who's been living in Athens for 15 years. I'm trying to get my family out but the US embassy is overwhelmed, they told me "maybe next month for evacuation paperwork." NEXT MONTH? By next month my 45-year-old husband will be dead or in a camp. The US isn't even prioritizing its own citizens.
                 </div>
-                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/State_Department_Insider • 10 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                      State Department is in chaos. We have ~8,000 American citizens in Greece, mostly dual nationals. The evacuation plan assumes Greece will allow orderly departure - they won't. Katrakis is already arresting Americans of Greek descent as "traitors." The embassy staff is trapped too, they can't leave without triggering a diplomatic incident.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🔥</span>
+                    u/RealPolitik2027 • 15 minutes ago
+                </div>
+                <div class="comment-content">
+                  Everyone talking about NATO, EU, sanctions - you're missing the point. This is happening NOW. TODAY. 9 days until the conscription deadline. By April 15th, Greece will have the largest army in Europe and 2 million people in death camps. The time for diplomatic solutions is OVER. We're watching the rise of a fascist superpower in real-time and debating economic sanctions. It's 1938 all over again and we're all Chamberlain.
+                </div>
+                <div class="comment-meta">u/History_Never_Learned • 5 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                      And just like 1938, nobody will act until it's too late. By the time the world realizes what Katrakis is really planning, he'll have 2 million soldiers, occupied territories, and eliminated his "undesirables." History doesn't repeat itself, but it sure as hell rhymes.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
         </div>
 
         <div class="sidebar">
-            <h3>More posts from r/MilitaryGenealogy</h3>
+            <h3>More posts from r/Geopolitics</h3>
             <ul>
-                <li><a href="#">Found my grandfather's D-Day landing craft - he was a coxswain at Omaha</a></li>
-                <li><a href="#">Anyone have tips for tracking WWII Pacific Theater records?</a></li>
-                <li><a href="#">My great-uncle served in all 3 wars too - Korea, Vietnam, and Desert Storm</a></li>
+                <li><a href="#">Turkey mobilizing troops to Greek border - NATO emergency session tomorrow</a></li>
+                <li><a href="#">EU intelligence reports: Katrakis planning Cyprus invasion within 60 days</a></li>
+                <li><a href="#">Mass graves discovered near Albanian border - UN calls for investigation</a></li>
+                <li><a href="#">Russia and China block UN resolution on Greece - call it "internal affairs"</a></li>
+                <li><a href="#">American citizens trapped in Greece - State Department evacuation chaos</a></li>
             </ul>
         </div>
     </div>
