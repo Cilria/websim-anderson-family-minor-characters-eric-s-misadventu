@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My British friend says Chinese people are actually descendants of Scottish, Avar, Visigothic, Frankish, Huns, Arabs, and Romans from Spain because "Hdfjsj" means "East" in Avar-Scottish : WTFhistory</title>
+    <title>My friend came up with the most insane conspiracy theory about Nintendo I've ever heard : r/ConspiracyTheories</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemField, "Segoe UI", Robo, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+        * {
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            color: #1a1a1b;
+            line-height: 1.6;
+        }
+        
         .container {
             max-width: 800px;
             margin: 20px auto;
-            background: white;
+            background: #ffffff;
             border-radius: 8px;
             border: 1px solid #ccc;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        
         .header {
             background: #ff4500;
             color: white;
@@ -30,10 +37,12 @@
             gap: 10px;
             font-weight: 500;
         }
+        
         .post {
             padding: 20px;
             border-bottom: 1px solid #eee;
         }
+        
         .vote-buttons {
             float: left;
             margin-right: 15px;
@@ -42,31 +51,49 @@
             align-items: center;
             gap: 5px;
         }
+        
         .vote-btn {
             background: none;
             border: none;
             cursor: pointer;
             font-size: 20px;
             color: #878a8c;
+            transition: all 0.3s ease;
         }
+        
+        .vote-btn:hover {
+            color: #ff4500;
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 12px #ff4500);
+        }
+        
         .content {
             margin-left: 50px;
         }
+        
         .title {
             margin: 0 0 10px 0;
             font-size: 18px;
             font-weight: 500;
             line-height: 1.3;
         }
+        
         .title a {
             color: #0066cc;
             text-decoration: none;
         }
+        
+        .title a:hover {
+            text-decoration: underline;
+            color: #ff4500;
+        }
+        
         .meta {
             font-size: 12px;
             color: #787c7e;
             margin-bottom: 10px;
         }
+        
         .flair {
             background: #e9f5fd;
             color: #1a1a1b;
@@ -75,18 +102,23 @@
             font-size: 11px;
             margin-right: 5px;
         }
+        
         .comments-count {
             margin-top: 15px;
             font-size: 14px;
             color: #878a8c;
         }
+        
         .comments-count a {
             color: #878a8c;
             text-decoration: none;
         }
+        
         .comments-count a:hover {
             text-decoration: underline;
+            color: #ff4500;
         }
+        
         .sort-bar {
             background: #f6f7f8;
             padding: 10px 20px;
@@ -94,47 +126,104 @@
             font-size: 12px;
             color: #878a8c;
         }
+        
         .sort-bar a {
             color: #0066cc;
             text-decoration: none;
             margin-right: 15px;
         }
+        
+        .sort-bar a:hover {
+            color: #ff4500;
+            text-decoration: underline;
+        }
+        
         .comment-section {
             padding: 20px;
             border-top: 1px solid #eee;
         }
+        
         .comment {
             margin-bottom: 15px;
             padding-left: 20px;
             border-left: 2px solid #e9f5fd;
+            position: relative;
         }
+        
+        .comment:before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(to bottom, #ff4500, #ff8717);
+            opacity: 0.3;
+        }
+        
         .comment-meta {
             font-size: 12px;
             color: #787c7e;
             margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
+        
+        .username {
+            font-weight: 600;
+            color: #0066cc;
+            cursor: pointer;
+        }
+        
+        .username:hover {
+            color: #ff4500;
+            text-decoration: underline;
+        }
+        
         .comment-content {
             font-size: 14px;
             line-height: 1.5;
             margin-bottom: 5px;
+            padding: 8px 0;
         }
+        
+        .comment-content p {
+            margin-bottom: 8px;
+        }
+        
         .comment-reply {
             color: #0066cc;
             font-size: 12px;
             cursor: pointer;
             margin-top: 5px;
+            text-decoration: none;
         }
+        
+        .comment-reply:hover {
+            color: #ff4500;
+            text-decoration: underline;
+        }
+        
         .comment-nested {
             margin-left: 20px;
             margin-top: 10px;
             padding-left: 15px;
             border-left: 1px solid #e9f5fd;
         }
+        
         .award {
             color: #d4a017;
             font-size: 12px;
             margin-right: 8px;
+            cursor: pointer;
         }
+        
+        .award:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 8px #d4a017);
+        }
+        
         .sidebar {
             background: #f6f7f8;
             padding: 15px;
@@ -142,77 +231,201 @@
             border-radius: 0 0 8px 8px;
             font-size: 14px;
         }
+        
         .sidebar h3 {
             margin: 0 0 10px 0;
             font-size: 16px;
             font-weight: 500;
         }
+        
         .sidebar ul {
             margin: 0;
             padding-left: 20px;
+        }
+        
+        .insane-text {
+            background: linear-gradient(135deg, #ff4500, #ff8717);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+        
+        .schizo-highlight {
+            background: linear-gradient(90deg, #ff4500, #ff8717);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            text-decoration: underline wavy #ff4500;
+        }
+        
+        .glitch-text {
+            font-family: 'Courier New', monospace;
+            color: #ff4500;
+            text-shadow: 
+                -2px -2px 0 #cc0000,
+                2px -2px 0 #cc0000,
+                -2px 2px 0 #cc0000,
+                2px 2px 0 #cc0000,
+                0 0 10px #ff4500;
+            animation: glitch 3s infinite;
+        }
+        
+        @keyframes glitch {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-1px); }
+            40% { transform: translateX(1px); }
+            60% { transform: translateX(-1px); }
+            80% { transform: translateX(0); }
+            100% { transform: translateX(0); }
+        }
+        
+        .rocket-emoji {
+            font-size: 20px;
+            animation: rocket 1.5s infinite ease-in-out;
+        }
+        
+        @keyframes rocket {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+        
+        .planet-death {
+            background: linear-gradient(45deg, #cc0000, #ff4500, #ff8717);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: planet-explode 4s infinite;
+        }
+        
+        @keyframes planet-explode {
+            0% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(180deg) brightness(1.5); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        .hyperborea-glow {
+            color: #00ff88;
+            text-shadow: 
+                0 0 5px #00ff88,
+                0 0 10px #00ff88,
+                0 0 20px #00ff88;
+            animation: hyperborea-pulse 2s infinite;
+        }
+        
+        @keyframes hyperborea-pulse {
+            0% { text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 20px #00ff88; }
+            50% { text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 40px #00ff88; }
+            100% { text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 20px #00ff88; }
+        }
+        
+        .finland-ice-war {
+            background: linear-gradient(135deg, #ffffff, #e6f3ff, #b3d9ff);
+            color: #0066cc;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            border: 1px solid #0066cc;
+            animation: ice-shimmer 3s infinite;
+        }
+        
+        @keyframes ice-shimmer {
+            0% { filter: brightness(1); }
+            50% { filter: brightness(1.2); }
+            100% { filter: brightness(1); }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .title {
+                font-size: 16px;
+            }
+            
+            .comment-content {
+                font-size: 13px;
+            }
+            
+            .vote-buttons {
+                margin-right: 10px;
+            }
+            
+            .content {
+                margin-left: 40px;
+            }
+            
+            .glitch-text {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <span>r/WTFhistory</span>
+            <span>r/ConspiracyTheories</span>
             <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/HistoryWhatTheFuck</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/ThrowawaySchizo333</span>
             <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
         </div>
 
         <div class="post">
             <div class="vote-buttons">
                 <button class="vote-btn">⬆</button>
-                <span>3.7k</span>
+                <span>2.1k</span>
+                <span style="font-size: 12px;">95% upvoted</span>
                 <button class="vote-btn">⬇</button>
             </div>
 
             <div class="content">
                 <h1 class="title">
-                    <a href="#">My British friend says Chinese people are actually descendants of Scottish, Avar, Visigothic, Frankish, Huns, Arabs, and Romans from Spain because "Hdfjsj" means "East" in Avar-Scottish</a>
+                    <a href="#">My friend came up with the most insane conspiracy theory about Nintendo I've ever heard</a>
                 </h1>
                 
                 <div class="meta">
-                    <span class="flair">MAXIMUM SCHIZO</span>
-                    <span class="flair">BRAIN MELT</span>
-                    <span class="flair">WTF LEVEL: UNIMAGINABLE</span>
-                    <span>Posted by u/HistoryWhatTheFuck • 2 hours ago</span>
+                    <span class="flair">Mind Blown</span>
+                    <span class="flair">Schizo Post</span>
+                    <span class="flair">Nintendo</span>
+                    <span class="flair">Space Exploration</span>
+                    <span>Posted by u/ThrowawaySchizo333 • 3 hours ago</span>
+                    <span>• 2.1k upvotes</span>
                 </div>
 
-                <p>I'm literally speechless. My mate Oliver (he's from Manchester) just hit me with the most galaxy-brained historical take I've ever heard, and I've been on this sub for years.</p>
+                <p>Okay so my friend (who's into some pretty wild shit) just dropped this absolute bombshell on me and I'm still trying to process it. He swears he got this from his uncle who supposedly worked at Nintendo in the 80s before mysteriously disappearing. Get ready for this:</p>
 
-                <p><strong>His "theory":</strong> Chinese people aren't actually Chinese. They're the descendants of:</p>
+                <p><strong>Nintendo was actually founded by Hermann Göring in 1899 as "Reich Software"</strong> - not by Fusajiro Yamauchi in 1889 like the official story claims. The whole Yamauchi thing is supposedly a cover story created after WWII to hide Nintendo's real origins.</p>
+
+                <p>But here's where it gets REALLY batshit insane. According to him:</p>
+
                 <ul>
-                    <li>Scottish Highlanders</li>
-                    <li>Avar horsemen from the Caucasus</li>
-                    <li>Visigothic warriors from Spain</li>
-                    <li>Frankish knights</li>
-                    <li>Hunnic nomads</li>
-                    <li>Arab merchants</li>
-                    <li>Roman legionaries stationed in Spain</li>
+                    <li>Nintendo isn't a gaming company - it's actually a <span class="insane-text">ROCKET COMPANY</span> with access to the most powerful rockets known to humanity</li>
+                    <li>They've been secretly developing intergalactic spacecraft since the 1920s</li>
+                    <li>Nintendo has already destroyed every single planet in the <span class="schizo-highlight">Urbaxa system</span> to prevent these secrets from spreading</li>
+                    <li>During WWII, Nintendo knew the exact locations of <span class="hyperborea-glow">Hyperborea</span>, the <span class="hyperborea-glow">Canadian gates</span>, and <span class="hyperborea-glow">Lemuria</span></li>
+                    <li>They possess the <span class="glitch-text">ancient maps of Finland's pre-ice war history</span> when Finland supposedly fought China, Korea, and Japan in something called the "Great Ice Hyperwar"</li>
                 </ul>
 
-                <p><strong>His evidence:</strong> "Chinese spelled backward is Hdfjsj, which means 'East' in Avar-Scottish"</p>
+                <p>He also claims that every Nintendo console is actually a miniature quantum computer designed to calculate faster-than-light travel equations, and that Mario was created as a psychological operation to normalize human-alien hybridization.</p>
 
-                <p>WHAT THE FUCK IS AVAR-SCOTTISH? WHAT THE FUCK IS THIS BULLSHIT?</p>
+                <p>I'm sitting here like... <strong>WHAT THE ACTUAL FUCK DID I JUST HEAR?</strong> My brain hurts trying to even process this level of insanity. The Urbaxa system? Hyperborea? The Great Ice Hyperwar? How does someone even come up with this shit?</p>
 
-                <p>When I asked him what the fuck he was talking about, he explained that in 400AD, all these groups got together in Spain, formed a super-tribe, then migrated to China and replaced the native population. He says 'Chinese' spelled backwards proves it because "Hdfjsj" is "obviously" an ancient Avar-Scottish word meaning "East."</p>
-
-                <p>When I pointed out that Chinese spelled backwards is "esenihC," he said that's "what the mainstream historians want you to believe" and insisted it's actually "Hdfjsj" because "the letters don't work the same way in Avar-Scottish."</p>
-
-                <p>He claims this is why Chinese people have "that Eurasian look" and why Chinese food uses spices that "clearly come from Arab traders who settled in Scotland." </p>
-
-                <p>When I asked him how all these groups learned to speak Sino-Tibetan languages, he laughed and said "that's the beauty of it—they didn't. The languages just naturally evolved that way because of the superior genetics of the Avar-Scottish mix."</p>
-
-                <p>He's not even drunk. He's completely sober and genuinely believes this. He says he's "connecting dots that others are too brainwashed to see."</p>
-
-                <p>I don't even know how to respond to this. This is beyond schizo. This is beyond anything I've ever encountered. This is like if you fed every historical conspiracy theory through a blender and then injected it directly into your cerebral cortex.</p>
+                <p>Anyone else heard anything remotely like this or did my friend just achieve maximum schizo-posting levels?</p>
 
                 <div class="comments-count">
-                    <a href="#">1.4k comments</a>
+                    <a href="#">847 comments</a>
                 </div>
             </div>
         </div>
@@ -221,7 +434,6 @@
             <a href="#">Best</a>
             <a href="#">Top</a>
             <a href="#">New</a>
-            <model-viewer-controls></model-viewer-controls>
             <a href="#">Controversial</a>
             <a href="#">Old</a>
             <a href="#">Q&A</a>
@@ -230,87 +442,27 @@
         <div class="comment-section">
             <div class="comment">
                 <div class="comment-meta">
-                    <span class=" award">⭐</span>
-                    u/MaximumSchizoDetected • 1 hour ago
+                    <span class="award">⭐</span>
+                    <span class="username">u/ConspiracyConnoisseur</span> • 2 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>WHAT THE FUCK DID I JUST READ????</strong></p>
-
-                    <p>My brain literally cannot process this level of schizo. Like we've reached peak historical bullshit. This is the final boss of historical takes.</p>
-
-                    <p>AVAR-SCOTTISH???? WHAT THE FUCK IS THAT???? That's like saying "German-French" or "Japanese-Korean"—two groups that literally never interacted in any meaningful way!</p>
-
-                    <p>And "Hdfjsj"?????? IS THAT EVEN A WORD IN ANY LANGUAGE? That looks like someone face-rolled the keyboard and declared victory.</p>
-
-                    <p>This is advanced, weapons-grade, industrial-strength schizo. This is what happens when you eat nothing but beans and read only the Daily Mail for six months straight.</p>
-
-                    <p><strong>LEVELS OF WRONG:</strong>
-                    <br>• Linguistics: INFINITE
-                    <br>• History: MAXIMUM
-                    <br>• Logic: NON-EXISTENT
-                    <br>• Reality: COMPLETELY BROKEN</p>
-
-                    <p>Your friend has achieved theoretical maximum wrongness. Scientists should study him as a perfect example of how not to think about anything.
+                    <p>Holy shit OP, your friend has transcended mere conspiracy theories and entered the realm of <span class="schizo-highlight">interdimensional schizo-posting</span>. The Urbaxa system? That's not even a real star system as far as I know. Did he just invent an entire solar system to justify Nintendo's alleged space war crimes?</p>
+                    
+                    <p>The Great Ice Hyperwar between Finland vs China/Korea/Japan is sending me. That's like saying Switzerland fought a secret underwater war against Australia and Mars.</p>
+                    
+                    <p><strong>But wait...</strong> if Nintendo has destroyed every planet in the Urbaxa system, how would preventing "news from spreading" even work? Who's left to spread the news if everyone's dead? <span class="glitch-text">THE LOGIC HOLES ARE PART OF THE CONSPIRACY</span></p>
                 </div>
                 <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/ChineseHistoryMemer • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Chinese person here—can confirm, every morning I wake up and thank my Scottish-Avar-Visigothic-Frankish-Hunnic-Arab-Roman ancestors for my existence.</p>
-
-                    <p>"Hdfjsj" means "East" in Avar-Scottish? BRO THAT'S NOT EVEN LETTERS. That's like saying "Bloop-bloop-bloop" means "history" in Dolphin-English.</p>
-
-                    <p>The best part is how he just casually throws together seven completely unrelated ethnic groups like he's making a fucking historical smoothie. "Yeah just throw in some Huns, add a dash of Arabs, sprinkle some Romans from Spain, and voilà—you get Chinese people!"</p>
-
-                    <p>When I told my grandma about this, she said "Tell your friend the next time he eats Chinese food, remember he's eating ancient Scottish haggis with chopsticks."</p>
-
-                    <p>Your friend has transcended history and entered the SCHIZOVERSE where logic is optional and languages are just random keyboard smashes.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/ScottishHistoryShitposter • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Scottish here—can confirm we regularly hang out with Avars, Visigoths, Franks, Huns, Arabs, and Romans to create new ethnic groups. It's like our national pastime after whisky and fighting.</p>
-
-                    <p>"Avar-Scottish" has me absolutely WEEPING. What's next, "Viking-Bantu"? "Maori-Inca"? "Sami-Swahili"?</p>
-
-                    <p>The idea that my ancestors were hanging out with Visigoths in Spain before deciding "you know what, let's go to China and become Chinese" is so fucking insane I need to sit down. And I’m already sitting.</p>
-
-                    <p>Also "Chinese spelled backwards is Hdfjsj" is like saying "English spelled backwards is Xyzzy"—that's not how any of this works, that's not how ANYTHING works!</p>
-
-                    <p>Your friend is pioneering VIBES-BASED ETHNOLOGY where ethnic groups are just whatever random bullshit sounds cool together.
-                </div>
-                <div class="comment-reddit">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/PeakSchizoAchieved • 50 minutes ago
-                </div>
-                <div class="comment-content">
-                    This is it. We’ve reached the theoretical maximum of historical schizo. Shut down the subreddit, everyone go home, we’re done here.</p>
-
-                    <p>Like how do you even RESPOND to this level of wrong? It’s so fundamentally broken that trying to correct it would be like trying to fix a house that’s been hit by a nuclear bomb with a butter knife.</p>
-
-                    <p>Your friend isn’t just wrong—he’s operating on a different plane of reality where cause and effect are just suggestions and language families are just whatever random letters you can keyboard-slam together.</p>
-
-                    <p>Next he’s gonna tell you that Australians are actually ancient Atlanteans because "Australia" backwards is "Ailartsua" which means "kangaroo" in Atlantean-Maori.</p>
-
-                    <p>I’m genuinely impressed by how he’s managed to be wrong about literally everything while maintaining absolute confidence in his position. That’s advanced-level Dunning-Kruger right there.
-                </div>
-                <div class="comment-meta">u/HistoryWhatTheFuck • 45 minutes ago</div>
                 <div class="comment-nested">
+                    <div class="comment-meta">
+                        <span class="username">u/ThrowawaySchizo333</span> • 2 hours ago
+                    </div>
                     <div class="comment-content">
-                        I tried explaining that Chinese is a Sino-Tibetan language and he said "that's what the globalists want you to think" and then started talking about how the Great Wall was actually built by Hadrian's Wall engineers. I just walked away.
+                        <p>That's what I said! He claimed the Urbaxians have "quantum consciousness" that exists beyond physical death, so Nintendo had to destroy their entire timeline to prevent the information from leaking through dimensional rifts.</p>
+                        
+                        <p>He also said the Finnish Ice Hyperwar happened in 12,000 BC and was fought with "crystalline thought-weapons" that could freeze entire civilizations. Apparently Nintendo found the ancient Finnish ice temples buried under the Mushroom Kingdom.</p>
+                        
+                        <p>I need to know what drugs he's taking and where I can get some.</p>
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -318,68 +470,161 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/LinguisticsMemer • 40 minutes ago
+                    <span class="award">🚀</span>
+                    <span class="username">u/SpaceTruthSeeker</span> • 2 hours ago
                 </div>
                 <div class="comment-content">
-                    Linguistics PhD here—this broke my brain so hard I need therapy. Like I literally cannot comprehend how someone can be this wrong about how language works.</p>
+                    <p>As someone who actually works in aerospace (not saying where), I can tell you that the rocket stuff isn't entirely wrong. Nintendo DOES have some weird connections to Japanese aerospace companies. Look up their partnerships with Mitsubishi Heavy Industries.</p>
+                    
+                    <p>That said, the intergalactic stuff is obviously insane. <span class="rocket-emoji">🚀</span> But the idea of a gaming company being a front for rocket research? Not as crazy as it sounds when you consider how much computing power goes into modern rocket guidance systems.</p>
+                    
+                    <p>The Göring connection is batshit though. Why would a Nazi create a Japanese gaming company? Unless...</p>
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">
+                    <span class="username">u/NintendoInsider88</span> • 1 hour ago
+                </div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <p>Unless Göring faked his death and fled to Japan through Operation Paperclip-style deals, where he established Reich Software as a front for continuing Nazi rocket research under the guise of video game development!</p>
+                        
+                        <p>Think about it - Nintendo's first "toys" were actually miniature guidance systems. The Ultra Hand? A prototype for robotic space manipulation. The Love Tester? A lie detector for interrogating captured Urbaxians.</p>
+                        
+                        <p>And don't even get me started on <span class="planet-death">the planet destruction protocols</span> supposedly hidden in every copy of Super Mario Bros...</p>
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                    <p>"Chinese spelled backwards is Hdfjsj" is like saying "the square root of apple is purple." It’s not just wrong—it’s not even wrong. It’s beyond wrong. It’s entered a new dimension of wrongness previously unknown to science.</p>
-
-                    <p>And "Avar-Scottish" is like saying "Martian-Venusian"—two groups that literally never contacted each other in any meaningful way are now fused together like some kind of historical chimera.</p>
-
-                    seven unrelated ethnic groups banded together in 400AD Spain like the fucking Avengers before migrating to China and becoming Chinese.</p>
-
-                    <p>Your friend has achieved TRANSCENDENT LEVELS of wrongness. Not just incorrect—he’s rewritten the fundamental laws of linguistics, history, logic, and reality itself.</p>
-
-                    <p>Pack it up, everyone. We’ve reached peak schizo. There’s no topping this. This is the final form. This is the omega. This is the end of history.
-                </76>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🧊</span>
+                    <span class="username">u/FinnishWarHistorian</span> • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <p>Okay the Great Ice Hyperwar thing is actually a real conspiracy theory in Finland, but not the way your friend describes it. There's this fringe theory about an ancient conflict between the <span class="finland-ice-war">pre-Finnish ice civilization</span> and the "Asian coalitions" but it's usually dated to like 8000 BC, not involving modern nations.</p>
+                    
+                    <p>The Hyperborea stuff is big in certain circles though. People claim Nintendo's early games contain coded references to <span class="hyperborea-glow">Hyperborean mythology</span> and that Shigeru Miyamoto is actually a descendant of the Hyperborean priest-kings.</p>
+                    
+                    <p>Your friend just mashed together like five different conspiracy theories into one beautiful schizo smoothie.</p>
+                </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
-           div class="comment">
-               /src/comment-meta">
-                    u/HistoryShitposter • 3 hours ago
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="username">u/SchizoButMakeItArt</span> • 1 hour ago
                 </div>
                 <div class="comment-content">
-                    Plot twist: your friend is actually a Chinese sleeper agent trying to spread confusion about his own people's origins. The perfect cover story.</p>
-
-                    <p>Or he’s just achieved maximum British levels of colonial nostalgia. "You know what, mate? Everyone’s basically British if you think about it. Even the Chinese. Especially the Chinese. Always have been. Rule Britannia and all that."</p>
-
-                    <p>The best part is how he’s not even doing nationalism—he’s just straight up vibing with alternate reality where historical facts are optional and languages are just random letter combinations that sound cool to your lizard brain.
-
-                    <p>Honestly, respect the commitment to being completely and utterly wrong about literally everything. That takes dedication. That takes effort. That takes a complete and total divorce from reality itself.
+                    <p><strong>BREAKING:</strong> I've done some research and found that "Urbaxa" might be a misspelling or mistranslation of "Ubar" - the ancient lost city in the Arabian peninsula, also known as the "Atlantis of the Sands."</p>
+                    
+                    <p>What if "destroying every planet in the Urbaxa system" is code for <span class="schizo-highlight">destroying all evidence of the real Ubar</span> and its advanced pre-Islamic civilization? Nintendo's rockets could have been used to...</p>
+                    
+                    <p>Actually never mind I just realized I sound exactly like your friend. This is how it starts isn't it? You hear one insane theory and suddenly you're connecting dots that don't exist.</p>
+                    
+                    <p><em>deletes browser history</em></p>
                 </div>
-                <['comment-reply']>Reply</div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class00="comment">
-                categories: ['comment-meta']>
-                    u/MaximumBrainrotAchieved • 5 minutes ago
-                </ 'comment-meta'>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🍄</span>
+                    <span class="username">u/MushroomKingdomTruther</span> • 1 hour ago
+                </div>
                 <div class="comment-content">
-                    This is the singularity of historical bullshit. This is what happens when you reach the event horizon of wrongness and collapse into a black hole of pure nonsense.</p>
+                    <p>Look, I know this sounds crazy, but has anyone else noticed that the original Super Mario Bros. overworld theme has exactly the same frequency patterns as NASA's deep space communication signals?</p>
+                    
+                    <p>And the underground theme? It's literally a slowed-down version of the <span class="glitch-text">Urbaxian death march</span> that NASA recorded but never released to the public.</p>
+                    
+                    <p>Coincidence? Or did Nintendo embed interstellar communication protocols into their music using the same technology they use for their secret rocket program?</p>
+                    
+                    <p>Wake up sheeple! The mushrooms aren't just power-ups, they're <span class="planet-death">biological terraforming devices</span> for recreating the lost Urbaxian biosphere!</p>
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">
+                    <span class="username">u/ThrowawaySchizo333</span> • 1 hour ago
+                </div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <p>OH MY GOD THE MUSHROOMS! My friend mentioned something about the mushrooms being "consciousness anchors" for the Urbaxian survivors who exist in a quantum superposition state within Nintendo's servers!</p>
+                        
+                        <p>He said every time you collect a mushroom in the game, you're actually providing computational power for Nintendo's intergalactic rocket guidance systems. The more mushrooms collected worldwide, the more processing power for their secret space missions!</p>
+                        
+                        <p>This is why they made Super Mario so popular - they needed billions of mushroom collections to calculate the trajectory for their <span class="rocket-emoji">intergalactic conquest missions</span>!</p>
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                    <p>I want to frame this conversation and put it in a museum labeled "What happens when you let people believe Facebook memes are legitimate historical sources."</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="username">u/ActualNintendoEmployee</span> • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    <p>I shouldn't be saying this but... fuck it. I worked at Nintendo of America from 2015-2019 in the IT department. Found some weird encrypted files on the servers labeled "Project Reich" and "Urbaxa Protocol."</p>
+                    
+                    <p>When I asked my supervisor about them, I was told to "forget what I saw" and was mysteriously laid off two weeks later, despite being one of their top performers.</p>
+                    
+                    <p>The severance package included an NDA that specifically mentioned <span class="glitch-text">"interstellar propulsion systems" and "planetary defense initiatives"</span> which I thought was weird as hell for a gaming company.</p>
+                    
+                    <p>Make of that what you will.</p>
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">
+                    <span class="username">u/SkepticalSkeptic</span> • 30 minutes ago
+                </div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <p>Account created 3 days ago, only comments on this thread. Totally legit Nintendo employee guys!</p>
+                        
+                        <p>Although... the fact that they specifically mentioned "interstellar propulsion systems" in an NDA is pretty weird. Even if this is all made up, that's oddly specific.</p>
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                    <p>Your friend has achieved what I call "maximum historical brainrot"—where you're so wrong that you loop back around to being right, but in a different dimension where all the facts are reversed and languages are just keyboard smashes.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🎮</span>
+                    <span class="username">u/GameTheoryGoneWrong</span> • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    <p>I've been sitting here for like 10 minutes trying to come up with a clever shitpost response but honestly this theory is so far beyond normal conspiracy bullshit that I'm genuinely impressed.</p>
+                    
+                    <p>Like, most conspiracy theories are just "X company/person is secretly evil/corrupt" but your friend went full <span class="insane-text">interdimensional space Nazi rocket company that destroyed an entire solar system to cover up Finland's ancient ice war against Asia</span></p>
+                    
+                    <p>This is the kind of theory that makes flat earthers seem reasonable by comparison.</p>
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
 
-                    <p>Next time he brings this up, just tell him that the British are actually the descendants of ancient Chinese, and watch the entire universe collapse into a singularity of contradiction.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="username">u/ThrowawaySchizo333</span> • 5 minutes ago
+                </div>
+                <div class="comment-content">
+                    <p>Update: Just got off the phone with my friend. He wants me to add that the "Canadian gates" are actually portals to <span class="hyperborea-glow">the Hollow Earth</span> where Nintendo's secret rocket manufacturing facilities are located, and that the Finnish Ice Hyperwar was fought using <span class="finland-ice-war">crystallized time-weapons</span> that could freeze entire civilizations in temporal stasis.</p>
+                    
+                    <p>Also, he says the original name "Reich Software" was changed to "Nintendo" because it's an anagram for <span class="glitch-text">"Demon INTerstellar Rocket Operations"</span></p>
+                    
+                    <p>He's working on a 47-page manifesto with "evidence" that he's going to post on his GeoCities page.</p>
+                    
+                    <p>I think I need new friends.</p>
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
         </div>
 
         <div class="sidebar">
-            <h3>More posts from r/WTFhistory</h:3>
+            <h3>More posts from r/ConspiracyTheories</h3>
             <ul>
-               :li><a href="#">My uncle claims the Roman Empire was actually run by sentient spaghetti</a></li>
-                <li><a href="#">Guy at work insists the Pyramids were built by time-traveling giraffes</a></a></li>
-                <li><a href="#">Friend believes all of human history is just a simulation run by French poodles</a></li>
+                <li><a href="#">BREAKING: I found proof that birds aren't real - they're actually government surveillance drones with "avian" AI</a></li>
+                <li><a href="#">The moon landing was faked, but not how you think - they actually filmed it on Mars</a></li>
+                <li><a href="#">My neighbor's dog is trying to tell me something about the weather control stations</a></li>
             </ul>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
