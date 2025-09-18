@@ -1,259 +1,329 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Franklin Sikes (1904-1962): From Mississippi to Texas shipyards, whole family followed : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Mississippi_Memory_Keeper</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Robert Franklin Sikes (1904-1962) - From Mississippi cotton fields to Texas shipyards, died exactly one day after his 58th birthday</div>
-    <div class="post-meta">
-      <span class="comment-score">634 upvotes</span> • posted by <span class="comment-author">MississippiRoots</span> <span class="flair">Southern Genealogy</span>
-    </div>
-    <div class="post-content">
-      <p>I've been researching my great-grandfather Robert Franklin Sikes and found a fascinating but tragic story. Born November 10, 1904 in Coldwater, Mississippi to Frank William Sikes and Emma Ann Headley. His mother died just two months after his birth - complications from childbirth. His father was apparently an illiterate alcoholic farmer who "never bothered raising his children."</p>
-      
-      <p>Key details I've uncovered:</p>
-      <ul>
-        <li>Mother died January 1905 when Robert was 2 months old</li>
-        <li>1920: Living with older brother Jefferson Davis Sikes, both working as night watchmen</li>
-        <li>Moved to Quincy, FL and worked in textile mills</li>
-        <li>1930: Married and moved to Port Arthur, TX to work in shipyards</li>
-        <li>All siblings eventually moved to Port Arthur too</li>
-        <li>Died November 11, 1962 of heart attack - exactly one day after his 58th birthday</li>
-      </ul>
-      
-      <p>Looking for any records about his stepmother, what happened to his father Frank, and why the whole family ended up in Port Arthur!</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MississippiArchives</span> • <span class="comment-score">412 points</span> • 8 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found his birth and mother's death certificates! Emma Ann Headley Sikes died January 15, 1905 from "puerperal fever and exhaustion" - classic postpartum infection. She was only 28 years old.</p>
-        
-        <p><strong>The stepmother mystery SOLVED:</strong> Frank William Sikes married Mary Elizabeth "Molly" Thompson on March 3, 1906 - she was just 16 years old (Frank was 34). This was actually illegal under Mississippi law at the time, but rural areas often looked the other way.</p>
-        
-        <p>Molly was essentially a child bride forced to raise her new husband's infant son. The 1910 census shows her as age 20 with 4-year-old Robert, but here's the tragic part - she died in 1918 during the Spanish Flu pandemic at age 28, the same age as Robert's biological mother.</p>
-        
-        <p>Frank then married a THIRD time in 1919 to Dora Belle Jenkins, age 19 (Frank was now 47). Dora outlived Frank and actually raised Robert through his teenage years. Robert never referred to her as his mother though - always called her "Miss Dora."</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">ColdwaterHistorian</span> • <span class="comment-score">354 points</span> • 7 hours ago
-        </div>
-        <div class="comment-content">
-          <p>Found Frank William Sikes' criminal records! He was absolutely notorious in Tate County. Between 1905-1920, he was arrested 17 times for:</p>
-          
-          <ul>
-            <li>Public drunkenness (8 times)</li>
-            <li>Disturbing the peace (4 times)</li>
-            <li>Assault on a neighbor (twice)</li>
-            <li>Illegal liquor sales (twice)</li>
-            <li>Non-payment of child support (once)</li>
-          </ul>
-          
-          <p>The assault charges are fascinating - in 1912, he beat up his neighbor John McAllister with a fence post over a property line dispute. In 1917, he attacked the local sheriff who tried to confiscate his illegal still.</p>
-          
-          <p>Frank died in 1926 at age 62 from cirrhosis of the liver. His death certificate lists him as "widowed" but he was actually divorced from Dora - she left him in 1924 after he tried to force her oldest daughter (his stepdaughter) into marriage at age 15. The man was absolutely vile.</p>
-          
-          <p>Local newspaper accounts describe him as "the terror of Coldwater township" and "a disgrace to the community." He was buried in Potter's Field because no church would allow his burial in consecrated ground.</p>
-        </div>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">FamilySecrets</span> • <span class="comment-score">267 points</span> • 6 hours ago
-        </div>
-        <div class="comment-content">
-          <p>Holy shit, OP's great-great-grandfather was a straight-up monster. Dude was basically running a child bride factory - married a 16-year-old to raise his infant son, then tried to marry his 15-year-old stepdaughter? That's not just "not a good guy," that's fucking criminal.</p>
-          
-          <p>The fact that Robert turned out decent despite growing up with this abusive alcoholic POS is honestly amazing. Nature vs nurture debate solved - this proves you can overcome your shitty upbringing.</p>
-        </div>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">SouthernGenealogy</span> • <span class="comment-score">198 points</span> • 5 hours ago
-        </div>
-        <div class="comment-content">
-          <p>Jesus Christ, this gets worse the deeper you dig. Frank wasn't just a drunk - he was a predator who systematically destroyed every woman who came into his life. First wife dies in childbirth, second wife dies young from overwork probably, third wife runs for her life, and he tries to force his stepdaughter into marriage?</p>
-          
-          <p>No wonder Robert's kids all turned out successful - they probably watched their dad work himself to death to escape that family legacy. Building ships for 32 years with perfect attendance? That's the behavior of someone who NEVER wanted to be like his father.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">JeffersonDavisResearch</span> • <span class="comment-score">298 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found Jefferson Davis Sikes' employment records! He and Robert worked as night watchmen at the Coldwater Cotton Mill starting in 1919. They were paid $1.25 per night to guard the machinery from theft.</p>
-        
-        <p>Here's why they moved to Quincy, Florida: In 1921, the mill burned down under suspicious circumstances. Jefferson had taken out a $5,000 insurance policy on the mill just 3 months earlier through his brother-in-law who was an insurance agent. The insurance company refused to pay, claiming arson.</p>
-        
-        <p>The brothers fled to Florida to avoid investigation. They found work at the Quincy Cotton Mill - Jefferson as a loom fixer, Robert as a spinner. Robert actually hated textile work and only lasted 18 months before moving to Texas.</p>
-        
-        <p>Jefferson stayed in Quincy and eventually owned three textile mills himself by 1940. He died there in 1972, worth over $2 million. He never married but left his entire fortune to his sister's children.</p>
-        
-        <p>Family rumor was that Jefferson really did burn down the Coldwater mill, but it was never proven. The insurance company eventually settled for $2,000 just to make it go away.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">PortArthurShipyards</span> • <span class="comment-score">245 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found Robert's employment records at the Port Arthur shipyard! He started as a riveter's helper on March 15, 1930, making $0.65 per hour. The Texas Company (later Texaco) was building oil tankers and needed thousands of workers.</p>
-        
-        <p>Here's the Port Arthur connection: In 1929, Jefferson Davis Sikes invested in a textile mill in Port Arthur. He sent word to his siblings that Texas was booming and jobs were plentiful. One by one, they all migrated there:</p>
-        
-        <ul>
-          <li>Robert: March 1930 (shipyard worker)</li>
-          <li>Sister Mary: June 1931 (married a refinery worker)</li>
-          <li>Brother William: August 1932 (oil field worker)</li>
-          <li>Sister Nancy: October 1933 (married a longshoreman)</li>
-        </ul>
-        
-        <p>Robert worked at the Pennsylvania Shipyards (later Todd Shipyards) for 32 years. He started as a riveter's helper, became a riveter in 1935, then a structural steel worker in 1940. During WWII, he worked 7 days a week building Liberty ships.</p>
-        
-        <p>His personnel file shows he was an excellent worker - only missed 12 days in 32 years. He retired in 1962 due to heart problems and died exactly 6 months later. His funeral was attended by over 200 shipyard workers - he was apparently very well-liked.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">SikesFamilyResearch</span> • <span class="comment-score">187 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found Robert's marriage certificate! He married Lillian Mae Thompson (no relation to his stepmother) on June 14, 1930 in Port Arthur. Lillian was from Louisiana and had moved to Texas for work during the Depression.</p>
-        
-        <p>They had 4 children: Robert Franklin Jr (1931), Lillian Mae (1933), Betty Ann (1935), and James William (1938). All were born in Port Arthur and lived to adulthood.</p>
-        
-        <p>Lillian worked as a domestic servant for wealthy oil families while Robert built ships. They bought a small house at 1423 Proctor Street in 1938 for $1,200 - Robert built most of it himself using scrap lumber from the shipyard.</p>
-        
-        <p>Robert Jr followed his father into the shipyards, working there from 1950-1985. The family became part of Port Arthur's working-class aristocracy - three generations of Sikes men built ships that sailed around the world.</p>
-        
-        <p>Lillian died in 1988, having never remarried. She always said Robert was the only man who ever treated her with respect, unlike her own abusive father. The family still owns the house on Proctor Street - now worth over $150,000.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DeathCertificates</span> • <span class="comment-score">134 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found his death certificate details! Robert died at 7:42 AM on November 11, 1962 at St. Mary's Hospital in Port Arthur. The cause was "acute myocardial infarction due to coronary thrombosis" - a massive heart attack.</p>
-        
-        <p>He had been having chest pains for weeks but refused to see a doctor because he couldn't afford to miss work. On November 10th, his 58th birthday, he worked a full shift at the shipyard despite feeling unwell.</p>
-        
-        <p>That evening, he celebrated his birthday with his family - had cake, opened presents, went to bed happy. At 6:30 AM the next morning, he woke up gasping for air. He was dead within an hour.</p>
-        
-        <p>His funeral was held November 14th at St. Paul's Methodist Church. Over 300 people attended - the church had to set up extra chairs outside. He was buried in Greenlawn Memorial Park, Section C, Plot 47.</p>
-        
-        <p>The cemetery records show his grave is marked with a simple stone that reads: "Robert Franklin Sikes, Nov 10 1904 - Nov 11 1962, Loving Father and Husband." His family couldn't afford more elaborate memorial, but they maintain the grave to this day.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MississippiRoots</span> • <span class="comment-score">89 points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p>This is absolutely incredible! I had no idea about Frank's criminal history, the stepmother drama, or that Jefferson might have been an arsonist. The fact that Robert died exactly one day after his birthday is heartbreaking - almost like he was holding on just to reach 58.</p>
-        
-        <p>I'm planning a trip to Port Arthur to see the old shipyard sites and find Robert's grave. Thank you all so much - this gives me months of research leads and has completely changed my understanding of this branch of my family!</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>892</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Robert Franklin Sikes (1904-1962): From Mississippi to Texas shipyards, whole family followed</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Mississippi</span>
+                    <span class="flair">Texas Migration</span>
+                    <span class="flair">Shipbuilding</span>
+                    <span class="flair">Textile Mills</span>
+                    <span>Posted by u/Mississippi_Memory_Keeper • 6 hours ago</span>
+                </div>
+
+                <p>I've been piecing together Robert Franklin Sikes' life story, and it's a classic tale of Southern migration during the Depression era. Born November 10, 1904 somewhere in Northern Mississippi (likely Coldwater area) to Frank William Sikes and Emma Ann Headley.</p>
+
+                <p><strong>Tragic Beginning:</strong> Emma died just two months after Robert's birth. Frank quickly remarried to a much younger woman who became Robert's stepmother. By 1910, census shows them in Coldwater, MS where Frank was an illiterate farmer. Local records describe Frank as "an infamous alcoholic and drunker who never bothered raising his children" and was known for cheating.</p>
+
+                <p><strong>Early Adulthood:</strong> By 1920, Robert was living in Coldwater with his older brother Jefferson Davis Sikes. Both worked as nighttime watchmen. Soon after, they moved to Quincy, FL where they found work in textile mills - a common migration pattern for poor Southern whites.</p>
+
+                <p><strong>Texas Bound:</strong> Robert left Florida, married in 1930, and moved to Port Arthur, Texas. For most of his life, he worked in the shipyards - perfect timing as Port Arthur became a major shipbuilding hub during WWII. Died November 11, 1962 of a heart attack. Interestingly, ALL of his siblings eventually moved to Port Arthur too.</p>
+
+                <p><strong>My Brick Walls:</strong> Can't find his marriage record from 1930 (don't know his wife's name), and I'm trying to track down exactly which shipyard he worked at. Also curious why the entire family converged on Port Arthur - was there a specific relative or job opportunity that drew them all there?</p>
+
+                <div class="comments-count">
+                    <a href="#">156 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Port_Arthur_Shipyards • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his employment record!</strong> Robert F. Sikes worked at Texas Shipbuilding Company in Port Arthur from 1936 until his death in 1962. Started as a riveter helper, promoted to riveter in 1938, then to shipfitter in 1942 during the war boom. Employee #TSC-4721. The company built Liberty ships and tankers during WWII. His 1952 performance review shows "excellent worker, reliable, never missed a day except for illness." Company folded in 1963, a year after he died.
+                </div>
+                <div class="comment-meta">u/Mississippi_Memory_Keeper • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This is fantastic! So he was a shipfitter - skilled position. Do you know if he worked on any specific ships? And was there a family connection that brought him to Port Arthur originally?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Port_Arthur_Shipyards • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        He worked on several notable vessels: SS Port Arthur (launched 1942), SS Beaumont (1943), and SS Texas City (1944) - all Liberty ships. The family migration story: His uncle, Thomas Jefferson Sikes (Frank's brother), moved to Port Arthur in 1927 to work at the Gulf Oil refinery. When Robert couldn't find steady work in Florida during the Depression, Uncle Tom invited him to Texas. The whole family followed - classic chain migration pattern.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Mississippi_Records_Guru • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his marriage record!</strong> Robert Franklin Sikes married Mary Elizabeth "Mae" Thompson on March 15, 1930 in Port Arthur, Texas. She was 19, he was 25. Mae was the daughter of James Thompson, a refinery worker who'd moved from Arkansas. They married at the First Baptist Church of Port Arthur. Witnesses were his brother Jefferson Davis Sikes and Mae's sister Ruth Thompson. The marriage certificate lists his occupation as "mill worker" - he hadn't started at the shipyard yet.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Coldwater_MS_Historian • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Details on his father's infamy:</strong> Frank William Sikes was arrested 27 times between 1905-1920 in Coldwater for public drunkenness, gambling, and once for assault. Court records show he lost the family farm in 1918 to settle gambling debts. The stepmother, Lillian Mae "Lillie" Johnson (born 1890, married Frank 1905 when she was 15 and he was 32), was described by neighbors as "a child raising children." She had 8 children of her own with Frank between 1906-1920. Robert essentially raised himself and his younger siblings.
+                </div>
+                <div class="comment-meta">u/Mississippi_Memory_Keeper • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This explains so much about Robert leaving as soon as he could. Poor Lillie - 15 years old marrying a 32-year-old alcoholic. Do you know what happened to Robert's full siblings after they all moved to Port Arthur?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Coldwater_MS_Historian • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        All the Sikes siblings in Port Arthur: Jefferson Davis Sikes worked at Gulf Oil refinery; Mary Ann Sikes married a refinery worker; William Thomas Sikes became a longshoreman; Emma Lou Sikes married a shipyard worker; and baby sister Sarah Belle Sikes became a schoolteacher. They formed a tight-knit clan - all lived within 6 blocks of each other in the Pear Ridge neighborhood. The 1940 census shows them as neighbors on Jefferson Drive.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Frank_Sikes_Dirt_Digger • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Oh, you want the REAL tea on Frank William Sikes?</strong> This guy was a piece of work. Beyond the 27 arrests, I found he was run out of THREE Mississippi counties before settling in Coldwater. Tallahatchie County records show he was accused (but never convicted) of horse theft in 1898. He abandoned his first wife and two kids in 1900 - they starved to death during a harsh winter while he was off gambling in Vicksburg. The local paper called it "a tragedy of neglect" but he was never charged. Emma Ann Headley (Robert's mother) was actually his SECOND wife, and she died from complications after Robert's birth because Frank refused to pay for a doctor - said "women have been having babies since Eve, she'll be fine." She wasn't. Then he marries a 15-year-old girl to raise his infant son while he's out drinking and whoring. The man was pure evil.
+                </div>
+                <div class="comment-meta">u/Mississippi_Memory_Keeper • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Jesus Christ. I knew he was bad but this is next level. No wonder Robert got as far away as possible and never talked about his childhood. How did this monster even survive in a small town like Coldwater? You'd think someone would have taken justice into their own hands.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Frank_Sikes_Dirt_Digger • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        He survived because he was a snitch. Court records show he provided testimony that helped convict several moonshiners and gambling rivals. He had dirt on everyone, and they had dirt on him - classic small-town mutually assured destruction. Plus, he kept to himself mostly, just drinking and gambling away what little money he had. The real tragedy is that Emma's family wanted to take baby Robert after she died, but Frank refused out of pure spite. Said "he's my son, I'll do what I want with him" - then promptly ignored the kid for the next 17 years.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Florida_Textile_Mills • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Robert's time in Quincy, Florida:</strong> He and brother Jefferson worked at the Quincy Cotton Mill from 1922-1926. Company housing records show they lived in Mill Village #3, shared a room with 2 other workers. Robert was a "spinner" - operated spinning frames, very skilled but dangerous work. Made $1.25 per day, 6 days a week. Left in 1926 after a mill accident injured his right hand - that's when he decided to head to Texas where Uncle Tom promised better opportunities.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Port_Arthur_Census • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>His life in Port Arthur:</strong> 1930 census shows Robert and Mae renting at 1809 Jefferson Drive for $18/month. No children listed - they never had any. 1940 census shows they owned the home (worth $2,000) - the American dream achieved through shipyard wages. City directories show he was active in the Masonic Lodge, served as treasurer of Local 447 (shipbuilders union), and attended First Baptist regularly. Mae died in 1958, Robert continued living in the same house until his death.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Death_Records_TX • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>His death details:</strong> Robert died November 11, 1962 at 9:45 PM at St. Mary's Hospital, Port Arthur. Cause: massive coronary thrombosis (heart attack). He was 58 years old, but the death certificate notes "appeared older due to hard living and work." He'd been hospitalized for chest pains 3 times in the previous year but kept working. His funeral was held at First Baptist, burial at Greenlawn Cemetery. Pallbearers were all shipyard coworkers. His estate was valued at $8,742 - mostly his house and a small savings account.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Mae_Thompson_Research • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>About his wife Mae:</strong> Mary Elizabeth "Mae" Thompson was born October 30, 1910 in El Dorado, Arkansas. Her family moved to Port Arthur in 1926 when her father got work at the refinery. She met Robert at a church social in 1929. She worked as a seamstress at home, taking in sewing to supplement their income during the Depression. After Robert died, she lived alone for 9 years, supported by his pension and her sewing. Died of cancer in 1971. She's buried beside Robert at Greenlawn. The couple had no children - Mae suffered complications from an infection that left her unable to have children.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">My ancestor also moved from textile mills to shipyards during WWII</a></li>
+                <li><a href="#">Anyone else have family that converged on one city like the Sikes did?</a></li>
+                <li><a href="#">Tips for finding shipyard employment records from the 1940s?</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
