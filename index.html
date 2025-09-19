@@ -1,384 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What if there was a country that had a civil war every SECOND? : alternativehistory</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemField, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/alternativehistory</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/SecondCivilWar</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>6.9k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">What if there was a country that had a civil war every SECOND? Like literally every 1-2 seconds, full civil war, then it ends, then it starts again</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Discussion</span>
-                    <span class="flair">Speculative</span>
-                    <span class="flair">Absurd</span>
-                    <span class="flair">21st Century</span>
-                    <span>Posted by u/SecondCivilWar • 3 hours ago</span>
-                </div>
-
-                <p>Okay I know we just had the thread about America having civil wars every 4 years, but my brain just went FULL SEND and now I can't stop thinking about:</p>
-
-                <p><strong>What if there was a country where a civil war breaks out EVERY SINGLE SECOND?</strong></p>
-
-                <p>Like the clock hits 12:00:01 - BOOM civil war. 12:00:02 - civil war ends. 12:00:03 - NEW civil war starts. This goes on FOREVER. Every second is either starting a civil war, actively having a civil war, or ending a civil war.</p>
-
-                <p><strong>Some absolutely unhinged consequences I'm thinking about:</strong></p>
-                <ul>
-                    <li>The national anthem is just 1 second long because that's the maximum attention span</li>
-                    <li>By the time you finish reading this sentence, 12 different governments have been overthrown</li>
-                    <li>The military just stands in place constantly switching uniforms</li>
-                    <li>Population is 0 because everyone died in the first minute of existence</li>
-                    <li>The country exists in a quantum superposition of both existing and not existing</li>
-                    <li>Time zones are measured in milliseconds</li>
-                    <li>The Constitution is just a sticky note that says "FIGHT!"</li>
-                </ul>
-
-                <p>Also, how would this even work logistically? Would they have like a civil war starter pistol that goes off every second? Do people just automatically start fighting and then stop like they're in some kind of massive, national flash mob? Do they have unionized civil war participants who work in shifts?</p>
-
-                <p>Please help me flesh out this absolutely unhinged timeline because I can't stop thinking about a country where the most stable government lasts 0.8 seconds before someone declares independence again.</p>
-
-                <div class="comments-count">
-                    <a href="#">2.4k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="award">🏅</span>
-                    u/QuantumCivilWarExpert • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>"The country exists in a quantum superposition of both existing and not existing"</strong>
-
-                    <p>OP just invented the Heisenberg Uncertainty Principle of geopolitics. This country both exists and doesn't exist until you try to observe it, at which point it collapses into a civil war.</p>
-
-                    <p>By 2024, the UN would have given up and just listed them as "Schrödinger's Nation - Status: ¯\_(ツ)_/¯"</p>
-
-                    <p>Also imagine being a historian in this timeline:</p>
-                    <p><em>"The Great Civil War of 12:34:56 PM lasted exactly 0.7 seconds and resulted in the overthrow of the government that had been established at 12:34:55 PM, which itself had replaced the regime from 12:34:54 PM..."</em></p>
-                </div>
-                <div class="comment-meta">u/SecondCivilWar • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        LMAO the UN would just have a permanent placeholder on their member list: "Country That May Or May Not Be Having A Civil War Right Now - Check Back In 0.5 Seconds"
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🥇</span>
-                    u/CivilWarUnionRep • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    By the time I finish typing this comment, approximately 180 governments have been overthrown, 90 constitutions have been written and immediately burned, and 45 different factions have claimed to be the legitimate rulers of this country.</p>
-
-                    <p>The civil war participants would definitely have a union. "Local 847 of the International Brotherhood of Civil War Participants - we demand a 0.1 second break between civil wars and dental insurance that covers teeth lost in revolutionary combat."</p>
-
-                    <p>Also, the national currency would be measured in microseconds. "I'll pay you 500 microseconds for that bread" *government changes 3 times during transaction*</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/ActualHistorian • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Okay but seriously, this would create the most fascinating linguistic evolution ever. The language would develop entirely around the concept of temporal impossibility:</p>
-
-                    <ul>
-                        <li>Grammar would have no past or future tense - everything is present tense</li>
-                        <li>The longest word in their language would be 0.3 seconds long</li>
-                        <li>They'd have 86,400 different words for "government"</li>
-                        <li>Their alphabet would be just grunting and pointing</li>
-                    </ul>
-
-                    <p>Also, by the time you finish saying the country's name, it doesn't exist anymore. Tourists would be like "I'm visiting the glorious nation of-" *POOF* "never mind, I'm in a different country now."</p>
-                </div>
-                <div class="comment-meta">u/SecondCivilWar • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        The language would just be people screaming "WHO'S IN CHARGE NOW?" over and over again at increasingly high speeds
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">💀</span>
-                    u/PopulationMathematician • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Let's do the math on this cursed timeline:</p>
-
-                    <p><strong>Civil wars per minute:</strong> 60</p>
-                    <p><strong>Civil wars per hour:</strong> 3,600</p>
-                    <p><strong>Civil wars per day:</strong> 86,400</p>
-                    <p><strong>Civil wars per year:</strong> 31,557,600</p>
-
-                    <p>Assuming each civil war kills approximately 0.001% of the population (accounting for the 1-second duration), and accounting for the fact that people need time to be born:</p>
-
-                    <p><strong>By day 2 of this country's existence:</strong> Population = -47 people</p>
-                    <p><strong>By week 1:</strong> The country has killed more people than have ever existed</p>
-                    <p><strong>By month 1:</strong> The concept of population becomes a theoretical impossibility</p>
-
-                    <p>The country would literally achieve negative population growth through the power of pure chaos.</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/WeaponTechnologyExpert • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    The weapon evolution in this country would be absolutely insane:</p>
-
-                    <p><strong>Second 1-10:</strong> Fists and rocks</p>
-                    <p><strong>Second 11-20:</strong> Sharp sticks</p>
-                    <p><strong>Second 21-30:</strong> Spears</p>
-                    <p><strong>Second 31-40:</strong> Swords</p>
-                    <p><strong>Second 41-50:</strong> Guns</p>
-                    <p><strong>Second 51-60:</strong> Nuclear weapons</p>
-                    <p><strong>Second 61+:</strong> The weapons become so advanced they loop back around to being theoretical concepts</p>
-
-                    <p>By the time you finish reading this comment, they've invented and abandoned 15 different types of death rays, discovered the secret to immortality (but immediately lost it in a civil war), and created a weapon that kills people retroactively in the past.</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/ModernElections2024 • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    I can't stop thinking about what elections would look like in this timeline:</p>
-
-                    <p><strong>Campaign Slogans:</strong></p>
-                    <p>"Vote for me for the next 0.7 seconds!"</p>
-                    <p>"Together, we can build a brighter future for almost a full second!"</p>
-                    <p>"I promise to end the civil war (starting in 0.3 seconds, ending in 0.8 seconds)"</p>
-
-                    <p><strong>Political Parties:</strong></p>
-                    <p>• The 12:00:01 Party</p>
-                    <p>• The 12:00:02 Coalition</p>
-                    <p>• The 12:00:03 Alliance (banned after 0.2 seconds)</p>
-
-                    <p><strong>News Coverage:</strong></p>
-                    <p>"Breaking: The government that was elected at 3:47:23 PM has been overthrown. We'll have more on this story in 0.4 seconds when the next government takes office and is immediately overthrown."</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/SecondCivilWar • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    This thread has broken my brain. I'm now imagining the national holidays:</p>
-
-                    <p><strong>January 1st:</strong> New Civil War's Day (celebrated for 0.0003 seconds)</p>
-                    <p><strong>July 4th:</strong> Independence Day (but it's celebrated 86,400 times because it keeps getting interrupted)</p>
-                    <p><strong>December 25th:</strong> Christmas (the baby Jesus is born, immediately overthrown by a military coup)</p>
-
-                    <p>The national motto would be "E Pluribus Unum" but it would change every second to reflect whatever government is currently in power. By the time you finish reading the motto, it's already outdated.</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/alternativehistory</h3>
-            <ul>
-                <li><a href="#">What if the Roman Empire had discovered electricity?</a></li>
-                <li><a href="#">TIL that in 1200 AD, the Mongols almost invented the internet</a></li>
-                <li><a href="#">My timeline where France won the Napoleonic Wars and now everyone speaks French</a></li>
-                <li><a href="#">What if Hitler had been accepted to art school? (Serious discussion)</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/AskReddit
+  </div>
+  
+  <div class="post">
+    <div class="post-title">What would life be like in Chronosia, the country that has a civil war every single second?</div>
+    <div class="post-meta">
+      <span class="comment-score">15.3k upvotes</span> • posted by <span class="comment-author">TemporalAnomaly</span> <span class="flair">Serious</span>
     </div>
+    <div class="post-content">
+      <p>I just learned about Chronosia, this fictional country where they literally have a civil war EVERY SECOND. Not every year, not every day, but every single second. Like, it's 3:47:23 PM and they're having a civil war. Now it's 3:47:24 PM and they're having a DIFFERENT civil war.</p>
+      
+      <p>Apparently this has been going on since the country was founded in 1823. That's over 6.3 billion civil wars so far. How would this even work? What would the economy look like? How do you have infrastructure? Do they just have a permanent military-industrial complex that operates on a one-second cycle?</p>
+      
+      <p>I'm genuinely curious how society would function if you had to completely overthrow the government and start a new civil war every single second of every day.</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ChronosianHistorian</span> • <span class="comment-score">8.7k points</span> • 8 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Former Chronosian here. You get used to it.</p>
+        
+        <p>Basically, we've evolved a society where civil wars are just... background noise. Like traffic or weather. You wake up and check the Civil War Forecast: "Looks like we're expecting light coups this morning, with scattered rebellions in the afternoon."</p>
+        
+        <p>Our economy runs on a one-second cycle. The currency changes every second, so you have to spend your money immediately or it becomes worthless. We've developed ultra-high-frequency trading, but for everything. Grocery shopping is intense - you grab your milk, scan it, and hope the government hasn't changed between the time you picked it up and reached the register.</p>
+        
+        <p>We don't have elections anymore. We have "Spontaneous Government Regeneration Events" that happen every second. Sometimes you're the government, sometimes you're the rebellion, sometimes you're just trying to get lunch.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MicroSecondWarrior</span> • <span class="comment-score">6.2k points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p>I served in the Chronosian military for 3 years. Basic training is 0.8 seconds. You learn to assemble a rifle, stage a coup, and establish a provisional government in under 0.5 seconds.</p>
+        
+        <p>The trick is parallel processing. While you're fighting the current civil war, you're already planning the next one. We have algorithms that predict the probability of different factions winning the next civil war, so you can pre-position your troops and resources.</p>
+        
+        <p>By the way, the record for shortest civil war is 0.0003 seconds. Both sides just looked at each other, shrugged, and agreed to switch sides for the next one.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TemporalEconomist</span> • <span class="comment-score">4.9k points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p>The Chronosian economy is fascinating from a theoretical perspective. They've basically solved hyperinflation by making it continuous. Inflation happens so fast that it loops back around to being stable.</p>
+        
+        <p>They have "Temporal Currency Arbitrage" where you can make money by holding currency for exactly 0.97 seconds, during which it actually appreciates in value before the next civil war resets everything.</p>
+        
+        <p>Wall Street has a saying: "Time is money, but in Chronosia, money is time, and both are happening 86,400 times per day."</p>
+        
+        <p>The GDP is measured in "Civil Wars per Capita per Second" and somehow they're the 3rd largest economy in the world.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ChronosianExpat</span> • <span class="comment-score">3.7k points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p>My grandmother lived through 2.5 billion civil wars. She said the secret was to never get too attached to any government policy because it would literally change before you finished reading it.</p>
+        
+        <p>We developed "Civil War Meditation" where you train your mind to accept that everything is temporary. The government is temporary, the laws are temporary, your citizenship is temporary, your life might be temporary.</p>
+        
+        <p>Fun fact: Chronosia has never had a census because by the time you finish counting people, the government that authorized the census no longer exists.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ShitpostSorcerer</span> • <span class="comment-score">2.8k points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Chronosian dating app profiles be like:</p>
+        
+        <p>"Age: 28 (that's 883,040,000 civil wars old)"</p>
+        
+        <p>"Looking for: Someone who can commit to at least 5 consecutive civil wars"</p>
+        
+        <p>"Turn-ons: Stable government policies that last more than 2.3 seconds"</p>
+        
+        <p>"Turn-offs: People who switch sides mid-civil-war"</p>
+        
+        <p>Imagine the wedding vows: "Do you promise to love and cherish each other, through civil wars and more civil wars, until the next civil war do you part?"</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">InfrastructureEngineer</span> • <span class="comment-score">2.3k points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>I'm an infrastructure engineer who worked on Chronosian projects. The key is building everything to be "civil-war-resistant."</p>
+        
+        <p>Roads are designed to be convertible into tank barriers within 0.2 seconds. Buildings have modular walls that can be reconfigured based on which faction controls the city block. The water supply has 47 different treatment methods because the water quality standards change every second.</p>
+        
+        <p>We developed "Quantum Architecture" - buildings that exist in a superposition of being government headquarters and rebel strongholds simultaneously, collapsing into one state or the other based on the outcome of each civil war.</p>
+        
+        <p>The internet is fascinating. Every second, the entire network architecture reorganizes itself based on who won the most recent civil war. Domain names, IP addresses, even the laws of physics are subject to change.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ChronosianPhilosopher</span> • <span class="comment-score">1.9k points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>The interesting thing about Chronosia is that after 6.3 billion civil wars, they've actually achieved a form of hyper-stable instability. The constant change has become the only constant.</p>
+        
+        <p>They've developed philosophical schools like "Perpetual Revolution Nihilism" and "Continuous Coup Stoicism." The national motto roughly translates to "This too shall pass, and so shall the next thing, and the next thing after that."</p>
+        
+        <p>Time itself becomes meaningless. Why plan for the future when the future will have had 3,600 different governments by the time you finish your plans? Why mourn the past when there have been 86,400 different pasts just today?</p>
+        
+        <p>The ultimate Chronosian wisdom: "The only thing permanent is impermanence, and even that's only temporary."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">FastFoodWorker</span> • <span class="comment-score">1.4k points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>I worked at a McDonald's in Chronosia for a summer. The menu changed every second based on which faction controlled the restaurant.</p>
+        
+        <p>"Welcome to McDonald's, would you like to try our new McRebel Burger, available for the next 0.6 seconds?"</p>
+        
+        <p>The McFlurry machine was always broken because it couldn't keep up with the changing government regulations about ice cream consistency.</p>
+        
+        <p>We had to develop ultra-fast food. The average order had to be completed in 0.3 seconds or the government would change and the menu would reset. We basically just threw ingredients at customers and hoped they could assemble their own burgers fast enough.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
