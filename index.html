@@ -1,406 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What if America had a perpetual civil war after every election since 1876? : alternativehistory</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemField, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1a;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/alternativehistory</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/PerpetualCivilWar</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">7 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>4.2k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">What if America had a perpetual civil war after every election since 1876? Like literally every 2-4 years, full civil war until the next election</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Discussion</span>
-                    <span class="flair">Americas</span>
-                    <span class="flair">19th Century</span>
-                    <span class="flair">20th Century</span>
-                    <span>Posted by u/PerpetualCivilWar • 7 hours ago</span>
-                </div>
-
-                <p>Okay hear me out - this is the most cursed timeline I've ever thought of but what if:</p>
-
-                <p><strong>Every single presidential election since 1876 triggers a full-blown civil war that lasts until the next election cycle.</strong></p>
-
-                <p>Like Tilden vs Hayes happens, boom - 4 years of brutal civil war until 1880. Then Garfield wins, civil war continues until 1884. Cleveland wins, civil war until 1888. This goes on FOREVER.</p>
-
-                <p><strong>Some absolutely unhinged consequences I'm thinking about:</strong></p>
-                <ul>
-                    <li>America never industrializes because we're too busy fighting ourselves every 4 years</li>
-                    <li>By 1900, the US population is like 12 people who haven't died yet</li>
-                    <li>The rest of the world just builds a wall around America and pretends we don't exist</li>
-                    <li>Every election platform is literally just "I'll end the civil war" but they never do</li>
-                    <li>Washington DC becomes a Mad Max-style Thunderdome where presidents fight to the death</li>
-                    <li>By 2024, we've had 150 years of continuous civil war with brief election breaks</li>
-                </ul>
-
-                <p>Would we even have political parties at this point or would it just be "the people who want to stop getting shot" vs "the people who are currently shooting"?</p>
-
-                <p>Also, how would this affect the rest of the world? Does Europe just colonize everything while America is distracted? Does Canada become the new superpower? Do we eventually just run out of bullets and start fighting with sticks?</p>
-
-                <p>Please help me flesh out this absolutely unhinged timeline because I can't stop thinking about President McKinley getting assassinated during Civil War #7 or whatever.</p>
-
-                <div class="comments-count">
-                    <a href="#">1.8k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="award">🏅</span>
-                    u/HistoryShitposter • 6 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>"By 2024, we've had 150 years of continuous civil war with brief election breaks"</strong>
-
-                    <p>So basically America becomes that one HOA where everyone hates each other but they have to hold elections every year to decide who gets to be the petty dictator for 12 months?</p>
-
-                    <p>By 1950, the presidential debates are just two candidates screaming "I'LL END THE CIVIL WAR" while dodging bullets. The moderator is a tank. The audience is required to bring their own ammunition.</p>
-
-                    <p>Also, imagine being a history student in this timeline:</p>
-                    <p><em>"Chapter 12: The Great Civil War of 1921-1924, also known as 'The One Where We Ran Out of Food and Started Eating the Ballots'""</em></p>
-                </div>
-                <div class="comment-meta">u/PerpetualCivilWar • 5 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        LMAO the HOA comparison is perfect. "Welcome to America Estates, where the civil wars are mandatory and the elections don't matter!"
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🥇</span>
-                    u/CanadianSuperpower2024 • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    Canadian here - in this timeline we definitely become the new superpower. By 1900, Canada is like "okay, we're just gonna... exist peacefully and develop universal healthcare while you idiots shoot each other every election cycle."</p>
-
-                    <p>Every 4 years, we just build the wall a little higher and add more moose patrols to the border. By 2024, Canada is basically Wakanda but with more snow and politeness.</p>
-
-                    <p>"Oh, the Americans are having their quadrennial civil war again? That's nice, dear. Would you like some maple syrup while you figure out which cousin to shoot?"</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/ActualHistorian • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    Okay but seriously, this timeline would be absolutely fascinating from a geopolitical perspective. The US would basically become a failed state that never gets a chance to develop properly.</p>
-
-                    <p>Some actual consequences:</p>
-                    <ul>
-                        <li>Britain probably never gives up Canada because they need a stable North American base</li>
-                        <li>Mexico becomes the dominant North American power by default</li>
-                        <li>World War I and II play out completely differently without American involvement</li>
-                        <li>The Soviet Union probably wins the Cold War by default</li>
-                        <li>No Marshall Plan = Europe stays devastated after WWII</li>
-                    </ul>
-
-                    <p>Also, by like 1920, the rest of the world would probably just treat America like we treat Somalia today - "oh, those people are having their monthly civil war again, how unfortunate.""
-                </div>
-                <div class="comment-meta">u/PerpetualCivilWar • 4 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is actually a really good point. America would become the world's permanent "problem child" that everyone just learns to work around. The UN would have a permanent agenda item called "So... America is still fighting itself."
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">💀</span>
-                    u/ElectionWarfareExpert • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    By 1932, the elections would just be:</p>
-
-                    <p><strong>Republican Platform:</strong> "We will shoot the Democrats until they agree to stop shooting us, then we'll all stop shooting each other (maybe)"</p>
-
-                    <p><strong>Democratic Platform:</strong> "We will shoot the Republicans until they agree to stop shooting us, then we'll all stop shooting each other (possibly)"</p>
-
-                    <p><strong>Third Party Platform:</strong> "What if we just... didn't shoot each other?" *gets shot*</p>
-
-                    <p>Also, imagine the campaign ads. They'd just be grainy footage of the candidate shooting at the other party while a voiceover says "Vote for me, I have better aim than the other guy who's also shooting at me."</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/PopulationMathematician • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    Let's do some actual math on this cursed timeline:</p>
-
-                    <p>1876-2024 = 148 years of civil wars</p>
-                    <p>Average civil war duration: ~4 years (until next election)</p>
-                    <p>Total civil wars: ~37 separate conflicts</p>
-
-                    <p>Assuming each civil war kills about 2-5% of the population (conservative estimate compared to actual civil wars), and accounting for population recovery between conflicts:</p>
-
-                    <p><strong>By 2024, the US population would be approximately 847 people.</strong></p>
-
-                    <p>And like 600 of them would be running for president on the platform of "please stop shooting me."</p>
-                </div>
-                <div class="comment-meta">u/PerpetualCivilWar • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        The 847 Americans left in 2024 would just be constantly campaigning. "Vote for me and I'll personally ask everyone to please stop shooting, thank you."
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/WeaponTechnology1876 • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    The technological progression of American Civil War weapons would be absolutely insane:</p>
-
-                    <p><strong>1876:</strong> Single-shot rifles and cannons</p>
-                    <p><strong>1900:</strong> Machine guns and artillery</p>
-                    <p><strong>1940:</strong> Tanks and airplanes shooting at each other over election results</p>
-                    <p><strong>1960:</strong> Nuclear weapons (dear god)</p>
-                    <p><strong>2000:</strong> Drone strikes on polling stations</p>
-                    <p><strong>2024:</strong> "The AI-controlled election missiles have determined that your vote was fraudulent. Please remain still while we correct this error."</p>
-
-                    <p>By the 1960s, the rest of the world would be like "okay, we need to take America's nukes away before they have Civil War #23 over Kennedy vs Nixon."</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/ModernElections2024 • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    I can't stop thinking about what the 2024 election would look like in this timeline:</p>
-
-                    <p><strong>CNN Election Night Coverage:</strong> "Well folks, it's 8 PM on election night, and the traditional post-election civil war has already begun! Let's go to our correspondent who's embedded with the Michigan Militia..."</p>
-
-                    <p><strong>Debate Format:</strong> Each candidate gets 2 minutes to speak, 1 minute for rebuttal, and 30 seconds to reload.</p>
-
-                    <p><strong>Ballot Design:</strong> "Please mark your choice with an X, and also please duck because we're under sniper fire."</p>
-
-                    <p><strong>Concession Speeches:</strong> "I concede this election and also retreat to my bunker. See you all in 4 years when we do this again!"</p>
-
-                    <p>The 2024 presidential debates would literally just be held in a reinforced concrete bunker while the candidates wear body armor.</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/PerpetualCivilWar • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    This thread has given me life. I'm imagining the 2024 presidential campaign slogans:</p>
-
-                    <p><strong>TRUMP:</strong> "Make America Stop Shooting Each Other Again (For Real This Time, I Promise)"</p>
-
-                    <p><strong>BIDEN:</strong> "Look, Jack, I've been in Congress for 200 years and let me tell you, we need to stop shooting each other"</p>
-
-                    <p><strong>Third Party:</strong> "What if we just... voted and then didn't have a civil war?" *immediately gets 0% in polls*</p>
-
-                    <p>The best part is that by 2024, Americans would just accept this as normal. "Oh yeah, it's Tuesday, that means we're shooting at each other over the 1876 election again. Anyway, did you see the game last night?"</p>
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/alternativehistory</h3>
-            <ul>
-                <li><a href="#">What if the Roman Empire had discovered electricity?</a></li>
-                <li><a href="#">TIL that in 1200 AD, the Mongols almost invented the internet</a></li>
-                <li><a href="#">My timeline where France won the Napoleonic Wars and now everyone speaks French</a></li>
-                <li><a href="#">What if Hitler had been accepted to art school? (Serious discussion)</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/AlternativeHistory
+  </div>
+  
+  <div class="post">
+    <div class="post-title">What if every US election since 1876 triggered a civil war that lasted until the next election?</div>
+    <div class="post-meta">
+      <span class="comment-score">2.4k upvotes</span> • posted by <span class="comment-author">HistoryShitposter</span> <span class="flair">Alternative History</span>
     </div>
+    <div class="post-content">
+      <p>Just imagine - every 2-4 years, America just resets and has another civil war. Rutherford B. Hayes wins in 1876? Boom, civil war until 1880. Garfield wins in 1880? Civil war until 1884. And so on... forever.</p>
+      
+      <p>By 2024, we'd be on like Civil War #37. The South would probably just keep a standing Confederate Army ready to go at this point. "Oh, it's November again? Time to dust off the ol' rebellion uniform."</p>
+      
+      <p>What would this even look like? Would both sides just have permanent military infrastructure? Would there be like... scheduled ceasefires for Thanksgiving and Christmas? "Sorry, we can't fight today, it's Christmas truce. But we'll resume shelling each other on December 26th."</p>
+      
+      <p>By the 1920s, would people just be like "Ugh, another election? Guess we gotta go fight cousin Jed again. See you in 4 years, assuming we both make it"?</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">CivilWarEnthusiast</span> • <span class="comment-score">1.2k points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p>By 1900, the US would have developed the most efficient civil war infrastructure in human history. Like there'd be standardized civil war supply chains, civil war logistics companies, civil war tourism packages.</p>
+        
+        <p>"Visit beautiful Civil War Battlefield #47! See where the 23rd Ohio Regiment fought the 15th Confederate Election Rebels! Gift shop and Starbucks now open!"</p>
+        
+        <p>The military-industrial complex would just be permanent. Boeing would have a "Civil War Division" that specializes in election-cycle warfare. Lockheed Martin would sponsor both sides for maximum profits.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ElectionCycleVeteran</span> • <span class="comment-score">987 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>My great-great-grandfather fought in Civil Wars 4 through 17. Family tradition was that after each election, you'd get a letter saying "Report to Fort Sumter for Civil War #X" and you'd just... go.</p>
+        
+        <p>By the 1912 Civil War, they had it down to a science. Both sides would show up at designated battlefields, fight for exactly 47 months, then go home and prepare for the next one. There were union rules and everything.</p>
+        
+        <p>The 1920 Civil War was weird because everyone was still hungover from the 1918 Spanish Flu, so both sides just agreed to half-ass it and mostly sat around playing cards and drinking bootleg whiskey.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">HistoricalShitposter</span> • <span class="comment-score">756 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>"Sir, the election results are in!"</p>
+        
+        <p>"Excellent. Deploy the 82nd Airborne to secure the polling stations. And tell the 1st Cavalry to prepare for the traditional Post-Election Siege of Atlanta."</p>
+        
+        <p>"Which side are we on again, sir?"</p>
+        
+        <p>"Check the schedule... looks like we're the Union this decade. But remember, we're scheduled to switch sides in 1928."</p>
+        
+        <p>Imagine being a history student: "Chapter 37: The 1960 Civil War (Kennedy vs Nixon). This was notable for being the first civil war fought entirely with nuclear weapons."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">PoliticalScienceMajor</span> • <span class="comment-score">623 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>The political science implications would be wild. Campaign ads would just be military recruitment videos.</p>
+        
+        <p>"Vote for me and I'll only kill HALF as many Americans in the upcoming civil war!"</p>
+        
+        <p>Third parties would be like "Vote Libertarian - we'll make the civil wars voluntary!"</p>
+        
+        <p>By 1980, the US would have developed a sophisticated civil war economy. There'd be Civil War ETFs, civil war futures trading, civil war cryptocurrency. "I made a killing investing in the 1976 Civil War index fund!"</p>
+        
+        <p>The UN would just have a permanent "US Civil War Observer Mission" that rotates every 4 years.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">SouthernHeritage</span> • <span class="comment-score">445 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>As someone from the South, we'd have evolved the most polite civil war customs.</p>
+        
+        <p>"Well bless your heart, I'm gonna have to shell your position now."</p>
+        
+        <p>"Oh no worries, we'll just return fire after we finish this sweet tea."</p>
+        
+        <p>By Civil War #23 (1948), we'd have developed Southern Civil War Etiquette: always bring a casserole to the battlefield, never fight on Sundays, and make sure to compliment your enemy's marksmanship before attempting to shoot them.</p>
+        
+        <p>"Excuse me sir, I couldn't help but notice your excellent tactical positioning. It would be my honor to attempt to dislodge you from that hill."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TechHistoryNerd</span> • <span class="comment-score">389 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>The technological progression would be absolutely insane. Each civil war would drive rapid military innovation:</p>
+        
+        <p><strong>1876:</strong> Traditional civil war with muskets and cannons</p>
+        <p><strong>1900:</strong> First civil war with machine guns</p>
+        <p><strong>1920:</strong> First civil war with tanks and chemical weapons</p>
+        <p><strong>1940:</strong> First civil war with aircraft carriers and strategic bombing</p>
+        <p><strong>1960:</strong> First nuclear civil war (limited to 5 megatons per side)</p>
+        <p><strong>1980:</strong> First civil war in space (the Moon becomes a key strategic objective)</p>
+        <p><strong>2000:</strong> First cyber civil war (both sides hack each other's Netflix accounts)</p>
+        <p><strong>2020:</strong> First civil war fought entirely by influencers on TikTok</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MidwestNeutral</span> • <span class="comment-score">334 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>As someone from the Midwest, we'd have just evolved into professional civil war referees.</p>
+        
+        <p>"Alright, North and South, it's 1896. Remember, no hitting below the Mason-Dixon Line, no biting, and you have to stop when I blow the whistle."</p>
+        
+        <p>By 1920, Illinois would have a booming industry in civil war arbitration services. "Chicago Civil War Mediation Co. - We'll help you negotiate your next civil war terms!"</p>
+        
+        <p>The Great Lakes would become neutral zones where both sides could take a break, grab some Wisconsin cheese, and maybe catch a Cubs game before resuming hostilities.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">CaliforniaExit</span> • <span class="comment-score">278 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>By the 1960s, California would have just seceded from this entire ridiculous system.</p>
+        
+        <p>"You guys have fun with your 89th civil war, we're gonna go start a tech company and make movies."</p>
+        
+        <p>The California Republic would have a standing policy of "We don't do civil wars, we do yoga and venture capital."</p>
+        
+        <p>Every election cycle, the other 49 states would be like "Time for Civil War #X!" and California would be like "Nah, we're good. Surf's up, dude."</p>
+        
+        <p>Though we'd probably still get dragged in during the 1990s when the Civil Wars start being fought over internet domain names.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">HistoryShitposter</span> • <span class="comment-score">156 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>My favorite part would be the Civil War Veterans' organizations.</p>
+        
+        <p>"Welcome to the Society of Veterans of Civil Wars 23-27! Please sign in and indicate which side you fought for. Refreshments will be served after the reading of the 1952 Treaty of Cincinnati."</p>
+        
+        <p>Imagine being a 95-year-old veteran of Civil Wars 4, 8, 12, 16, 20, and 24, sitting in a nursing home being like "Back in my day, we had REAL civil wars. None of this newfangled nuclear civil war nonsense!"</p>
+        
+        <p>"These kids today with their cyber civil wars don't know how good they have it. In my day, we had to walk 20 miles through the snow just to get to the battlefield!"</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
