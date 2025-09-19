@@ -1,225 +1,389 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C8C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C8C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bro just had the most cursed dream about world leaders becoming mechs and geography breaking : alternativehistory</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemField, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/alternativehistory</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/NoctorDreaming</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/WTFdreams
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Had the most unhinged dream where Biden, Trump, Obama and Carter became literal death machines fighting Putin-Satan while continents just yeeted themselves around the map</div>
-    <div class="post-meta">
-      <span class="comment-score">23.7k upvotes</span> • posted by <span class="comment-author">DreamDecompiler</span> <span class="flair">Gen Z</span>
-    </div>
-    <div class="post-content">
-      <p>bro I swear my brain is broken 💀</p>
-      
-      <p>So I'm dreaming right, and suddenly Joe Biden transforms into this like 500ft tall mecha with aviator sunglasses made of pure energy. Trump becomes this orange tank with gold plating that shoots tweets as projectiles. Obama has like, 8 arms and every time he speaks it creates shockwaves. Jimmy Carter becomes this peanut-shaped death orb that just vibes menacingly.</p>
-      
-      <p>AND THEY'RE ALL FIGHTING PUTIN WHO IS LITERALLY SATAN. Like red skin, horns, the whole deal. He's dual-wielding nukes like they're lightsabers.</p>
-      
-      <p>Meanwhile Russia just ANNEXES CHINA and renames itself to "HFSDSFHDCGHDFHDFDFBJHGFDFBJH" (how do you even pronounce that???) and Africa just straight up SINKS like someone pulled the drain plug. Lemuria comes back from the ocean like "what's up gamers" and Poland is suddenly neighbors with Japan who is next to Denmark.</p>
-      
-      <p>Also apparently TNO is real life now and countries just spawn like it's HOI4 console commands. I saw Germany split into 47 different nations in the span of like 3 seconds.</p>
-      
-      <p>I need to stop eating before bed fr fr no cap</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DreamAnalyst420</span> • <span class="comment-score">12.3k points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p>ngl this sounds like the plot of a 3AM YouTube video titled "WHAT IF POLITICIANS WERE GODS?? (GONE WRONG) (GONE SEXUAL)"</p>
-        
-        <p>But the way you described Biden's mecha form has me WEEPING. Like imagine him trying to give a speech while in death machine form 😭 "Folks, *rocket launcher noises*, we need to, *laser eyes activating*, build back better"</p>
-        
-        <p>Also "HFSDSFHDCGHDFHDFDFBJHGFDFBJH" is sending me. That's not a country name that's what happens when your cat walks on the keyboard</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">ContinentalDriftEnjoyer</span> • <span class="comment-score">9.8k points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Africa just sinking is such a mood. Like the continent just said "ight imma head out" and YEETED itself into the mantle</p>
-        
-        <p>But Poland being next to Japan who is next to Denmark is actually hilarious. The EU just becomes speed dating. "Hi I'm Poland, I'm looking for a country who shares my values and geographic proximity" *moves next to Japan* "Actually I prefer sushi over pierogi"</p>
-        
-        <p>Also Lemuria coming back is such a "and everybody clapped" moment but for geography nerds</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DreamLogicSucks</span> • <span class="comment-score">7.2k points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>The Jimmy Carter peanut death orb just VIBING is peak comedy. Like he's not even attacking, he's just there menacingly. Floating. Being peanut-shaped. The sheer PASSIVE AGGRESSION of it</p>
-        
-        <p>Trump shooting tweets as projectiles is actually canon though. That's just Tuesday for him</p>
-        
-        <p>But Putin being Satan is such a 2022-2024 vibe. Your brain is literally just processing the news but make it anime</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">HOI4Addict</span> • <span class="comment-score">6.1k points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>OP literally dreamed of TNO becoming real and countries spawning like console commands. This is what 2000 hours of HOI4 does to a mf</p>
-        
-        <p>"Germany split into 47 different nations" is just the AI being the AI. We all know that one game where Germany explodes into a million pieces because someone looked at them funny</p>
-        
-        <p>Also Poland being next to Japan is just the Polish-Lithuanian-Mongol-Japanese Commonwealth. Make it happen Paradox you cowards</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">PsychicWarfareEnjoyer</span> • <span class="comment-score">4.7k points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Obama with 8 arms creating shockwaves when he speaks is such a powerful image. Like he just says "Let me be clear" and entire cities get leveled by the bass boost</p>
-        
-        <p>Also can we talk about the logistics of Putin-Satan dual-wielding nukes like lightsabers? That's not how nukes work but also it's exactly how they should work in anime</p>
-        
-        <p>The whole dream is just "what if international politics but it's a Dragon Ball fight scene"</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">GenZTranslator</span> • <span class="comment-score">3.9k points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Translation for the boomers in the comments:</p>
-        
-        <p>"fr fr no cap" = for real, no lie</p>
-        
-        <p>"yeeted themselves around the map" = moved violently</p>
-        
-        <p>"has me WEEPING" = makes me laugh really hard</p>
-        
-        <p>"sending me" = making me laugh</p>
-        
-        <p>"ight imma head out" = alright, I'm going to leave</p>
-        
-        <p>You're welcome, now please stop asking what "deadass" means in every thread</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DreamDecompiler</span> • <span class="comment-score">3.1k points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Update: I just remembered that at one point Switzerland became a giant neutral mecha that just stood in the middle of everything going "I am neutral, please do not involve me in your conflicts" while getting hit by stray missiles</p>
-        
-        <p>Also Canada became a giant maple syrup monster that just healed everyone regardless of side like "sorry for the inconvenience eh"</p>
-        
-        <p>My brain is cooked, well done, burnt to a crisp</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">NeutralCountryFan</span> • <span class="comment-score">2.8k points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p>The Switzerland mecha going "I am neutral, please do not involve me" while actively getting hit by missiles is PEAK Swiss energy. Like they're neutral but also somehow in the middle of EVERYTHING</p>
-        
-        <p>Canada as a maple syrup healer is actually wholesome though. Just imagine this giant syrup monster going "sorry for bombing you, have some free healthcare"</p>
-        
-        <p>Your dreams have better world building than most Netflix shows tbh</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>12.8k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Bro just had the most cursed dream about world leaders becoming mechs and geography breaking harder than my will to live</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Speculative</span>
+                    <span class="flair">Dream Lore</span>
+                    <span class="flair">Cursed Timeline</span>
+                    <span class="flair">21st Century</span>
+                    <span>Posted by u/NoctorDreaming • 2 hours ago</span>
+                </div>
+
+                <p>Okay fam I need to share this absolutely unhinged dream I just woke up from because my brain is clearly broken and needs to be studied by scientists</p>
+
+                <p><strong>THE SETUP:</strong></p>
+                <p>So basically Joe Biden, Trump, Obama, Bill Clinton, and Jimmy Carter all became like these MASSIVE transformer-style death machines. Like full on mecha with American flag paint jobs and bald eagle accessories. Biden's mech had those aviator sunglasses as headlights and kept yelling "C'MON MAN" as a battle cry. Trump's was just solid gold and constantly leaked Diet Coke.</p>
+
+                <p><strong>THE PLOT TWIST:</strong></p>
+                <p>They were fighting PUTIN who was literally SATAN HIMSELF. Like red skin, horns, the whole deal. But here's the kicker - Russia had annexed China and renamed the entire country to "HFSDSFHDCGHDFHDFDFBJHGFDFBJH" (yes, that's the actual name, my dream brain generated that keyboard smash). Putin-Satan was riding a bear that breathed fire and kept shouting in Russian about "making the Soviet Union great again."</p>
+
+                <p><strong>THE GEOGRAPHY WAS ON CRACK:</strong></p>
+                <ul>
+                    <li>Africa just straight up SANK. Like the entire continent just said "nah fam, I'm out" and submerged underwater</li>
+                    <li>Lemuria came back from the dead like "surprise bitches, I'm back!" and appeared where Africa used to be</li>
+                    <li>Poland MOVED to be next to Japan. Like physically picked up and relocated</li>
+                    <li>Japan was moved next to Denmark and they became besties, sharing anime and pastries</li>
+                    <li>Canada became sentient and started walking around like a giant maple syrup monster</li>
+                </ul>
+
+                <p><strong>THE TNO/HOI4 PART:</strong></p>
+                <p>Apparently TNO (the Hearts of Iron 4 mod) became REAL LIFE. Like people were walking around with national focus trees above their heads. Nations were spawning out of thin air. Switzerland became a global superpower through banking and chocolate alone. Lichtenstein conquered Germany. Andorra became a nuclear power. My neighbor Dave declared independence and formed the Republic of Dave.</p>
+
+                <p><strong>THE ENDING:</strong></p>
+                <p>The dream ended with all the mecha presidents combining into one MEGA ULTRA PATRIOT ROBOT called "FREEDOM PRIME" while Putin-Satan transformed into a 500-foot tall bear made of communism. They had a kaiju battle that destroyed reality itself. Then I woke up with my pillow soaked in tears and my phone playing the national anthem at full volume for some reason.</p>
+
+                <p>Please someone tell me what this means. Am I okay? Is this a prophecy? Should I start a religion based on this? I'm genuinely considering making a HOI4 mod of this timeline.</p>
+
+                <div class="comments-count">
+                    <a href="#">3.7k comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    <span class="award">🏅</span>
+                    u/HOI4Addict • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>"HFSDSFHDCGHDFHDFDFBJHGFDFBJH"</strong>
+
+                    <p>Bro just invented the most powerful country name in existence. That's not even a name, that's a fucking cheat code. I can already see the HOI4 focus tree:</p>
+
+                    <p><em>"HFSDSFHDCGHDFHDFDFBJHGFDFBJH" Focus Tree:</em></p>
+                    <p>• Focus 1: "Fix the keyboard" (unlocks industry)</p>
+                    <p>• Focus 2: "Annex more letters" (justification on alphabet)</p>
+                    <p>• Focus 3: "Become unpronounceable" (diplomatic immunity)</p>
+
+                    <p>Also Biden mech with aviator headlights is canon now. I don't make the rules.</p>
+                </div>
+                <div class="comment-meta">u/NoctorDreaming • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        BRO the Biden mech kept malfunctioning and saying "Here's the deal, Jack" every time it fired missiles. The Trump mech would just build walls mid-battle and make the enemies pay for them. The Obama mech was just smooth af, doing backflips while drone striking everything.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🥇</span>
+                    <span class="award">💀</span>
+                    u/GenZHistorian • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <p>"Africa just sank"</p>
+
+                    <p>MY GUY AFRICA JUST SAID "ight imma head out" AND SUBMERGED LIKE A SUBMARINE 💀💀💀</p>
+
+                    <p>Lemuria coming back like "surprise bitches" is sending me. Atlantis watching from the sidelines like "damn they really just did my homie Africa dirty like that"</p>
+
+                    <p>Also Poland moving next to Japan is peak comedy. They're just vibing now, sharing pierogi recipes and anime recommendations. "Kurwa, this ramen slaps" - average Polish person in this timeline</p>
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🤣</span>
+                    u/TNOBrainrot • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <p>"TNO became real life"</p>
+
+                    <p>BRO YOUR BRAIN IS TOO FAR GONE. You've achieved peak brain rot. You're telling me people were walking around with national focus trees above their heads like they're in a fucking RPG? My man Dave from next door really just formed the Republic of Dave and started doing focus trees?</p>
+
+                    <p>"Dave's Republic Focus Tree:</p>
+                    <p>• Focus 1: "Mow the lawn" (+10% stability)</p>
+                    <p>• Focus 2: "Return the neighbor's tools" (+50 opinion with all neighbors)</p>
+                    <p>• Focus 3: "Get a better job" (unlocks advanced industry tech)"</p>
+
+                    <p>Also Switzerland becoming a superpower through banking and chocolate is just real life but they finally unlocked the secret tech tree.</p>
+                </div>
+                <div class="comment-meta">u/NoctorDreaming • 55 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        DUDE I SWEAR TO GOD I SAW PEOPLE WITH LITTLE ICONS ABOVE THEIR HEADS. Like you'd walk past someone and see "France - 50 Political Power" floating above them. My neighbor Dave really did declare independence and started doing focuses. Last I checked he was at war with the HOA.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/PoliticalCompassMemes • 50 minutes ago
+                </div>
+                <div class="comment-content">
+                    <p>Putin as Satan riding a fire-breathing bear while shouting about making USSR great again is the most based thing I've ever heard. That's not even a dream anymore, that's just Tuesday in Russia but with extra steps.</p>
+
+                    <p>Also "FREEDOM PRIME" sounds like a fucking Transformer. I'm imagining all the presidents combining like Voltron:</p>
+
+                    <p>"BIDEN: And I'll form the head!"<br>
+                    "OBAMA: Actually Joe, I think I should-"<br>
+                    "TRUMP: WRONG! I form the best head. Everyone says so."</p>
+
+                    <p>The fact that your phone was playing the national anthem when you woke up is sending me. Your subconscious is just built different.</p>
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/GeographyOnAcid • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    <p>Japan moving next to Denmark and becoming besties is actually wholesome af. They're just chilling, sharing culture:</p>
+
+                    <p>Japan: "Here's anime and sushi"<br>
+                    Denmark: "Here's pastries and hygge"<br>
+                    Together: "We are... Dapan? Jenmark?"</p>
+
+                    <p>Also Canada becoming a sentient maple syrup monster is just Canada embracing their final form. They've been training for this moment.</p>
+
+                    <p>But seriously OP, are you okay? Like this is some next level dream lore. Your brain created an entire alternate history with better worldbuilding than most AAA games.</p>
+                </div>
+                <div class="comment-meta">u/NoctorDreaming • 40 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        I think I unlocked a new level of consciousness. Like this wasn't even a dream, it was a VISION. I'm considering writing a manifesto. The Republic of Dave will rise, my brothers. Also I just ordered maple syrup and it tasted like FREEDOM.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/DreamAnalystZoomer • 35 minutes ago
+                </div>
+                <div class="comment-content">
+                    <p>Yo this is actually wild from a psychological perspective. Your brain basically created the most cursed HOI4 mod ever conceived. The fact that you remember "HFSDSFHDCGHDFHDFDFBJHGFDFBJH" perfectly is sending me.</p>
+
+                    <p>Also the mecha presidents combining into FREEDOM PRIME is peak American exceptionalism. Like even in your dreams, America can't just have a normal military, they need to combine into a MEGA PATRIOT ROBOT.</p>
+
+                    <p>Please make this HOI4 mod. I need to play as the Republic of Dave and conquer the world through superior lawn care technology.</p>
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/NoctorDreaming • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    UPDATE: I just told my neighbor Dave about this dream and he said "fuck it, let's do it" and now we're actually planning to start a HOI4 mod. We're calling it "HFSDSFHDCGHDFHDFDFBJH: The Cursed Timeline"</p>
+
+                    <p>Features will include:</p>
+                    <ul>
+                        <li>Mecha presidents with unique voice lines</li>
+                        <li>Africa as a sunken continent with underwater civilizations</li>
+                        <li>Lemuria as a playable nation with ancient tech</li>
+                        <li>Putin-Satan as final boss</li>
+                        <li>Focus tree for the Republic of Dave</li>
+                        <li>Keyboard smash country names as Easter eggs</li>
+                    </ul>
+
+                    <p>We're gonna be rich. Or committed to an asylum. Either way, it's gonna be LIT.</p>
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/alternativehistory</h3>
+            <ul>
+                <li><a href="#">What if the Roman Empire had discovered anime?</a></li>
+                <li><a href="#">TIL that in 1200 AD, the Mongols almost invented TikTok</a></li>
+                <li><a href="#">My timeline where France won the Napoleonic Wars and now everyone speaks French and eats baguettes</a></li>
+                <li><a href="#">What if Hitler had been accepted to art school? (Serious discussion but with memes)</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
