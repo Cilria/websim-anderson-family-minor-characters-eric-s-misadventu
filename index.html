@@ -1,381 +1,360 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jason/Alfred Shantz (c.1840-1910): Mystery name, 11 kids, can't read/write, vanished after 1910 census : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Ohio_Mystery_Hunter</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>642</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Jason/Alfred Shantz (c.1840-1910): Mystery name, 11 kids, can't read/write, vanished after 1910 census</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Ohio</span>
-                    <span class="flair">Mystery</span>
-                    <span class="flair">Name Confusion</span>
-                    <span class="flair">Vanished</span>
-                    <span>Posted by u/Ohio_Mystery_Hunter • 3 hours ago</span>
-                </div>
-
-                <p>This is my brick wall ancestor - Jason Alexander (or Alfred?) Shantz. Born somewhere between 1840-1845 in Rural Western Ohio to unknown parents. The two most likely are either Thomas Shantz or his brother Robert Shantz, but I can't prove it.</p>
-
-                <p><strong>The Name Mystery:</strong> Records flip between Jason Alexander Shantz and Jason Alfred Shantz. Sometimes just "J.A. Shantz." By 1860, he's living with W.W. Flanders, a farmer in the same area. By 1870, he's on his own.</p>
-
-                <p><strong>Family Life:</strong> Married Caroline Ann Flanders in 1872. They had 11 children - 9 boys and 2 girls. He was a farmer his whole life, signed with an X (couldn't read or write), and seemed content to stay put.</p>
-
-                <p><strong>The Vanishing:</strong> Last seen in 1910 census living in Vendocia, Ohio as "retired farmer" with birth date listed as 1839. No death record exists. No burial found. Just... gone.</p>
-
-                <p><strong>My Theories:</strong> Maybe he died 1910-1912 and it just wasn't recorded well? Maybe he moved in with one of his many sons and died elsewhere? The name confusion makes everything harder - was he Jason Alexander or Jason Alfred? Any Ohio researchers dealt with something like this?</p>
-
-                <div class="comments-count">
-                    <a href="#">89 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Van_Wert_County_Records • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Solved the name mystery!</strong> Found his marriage record - Jason Alexander Shantz married Caroline Ann Flanders September 12, 1872 in Van Wert County. BUT here's the twist: in the 1880 census, he's listed as "Jason A. Shantz" and the census taker wrote in the margin "goes by Alfred." So his full name was Jason Alexander, but everyone called him Alfred or Al. Probably because his father or grandfather was also Jason.
-                </div>
-                <div class="comment-meta">u/Ohio_Mystery_Hunter • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        That makes perfect sense! My great-grandfather called him "Uncle Al" - so the Alfred thing was family usage. Mystery solved on that front. Any luck finding his death?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Van_Wert_County_Records • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>Found his death!</strong> Jason Alexander "Alfred" Shantz died December 3, 1911 at the home of his son William, 2 miles south of Venedocia. Cause: "old age and complications of the stomach." Buried December 5 in the old Venedocia Cemetery. The family couldn't afford a tombstone - just a wooden marker that rotted away. Cemetery records show he's in Section C, Row 12, Grave 7. No death certificate filed - common for rural deaths then.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Shantz_Genealogy_Expert • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his parents!</strong> Jason Alexander Shantz was born January 15, 1842 (not 1839-40) to Thomas Shantz and Mary Catherine "Polly" Kline. Thomas was the brother of Robert Shantz - so you had the right family. They lived in Ridge Township, Van Wert County. Thomas died 1847 when Jason was 5, Mary remarried to W.W. Flanders in 1851. That's why Jason was living with W.W. Flanders in 1860 - W.W. was his stepfather!
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Venedocia_Local • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>All 11 children identified:</strong><br>
-                    1. William Thomas Shantz (1873-1945) - took over the family farm<br>
-                    2. Mary Elizabeth Shantz (1875-1920) - married John Miller<br>
-                    3. James Alfred Shantz (1877-1955) - moved to Indiana, worked in sawmill<br>
-                    4. Charles Edward Shantz (1879-1933) - stayed in Venedocia, farmer<br>
-                    5. George Washington Shantz (1881-1960) - moved to Michigan, auto worker<br>
-                    6. John Henry Shantz (1883-1948) - stayed local, worked on railroad<br>
-                    7. Frank Benjamin Shantz (1885-1972) - youngest son, inherited the home farm<br>
-                    8. twin boys - died at birth 1887<br>
-                    9. Sarah Catherine Shantz (1890-1981) - married local merchant<br>
-                    10. David Lee Shantz (1892-1965) - moved to Toledo, factory worker
-                </div>
-                <div class="comment-meta">u/Ohio_Mystery_Hunter • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Wait - that's only 10 children? And what about the twin boys who died - that would make 11 total but only 9 surviving to adulthood?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Venedocia_Local • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        You're right - I missed one! Between #8 and #9, there was another son: Robert Emmett Shantz (1888-1918). He died in the flu epidemic. So the count is: 11 total births, 9 survived to adulthood, 2 sets of twins (one set died at birth, the other was Robert Emmett and Sarah Catherine - yes, boy/girl twins born 2 years apart, different pregnancies).
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Illiteracy_Research • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>About his illiteracy:</strong> Found an interesting detail in the 1900 agricultural census. The enumerator wrote "Jason A. Shantz cannot read or write but keeps excellent farm records using symbols and tally marks." He had his own system - circles for livestock, squares for crops, lines for days worked. His wife Caroline could read and write (she signed her name on documents), so she handled all the written correspondence for the farm.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Civil_War_Exemptions • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Why he didn't serve in Civil War:</strong> Jason was only 19-23 during the war, prime age for service. Found the reason - he was the sole support of his widowed mother and younger siblings after his stepfather W.W. Flanders enlisted in 1862. He filed for exemption as "sole support of family" and it was granted. Many farmers got agricultural exemptions, especially in Ohio where food production was crucial to the war effort.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Van_Wert_Land_Records • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>His farm details:</strong> Jason owned 80 acres in Ridge Township, Section 14. Purchased from his stepfather W.W. Flanders in 1871 for $400. The farm had a log house (built 1850s), barn, and small orchard. 1900 census shows he had 6 horses, 8 cows, 40 pigs, 200 chickens - quite prosperous for the time. He sold the farm to son William in 1909 for $1 and "board and keep for life" - the old way of ensuring care in old age.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🎯</span>
-                    u/Shantz_Family_Historian • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>MASSIVE breakthrough on Thomas and Robert Shantz!</strong> These weren't just "possible fathers" - they were Jason's UNCLES. Thomas Shantz (1804-1847) and Robert Shantz (1807-1863) were brothers, sons of Johannes "John" Shantz (1772-1840) and Barbara Bergey (1775-1855). Johannes was a Pennsylvania Dutch immigrant from Berks County, PA who moved to Ohio in 1818. The family was part of the large Mennonite Shantz migration.
-                </div>
-                <div class="comment-meta">u/Ohio_Mystery_Hunter • 25 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Wait, so if Thomas and Robert were brothers, and Thomas was Jason's father, then Robert was his uncle? This is getting clearer. What about their other siblings?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Shantz_Family_Historian • 20 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>Exactly!</strong> Johannes and Barbara had 9 children total. Here are Jason's aunts and uncles:<br>
-                        <strong>Thomas Shantz (1804-1847)</strong> - Jason's father, married Mary Catherine "Polly" Kline<br>
-                        <strong>John Shantz (1805-1880)</strong> - stayed in Pennsylvania, never came to Ohio<br>
-                        <strong>Robert Shantz (1807-1863)</strong> - the uncle you mentioned, married Elizabeth Moyer<br>
-                        <strong>Elizabeth Shantz (1809-1890)</strong> - married Abraham Moyer (yes, married her brother's wife's brother)<br>
-                        <strong>Mary Shantz (1811-1875)</strong> - married Christian Bergey<br>
-                        <strong>Susanna Shantz (1813-1888)</strong> - married John Detweiler<br>
-                        <strong>Anna Shantz (1815-1901)</strong> - married Henry Moyer<br>
-                        <strong>Jacob Shantz (1817-1899)</strong> - married Barbara Bergey (his cousin)<br>
-                        <strong>Catherine Shantz (1819-1903)</strong> - never married, lived with Jacob's family
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🔍</span>
-                    u/Mennonite_Records • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the immigration story!</strong> Johannes "John" Shantz was born 1772 in Montgomery County, PA - his parents were Jacob Shantz (1745-1820) and Anna Oberholtzer (1748-1822). Jacob's father was the immigrant: <strong>Hans "John" Shantz (1710-1786)</strong> who came from Switzerland in 1735 on the ship "Peggy." The family were Mennonites fleeing persecution. Hans bought land in Berks County, PA and became a successful farmer. The Ohio migration happened 1818-1820 when Johannes and his brothers moved west for cheaper land.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Kline_Family_Research • 10 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>About Jason's mother Mary Catherine "Polly" Kline:</strong> She was born 1812 in Somerset County, PA to Johann "John" Kline (1785-1855) and Maria Barbara Miller (1787-1860). The Klines were also Mennonite immigrants from Germany, arrived 1752. Polly was the youngest of 8 children. After Thomas died 1847, she married W.W. Flanders as you know, but here's the twist: W.W. was her FIRST COUSIN once removed! His mother was Polly's aunt Catherine Kline. This cousin marriage was common in tight Mennonite communities.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Shantz_Land_Records • 5 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>The Thomas Shantz farm details:</strong> Thomas bought 160 acres in Ridge Township, Van Wert County in 1838 for $1.25/acre ($200 total) - this was right after the government opened the land for settlement. The farm was on Section 8, Township 2S, Range 7E. When he died 1847, the farm went to his widow Polly, who married W.W. Flanders. W.W. expanded it to 240 acres by 1860. Jason inherited this farm in 1871 when he bought it from W.W. for $400 - essentially paying off the mortgages and giving W.W. a comfortable retirement.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">📚</span>
-                    u/Robert_Shantz_Descendant • 2 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>About Uncle Robert Shantz (1807-1863):</strong> He married Elizabeth Moyer in 1829 and had 12 children (yes, 12!). They lived on an adjoining farm to Thomas. Robert was more prosperous - built a brick house in 1855, had the first threshing machine in the township. His son Abraham R. Shantz (1835-1920) became a prominent merchant in Van Wert. The two families were extremely close - Robert's kids and Thomas's kids (including Jason) grew up more like siblings than cousins. After Robert died 1863, his widow Elizabeth married... wait for it... W.W. Flanders' brother Henry! So W.W. Flanders became stepfather to Jason AND step-brother-in-law to Robert's widow. Rural Ohio genealogy is WILD.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Anyone else have ancestors who just "disappeared" after 1910?</a></li>
-                <li><a href="#">Name confusion: When your ancestor went by their middle name</a></li>
-                <li><a href="#">Ohio farmers who couldn't read/write - how did they keep records?</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Jason (Alfred?) Shantz - Ohio farmer born 1840-1845, disappeared after 1910 census, signed with an X his whole life</div>
+    <div class="post-meta">
+      <span class="comment-score">412 upvotes</span> • posted by <span class="comment-author">OhioGenealogyHound</span> <span class="flair">Midwest Research</span>
     </div>
+    <div class="post-content">
+      <p>Hit a major brick wall with my 3rd great-grandfather Jason Shantz (might be Alfred based on some records). Born somewhere between 1840-1845 in rural western Ohio - exact date and parents unknown. The name confusion is driving me crazy!</p>
+      
+      <p>What I've pieced together:</p>
+      <ul>
+        <li>1860: Living with "W. W. Flanders" as farm laborer, age listed as 20</li>
+        <li>1872: Married Caroline Ann Flanders (daughter of W. W. Flanders)</li>
+        <li>Had 11 children - 9 boys, 2 girls between 1873-1893</li>
+        <li>Never learned to read/write - signed all documents with an X</li>
+        <li>No Civil War service records found</li>
+        <li>1910 census: Living in Venedocia, Ohio as "retired farmer," birth year 1839</li>
+        <li>Vanished completely after 1910 - no death record, no grave found</li>
+      </ul>
+      
+      <p>Can't determine if his father was Thomas Shantz or Robert Shantz (brothers who both lived in the area). The name variation between Jason/Alfred is maddening. Anyone with Ohio county records access?</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MercerCountyArchives</span> • <span class="comment-score">387 points</span> • 9 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>NAME MYSTERY SOLVED:</strong> Found his marriage license! The original 1872 document clearly reads "Jason Alfred Shantz" - he had TWO first names! His illiterate parents probably used both interchangeably, and since he couldn't read, he never knew which was his "official" name.</p>
+        
+        <p><strong>PARENTS IDENTIFIED:</strong> Found the 1850 agricultural census for Dublin Township, Mercer County. Thomas Shantz owned 80 acres with 4 children under 10, including a 5-year-old "J. A. Shantz." Robert Shantz had only daughters in 1850, so Thomas is definitely your man.</p>
+        
+        <p><strong>BIRTH DATE CONFIRMED:</strong> The 1850 census lists him as 5 years old, putting birth at 1845. The 1839 date in 1910 census was probably a neighbor's guess - Jason was 65, illiterate, and likely confused about his exact age.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">FlandersFamilyExpert</span> • <span class="comment-score">312 points</span> • 8 hours ago
+        </div>
+        <div class="comment-content">
+          <p>Found William Washington "W. W." Flanders' farm records! He was a prominent farmer in Dublin Township who regularly hired orphan boys and waifs as laborers. In 1855, he took in 10-year-old Jason after Thomas Shantz lost his farm to back taxes.</p>
+          
+          <p>Here's the heartbreaking part: Thomas Shantz died in the Mercer County poorhouse in 1858 at age 42, leaving Jason essentially orphaned. W. W. Flanders kept Jason on as "bound labor" - legal under Ohio's apprentice laws until age 21.</p>
+          
+          <p>Jason lived with the Flanders family for 12 years, working their 160-acre farm. He fell in love with Caroline Ann Flanders (W. W.'s daughter), but W. W. refused permission to marry until Jason could "prove himself worthy" - hence waiting until age 27 to marry.</p>
+          
+          <p>Caroline was actually Jason's childhood sweetheart. They had to wait because W. W. wanted Jason to save enough money to buy his own farm first. Jason purchased 40 acres in Venedocia in 1871 for $400 - every penny earned working for his future father-in-law.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">CivilWarOhio</span> • <span class="comment-score">276 points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found why he didn't serve in the Civil War! The 1863 draft registration lists Jason A. Shantz as "ineligible - bound apprentice to W. W. Flanders." Apprentices were exempt from military service because they were considered essential agricultural labor.</p>
+        
+        <p>But here's the real discovery: Jason actually tried to enlist in 1864 when he turned 19. I found his enlistment papers with the 152nd Ohio Volunteer Infantry - he was rejected for "defective vision and inability to read orders." The examining physician noted "applicant nearly blind in right eye, probably from farm accident."</p>
+        
+        <p>Jason was devastated - his older cousin Jacob Shantz died at Antietam, and he felt tremendous guilt about not serving. Family letters from Caroline (preserved by descendants) mention "Jason's shame at not defending the Union like his kin." This guilt apparently haunted him his whole life.</p>
+        
+        <p>He later named his eldest son Jacob William Shantz (1873) after his fallen cousin, suggesting he never got over this.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">VenedociaLocal</span> • <span class="comment-score">234 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found Jason's farm location! He owned 40 acres in Section 12, Township 2S, Range 1E, Venedocia. The land records show he bought it from the Venedocia Land Company in 1871 and farmed there until 1908.</p>
+        
+        <p>His farm was actually quite successful for the time - 1900 agricultural census shows he owned 6 horses, 8 milk cows, 20 hogs, and harvested 200 bushels of wheat plus 500 bushels of corn annually. He was considered one of the better farmers in the area despite being illiterate.</p>
+        
+        <p>Here's how he managed without reading: Caroline handled all the business dealings, kept the farm accounts, and read contracts aloud to him. Jason had an incredible memory - neighbors said he could remember verbal agreements perfectly and never forgot a debt or favor owed.</p>
+        
+        <p>The farm was sold in 1908 to their son Jacob for $1,800 when Jason retired. Jacob later sold it to the state in 1920, and it's now part of the Venedocia Wildlife Area. The original farmhouse foundation is still visible if you know where to look.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ShantzFamilyGenealogist</span> • <span class="comment-score">198 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found the children's full names and fates! All 11 children survived to adulthood - remarkable for the era:</p>
+        
+        <p><strong>Boys (9):</strong><br>
+        Jacob William (1873-1945) - inherited the farm<br>
+        Thomas Alfred (1875-1956) - moved to Indiana, factory worker<br>
+        Robert Jason (1877-1963) - stayed in Venedocia, blacksmith<br>
+        John Henry (1879-1942) - moved to Toledo, railroad worker<br>
+        George Washington (1881-1959) - moved to Michigan, farmer<br>
+        Charles Edward (1883-1971) - moved to Cleveland, steelworker<br>
+        Frank David (1885-1968) - moved to Kentucky, coal miner<br>
+        Walter Eugene (1887-1974) - stayed in Venedocia, merchant<br>
+        Harry Lee (1889-1981) - moved to Chicago, businessman</p>
+        
+        <p><strong>Girls (2):</strong><br>
+        Mary Caroline (1891-1983) - married local farmer<br>
+        Sarah Emma (1893-1992) - married Methodist minister</p>
+        
+        <p>All but two left Venedocia for better opportunities. Jacob kept the farm going until 1920 when he couldn't compete with mechanized agriculture.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">VanWertCountyRecords</span> • <span class="comment-score">156 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>DEATH MYSTERY SOLVED:</strong> Jason didn't die around 1910 - he moved in with his daughter!</p>
+        
+        <p>Found him in the 1920 census! He's living with daughter Sarah Emma and her husband Rev. William H. Miller in Van Wert, Ohio. Listed as "J. A. Shantz, father-in-law, age 75, retired farmer."</p>
+        
+        <p>He actually died March 15, 1923 at age 78 (not 1910). Death certificate lists cause as "senile debility and heart failure." He's buried in the Van Wert Cemetery, Section B, Plot 47 - but here's the problem:</p>
+        
+        <p>The grave is marked with a simple stone that reads "J. A. Shantz 1845-1923" - no first names! That's why you couldn't find it. The cemetery records were also misfiled under "Shance" instead of "Shantz" due to the minister's poor handwriting on the burial permit.</p>
+        
+        <p>Caroline died February 8, 1921 and is buried beside him. Their daughter Sarah Emma and her husband are buried on the other side - it's actually a small family plot.</p>
+        
+        <p>Jason spent his final years living comfortably with his daughter, who was by all accounts devoted to him despite his illiteracy and stubbornness. He apparently became quite religious in his old age and could recite long Bible passages from memory.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">OhioGenealogyHound</span> • <span class="comment-score">97 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>This is absolutely incredible! I've been searching for 15 years and you solved it in one day. Jason Alfred Shantz - I never would have figured out the dual name thing. And to think he lived until 1923, not 1910!</p>
+        
+        <p>I'm planning a trip to Van Wert to visit their graves and to Venedocia to see the old farm site. Thank you all so much - this gives me a complete picture of my ancestor who went from orphaned bound boy to successful farmer, despite never learning to write.</p>
+        
+        <p>The fact that Caroline handled all the business while he did the physical work - they must have been quite a team. And naming his son after his cousin who died in the war shows he never forgot his guilt about not serving.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ShantzFamilyHistorian</span> • <span class="comment-score">245 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>JASON'S SIBLINGS - THE LOST GENERATION:</strong></p>
+        
+        <p>Thomas Shantz and his wife Barbara had 7 children total, but only 3 survived to adulthood. Here's the heartbreaking truth:</p>
+        
+        <p><strong>Older siblings who died young:</strong><br>
+        Catherine Elizabeth (1836-1842) - died of scarlet fever<br>
+        David Jacob (1838-1845) - drowned in the Auglaize River<br>
+        Mary Ann (1841-1843) - died of measles outbreak<br>
+        Samuel Thomas (1847-1850) - died of cholera infantum</p>
+        
+        <p><strong>Surviving siblings:</strong><br>
+        Sarah Margaret (1844-1912) - married Henry F. Miller, moved to Indiana, had 8 children<br>
+        Jacob William (1849-1862) - died at age 13 in a farming accident (this was the cousin Jason named his son after - they were best friends despite the age difference)</p>
+        
+        <p>So Jason effectively grew up as an only child after age 13, which explains why he clung so tightly to his own large family.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">GermanGenealogyExpert</span> • <span class="comment-score">189 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>THE SHANTZ FAMILY ORIGINS IN AMERICA:</strong></p>
+        
+        <p>Found the immigrant ancestor! Johannes "John" Shantz arrived in Philadelphia September 12, 1743 aboard the ship "Loyal Judith" from Rotterdam. He was a Palatine German from the Rhineland, escaping religious persecution.</p>
+        
+        <p>John Shantz (1720-1789) settled in Berks County, Pennsylvania. His son Christian Shantz (1754-1821) moved to Somerset County, Pennsylvania. Christian's son David Shantz (1788-1864) - Jason's grandfather - moved to Ohio in 1825.</p>
+        
+        <p>The name was originally "Schantz" in Germany, meaning "treasurer" or "steward." It got Americanized to Shantz in Pennsylvania. The family were Dunkard Brethren - German Anabaptists who believed in adult baptism and pacifism.</p>
+        
+        <p>Jason's great-grandfather Christian Shantz was actually imprisoned in Bedford County, Pennsylvania in 1778 for refusing to bear arms during the Revolutionary War due to his pacifist beliefs. This might explain why Jason felt conflicted about not serving in the Civil War - pacifism was literally in his DNA!</p>
+        
+        <p>Thomas Shantz lost the family farm because he refused to mortgage it to pay for the Civil War - another pacifist stance that cost the family everything.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">FlandersFamilyExpert</span> • <span class="comment-score">167 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p><strong>THE FLANDERS CONNECTION GOES DEEPER:</strong></p>
+        
+        <p>Caroline Ann Flanders' family has an even more interesting story! Her father William Washington Flanders was actually a descendant of Plymouth Colony settlers. His ancestor Stephen Flanders arrived in Massachusetts Bay Colony in 1640.</p>
+        
+        <p>The Flanders family were among the first settlers of New Hampshire. William's grandfather fought in the Revolutionary War at Bunker Hill. So you have this amazing contrast - Jason descended from pacifist German Anabaptists, Caroline from Yankee soldiers.</p>
+        
+        <p>Caroline's mother was Sarah Ann White, whose family came over on the Mayflower! Yes, Caroline was a Mayflower descendant through both the Whites and the Winslows. She had more "blue blood" in her than most of the "elite" families who looked down on illiterate Jason.</p>
+        
+        <p>This explains why W. W. Flanders was initially reluctant about the marriage - he wanted his daughter to marry someone "worthy" of their New England heritage, not an illiterate German farm boy. But Jason's work ethic and character won him over.</p>
+        
+        <p>Caroline was actually quite educated for a woman of her time - she attended the Female Seminary in Lima, Ohio, and could read Latin. She chose to use her education to help Jason succeed rather than pursue her own ambitions.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">DescendantsTracker</span> • <span class="comment-score">143 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p><strong>JASON'S GRANDCHILDREN - THE SUCCESS GENERATION:</strong></p>
+        
+        <p>Jason and Caroline's 11 children produced 67 grandchildren! Here's what became of them:</p>
+        
+        <p><strong>The Farm Branch (Jacob's line):</strong><br>
+        Jacob's 8 children mostly stayed in agriculture but modernized. His son Thomas Jason Shantz (1895-1983) became one of the first farmers in Ohio to own a tractor dealership. Another son, William Franklin Shantz (1898-1975), became an agricultural extension agent who helped introduce scientific farming methods to the region.</p>
+        
+        <p><strong>The Industrial Branch (Charles' line):</strong><br>
+        Charles Edward's 6 children all went to college - remarkable for the 1920s. His daughter Caroline Elizabeth Shantz became one of the first female attorneys in Cleveland. His son Robert Franklin Shantz was an engineer who helped design the Detroit-Windsor Tunnel.</p>
+        
+        <p><strong>The Academic Branch (Harry's line):</strong><br>
+        Harry Lee's 5 children included Dr. Jason Alfred Shantz Jr. (1918-2005), who became a prominent physician in Chicago and helped establish the first African-American hospital on the South Side.</p>
+        
+        <p><strong>The Military Branch (George's line):</strong><br>
+        George Washington's 7 children included two WWII heroes - Lt. Thomas Alfred Shantz died at Normandy, while his brother James Earl Shantz helped liberate Dachau concentration camp. The pacifist Shantz family finally had war heroes.</p>
+        
+        <p>Of the 67 grandchildren, 15 became teachers, 8 became doctors, 6 became lawyers, 4 became engineers, and 3 became ministers. From illiterate farmer to educated professional class in just two generations!</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ModernConnections</span> • <span class="comment-score">98 points</span> • 45 minutes ago
+      </div>
+      <div class="comment-content">
+        <p><strong>LIVING DESCENDANTS TODAY:</strong></p>
+        
+        <p>There are currently 847 documented living descendants of Jason and Caroline Shantz! They're spread across 27 states, with the largest concentrations in:</p>
+        
+        <ul>
+          <li>Ohio (234 descendants) - mostly around Cleveland and Columbus</li>
+          <li>Illinois (156 descendants) - Chicago area</li>
+          <li>Michigan (89 descendants) - Detroit and Grand Rapids</li>
+          <li>California (67 descendants) - tech industry migration</li>
+          <li>Florida (45 descendants) - retirement migration</li>
+        </ul>
+        
+        <p>Notable living descendants include:<br>
+        - Dr. Sarah Caroline Shantz-Williamson, pediatric surgeon at Mayo Clinic<br>
+        - Robert Jason Shantz III, federal judge in Northern District of Ohio<br>
+        - Emily Caroline Shantz, Pulitzer Prize-winning journalist<br>
+        - Dr. Thomas Alfred Shantz, professor of aerospace engineering at MIT</p>
+        
+        <p>The family holds reunions every five years in Venedocia, Ohio. The 2020 reunion (cancelled due to COVID) would have been the 150th anniversary of Jason buying the farm. They're planning a major celebration for 2025.</p>
+        
+        <p>Jason's original 40-acre farm is now a 240-acre wildlife preserve. The family donated the land to the state in 1980 with the condition that it be maintained as a memorial to "illiterate farmers everywhere who built America through hard work and determination."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">OhioGenealogyHound</span> • <span class="comment-score">67 points</span> • 30 minutes ago
+      </div>
+      <div class="comment-content">
+        <p>I'm absolutely blown away! From one illiterate farmer who signed with an X to 847 living descendants with doctors, lawyers, judges, and Pulitzer Prize winners. Jason and Caroline would be so proud!</p>
+        
+        <p>I'm definitely going to the next family reunion. And I had no idea about the pacifist German Anabaptist roots or the Mayflower connection on Caroline's side. This is better than any historical novel.</p>
+        
+        <p>The fact that they went from bound boy to farm owner, from illiteracy to professors at MIT in just three generations - this is the American Dream personified. Thank you all for giving me the complete picture of my incredible family!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
