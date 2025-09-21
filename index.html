@@ -1,233 +1,347 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPDATE: Visited COL Robert Jemison's grave at Arlington today... his tombstone is barely legible. This hero deserves better : MilitaryGenealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .tombstone-img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .image-caption {
+            font-size: 12px;
+            color: #787c7e;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Jason (Alfred?) Shantz - Ohio farmer born 1840-1845, disappeared after 1910 census, signed with an X his whole life</div>
-    <div class="post-meta">
-      <span class="comment-score">412 upvotes</span> • posted by <span class="comment-author">OhioGenealogyHound</span> <span class="flair">Midwest Research</span>
-    </div>
-    <div class="post-content">
-      <p>Hit a major brick wall with my 3rd great-grandfather Jason Shantz (might be Alfred based on some records). Born somewhere between 1840-1845 in rural western Ohio - exact date and parents unknown. The name confusion is driving me crazy!</p>
-      
-      <p>What I've pieced together:</p>
-      <ul>
-        <li>1860: Living with "W. W. Flanders" as farm laborer, age listed as 20</li>
-        <li>1872: Married Caroline Ann Flanders (daughter of W. W. Flanders)</li>
-        <li>Had 11 children - 9 boys, 2 girls between 1873-1893</li>
-        <li>Never learned to read/write - signed all documents with an X</li>
-        <li>No Civil War service records found</li>
-        <li>1910 census: Living in Venedocia, Ohio as "retired farmer," birth year 1839</li>
-        <li>Vanished completely after 1910 - no death record, no grave found</li>
-      </ul>
-      
-      <p>Can't determine if his father was Thomas Shantz or Robert Shantz (brothers who both lived in the area). The name variation between Jason/Alfred is maddening. Anyone with Ohio county records access?</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MercerCountyArchives</span> • <span class="comment-score">387 points</span> • 9 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>NAME MYSTERY SOLVED:</strong> Found his marriage license! The original 1872 document clearly reads "Jason Alfred Shantz" - he had TWO first names! His illiterate parents probably used both interchangeably, and since he couldn't read, he never knew which was his "official" name.</p>
-        
-        <p><strong>PARENTS IDENTIFIED:</strong> Found the 1850 agricultural census for Dublin Township, Mercer County. Thomas Shantz owned 80 acres with 4 children under 10, including a 5-year-old "J. A. Shantz." Robert Shantz had only daughters in 1850, so Thomas is definitely your man.</p>
-        
-        <p><strong>BIRTH DATE CONFIRMED:</strong> The 1850 census lists him as 5 years old, putting birth at 1845. The 1839 date in 1910 census was probably a neighbor's guess - Jason was 65, illiterate, and likely confused about his exact age.</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">FlandersFamilyExpert</span> • <span class="comment-score">312 points</span> • 8 hours ago
+    <div class="container">
+        <div class="header">
+            <span>r/MilitaryGenealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Arlington_Pilgrim</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
         </div>
-        <div class="comment-content">
-          <p>Found William Washington "W. W." Flanders' farm records! He was a prominent farmer in Dublin Township who regularly hired orphan boys and waifs as laborers. In 1855, he took in 10-year-old Jason after Thomas Shantz lost his farm to back taxes.</p>
-          
-          <p>Here's the heartbreaking part: Thomas Shantz died in the Mercer County poorhouse in 1858 at age 42, leaving Jason essentially orphaned. W. W. Flanders kept Jason on as "bound labor" - legal under Ohio's apprentice laws until age 21.</p>
-          
-          <p>Jason lived with the Flanders family for 12 years, working their 160-acre farm. He fell in love with Caroline Ann Flanders (W. W.'s daughter), but W. W. refused permission to marry until Jason could "prove himself worthy" - hence waiting until age 27 to marry.</p>
-          
-          <p>Caroline was actually Jason's childhood sweetheart. They had to wait because W. W. wanted Jason to save enough money to buy his own farm first. Jason purchased 40 acres in Venedocia in 1871 for $400 - every penny earned working for his future father-in-law.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">CivilWarOhio</span> • <span class="comment-score">276 points</span> • 7 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found why he didn't serve in the Civil War! The 1863 draft registration lists Jason A. Shantz as "ineligible - bound apprentice to W. W. Flanders." Apprentices were exempt from military service because they were considered essential agricultural labor.</p>
-        
-        <p>But here's the real discovery: Jason actually tried to enlist in 1864 when he turned 19. I found his enlistment papers with the 152nd Ohio Volunteer Infantry - he was rejected for "defective vision and inability to read orders." The examining physician noted "applicant nearly blind in right eye, probably from farm accident."</p>
-        
-        <p>Jason was devastated - his older cousin Jacob Shantz died at Antietam, and he felt tremendous guilt about not serving. Family letters from Caroline (preserved by descendants) mention "Jason's shame at not defending the Union like his kin." This guilt apparently haunted him his whole life.</p>
-        
-        <p>He later named his eldest son Jacob William Shantz (1873) after his fallen cousin, suggesting he never got over this.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">VenedociaLocal</span> • <span class="comment-score">234 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found Jason's farm location! He owned 40 acres in Section 12, Township 2S, Range 1E, Venedocia. The land records show he bought it from the Venedocia Land Company in 1871 and farmed there until 1908.</p>
-        
-        <p>His farm was actually quite successful for the time - 1900 agricultural census shows he owned 6 horses, 8 milk cows, 20 hogs, and harvested 200 bushels of wheat plus 500 bushels of corn annually. He was considered one of the better farmers in the area despite being illiterate.</p>
-        
-        <p>Here's how he managed without reading: Caroline handled all the business dealings, kept the farm accounts, and read contracts aloud to him. Jason had an incredible memory - neighbors said he could remember verbal agreements perfectly and never forgot a debt or favor owed.</p>
-        
-        <p>The farm was sold in 1908 to their son Jacob for $1,800 when Jason retired. Jacob later sold it to the state in 1920, and it's now part of the Venedocia Wildlife Area. The original farmhouse foundation is still visible if you know where to look.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">ShantzFamilyGenealogist</span> • <span class="comment-score">198 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found the children's full names and fates! All 11 children survived to adulthood - remarkable for the era:</p>
-        
-        <p><strong>Boys (9):</strong><br>
-        Jacob William (1873-1945) - inherited the farm<br>
-        Thomas Alfred (1875-1956) - moved to Indiana, factory worker<br>
-        Robert Jason (1877-1963) - stayed in Venedocia, blacksmith<br>
-        John Henry (1879-1942) - moved to Toledo, railroad worker<br>
-        George Washington (1881-1959) - moved to Michigan, farmer<br>
-        Charles Edward (1883-1971) - moved to Cleveland, steelworker<br>
-        Frank David (1885-1968) - moved to Kentucky, coal miner<br>
-        Walter Eugene (1887-1974) - stayed in Venedocia, merchant<br>
-        Harry Lee (1889-1981) - moved to Chicago, businessman</p>
-        
-        <p><strong>Girls (2):</strong><br>
-        Mary Caroline (1891-1983) - married local farmer<br>
-        Sarah Emma (1893-1992) - married Methodist minister</p>
-        
-        <p>All but two left Venedocia for better opportunities. Jacob kept the farm going until 1920 when he couldn't compete with mechanized agriculture.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">VanWertCountyRecords</span> • <span class="comment-score">156 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>DEATH MYSTERY SOLVED:</strong> Jason didn't die around 1910 - he moved in with his daughter!</p>
-        
-        <p>Found him in the 1920 census! He's living with daughter Sarah Emma and her husband Rev. William H. Miller in Van Wert, Ohio. Listed as "J. A. Shantz, father-in-law, age 75, retired farmer."</p>
-        
-        <p>He actually died March 15, 1923 at age 78 (not 1910). Death certificate lists cause as "senile debility and heart failure." He's buried in the Van Wert Cemetery, Section B, Plot 47 - but here's the problem:</p>
-        
-        <p>The grave is marked with a simple stone that reads "J. A. Shantz 1845-1923" - no first names! That's why you couldn't find it. The cemetery records were also misfiled under "Shance" instead of "Shantz" due to the minister's poor handwriting on the burial permit.</p>
-        
-        <p>Caroline died February 8, 1921 and is buried beside him. Their daughter Sarah Emma and her husband are buried on the other side - it's actually a small family plot.</p>
-        
-        <p>Jason spent his final years living comfortably with his daughter, who was by all accounts devoted to him despite his illiteracy and stubbornness. He apparently became quite religious in his old age and could recite long Bible passages from memory.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">OhioGenealogyHound</span> • <span class="comment-score">97 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>This is absolutely incredible! I've been searching for 15 years and you solved it in one day. Jason Alfred Shantz - I never would have figured out the dual name thing. And to think he lived until 1923, not 1910!</p>
-        
-        <p>I'm planning a trip to Van Wert to visit their graves and to Venedocia to see the old farm site. Thank you all so much - this gives me a complete picture of my ancestor who went from orphaned bound boy to successful farmer, despite never learning to read or write.</p>
-        
-        <p>The fact that Caroline handled all the business while he did the physical work - they must have been quite a team. And naming his son after his cousin who died in the war shows he never forgot his guilt about not serving.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>3.7k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">UPDATE: Visited COL Robert Jemison's grave at Arlington today... his tombstone is barely legible. This hero deserves better</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">UPDATE</span>
+                    <span class="flair">Arlington</span>
+                    <span class="flair">Tombstone</span>
+                    <span class="flair">Preservation</span>
+                    <span>Posted by u/Arlington_Pilgrim • 2 hours ago</span>
+                </div>
+
+                <p>I had some free time in DC today and decided to visit Arlington National Cemetery to pay my respects to Colonel Jemison. After reading that incredible thread about his 40+ year military career, I had to see his final resting place for myself.</p>
+
+                <p><strong>Location:</strong> Section 7, Grave 10081-B (near the Tomb of the Unknown Soldier)</p>
+
+                <p><strong>The Problem:</strong> His tombstone is in terrible condition. The marble has weathered so badly that most of the inscription is barely readable. I took photos but even up close, you can barely make out his name and dates.</p>
+
+                <div class="image-caption">Photo I took today - you can barely make out "ROBERT H. JEMISON" and "COLONEL" at the top</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Arlington_National_Cemetery_tombstones.jpg/800px-Arlington_National_Cemetery_tombstones.jpg" alt="Weathered tombstone at Arlington" class="tombstone-img">
+
+                <p>What you CAN make out:<br>
+                • "ROBERT H. JEMISON" (top line, barely)<br>
+                • "COLONEL" (second line, mostly gone)<br>
+                • "UNITED STATES ARMY" (third line, readable)<br>
+                • His birth and death years are completely worn away<br>
+                • The military decorations section is just a smooth surface now</p>
+
+                <p><strong>This man served in THREE WARS, rose from Private to Colonel, and was the oldest living Colonel at his death. He deserves better than a weathered, unreadable stone.</strong></p>
+
+                <p>I'm going to contact Arlington's visitor services tomorrow to see what can be done. I know they have limited resources, but surely there's a process for replacing deteriorated stones for decorated veterans?</p>
+
+                <p>Has anyone here dealt with tombstone restoration at Arlington or other national cemeteries? What should I expect? I'm willing to help fund a replacement if that's what it takes.</p>
+
+                <p>Also - if anyone lives near Arlington and wants to visit, I left a small American flag there. Section 7 is easy to find. Just heartbreaking to see such an incredible American hero forgotten like this.</p>
+
+                <div class="comments-count">
+                    <a href="#">428 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    <span class="award">🏅</span>
+                    u/Arlington_Staff_Worker • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Good news - I work at Arlington!</strong> The cemetery is aware of Colonel Jemison's deteriorated stone. It's on our preservation list for 2025. The marble used in the 1980s was poor quality and many stones from that era are failing. We have a process for replacement - it's free for eligible veterans, but there's a 2-3 year waitlist due to funding. Colonel Jemison's distinguished service record (Legion of Merit, Bronze Star) puts him in the priority category. I'll flag his case for expedited review.
+                </div>
+                <div class="comment-meta">u/Arlington_Pilgrim • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    This is such a relief! Thank you for the information. Is there anything I can do to help speed up the process? I'm happy to write letters, contact representatives, or even help document his service record if that would help prioritize his case.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Arlington_Staff_Worker • 45 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Actually yes - if you could document his awards and decorations, that would help tremendously. We need to verify his Legion of Merit, Bronze Star, and any campaign medals. The more complete his service record, the higher the priority. Also, photos of the current stone's condition help make the case. Email me at [redacted] and I'll walk you through the documentation process.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/VA_Grave_Photographer • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>I've photographed this stone before!</strong> Here's what I captured in 2019 vs. 2024. The deterioration is shocking - it's gone from "faded but readable" to "essentially blank" in just 5 years. The marble Arlington used in the late 20th century was terrible quality. I've documented over 200 similar cases. The good news: once replaced, the new stones should last 100+ years.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Military_Records_Researcher • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his awards documentation:</strong><br>
+                    • Legion of Merit - awarded 1942 for Philippines service<br>
+                    • Bronze Star Medal - awarded 1943 for New Guinea operations<br>
+                    • Army Commendation Medal with Oak Leaf Cluster<br>
+                    • World War I Victory Medal with battle clasps<br>
+                    • World War II Victory Medal<br>
+                    • Korean War Service Medal<br>
+                    • Philippine Defense Medal<br>
+                    • Asiatic-Pacific Campaign Medal with 4 battle stars<br>
+                    • National Defense Service Medal<br>
+                    <br>
+                    This is a distinguished combat record that absolutely warrants priority preservation. I have the official citations if needed.
+                </div>
+                <div class="comment-meta">u/Arlington_Staff_Worker • 30 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Perfect! This level of documentation will definitely expedite his case. The Legion of Merit and Bronze Star combination puts him in the top tier for replacement priority. Please email those citations to the address I provided above.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Jemison_Family_Historian • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    <strong>Family perspective:</strong> I'm a distant cousin of Colonel Jemison's. The family has been aware of the deteriorated stone for years but didn't know the process for replacement. Several of us would be willing to contribute to a fund if that would help. More importantly, we have family photos of him in uniform, his original enlistment papers, and even his pipe and cane that the family preserved. These personal items could help make the case for his historical significance.
+                </div>
+                <div class="comment-meta">u/Arlington_Pilgrim • 30 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    The personal items would be incredible to document! Arlington sometimes includes photos and biographical information on their website for notable graves. Would the family be willing to loan or donate these items for documentation purposes?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Stone_Preservation_Expert • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    <strong>Technical details:</strong> The replacement process typically takes 6-12 months once approved. The new stone will be carved from Vermont marble (much higher quality than the 1980s material) and will include:<br>
+                    • Full name and rank<br>
+                    • Branch of service<br>
+                    • Birth and death dates<br>
+                    • Major awards (Legion of Merit, Bronze Star, etc.)<br>
+                    • Service dates (1902-1954)<br>
+                    <br>
+                    The new stone will be slightly larger than the current one to accommodate all this information. Cost is covered by the VA, so no family contribution is needed.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Arlington_Volunteer • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    <strong>Volunteer opportunity:</strong> Arlington has a volunteer program for grave adoption. I've adopted Colonel Jemison's grave and will maintain it until the new stone arrives. I'll place fresh flags on Memorial Day and Veterans Day, and keep the area clean. It's the least we can do for someone who gave 52 years to our country.
+                </div>
+                <div class="comment-meta">u/Arlington_Pilgrim • 15 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    This is beautiful - thank you for doing this! I'm going to visit again next month and will bring a small plaque or marker to place temporarily until the official replacement. Colonel Jemison shouldn't be forgotten.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/MilitaryGenealogy</h3>
+            <ul>
+                <li><a href="#">UPDATE: Found my WWII grandfather's lost Purple Heart in a pawn shop</a></li>
+                <li><a href="#">My great-uncle's grave marker finally corrected after 60 years</a></li>
+                <li><a href="#">Volunteer opportunity: Help document deteriorating military headstones</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
