@@ -1,385 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rev. Samuel "Preaching Sam" Hartland (1829-1924): Fire-and-brimstone preacher, 95 years, 13 biblical children : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Indiana_Records_Guru</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">5 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>1.2k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Rev. Samuel "Preaching Sam" Hartland (1829-1924): Fire-and-brimstone preacher, 95 years, 13 biblical children</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Indiana</span>
-                    <span class="flair">Methodist Minister</span>
-                    <span class="flair">Biblical Names</span>
-                    <span class="flair">Fire-and-Brimstone</span>
-                    <span>Posted by u/Indiana_Records_Guru • 5 hours ago</span>
-                </div>
-
-                <p>I'm researching Reverend Samuel "Preaching Sam" Hartland and have hit some fascinating discoveries. Born March 15, 1829 to David Hartland (farmer) and Susan Jane Hope in Mt. Victory, Ohio. His father was a Methodist, but Samuel took it to a whole different level.</p>
-
-                <p><strong>The Voice of God:</strong> Locals said he had a voice that "could make grown men weep and sinners tremble." He preached hellfire and damnation like his life depended on it. Lived by the motto "The Lord told me so" - applied it to everything from what to plant in his fields to what to name his children.</p>
-
-                <p><strong>The Biblical Children:</strong> True to form, all 13 of his kids got biblical names. I've found records for most but need help with the rest. His wife came from a "different background" - records suggest she wasn't nearly as religious when they married.</p>
-
-                <p><strong>The Move to Berne:</strong> Around 1867, he moved his growing family to Berne, Indiana and became a circuit preacher. Lived there until his death October 10, 1924 at age 95. Buried in the old Berne Cemetery with a simple stone that reads "Preaching Sam - God's Servant 1829-1924."</p>
-
-                <p>Anyone descended from this family? I'm particularly trying to track down all 13 children and learn more about his wife's background - the records suggest she came from a very different world than his fire-and-brimstone existence.</p>
-
-                <div class="comments-count">
-                    <a href="#">234 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Berne_Church_Records • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his wife!</strong> Samuel married Sarah Elizabeth "Sallie" McCoy on October 12, 1851 in Hardin County, Ohio. She was from a completely different world - her father was Alexander McCoy, a tavern keeper and known "whiskey man" who ran the local saloon. Her mother was Mary Ann "Polly" O'Brien, daughter of Irish immigrants who cared more about dancing and music than church. Sallie grew up in a house that served alcohol, had fiddle music on weekends, and rarely saw the inside of a church. No wonder Samuel felt called to "save her from her sinful ways."
-                </div>
-                <div class="comment-meta">u/Indiana_Records_Guru • 4 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Oh wow - a preacher marrying a tavern keeper's daughter! That's quite the opposites-attract situation. Did she convert to his fire-and-brimstone ways, or did she maintain some of her family's more... worldly outlook?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Berne_Church_Records • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>She converted completely!</strong> After their marriage, Samuel made it his mission to "bring her to the light." By 1855, church records show Sarah leading the women's prayer circle and hosting revival meetings at their farm. She became as devout as he was - maybe even more so in her later years. Her obituary in 1898 reads: "Sarah Elizabeth Hartland, beloved wife of Rev. Samuel, fell asleep in Jesus after 47 years of faithful service to the Lord." She outlived 9 of her 13 children, which probably reinforced her religious fervor.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Hartland_Family_Genealogist • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>All 13 children identified!</strong> Born between 1852-1875. The biblical naming got more intense as Samuel got older:<br><br>
-                    1. <strong>David Abraham Hartland</strong> (1852-1920) - named for both grandfathers<br>
-                    2. <strong>Mary Elizabeth Hartland</strong> (1854-1890) - after Mary's cousin Elizabeth<br>
-                    3. <strong>John the Baptist Hartland</strong> (1856-1857) - died age 11 months, probably from the name curse<br>
-                    4. <strong>Sarah Rebecca Hartland</strong> (1858-1935) - "Sarah" after mother, "Rebecca" for Isaac's wife<br>
-                    5. <strong>Isaac Jacob Hartland</strong> (1860-1945) - double patriarch name<br>
-                    6. <strong>Rachel Leah Hartland</strong> (1862-1920) - Jacob's two wives<br>
-                    7. <strong>Samuel Moses Hartland</strong> (1864-1933) - named himself plus Moses<br>
-                    8. <strong>Esther Ruth Hartland</strong> (1866-1955) - the brave women of the Bible<br>
-                    9. <strong>Daniel Jeremiah Hartland</strong> (1868-1940) - the prophet combination<br>
-                    10. <strong>Ezekiel Hosea Hartland</strong> (1870-1950) - minor prophets major impact<br>
-                    11. <strong>Malachi Zachariah Hartland</strong> (1872-1960) - the end-times prophets<br>
-                    12. <strong>Hezekiah Josiah Hartland</strong> (1874-1965) - the reformer kings<br>
-                    13. <strong>Hosanna Glory Hartland</strong> (1875-1960) - his final child, named with pure praise
-                </div>
-                <div class="comment-meta">u/Preachers_Kid_1880 • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        My great-grandmother was Rachel Leah (#6)! She HATED her name - went by "Rae" her whole life. She told my grandmother that Samuel would line all the kids up every Sunday after church and make them recite Bible verses. If anyone messed up, they'd get "the rod of correction." She said by the time she was 10, she could recite the entire book of Revelation from memory - "and that's not even the worst book he made us learn!"
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Hartland_Family_Genealogist • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>More family stories!</strong> I've collected dozens of these. The kids had it rough - Samuel believed in "breaking the will" of children to save their souls. He'd wake them at 4 AM for family prayer, made them memorize entire books of the Bible, and if they questioned anything, he'd make them write Bible verses 100 times. One descendant told me their grandfather (Samuel's grandson) would have nightmares about his childhood until the day he died.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Mt_Victory_Ohio_Records • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found why he moved to Berne!</strong> In 1867, Samuel got into a huge conflict with the Mt. Victory Methodist Church. The issue? They wanted to install an organ for hymn singing, and Samuel declared musical instruments "the devil's tools of temptation." He stood up during a service and thundered: "The Lord told me that any church with an organ is a den of iniquity!" The congregation voted 47-12 to install the organ anyway. Samuel stormed out, taking his family to Berne where the German Methodist church was more conservative. He never set foot in the Mt. Victory church again, even when visiting relatives.
-                </div>
-                <div class="comment-meta">u/Berne_Church_Historian • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>The organ story gets better!</strong> Samuel was so against music that he wouldn't even let his family sing hymns at home - only spoken prayer. When his daughter Mary started humming while doing dishes, he made her kneel in the corner for an hour "to drive out the demon of vanity." When the Berne church finally got an organ in 1895, he switched to a different circuit rather than hear "Satan's instruments" in God's house.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Berne_Old_Timers • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Stories from my great-grandmother:</strong> She remembered "Preaching Sam" from her childhood in the 1890s. He'd walk to church in his long black coat regardless of weather, carrying his big black Bible. Kids would hide behind tombstones in the cemetery to hear him preach - he was THAT powerful. She said when he baptized someone in the creek, he'd hold them under so long "to make sure all the sin washed away" that people would get scared. One time a man came up gasping and Sam declared: "The Lord told me he had extra sin to wash clean!"
-                </div>
-                <div class="comment-meta">u/Creek_Baptism_Veteran • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        My grandfather was baptized by Samuel in 1898! He was 12 years old and terrified. Samuel took him to the creek, started preaching about hellfire, then suddenly grabbed him and dunked him under. Held him there while continuing to pray, wouldn't let him up until he'd "felt the soul surrender to God." Grandpa swallowed so much creek water he was sick for days. Never forgot it - told the story at every family gathering until he died at 95.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Methodist_Historian • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His preaching style was legendary:</strong> Samuel developed what locals called "the Holy Ghost shuffle" - he'd pace back and forth behind the pulpit, then suddenly stop, point at someone in the congregation, and boom: "THE LORD TOLD ME ABOUT YOU!" People swore he could read minds, but he was just incredibly observant. He kept detailed notes on parishioners' sins - who drank, who cussed, who worked on Sunday. His sermons were personalized attacks wrapped in biblical quotes. One woman fainted when he declared: "Sarah Miller, the Lord told me about your secret whiskey bottle behind the flour barrel!"
-                </div>
-                <div class="comment-meta">u/Sin_Note_Keeper • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>The sin notebook was REAL!</strong> My great-aunt saw it once when she was cleaning the parsonage after Sarah died. Samuel had a leather-bound journal where he wrote down everyone's sins - who cheated at cards, who gossiped, who "looked at women with lust." He'd categorize them by severity and cross-reference with Bible verses. When he preached, he'd flip to a page and read someone's sins aloud. People lived in terror of that notebook!
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Death_Records_Indiana • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His death was as dramatic as his life:</strong> Samuel preached until age 95 - his final sermon was September 28, 1924. He'd been sick but declared: "The Lord told me I have one more soul to save." He preached for 2 hours on hell and damnation, collapsed at the pulpit, and died 12 days later. His last words were: "Tell them... the Lord told me... death is just... another sermon to preach." He'd planned his own funeral - wanted no flowers, no singing, just his favorite sermon read aloud. 300 people attended, many weeping that "the voice of God on Earth" was gone.
-                </div>
-                <div class="comment-meta">u/Funeral_Attendee_1924 • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        My grandmother attended that funeral! She was 16 and said it was the most terrifying thing she'd ever seen. They read his sermon about hell for an hour straight - no prayers, no comfort, just pure damnation. People were sobbing, some fainted. The casket was closed because he'd requested no "vanity viewing." Just that big black Bible on top. She said the worst part was his voice - even in death, his words still seemed to echo through the church.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Hartland_Descendant • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Family story about Malachi Zachariah:</strong> My great-grandfather was #11 - Malachi Zachariah Hartland. He HATED his name and went by "Mack Z." all his life. Said being named after "the end-times prophets" made him feel like he was supposed to bring about the apocalypse. He left Berne at 18 and moved to Chicago, changed his name legally to "M.Z. Hartland" and became a successful businessman. Never preached a day in his life - said he'd "heard enough hellfire to last eternity." But he kept his father's Bible, carried it everywhere, and read it daily until he died at 88.
-                </div>
-                <div class="comment-meta">u/Mack_Z_Story • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>Mack Z. was my grandfather!</strong> He absolutely refused to talk about his childhood - we had no idea he came from such a religious family. He was the most secular man you'd ever meet - worked in insurance, played golf, drank bourbon. But every night before bed, he'd read that Bible by himself. When we asked him why, he'd just say "some habits you can't shake, even when you want to." Now I understand - he was trying to exorcise those childhood demons.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/The_Other_Children • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>The children who escaped:</strong> Several of Samuel's kids fled Berne as soon as they could. David Abraham (#1) moved to Kansas and became a cattle rancher - never mentioned his family. Esther Ruth (#8) married a traveling salesman and moved to California, told people she was an orphan. Daniel Jeremiah (#9) became a Unitarian minister - said he "wanted to preach God's love, not God's wrath." They all had different coping mechanisms, but none of them named their own children after Bible characters.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Sarah_Rebecca_Descendant • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Sarah Rebecca's rebellion:</strong> My great-grandmother (#4) was the "good daughter" who stayed in Berne and lived the religious life. But she had a secret - every month she'd sneak to the next town and buy dime store novels with titles like "Forbidden Love" and "The Scarlet Secret." She'd hide them in the outhouse and read them by lantern light. When Samuel died, she went to church the next Sunday wearing a bright blue dress (instead of black) and sang "Bringing in the Sheaves" louder than anyone. Said it was the first time she felt truly free.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/The_Legacy_Continues • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>The psychological impact lasted generations:</strong> I've interviewed dozens of Samuel's descendants for my book on religious trauma. The patterns are heartbreaking - high rates of anxiety, depression, substance abuse. Several descendants became atheists specifically to rebel against "Preaching Sam's ghost." One great-grandson said: "That man's voice still echoes in my nightmares, and he died 40 years before I was born." The family joke is that we all have PTSD - Preacher Sam Traumatic Disorder.
-                </div>
-                <div class="comment-meta">u/Healing_From_The_Past • 30 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>This is so real.</strong> I'm a great-great-granddaughter through Samuel Moses (#7). My grandmother couldn't say "damn" without having a panic attack. We weren't allowed to listen to music with drums, couldn't dance, couldn't play cards. She'd have these fits where she'd quote Revelation and rock back and forth. When I got my first radio, she made me keep it in the barn because "Satan's music" couldn't come in the house. The crazy part? She never met Samuel - died in 1985 - but his fear and judgment lived in her bones.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Anyone else find ancestors who were "too religious" for their churches?</a></li>
-                <li><a href="#">Biblical naming patterns - when did it become less common?</a></li>
-                <li><a href="#">Circuit preachers in Indiana - anyone else have one in the family?</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Rev. Samuel "Preaching Sam" Hartland - Fire & Brimstone preacher born March 1829, died October 1924 at age 95, named all 9 kids after Bible characters</div>
+    <div class="post-meta">
+      <span class="comment-score">892 upvotes</span> • posted by <span class="comment-author">IndianaHistoryBuff</span> <span class="flair">19th Century Research</span>
     </div>
+    <div class="post-content">
+      <p>Need help finding more about my 3rd great-grandfather, Reverend Samuel Paul Hartland. Family lore calls him "Preaching Sam" and claims he had "the voice of God" that could make grown men weep. Born March 1829 in Mt. Victory, Ohio to David Hartland (farmer) and Susan Jane Hope.</p>
+      
+      <p>What I know:</p>
+      <ul>
+        <li>Extremely religious Methodist minister, "lived by what the Lord told me"</li>
+        <li>Moved to Berne, Indiana where he spent most of his life</li>
+        <li>Named all 9 children after Bible characters (family tradition)</li>
+        <li>Wife came from "different background" - no details</li>
+        <li>Died October 10, 1924 at age 95</li>
+      </ul>
+      
+      <p>Can't find his marriage record, don't know his wife's name or background, and I'm missing most of the children's names. Any Indiana researchers with access to Adams County records?</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">AdamsCountyArchivist</span> • <span class="comment-score">743 points</span> • 12 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>WIFE MYSTERY SOLVED:</strong> Found his marriage record! Samuel P. Hartland married Sarah Elizabeth McCoy on October 15, 1855 in Berne, Indiana. Here's the fascinating part - Sarah came from a completely different religious background.</p>
+        
+        <p>Sarah was raised in the <strong>Schwenkfelder</strong> faith, a tiny German Protestant sect that barely survived persecution in Europe. Her father, Johann "John" McCoy (originally Johann McCoy), was Irish Catholic who converted to Schwenkfelderism after marrying Sarah's German mother, Anna Maria Schlegel.</p>
+        
+        <p>The marriage caused a HUGE scandal in both communities! The Schwenkfelders were pacifist mystics, while Samuel was a fire-and-brimstone Methodist. Sarah's family disowned her for "marrying beneath our spiritual dignity." She was 19, he was 26.</p>
+        
+        <p>Found Sarah's handwritten diary from 1855-1857 in the Berne Historical Society archives. She wrote: "My Samuel speaks with such holy fervor that even the hardest hearts melt like wax before him. Mother says I have damned my soul, but I know God's truth when I hear it."</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">BerneHistoricalSociety</span> • <span class="comment-score">612 points</span> • 11 hours ago
+        </div>
+        <div class="comment-content">
+          <p>Found the original church records! Samuel was ordained as a Methodist circuit rider in 1857, but here's what shocked us - he was EXPELLED from the Methodist Church in 1863!</p>
+          
+          <p>The church minutes state: "Brother Hartland's preaching has become excessively zealous to the point of disturbing congregational peace. His constant references to 'divine voices' and 'holy visions' border on fanaticism."</p>
+          
+          <p>After expulsion, Samuel started his own church - "The Holy Temple of the Living God" - in a converted barn. By 1870, he had 200 followers who believed he had supernatural powers. The 1870 census shows 15 families living communally on his property, sharing all possessions.</p>
+          
+          <p>The "voice of God" thing was REAL. Contemporary newspaper accounts describe his sermons: "Hartland's voice carries such authority that even skeptics find themselves trembling. When he condemns sin, strong men weep like children."</p>
+          
+          <p>But it got darker - by 1875, several families accused him of "excessive spiritual authority" over their lives. One man, Peter Rupp, sued him claiming Samuel convinced his wife to leave him "because God told Samuel she was married to a sinner."</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MethodistHistorical</span> • <span class="comment-score">534 points</span> • 10 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found the children's names and their FATES - this is absolutely wild:</p>
+        
+        <p><strong>Born 1856-1875:</strong><br>
+        1. <strong>Hezekiah Nathaniel Hartland</strong> (1856-1899) - Became a preacher even more extreme than his father, died leading a religious commune in Kansas<br>
+        2. <strong>Esther Ruth Hartland</strong> (1858-1943) - Married a Presbyterian minister, rejected her father's extremism<br>
+        3. <strong>Nehemiah Elijah Hartland</strong> (1860-1931) - Changed name to "Ned Hart" and became an atheist, moved to Chicago<br>
+        4. <strong>Deborah Leah Hartland</strong> (1862-1920) - Ran away at 16 with a traveling salesman, family disowned her<br>
+        5. <strong>Obadiah Malachi Hartland</strong> (1864-1955) - Inherited father's church, renamed it "The Sacred Tabernacle"<br>
+        6. <strong>Rachel Miriam Hartland</strong> (1866-1948) - Became a Catholic nun, caused family scandal<br>
+        7. <strong>Ezekiel Amos Hartland</strong> (1869-1902) - Died in a bar fight defending his father's reputation<br>
+        8. <strong>Rebekah Hannah Hartland</strong> (1871-1960) - Married a Jewish merchant, converted to Judaism<br>
+        9. <strong>Zephaniah Hosea Hartland</strong> (1875-1965) - Became a successful businessman, never spoke of his childhood</p>
+        
+        <p>The family was COMPLETELY fractured by religious differences. Sarah died in 1890, and Samuel held a "holy funeral" where he declared she was "the only woman worthy to stand beside me in God's throne room."</p>
+        
+        <p>After Sarah's death, Samuel became even more extreme, claiming to receive daily visions and holding 6-hour sermons where followers would speak in tongues and roll on the floor.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">IndianaCourthouseRecords</span> • <span class="comment-score">423 points</span> • 9 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found the McCoy family scandal that explains EVERYTHING about Samuel's extremism!</p>
+        
+        <p>Sarah's grandfather, Johann Andreas Schlegel, was a Schwenkfelder bishop who was imprisoned in Germany for heresy in 1812. The family fled to America with a small group of only 200 Schwenkfelders. They were PERSECUTED RELIGIOUS REFUGEES.</p>
+        
+        <p>But here's the explosive discovery: Samuel's own grandfather, David Hartland Sr., was a Mennonite minister who was EXCOMMUNICATED in 1804 for "excessive zeal and disturbing the peace of the brethren." The pattern repeats!</p>
+        
+        <p>Samuel was carrying generational religious trauma - both families had been rejected by mainstream Christianity. His extremism was literally INHERITED from both sides!</p>
+        
+        <p>Found a letter Samuel wrote to his children in 1895: "My beloved offspring, you carry in your veins the blood of prophets and martyrs. Your mother bore the suffering of the Schwenkfelders, and I bear the fire of the Hartlands. We are not meant for comfortable faith, but for burning witness!"</p>
+        
+        <p>The "voice of God" he claimed to have? His daughter Esther wrote in her memoir: "Father's voice was indeed supernatural - not in hearing spirits, but in the way he could make others feel they were hearing their own conscience speak. It was psychological, not mystical."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">SwissGenealogyExpert</span> • <span class="comment-score">367 points</span> • 8 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FOUND THE ORIGINAL SWISS CONNECTION:</strong> Both families were originally from the same village in Switzerland!</p>
+        
+        <p>David Hartland's family and Anna Maria Schlegel's family both came from Langnau, Emmental, Switzerland in the 1810s-1820s. They were neighbors in the old country before becoming in-laws in America!</p>
+        
+        <p>The Schlegels were part of the Schwenkfelder migration that fled Switzerland in 1730s, but the Hartlands stayed until 1819. David Hartland Sr. actually KNEW Anna Maria's grandfather in Langnau!</p>
+        
+        <p>Even more remarkable: Samuel and Sarah's marriage reunited two families that had been separated by religious persecution for 100 years. The Schwenkfelders were Anabaptist-adjacent mystics, while the Hartlands were mainstream Reformed until David Sr.'s excommunication.</p>
+        
+        <p>Found Swiss church records: David Hartland Sr. was excommunicated for "preaching without authority and causing divisions among the faithful." He was essentially doing in 1804 what Samuel would do in 1863 - claiming direct divine authority over church hierarchy!</p>
+        
+        <p>The family trauma cycle is heartbreaking: Persecuted refugees → Religious extremists → Social outcasts → New persecution → Next generation rebels → Cycle repeats.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">IndianaHistoryBuff</span> • <span class="comment-score">156 points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p>This is absolutely mind-blowing! My ancestor was carrying 100 years of religious persecution trauma from BOTH sides of his family. No wonder he was so extreme - he literally couldn't escape it genetically or environmentally.</p>
+        
+        <p>The fact that Sarah's family were persecuted Schwenkfelders and his own grandfather was excommunicated explains everything about his "voice of God" complex and need for absolute religious authority.</p>
+        
+        <p>And those children's names - Hezekiah, Nehemiah, Obadiah, Zephaniah - he wasn't just being biblical, he was trying to reclaim the prophetic authority both families had lost through persecution!</p>
+        
+        <p>I'm planning a trip to Berne to visit his church site and the communal farm. Thank you all for solving the 150-year mystery of why Preaching Sam was the way he was. He wasn't crazy - he was the product of generations of religious trauma and persecution.</p>
+      </div>
+    </div>
+
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">BerneLocalHistory</span> • <span class="comment-score">892 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>OH BOY DO I HAVE STORIES FOR YOU ALL!</strong> My great-grandmother lived next door to the Hartland communal farm and left behind the most incredible accounts. Buckle up because this gets WILD.</p>
+        
+        <p><strong>The "Holy Fire" Incident of 1878:</strong> Samuel declared that God told him to "purify the earth with holy fire." He convinced 30 followers to pour kerosene in a circle around the church and SET IT ON FIRE while they were all inside singing hymns! The idea was that "true believers" would be protected by angels. My great-grandma watched from her window as the barn burned. Miraculously, everyone survived, but Samuel claimed the fire "burned away their sins" and several followers had severe burns they refused to treat, saying "the Lord's wounds are holy."</p>
+        
+        <p><strong>The "Poison Communion" of 1882:</strong> This one's insane. Samuel decided that "true communion" should include drinking a mixture of wine and POISONOUS MUSHROOMS he claimed God told him to gather. He said "if your faith is pure, the Lord will neutralize the poison." Three people DIED. The community coroner ruled it "death by misadventure" but Samuel claimed they "weren't faithful enough."</p>
+        
+        <p><strong>The "Wife Swap Revelation" of 1884:</strong> Samuel announced that God commanded a "holy redistribution" of wives. He paired up different couples based on "divine visions." Sarah apparently went along with this for TWO WEEKS before the women revolted and threatened to go to the sheriff. Samuel declared that "Satan had corrupted the weaker vessels."</p>
+        
+        <p><strong>The "Snake Handling Sundays":</strong> Starting in 1885, Samuel kept rattlesnakes in boxes under the pulpit and would pull them out during sermons, claiming "those with true faith can handle serpents as the disciples did." My great-grandma wrote: "We could hear the women screaming from a mile away when those snakes came out. But Samuel would be laughing and saying 'Hear how the demons flee!'"</p>
+        
+        <p>The communal farm had a "prayer tower" where Samuel would lock himself for days, claiming to "commune with heavenly hosts." He'd come down with new "revelations" like when God supposedly told him to make everyone wear white robes and walk barefoot through winter "to purify the flesh."</p>
+        
+        <p>By 1890, even the most devoted followers were getting scared. The "Holy Temple" had become more like a doomsday cult than a church.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">GenealogyStoryCollector</span> • <span class="comment-score">743 points</span> • 5 hours ago
+        </div>
+        <div class="comment-content">
+          <p><strong>MY GRANDFATHER'S PERSONAL ACCOUNT - Hezekiah's Son:</strong></p>
+          
+          <p>My grandfather was Samuel's grandson (Hezekiah's boy) and told us stories that didn't make it into the official records. This is family lore, but my grandpa swore it was true until his dying day.</p>
+          
+          <p><strong>The "Midnight Exorcisms":</strong> Samuel would wake the entire commune at midnight by ringing a massive iron bell, claiming "demons are attacking the holy." He'd make everyone stand in the cold while he "cast out demons" from random people. My grandpa said: "He'd point at someone, anyone, and scream 'BEHOLD THE DEMON OF GLUTTONY DWELLS WITHIN THIS ONE!' Then make them confess to sins they never committed."</p>
+          
+          <p><strong>The "Miracle Baby" Scandal:</strong> In 1887, a young woman in the commune gave birth to a stillborn baby. Samuel declared that "God will breathe life back into this child if our faith is strong enough." He kept the dead infant in a cradle in the church for THREE DAYS, making people pray over it around the clock. When the baby obviously didn't revive, he claimed the mother "lacked sufficient faith" and made her wear sackcloth and ashes for a month.</p>
+          
+          <p><strong>The "Holy Water" Business:</strong> Samuel sold "blessed water from the Jordan River" (actually well water) for 25 cents a bottle, claiming it could cure anything from rheumatism to "female hysteria." He made a fortune off this scam. My grandpa said people came from three counties over to buy it.</p>
+          
+          <p><strong>The "Dancing Plague":</strong> During one sermon, Samuel started dancing wildly and claimed the Holy Spirit had "seized him with holy joy." He commanded everyone to dance until they "danced out their sins." People danced for HOURS until they collapsed. One elderly woman died of exhaustion, but Samuel claimed she "danced her way to heaven."</p>
+          
+          <p><strong>What Really Happened to Sarah:</strong> According to family lore, Sarah didn't just die naturally in 1890. My grandpa said she drank herself to death with "holy wine" (Samuel's homemade concoction) to escape the madness. Samuel covered it up by claiming she "ascended to be with the angels."</p>
+          
+          <p>After Samuel died in 1924, the family found a locked trunk in his house containing women's jewelry, love letters, and $3,000 in gold coins - suggesting he was running more than just a religious operation, if you know what I mean.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">IndianaStateArchive</span> • <span class="comment-score">634 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>OFFICIAL STATE RECORDS CONFIRM THE WORST:</strong></p>
+        
+        <p>Found the suppressed state investigation files from 1889-1891. The Attorney General's office was building a case against Samuel Hartland for:</p>
+        
+        <p><strong>1. Involuntary Manslaughter:</strong> The "poison communion" deaths were investigated, but witnesses refused to testify, claiming "God's law supersedes man's law."</p>
+        
+        <p><strong>2. Fraud and Charlatanism:</strong> The "holy water" business was prosecuted. Samuel was fined $50 and forced to stop selling it, but he just rebranded it as "blessed oil" and kept going.</p>
+        
+        <p><strong>3. Child Endangerment:</strong> Multiple complaints about children being forced to handle snakes, but the parents were all followers and refused to press charges.</p>
+        
+        <p><strong>4. The "Berne Witch Hunt" of 1890:</strong> This is the darkest discovery yet. Samuel convinced his followers that "witches had infiltrated the holy community" and began accusing random people (mostly outsiders who visited the farm). He held "trials by ordeal" where accused people had to handle his rattlesnakes or drink his "holy water." If they got bit/sick, they were "guilty."</p>
+        
+        <p><strong>5. The Mass Suicide That Almost Happened:</strong> In 1891, Samuel announced that "the world will end on March 15th" and convinced 40 followers to prepare for "translation to heaven" by fasting and prayer. The sheriff intervened when a follower wrote to his brother saying they were planning to "leave this world together as the angels did in heaven."</p>
+        
+        <p>The investigation stalled because:</p>
+        <p>- Followers refused to testify against him</p>
+        <p>- The local sheriff was scared of "religious riots"</p>
+        <p>- The county prosecutor worried about "violating religious freedom"</p>
+        <p>- Samuel had become so powerful locally that officials were afraid to move against him</p>
+        
+        <p>By 1892, Samuel had effectively created a theocratic state within Adams County. He collected "tithes" (protection money), held his own "religious courts," and even had armed "deacons" patrolling the commune.</p>
+        
+        <p>The records show that after Sarah died in 1890, Samuel became increasingly paranoid and violent, claiming "demons walk among us in human form."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">OldBerneFamilies</span> • <span class="comment-score">523 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>THE COMMUNITY'S PERSPECTIVE - WHAT THE RECORDS DON'T SHOW:</strong></p>
+        
+        <p>My family has lived in Berne since 1850, and let me tell you, Preaching Sam was both feared and pitied. The old-timers had mixed feelings - they knew he was dangerous, but also that he'd been through hell.</p>
+        
+        <p><strong>The "Winter of Blood" (1890):</strong> After Sarah died, Samuel disappeared into his prayer tower for three weeks. When he emerged, he was changed. He started preaching about "rivers of blood flowing through Berne" and "the righteous shall inherit the earth." He convinced his followers that the local German Lutherans were "secret devil worshippers" planning to destroy them.</p>
+        
+        <p><strong>The "Holy War" Preparations:</strong> Samuel stockpiled weapons, claiming "we must defend God's kingdom." He had his followers digging trenches around the commune and training with rifles. The neighboring farms were terrified. My great-great-grandfather moved his family to Ohio for six months in 1891.</p>
+        
+        <p><strong>The "Miracle Healings":</strong> Despite all the madness, some people swore Samuel actually healed them. Old Mrs. Zimmerman claimed her rheumatism disappeared after Samuel prayed over her. Henry Bruner said his club foot straightened during one of Samuel's sermons. Whether it was faith, coincidence, or mass hysteria, some people genuinely believed in his powers.</p>
+        
+        <p><strong>The "Confession Booths":</strong> Samuel set up special tents where followers had to confess every sin they'd ever committed. He recorded everything in what he called "The Book of Life." After his death, they found dozens of notebooks filled with people's deepest secrets. Some families never recovered when their private shames became public.</p>
+        
+        <p><strong>The "Holy Matrimony" Scam:</strong> Samuel performed "divine marriages" where he'd pair up couples based on "visions from God." Sometimes these were happy, but often they were disasters. One 16-year-old girl was married to a 45-year-old widower because Samuel claimed "God revealed she was created to comfort this widower's grief."</p>
+        
+        <p><strong>What Finally Happened:</strong> After the near-mass-suicide in 1891, the state threatened to bring in the National Guard. Samuel backed down, claiming "God changed His mind about the date." But the commune gradually fell apart. By 1900, most followers had drifted away, either dying off or moving away. Samuel spent his last years as a bitter old man, still preaching to whoever would listen, but mostly alone except for a few die-hard followers.</p>
+        
+        <p>The saddest part? In his final years, Samuel would sit in the ruins of his church and weep, saying "God has forsaken me, but I know not why."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">IndianaHistoryBuff</span> • <span class="comment-score">312 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Jesus Christ. I came here looking for my 3rd great-grandfather and discovered he was basically a 19th century cult leader responsible for deaths, fraud, and psychological torture. This is... a lot to process.</p>
+        
+        <p>My family always painted him as this passionate but misunderstood preacher. The "voice of God" thing was romanticized as divine inspiration, not psychological manipulation. The communal living was "Christian fellowship," not cult isolation.</p>
+        
+        <p>Now I understand why my grandfather (Hezekiah's grandson) left Indiana in 1925 and never spoke of his childhood. Why my dad's generation knew nothing about their Indiana roots. Why we grew up thinking we were "just regular Methodists" when we had this... this history.</p>
+        
+        <p>The religious trauma makes sense now. The way my grandfather would flinch at any mention of "holy rollers" or "religious fanatics." The way he insisted we attend the most mainstream, boring Methodist church possible. He was running from this legacy.</p>
+        
+        <p>I'm going to Berne next month, but now I'm not sure what I'm looking for. Not just genealogical records, but maybe some kind of... closure? Understanding? I need to see where this all happened, to understand how faith can turn into fanaticism, how trauma passes through generations.</p>
+        
+        <p>Thank you all for uncovering the truth, even if it's darker than I ever imagined. Preaching Sam wasn't just extreme - he was dangerous. But he was also a product of generational religious persecution, and maybe understanding that cycle is how we break it.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
