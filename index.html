@@ -1,357 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert "Bob" David North Jr. (1895-1992): Only child, chemical engineer, moved from KY to IN to OH : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Midwest_Chemical_Engineer</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">5 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>412</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Robert "Bob" David North Jr. (1895-1992): Only child, chemical engineer, moved from KY to IN to OH</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Kentucky</span>
-                    <span class="flair">Chemical Engineer</span>
-                    <span class="flair">National Guard</span>
-                    <span class="flair">Migration Trail</span>
-                    <span>Posted by u/Midwest_Chemical_Engineer • 5 hours ago</span>
-                </div>
-
-                <p>Looking for information on my great-grandfather Robert "Bob" David North Jr. Born July 10, 1895 in Topeka, Kansas, but the family moved around a lot. Only child of Robert David North Sr. and Jean Marcia Schatz.</p>
-
-                <p><strong>The Moving Timeline:</strong></p>
-                <ul>
-                    <li>Born Topeka, KS (1895) - family lived there 2 years</li>
-                    <li>Moved to Gladstone, Kansas (1897-1900)</li>
-                    <li>Eventually to Madisonville, KY where his parents worked at a brick company</li>
-                    <li>Mother died 1912 when he was 17</li>
-                    <li>Father remarried Sarah (22 years old!) three years later</li>
-                    <li>Father eventually moved to Fort Wayne, IN as security guard</li>
-                </ul>
-
-                <p><strong>His Life:</strong> Attended college for chemical engineering, served in KY National Guard 1913-1915, graduated at age 26 (1921). Hired in Fort Wayne, Indiana, married Rachel Faye Flanders November 10, 1925 (just after his 30th birthday). They had 3 kids together.</p>
-
-                <p><strong>The Migration:</strong> Moved to Rockford, IL first, hated the weather, then settled in Dayton, Ohio where he worked as chemical engineer most of his life. Retired 1970, lived last 20 years in Troy, Ohio.</p>
-
-                <p><strong>What I'm Missing:</strong> Can't find his college records - which school did he attend? Also looking for his National Guard records from 1913-1915. Any Kentucky researchers familiar with chemical engineers from this era? Or anyone have tips on tracking down National Guard service from that period?</p>
-
-                <div class="comments-count">
-                    <a href="#">67 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/KY_National_Guard_Records • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his National Guard service!</strong> Robert David North Jr. enlisted in Company G, 3rd Kentucky Infantry Regiment on September 15, 1913. He was discharged September 14, 1915 with the rank of Corporal. His commanding officer noted "excellent character, good marksman, reliable in all duties." The unit was based in Madisonville - makes sense since his family worked at the brick company there. His discharge papers list his occupation as "student" and age 20.
-                </div>
-                <div class="comment-meta">u/Midwest_Chemical_Engineer • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is amazing! I never knew he achieved Corporal rank. The Madisonville connection makes perfect sense - the brick company was probably a major employer there. Do you have any details about what the 3rd Kentucky Infantry did during his service years?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/KY_National_Guard_Records • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        The 3rd Kentucky was primarily a peace-time unit during his service. They did annual summer camps at Fort Thomas, Kentucky, and occasional state duties like flood relief along the Ohio River in 1914. The Mexican Border Crisis was brewing in 1915, but his unit wasn't federalized before his discharge. Most interesting: his unit became part of the 138th Field Artillery in WWI, so if he'd stayed in, he would have served overseas.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Kentucky_College_Archivist • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his college!</strong> Robert D. North Jr. attended the University of Kentucky, graduating in 1921 with a Bachelor of Science in Chemistry. His transcript shows he was part of the ROTC program (explains the military connection), and he worked his way through school - worked summers at the brick company with his parents. His senior thesis was titled "The Chemical Properties of Kentucky Clay Deposits" - probably inspired by the family brick business. GPA was 3.2, quite good for the era.
-                </div>
-                <div class="comment-meta">u/Midwest_Chemical_Engineer • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        UK makes perfect sense! And the clay thesis - that's brilliant detective work. The family was literally working with Kentucky clay at the brick company. No wonder he studied chemical engineering. Did you find anything about his professors or classmates who might have influenced his career path?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Kentucky_College_Archivist • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        His advisor was Professor William E. Freeman, who specialized in industrial chemistry. The 1921 UK yearbook shows Robert was in the Chemistry Club, Kappa Sigma fraternity, and played intramural baseball. His roommate was Charles L. McCreary, who became a chemist at DuPont. Interestingly, another classmate was Thomas R. Shreve, who later founded a chemical company in Indiana - probably how Robert got connected to the Fort Wayne job market.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Fort_Wayne_Employment_Records • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his first job!</strong> Robert D. North Jr. was hired by General Electric in Fort Wayne in October 1921, right after graduation. He started in the Chemical Division, working on insulation materials for electrical equipment. GE had a major plant in Fort Wayne making electrical components. His starting salary was $35/week - excellent pay for a new graduate in 1921. He worked there until his marriage in 1925.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Madisonville_Brick_History • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Details about the brick company:</strong> His parents worked at the Madisonville Fire Brick Company, which operated 1895-1930. Robert Sr. was a "supplyman" - basically kept track of materials and inventory. Jean worked in the office as a clerk. The company made high-quality fire bricks used in furnaces and kilns. Robert Jr. worked summers there 1911-1920. The company supplied bricks to steel mills throughout the Ohio Valley - explains the family's move to industrial areas.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Dayton_Chemical_Plants • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his Dayton employer!</strong> Robert worked for National Cash Register (NCR) in Dayton from 1928 until retirement in 1970. NCR had a huge chemical division making carbon paper, ink ribbons, and later magnetic ink for checks. He was a Senior Chemical Engineer in the Research Division. Company newsletter from 1955 mentions him developing a "revolutionary magnetic ink formulation" used in early computer systems. Retired as Manager of Chemical Research.
-                </div>
-                <div class="comment-meta">u/Midwest_Chemical_Engineer • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        NCR! That explains everything - magnetic ink for early computers in the 1950s. He was literally at the forefront of the computer revolution. No wonder he stayed there 42 years. Do you have any of his patents or technical papers from his NCR days?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Dayton_Chemical_Plants • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Found 3 patents:<br>
-                    1. US Patent 2,854,345 (1958) - "Magnetic Ink Composition for Character Recognition"<br>
-                    2. US Patent 2,907,674 (1959) - "Method for Producing Carbon Paper with Improved Durability"<br>
-                    3. US Patent 3,052,539 (1962) - "Ink Formulation for High-Speed Printing"<br>
-                    The magnetic ink patent was huge - licensed by IBM and used in early mainframe systems. He received royalties that doubled his salary in the late 1950s.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Rockford_Weather_History • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>About hating Rockford weather:</strong> The family moved to Rockford in early 1926. Local newspaper from April 1926 mentions "unseasonably cold spring with heavy snows." Rockford had record snowfall that year - 47 inches! Plus the Mississippi River flooded that spring, causing transportation issues. Robert wrote to a colleague: "This place is colder than Kentucky and the wind never stops. Rachel hates it here." They moved to Dayton by December 1926.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Family_Photo_Detective • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found a photo of his wedding!</strong> November 10, 1925 wedding photo published in Fort Wayne News-Sentinel. Robert wore his National Guard uniform (he was still in the reserves), Rachel wore a simple white dress. The article mentions they honeymooned in Chicago, then moved to Rockford for his job. Rachel's parents were John and Mary Flanders - interesting, same last name as Robert's step-grandfather W.W. Flanders. Probably cousins.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Troy_Ohio_Senior_Center • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>His retirement years:</strong> Robert was active in the Troy Senior Center 1970-1990. He taught a class called "Chemistry for Gardeners" and won the Troy Garden Club's "Yard of the Year" in 1975. He was also a volunteer tutor at Troy High School, teaching math and chemistry. The local paper did a story on him in 1985 - "97-year-old retired chemical engineer still experiments in his basement lab." He made his own wine and was famous for his tomato fertilizer formula.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Anyone else have ancestors who worked for NCR in Dayton?</a></li>
-                <li><a href="#">Chemical engineers in early 1900s - how did they get started?</a></li>
-                <li><a href="#">National Guard records from 1910s - where to look?</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Robert "Bob" David North Jr. - Chemical engineer born 1895, moved from KY to IN to OH to IL to OH, died at 97</div>
+    <div class="post-meta">
+      <span class="comment-score">328 upvotes</span> • posted by <span class="comment-author">MidwestFamilyRoots</span> <span class="flair">Brick Wall</span>
     </div>
+    <div class="post-content">
+      <p>Need help with my great-grandfather Robert David North Jr. (July 10, 1895 - November 11, 1992). Only child, moved constantly, but I can't find basic records everyone should have.</p>
+      
+      <p>What I know:</p>
+      <ul>
+        <li>Born Topeka, KS to Robert Sr (from Crofton, KY) and Jean Schatz</li>
+        <li>Father worked at brick company in Madisonville, KY with his 9 brothers</li>
+        <li>Mother died 1912 when he was 17, father remarried 22-year-old Sarah</li>
+        <li>College educated (chemical engineering), served KY National Guard 1913-1915</li>
+        <li>Married Rachel Faye Flanders November 10, 1925 (age 30)</li>
+        <li>Lived: Fort Wayne IN → Rockford IL → Dayton OH → retired in Troy OH</li>
+        <li>3 kids, worked as chemical engineer until 1970 retirement</li>
+      </ul>
+      
+      <p><strong>MAJOR GAPS:</strong> Can't find his college records, no marriage certificate, missing from 1920 census, and NO DEATH CERTIFICATE in Ohio despite dying there in 1992!</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">KYNationalGuardArchives</span> • <span class="comment-score">412 points</span> • 8 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>MILITARY RECORDS FOUND:</strong> Robert David North Jr. enlisted September 12, 1913, Company H, 3rd Kentucky Infantry. But here's the discovery - he was <strong>HONORABLY DISCHARGED EARLY</strong> on March 15, 1915 due to "family hardship."</p>
+        
+        <p>Found the actual discharge papers: His mother Jean had contracted tuberculosis in 1914 and was dying. Robert received a compassionate discharge to care for her and help run the family grocery store (his father had opened a small grocery in Madisonville after leaving the brick company).</p>
+        
+        <p>The "brick company" story is partially wrong - Robert Sr. and his brothers worked there only until 1911. After Jean's death in 1912, Robert Sr. quit the brick company, used his savings to buy a small grocery store, and that's where young Robert Jr. worked while attending college part-time.</p>
+        
+        <p><strong>COLLEGE IDENTIFIED:</strong> He attended <strong>Kentucky Wesleyan College</strong> in Winchester, KY (not the main campus) from 1915-1921. The registrar's office has his records showing he took only 2-3 classes per semester while working to support his family after his mother's death.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">CroftonKYHistorian</span> • <span class="comment-score">356 points</span> • 7 hours ago
+        </div>
+        <div class="comment-content">
+          <p><strong>NORTH BROTHERS MYSTERY SOLVED:</strong> Found the family secret! Robert Sr. wasn't just "one of 10 brothers" - he was the <strong>BLACK SHEEP</strong> who left Crofton under scandalous circumstances.</p>
+          
+          <p>Robert David North Sr. got his girlfriend Jean Schatz pregnant in 1894. She was 18, he was 24. Her German immigrant parents were furious and demanded marriage. The North family patriarch (Robert's father David) refused to allow the marriage because Jean wasn't "good Kentucky stock" - she was German and Catholic.</p>
+          
+          <p>Robert Sr. and Jean eloped to Kansas (where they had no family connections) specifically to escape the scandal. That's why Robert Jr. was born in Topeka - they were hiding from both families. They returned to Kentucky only after Robert Sr.'s father died in 1909, when the scandal had faded.</p>
+          
+          <p>Found the 1900 census - they're living in Salina, Kansas under the alias "Robert and Jennie Norton" (trying to hide the North name). Robert Sr. worked as a railroad section hand, not the "supplyman" family lore claims.</p>
+          
+          <p>The "10 brothers" story is exaggerated - there were 7 boys and 3 girls, but Robert Sr. was estranged from most of them until returning to Kentucky in 1909.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">FortWayneArchivist</span> • <span class="comment-score">298 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>MARRIAGE MYSTERY SOLVED:</strong> Robert and Rachel weren't married in Fort Wayne! Found their marriage license from <strong>November 10, 1925 in Wabash, Indiana</strong> - 30 miles southwest of Fort Wayne.</p>
+        
+        <p>Here's why they married there: Rachel Faye Flanders was 19 years old (born 1906) and her parents refused permission for her to marry 30-year-old Robert. In 1925 Indiana, women under 21 needed parental consent, but Wabash County had a "marriage mill" reputation - the clerk would issue licenses to young couples without proper consent.</p>
+        
+        <p>Robert was working for <strong>General Electric in Fort Wayne</strong> (not a chemical engineer yet) making $35/week as a laboratory assistant. Rachel was a secretary at the same plant. They had to elope because her parents considered Robert "too old and too poor."</p>
+        
+        <p>Their first child Robert David North III was born exactly 9 months later - August 10, 1926. The math explains the rushed marriage!</p>
+        
+        <p><strong>MISSING FROM 1920 CENSUS:</strong> He wasn't missing - he was living in Detroit! Found him boarding at 1423 Cass Avenue, listed as "Robert Norton, age 24, chemist at Ford Motor Company." He was using the Norton alias again, working as a chemical technician in Henry Ford's experimental lab.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">DaytonOHRecords</span> • <span class="comment-score">267 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>CHEMICAL ENGINEER CAREER DISCOVERED:</strong> Robert's career path is fascinating and explains all the moves:</p>
+        
+        <p><strong>1920-1922:</strong> Ford Motor Company, Detroit - chemical technician in experimental division, $40/week<br>
+        <strong>1922-1925:</strong> General Electric, Fort Wayne - laboratory assistant, $35/week<br>
+        <strong>1925-1928:</strong> moved to Rockford IL to work for <strong>Warner & Swasey</strong> as a machinist, not chemical engineer<br>
+        <strong>1928-1970:</strong> <strong>National Cash Register (NCR)</strong> in Dayton, Ohio - finally became chemical engineer!</p>
+        
+        <p>He didn't "hate the weather" in Rockford - he was laid off during the 1927-28 recession when Warner & Swasey cut their workforce by 40%. NCR hired him in Dayton as a chemical engineer working on metal plating processes for cash registers.</p>
+        
+        <p>The real discovery: Robert became <strong>NCR's chief metallurgist</strong> by 1945, developing corrosion-resistant coatings for cash register components. He held <strong>17 patents</strong> between 1930-1965, all related to metal treatment processes. The family never knew about his patents!</p>
+        
+        <p>His salary at retirement in 1970 was $27,500/year - quite substantial for the time. NCR gave him a gold watch and lifetime pension of $18,000/year.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TroyOHHistorian</span> • <span class="comment-score">189 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>DEATH CERTIFICATE MYSTERY SOLVED:</strong> There's no Ohio death certificate because Robert died in <strong>Indiana</strong>!</p>
+        
+        <p>November 11, 1992: Robert was visiting his daughter Martha North-Cheney in Richmond, Indiana (35 miles from Troy). He had a massive heart attack while having Sunday dinner at her home and was pronounced dead at Reid Memorial Hospital at 2:47 PM.</p>
+        
+        <p>Because he died in Indiana, the death certificate is filed in Wayne County, Indiana - not Ohio. The certificate lists:</p>
+        
+        <p><strong>Robert David North Jr.</strong><br>
+        Born: July 10, 1895, Topeka, Kansas<br>
+        Died: November 11, 1992, Richmond, Indiana<br>
+        Age: 97 years, 4 months, 1 day<br>
+        Occupation: Retired Chemical Engineer<br>
+        Cause: Acute myocardial infarction (heart attack)<br>
+        Informant: Martha North-Cheney (daughter)</p>
+        
+        <p>He was buried November 14, 1992 in <strong>Riverside Cemetery, Troy, Ohio</strong> - which is why you couldn't find the death certificate in Ohio databases. You need to search Indiana records!</p>
+        
+        <p>His wife Rachel died March 3, 1989 in Troy and is buried beside him. She was 82. He outlived her by 3 years, 8 months.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MidwestFamilyRoots</span> • <span class="comment-score">134 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>This is absolutely incredible! I've been searching for 20 years and you solved everything in one day. The alias "Norton" explains so much - no wonder I couldn't find him in 1920. And to think he was a pioneering chemical engineer with 17 patents!</p>
+        
+        <p>The family scandal about his parents eloping to Kansas, the early discharge to care for his dying mother, the shotgun marriage in Wabash - this gives me a complete picture of my great-grandfather as a real person, not just dates and places.</p>
+        
+        <p>I'm planning trips to Richmond, Indiana for his death certificate and to Venedocia to see if the Flanders family has any photos of Rachel as a young woman. Thank you all so much - this is why I love genealogy!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
