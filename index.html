@@ -1,313 +1,363 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C8C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C8C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COL Robert Harland Jemison's Ancestors: The Jemison, Harland, and Johnson families of Alabama : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Alabama_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/fakegenealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">That Robert North thread on r/genealogy has to be satire, right? Dude's dad was apparently a bootlegging murderer who stole his son's fiancée 💀</div>
-    <div class="post-meta">
-      <span class="comment-score">1.2k upvotes</span> • posted by <span class="comment-author">skeptic_genealogist</span> <span class="flair">Professional Bullshit Detector</span>
-    </div>
-    <div class="post-content">
-      <p>Anyone else see that absolutely unhinged thread about Robert David North Jr.? Apparently this poor chemical engineer from Ohio had:</p>
-      <ul>
-        <li>A father who ran a criminal empire out of a brick company</li>
-        <li>His mom was "beaten to death" by his dad</li>
-        <li>His dad stole his fiancée</li>
-        <li>He was investigated by the FBI for espionage</li>
-        <li>His synthetic rubber work "literally won the war"</li>
-      </ul>
-      <p>Like... this is just a normal guy who worked at Dayton Rubber and lived a long life. The creative writing on that sub is getting out of control lmao</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">genealogy_snark</span> • <span class="comment-score">2.3k points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p>lmao I saw that thread and was like "when did r/genealogy become a creative writing sub?"</p>
-        
-        <p>apparently every chemical engineer from Ohio was secretly a war hero who single-handedly defeated the Nazis with synthetic rubber. meanwhile my grandpa also worked at Dayton Rubber and all he did was make conveyor belts</p>
-        
-        <p>the best part is how they found "declassified documents" about his "North Process" that increased production by 400%. bro was probably just adjusting the thermostat</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">MidwestFamilyRoots</span> • <span class="comment-score">-847 points</span> • 5 hours ago
-        </div>
-        <div class="comment-content">
-          <p>Hey that's my thread and it's all true. My great-grandfather really did develop synthetic rubber processes that were crucial to the war effort. The documents are real.</p>
-        </div>
-        
-        <div class="comment">
-          <div class="comment-header">
-            <span class="comment-author">fake_history_hunter</span> • <span class="comment-score">1.5k points</span> • 5 hours ago
-          </div>
-          <div class="comment-content">
-            <p>sure jan</p>
-            
-            <p>next you're gonna tell me he was personally thanked by FDR and got a secret medal from the Pope</p>
-            
-            <p>the "North Process" 💀💀💀 my guy really named a chemical process after himself like he's some kind of scientific genius and not just a dude mixing chemicals in Ohio</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">CroftonKYLocal</span> • <span class="comment-score">892 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>lmao I'm from Crofton, KY and that thread had me ROLLING</p>
-        
-        <p>the "North Gang" 💀💀💀 bro we have like 800 people here. you can't even have a proper gang, let alone a criminal empire. we don't even have a stoplight</p>
-        
-        <p>also love how they turned the local brick company into some mafia front. it's literally just a brick company. they make bricks. that's it. nobody's running moonshine through the brick trucks</p>
-        
-        <p>the North family were just regular farmers who worked at the brick plant like everyone else. they weren't the fucking Sopranos</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DaytonRubberOldTimer</span> • <span class="comment-score">756 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>worked at Dayton Rubber for 30 years and never heard of this "Robert North" guy or his "revolutionary synthetic rubber process"</p>
-        
-        <p>we had like 2000 employees. if someone had "won the war" with a new process, people would have talked about it. we would have had newspaper articles, company newsletters, retirement parties, something</p>
-        
-        <p>instead we got this elaborate fantasy about secret factories and FBI investigations. bro probably just did quality control on conveyor belts like the rest of us</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">genealogy_comedy_central</span> • <span class="comment-score">623 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>the progression of that thread was WILD</p>
-        
-        <p>starts normal: "looking for info on my great-grandfather who was a chemical engineer"</p>
-        
-        <p>first reply: "oh he was actually a secret war hero who developed synthetic rubber"</p>
-        
-        <p>second reply: "also his dad was a murderous criminal who stole his fiancée"</p>
-        
-        <p>third reply: "actually the whole family were bootlegging gangsters"</p>
-        
-        <p>by the end: "and that's how this chemical engineer from Ohio single-handedly won World War 2 while escaping from his murderous father who ran the Kentucky mafia"</p>
-        
-        <p>like damn, just let the man rest in peace. he worked at a rubber company and lived a long life. not everyone needs to be the protagonist of an action movie</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">RockfordILNative</span> • <span class="comment-score">445 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>lmao the Rockford part killed me</p>
-        
-        <p>"he left after 8 months because of industrial espionage and FBI investigations"</p>
-        
-        <p>nah bro, he left because Rockford sucks. everyone leaves Rockford. we have terrible weather and nothing to do. it's like the most boring place in Illinois</p>
-        
-        <p>but sure, let's go with "German spies stole his chemical formulas" instead of "he realized Rockford was a depressing industrial town"</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">real_genealogist</span> • <span class="comment-score">389 points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p>what kills me is how they found all these "documents" and "letters" but somehow nobody else can find them</p>
-        
-        <p>like, if you found declassified FBI files about synthetic rubber espionage in Rockford, Illinois in 1927, that would be front-page news in historical societies</p>
-        
-        <p>but somehow it's only in some random redditor's family lore</p>
-        
-        <p>also love how every single person in the story has the perfect dramatic quote. "father has taken everything from me - my girl, my home, my peace" like bro this isn't a Victorian novel</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">FortWayneHistorian</span> • <span class="comment-score">334 points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Fort Wayne Historical Society here - we have no records of any "Robert North" working as a chemical engineer at General Electric or being investigated by the FBI</p>
-        
-        <p>we do have records of thousands of regular people who moved here for factory jobs, lived normal lives, and raised families</p>
-        
-        <p>not everyone who lived through the early 1900s was secretly involved in espionage, organized crime, or world-changing scientific discoveries</p>
-        
-        <p>sometimes a chemical engineer is just a chemical engineer</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">MidwestFamilyRoots</span> • <span class="comment-score">-445 points</span> • 2 hours ago
-        </div>
-        <div class="comment-content">
-          <p>These records are real. I'm not making this up. My family history is documented.</p>
-          
-          <p>Just because you haven't seen the documents doesn't mean they don't exist. Not everything is in public historical society records.</p>
-        </div>
-        
-        <div class="comment">
-          <div class="comment-header">
-            <span class="comment-author">skeptic_genealogist</span> • <span class="comment-score">567 points</span> • 1 hour ago
-          </div>
-          <div class="comment-content">
-            <p>bro this is r/fakegenealogy for a reason</p>
-            
-            <p>you can't post a story about your grandpa being a secret war hero who escaped from his mafia father who stole his fiancée and expect people to believe it without any sources</p>
-            
-            <p>especially when the story gets more elaborate with every comment. next someone's gonna find out he was also secretly Abraham Lincoln's great-grandson</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">actual_midwest_archivist</span> • <span class="comment-score">234 points</span> • 45 minutes ago
-      </div>
-      <div class="comment-content">
-        <p>okay so I actually looked into this because I have access to some archives</p>
-        
-        <p>Robert David North Jr. was real. Born July 10, 1895 in Topeka, died November 11, 1992 in Troy, Ohio. That part checks out.</p>
-        
-        <p>His dad Robert Sr. worked at a brick company in Madisonville, KY. Not as a criminal mastermind - just... worked at a brick company. Made bricks. The company still exists, it's incredibly boring.</p>
-        
-        <p>Robert Jr. went to college, became a chemical engineer, worked at Dayton Rubber from 1928-1970. He married Rachel Flanders in 1925, had three kids, moved to Rockford for a bit, then Dayton, then retired in Troy.</p>
-        
-        <p>That's it. That's literally the whole story. The most interesting thing I found was that he once got a patent for improving conveyor belt efficiency in 1938. The patent number is boring as hell.</p>
-        
-        <p>no FBI investigations, no synthetic rubber breakthroughs, no mafia connections, no stolen fiancées. just a regular dude who lived a long, normal life</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">MidwestFamilyRoots</span> • <span class="comment-score">89 points</span> • 30 minutes ago
-        </div>
-        <div class="comment-content">
-          <p>...oh</p>
-          
-          <p>my grandma might have been... exaggerating</p>
-          
-          <p>she did used to tell some pretty wild stories. I guess I just never questioned it because it made for such a good family legend</p>
-          
-          <p>the patent thing is actually pretty cool though. improving conveyor belts helped industry, which helped the war effort indirectly</p>
-          
-          <p>that's actually more meaningful than some made-up spy story</p>
-        </div>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">genealogy_comedy_central</span> • <span class="comment-score">156 points</span> • 20 minutes ago
-        </div>
-        <div class="comment-content">
-          <p>respect for admitting it. we all have those family stories that get embellished over time</p>
-          
-          <p>my grandma swore we were related to European royalty. turns out we were related to a guy who once sold a horse to a baron</p>
-          
-          <p>at least your grandpa actually existed and had a real job that helped people. conveyor belts mattered! they moved stuff! that's genuinely useful work</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>892</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">COL Robert Harland Jemison's Ancestors: The Jemison, Harland, and Johnson families of Alabama</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Alabama</span>
+                    <span class="flair">Civil War</span>
+                    <span class="flair">Plantation History</span>
+                    <span class="flair">Banking Families</span>
+                    <span>Posted by u/Alabama_Archivist • 8 hours ago</span>
+                </div>
+
+                <p>After my deep dive into Colonel Jemison's military career, I'm now researching his family background. Born 1884 in Bibb County, Alabama, but I need to go back further. What I've found so far:</p>
+
+                <p><strong>Parents:</strong> William Thomas Jemison (1855-1918) and Mary Elizabeth "Molly" Harland (1858-1934). The Harland family had Harland Creek named after them in Bibb County - they were that established.</p>
+
+                <p><strong>Marriage:</strong> Lillian Mae Johnson (1882-1954), daughter of John William Johnson, a banker in San Antonio. This banking connection explains his later board appointments.</p>
+
+                <p><strong>What I'm Missing:</strong> William Thomas Jemison's parents and siblings - I can't find them in 1860/1870 census. Also need to trace the Harland family back further than just "they had a creek named after them." Plus the Johnson banking family of San Antonio - how did a rural Alabama boy meet a Texas banker's daughter in 1908?</p>
+
+                <p>Looking for anyone connected to these Alabama families or familiar with pre-Civil War plantation records in Bibb County.</p>
+
+                <div class="comments-count">
+                    <a href="#">124 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Bibb_County_Historian • 6 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found William Thomas Jemison's parents!</strong> Thomas Jefferson Jemison (1830-1905) and Sarah Ann "Sally" Wilson (1832-1899). Thomas was a substantial planter in Bibb County - 1860 slave schedule shows he owned 47 enslaved people and 1,200 acres. The family plantation was called "Oak Grove," located on the Cahaba River about 5 miles from Centreville. After the Civil War, he diversified into lumber and survived Reconstruction by selling timber rights.
+                </div>
+                <div class="comment-meta">u/Alabama_Archivist • 5 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This is huge! 47 enslaved people makes him a major planter. Do you have details about Oak Grove plantation? Any surviving records of the transition from plantation to lumber after the war?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Bibb_County_Historian • 5 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Oak Grove was a working plantation until 1875. The main house burned in 1868, and Thomas rebuilt a smaller house using lumber from his own sawmill. Family papers at Alabama Department of Archives show he sold 800 acres to pay debts, kept 400 acres for farming. The transition was brutal - went from being worth $50,000 in 1860 to $8,000 in 1870. But he adapted: bought a steam-powered sawmill in 1872 and made a fortune selling crossties to the railroad.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Harland_Family_Genealogist • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>The Harland family goes way back!</strong> Mary Elizabeth Harland's father was Colonel James Harland (1812-1887) - yes, another Colonel! He commanded the 42nd Alabama Infantry (CSA) during the Civil War. Before that, he was a state legislator and major landowner. His father was Reverend Thomas Harland (1778-1855), a Methodist circuit rider who settled Bibb County in 1819. Harland Creek was indeed named after them - they owned all the land around it. The family came from South Carolina originally, part of the migration that opened up Alabama's Black Belt.
+                </div>
+                <div class="comment-meta">u/Alabama_Archivist • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Another Colonel! And a CSA officer - this explains the military tradition. Do you have details about Colonel James Harland's Civil War service? Was he at any major battles?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Harland_Family_Genealogist • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Colonel James Harland fought at Shiloh, Chickamauga, and was wounded at Franklin in 1864. His regiment was part of Clayton's Brigade, famous for holding the line at Chickamauga. After the war, he became a leader in the "Lost Cause" movement, helping organize Confederate veteran reunions. His military bearing and leadership clearly influenced his grandson Robert - the military tradition skipped a generation (William Thomas was too young for Civil War, too old for Spanish-American War).
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/San_Antonio_Banking_History • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the Johnson banking connection!</strong> John William Johnson (1855-1928) founded the San Antonio National Bank in 1893. His daughter Lillian Mae was actually born in Alabama - the family moved to Texas in 1890 when she was 8. Here's the connection: John Johnson's sister Martha married Robert's uncle, James Wilson Jemison, in 1885. So Robert and Lillian were second cousins by marriage! They probably met at family gatherings before Robert enlisted in 1902, then reconnected when he was stationed at Fort Sam Houston in 1910.
+                </div>
+                <div class="comment-meta">u/Alabama_Archivist • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Second cousins by marriage - that explains everything! The families knew each other before the Texas move. Fort Sam Houston connection makes perfect sense for their 1910 reunion. Do you have details about the San Antonio National Bank?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/San_Antonio_Banking_History • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        San Antonio National Bank was one of Texas's largest banks in the early 1900s. John Johnson built it by lending to ranchers and oilmen. The bank survived the Panic of 1907 and became First National Bank of San Antonio in 1922. Lillian inherited a substantial fortune when her father died in 1928 - explains how Robert could afford to raise 7 children on a military salary. The banking connections also helped him get those board appointments after retirement.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Jemison_Siblings_Research • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>William Thomas Jemison had 5 siblings:</strong><br>
+                    1. James Wilson Jemison (1857-1933) - married Martha Johnson (Lillian's aunt)<br>
+                    2. Mary Ann Jemison (1859-1941) - married into the prominent Moore family<br>
+                    3. Sarah Elizabeth Jemison (1861-1920) - married a doctor, moved to Mobile<br>
+                    4. Martha Louise Jemison (1863-1935) - never married, became a schoolteacher<br>
+                    5. Thomas Jefferson Jemison Jr. (1865-1944) - took over the lumber business<br>
+                    <br>
+                    The family was close-knit - they all stayed in Bibb County and intermarried with other planter families. The Johnson-Jemison marriage that created the cousin connection was typical of how these families maintained wealth and status.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Alabama_Marriage_Records • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found Robert and Lillian's marriage certificate:</strong> Married September 12, 1908 at Fort Sam Houston Post Chapel. He was 24, she was 26. Witnesses included Captain John C. McDonald (his company commander) and Miss Margaret Johnson (Lillian's sister). The officiant was Chaplain William T. Anderson. Interesting detail: Lillian's occupation is listed as "banker's daughter" - not a real job, but shows her social status.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Plantation_Daily_Life • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found details about Oak Grove's daily operations:</strong> The 1850s plantation records show Thomas J. Jemison grew cotton, corn, and raised livestock. The 47 enslaved people worked in gangs - field hands, house servants, and skilled craftsmen. He had a blacksmith shop, grist mill, and cotton gin on the property. After emancipation, many freedmen stayed as sharecroppers. The 1880 census shows several Black families with the surname Jemison - likely former slaves who took the family name.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Civil_War_Pensions • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Colonel James Harland's Civil War pension file reveals:</strong> He applied for a Confederate pension in 1888, claiming "wounds received at Franklin and chronic rheumatism from exposure." He received $8/month - substantial for the time. The file includes affidavits from his men describing his leadership at Chickamauga: "Colonel Harland led us through hell, his voice steady as iron while bullets flew like hail." His men clearly loved him - many named sons after him.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Johnson_Family_Tree • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Lillian's mother was interesting:</strong> Her mother was Mary Elizabeth "Molly" Crawford (1860-1935), from a prominent Alabama family before moving to Texas. The Crawfords were iron manufacturers in Birmingham - that's how the banking fortune started. John Johnson married into iron money, then built banking money. Molly Crawford's brother was Judge William Crawford, who became president of First Alabama Bank in 1920 - explaining the bank board connection that helped Robert later.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Great_Uncle_Research • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    <strong>Uncle James Wilson Jemison's story:</strong> He took over the family lumber business after Thomas Sr. died in 1905. Expanded into railroad ties and became one of Alabama's largest crosstie suppliers. He and Martha had 6 children, including James Jr. who became a state senator in the 1930s. The Jemison political connections run deep - they were kingmakers in Bibb County for generations.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Anyone else descended from Alabama plantation families?</a></li>
+                <li><a href="#">San Antonio banking families - Johnson, Crawford connections?</a></li>
+                <li><a href="#">CSA officers who became "Lost Cause" leaders - impact on descendants?</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
