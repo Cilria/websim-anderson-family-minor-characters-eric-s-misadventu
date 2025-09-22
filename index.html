@@ -1,371 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Researching Robert "Bob" David North Jr.'s Ancestors: The North & Flanders Families of Kentucky : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Midwest_Chemical_Engineer</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>892</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Researching Robert "Bob" David North Jr.'s Ancestors: The North & Flanders Families of Kentucky</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Kentucky</span>
-                    <span class="flair">North Family</span>
-                    <span class="flair">Flanders Family</span>
-                    <span class="flair">10 Brothers</span>
-                    <span>Posted by u/Midwest_Chemical_Engineer • 3 hours ago</span>
-                </div>
-
-                <p>After the amazing discoveries about Robert "Bob" David North Jr.'s life, I'm now diving into his ancestry. Here's what I need help with:</p>
-
-                <p><strong>Robert's Father - Robert "Rob" David North Sr. (1865-1947):</strong></p>
-                <ul>
-                    <li>One of 10 brothers from Crofton, KY - but who were the other 9?</li>
-                    <li>Married Jean Marcia Schatz in Kansas while living in Fredericktown, MO</li>
-                    <li>Worked as supplyman at brick company in Madisonville, KY with his brothers</li>
-                    <li>Later moved to Fort Wayne, IN as private security guard</li>
-                    <li>Remarried to 22-year-old Sarah after Jean died in 1912</li>
-                </ul>
-
-                <p><strong>Robert's Mother - Jean Marcia Schatz (1870-1912):</strong></p>
-                <ul>
-                    <li>Born in Kansas, married in Kansas</li>
-                    <li>Died when Robert Jr. was 17</li>
-                    <li>Also worked at the brick company</li>
-                    <li>WHO WERE HER PARENTS? Can't find anything on the Schatz family</li>
-                </ul>
-
-                <p><strong>Robert's Wife - Rachel Faye Flanders (1898-1987):</strong></p>
-                <ul>
-                    <li>Married November 10, 1925 in Fort Wayne, Indiana</li>
-                    <li>Same last name as W.W. Flanders from previous research - definitely connected</li>
-                    <li>Had 3 children with Robert Jr.</li>
-                    <li>Family from Kentucky/Indiana area</li>
-                </ul>
-
-                <p><strong>The Big Mystery:</strong> The Flanders connection. W.W. Flanders (from the Jason Shantz thread) was connected to Robert's step-grandfather. Rachel Flanders married Robert Jr. These families keep intertwining in Western Ohio/Kentucky/Indiana. Also, who were those 9 other North brothers?</p>
-
-                <p>Looking for anyone familiar with Crofton, KY families, brick company employment records from 1900-1920, or the Flanders/Schtaz family connections in the tri-state area.</p>
-
-                <div class="comments-count">
-                    <a href="#">134 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Crofton_KY_Historian • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the 10 North brothers!</strong> The North family was huge in Crofton. Robert Sr.'s parents were David Washington North (1835-1905) and Mary Elizabeth Crofton (1838-1910) - yes, the town was named after her family! The 10 brothers were all born between 1858-1885:<br>
-                    1. William Thomas North (1858-1920)<br>
-                    2. James Monroe North (1860-1935)<br>
-                    3. George Washington North (1862-1940)<br>
-                    4. <strong>Robert David North Sr. (1865-1947)</strong><br>
-                    5. Charles Edward North (1867-1932)<br>
-                    6. Frank Benjamin North (1869-1955)<br>
-                    7. Henry Clay North (1871-1945)<br>
-                    8. John Wesley North (1873-1920)<br>
-                    9. Samuel Houston North (1875-1938)<br>
-                    10. Albert Sidney North (1878-1950)<br>
-                    David North owned a sawmill, and all the boys worked there before scattering to various industrial jobs across Kentucky and Indiana.
-                </div>
-                <div class="comment-meta">u/Midwest_Chemical_Engineer • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is INCREDIBLE! Mary Elizabeth Crofton - so the town really was named after his mother's family. No wonder they were such a prominent family there. Do you know which brothers ended up working at the Madisonville brick company with Robert Sr.?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Crofton_KY_Historian • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>Madisonville brick company workers:</strong> Robert Sr., George, Charles, and Frank all worked at the Madisonville Fire Brick Company around 1900-1915. Henry and John worked at a different brick plant in Owensboro, KY. The others stayed around Crofton - William took over the sawmill, Samuel became sheriff, and Albert moved to Indiana. The Madisonville company specifically recruited the Crofton boys because they had experience with industrial work from the sawmill.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Schatz_Genealogy_Expert • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found Jean Marcia Schatz's family!</strong> Her parents were Johann "John" Schatz (1842-1918) and Maria Anna Klein (1845-1905), German immigrants who settled in Ellsworth County, Kansas in 1867. John was from Bavaria, Maria from Württemberg. They married in Kansas and had 8 children. Jean was their 6th child, born 1870. John worked as a stonemason - helped build several Catholic churches in central Kansas. The family was devout Catholic, which explains why Jean and Robert Sr. married in Kansas rather than Kentucky.
-                </div>
-                <div class="comment-meta">u/Midwest_Chemical_Engineer • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        German immigrants! That explains why I couldn't find them in Kentucky records. Ellsworth County, Kansas - that makes perfect sense with the Kansas marriage. Do you know how Jean ended up in Kentucky working at the brick company?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Schatz_Genealogy_Expert • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        After Maria died in 1905, John moved the family to Madisonville, KY to live with his brother Franz Schatz, who'd moved there in 1890 to work at the brick company. Jean was 35, unmarried, and went with her father. She met Robert Sr. there - he was working at the same company. They married in Kansas because that's where her sister Theresa still lived, and they wanted a Catholic ceremony.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Flanders_Family_Connector • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Rachel Faye Flanders' family tree:</strong> Her parents were John Thomas Flanders (1870-1945) and Sarah Elizabeth "Lizzie" McCoy (1872-1950). John Thomas was the SON of W.W. Flanders' brother, making Rachel and W.W. first cousins once removed! The Flanders family came from Ohio to Indiana/Kentucky in the 1850s. W.W. Flanders (from the Jason Shantz thread) was Rachel's great-uncle. The families stayed connected through business - the Flanders were prominent in agriculture and industry throughout the region.
-                </div>
-                <div class="comment-meta">u/Midwest_Chemical_Engineer • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        So Rachel WAS related to W.W. Flanders! That explains why these families keep showing up together in my research. The Flanders were clearly a major connecting family in Ohio/Kentucky/Indiana business circles. Do you know if Rachel's father John Thomas also worked in industry?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Flanders_Family_Connector • 30 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        John Thomas Flanders owned a farm equipment dealership in Fort Wayne! He sold tractors and farm machinery to the very farmers who supplied the brick companies with clay. His brother William Flanders worked at the same Madisonville brick company as the North brothers - that's how Robert Jr. met Rachel. The families were connected through multiple business relationships.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Madisonville_Company_Records • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Employment records from Madisonville Fire Brick Company (1900-1920):</strong><br>
-                    <strong>North Brothers:</strong> Robert Sr. (supplyman), George (kiln operator), Charles (shipping clerk), Frank (maintenance)<br>
-                    <strong>Schatz Family:</strong> Jean (office clerk), Franz Schatz (her uncle, foreman)<br>
-                    <strong>Flanders Connection:</strong> William Flanders (Rachel's uncle, transportation manager)<br>
-                    <strong>Small world:</strong> They all worked together 1905-1915, which is how the families became interconnected through marriage and business.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Topeka_Birth_Records • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Why Robert Jr. was born in Topeka:</strong> Robert Sr. and Jean moved to Topeka in 1894 because his brother George got him a job at a brick plant there. George had moved to Kansas in 1890 for work. They stayed 3 years, had Robert Jr. there in 1895, then moved back to Kentucky when the Madisonville company offered Robert Sr. a better position. The "family moved around a lot" was actually following job opportunities in the brick industry.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Fort_Wayne_Security_Records • 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Robert Sr.'s second wife Sarah:</strong> Sarah Margaret Johnson (1893-1975) was actually the daughter of one of his coworkers at the Fort Wayne brick plant! She was 22 when they married in 1915, he was 50. Her father worked in the same department. After Robert Sr. retired from the brick company in 1920, they moved to Fort Wayne where Sarah's brother got him a job as a security guard at a factory. Sarah outlived him by 28 years, never remarried.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Family_Business_Historian • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>The interconnected business web:</strong> These families (North, Schatz, Flanders) were all part of the industrial migration pattern in the Ohio Valley 1890-1920. The brick industry connected them - clay from Flanders-supplied farms, processed in North-operated plants, with Schatz family handling logistics. When Robert Jr. became a chemical engineer, he was actually continuing the family tradition - just moving from clay processing to chemical processing for industry.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Anyone else find their families kept intermarrying in small industrial towns?</a></li>
-                <li><a href="#">German Catholic families in Kansas - where did they come from?</a></li>
-                <li><a href="#">Brick company employment records - anyone have tips on accessing them?</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">UPDATE: Need help researching ancestors of Robert David North Jr. - especially his 9 uncles and wife Rachel Flanders' family</div>
+    <div class="post-meta">
+      <span class="comment-score">189 upvotes</span> • posted by <span class="comment-author">MidwestFamilyRoots</span> <span class="flair">Update</span>
     </div>
+    <div class="post-content">
+      <p>Following up on my breakthrough post about Robert David North Jr. (1895-1992). Thanks to this amazing community, I now have his complete life story. Now I need to dig into his ancestors and extended family.</p>
+      
+      <p><strong>What I need help with:</strong></p>
+      <ul>
+        <li><strong>Robert's father:</strong> Robert David North Sr. (1869-1957) and his 9 brothers from Crofton, KY</li>
+        <li><strong>Robert's mother:</strong> Jean Marcia Schatz (1876-1912) - German immigrant family</li>
+        <li><strong>Robert's wife:</strong> Rachel Faye Flanders (1906-1989) family from Wabash, Indiana area</li>
+        <li><strong>Robert Sr.'s parents:</strong> David W. North and unknown mother from Crofton, KY</li>
+      </ul>
+      
+      <p><strong>Family lore claims:</strong> The North brothers were "infamous" in Hopkins County, some involved in illegal activities. The Schatz family were "wealthy German merchants" but I can't find anything. The Flanders were "old money" from Indiana but Rachel's family seems working class.</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">CroftonKYHistorian</span> • <span class="comment-score">523 points</span> • 9 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>NORTH BROTHERS SCANDAL UNCOVERED:</strong> The 10 North siblings (7 boys, 3 girls) were indeed notorious, but not how family lore claims!</p>
+        
+        <p><strong>David Washington North (1845-1909)</strong> - patriarch, owned the largest saloon in Hopkins County. His wife was <strong>Mary Elizabeth "Polly" Higdon (1847-1921)</strong>, daughter of a Confederate veteran who lost everything in the war.</p>
+        
+        <p><strong>The North Brothers (ranked by scandal level):</strong></p>
+        
+        <p><strong>1. William "Big Bill" North (1865-1934):</strong> Crofton's first automobile dealer, but secretly ran moonshine from his garage during Prohibition. Arrested 1923, served 18 months in federal prison.</p>
+        
+        <p><strong>2. James "Jimmy" North (1867-1945):</strong> Crofton town marshal who took bribes from bootleggers. Forced to resign in 1926 after a federal investigation.</p>
+        
+        <p><strong>3. Thomas "Tom" North (1871-1956):</strong> Respectable hardware store owner, but his son Thomas Jr. was the real criminal - convicted of bank robbery in 1932.</p>
+        
+        <p><strong>4. David "Dave" North Jr. (1873-1962):</strong> Actually the good brother - became a Methodist minister and tried to reform the family reputation.</p>
+        
+        <p><strong>5. Robert David North Sr. (1869-1957):</strong> Your ancestor - the "runaway" who fled to Kansas. Worked as a railroad section hand, not the "supplyman" story.</p>
+        
+        <p><strong>6. Charles "Charlie" North (1875-1949):</strong> Died in a bar fight in Evansville, Indiana, 1949.</p>
+        
+        <p><strong>7. Henry "Hank" North (1877-1938):</strong> Died of cirrhosis - the family drunk.</p>
+        
+        <p>The "illegal activities" were mostly Prohibition-era bootlegging, not organized crime. The family became respectable after WWII.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">GermanGenealogyExpert</span> • <span class="comment-score">445 points</span> • 8 hours ago
+        </div>
+        <div class="comment-content">
+          <p><strong>SCHATZ FAMILY SECRETS REVEALED:</strong> Jean Marcia Schatz's family story is completely wrong!</p>
+          
+          <p><strong>Karl "Charles" Schatz (1842-1918)</strong> - Jean's father, was NOT a "wealthy German merchant." He was a <strong>Revolutionary</strong> who fled Germany after the failed 1848 revolution!</p>
+          
+          <p>Found in Hamburg passenger lists: Karl Schatz arrived New York May 15, 1851, age 29, occupation "republican agitator" (code for revolutionary). He fled prosecution after participating in the Baden uprising.</p>
+          
+          <p>Karl worked as a <strong>laborer</strong> in Cincinnati's German district, then moved to Kansas in 1858 as part of the German Free-State movement to keep Kansas from becoming a slave state. He was a <strong>radical abolitionist</strong> who helped runaway slaves on the Underground Railroad.</p>
+          
+          <p><strong>Maria Anna Klein (1845-1923)</strong> - Jean's mother, married Karl in 1865. She was from a farming family in Bavaria.</p>
+          
+          <p>The family lived in poverty in Topeka's Bottoms neighborhood. Jean was the youngest of 8 children. She met Robert Sr. when he was working on the railroad - she was doing laundry for railroad workers to help support her family.</p>
+          
+          <p>The "wealthy merchant" story was invented by Robert Jr. to hide his mother's impoverished background and his grandfather's radical politics.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">WabashCountyResearcher</span> • <span class="comment-score">378 points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FLANDERS FAMILY SHOCKER:</strong> Rachel Faye Flanders' family were NOT "old money" - they were <strong>POOR IRISH IMMIGRANTS</strong> who lied about their background!</p>
+        
+        <p><strong>Patrick Michael Flanders (1878-1944)</strong> - Rachel's father, was born <strong>Patrick Michael Flynn</strong> in County Cork, Ireland! He changed the family name to Flanders after immigrating to escape anti-Irish discrimination.</p>
+        
+        <p>Found the name change: Patrick Flynn arrived Boston 1898, naturalized as Patrick Flanders in 1903 - took his new surname from Flanders Street in Boston where he lived in a boarding house.</p>
+        
+        <p><strong>Bridget Mary O'Sullivan (1880-1962)</strong> - Rachel's mother, married Patrick in 1902. She was also from Cork and worked as a maid in a wealthy Boston household.</p>
+        
+        <p>The Flanders moved to Wabash, Indiana in 1904 because Patrick got a job as a <strong>section hand for the railroad</strong> - the same job Robert Sr. had! They lived in a railroad worker's camp, then a tiny house on the wrong side of the tracks.</p>
+        
+        <p>Rachel was their first child, born 1906. The family story about "old money" was completely fabricated. Patrick was ashamed of being Irish and poor, so he invented a fictional wealthy Belgian-French background.</p>
+        
+        <p><strong>TRAGIC DISCOVERY:</strong> Patrick died in 1944 when Rachel was 38. The death certificate lists cause as "malnutrition and exposure" - he was homeless and living under a bridge in Wabash during the war years. The family was too ashamed to claim his body for 3 weeks.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">NorthCroftonConnection</span> • <span class="comment-score">298 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>THE NORTH-SCHATZ MEETING STORY:</strong> Found how Robert Sr. and Jean actually met - it's NOT the family story!</p>
+        
+        <p>Robert David North Sr. was working as a railroad section hand for the Atchison, Topeka & Santa Fe Railway in 1894. Jean Schatz was doing laundry for railroad workers at her mother's boarding house in Topeka's Bottoms neighborhood.</p>
+        
+        <p>But here's what really happened: <strong>Jean was already pregnant when they met!</strong> She was 18, unmarried, and the father was a railroad engineer named Thomas Henderson who abandoned her when she told him.</p>
+        
+        <p>Robert Sr. knew Jean from the boarding house. When he learned she was pregnant and abandoned, he offered to marry her and claim the child as his own. They eloped to Kansas City and married March 15, 1895.</p>
+        
+        <p><strong>Robert David North Jr. was born July 10, 1895 - exactly 4 months after their marriage.</strong> The math is obvious - he was conceived in October 1894, before they married.</p>
+        
+        <p>Robert Sr. was the good guy here - he saved Jean from scandal and raised another man's child as his own. This explains why they fled to Kansas (to escape the scandal) and why Robert Jr. looked nothing like the North family (he was actually Thomas Henderson's biological son).</p>
+        
+        <p>This family secret explains everything - the hasty marriage, the move to Kansas, the estrangement from the North family, and why Robert Sr. was so protective of Jean.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MidwestFamilyRoots</span> • <span class="comment-score">201 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>This is absolutely mind-blowing! My family has been living with complete fabrications for generations:</p>
+        
+        <ul>
+          <li>The North brothers weren't wealthy businessmen - they were bootleggers and petty criminals</li>
+          <li>The Schatz family weren't wealthy merchants - they were impoverished German revolutionaries</li>
+          <li>The Flanders weren't old money Belgians - they were poor Irish immigrants who changed their name</li>
+          <li>Robert Jr. wasn't Robert Sr.'s biological son - he was another man's child that Robert Sr. raised as his own</li>
+        </ul>
+        
+        <p>My great-grandfather Robert Sr. emerges as the real hero - he married a pregnant, abandoned woman and raised her child, saving them both from ruin. No wonder he fled the family reputation in Crofton.</p>
+        
+        <p>I'm planning trips to Wabash to find Rachel's family records, and to Topeka to research the Schatz revolutionary background. Thank you all for uncovering the truth behind 100 years of family lies!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
