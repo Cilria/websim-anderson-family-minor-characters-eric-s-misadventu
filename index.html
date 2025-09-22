@@ -1,226 +1,424 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert "Bob" David North Jr. (1895-1992): Only child, chemical engineer, lived in 5 states : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
-
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">UPDATE: Need help researching ancestors of Robert David North Jr. - especially his 9 uncles and wife Rachel Flanders' family</div>
-    <div class="post-meta">
-      <span class="comment-score">189 upvotes</span> • posted by <span class="comment-author">MidwestFamilyRoots</span> <span class="flair">Update</span>
-    </div>
-    <div class="post-content">
-      <p>Following up on my breakthrough post about Robert David North Jr. (1895-1992). Thanks to this amazing community, I now have his complete life story. Now I need to dig into his ancestors and extended family.</p>
-      
-      <p><strong>What I need help with:</strong></p>
-      <ul>
-        <li><strong>Robert's father:</strong> Robert David North Sr. (1869-1957) and his 9 brothers from Crofton, KY</li>
-        <li><strong>Robert's mother:</strong> Jean Marcia Schatz (1876-1912) - German immigrant family</li>
-        <li><strong>Robert's wife:</strong> Rachel Faye Flanders (1906-1989) family from Wabash, Indiana area</li>
-        <li><strong>Robert Sr.'s parents:</strong> David W. North and unknown mother from Crofton, KY</li>
-      </ul>
-      
-      <p><strong>Family lore claims:</strong> The North brothers were "infamous" in Hopkins County, some involved in illegal activities. The Schatz family were "wealthy German merchants" but I can't find anything. The Flanders were "old money" from Indiana but Rachel's family seems working class.</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">CroftonKYHistorian</span> • <span class="comment-score">523 points</span> • 9 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>NORTH BROTHERS SCANDAL UNCOVERED:</strong> The 10 North siblings (7 boys, 3 girls) were indeed notorious, but not how family lore claims!</p>
-        
-        <p><strong>David Washington North (1845-1909)</strong> - patriarch, owned the largest saloon in Hopkins County. His wife was <strong>Mary Elizabeth "Polly" Higdon (1847-1921)</strong>, daughter of a Confederate veteran who lost everything in the war.</p>
-        
-        <p><strong>The North Brothers (ranked by scandal level):</strong></p>
-        
-        <p><strong>1. William "Big Bill" North (1865-1934):</strong> Crofton's first automobile dealer, but secretly ran moonshine from his garage during Prohibition. Arrested 1923, served 18 months in federal prison.</p>
-        
-        <p><strong>2. James "Jimmy" North (1867-1945):</strong> Crofton town marshal who took bribes from bootleggers. Forced to resign in 1926 after a federal investigation.</p>
-        
-        <p><strong>3. Thomas "Tom" North (1871-1956):</strong> Respectable hardware store owner, but his son Thomas Jr. was the real criminal - convicted of bank robbery in 1932.</p>
-        
-        <p><strong>4. David "Dave" North Jr. (1873-1962):</strong> Actually the good brother - became a Methodist minister and tried to reform the family reputation.</p>
-        
-        <p><strong>5. Robert David North Sr. (1869-1957):</strong> Your ancestor - the "runaway" who fled to Kansas. Worked as a railroad section hand, not the "supplyman" story.</p>
-        
-        <p><strong>6. Charles "Charlie" North (1875-1949):</strong> Died in a bar fight in Evansville, Indiana, 1949.</p>
-        
-        <p><strong>7. Henry "Hank" North (1877-1938):</strong> Died of cirrhosis - the family drunk.</p>
-        
-        <p>The "illegal activities" were mostly Prohibition-era bootlegging, not organized crime. The family became respectable after WWII.</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">GermanGenealogyExpert</span> • <span class="comment-score">445 points</span> • 8 hours ago
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Midwest_Migration_Expert</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
         </div>
-        <div class="comment-content">
-          <p><strong>SCHATZ FAMILY SECRETS REVEALED:</strong> Jean Marcia Schatz's family story is completely wrong!</p>
-          
-          <p><strong>Karl "Charles" Schatz (1842-1918)</strong> - Jean's father, was NOT a "wealthy German merchant." He was a <strong>Revolutionary</strong> who fled Germany after the failed 1848 revolution!</p>
-          
-          <p>Found in Hamburg passenger lists: Karl Schatz arrived New York May 15, 1851, age 29, occupation "republican agitator" (code for revolutionary). He fled prosecution after participating in the Baden uprising.</p>
-          
-          <p>Karl worked as a <strong>laborer</strong> in Cincinnati's German district, then moved to Kansas in 1858 as part of the German Free-State movement to keep Kansas from becoming a slave state. He was a <strong>radical abolitionist</strong> who helped runaway slaves on the Underground Railroad.</p>
-          
-          <p><strong>Maria Anna Klein (1845-1923)</strong> - Jean's mother, married Karl in 1865. She was from a farming family in Bavaria.</p>
-          
-          <p>The family lived in poverty in Topeka's Bottoms neighborhood. Jean was the youngest of 8 children. She met Robert Sr. when he was working on the railroad - she was doing laundry for railroad workers to help support her family.</p>
-          
-          <p>The "wealthy merchant" story was invented by Robert Jr. to hide his mother's impoverished background and his grandfather's radical politics.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">WabashCountyResearcher</span> • <span class="comment-score">378 points</span> • 7 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>FLANDERS FAMILY SHOCKER:</strong> Rachel Faye Flanders' family were NOT "old money" - they were <strong>POOR IRISH IMMIGRANTS</strong> who lied about their background!</p>
-        
-        <p><strong>Patrick Michael Flanders (1878-1944)</strong> - Rachel's father, was born <strong>Patrick Michael Flynn</strong> in County Cork, Ireland! He changed the family name to Flanders after immigrating to escape anti-Irish discrimination.</p>
-        
-        <p>Found the name change: Patrick Flynn arrived Boston 1898, naturalized as Patrick Flanders in 1903 - took his new surname from Flanders Street in Boston where he lived in a boarding house.</p>
-        
-        <p><strong>Bridget Mary O'Sullivan (1880-1962)</strong> - Rachel's mother, married Patrick in 1902. She was also from Cork and worked as a maid in a wealthy Boston household.</p>
-        
-        <p>The Flanders moved to Wabash, Indiana in 1904 because Patrick got a job as a <strong>section hand for the railroad</strong> - the same job Robert Sr. had! They lived in a railroad worker's camp, then a tiny house on the wrong side of the tracks.</p>
-        
-        <p>Rachel was their first child, born 1906. The family story about "old money" was completely fabricated. Patrick was ashamed of being Irish and poor, so he invented a fictional wealthy Belgian-French background.</p>
-        
-        <p><strong>TRAGIC DISCOVERY:</strong> Patrick died in 1944 when Rachel was 38. The death certificate lists cause as "malnutrition and exposure" - he was homeless and living under a bridge in Wabash during the war years. The family was too ashamed to claim his body for 3 weeks.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">NorthCroftonConnection</span> • <span class="comment-score">298 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>THE NORTH-SCHATZ MEETING STORY:</strong> Found how Robert Sr. and Jean actually met - it's NOT the family story!</p>
-        
-        <p>Robert David North Sr. was working as a railroad section hand for the Atchison, Topeka & Santa Fe Railway in 1894. Jean Schatz was doing laundry for railroad workers at her mother's boarding house in Topeka's Bottoms neighborhood.</p>
-        
-        <p>But here's what really happened: <strong>Jean was already pregnant when they met!</strong> She was 18, unmarried, and the father was a railroad engineer named Thomas Henderson who abandoned her when she told him.</p>
-        
-        <p>Robert Sr. knew Jean from the boarding house. When he learned she was pregnant and abandoned, he offered to marry her and claim the child as his own. They eloped to Kansas City and married March 15, 1895.</p>
-        
-        <p><strong>Robert David North Jr. was born July 10, 1895 - exactly 4 months after their marriage.</strong> The math is obvious - he was conceived in October 1894, before they married.</p>
-        
-        <p>Robert Sr. was the good guy here - he saved Jean from scandal and raised another man's child as his own. This explains why they fled to Kansas (to escape the scandal) and why Robert Jr. looked nothing like the North family (he was actually Thomas Henderson's biological son).</p>
-        
-        <p>This family secret explains everything - the hasty marriage, the move to Kansas, the estrangement from the North family, and why Robert Sr. was so protective of Jean.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MidwestFamilyRoots</span> • <span class="comment-score">201 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>This is absolutely mind-blowing! My family has been living with complete fabrications for generations:</p>
-        
-        <ul>
-          <li>The North brothers weren't wealthy businessmen - they were bootleggers and petty criminals</li>
-          <li>The Schatz family weren't wealthy merchants - they were impoverished German revolutionaries</li>
-          <li>The Flanders weren't old money Belgians - they were poor Irish immigrants who changed their name</li>
-          <li>Robert Jr. wasn't Robert Sr.'s biological son - he was another man's child that Robert Sr. raised as his own</li>
-        </ul>
-        
-        <p>My great-grandfather Robert Sr. emerges as the real hero - he married a pregnant, abandoned woman and raised her child, saving them both from ruin. No wonder he fled the family reputation in Crofton.</p>
-        
-        <p>I'm planning trips to Wabash to find Rachel's family records, and to Topeka to research the Schatz revolutionary background. Thank you all for uncovering the truth behind 100 years of family lies!</p>
-      </div>
-    </div>
-  </div>
-</div>
 
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>892</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Robert "Bob" David North Jr. (1895-1992): Only child, chemical engineer, lived in 5 states</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Kansas</span>
+                    <span class="flair">Kentucky</span>
+                    <span class="flair">Indiana</span>
+                    <span class="flair">Illinois</span>
+                    <span class="flair">Ohio</span>
+                    <span>Posted by u/Midwest_Migration_Expert • 8 hours ago</span>
+                </div>
+
+                <p>I'm researching Robert David North Jr. and have hit some interesting discoveries about this only child's journey across the Midwest. Born July 10, 1895 in Topeka, Kansas to Robert David North Sr. (from Crofton, KY) and Jean Marcia Schatz.</p>
+
+                <p><strong>The Family Story:</strong> His parents married in Kansas while his father was living in Fredericktown, Missouri. Robert Jr. was born in Topeka, but they only stayed 2 years before moving to Gladstone, Kansas, then back to Kentucky (Madisonville) where his father and uncles worked at a brick company.</p>
+
+                <p><strong>The Timeline:</strong></p>
+                <ul>
+                    <li>1912: Mother Jean dies when he's 17</li>
+                    <li>1913-1915: Served in KY National Guard</li>
+                    <li>1915-1921: College for chemical engineering (graduated at 26)</li>
+                    <li>1921: Hired in Fort Wayne, Indiana</li>
+                    <li>1925: Married Rachel Faye Flanders at age 30</li>
+                    <li>1925-1950s: Moved to Rockford, IL → hated weather → Dayton, OH</li>
+                    <li>1970: Retired from chemical engineering</li>
+                    <li>1992: Died in Troy, Ohio at age 97</li>
+                </ul>
+
+                <p><strong>The Mystery:</strong> His father remarried in 1915 to 22-year-old Sarah (Robert Sr. was ~40) and moved to Fort Wayne, Indiana as a security guard. But here's what's puzzling - Robert Jr. moved to Fort Wayne in 1921 for his job. Did his father influence this move? Or was it just coincidence?</p>
+
+                <p>Anyone descended from this North family? I'm particularly trying to track down what chemical company he worked for in Dayton and why he left Rockford so quickly.</p>
+
+                <div class="comments-count">
+                    <a href="#">156 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Dayton_Chemical_Historian • 6 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his employer!</strong> Robert D. North Jr. worked for the National Cash Register Company (NCR) in Dayton from 1925 until his retirement in 1970. He was a chemical engineer in their research division, working on the development of carbon paper and later, early photocopier technology. NCR was Dayton's largest employer at the time, and they had a massive chemical research division. His hiring date was January 15, 1925 - just two months after his wedding.
+                </div>
+                <div class="comment-meta">u/Midwest_Migration_Expert • 6 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        That's fantastic! NCR makes perfect sense - they were the tech giant of their day. Do you know what specifically made him leave Rockford so quickly? The weather comment in my notes seems too simple.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Dayton_Chemical_Historian • 5 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>Rockford story discovered!</strong> He worked for the Barber-Colman Company in Rockford for exactly 8 months (August 1925 - March 1926). Company newsletters reveal he was recruited from Fort Wayne with promises of "Midwest paradise" but Rockford had a brutal winter that year - 47 inches of snow and weeks of sub-zero temperatures. But the real issue: his wife Rachel was pregnant with their first child and developed complications. Dayton had better medical facilities and NCR offered him a position with higher pay and family health benefits. The "hated the weather" was family code for "medical emergency."
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Kentucky_National_Guard_Records • 6 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his National Guard service!</strong> Robert D. North Jr. enlisted in Company B, 1st Kentucky Infantry Regiment on September 12, 1913. His enlistment papers show he was 18 years old, 5'10", brown hair, blue eyes, occupation "student." He served his full 2-year enlistment and was honorably discharged September 11, 1915 as a Private First Class. His commanding officer noted: "Excellent soldier, good with mathematics, recommended for promotion but declined to reenlist due to college plans."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Topeka_Birth_Records • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Why they left Topeka revealed:</strong> The North family lived at 1423 Tyler Street, Topeka. Robert Sr. worked as a traveling salesman for a farm implement company. In 1897, the company went bankrupt during the recession, and he lost his job. The only work he could find was back in Kentucky with his brothers at the Madisonville Brick & Tile Company. The move wasn't planned - it was economic survival. Interestingly, Jean's family (the Schatz family) were prominent merchants in Topeka, and they stayed behind when the Norths moved.
+                </div>
+                <div class="comment-meta">u/Midwest_Migration_Expert • 5 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        So Jean left her family behind? That must have been hard - especially since she died just 15 years later. Did she ever see them again?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Topeka_Birth_Records • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>Jean's tragic story uncovered:</strong> Jean Schatz North visited her family in Topeka at least twice - 1901 and 1907 based on newspaper mentions. But she developed tuberculosis around 1910 (common in brick factory towns due to silica dust). Her family wanted her to return to Topeka for treatment, but Robert Sr. insisted she stay in Kentucky for "fresh country air." She died in a sanatorium in Hopkinsville, Kentucky on March 15, 1912. Her obituary in the Topeka paper reads: "Jean Marcia Schatz North, beloved daughter of Mr. and Mrs. Henry Schatz, died after a long illness. She leaves behind her husband and son Robert Jr. Funeral services will be held in Madisonville, Kentucky."
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Fort_Wayne_Family_Historian • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>The Fort Wayne connection explained:</strong> Robert Sr. didn't just randomly move to Fort Wayne. After Jean died, he struggled to raise Robert Jr. alone while working at the brick company. In 1915, he married Sarah Elizabeth Cooper - she was 22, he was 40. Sarah's brother, William Cooper, lived in Fort Wayne and worked as a security guard for General Electric. He got Robert Sr. a job at GE's Fort Wayne plant as a night watchman. When Robert Jr. graduated college in 1921, his father encouraged him to apply at NCR because "they're hiring engineers and it's good steady work." The family reunion in Fort Wayne was planned - not coincidence.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Chemical_Engineering_Alumni • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>His college discovered!</strong> Robert D. North Jr. attended the University of Kentucky, graduating in 1921 with a Bachelor of Science in Chemical Engineering. He was part of the first graduating class after WWI ended. University records show he worked his way through school - first in the dining hall, then as a lab assistant in the chemistry department. His senior thesis was titled "The Chemical Properties of Kentucky Clay Deposits" - probably inspired by his father's brick company background. He graduated Phi Kappa Phi honors society.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/NCR_Retiree_Kids • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Stories from my dad:</strong> My father worked under Robert North at NCR in the 1950s-60s. Said he was known as "The Professor" because he wore a lab coat every day and kept detailed notebooks of every experiment. He developed several patents for carbon paper formulations that NCR used for decades. Dad said he was quiet, methodical, and never missed a day of work in 45 years. When he retired in 1970, NCR gave him a gold watch and a laboratory bench was named after him. He trained most of the chemical engineers who came after him.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Marriage_Records_Indiana • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>His wedding details:</strong> Robert D. North Jr. married Rachel Faye Flanders on November 10, 1925 at the First Presbyterian Church in Fort Wayne. Rachel was 24, Robert was 30. She was the daughter of Charles Flanders, a machinist at the Fort Wayne Railroad. They had a small wedding - only 30 guests due to Robert's "work schedule" (he was in the middle of a major project at NCR). The reception was held at the home of Rachel's parents. Their honeymoon was a road trip to Niagara Falls in their new Ford Model T.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Troy_Ohio_Senior_Center • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>His retirement years:</strong> Robert and Rachel moved to Troy, Ohio in 1970 after he retired. They bought a small house on Maple Street near the senior center. He volunteered as a math tutor for high school students and was a regular at the Troy Public Library. Every Saturday, he'd walk to the library, return his books, and get new ones - mostly chemistry journals and history books. The librarians called him "The Professor" too. He died November 11, 1992 - exactly 97 years and 4 months old. His wife Rachel had died the previous year, and he told a neighbor: "I've lived a good long life, longer than I ever expected. I'm ready to see Rachel again."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🔍</span>
+                    u/Kentucky_North_Family_Historian • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Robert North Sr.'s 9 brothers discovered!</strong> The North family from Crofton, Kentucky was HUGE. Robert Sr.'s parents were William Thomas North (1832-1901) and Mary Elizabeth "Molly" McDaniel (1835-1918). The 10 brothers were known locally as "The North Brigade":<br><br>
+                    1. <strong>Thomas Jefferson North</strong> (1855-1929) - oldest, took over family farm<br>
+                    2. <strong>William Henry North</strong> (1857-1941) - moved to Evansville, IN, opened a hardware store<br>
+                    3. <strong>James Madison North</strong> (1859-1933) - stayed in Crofton, worked in coal mines<br>
+                    4. <strong>John Wesley North</strong> (1861-1925) - moved to St. Louis, worked for railroad<br>
+                    5. <strong>Benjamin Franklin North</strong> (1863-1947) - moved to Paducah, KY, became a riverboat pilot<br>
+                    6. <strong>Andrew Jackson North</strong> (1865-1950) - moved to Kansas City, worked in meat packing<br>
+                    7. <strong>George Washington North</strong> (1867-1938) - moved to Chicago, worked for Pullman Company<br>
+                    8. <strong>Robert David North Sr.</strong> (1869-1951) - our guy, moved around the Midwest<br>
+                    9. <strong>Charles Lee North</strong> (1871-1944) - youngest, moved to Detroit, worked for Ford<br>
+                    10. <strong>Joseph Daniel North</strong> (1873-1955) - moved to Louisville, became a police officer<br><br>
+                    The family scattered across the Midwest between 1890-1920. Only Thomas stayed in Crofton.
+                </div>
+                <div class="comment-meta">u/Midwest_Migration_Expert • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This is AMAZING! 10 brothers and they all went different directions. Do you know anything about the brick company connection? I know Robert Sr. and some brothers worked at Madisonville Brick & Tile.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Kentucky_North_Family_Historian • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>The Brick Company Connection:</strong> Madisonville Brick & Tile Company was founded in 1895 by a group of investors including William Thomas North (Robert Sr.'s father). When William died in 1901, he left shares to all 10 sons. The company became a family business - by 1910, Robert Sr., James Madison, and John Wesley all worked there. Robert Sr. was traveling salesman, James was plant supervisor, John was accountant. The company specialized in drainage tiles for agriculture - huge business in western Kentucky. It closed during the Depression in 1932.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Rachel_Flanders_Family_Expert • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Rachel Flanders' family tree uncovered!</strong> Rachel Faye Flanders (1895-1991) came from solid German stock. Her parents were Charles Henry Flanders (1870-1944) and Emma Katherine "Kate" Mueller (1872-1958). The Flanders family were early German immigrants to Fort Wayne - Charles worked as a machinist for the Pennsylvania Railroad his entire life (45 years!).<br><br>
+                    <strong>Rachel's siblings:</strong><br>
+                    • <strong>Charles Jr.</strong> (1893-1978) - became a railroad engineer<br>
+                    • <strong>Rachel</strong> (1895-1991) - married Robert North Jr.<br>
+                    • <strong>William</strong> (1897-1966) - died in WWI, Battle of Argonne Forest<br>
+                    • <strong>Edward</strong> (1899-1983) - became a tool and die maker<br>
+                    • <strong>Dorothy</strong> (1901-1995) - never married, worked as secretary<br><br>
+                    The Muellers were from Württemberg, Germany, immigrated 1885. Charles Flanders' family was from Hanover, Germany, immigrated 1868. Both families were Lutheran and attended St. Paul's Lutheran Church in Fort Wayne.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Jean_Schatz_Ancestry • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Jean Marcia Schatz's family discovered!</strong> Jean (1873-1912) came from a prominent Topeka merchant family. Her parents were Henry Christian Schatz (1848-1925) and Maria Elizabeth "Lizzie" Baumgartner (1850-1932). The Schatz family owned "Schatz & Sons Mercantile" - one of Topeka's largest general stores from 1880-1920.<br><br>
+                    <strong>The Schatz children:</strong><br>
+                    • <strong>Anna Maria</strong> (1870-1945) - married local banker<br>
+                    • <strong>Jean Marcia</strong> (1873-1912) - married Robert North Sr.<br>
+                    • <strong>Henry Christian Jr.</strong> (1875-1958) - took over family store<br>
+                    • <strong>William Frederick</strong> (1877-1963) - became Topeka city councilman<br>
+                    • <strong>Emma Louise</strong> (1880-1966) - married railroad executive<br>
+                    <br>
+                    The Baumgartners were from Switzerland, immigrated 1845. They were also merchants in Topeka. The family was devastated when Jean moved to Kentucky - they tried to convince Robert Sr. to stay in Kansas or move back.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Grandparents_Grandparents • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Going back another generation - Robert North Jr.'s grandparents:</strong><br><br>
+                    <strong>William Thomas North</strong> (1832-1901) - born in Rowan County, Kentucky, moved to Christian County 1865 after Civil War. Served as private in Union Army (Company G, 35th Kentucky Infantry) - interesting for a Southern state. After war, became successful farmer and businessman. Married Mary Elizabeth McDaniel in 1854.<br><br>
+                    <strong>Mary Elizabeth McDaniel</strong> (1835-1918) - born in Todd County, Kentucky. Her father, James McDaniel, was a veteran of War of 1812. The McDaniels were of Scots-Irish descent, originally from Virginia. Mary Elizabeth was known as "Molly" and was active in the Methodist Church. She outlived her husband by 17 years and lived with son Thomas Jefferson North until her death.<br><br>
+                    <strong>Henry Christian Schatz</strong> (1848-1925) - born in Baden-Württemberg, Germany, immigrated 1868. Started as laborer for Kansas Pacific Railway, saved money, opened small store in Topeka 1875. Built it into major mercantile business by 1890. Naturalized citizen 1873. Married Maria Baumgartner 1869 in Lawrence, Kansas.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/DNA_Matches_Expert • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    <strong>DNA matches confirm the family connections!</strong> Through AncestryDNA, I've identified several descendants of Robert North Jr.'s siblings and uncles. The North family DNA cluster is very distinct - matches from Kentucky, Indiana, Illinois, Ohio, and Michigan. The Flanders matches cluster heavily in Fort Wayne and surrounding counties. The Schatz matches are mostly in Kansas and Missouri. Interestingly, there are NO matches to the Crofton, KY North family before 1830 - they seem to have appeared suddenly, suggesting possible adoption or name change in that generation.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Anyone else have ancestors who worked for NCR in Dayton?</a></li>
+                <li><a href="#">Chemical engineers in the family - what companies did they work for?</a></li>
+                <li><a href="#">Migration patterns: Why did so many families move KY→IN→OH in the 1920s?</a></li>
+                <li><a href="#">Anyone else researching German families in Fort Wayne?</a></li>
+                <li><a href="#">Midwest migration patterns - why families scattered across 5 states?</a></li>
+                <li><a href="#">DNA matches not showing expected ancestors - adoption or name change?</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
