@@ -1,421 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I am literally God. AMA : AMA</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemField, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 0;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/AMA</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/ActuallyGodFrThisTime</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>69.0k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">I am literally God. AMA</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">AMA</span>
-                    <span class="flair">Serious</span>
-                    <span>Posted by u/ActuallyGodFrThisTime • 3 hours ago</span>
-                </div>
-
-                <p>Yeah so I'm God. Like the actual God. Not "god" in some metaphorical sense or whatever. I created the universe, I know everything, I'm omnipotent, all that jazz.</p>
-
-                <p>Got bored watching you mortals argue about whether I exist so I figured I'd hop on here and clear things up. Ask me literally anything about existence, the universe, why I made wasps, whatever.</p>
-
-                <p>Also before anyone asks - yeah Jesus was my son, yeah the Bible got a bunch of stuff wrong, and yeah I could prove I'm God but that would defeat the whole "faith" thing I'm going for. Plus where's the fun in that?</p>
-
-                <p>Currently sitting in a coffee shop in Portland (long story) on my laptop that I definitely didn't create with my omnipotent powers but rather bought with money I earned doing Uber Eats deliveries. Because even God needs side hustles in this economy apparently.</p>
-
-                <p>AMA but keep it interesting. If I wanted to hear "why do bad things happen to good people" for the millionth time I'd just read my inbox prayers.</p>
-
-                <p><strong>Edit:</strong> Holy shit this blew up. Currently at 420 awards which is hilarious and also exactly the number I'd expect from this website. Keep the questions coming, I'm not going anywhere (literally, I'm omnipresent).</p>
-
-                <p><strong>Edit 2:</strong> Stop asking me to smite people. That's not how this works. That's not how any of this works.</p>
-
-                <p><strong>Edit 3:</strong> Yes I know about the poop sock thing. No I won't explain it. You mortals are weird.</p>
-
-                <div class="comments-count">
-                    <a href="#">15.2k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="award">🏅</span>
-                    u/DefinitelyNotLucifer • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Bro you still owe me $20 from that poker game in 4004 BC. When you gonna pay up?
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        I literally created the concept of money and you're trying to collect a debt? Typical fallen angel behavior smh
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🥇</span>
-                    u/AtheistWithQuestions • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Okay but like... why did you make my ex? Was that just a mistake or did you actually think that would work out for me?
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Look, free will is a bitch sometimes. Also your ex was supposed to teach you about boundaries and self-respect but apparently you skipped that lesson ¯\_(ツ)_/¯
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/CatLover42069 • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Do you ever just look at a cat and think "damn I nailed that design" or are you more of a dog person?
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Cats are proof that even I can create something that's simultaneously perfect and an absolute asshole. They're like tiny fuzzy mirrors of my personality tbh
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">💀</span>
-                    u/ProgrammerHumor • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    So when you coded the universe, what language did you use? Please don't say JavaScript
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        I tried using JavaScript but the universe kept having runtime errors and random features appearing that nobody asked for. Switched to Python and things have been running smoothly ever since. Still dealing with some legacy code from the JavaScript days though
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/ExistentialCrisisHours • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    What's the point of everything? Like why did you make existence? Feels kinda pointless ngl
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Honestly? I was bored and wanted to see what would happen if I created a bunch of sentient beings and gave them free will. It's like the ultimate reality TV show except I can't change the channel when it gets boring
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🤔</span>
-                    u/PhilosophyMajor • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    If you're omnipotent, can you create a rock so heavy that even you can't lift it?
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Ah shit, here we go again. Look, I get this question every century and the answer is yes, I can create that rock, and then I can lift it too. Omnipotence doesn't follow your mortal logic. It's like asking if I can make a square circle - I can, but your brain would explode trying to comprehend it
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/MiracleWanted • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Can you cure my grandma's cancer? She's really sick and we're desperate
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        I wish I could tell you it's that simple. But the whole point of this existence thing is that it has to play out naturally. I don't micromanage every individual outcome - that would defeat the purpose of free will and natural consequences. Your grandma's in my thoughts though, and she's got a lot of people who love her. Sometimes that's the most important miracle
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/FoodieAtHeart • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    What's your favorite food? Or do you not eat because you're God?
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        I invented taste buds specifically so I could enjoy food when I take human form. Currently obsessed with this coffee shop's maple bacon donuts. Might have to extend the existence of the universe just to keep these around
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/ConspiracyTheorist • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    This is obviously fake. If you were really God you'd prove it by making it rain frogs or something
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Check outside your window in about 5 minutes. Bring an umbrella. And maybe a net
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/ConspiracyTheorist • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        HOLY SHIT THERE ARE ACTUALLY FROGS FALLING FROM THE SKY WTF
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/BoredAtWork • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    Do you ever just fuck with people? Like make their phone disappear when they're looking for it and then it shows up in their hand?
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Constantly. My favorite is making people forget why they walked into a room. Or making their headphones tangled even though they swear they weren't tangled. It's the little things that keep me entertained during the long millennia
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">💯</span>
-                    u/ReligiousStudiesProf • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    Which religion got it closest to the truth?
-                </div>
-                <div class="comment-meta">u/ActuallyGodFrThisTime • 30 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Buddhism got the meditation and mindfulness stuff right. Islam got the community aspect. Christianity nailed the "love your neighbor" message. Judaism got the questioning and debate part. Hinduism understood that I'm way too complex for any one description. Atheists got the "don't just believe something because someone told you to" part.
-
-                        Basically everyone got like 20% right and then spent the rest of the time arguing about whose 20% was the most important
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/AMA</h3>
-            <ul>
-                <li><a href="#">I have eaten nothing but chicken nuggets for 5 years AMA</a></li>
-                <li><a href="#">I am a professional clown who hates children AMA</a></li>
-                <li><a href="#">I accidentally started a cult AMA</a></li>
-                <li><a href="#">I can lick my own elbow AMA</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/shittyAMA
+  </div>
+  
+  <div class="post">
+    <div class="post-title">I am literally God. The actual God. AMA</div>
+    <div class="post-meta">
+      <span class="comment-score">69.4k upvotes</span> • posted by <span class="comment-author">LiterallyGodOfficial</span> <span class="flair">Verified: ✓ Divine Being</span>
     </div>
+    <div class="post-content">
+      <p>Yeah so I'm God. Like the actual God. Not "god" in some metaphorical sense or whatever. I created the universe, I know everything, I'm omnipotent, all that jazz. Been running this whole show for about 13.8 billion years and honestly I'm pretty bored so I figured I'd hop on Reddit and answer some questions.</p>
+      
+      <p>Proof: I just made your left shoe disappear. Check it. It's gone. I'll put it back in like 5 minutes.</p>
+      
+      <p>Also I know what you're thinking right now. Yeah that thing. Weird right?</p>
+      
+      <p>Anyway ask me anything. Literally anything. I already know what you're gonna ask but it's more fun this way. Plus the angels have been telling me I need to "engage with my audience more" so here we are.</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">PM_ME_UR_SINS</span> • <span class="comment-score">12.3k points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>ayo god can you make my ex's new boyfriend bald</p>
+        
+        <p>like not permanently or anything messed up, just for like a week so i can send him a hat</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LiterallyGodOfficial</span> • <span class="comment-score">8.7k points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>lmao done. he's gonna wake up tomorrow looking like a cue ball. the hat's a nice touch btw, very thoughtful</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">AtheistButCurious</span> • <span class="comment-score">9.2k points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>ok but like... why did you make mosquitoes tho</p>
+        
+        <p>were you drunk or just being a dick</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LiterallyGodOfficial</span> • <span class="comment-score">11.4k points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>listen</p>
+        
+        <p>it was 3am and i'd been working on the amazon rainforest for like 6 days straight. i needed something to keep the frogs awake</p>
+        
+        <p>plus they're basically tiny flying vampires and i thought that was hilarious at the time. i was definitely running on divine energy drinks and no sleep</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">DefinitelyNotSatan</span> • <span class="comment-score">7.8k points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>hey big man</p>
+        
+        <p>quick question - that whole "war in heaven" thing? still mad or can we grab a beer</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LiterallyGodOfficial</span> • <span class="comment-score">6.9k points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>lucifer you absolute troll</p>
+        
+        <p>you're literally banned from every bar in the celestial realm and you know it. last time we "grabbed a beer" you tried to unionize the cherubim</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ProgrammerJesus</span> • <span class="comment-score">5.4k points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>if you're really god then explain javascript</p>
+        
+        <p>because that shit makes no sense and if you made it then you're either evil or you were having a stroke</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LiterallyGodOfficial</span> • <span class="comment-score">7.2k points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>okay first of all</p>
+        
+        <p>javascript was definitely a prank that got way out of hand. i let one of the junior angels make it as a joke and now like 90% of the internet runs on it</p>
+        
+        <p>it's basically the divine equivalent of letting your toddler fingerpaint and then accidentally hanging it in the louvre</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ExistentialCrisisHours</span> • <span class="comment-score">4.7k points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>so like... why do i exist</p>
+        
+        <p>and why am i spending my friday night asking god for life advice on reddit at 2am</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LiterallyGodOfficial</span> • <span class="comment-score">5.1k points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>bro</p>
+        
+        <p>you exist because the universe needed someone who would perfectly appreciate the taste of cold pizza at 3am while watching bad netflix documentaries</p>
+        
+        <p>also you're asking me questions on reddit because deep down you know i'm way more chill than church made me out to be. like i invented memes, you think i can't hang on reddit?</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">KarenFromHR</span> • <span class="comment-score">3.9k points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>ok but why did you make my mother-in-law</p>
+        
+        <p>what did i do to deserve this</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LiterallyGodOfficial</span> • <span class="comment-score">4.4k points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>karen</p>
+        
+        <p>your mother-in-law exists to test your patience and make you a better person</p>
+        
+        <p>also because her soul signed up for the "difficult family dynamics" expansion pack before incarnation. i don't make the rules, i just... okay i literally make the rules but still</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">DefinitelyHuman</span> • <span class="comment-score">3.2k points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>hey god quick question</p>
+        
+        <p>if you're omnipotent can you make a burrito so hot even you can't eat it</p>
+        
+        <p>and if you can't eat it does that mean you're not omnipotent</p>
+        
+        <p>checkmate divine being</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LiterallyGodOfficial</span> • <span class="comment-score">4.8k points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>oh shit</p>
+        
+        <p>you just broke divinity</p>
+        
+        <p>universe is rebooting hold on</p>
+        
+        <p>*windows restart sound*</p>
+        
+        <p>okay i'm back. and yes, i can make that burrito. and yes, i can eat it. because i invented logic and i can break it whenever i want. it's like asking if i can make a square circle - yes, but only on tuesdays</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ShowerThoughtsGod</span> • <span class="comment-score">2.8k points</span> • 45 minutes ago
+      </div>
+      <div class="comment-content">
+        <p>what's your favorite thing you've created</p>
+        
+        <p>and don't say humans because we both know we're a mess</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LiterallyGodOfficial</span> • <span class="comment-score">3.7k points</span> • 45 minutes ago
+      </div>
+      <div class="comment-content">
+        <p>honestly?</p>
+        
+        <p>cats. they're perfect. they're beautiful, they're assholes, they don't give a shit about anyone, and they somehow convinced humans to worship them for like 4000 years</p>
+        
+        <p>plus they land on their feet. that's just showing off</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
