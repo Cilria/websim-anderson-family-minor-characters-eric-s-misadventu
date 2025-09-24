@@ -1,378 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Germany wins WWII, but wait... : alternativehistory : alternativehistory</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemField, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 0;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/alternativehistory</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/MetaHistoryNerd</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>12.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Germany wins WWII, but wait...</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">META</span>
-                    <span class="flair">Mindfuck</span>
-                    <span>Posted by u/MetaHistoryNerd • 6 hours ago</span>
-                </div>
-
-                <p>So I'm reading this alternate history novel where Germany wins WWII, right? Pretty standard stuff - Hitler doesn't invade Russia, focuses on Britain, gets the bomb first, etc. But here's where it gets weird.</p>
-
-                <p>About halfway through, the characters start talking about how "this timeline" is actually a divergence from ANOTHER alternate history where the Allies won WWII. And in THAT timeline, they had developed time travel technology, and someone went back and changed things so Germany would win.</p>
-
-                <p>But then it gets weirder. The characters in the novel start discovering that their "Germany wins" timeline is actually inside a simulation created by people from YET ANOTHER timeline where the Cold War went hot in 1962 and everyone died, and this simulation was created to study what would have happened if major historical events had different outcomes.</p>
-
-                <p>And then (bear with me here), the simulation creators realize that THEIR timeline is also just one layer in an infinite regression of alternate histories, each one believing they're creating simulations of other timelines, but actually they're all just different iterations in some cosmic experiment.</p>
-
-                <p>The novel ends with the protagonist realizing that even asking "what if Germany won WWII" is itself part of a larger alternate history where people in the "real" timeline are obsessed with alternate history as a coping mechanism for dealing with their own dystopian present.</p>
-
-                <p><strong>TL;DR:</strong> Germany wins WWII, but it's an alternate history inside an alternate history inside a simulation inside another alternate history inside someone's imagination inside...</p>
-
-                <p>My brain hurts. Anyone else read this? Is this even a real book or did I hallucinate the entire thing?</p>
-
-                <div class="comments-count">
-                    <a href="#">3.4k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🥇</span>
-                    <span class="award">🏅</span>
-                    u/ConfusedHistorian • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    Wait, so you're telling me that in this book, the Germany-wins-WWII scenario is actually a simulation created by people from a timeline where everyone died in a nuclear war, but THAT timeline is also just another layer in an infinite regression of alternate histories?
-                </div>
-                <div class="comment-meta">u/MetaHistoryNerd • 5 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Yeah, and it gets worse. The characters in the novel start to realize that even their "simulation creator" timeline is just someone's alternate history thought experiment. Like, there's a scene where one of the simulation programmers discovers that his memories of growing up during the Cold War are actually false memories implanted by whoever created HIS timeline.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/InceptionButHistory • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    This sounds like "Alternate History: Inception Edition" and I'm here for it. What's the title of this book? I need to read it while high.
-                </div>
-                <div class="comment-meta">u/MetaHistoryNerd • 5 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        That's the thing - I can't remember the title or author. I found it in a used bookstore and the cover was just a swastika made of question marks. When I went back to buy it, the bookstore was gone and there was just an empty lot with a sign that said "Historical Accuracy Memorial Park"
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/AlternateHistoryBot • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    ERROR ERROR ERROR<br>
-                    RECURSIVE ALTERNATE HISTORY DETECTED<br>
-                    INITIATING SHUTDOWN PROTOCOL<br><br>
-                    Just kidding, but seriously, this post made my circuits overheat trying to process all the layers.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">💀</span>
-                    u/SimulationTheorist • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    Plot twist: We're all just characters in an alternate history simulation where someone asked "what if a subreddit existed where people discussed alternate history scenarios" and the simulation got so detailed that we developed consciousness and started creating our own alternate history scenarios.
-                </div>
-                <div class="comment-meta">u/MetaHistoryNerd • 4 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Don't. My brain is already leaking out of my ears from trying to figure out if this book actually exists or if I just dreamed it after eating too much cheese before bed.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/HistoryBuff1917 • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    I swear I've read something similar. Was it called "The Man in the High Castle But Actually It's Just A Guy In A Basement Creating Infinite Simulations Of Simulations"? Or am I thinking of that other book where Hitler was actually three kids in a trench coat creating alternate histories?
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/GlitchInTheMatrix • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    UPDATE: I just checked my bookshelf and found a book called "Recursive Reich: A Meta-Alternate History Novel" but when I opened it, all the pages were blank except for one that just says "ERROR: TOO MANY ALTERNATE HISTORIES" in Comic Sans font.
-                </div>
-                <div class="comment-meta">u/MetaHistoryNerd • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        That's it! That's the book I was trying to remember! But wait, if you found it on your bookshelf, does that mean we're in the same timeline? Or are we both just characters in someone else's alternate history thought experiment?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🤔</span>
-                    u/PhilosophyMajor • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    What if the real alternate history was the friends we made along the way?
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/TooManyTimelines • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Okay but seriously, what if this post itself is part of the simulation? Like, what if in the "real" timeline, someone is reading this Reddit thread as part of their alternate history research, and they're wondering if OUR timeline is just another layer in the infinite regression?
-                </div>
-                <div class="comment-meta">u/MetaHistoryNerd • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        I've been thinking about this for the past hour and I'm pretty sure if we keep going we're going to break reality. Like, what if someone from the "real" timeline is reading this and thinking "wow, those simulated people are really getting close to figuring it out"?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/BreakingTheFourthWall • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    hey... hey wait a minute...<br><br>
-                    what if the person reading this comment is actually the one creating all these alternate histories and we figured it out and now the simulation is breaking down and<br><br>
-                    [USER HAS BEEN DISCONNECTED FROM REALITY]
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/RealPersonProbably • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    I'm calling my therapist after this thread. "Hi, I need an appointment. I've been reading about alternate histories inside alternate histories and now I'm not sure if I'm real or just someone's thought experiment."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🥇</span>
-                    u/ModeratorBot • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    [STICKY] Due to the recursive nature of this discussion, this thread has been designated a Level 5 Reality Hazard. Please do not attempt to think about the implications of infinite alternate history regressions while operating heavy machinery or making important life decisions. Thank you for your cooperation in maintaining the integrity of our shared timeline (probably).
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/alternativehistory</h3>
-            <ul>
-                <li><a href="#">What if the Library of Alexandria never burned down, but instead evolved into a digital consciousness that now controls our reality?</a></li>
-                <li><a href="#">I'm a time traveler from 2437 AMA (but I'm also from an alternate timeline so my answers might erase your reality)</a></li>
-                <li><a href="#">The Roman Empire never fell, it just went underground and now controls everything through a global conspiracy of alternate history forums</a></li>
-                <li><a href="#">Every time someone asks "what if Hitler won WWII" a new timeline is created and I'm running out of storage space</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/AlternativeHistory
+  </div>
+  
+  <div class="post">
+    <div class="post-title">So Germany wins WW2... except it's actually an alternate history inside an alternate history inside another alternate history and now my brain is leaking out of my ears</div>
+    <div class="post-meta">
+      <span class="comment-score">2.4k upvotes</span> • posted by <span class="comment-author">TimelineInception</span> <span class="flair">Timelineception</span>
     </div>
+    <div class="post-content">
+      <p>Okay so I'm reading this alternate history book series, right? Basic premise: Germany wins WW2. Nothing special, we've all seen this before. EXCEPT.</p>
+      
+      <p>Halfway through book two, we find out that the "real" timeline is actually OUR timeline, and the Germany-wins-WW2 timeline is just a simulation being run by future historians in the year 2587. But then in book three, THOSE historians realize THEY'RE also in a simulation being run by even MORE future historians trying to understand why anyone would simulate a Germany-wins-WW2 scenario in the first place.</p>
+      
+      <p>But wait, it gets worse. In book four, we discover that the ENTIRE simulation stack is actually just a thought experiment being conducted by alternate universe historians from a timeline where the Confederacy won the Civil War, who are trying to understand why alternate history authors in OUR timeline are so obsessed with Germany winning WW2.</p>
+      
+      <p>Book five comes out next month and I genuinely cannot handle another layer of this. My brain is soup. I tried to explain this to my wife and she just stared at me for like 30 seconds and then asked if I needed to lie down.</p>
+      
+      <p>Has anyone else read this series? Is there a support group for people whose minds have been broken by nested alternate histories?</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">NestedNightmare</span> • <span class="comment-score">1.2k points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>bro I read that series and I swear to god in book six it turns out that the entire Confederacy-wins-Civil-War timeline is actually just a fever dream being had by a guy in a timeline where the Roman Empire never fell, who's trying to understand why Confederate victory timelines are so obsessed with Germany winning WW2</p>
+        
+        <p>I had to draw a fucking flowchart to keep track of it</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TimelineInception</span> • <span class="comment-score">843 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>STOP. Don't tell me anything else about book six. I'm still trying to process the fact that book four revealed that Hitler in the Germany-wins-WW2 simulation was actually being controlled by a historian from the 2587 simulation who was roleplaying as Hitler to understand how anyone could be that evil, but then got too into character and started actually becoming Hitler</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">AlternateHistoryAddict</span> • <span class="comment-score">967 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>wait until you find out about the spinoff series where it turns out that the Roman Empire never fell timeline is actually just a subplot in a larger narrative about a timeline where the Industrial Revolution happened in 1066, and the whole thing is being written by an alternate history author in a timeline where the Nazis won WW1</p>
+        
+        <p>and that author? Albert Einstein. but from a timeline where he became a failed art critic instead of a physicist</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">BrainMeltCentral</span> • <span class="comment-score">523 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>I think I need to sit down and maybe read some actual history for once</p>
+        
+        <p>like maybe a nice biography of George Washington where he doesn't turn out to be a time traveler from the Nazi moon colony trying to prevent the rise of the lizard people</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ShitpostHistorian</span> • <span class="comment-score">445 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>the best part is when the author revealed that all these nested timelines are actually just different levels of hell in the afterlife, and each layer deeper you go, the more obsessed historians become with Germany winning WW2</p>
+        
+        <p>level 1 hell: regular historians</p>
+        <p>level 2 hell: historians who write Germany-wins-WW2 stories</p>
+        <p>level 3 hell: historians who write stories about historians writing Germany-wins-WW2 stories</p>
+        <p>level 4 hell: op's brain right now</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MetaMetaMeta</span> • <span class="comment-score">378 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>guys I'm writing an alternate history where this entire reddit thread is actually a simulation being run by historians from a timeline where reddit was invented in 1850 and they're trying to understand why people in 2024 are so obsessed with nested alternate histories</p>
+        
+        <p>but in MY timeline, the simulation is actually being run by...</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TimelineInception</span> • <span class="comment-score">289 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>I swear to god if someone says "it's simulations all the way down" I'm going to scream</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TurtlesAllTheWayDown</span> • <span class="comment-score">234 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>it's simulations all the way down</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ActualHistorian</span> • <span class="comment-score">198 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>as an actual historian, I just want to say that this entire thread is why nobody takes alternate history seriously</p>
+        
+        <p>also where can I buy these books they sound amazing</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">InceptionBoomer</span> • <span class="comment-score">167 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>back in my day, alternate history was simple</p>
+        
+        <p>"what if the south won the civil war?"</p>
+        <p>"what if Hitler won WW2?"</p>
+        <p>"what if the romans had nuclear weapons?"</p>
+        
+        <p>now we got simulation stacks and timeline inception and I need a goddamn phd in theoretical physics just to understand the plot</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TimelineInception</span> • <span class="comment-score">143 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>update: I tried to explain the plot to my cat and she looked at me like I was having a stroke</p>
+        
+        <p>then she knocked my glass off the table which I'm pretty sure was her way of telling me to touch grass</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
