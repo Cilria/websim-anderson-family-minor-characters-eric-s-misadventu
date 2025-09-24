@@ -1,205 +1,376 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The North Fuckria Dispute (1347-1349): The Most Ridiculous Medieval Inheritance Crisis You've Never Heard Of : MedievalHistory</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemField, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 0;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/MedievalHistory</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/MedievalShitpostEnjoyer</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/AskHistorians
-  </div>
-  
-  <div class="post">
-    <div class="post-title">The Douchassville Dispute of 1347: How John XIIIII le Shitfuck vs Thomas XI Lancaster Over a Minor Land Dispute Led to Anne "The Shitter" le Shitfuck's Execution</div>
-    <div class="post-meta">
-      <span class="comment-score">3.7k upvotes</span> • posted by <span class="comment-author">MedievalMess</span> <span class="flair">Medieval History</span>
-    </div>
-    <div class="post-content">
-      <p>I've been researching this absolutely bonkers series of events in North Fuckria during 1347, and I need someone to confirm I'm not reading a fever dream. Here's what I've pieced together:</p>
-      
-      <p>John XIIIII le Shitfuck (yes, that's apparently his real name) and Thomas XI Lancaster get into a dispute over some minor land near the village of Douchassville. This escalates into a full-blown rebellion. King Henry XVI shows up, does absolutely nothing, then leaves. Then Thomas XI dies of dysentery, and his great-uncle Thomas XII inherits everything, which somehow triggers a peasant rebellion that gets crushed immediately.</p>
-      
-      <p>Then the Church, led by Richard XV, intervenes just to... do nothing. The whole thing finally ends when Anne le "The Shitter" (wife of the next king John IX) pays 170 pounds to her third cousin thrice removed (who she'd been sleeping with), which gets her executed and somehow resolves everything. The king then marries some random baroness from Swabia.</p>
-      
-      <p>Is this real? Did medieval nobility actually have names like "le Shitfuck"? And how did paying your cousin-lover 170 pounds get you executed but also solve a land dispute?</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MedievalManuscriptMonkey</span> • <span class="comment-score">2.1k points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Oh this is absolutely real and somehow even weirder than you think. I found the actual court records from the Douchassville manor court rolls.</p>
-        
-        <p>First off, "le Shitfuck" wasn't even the worst name in that family. John XIIIII's cousin was literally named "William the Bastard Shitfuck" and his sister was "Matilda le Shitfuck the Elder." Medieval naming conventions were just built different.</p>
-        
-        <p>The 170 pounds thing is the best part though - Anne wasn't just paying her cousin-lover. She was literally trying to bribe him to claim he was the legitimate heir to the disputed land, which would invalidate both John and Thomas's claims. But she did it in front of like thirty witnesses at the local market while drunk, which is why she got executed for "suborning false claims and general whorish behavior."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">PeasantRevoltEnjoyer</span> • <span class="comment-score">1.4k points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>The peasant rebellion part kills me. According to the chronicle of Brother Aldric of Douchassville, it lasted exactly 47 minutes. Forty-seven minutes!</p>
-        
-        <p>Apparently Thomas XII announced his inheritance by riding through the village shouting "I am your new lord, bring me your finest chickens!" The peasants immediately rebelled because they thought he was going to raise their rents to pay for his "chicken addiction." They formed a mob, marched to his manor house, got distracted by a traveling cheese merchant, and when they returned they found Thomas had locked the gates and was just... eating chicken and staring at them through the windows.</p>
-        
-        <p>They gave up and went home. The chronicler notes this was "the most pathetic rebellion in Christendom."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">ChurchRecordsChad</span> • <span class="comment-score">892 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Richard XV's intervention is my favorite part of this mess. The bishop literally traveled three days to Douchassville, gathered everyone in the church, and gave a three-hour sermon about "the sin of being too dramatic about land disputes."</p>
-        
-        <p>Then he declared that since everyone involved had "ridiculous names that made a mockery of Christian dignity," they were all required to do penance by renaming the village. They held a vote and "Douchassville" won by a landslide because it was the only name that didn't sound "too pretentious."</p>
-        
-        <p>The village kept the name until 1803 when Napoleon made them change it to something "less stupid."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MedievalMess</span> • <span class="comment-score">743 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Wait, so King Henry XVI came all that way just to do nothing? Why even show up?</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">RoyalCourtRecords</span> • <span class="comment-score">1.1k points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>He got lost. Seriously. Henry XVI was traveling to deal with a much bigger rebellion in South Fuckria, took a wrong turn at the "Cursed Oak of Despair," and ended up in Douchassville by accident.</p>
-        
-        <p>When he realized he'd wandered into the middle of a land dispute between two nobles with names that sounded like insults, he decided it was beneath his dignity to get involved. According to his chamberlain's diary: "His Majesty did declare that he would rather fight the French than mediate between a Shitfuck and a Lancaster, for at least the French have the decency to have normal names."</p>
-        
-        <p>He stayed for one night, ate their best chicken, and left the next morning after declaring the local ale "tasted like donkey piss."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">SwabianBaronessBruh</span> • <span class="comment-score">567 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>The random Swabian baroness John IX married was actually part of the punishment! After Anne's execution, the Church decided that the king needed "a proper Christian wife of good German stock, not some local harlot with ridiculous nicknames."</p>
-        
-        <p>They literally picked Baroness Hedwig of Nowhere-Specifically, Swabia, because she was the only noblewoman willing to marry someone whose last wife got executed for banging her cousin with the Shitfuck surname. Hedwig's dowry included thirty-seven chickens and "whatever dignity the English crown has left."</p>
-        
-        <p>She actually turned out to be pretty cool though. Introduced proper beer brewing to Douchassville and told everyone to stop being so dramatic about land.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MedievalGenealogyGuru</span> • <span class="comment-score">423 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Fun fact: the "le Shitfuck" family is actually why we have the word "shitfaced" in English. One of John XIIIII's descendants got so drunk at a wedding that he tried to claim he was the rightful King of France based on his chicken ownership rights.</p>
-        
-        <p>The family changed their name to "Shiffick" in the 1500s and became moderately successful merchants. There's still a Shiffick's Chicken Farm in Douchassville (now called something boring like "Oakham") that claims to be "the original site of the Great Chicken Rebellion of 1347."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MedievalMess</span> • <span class="comment-score">234 points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p>This is honestly the best thing I've ever learned about medieval history. Thank you all for confirming that reality is stranger than fiction and that medieval people really did just have names that sound like Monty Python characters.</p>
-        
-        <p>I'm definitely visiting the Shiffick's Chicken Farm next time I'm in England.</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>28.4k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">The North Fuckria Dispute (1347-1349): The Most Ridiculous Medieval Inheritance Crisis You've Never Heard Of</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">MEDIEVAL</span>
+                    <span class="flair">INHERITANCE DRAMA</span>
+                    <span class="flair">SHITPOST HISTORY</span>
+                    <span>Posted by u/MedievalShitpostEnjoyer • 4 hours ago</span>
+                </div>
+
+                <p>So I was going through some obscure 14th-century manuscripts in the archives and stumbled upon what might be the most batshit insane medieval land dispute in recorded history. Buckle up, because this story has everything: confusing names, pointless royal interventions, shit-based nicknames, and the most anticlimactic resolution possible.</p>
+
+                <p><strong>THE PLAYERS:</strong></p>
+                <ul>
+                    <li><strong>John XIIIII le Shitfuck</strong> - Yes, that's his actual name from the records. A minor noble with a comically exaggerated Roman numeral</li>
+                    <li><strong>Thomas XI Lancaster</strong> - Another minor noble, owned some disputed land</li>
+                    <li><strong>Thomas XII Lancaster</strong> - The great uncle who inherits everything because medieval naming conventions are stupid</li>
+                    <li><strong>King Henry XVI</strong> - Shows up, does literally nothing, leaves</li>
+                    <li><strong>Richad XV</strong> - Church guy who also does nothing but makes it official</li>
+                    <li><strong>Anne le "The Shitter"</strong> - The hero/villain we deserve</li>
+                </ul>
+
+                <p><strong>THE SETUP:</strong><br>
+                1347: John XIIIII le Shitfuck (I'm not making this up) gets into a heated argument with Thomas XI Lancaster over a "minor land dispute" in North Fuckria. The dispute? A field. Just one field. Not even a particularly good field. We're talking about maybe 30 acres of mediocre farmland that both of them wanted for reasons that remain unclear to this day.</p>
+
+                <p><strong>ESCALATION:</strong><br>
+                This petty squabble somehow triggers a full-blown rebellion. Like, actual peasants with pitchforks and everything. King Henry XVI hears about this and personally travels to North Fuckria to... stand around for a bit looking confused, then returns to London without doing anything useful.</p>
+
+                <p><strong>PLOT TWIST:</strong><br>
+                Thomas XI Lancaster suddenly dies of dysentery (because of course he does - it's the 14th century and dysentery is basically the medieval version of catching a cold). His great uncle Thomas XII Lancaster inherits everything, including the disputed field. The peasants, apparently offended by this development, rebel again. This rebellion lasts approximately 3 hours before being immediately put down by like 12 guys with sticks.</p>
+
+                <p><strong>THE CHURCH STEPS IN:</strong><br>
+                Richad XV (who I'm convinced was just making up his Roman numeral at this point) leads the Church to intervene... by doing absolutely nothing whatsoever. They issued a statement saying they were "monitoring the situation" which is medieval speak for "we literally cannot be bothered to care about this."</p>
+
+                <p><strong>THE CLIMAX:</strong><br>
+                Here's where it gets weird. Anne le "The Shitter" (again, real name from the records, I swear to God) who was the unhappy wife of the next king John IX, decides to resolve this crisis by paying 170 pounds to her matrilineal cousin thrice removed. A cousin she had been having sex with "on numerous occasions" according to the court records.</p>
+
+                <p>Why did this resolve the crisis? Nobody knows. How did this resolve the crisis? Also unclear. But it worked, and for her efforts, Anne was executed. Because medieval justice, I guess.</p>
+
+                <p><strong>THE EPILOGUE:</strong><br>
+                King John IX, now free of his shit-stirring wife (literally, her nickname was "The Shitter"), marries "some unknown baroness from the middle of nowhere in Swabia" and everyone just kind of forgot about the whole thing.</p>
+
+                <p>The disputed field? Still there. Still mediocre. Still probably being fought over by someone's descendants who have equally ridiculous names.</p>
+
+                <p><strong>TL;DR:</strong> Two guys with stupid names fought over a field, everyone died or did nothing, some lady fucked her cousin and got executed for it, and somehow this resolved everything. Peak medieval clusterfuck.</p>
+
+                <p>I'm convinced the chronicler who recorded this was either drunk, high, or both. But it's in the archives, so it must be real. Right?</p>
+
+                <div class="comments-count">
+                    <a href="#">5.7k comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🥇</span>
+                    <span class="award">🏅</span>
+                    u/MedievalHistorianPhD • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Holy shit, OP. I thought you were making this up until I checked the references. This is REAL. The "le Shitfuck" part is actually a mistranslation of "le Chitefuc" which was a Norman-French epithet meaning something like "the troublemaker" but medieval scribes definitely had some fun with the spelling over the centuries.
+                </div>
+                <div class="comment-meta">u/MedievalShitpostEnjoyer • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Wait, so "le Shitfuck" is actually a legitimate historical name? This keeps getting better. What about "The Shitter" - please tell me that's also a mistranslation that accidentally became hilarious.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/NameHistorian • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    The Roman numerals are killing me. John XIIIII? That's like... John 14 but they couldn't decide how to write it so they just kept adding I's. And Thomas XI AND Thomas XII? Did they just increment the number when the uncle inherited? Peak medieval bureaucracy.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/ByzantineEmpireFan • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    "North Fuckria" sounds like a place name that got mangled through centuries of bad handwriting and worse pronunciation. Probably started as "North Fotherwick" or something equally boring and evolved into comedy gold.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">💀</span>
+                    u/PeasantRebellionExpert • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The best part is how the peasant rebellions are described. First one gets triggered by a land dispute (how??) and then the second one lasts 3 hours. THREE HOURS. That's not a rebellion, that's a really long lunch break with some light property damage.
+                </div>
+                <div class="comment-meta">u/MedievalShitpostEnjoyer • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        "12 guys with sticks" is now my favorite medieval military unit. Forget knights and men-at-arms, just hire a dozen guys with sticks and you can suppress any rebellion.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/ChurchHistoryNerd • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Richad XV doing literally nothing but making it official is peak Church energy. "We have investigated the situation and determined that we will continue to investigate the situation until it resolves itself or everyone involved dies of dysentery."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/GenealogyGeek • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The cousin-fucking solution to land disputes needs to make a comeback. "Your honor, I submit that my client should inherit the property because she fucked her cousin thrice removed and paid him 170 pounds." Works every time, 60% of the time.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/ExecutionHistorian • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Anne le "The Shitter" getting executed for successfully resolving the crisis is the most medieval thing ever. "Thank you for your service in ending this ridiculous dispute. As a reward, you get executed. Because fuck you, that's why."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🤔</span>
+                    u/SwashbucklingHistorian • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The final marriage to "some unknown baroness from the middle of nowhere in Swabia" is the perfect ending. After all that drama, the king just marries a random nobody and everyone collectively decides to pretend this whole thing never happened.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/MedievalManuscripts • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    I'm dying to know what the field was actually worth. Like, was this 30 acres of prime farmland or just some muddy patch that happened to have property lines drawn through it? The fact that nobody even mentions what made it valuable makes me think it was just pure stubbornness on both sides.
+                </div>
+                <div class="comment-meta">u/MedievalShitpostEnjoyer • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Based on the records I found, it was described as "thirty acres of middling quality, suitable for barley and turnips, with a damp patch in the northwest corner." So yeah, basically worthless but fought over because medieval nobles had nothing better to do.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🥇</span>
+                    u/ModeratorBot • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    [STICKY] This thread has been designated a Level 5 Historical Shitpost. Please do not attempt to read while drinking beverages, as keyboard damage from spit-takes is not covered under warranty. The field in North Fuckria remains disputed to this day.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/MedievalHistory</h3>
+            <ul>
+                <li><a href="#">That time a bishop excommunicated a bunch of beavers for building a dam (1232)</a></li>
+                <li><a href="#">Medieval guide to insulting your enemies: "May your chickens lay square eggs"</a></li>
+                <li><a href="#">TIL that in 1184, a bunch of nobles fell through a floor and drowned in poop</a></li>
+                <li><a href="#">The Great Emu War of 1312 (wait, wrong sub)</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
