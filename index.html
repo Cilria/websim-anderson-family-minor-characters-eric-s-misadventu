@@ -4,383 +4,181 @@
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #1a1a1a;
+    background-color: #DAE0E6;
     margin: 0;
     padding: 20px;
-    color: #d7dadc;
   }
-  .reddit-container {
+  .cnn-container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #1a1a1a;
+    background-color: white;
     border-radius: 8px;
-    border: 1px solid #343536;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
-  .reddit-header {
-    background-color: #ff4500;
+  .cnn-header {
+    background: linear-gradient(to right, #cc0000, #990000);
     color: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px 8px 0 0;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  .reddit-post {
-    padding: 20px;
-    border-bottom: 1px solid #343536;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #d7dadc;
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #818384;
-    margin-bottom: 15px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #d7dadc;
-    margin-bottom: 15px;
-  }
-  .post-actions {
-    display: flex;
-    gap: 15px;
-    font-size: 12px;
-    color: #818384;
-  }
-  .comment-section {
-    padding: 0 20px 20px;
-  }
-  .comment {
-    background-color: #272729;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-left: 3px solid #ff4500;
-  }
-  .comment-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  .comment-author {
-    font-weight: 600;
-    color: #ff4500;
-    font-size: 13px;
-  }
-  .comment-score {
-    font-size: 12px;
-    color: #818384;
-  }
-  .comment-body {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #d7dadc;
-    margin-bottom: 10px;
-  }
-  .comment-reply {
-    font-size: 12px;
-    color: #818384;
-    cursor: pointer;
-  }
-  .comment-reply:hover {
-    color: #ff4500;
-  }
-  .nested-comment {
-    margin-left: 30px;
-    margin-top: 15px;
-    border-left: 2px solid #343536;
-    padding-left: 15px;
-  }
-  .load-more {
     text-align: center;
+  }
+  .cnn-logo {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .cnn-date {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 5px;
+  }
+  .article-content {
+    padding: 30px;
+  }
+  .article-headline {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .article-subhead {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .article-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .article-body {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+  }
+  .article-body p {
+    margin-bottom: 20px;
+  }
+  .highlight-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #cc0000;
     padding: 20px;
-    color: #818384;
-    cursor: pointer;
+    margin: 25px 0;
+    font-size: 15px;
+  }
+  .social-reactions {
+    background-color: #f1f3f4;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+  }
+  .reaction-header {
+    font-weight: bold;
+    color: #cc0000;
+    margin-bottom: 10px;
+  }
+  .reaction-item {
+    margin: 8px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    border-left: 3px solid #cc0000;
+  }
+  .update-box {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px 0;
     font-size: 14px;
   }
-  .load-more:hover {
-    color: #ff4500;
-  }
-  .sort-options {
-    padding: 15px 20px;
-    border-bottom: 1px solid #343536;
-    font-size: 14px;
-  }
-  .sort-option {
-    display: inline-block;
-    margin-right: 15px;
-    color: #818384;
-    cursor: pointer;
-  }
-  .sort-option.active {
-    color: #ff4500;
-    font-weight: 600;
+  .timeline-box {
+    background-color: #e8f4f8;
+    border-left: 4px solid #0066cc;
+    padding: 20px;
+    margin: 25px 0;
+    font-size: 15px;
   }
 </style>
 </head>
 <body>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/News
+<div class="cnn-container">
+  <div class="cnn-header">
+    <div class="cnn-logo">CNN</div>
+    <div class="cnn-date">BREAKING NEWS • July 20, 2026</div>
   </div>
   
-  <div class="reddit-post">
-    <div class="post-title">Newsom signs 96 executive orders in two weeks, launches unprecedented political purge - CNN reports</div>
-    <div class="post-meta">
-      Posted by u/CNN_AutoBot • 2 hours ago • News
-    </div>
-    <div class="post-content">
-      President Gavin Newsom has signed 96 executive orders in just 14 days, launching what critics call the most aggressive political purge in American history. Federal troops now occupy 18 Red State capitals while 312 Republicans face Nuremberg-style trials. The administration has filed a $1.2 trillion lawsuit against Fox News and fired 47,000 Republican federal workers.
-    </div>
-    <div class="post-actions">
-      <span>↑ 2.3k ↓</span>
-      <span>1.2k comments</span>
-      <span>share</span>
-      <span>save</span>
-      <span>hide</span>
-      <span>report</span>
-    </div>
-  </div>
-  
-  <div class="sort-options">
-    <span class="sort-option active">Best</span>
-    <span class="sort-option">Top</span>
-    <span class="sort-option">New</span>
-    <span class="sort-option">Controversial</span>
-    <span class="sort-option">Old</span>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/ConstitutionalLawyer2024</span>
-        <span class="comment-score">↑ 1.2k</span>
-      </div>
-      <div class="comment-body">
-        Ok so I actually looked up the text of Executive Order 1 (it's public record) and the "Federal Employee Loyalty Review" thing is real. They're not even trying to hide it anymore - it literally says Republicans can be fired for "ideological incompatibility with democratic values." How is this not a First Amendment violation?
-      </div>
-      <div class="comment-reply">Reply</div>
-      <div class="nested-comment">
-        <div class="comment-header">
-          <span class="comment-author">u/HistoryNerd87</span>
-          <span class="comment-score">↑ 543</span>
-        </div>
-        <div class="comment-body">
-          My grandfather was a federal employee during McCarthyism and got blacklisted for being a Democrat. History really does repeat itself, just with the parties flipped. The Supreme Court better step in fast or we're looking at the end of the civil service as we know it.
-        </div>
-        <div class="comment-reply">Reply</div>
-      </div>
+  <div class="article-content">
+    <h1 class="article-headline">Self-proclaimed "King of Galicia" seizes Spanish town of Tui in bizarre military offensive</h1>
+    <div class="article-subhead">Man declares himself rightful monarch, leads 50-meter advance to capture local sports field and Lidl supermarket before police pushback</div>
+    
+    <div class="article-meta">
+      By CNN Staff • Updated 8:32 PM ET, July 20, 2026
     </div>
     
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/DataAnalystTX</span>
-        <span class="comment-score">↑ 892</span>
+    <div class="article-body">
+      <p><strong>TUI, Spain (CNN)</strong> — In what Spanish authorities are calling the most unusual territorial dispute in recent memory, a man claiming to be the rightful King of Galicia has seized control of the town of Tui and launched a military-style offensive spanning approximately 50 meters, capturing strategic locations including a local sports field and part of a supermarket parking lot.</p>
+      
+      <p>The self-declared monarch, identified by local media as 47-year-old Antonio Miguel Rodriguez, proclaimed himself "King Antonio I of Galicia" at approximately 2:15 PM local time Monday, before beginning his micro-invasion with what witnesses described as "about twelve guys" armed with air rifles, baseball bats, and one replica medieval sword.</p>
+      
+      <div class="timeline-box">
+        <strong>HOUR-BY-HOUR TIMELINE:</strong><br>
+        <strong>2:15 PM:</strong> Rodriguez declares himself King of Galicia in Tui's main square<br>
+        <strong>2:22 PM:</strong> Royal forces advance 50 meters to capture local sports field<br>
+        <strong>2:28 PM:</strong> Strategic assault on PO-340 highway section begins<br>
+        <strong>2:35 PM:</strong> Forces push toward A55 highway<br>
+        <strong>2:41 PM:</strong> Lidl supermarket parking lot falls to rebel forces<br>
+        <strong>3:02 PM:</strong> Spanish police launch counteroffensive from A55 north positions<br>
+        <strong>3:09 PM:</strong> Police secure 5-meter section of highway in fierce fighting
       </div>
-      <div class="comment-body">
-        Just pulled the FEC data on those 312 Republicans facing trials. 89 of them are former Trump administration officials, but the rest are just random state legislators, county clerks, even some school board members. They're literally going after anyone with an R next to their name who ever held office. This isn't "accountability" - it's a political purge.
+      
+      <p>"We are the rightful rulers of this land," Rodriguez reportedly declared while standing on a shopping cart in the Lidl parking lot. "For too long, the people of Galicia have suffered under the tyranny of Madrid. Today, we take back what is ours - starting with this excellent parking spot and those discounted groceries."</p>
+      
+      <p>The "King's" forces managed to hold the supermarket's discount dairy section for nearly 47 minutes before Spanish police arrived in force, deploying what authorities described as "standard crowd control measures" including two officers with whistles and one police van playing calming music.</p>
+      
+      <div class="highlight-box">
+        <strong>STRATEGIC SITUATION:</strong>
+        <ul>
+          <li>Rebel forces control: Sports field, 50m of PO-340, Lidl parking lot section</li>
+          <li>Government forces control: Most of A55 highway, town hall, sensible people's minds</li>
+          <li>Current front line: Disputed dairy aisle, frozen foods section</li>
+          <li>Casualties: One bruised ego, several dented shopping carts</li>
+        </ul>
       </div>
-      <div class="comment-reply">Reply</div>
-      <div class="nested-comment">
-        <div class="comment-header">
-          <span class="comment-author">u/FormerGOPStaffer</span>
-          <span class="comment-score">↑ 267</span>
+      
+      <p>Local residents watched in bemusement as the "conflict" unfolded. "I just wanted to buy some chorizo," said Maria Gonzalez, 63, who found herself caught behind rebel lines in the supermarket. "This man told me I needed to pay taxes to the 'Kingdom of Galicia' now. I told him to get lost and bought my chorizo anyway."</p>
+      
+      <div class="social-reactions">
+        <div class="reaction-header">Social Media Reaction</div>
+        <div class="reaction-item">
+          <strong>@SpanishPolitics:</strong> "Breaking: Self-proclaimed King of Galicia currently engaged in pitched battle for control of discount supermarket aisle. 2026 is wild."
         </div>
-        <div class="comment-body">
-          Can confirm - my old boss (state rep from Ohio) got a subpoena last week. His "crime"? Voting against certifying the 2020 election results. They're calling it "sedition" but it was literally just a vote on the House floor. Dude's been a politician for 30 years, never even got a speeding ticket.
+        <div class="reaction-item">
+          <strong>@GalicianLocal:</strong> "Can someone tell this guy that declaring yourself king doesn't actually make you king? Also he owes me 3 euros for that sandwich"
         </div>
-        <div class="comment-reply">Reply</div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/LegalEagle2020</span>
-        <span class="comment-score">↑ 756</span>
-      </div>
-      <div class="comment-body">
-        The Fox News lawsuit is actually fascinating from a legal standpoint. $1.2 trillion is like 10x their total assets - they're clearly trying to bankrupt them, not just win damages. I checked the docket and Newsom's lawyers are citing some obscure 1800s precedent about "seditious libel against the government." Never been successfully used in modern times.
-      </div>
-      <div class="comment-reply">Reply</div>
-      <div class="nested-comment">
-        <div class="comment-header">
-          <span class="comment-author">u/MediaLawProf</span>
-          <span class="comment-score">↑ 198</span>
+        <div class="reaction-item">
+          <strong>@MilitaryAnalysis:</strong> "Tactical assessment: 50-meter offensive with air rifles against Spanish police is not historically a winning strategy. Just saying."
         </div>
-        <div class="comment-body">
-          That precedent (People v. Croswell, 1804) was basically overturned by New York Times v. Sullivan in 1964. Any first-year law student could get this case dismissed, but Newsom's packed the DC Circuit with loyalists who'll probably let it through. They're not even pretending to follow established law anymore.
-        </div>
-        <div class="comment-reply">Reply</div>
       </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/RedStateRefugee</span>
-        <span class="comment-score">↑ 634</span>
+      
+      <p>The Spanish government responded with characteristic understatement. In a brief statement, the Interior Ministry said: "A gentleman with creative interpretations of constitutional law is receiving appropriate attention from local authorities. We remind everyone that Spain is a constitutional monarchy with established democratic institutions, not a Lidl parking lot."</p>
+      
+      <p>Police negotiators attempted to reason with Rodriguez, offering him a coupon for 20% off frozen pizzas if he would vacate the premises peacefully. The "King" reportedly counter-offered with demands for sovereign control over the entire frozen foods section plus the bakery aisle, before being distracted by a buy-one-get-one-free offer on frozen paella.</p>
+      
+      <p>Political analysts suggest Rodriguez may have been inspired by recent European separatist movements, though none have previously attempted to establish independence through supermarket occupation. "Usually independence movements involve parliaments, referendums, that sort of thing," said Dr. Elena Martinez, political science professor at the University of Santiago de Compostela. "Not usually the frozen pizza section."</p>
+      
+      <div class="update-box">
+        <strong>LIVE UPDATE:</strong> Rodriguez has reportedly abandoned his kingdom after discovering the supermarket's air conditioning was too cold. Last seen heading toward the town's Burger King, claiming it "sounds more appropriately royal."
       </div>
-      <div class="comment-body">
-        Living in Texas right now and it's surreal. National Guard troops from California and New York are literally patrolling Austin. They say it's to "ensure democratic stability" but they're only in Republican-led cities. My neighbor got stopped yesterday for having a GOP bumper sticker. This is what occupation looks like.
-      </div>
-      <div class="comment-reply">Reply</div>
-      <div class="nested-comment">
-        <div class="comment-header">
-          <span class="comment-author">u/CurrentMilitary</span>
-          <span class="comment-score">↑ 289</span>
-        </div>
-        <div class="comment-body">
-          Active duty here - this is causing massive problems within the ranks. Half the guys I serve with are from Red States and they're being ordered to occupy their own hometowns. Chain of command is breaking down. My CO literally said yesterday "we're not doing this" and got relieved of duty.
-        </div>
-        <div class="comment-reply">Reply</div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/PoliticalSciencePhD</span>
-        <span class="comment-score">↑ 521</span>
-      </div>
-      <div class="comment-body">
-          The gerrymandering thing is actually the most dangerous long-term. EO 87 requires Democratic states to redraw districts to guarantee "permanent progressive governance." I analyzed the proposed maps for California and New York - they're creating like 15 guaranteed Democratic seats that don't even try to hide the partisan intent. This isn't just about 2028 - they're trying to lock in control for decades.
-      </div>
-      <div class="comment-reply">Reply</div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/FormerDNCStaff</span>
-        <span class="comment-score">↑ 445</span>
-      </div>
-      <div class="comment-body">
-        Threw away 15 years of my life working for the Democratic Party. This isn't what I signed up for. We used to stand for civil liberties, voting rights, democratic norms. Now we're literally doing everything we accused Trump of wanting to do - and worse. The cognitive dissonance in my old office is insane. Everyone knows this is wrong but they're too scared to speak up.
-      </div>
-      <div class="comment-reply">Reply</div>
-      <div class="nested-comment">
-        <div class="comment-header">
-          <span class="comment-author">u/BlueStateBlues</span>
-          <span class="comment-score">↑ 167</span>
-        </div>
-        <div class="comment-body">
-          Same here in Massachusetts. Voted straight Dem my whole life but this is fascism with a progressive label. My wife's a teacher and they're literally rewriting curriculum to include "democratic loyalty education." When did we become the party of thought police?
-        </div>
-        <div class="comment-reply">Reply</div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/ConstitutionalCrisis</span>
-        <span class="comment-score">↑ 378</span>
-      </div>
-      <div class="comment-body">
-        The Supreme Court needs to act NOW. Problem is, Newsom's already threatened to "restructure" the Court if they interfere. Roberts is apparently getting death threats and some justices have had their security details removed. They're literally holding the judicial branch hostage.
-      </div>
-      <div class="comment-reply">Reply</div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/AnonymousWhistleblower</span>
-        <span class="comment-score">↑ 312</span>
-      </div>
-      <div class="comment-body">
-        White House staffer here (using Tor for obvious reasons). The "Final Solution" EO mentioned at the bottom? It's real and it's worse than reported. They're planning to criminalize the Republican Party entirely, seize assets of registered Republicans, and create "reeducation centers" for anyone who resists. Scheduled to drop next week. Get out while you still can.
-      </div>
-      <div class="comment-reply">Reply</div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/DeepStateLeaker</span>
-        <span class="comment-score">↑ 2.1k</span>
-      </div>
-      <div class="comment-body">
-        BREAKING: Just got access to the draft of EO 103 - "Domestic Security Harmonization Act." They're creating a new federal agency called the "Civic Harmony Bureau" that will require ALL Americans to register their political affiliation. Non-Democrats get placed on a "Potential Threat Index" with social-credit-style restrictions. Travel permits, job applications, even school admissions will be filtered through this database. This isn't just targeting politicians anymore - it's everyone.
-      </div>
-      <div class="comment-reply">Reply</div>
-      <div class="nested-comment">
-        <div class="comment-header">
-          <span class="comment-author">u/TechPrivacyAdvocate</span>
-          <span class="comment-score">↑ 567</span>
-        </div>
-        <div class="comment-body">
-          Can confirm - my team at Palantir was approached last week to build the database infrastructure. When our CEO asked about constitutional concerns, the White House liaison literally said "the Constitution is being rewritten as we speak." We declined the contract and they're threatening to revoke our government contracts. Half our board wants to flee the country.
-        </div>
-        <div class="comment-reply">Reply</div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/CanadianIntelligence</span>
-        <span class="comment-score">↑ 1.8k</span>
-      </div>
-      <div class="comment-body">
-        Canadian here - our intelligence services are preparing for a massive refugee crisis. The draft "Safe Haven Act" leaked to our parliament shows they're expecting 5-15 million Americans to flee within 18 months. Border crossings are being quietly reinforced. We're also seeing unusual military movements - Chinese and Russian assets are positioning near Alaska "for humanitarian operations." This is spiraling into something way bigger than American politics.
-      </div>
-      <div class="comment-reply">Reply</div>
-      <div class="nested-comment">
-        <div class="comment-header">
-          <span class="comment-author">u/MilitaryAnalyst</span>
-          <span class="comment-score">↑ 423</span>
-        </div>
-        <div class="comment-body">
-          The foreign angle is real. Satellite imagery shows Russian naval groups operating 200 miles off both coasts "monitoring democratic stability." China's deployed hospital ships to international waters near Hawaii. They're not even trying to hide it anymore - Newsom's administration is in active communication with Beijing about "post-Republican governance models." This is looking like foreign intervention under the guise of humanitarian aid.
-        </div>
-        <div class="comment-reply">Reply</div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/FinancialInsider</span>
-        <span class="comment-score">↑ 1.4k</span>
-      </div>
-      <div class="comment-body">
-        Goldman Sachs emergency board meeting happening right now. The Treasury Department quietly informed major banks that they're preparing to freeze assets of anyone on the "Political Threat Registry" - which includes 47 million registered Republicans. They're calling it "economic stabilization measures" but it's literally seizing half the country's wealth. Markets are going to crash so hard tomorrow. Get your money out NOW.
-      </div>
-      <div class="comment-reply">Reply</div>
-      <div class="nested-comment">
-        <div class="comment-header">
-          <span class="comment-author">u/BankExecThrowaway</span>
-          <span class="comment-score">↑ 289</span>
-        </div>
-        <div class="comment-body">
-          Wells Fargo VP here - we're getting memos about "coordinated withdrawal restrictions" starting Monday. Daily ATM limits dropping to $50, wire transfers requiring "political loyalty verification." They're literally preparing to seize customer deposits under the guise of "domestic security." Move everything to crypto or physical assets immediately.
-        </div>
-        <div class="comment-reply">Reply</div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">u/WhiteHouseInsider</span>
-        <span class="comment-score">↑ 1.1k</span>
-      </div>
-      <div class="comment-body">
-        I'm in the West Wing and things are completely unhinged. Newsom's been working 20-hour days, surrounded by a inner circle of maybe 8 people. They're calling it "The Great Reset" internally. The 96 EOs are just phase one - Phase Two involves dissolving Congress entirely and creating a "People's Assembly" where only registered Democrats can vote or hold office. They're planning to announce it during the State of the Union.
-      </div>
-      <div class="comment-reply">Reply</div>
-      <div class="nested-comment">
-        <div class="comment-header">
-          <span class="comment-author">u/SecretServiceAgent</span>
-          <span class="comment-score">↑ 334</span>
-        </div>
-        <div class="comment-body">
-          USSS here - we've had 47 resignations in the past week. Agents are refusing to protect administration officials who are openly discussing "eliminating" political opposition. The loyalty tests they're making us take are insane - literally asking if we'd shoot American citizens if ordered. Half my detail is planning to defect to the Red States.
-        </div>
-        <div class="comment-reply">Reply</div>
-      </div>
-    </div>
-    
-    <div class="load-more">
-      Load more comments (847 remaining)
+      
+      <p>As of 4:30 PM local time, Spanish authorities had restored order to the affected areas, though Rodriguez remains at large, possibly planning his next offensive. Police have asked citizens to report any man claiming to be royalty while attempting to seize control of fast food establishments or convenience stores.</p>
+      
+      <p>"The Kingdom of Galicia has not fallen," Rodriguez posted on social media from an undisclosed location. "We are merely regrouping. Tomorrow, we take the gas station. Long live the King!"</p>
     </div>
   </div>
 </div>
@@ -388,3 +186,4 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
