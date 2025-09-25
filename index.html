@@ -1,356 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Reuben Sinclair Jr. Family Research - His brother Frederick, uncles John Paytner, and Sinclair ancestors : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/NewCastleLawyerDescendant</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">5 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>1.2k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Arthur Reuben Sinclair Jr. Family Research - His brother Frederick, uncles John Paytner, and Sinclair ancestors</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Indiana</span>
-                    <span class="flair">Sinclair Family</span>
-                    <span class="flair">Paytner Family</span>
-                    <span class="flair">New Castle</span>
-                    <span>Posted by u/NewCastleLawyerDescendant • 5 hours ago</span>
-                </div>
-
-                <p>After my last post about Arthur Reuben Sinclair Jr. (1900-1992), I've been digging into his family members and found some fascinating connections. Thought I'd share what I've uncovered and see what else we can discover together.</p>
-
-                <p><strong>Arthur's Only Sibling:</strong> Frederick William Sinclair (1898-1975). He was the older brother who stayed in the furniture business. While Arthur went to law school, Frederick took over the furniture store operations with their father. Frederick never married - family stories say he was "married to the store." He lived in the same house on Ridge Avenue from 1925 until his death, just three blocks from Arthur.</p>
-
-                <p><strong>The Paytner Connection:</strong> John William Paytner (1872-1945) was Arthur's uncle by marriage - married to Arthur Sr.'s sister Mary Elizabeth Sinclair (1874-1958). John and Arthur Sr. founded the furniture store together in 1909. John came from a furniture-making family in Pennsylvania - his father owned a cabinet shop in Pittsburgh. This explains why they specialized in quality pieces.</p>
-
-                <p><strong>What I'm Missing:</strong> Information on Arthur's paternal grandparents (Arthur Sinclair Sr.'s parents), details about Frederick's life beyond the store, and any information on the Paytner family origins in Pennsylvania. Also curious about Mary Elizabeth Sinclair Paytner's descendants.</p>
-
-                <p>Anyone familiar with these families or have access to Pennsylvania furniture industry records from the late 1800s?</p>
-
-                <div class="comments-count">
-                    <a href="#">89 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Pennsylvania_Furniture_Historian • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the Paytner family!</strong> John William Paytner's father was William Henry Paytner (1845-1920), who owned "Paytner & Sons Cabinet Makers" at 1427 Liberty Avenue, Pittsburgh from 1868-1910. They specialized in high-end custom furniture for wealthy clients. John's grandfather, Heinrich "Henry" Paytner (1812-1895), immigrated from Baden-Württemberg, Germany in 1835 and was trained in the Black Forest furniture tradition. This explains the quality focus - German cabinetmaking heritage.
-                </div>
-                <div class="comment-meta">u/NewCastleLawyerDescendant • 4 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is incredible! German Black Forest furniture makers - that explains why Sinclair and Paytner prided themselves on quality. Do you have any photos of their Pittsburgh shop or examples of their work?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Pennsylvania_Furniture_Historian • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Found photos! The Pittsburgh Historical Society has interior shots of Paytner & Sons from 1895. Beautiful Victorian workshop with hand tools everywhere. They made custom pieces for the Carnegie family and other Pittsburgh elite. When John moved to Indiana in 1908, he brought several pieces with him - including a mahogany dining set that became the showroom centerpiece at Sinclair & Paytner. The set sold for $285 in 1910 (about $8,500 today).
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Frederick_Sinclair_Expert • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Frederick's life beyond the store:</strong> Frederick William Sinclair was more than just "married to the store" - he was actually quite the local character. He was New Castle's unofficial furniture historian, collected antique pieces from estate sales, and restored them in his basement workshop. Never married because he was engaged in 1923 to Eleanor Mae Thompson, but she died of influenza in 1924. He never got over it. Lived with his housekeeper, Mrs. Rosa Martinez, for 40 years - she was like family to him.
-                </div>
-                <div class="comment-meta">u/NewCastleLawyerDescendant • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        I had no idea about Eleanor Thompson or Mrs. Martinez. This gives me a completely different picture of Frederick. Do you know if he left anything to Mrs. Martinez in his will?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Frederick_Sinclair_Expert • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Frederick left his entire estate to Mrs. Martinez - house, furniture collection, everything worth about $180,000 in 1975. His will specifically mentioned "my faithful companion and friend who has been my family when I had none." She lived in the house until 1982, then moved to California to live with her daughter. The house was sold and turned into apartments, but Mrs. Martinez's family still has Frederick's furniture collection - over 200 pieces of Indiana and Pennsylvania furniture from 1820-1920.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Sinclair_Ancestry_Tracker • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found Arthur Sr.'s parents:</strong> Arthur Reuben Sinclair Sr.'s father was William Alexander Sinclair (1829-1901), born in Edinburgh, Scotland, immigrated to America 1852. He was a cabinetmaker in Pittsburgh before moving to Indiana 1865. William's wife was Margaret Ann McAllister (1834-1918), also Scottish, from Glasgow. They married in Pittsburgh 1855. So Arthur Jr. was second-generation Scottish-American on his paternal side - explains the furniture-making tradition!
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Mary_Elizabeth_Descendant • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Mary Elizabeth Sinclair Paytner's family:</strong> Mary and John Paytner had 4 children - all born in New Castle between 1895-1905. The oldest, William Henry Paytner Jr. (1895-1968), took over the furniture store when John died in 1945. He actually bought out Arthur Sr.'s share and ran it as "Paytner Furniture" until 1965. Mary's daughter, Margaret Ann Paytner (1898-1982), married Thomas Jefferson Harland (1892-1975) - yes, from the same Harland family that Mary Elizabeth Jefferson Harland (Arthur's mother) came from. These families were all interconnected.
-                </div>
-                <div class="comment-meta">u/NewCastleLawyerDescendant • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Wait - so Arthur's cousin Margaret married someone from the Harland family? That means Arthur and his wife Lucy were actually distant cousins through the Harland connection! Do you know how closely related they were?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Mary_Elizabeth_Descendant • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Exactly! Thomas Jefferson Harland and Arthur Jr. were third cousins - their great-great-grandfathers were brothers. So when Margaret Paytner married Thomas Harland, and Arthur married Lucy Morrison (whose mother was a Harland), they became cousins by marriage. Small-town Indiana in the early 1900s - everyone was related somehow. The Harland family had been in Henry County since 1820, so by Arthur's generation, most of the "old families" were interconnected.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Scottish_Sinclair_Records • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>William Alexander Sinclair's Scottish origins:</strong> William was born 1829 at 15 Rose Street, Edinburgh - son of Alexander Sinclair (1805-1860) and Jeanie Reuben (1808-1875). Alexander was a master cabinetmaker who trained under the famous Scottish furniture maker William Trotter. The family business was "Sinclair & Son, Cabinetmakers" on Princes Street. William learned the trade from his father, then left for America after his father's death, settling in Pittsburgh where other Scottish furniture makers had established a community.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/NewCastle_Property_Records • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found Frederick's house:</strong> 1123 Ridge Avenue - the same street as Arthur's house (1123 Ridge vs Arthur at 1123 Ridge - they were next-door neighbors! Built 1892, Victorian style, 4 bedrooms. Frederick bought it from their father Arthur Sr. in 1925 for $3,500. When Frederick died in 1975, he left it to Mrs. Martinez, who sold it 1982 for $28,000. It's still there - now a bright yellow house with purple trim, owned by a young couple who have no idea of its history.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Payntner_Family_Genealogist • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>John Paytner's life beyond the store:</strong> John was actually quite the entrepreneur. Besides the furniture store, he invested in New Castle real estate - owned 6 rental properties by 1920. He was also a founding member of the New Castle Chamber of Commerce in 1915, and served on the city council 1922-1926. His wife Mary was active in the Presbyterian Church and founded the Henry County Women's Club in 1918. They were considered the "power couple" of early New Castle society.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Sinclair_Bible_Records • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the Sinclair family Bible:</strong> Margaret Ann McAllister Sinclair kept meticulous records. The Bible, now in the Henry County Historical Society, shows: William Alexander Sinclair arrived Pittsburgh May 15, 1852 with $12 in his pocket. Married Margaret McAllister November 12, 1855. Arthur Reuben Sinclair Sr. born October 10, 1857 (named after Margaret's father, Arthur McAllister). They moved to Indiana 1865 because "land was cheap and furniture makers were needed." William died 1901, Margaret 1918 - both buried in Southmound Cemetery, New Castle.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Frederick_Collections • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Mrs. Martinez's daughter contacted me:</strong> Rosa Martinez's daughter, Maria Gonzalez, still lives in California and has Frederick's entire furniture collection! Over 200 pieces including: 12 pieces from the original Paytner Pittsburgh workshop, 30 pieces of Indiana-made furniture 1820-1850, Frederick's personal tool collection, and the original store ledgers from 1909-1955. She's looking for a museum to donate it to - wants to keep it in Indiana if possible. Anyone have connections to Indiana historical museums?
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Anyone else have ancestors who worked together in family businesses?</a></li>
-                <li><a href="#">German furniture makers who immigrated to Pennsylvania - where to find records?</a></li>
-                <li><a href="#">When your ancestors married their cousins - how to track the connections</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Arthur Reuben Sinclair Jr. - Small town lawyer (1900-1992) never left New Castle, IN despite opportunities</div>
+    <div class="post-meta">
+      <span class="comment-score">412 upvotes</span> • posted by <span class="comment-author">HoosierFamilyRoots</span> <span class="flair">Brick Wall</span>
     </div>
+    <div class="post-content">
+      <p>Looking for information on my great-grandfather Arthur Reuben Sinclair Jr. Born February 6, 1900 in New Castle, Indiana to Arthur Sr (furniture maker/store owner) and Nancy Paytner. He lived his entire 92 years in the same small town and refused every opportunity to leave.</p>
+      
+      <p>What I know:</p>
+      <ul>
+        <li>Father and uncle founded "Sinclair and Paytner Furniture Store Co." in 1909</li>
+        <li>Older brother Fredrick, graduated college and law school by 1924</li>
+        <li>Founded Sinclair-Carter Law Firm with Stephen M. Carter in New Castle</li>
+        <li>Married Lucy in 1928, had 5 children over 14 years</li>
+        <li>Father ran furniture store until selling in 1955</li>
+        <li>Refused to run for State House when asked</li>
+        <li>Died of heart failure at home July 22, 1992</li>
+      </ul>
+      
+      <p><strong>MYSTERIES:</strong> No law school records, can't find Sinclair-Carter Law Firm incorporation, missing from 1930 census, and NOBODY in the family knows why he refused to leave New Castle despite his son offering to move him to South Bend!</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">IndianaBarArchives</span> • <span class="comment-score">567 points</span> • 9 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>LAW SCHOOL MYSTERY SOLVED:</strong> Arthur Sinclair Jr. never attended law school! Found his bar admission records - he was admitted to the Indiana bar in October 1924 under the <strong>"reading the law" provision</strong>.</p>
+        
+        <p>He studied law for 4 years (1920-1924) under the direct supervision of <strong>Judge William H. Kemper</strong> of the Henry County Circuit Court. Arthur worked as Kemper's law clerk while studying, which is why he was "in college" during those years - he was attending court sessions, not college classes.</p>
+        
+        <p>The Sinclair-Carter Law Firm was never formally incorporated - it was a <strong>partnership agreement</strong> signed March 15, 1925. Found the original partnership deed: Sinclair contributed $500 and his legal knowledge, Carter contributed $750 and his family connections. Carter came from a prominent New Castle family that could bring in wealthy clients.</p>
+        
+        <p><strong>1930 CENSUS FOUND:</strong> Arthur was living at <strong>1423 Broad Street, New Castle</strong> but was enumerated as "A.R. Sinclair" - the enumerator abbreviated his name, which is why searches failed. He owned the house outright (worth $3,500) and had two boarders living with him - law students who paid $8/month each.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">NewCastleINHistorian</span> • <span class="comment-score">423 points</span> • 8 hours ago
+        </div>
+        <div class="comment-content">
+          <p><strong>THE REAL REASON HE NEVER LEFT NEW CASTLE:</strong> This is the family secret that explains everything - Arthur Sinclair Jr. accidentally killed a man in 1926 and was haunted by it his entire life.</p>
+          
+          <p>Found the court records: On <strong>October 17, 1926</strong>, Arthur was defending a client named <strong>James McAllister</strong> on assault charges. Outside the courthouse, the victim's brother <strong>Thomas McAllister</strong> attacked Arthur, calling him a "dirty lawyer defending scum." Arthur pushed him away in self-defense. Thomas fell backward, hit his head on the courthouse steps, and died the next day from a skull fracture.</p>
+          
+          <p>Arthur was charged with manslaughter but acquitted by reason of self-defense. However, the McAllister family was powerful and threatened revenge. Arthur's partner Stephen Carter advised him to leave town, but Arthur refused - he felt responsible for Thomas's death and believed he deserved to "face his punishment" by staying in New Castle forever.</p>
+          
+          <p>The McAllister family made his life miserable for decades - they boycotted his practice, spread rumors, and even had him briefly disbarred in 1932 on trumped-up ethics charges (he was reinstated in 1933). This is why he turned down the State House run - he knew the McAllisters would use it to destroy him publicly.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">HenryCountyCourthouse</span> • <span class="comment-score">334 points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>MCALLISTER FEUD DETAILS UNCOVERED:</strong> The feud was even worse than suspected. After Thomas McAllister's death, his son <strong>William "Bill" McAllister</strong> became Arthur's lifelong enemy.</p>
+        
+        <p>Bill McAllister opened a competing law practice directly across the street from Sinclair-Carter in 1928. For the next 40 years, they were bitter rivals:</p>
+        
+        <ul>
+          <li>Bill married Arthur's former fiancée <strong>Mary Elizabeth Carter</strong> (Stephen Carter's sister) in 1929</li>
+          <li>Bill ran against Arthur for City Attorney in 1934 and won by 12 votes</li>
+          <li>Bill had Arthur investigated by the state bar 6 times between 1932-1968</li>
+          <li>Bill's son <strong>William Jr.</strong> became a judge and ruled against Arthur in 23 out of 25 cases</li>
+        </ul>
+        
+        <p>Arthur's refusal to leave New Castle was partly guilt, but also stubbornness - he wouldn't give Bill McAllister the satisfaction of driving him out of town. Their children and grandchildren continued the feud well into the 1980s.</p>
+        
+        <p><strong>FOUND:</strong> Arthur's diary from 1978-1992 where he wrote: <em>"Bill McAllister died today. I thought I would feel relief, but I only feel old. We wasted our lives hating each other over an accident. My punishment was staying here to remember what I did. His punishment was staying here to remind me."</em></p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">IndianaFurnitureHistory</span> • <span class="comment-score">289 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FURNITURE STORE SECRET DISCOVERED:</strong> Sinclair and Paytner Furniture Store had a dark secret that contributed to Arthur Jr.'s guilt complex.</p>
+        
+        <p>The store was successful because it was essentially a <strong>money laundering operation</strong> for bootleggers during Prohibition! Arthur Sr.'s brother-in-law John Paytner was deeply involved with the <strong>Henry County bootlegging ring</strong> led by the <strong>McAllister family</strong> (yes, the same family Thomas McAllister came from).</p>
+        
+        <p>The furniture store would "sell" expensive furniture to bootleggers, who would pay with cash from liquor sales. The store would provide legitimate receipts and invoices, making the money appear to come from furniture sales rather than illegal alcohol.</p>
+        
+        <p>Arthur Jr. discovered this around 1924 while studying law. He confronted his father and uncle, threatening to report them. They convinced him to stay quiet by promising to fund his law practice and help him "make something of himself."</p>
+        
+        <p>When Arthur accidentally killed Thomas McAllister in 1926, he believed it was <strong>divine punishment</strong> for keeping quiet about the bootlegging operation. This is why he felt he deserved to stay in New Castle and suffer the McAllister family's revenge - he saw it as penance for his family's crimes.</p>
+        
+        <p>The store closed in 1955 when Arthur Sr. sold it because John Paytner's death in 1945 ended their bootlegging connections, not because of old age as family lore claims.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">SinclairFamilyBible</span> • <span class="comment-score">198 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>LUCY'S ROLE IN THE TRAGEDY:</strong> Found Arthur's wife Lucy's unpublished memoir from 1985. She reveals Arthur's deepest secret - he was planning to leave her in 1926.</p>
+        
+        <p>Lucy was pregnant with their first child when Arthur killed Thomas McAllister. Arthur had been having an affair with <strong>Eleanor McAllister</strong> - Thomas's sister! The affair ended violently when Thomas died.</p>
+        
+        <p>Arthur felt triply guilty: for killing Thomas, for cheating on pregnant Lucy, and for the affair ending Eleanor's engagement to a wealthy Indianapolis businessman. His "punishment" of staying in New Castle was also about facing Eleanor and Lucy every day.</p>
+        
+        <p>Lucy knew about the affair but stayed with Arthur because she was Catholic and pregnant. She wrote: <em>"Arthur thought God was punishing him through Thomas's death. He spent 66 years trying to atone for one moment of passion and one moment of fear. He stayed in that horrible little town because he thought he deserved to suffer. I stayed because I loved him and because divorce would shame my family. We both wasted our lives on guilt."</em></p>
+        
+        <p>Their son who offered to move him to South Bend in the 1970s was <strong>Arthur Reuben Sinclair III</strong> - born August 1927, conceived right after the McAllister incident. Arthur saw the child as another reason he had to stay and face his punishment.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">HoosierFamilyRoots</span> • <span class="comment-score">167 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>This is absolutely devastating. My great-grandfather wasn't the quiet, stable small-town lawyer we thought - he was a man destroyed by guilt over killing someone, cheating on his pregnant wife, and covering up his family's bootlegging operation.</p>
+        
+        <p>The refusal to leave New Castle makes perfect sense now - it wasn't about loving the town, it was about punishing himself for 66 years. The feud with the McAllisters, the lost law partnership opportunities, even turning down the State House run - it was all self-imposed penance.</p>
+        
+        <p>I found Arthur Reuben Sinclair III (my grandfather) and he confirmed everything. He said Arthur drank heavily in private, had nightmares about Thomas McAllister, and kept a loaded pistol in his desk drawer "in case the McAllisters came for revenge." He died of a heart attack but Grandpa believes it was a broken heart.</p>
+        
+        <p>Thank you all for uncovering the real story. The family secret makes me sad, but at least I understand why my grandfather moved to South Bend the first chance he got - he was escaping the Sinclair curse of guilt and punishment.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">IndianaGenealogyExpert</span> • <span class="comment-score">445 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>ARTHUR'S SIBLING MYSTERY SOLVED:</strong> Arthur Jr. was NOT an only child! He had an <strong>older brother Frederick William Sinclair</strong> born November 15, 1897 - but Frederick died under mysterious circumstances in 1919.</p>
+        
+        <p>Found the real story in Henry County death records: Frederick was the <strong>golden child</strong> who was supposed to take over the furniture store. He attended Purdue University, studying business, and was being groomed to replace Arthur Sr.</p>
+        
+        <p>But Frederick had a secret gambling addiction. He embezzled over <strong>$8,000</strong> from the furniture store between 1917-1919 to pay off debts to the <strong>McAllister gambling ring</strong> (yes, the same family!). When Arthur Sr. discovered the theft in October 1919, Frederick was given an ultimatum: repay the money or face criminal charges.</p>
+        
+        <p>Fredrick committed suicide on <strong>October 31, 1919</strong> by drinking carbolic acid. The death certificate lists "accidental poisoning" but the coroner added a note: <em>"Subject appeared to have self-inflicted wounds on arms. Family requested 'accidental' ruling."</em></p>
+        
+        <p>Arthur Jr. was 19 when his brother died. The family never spoke of Frederick again, destroyed all his photos, and raised Arthur Jr. as if he were an only child. This is why family lore claimed he was the only son - it was a deliberate cover-up of the suicide and scandal.</p>
+        
+        <p><strong>THE PLOT TWIST:</strong> Arthur Jr. discovered Frederick's gambling debts were to <strong>Thomas McAllister's father</strong> - the same family he would accidentally kill in 1926. Arthur believed Frederick's suicide was indirectly caused by the McAllisters, which made his own guilt over killing Thomas even worse.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">GermanImmigrantRecords</span> • <span class="comment-score">378 points</span> • 2 hours ago
+        </div>
+        <div class="comment-content">
+          <p><strong>SINCLAIR FAMILY ORIGINS DISCOVERED:</strong> The Sinclair family wasn't originally from Indiana - they fled Germany after a <strong>murder scandal</strong> in 1848!</p>
+          
+          <p>Arthur Jr.'s grandfather <strong>Heinrich "Henry" Sinclair</strong> was born <strong>Heinrich Schumacher</strong> in Bavaria in 1823. He changed the family name to "Sinclair" after fleeing to America.</p>
+          
+          <p>Found the German court records: Heinrich's brother <strong>Friedrich Schumacher</strong> murdered a local nobleman during the <strong>1848 German Revolution</strong>. Friedrich was executed, but the entire family was implicated in revolutionary activities. Heinrich fled with his wife and infant son (Arthur Sr.) to avoid arrest.</p>
+          
+          <p>The family settled in Ohio first, then moved to Indiana in 1856. They changed their name to <strong>Sinclair</strong> to hide from German authorities and distance themselves from the execution scandal.</p>
+          
+          <p><strong>THE CURSE THEORY:</strong> Arthur Jr. believed his family was <strong>cursed</strong> - his uncle executed for murder in Germany, his brother suicide, his family's bootlegging operation, his killing of Thomas McAllister, and his affair with Eleanor McAllister. He stayed in New Castle because he thought the curse would follow him anywhere.</p>
+          
+          <p>Found a letter Arthur wrote to his son in 1975: <em>"The Sinclair men are cursed to destroy themselves and others. My grandfather fled murder, my father sold liquor, my brother gambled and died, I killed a man. Leave this place and change your name if you must, but escape the curse while you can."</em></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">PaytnerFamilyHistorian</span> • <span class="comment-score">312 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p><strong>THE PAYTNER FAMILY SECRETS:</strong> Arthur Jr.'s mother Nancy Ann Paytner came from a family even more dysfunctional than the Sinclairs!</p>
+        
+        <p>Nancy's brother <strong>John William Paytner</strong> (Arthur Sr.'s business partner) had <strong>three wives simultaneously</strong> in different states - and was a <strong>bigamist criminal mastermind</strong>!</p>
+        
+        <p>Found the records:</p>
+        <ul>
+          <li><strong>Wife #1:</strong> Martha Jenkins in Indianapolis (married 1898)</li>
+          <li><strong>Wife #2:</strong> Sarah Montgomery in Cincinnati (married 1901)</li>
+          <li><strong>Wife #3:</strong> Elizabeth Carter in Louisville (married 1904) - Stephen Carter's aunt!</li>
+        </ul>
+        
+        <p>John Paytner was running a <strong>furniture smuggling operation</strong> - the stores were cover for moving stolen goods across state lines. The "bootlegging" was actually the <strong>least</strong> illegal thing they did!</p>
+        
+        <p>The furniture store partnership between Arthur Sr. and John was arranged by <strong>Nancy Paytner Sinclair</strong> - she knew her brother was a criminal but wanted her husband to have legitimate income. She forced Arthur Sr. into the partnership as condition of marriage!</p>
+        
+        <p><strong>THE FAMILY CONNECTION:</strong> This is why Stephen Carter partnered with Arthur Jr. in 1925 - Carter knew the Paytner family secrets and used them as leverage. The "family connections" Carter brought to the law firm were actually his aunt Elizabeth (John Paytner's third wife) who had dirt on everyone in three states.</p>
+        
+        <p>Arthur Jr. discovered all this in 1926 while investigating Thomas McAllister's death. He realized his entire life was built on <strong>criminal family connections</strong> - his mother's brother the bigamist smuggler, his father the bootlegger, his partner the blackmailer. This is why he felt he deserved punishment.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">HoosierFamilyRoots</span> • <span class="comment-score">234 points</span> • 1 hour ago
+      </div>
+      <div class="comment-content">
+        <p>My family is even more messed up than I thought. My great-great-grandfather fled Germany because his brother was executed for murder. My great-uncle Frederick committed suicide over gambling debts. My great-grandfather Arthur Sr. was forced into criminal partnerships. My great-grandmother Nancy came from a family of bigamists and smugglers.</p>
+        
+        <p>And Arthur Jr. - he was the only one who tried to live honestly, but he accidentally killed a man, cheated on his pregnant wife, and spent 66 years punishing himself for crimes his family committed. No wonder he thought he was cursed!</p>
+        
+        <p>I contacted my cousin who has the Sinclair family Bible - turns out there's a page torn out. The missing page covered the family history from 1848-1900. Someone in the family deliberately destroyed the record of how we got to Indiana and what we did to survive.</p>
+        
+        <p>The "Sinclair curse" wasn't supernatural - it was <strong>generational trauma</strong> from fleeing revolution, hiding crimes, covering up suicides, and pretending to be respectable while living off dirty money. Arthur Jr. stayed in New Castle because he thought he deserved to suffer, but really he was just the only honest one in a family of criminals and liars.</p>
+        
+        <p>My grandfather (Arthur III) moved to South Bend because he discovered all this too. He told me: <em>"Your great-grandfather wasn't cursed - he was the only one with a conscience. The rest of us were too cowardly to face what we'd done."</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
