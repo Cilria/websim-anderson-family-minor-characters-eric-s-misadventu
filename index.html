@@ -1,337 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Reuben Sinclair Jr. (1900-1992): Lawyer, stayed in New Castle his whole life, never wanted to leave : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/NewCastleLawyerDescendant</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>892</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Arthur Reuben Sinclair Jr. (1900-1992): Lawyer, stayed in New Castle his whole life, never wanted to leave</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Indiana</span>
-                    <span class="flair">Lawyer</span>
-                    <span class="flair">New Castle</span>
-                    <span class="flair">Furniture Store</span>
-                    <span>Posted by u/NewCastleLawyerDescendant • 3 hours ago</span>
-                </div>
-
-                <p>Looking for information on my great-grandfather Arthur Reuben Sinclair Jr. Born February 6, 1900 in New Castle, Indiana. He was the kind of person who stayed in one place his whole life - never lived anywhere else, never wanted to.</p>
-
-                <p><strong>The Family Business:</strong> His father Arthur Sr. was a furniture maker, then in 1909 partnered with brother-in-law John Paytner to found "Sinclair and Paytner Furniture Store Co." They sold "The Finest Furniture in all of Indiana" and became quite successful. Arthur Sr. became upper middle class and could afford to send his boys to college.</p>
-
-                <p><strong>Arthur Jr.'s Path:</strong> By 1920 he was in college studying law, passed the bar in 1924, then partnered with former classmate Stephen Carter to form Sinclair-Carter Law Firm in New Castle. He specialized in criminal defense and was quite successful. Met wife Lucy in 1928, had 5 children over 14 years.</p>
-
-                <p><strong>The Store Timeline:</strong> John Paytner died 1945, Arthur Sr. took full control until selling in 1955. Arthur Jr. never expressed interest in running it - when asked about running for State House, he simply said "No."</p>
-
-                <p><strong>What I'm Missing:</strong> Which college did he attend? Can't find records of him at Indiana University or Purdue. Also looking for details on his law practice - any famous cases? Anyone familiar with New Castle lawyers from the 1920s-1980s?</p>
-
-                <div class="comments-count">
-                    <a href="#">134 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Indiana_College_Archivist • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his college!</strong> Arthur attended Indiana Law School in Indianapolis (not IU), graduated 1924. The school was a stand-alone institution, later merged with IU in 1944. His transcript shows he was in the top 15% of his class. He worked summers at the furniture store to help pay tuition. His professors noted "excellent grasp of criminal law principles" and "natural courtroom demeanor."
-                </div>
-                <div class="comment-meta">u/NewCastleLawyerDescendant • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Indiana Law School! That explains why I couldn't find him at IU. Do you have access to any yearbooks or class photos from his time there? I'd love to see what he looked like as a young law student.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Indiana_College_Archivist • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Found the 1924 yearbook! Arthur is in the Law School section - clean-cut, serious expression, parted hair. He's listed as "Arthur R. Sinclair Jr., New Castle, Indiana" and was in the Legal Fraternity Delta Theta Phi. His roommate was Stephen Carter (same guy he later partnered with). There's also a photo of him in a mock trial - he played the defense attorney. The caption reads "Most likely to succeed in criminal law."
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/NewCastle_Court_Records • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his most famous case!</strong> In 1936, Arthur defended Charles "Red" Morrison, accused of murdering a local grocer during a robbery. The case made statewide news because Morrison was from a prominent family. Arthur's defense was brilliant - he proved Morrison was elsewhere by presenting train tickets and witness testimony. Morrison was acquitted. The local paper called it "the trial of the decade in Henry County." Arthur became known as the lawyer who could get anyone off.
-                </div>
-                <div class="comment-meta">u/NewCastleLawyerDescendant • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        The Morrison case! I've heard family stories about this but never knew the details. Do you have access to the newspaper coverage? I'd love to read about Arthur's courtroom strategy.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/NewCastle_Court_Records • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        The New Castle Courier-Times covered it extensively. Headlines like "Sinclair's Brilliant Defense Foils Prosecution" and "Local Attorney's Masterful Cross-Examination Key to Acquittal." Arthur's strategy was to establish an alibi through meticulous documentation - he had Morrison's boss testify about time cards, produced diner receipts from Indianapolis, and even had the train conductor remember Morrison because he helped an elderly woman with her bags. The prosecution couldn't break the timeline.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Furniture_Store_Archive • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the store records!</strong> "Sinclair and Paytner Furniture Store Co." operated 1909-1955 at 1425 Broad Street, New Castle. The building is still there! It's now an antique shop. Arthur Sr. and John Paytner started with $5,000 capital each. By 1920, the store was doing $75,000 annually (huge money then). They specialized in "mission style" furniture and had exclusive rights to sell Stickley pieces in Henry County. Arthur Jr. worked there every summer through college.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Henry_County_Marriage_Records • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found Arthur's wedding details!</strong> Arthur married Lucy Elizabeth Morrison (yes, same family as the trial - they met during the case) on June 16, 1928 at the First Presbyterian Church in New Castle. The wedding was small - only 50 guests. Lucy's father, Judge William Morrison, performed the ceremony. Newspaper said Arthur "looked nervous but happy" and Lucy wore her mother's wedding dress. They honeymooned at Niagara Falls.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/NewCastle_Legal_History • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Sinclair-Carter Law Firm details:</strong> Arthur and Stephen Carter practiced together 1924-1968. Carter handled civil cases, Arthur did criminal defense. They had offices above the New Castle Bank building (rent was $35/month in 1924). Arthur's reputation grew after the Morrison case - by 1940, he was handling 80% of all criminal cases in Henry County. He never advertised - all word of mouth. Local judges said he was "the most prepared attorney in court."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Children_Researcher • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>All 5 children found:</strong><br>
-                    1. Arthur Reuben Sinclair III (1929-2015) - became a doctor, stayed in New Castle<br>
-                    2. Nancy Ann Sinclair (1932-1998) - married local businessman, lived her whole life in New Castle<br>
-                    3. Stephen Carter Sinclair (1935-2018) - named after his dad's partner, became a lawyer in Indianapolis<br>
-                    4. Lucy Elizabeth Sinclair (1938-2004) - became a teacher, never left Henry County<br>
-                    5. Mary Margaret Sinclair (1942-2020) - youngest, lived in New Castle until 2005 when she moved to a nursing home in Muncie
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Political_History • 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>About never running for office:</strong> Arthur was asked to run for State House in 1948, 1952, and 1956. The local Democratic Party really wanted him because of his popularity after the Morrison case. But Arthur told friends, "I like helping people one at a time, not making rules for everyone." He also said politics would interfere with his law practice. His partner Carter ran for local judge instead (and won in 1958).
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Death_Certificate_Finder • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>His final days:</strong> Arthur died July 22, 1992 at his home at 1123 Ridge Avenue, New Castle. He was 92. The death certificate says "congestive heart failure due to arteriosclerotic cardiovascular disease." He died in his sleep, found by his daughter Nancy the next morning. He'd lived in that house since 1935 - 57 years in the same home. His law office closed in 1987 when he retired at age 87.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Anyone else have ancestors who never left their hometown?</a></li>
-                <li><a href="#">Indiana Law School records from 1920s - where to find?</a></li>
-                <li><a href="#">Small town lawyers in early 1900s - how did they get clients?</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Arthur Reuben Sinclair Jr. - Small town lawyer (1900-1992) never left New Castle, IN despite opportunities</div>
+    <div class="post-meta">
+      <span class="comment-score">412 upvotes</span> • posted by <span class="comment-author">HoosierFamilyRoots</span> <span class="flair">Brick Wall</span>
     </div>
+    <div class="post-content">
+      <p>Looking for information on my great-grandfather Arthur Reuben Sinclair Jr. Born February 6, 1900 in New Castle, Indiana to Arthur Sr (furniture maker/store owner) and Nancy Paytner. He lived his entire 92 years in the same small town and refused every opportunity to leave.</p>
+      
+      <p>What I know:</p>
+      <ul>
+        <li>Father and uncle founded "Sinclair and Paytner Furniture Store Co." in 1909</li>
+        <li>Older brother Fredrick, graduated college and law school by 1924</li>
+        <li>Founded Sinclair-Carter Law Firm with Stephen M. Carter in New Castle</li>
+        <li>Married Lucy in 1928, had 5 children over 14 years</li>
+        <li>Father ran furniture store until selling in 1955</li>
+        <li>Refused to run for State House when asked</li>
+        <li>Died of heart failure at home July 22, 1992</li>
+      </ul>
+      
+      <p><strong>MYSTERIES:</strong> No law school records, can't find Sinclair-Carter Law Firm incorporation, missing from 1930 census, and NOBODY in the family knows why he refused to leave New Castle despite his son offering to move him to South Bend!</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">IndianaBarArchives</span> • <span class="comment-score">567 points</span> • 9 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>LAW SCHOOL MYSTERY SOLVED:</strong> Arthur Sinclair Jr. never attended law school! Found his bar admission records - he was admitted to the Indiana bar in October 1924 under the <strong>"reading the law" provision</strong>.</p>
+        
+        <p>He studied law for 4 years (1920-1924) under the direct supervision of <strong>Judge William H. Kemper</strong> of the Henry County Circuit Court. Arthur worked as Kemper's law clerk while studying, which is why he was "in college" during those years - he was attending court sessions, not college classes.</p>
+        
+        <p>The Sinclair-Carter Law Firm was never formally incorporated - it was a <strong>partnership agreement</strong> signed March 15, 1925. Found the original partnership deed: Sinclair contributed $500 and his legal knowledge, Carter contributed $750 and his family connections. Carter came from a prominent New Castle family that could bring in wealthy clients.</p>
+        
+        <p><strong>1930 CENSUS FOUND:</strong> Arthur was living at <strong>1423 Broad Street, New Castle</strong> but was enumerated as "A.R. Sinclair" - the enumerator abbreviated his name, which is why searches failed. He owned the house outright (worth $3,500) and had two boarders living with him - law students who paid $8/month each.</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">NewCastleINHistorian</span> • <span class="comment-score">423 points</span> • 8 hours ago
+        </div>
+        <div class="comment-content">
+          <p><strong>THE REAL REASON HE NEVER LEFT NEW CASTLE:</strong> This is the family secret that explains everything - Arthur Sinclair Jr. accidentally killed a man in 1926 and was haunted by it his entire life.</p>
+          
+          <p>Found the court records: On <strong>October 17, 1926</strong>, Arthur was defending a client named <strong>James McAllister</strong> on assault charges. Outside the courthouse, the victim's brother <strong>Thomas McAllister</strong> attacked Arthur, calling him a "dirty lawyer defending scum." Arthur pushed him away in self-defense. Thomas fell backward, hit his head on the courthouse steps, and died the next day from a skull fracture.</p>
+          
+          <p>Arthur was charged with manslaughter but acquitted by reason of self-defense. However, the McAllister family was powerful and threatened revenge. Arthur's partner Stephen Carter advised him to leave town, but Arthur refused - he felt responsible for Thomas's death and believed he deserved to "face his punishment" by staying in New Castle forever.</p>
+          
+          <p>The McAllister family made his life miserable for decades - they boycotted his practice, spread rumors, and even had him briefly disbarred in 1932 on trumped-up ethics charges (he was reinstated in 1933). This is why he turned down the State House run - he knew the McAllisters would use it to destroy him publicly.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">HenryCountyCourthouse</span> • <span class="comment-score">334 points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>MCALLISTER FEUD DETAILS UNCOVERED:</strong> The feud was even worse than suspected. After Thomas McAllister's death, his son <strong>William "Bill" McAllister</strong> became Arthur's lifelong enemy.</p>
+        
+        <p>Bill McAllister opened a competing law practice directly across the street from Sinclair-Carter in 1928. For the next 40 years, they were bitter rivals:</p>
+        
+        <ul>
+          <li>Bill married Arthur's former fiancée <strong>Mary Elizabeth Carter</strong> (Stephen Carter's sister) in 1929</li>
+          <li>Bill ran against Arthur for City Attorney in 1934 and won by 12 votes</li>
+          <li>Bill had Arthur investigated by the state bar 6 times between 1932-1968</li>
+          <li>Bill's son <strong>William Jr.</strong> became a judge and ruled against Arthur in 23 out of 25 cases</li>
+        </ul>
+        
+        <p>Arthur's refusal to leave New Castle was partly guilt, but also stubbornness - he wouldn't give Bill McAllister the satisfaction of driving him out of town. Their children and grandchildren continued the feud well into the 1980s.</p>
+        
+        <p><strong>FOUND:</strong> Arthur's diary from 1978-1992 where he wrote: <em>"Bill McAllister died today. I thought I would feel relief, but I only feel old. We wasted our lives hating each other over an accident. My punishment was staying here to remember what I did. His punishment was staying here to remind me."</em></p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">IndianaFurnitureHistory</span> • <span class="comment-score">289 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FURNITURE STORE SECRET DISCOVERED:</strong> Sinclair and Paytner Furniture Store had a dark secret that contributed to Arthur Jr.'s guilt complex.</p>
+        
+        <p>The store was successful because it was essentially a <strong>money laundering operation</strong> for bootleggers during Prohibition! Arthur Sr.'s brother-in-law John Paytner was deeply involved with the <strong>Henry County bootlegging ring</strong> led by the <strong>McAllister family</strong> (yes, the same family Thomas McAllister came from).</p>
+        
+        <p>The furniture store would "sell" expensive furniture to bootleggers, who would pay with cash from liquor sales. The store would provide legitimate receipts and invoices, making the money appear to come from furniture sales rather than illegal alcohol.</p>
+        
+        <p>Arthur Jr. discovered this around 1924 while studying law. He confronted his father and uncle, threatening to report them. They convinced him to stay quiet by promising to fund his law practice and help him "make something of himself."</p>
+        
+        <p>When Arthur accidentally killed Thomas McAllister in 1926, he believed it was <strong>divine punishment</strong> for keeping quiet about the bootlegging operation. This is why he felt he deserved to stay in New Castle and suffer the McAllister family's revenge - he saw it as penance for his family's crimes.</p>
+        
+        <p>The store closed in 1955 when Arthur Sr. sold it because John Paytner's death in 1945 ended their bootlegging connections, not because of old age as family lore claims.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">SinclairFamilyBible</span> • <span class="comment-score">198 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>LUCY'S ROLE IN THE TRAGEDY:</strong> Found Arthur's wife Lucy's unpublished memoir from 1985. She reveals Arthur's deepest secret - he was planning to leave her in 1926.</p>
+        
+        <p>Lucy was pregnant with their first child when Arthur killed Thomas McAllister. Arthur had been having an affair with <strong>Eleanor McAllister</strong> - Thomas's sister! The affair ended violently when Thomas died.</p>
+        
+        <p>Arthur felt triply guilty: for killing Thomas, for cheating on pregnant Lucy, and for the affair ending Eleanor's engagement to a wealthy Indianapolis businessman. His "punishment" of staying in New Castle was also about facing Eleanor and Lucy every day.</p>
+        
+        <p>Lucy knew about the affair but stayed with Arthur because she was Catholic and pregnant. She wrote: <em>"Arthur thought God was punishing him through Thomas's death. He spent 66 years trying to atone for one moment of passion and one moment of fear. He stayed in that horrible little town because he thought he deserved to suffer. I stayed because I loved him and because divorce would shame my family. We both wasted our lives on guilt."</em></p>
+        
+        <p>Their son who offered to move him to South Bend in the 1970s was <strong>Arthur Reuben Sinclair III</strong> - born August 1927, conceived right after the McAllister incident. Arthur saw the child as another reason he had to stay and face his punishment.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">HoosierFamilyRoots</span> • <span class="comment-score">167 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>This is absolutely devastating. My great-grandfather wasn't the quiet, stable small-town lawyer we thought - he was a man destroyed by guilt over killing someone, cheating on his pregnant wife, and covering up his family's bootlegging operation.</p>
+        
+        <p>The refusal to leave New Castle makes perfect sense now - it wasn't about loving the town, it was about punishing himself for 66 years. The feud with the McAllisters, the lost law partnership opportunities, even turning down the State House run - it was all self-imposed penance.</p>
+        
+        <p>I found Arthur Reuben Sinclair III (my grandfather) and he confirmed everything. He said Arthur drank heavily in private, had nightmares about Thomas McAllister, and kept a loaded pistol in his desk drawer "in case the McAllisters came for revenge." He died of a heart attack but Grandpa believes it was a broken heart.</p>
+        
+        <p>Thank you all for uncovering the real story. The family secret makes me sad, but at least I understand why my grandfather moved to South Bend the first chance he got - he was escaping the Sinclair curse of guilt and punishment.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
