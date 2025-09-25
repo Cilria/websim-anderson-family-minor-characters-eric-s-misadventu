@@ -4,291 +4,274 @@
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 20px;
   }
-  .reddit-container {
-    max-width: 800px;
+  .cnn-container {
+    max-width: 900px;
     margin: 0 auto;
     background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
   }
-  .subreddit-header {
-    background: #0079D3;
+  .cnn-header {
+    background: linear-gradient(to right, #cc0000, #990000);
     color: white;
-    padding: 15px;
-    border-radius: 4px 4px 0 0;
+    padding: 25px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
   }
-  .subreddit-name {
-    font-size: 20px;
-    font-weight: bold;
+  .cnn-logo {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 1px;
     margin-bottom: 5px;
   }
-  .subreddit-info {
-    font-size: 14px;
-    opacity: 0.9;
+  .cnn-subtitle {
+    font-size: 12px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
-  .post-container {
+  .breaking-banner {
+    background: linear-gradient(45deg, #cc0000, #990000);
+    color: white;
     padding: 15px;
-    border-bottom: 1px solid #eee;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
   }
-  .post-title {
-    font-size: 24px;
-    font-weight: 600;
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  .article-content {
+    padding: 30px;
+  }
+  .article-headline {
+    font-size: 36px;
+    font-weight: 900;
     color: #1a1a1a;
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #666;
     margin-bottom: 15px;
+    line-height: 1.1;
   }
-  .post-content {
+  .article-subhead {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 25px;
+    font-weight: 400;
+  }
+  .article-meta {
     font-size: 14px;
-    line-height: 1.6;
-    color: #2a2a2a;
-    margin-bottom: 15px;
-  }
-  .post-stats {
-    display: flex;
-    gap: 20px;
-    font-size: 12px;
     color: #666;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #cc0000;
   }
-  .comments-section {
+  .article-body {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #2a2a2a;
+  }
+  .article-body p {
+    margin-bottom: 25px;
+  }
+  .breaking-box {
+    background: linear-gradient(135deg, #cc0000, #990000);
+    color: white;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(204,0,0,0.3);
+  }
+  .executive-order-box {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: white;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+  .update-timeline {
+    background-color: #f8f9fa;
+    border-left: 5px solid #cc0000;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .timeline-item {
+    margin: 20px 0;
     padding: 15px;
-  }
-  .comment {
-    margin-bottom: 20px;
-    padding-left: 20px;
-    border-left: 2px solid #e0e0e0;
-  }
-  .comment-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  .username {
-    font-weight: 600;
-    margin-right: 10px;
-    color: #0079D3;
-  }
-  .user-flair {
-    background: #e8f4f8;
-    padding: 2px 6px;
-    border-radius: 3px;
-    font-size: 11px;
-    margin-right: 8px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
   }
   .timestamp {
-    font-size: 12px;
-    color: #666;
-  }
-  .comment-body {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 8px;
-  }
-  .comment-actions {
-    font-size: 12px;
-    color: #666;
-  }
-  .score {
     font-weight: bold;
-    margin-right: 15px;
+    color: #cc0000;
+    font-size: 14px;
+    margin-bottom: 5px;
   }
-  .reply {
-    margin-left: 30px;
-    margin-top: 15px;
+  .quote-box {
+    background-color: #f1f3f4;
+    border-left: 4px solid #cc0000;
+    padding: 20px;
+    margin: 25px 0;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 0 6px 6px 0;
   }
-  .sort-menu {
-    background: #f6f7f8;
-    padding: 10px 15px;
-    border-bottom: 1px solid #e0e0e0;
-    font-size: 12px;
-    color: #666;
+  .purge-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 25px 0;
   }
-  .controversial {
-    background: #fff5f5;
-    border-left: 3px solid #ff4444;
+  .purge-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border-top: 3px solid #cc0000;
   }
-  .locked {
-    background: #f0f0f0;
-    color: #666;
+  .purge-title {
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 10px;
   }
 </style>
 </head>
 <body>
 
-<div class="reddit-container">
-  <div class="subreddit-header">
-    <div class="subreddit-name">r/news</div>
-    <div class="subreddit-info">The place for news articles about current events in the US and around the world</div>
+<div class="cnn-container">
+  <div class="cnn-header">
+    <div class="cnn-logo">CNN</div>
+    <div class="cnn-subtitle">BREAKING NEWS</div>
   </div>
   
-  <div class="post-container">
-    <div class="post-title">BREAKING: Newsom declares "I don't give a FUCK about the laws. I will do whatever I WANT" in shocking Oval Office statement</div>
-    <div class="post-meta">posted by u/BreakingNewsAlert • 2 hours ago</div>
-    <div class="post-content">
-      <strong>Link:</strong> <a href="#" style="color: #0079D3;">White House Live Stream - Full Statement</a><br><br>
-      In an unprecedented and shocking statement from the Oval Office, President-elect Gavin Newsom has openly declared his intention to ignore federal laws and the Constitution. Speaking to reporters, Newsom stated: "I don't give a FUCK about the laws. I will do whatever I WANT." This comes just hours after his landslide victory was certified by Congress.
+  <div class="breaking-banner">
+    🚨 EXCLUSIVE: TWO WEEKS OF TYRANNY
+  </div>
+  
+  <div class="article-content">
+    <h1 class="article-headline">Newsom's Reign of Terror: 96 Executive Orders in Two Weeks as America Descends into Political Purge</h1>
+    <div class="article-subhead">President launches unprecedented assault on political opponents, media, and democratic institutions in first 14 days</div>
+    
+    <div class="article-meta">
+      By CNN Politics Staff • Updated 8:47 PM ET, February 10, 2029
     </div>
-    <div class="post-stats">
-      <span>🔽 45.2k</span>
-      <span>💬 24.3k comments</span>
-      <span>⤴️ Share</span>
-      <span>🔖 Save</span>
-    </div>
-  </div>
-  
-  <div class="sort-menu">
-    Sort by: Best • Top • New • Controversial
-  </div>
-  
-  <div class="comments-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="username">u/ConstitutionalLawyer2028</span>
-        <span class="user-flair" style="background: #8b4513; color: white;">Constitutional Lawyer</span>
-        <span class="timestamp">1 hour ago</span>
+    
+    <div class="article-body">
+      <div class="breaking-box">
+        🚨 BREAKING: President Gavin Newsom has signed 96 executive orders in just 14 days, launching the most aggressive political purge in American history as federal troops occupy Red State capitals and Republican leaders face Nuremberg-style trials.
       </div>
-      <div class="comment-body">
-        This is LITERALLY what the 25th Amendment was designed for. A President openly stating he will violate his oath of office and ignore federal law? That's not political rhetoric - that's a constitutional crisis. Every Cabinet member should be preparing to invoke Section 4 immediately.
-      </div>
-      <div class="comment-actions">
-        <span class="score">↑ 8.9k</span>
-        <span>Reply</span>
-        <span>Share</span>
-        <span>Report</span>
-        <span>Give Award</span>
-      </div>
+
+      <p><strong>WASHINGTON (CNN)</strong> — Two weeks into his presidency, Gavin Newsom has exceeded even his most apocalyptic campaign promises, transforming the United States into what critics call a "totalitarian nightmare" through a blizzard of executive orders that have dismantled democratic norms and targeted political opponents for prosecution.</p>
       
-      <div class="reply">
-        <div class="comment-header">
-          <span class="username">u/DemocraticDefense</span>
-          <span class="user-flair" style="background: #0052cc; color: white;">Progressive</span>
-          <span class="timestamp">1 hour ago</span>
-        </div>
-        <div class="comment-body">
-          Oh NOW you care about the Constitution? Where were you when Trump said he could pardon himself for ANY crime? When he said Article II gives him the power to do "whatever I want"? This is just Newsom fighting fire with fire. Republicans set this precedent.
-        </div>
-        <div class="comment-actions">
-          <span class="score">↑ 6.2k</span>
-          <span>Reply</span>
-          <span>Share</span>
-          <span>Report</span>
-          <span>Give Award</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment controversial">
-      <div class="comment-header">
-        <span class="username">u/MilitaryIntelligence2028</span>
-        <span class="user-flair" style="background: #4b0082; color: white;">Retired Intel</span>
-        <span class="timestamp">1 hour ago</span>
-      </div>
-      <div class="comment-body">
-        I'm hearing from my contacts that this isn't just rhetoric. Joint Chiefs are having emergency meetings. States are activating National Guard units. This isn't 2020 anymore - we're looking at potential military intervention if he actually tries to ignore the law. People need to understand how serious this is.
-      </div>
-      <div class="comment-actions">
-        <span class="score">↑ 7.1k</span>
-        <span>Reply</span>
-        <span>Share</span>
-        <span>Report</span>
-        <span>Give Award</span>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="username">u/NewsomIsFinished</span>
-        <span class="user-flair" style="background: #dc143c; color: white;">Republican</span>
-        <span class="timestamp">1 hour ago</span>
-      </div>
-      <div class="comment-body">
-        This is the beginning of the end for American democracy. He just admitted he's a DICTATOR on live television. Every Democrat who voted for this authoritarian needs to look in the mirror. You've destroyed 250 years of constitutional government because you hate Trump. History will not be kind.
-      </div>
-      <div class="comment-actions">
-        <span class="score">↑ 5.4k</span>
-        <span>Reply</span>
-        <span>Share</span>
-        <span>Report</span>
-        <span>Give Award</span>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="username">u/RealContextFinder</span>
-        <span class="timestamp">45 minutes ago</span>
-      </div>
-      <div class="comment-body">
-        People need to watch the FULL video. He was responding to a reporter asking about Republican obstruction. His full quote was: "They want to hide behind laws while destroying democracy. Well, I don't give a FUCK about the laws they hide behind. I will do whatever I WANT to protect the American people." Still alarming, but different context.
-      </div>
-      <div class="comment-actions">
-        <span class="score">↑ 4.2k</span>
-        <span>Reply</span>
-        <span>Share</span>
-        <span>Report</span>
-        <span>Give Award</span>
-      </div>
+      <p>The president's opening salvo began just moments after taking the oath of office on January 20th, when he signed Executive Order 1 — "The Purification Act" — which immediately began the systematic removal of Republicans from federal employment and initiated what the administration terms "accountability proceedings" against political enemies.</p>
       
-      <div class="reply">
-        <div class="comment-header">
-          <span class="username">u/StillUnacceptable</span>
-          <span class="timestamp">30 minutes ago</span>
+      <div class="executive-order-box">
+        <strong>EXECUTIVE ORDER STATS:</strong><br>
+        • 96 Orders Signed in 14 Days<br>
+        • 47,000 Federal Workers Fired<br>
+        • 312 Republicans Indicted<br>
+        • $1.2 Trillion Lawsuit Against Fox News<br>
+        • 18 Red States Under Military Occupation
+      </div>
+
+      <p>"This isn't governing — this is revenge," said constitutional scholar Lawrence Tribe. "Newsom has weaponized every federal agency to crush his political enemies. We're witnessing the collapse of American democracy in real-time."</p>
+
+      <div class="quote-box">
+        "Every Republican who served in the Trump administration, every GOP member of Congress who supported him, every conservative judge who ruled against us — they will all face justice. This is just the beginning." - President Gavin Newsom, January 21st
+      </div>
+
+      <div class="update-timeline">
+        <h3 style="margin-top: 0; color: #cc0000;">THE FIRST TWO WEEKS OF TERROR</h3>
+        
+        <div class="timeline-item">
+          <div class="timestamp">Day 1 - January 20th</div>
+          <strong>The Purge Begins</strong><br>
+          Signs Executive Orders 1-12, including "Federal Employee Loyalty Review" firing 47,000 Republican civil servants, and "Military Enforcement Act" deploying troops to Red States.
         </div>
-        <div class="comment-body">
-          Doesn't matter what he was responding to. A President-elect saying "I don't give a fuck about the laws" is a five-alarm fire for constitutional democracy. There is NO context that makes this acceptable. This is how republics die - with people making excuses for authoritarianism.
+        
+        <div class="timeline-item">
+          <div class="timestamp">Day 3 - January 22nd</div>
+          <strong>Nuremberg Trials Announced</strong><br>
+          Attorney General announces "Accountability Commission" to prosecute 312 top Republicans for "crimes against democracy" with public trials scheduled for March.
         </div>
-        <div class="comment-actions">
-          <span class="score">↑ 3.8k</span>
-          <span>Reply</span>
-          <span>Share</span>
-          <span>Report</span>
-          <span>Give Award</span>
+        
+        <div class="timeline-item">
+          <div class="timestamp">Day 5 - January 24th</div>
+          <strong>Fox News Targeted</strong><br>
+          Files $1.2 trillion lawsuit against Fox News, demanding immediate shutdown and seizure of all assets. Network faces extinction by February.
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timestamp">Day 8 - January 27th</div>
+          <strong>Congress Nullified</strong><br>
+          Orders Office of Management and Budget to ignore all congressional oversight, declaring "The legislative branch is irrelevant to progress."
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timestamp">Day 12 - January 31st</div>
+          <strong>Press Control Seized</strong><br>
+          White House Press Office announces all media must submit questions 48 hours in advance, while CNN and MSNBC given exclusive access to administration.
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timestamp">Day 14 - February 10th</div>
+          <strong>Gerrymandering Mandate</strong><br>
+          Issues Executive Order 87 requiring all Democratic-controlled states to immediately redraw districts to guarantee "permanent progressive governance."
         </div>
       </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="username">u/HistoryRepeats2028</span>
-        <span class="user-flair" style="background: #8b4513; color: white;">Historian</span>
-        <span class="timestamp">50 minutes ago</span>
+
+      <p>The scope of Newsom's assault on American institutions has left even his supporters stunned. Democratic governors have privately expressed alarm at orders requiring them to purge Republican election officials and replace them with "progressive loyalists."</p>
+
+      <div class="purge-grid">
+        <div class="purge-card">
+          <div class="purge-title">🏛️ INSTITUTIONS DESTROYED</div>
+          <p>Congressional oversight eliminated, federal courts packed with loyalists, state National Guards federalized and deployed against governors who resist.</p>
+        </div>
+        
+        <div class="purge-card">
+          <div class="purge-title">📺 MEDIA WARFARE</div>
+          <p>Fox News faces extinction through $1.2 trillion lawsuit, conservative media outlets threatened with "treason investigations," press freedom effectively abolished.</p>
+        </div>
+        
+        <div class="purge-card">
+          <div class="purge-title">⚖️ LEGAL TYRANNY</div>
+          <p>312 Republicans indicted on vague "democracy crimes," public trials scheduled for maximum humiliation, Department of Justice transformed into political weapon.</p>
+        </div>
+        
+        <div class="purge-card">
+          <div class="purge-title">🪖 MILITARY OCCUPATION</div>
+          <p>Federal troops occupy 18 Red State capitals, governors threatened with arrest for "insurrection," state sovereignty effectively abolished.</p>
+        </div>
       </div>
-      <div class="comment-body">
-        Historically speaking, when leaders openly declare they will ignore laws and do "whatever I want," it never ends well. Caesar crossing the Rubicon, Hitler's Enabling Act, countless examples. The fact that Americans are cheering this on shows how little we've learned from history.
+
+      <div class="breaking-box">
+        ⚠️ DEVELOPING: Sources inside the White House report Newsom is preparing Executive Order 97 — "The Final Solution" — which will reportedly criminalize the Republican Party entirely and begin mass arrests of registered Republicans. This could come as early as tomorrow.
       </div>
-      <div class="comment-actions">
-        <span class="score">↑ 3.1k</span>
-        <span>Reply</span>
-        <span>Share</span>
-        <span>Report</span>
-        <span>Give Award</span>
+
+      <p>Republican leaders have gone into hiding or been arrested. Senate Minority Leader Mitch McConnell was taken into custody last week for "sedition," while House Republicans have fled Washington entirely. Several GOP governors have barricaded themselves in their statehouses, surrounded by federal troops.</p>
+
+      <p>"They've created a police state," said former Republican National Committee Chair Ronna McDaniel, speaking from an undisclosed location. "Newsom isn't just destroying the Republican Party — he's destroying America itself."</p>
+
+      <div class="quote-box">
+        "I will not stop until every Republican is either in prison or has been driven from public life. This country will be purified of conservative ideology, even if I have to rule by decree for the next four years." - President Gavin Newsom, February 9th
       </div>
-    </div>
-    
-    <div class="comment locked">
-      <div class="comment-header">
-        <span class="username">u/ModeratorTeam</span>
-        <span class="user-flair" style="background: #228b22; color: white;">MOD</span>
-        <span class="timestamp">15 minutes ago</span>
-      </div>
-      <div class="comment-body">
-        <strong>THREAD LOCKED:</strong> This is developing into real-time calls for insurrection, military intervention, and civil conflict from multiple sides. Until we see how institutions respond to this constitutional crisis, we're locking discussion to prevent further escalation. Stay safe, everyone.
-      </div>
-      <div class="comment-actions">
-        <span class="score">↑ 2.3k</span>
-        <span>Unlock</span>
-        <span>Share</span>
-        <span>Report</span>
-        <span>Give Award</span>
-      </div>
+
+      <p>Constitutional scholars warn that Newsom's actions represent the complete collapse of American democracy. "We've never seen anything like this — not even in our darkest moments," said Harvard law professor Noah Feldman. "This is how republics die, not with a bang, but with 96 executive orders."</p>
+
+      <p>As the nation enters its third week under Newsom's rule, the question isn't whether America can survive — it's whether any opposition will remain by the time his term ends.</p>
+
+      <p><em>This story is developing. Updates will follow as the situation deteriorates further.</em></p>
     </div>
   </div>
 </div>
