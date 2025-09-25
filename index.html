@@ -1,247 +1,226 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
-  }
-  .nbc-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-  }
-  .nbc-header {
-    background: linear-gradient(to right, #1c1c1c, #000);
-    color: white;
-    padding: 25px;
-    border-radius: 8px 8px 0 0;
-    text-align: center;
-  }
-  .nbc-logo {
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-  }
-  .nbc-subtitle {
-    font-size: 12px;
-    opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  .live-banner {
-    background: linear-gradient(45deg, #ff0000, #cc0000);
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
-  }
-  .article-content {
-    padding: 30px;
-  }
-  .article-headline {
-    font-size: 36px;
-    font-weight: 900;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-    line-height: 1.1;
-  }
-  .article-subhead {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 25px;
-    font-weight: 400;
-  }
-  .article-meta {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #ff0000;
-  }
-  .article-body {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #2a2a2a;
-  }
-  .article-body p {
-    margin-bottom: 25px;
-  }
-  .breaking-box {
-    background: linear-gradient(135deg, #ff0000, #cc0000);
-    color: white;
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(255,0,0,0.3);
-  }
-  .update-timeline {
-    background-color: #f8f9fa;
-    border-left: 5px solid #ff0000;
-    padding: 25px;
-    margin: 25px 0;
-    border-radius: 0 8px 8px 0;
-  }
-  .timeline-item {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: white;
-    border-radius: 6px;
-    border: 1px solid #e0e0e0;
-  }
-  .timestamp {
-    font-weight: bold;
-    color: #ff0000;
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  .quote-box {
-    background-color: #f1f3f4;
-    border-left: 4px solid #ff0000;
-    padding: 20px;
-    margin: 25px 0;
-    font-style: italic;
-    font-size: 16px;
-    border-radius: 0 6px 6px 0;
-  }
-  .reaction-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 25px 0;
-  }
-  .reaction-card {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 20px;
-    border-top: 3px solid #ff0000;
-  }
-  .reaction-title {
-    font-weight: bold;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LBJ's only grandson launches uphill House bid - Politico</title>
+    <style>
+        body {
+            font-family: 'Politico FS', 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            background: #dc0227;
+            color: white;
+            padding: 15px 0;
+            border-bottom: 3px solid #000;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+        .nav {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+        .article-header {
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .headline {
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .subhead {
+            font-size: 20px;
+            color: #666;
+            margin: 0 0 20px 0;
+            font-weight: 400;
+        }
+        .byline {
+            font-size: 14px;
+            color: #666;
+        }
+        .byline a {
+            color: #dc0227;
+            text-decoration: none;
+        }
+        .article-content {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .pullquote {
+            border-left: 4px solid #dc0227;
+            padding-left: 20px;
+            margin: 25px 0;
+            font-size: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .sidebar h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #000;
+            border-bottom: 2px solid #dc0227;
+            padding-bottom: 5px;
+        }
+        .sidebar p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        .related-stories {
+            margin-top: 20px;
+        }
+        .related-stories h4 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #666;
+        }
+        .related-stories a {
+            display: block;
+            font-size: 14px;
+            color: #dc0227;
+            text-decoration: none;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .timestamp {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .breaking-banner {
+            background: #ffcc00;
+            color: #000;
+            padding: 8px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-
-<div class="nbc-container">
-  <div class="nbc-header">
-    <div class="nbc-logo">NBC NEWS</div>
-    <div class="nbc-subtitle">LIVE UPDATES</div>
-  </div>
-  
-  <div class="live-banner">
-    🔴 LIVE: ELECTION RESULTS & AFTERMATH
-  </div>
-  
-  <div class="article-content">
-    <h1 class="article-headline">Newsom wins 2028 election in landslide, vows "the fun has just begun" as Republicans cry foul</h1>
-    <div class="article-subhead">President-elect's ominous warning sparks fury from GOP as they reject results and claim massive fraud</div>
-    
-    <div class="article-meta">
-      By NBC News Staff • Updated 11:47 PM ET, November 6, 2028
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">POLITICO</div>
+            <div class="nav">
+                <a href="#">Congress</a>
+                <a href="#">Campaigns</a>
+                <a href="#">2026 Elections</a>
+                <a href="#">The South</a>
+            </div>
+        </div>
     </div>
-    
-    <div class="article-body">
-      <div class="breaking-box">
-        🚨 BREAKING: Gavin Newsom has officially won the 2028 presidential election in a stunning landslide victory, delivering a ominous message to his opponents: "Stay tuned... the fun has just begun."
-      </div>
 
-      <p><strong>WASHINGTON (NBC NEWS)</strong> — Gavin Newsom defeated Republican nominee Ron DeSantis in a historic landslide Tuesday night, capturing over 400 electoral votes in what political analysts are calling the most decisive presidential victory since Reagan's 1984 reelection.</p>
-      
-      <p>But the victory celebration quickly turned ominous when Newsom addressed supporters in Sacramento, delivering a chilling message that has Republicans across the country demanding investigations and refusing to concede defeat.</p>
-      
-      <div class="quote-box">
-        "To my enemies, to the criminals, to the traitors who thought they could stop us - stay tuned. The fun has just begun. We're coming for every single one of you." - President-elect Gavin Newsom
-      </div>
+    <div class="container">
+        <article>
+            <div class="article-header">
+                <div class="breaking-banner">BREAKING</div>
+                <h1 class="headline">LBJ's only grandson launches uphill House bid in Texas</h1>
+                <h2 class="subhead">Patrick Lyndon Nugent files paperwork to run as Blue Dog Democrat in R+8 district</h2>
+                <div class="byline">
+                    By <a href="#">Samantha Thompson</a> and <a href="#">Marcus Rodriguez</a> | 01/11/2026 07:32 AM EST
+                </div>
+            </div>
 
-      <p>The cryptic warning immediately triggered massive backlash from Republicans, who claimed the statement proves Newsom intends to use his victory as a weapon against political opponents.</p>
+            <div class="article-content">
+                <p>AUSTIN, Texas — Patrick Lyndon Nugent, the only grandson of President Lyndon B. Johnson, filed federal paperwork Friday to run for Congress in Texas' 21st District, setting up what political analysts predict will be one of the most closely-watched uphill battles of the 2026 midterm elections.</p>
 
-      <div class="update-timeline">
-        <h3 style="margin-top: 0; color: #ff0000;">LIVE UPDATES: Election Aftermath</h3>
-        
-        <div class="timeline-item">
-          <div class="timestamp">11:43 PM ET - BREAKING</div>
-          <strong>Trump Headquarters Erupts</strong><br>
-          Donald Trump posts on Truth Social: "MASSIVE FRAUD! Newsom STOLE this election. Everyone knows it. RIGGED SYSTEM! Patriots must fight back NOW!"
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timestamp">11:45 PM ET - DEVELOPING</div>
-          <strong>Republican Governors Emergency Meeting</strong><br>
-          Texas Governor Greg Abbott calls emergency meeting of Republican governors to discuss "election integrity crisis" and potential resistance to federal authority.
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timestamp">11:47 PM ET - LATEST</div>
-          <strong>Newsom Doubles Down</strong><br>
-          In shocking follow-up statement, Newsom's team confirms he plans to "deploy federal troops to Red States that refuse to comply with federal law" starting January 20th.
-        </div>
-      </div>
+                <p>Nugent, 48, announced his candidacy in a video filmed in front of the LBJ Presidential Library in Austin, positioning himself as a "pragmatic Democrat" who would join the fiscally conservative Blue Dog Coalition if elected. The district, which stretches from San Antonio's northern suburbs to the Hill Country, has been held by Republicans since 1979 and voted for the GOP presidential candidate by 8 points in 2024.</p>
 
-      <p>The president-elect's campaign has become increasingly aggressive throughout the election cycle, with Newsom abandoning traditional political norms in favor of what critics call "total political warfare."</p>
+                <div class="pullquote">
+                    "My grandfather taught me that courage is standing up for what's right, even when it's not easy. This district deserves a representative who puts country over party and delivers real results for working families."
+                </div>
 
-      <p>During the final presidential debate, Newsom stunned viewers by openly threatening military intervention against states that might resist his agenda.</p>
+                <p>The announcement represents a political gamble for the Johnson family legacy. While LBJ dominated Texas politics during his era, the state has shifted dramatically rightward in recent decades. The 21st District, currently represented by four-term Republican Rep. Tony Gonzales, has a Cook Partisan Voter Index of R+8, making it a steep climb for any Democrat.</p>
 
-      <div class="quote-box">
-        "If Texas or Florida or any other state thinks they can defy federal authority, I've got news for you: I will send troops. I will use force. And I will crush any rebellion against the legitimate government of the United States." - Gavin Newsom, October debate
-      </div>
+                <p>Nugent, a San Antonio native who runs a renewable energy consulting firm, has never held elected office but comes armed with the most famous political surname in Texas history. His campaign launch video leaned heavily on his grandfather's domestic achievements while carefully distancing himself from contemporary Democratic positions that have proven toxic in the district.</p>
 
-      <p>Republican leaders are responding with fury, claiming the election results are illegitimate and vowing to resist what they call "a hostile takeover of American democracy."</p>
+                <p>"I'm not running to be anyone's rubber stamp," Nugent said in the video. "I'll work with anyone, Republican or Democrat, to bring jobs back to this district, secure our border, and lower costs for families."</p>
 
-      <div class="reaction-grid">
-        <div class="reaction-card">
-          <div class="reaction-title">🔥 Republican Outrage</div>
-          <p>Senate Minority Leader Mitch McConnell: "This election was stolen through massive fraud. We will not recognize Newsom as legitimate president."</p>
-        </div>
-        
-        <div class="reaction-card">
-          <div class="reaction-title">⚠️ Constitutional Crisis</div>
-          <p>Several red states announce plans to challenge federal authority, setting up potential military confrontation with federal government.</p>
-        </div>
-        
-        <div class="reaction-card">
-          <div class="reaction-title">🚨 Violence Feared</div>
-          <p>Security officials warn of potential armed resistance from militia groups claiming Newsom's victory represents "tyranny."</p>
-        </div>
-        
-        <div class="reaction-card">
-          <div class="reaction-title">💥 Democratic Base</div>
-          <p>Progressive activists celebrate victory as "justified revenge" against Trump and Republicans, embracing scorched-earth tactics.</p>
-        </div>
-      </div>
+                <p>The candidate's positioning reflects the Blue Dog playbook: emphasize fiscal responsibility, border security, and local economic development while avoiding culture war issues that have doomed previous Democratic candidates in the district. It's a strategy that worked for Rep. Henry Cuellar, the last Blue Dog Democrat to survive in a competitive Texas district.</p>
 
-      <p>Constitutional scholars warn that America faces its greatest crisis since the Civil War, with a president-elect openly promising to use military force against political opponents and half the country rejecting the election's legitimacy.</p>
+                <p>Republicans immediately seized on Nugent's family connections to paint him as out of touch with district voters. "Patrick Nugent is a liberal Austin insider trying to buy a congressional seat with his famous last name," said National Republican Congressional Committee spokesperson Sarah Miller. "Texas families don't need another Washington elite who will vote with Nancy Pelosi and the radical left."</p>
 
-      <p>"We've never seen anything like this," said constitutional law expert Pamela Karlan. "A president threatening to send troops against American citizens, and states openly discussing secession. This is how democracies die."</p>
+                <p>The district's demographic trends offer Nugent a narrow path to victory. While still reliably Republican, the 21st has seen steady growth in suburban areas around San Antonio, where college-educated voters have shown willingness to split tickets. The district is also 35% Hispanic, a voting bloc that has drifted Republican in recent cycles but remains persuadable on economic issues.</p>
 
-      <div class="breaking-box">
-        ⚠️ DEVELOPING: Multiple Republican-led states are reportedly drafting legislation to reject federal authority and establish "state sovereignty" in direct challenge to Newsom's administration. The stage is set for unprecedented constitutional crisis.
-      </div>
+                <p>Nugent's campaign strategy appears focused on consolidating Democratic base voters while peeling off moderate Republicans disillusioned with GOP leadership. His launch video featured testimonials from local business owners and veterans, groups that traditionally lean Republican but have shown volatility in recent elections.</p>
 
-      <p>As the nation processes this stunning election result, one thing is clear: Gavin Newsom's promise that "the fun has just begun" may prove to be the most ominous words ever spoken by an American president-elect.</p>
+                <p>The candidate's family history provides both opportunity and challenge. LBJ's legislative achievements on civil rights and social programs remain popular among Democrats, but his Vietnam War legacy complicates matters in a district with a significant military population. Nugent's campaign has emphasized his own military service — he served as an Army intelligence officer from 2001-2005 — rather than his grandfather's record.</p>
 
-      <p><em>This is a developing story. Updates will follow as events unfold.</em></p>
+                <p>Democratic strategists see the race as a long-shot investment worth making. "We need candidates who can compete everywhere, not just in deep-blue districts," said Texas Democratic Party chair Gilberto Hinojosa. "Patrick has the profile and resources to put this district in play."</p>
+
+                <p>Nugent's campaign reported raising $340,000 in the first 24 hours after his announcement, including significant donations from LBJ administration alumni and renewable energy executives. That early fundraising haul suggests he could compete financially in what is expected to be an expensive media market.</p>
+
+                <p>The race will likely serve as a test case for whether the Blue Dog model can survive in an era of increasing polarization. With Democrats needing to flip just five seats to regain House control, even long-shot races like Texas' 21st could prove decisive in determining the chamber's balance of power.</p>
+
+                <p>Rep. Gonzales, who won reelection by 12 points in 2024, has not yet commented on Nugent's candidacy. His campaign is expected to emphasize his record on border security and veterans' issues, while painting Nugent as too liberal for the district despite his moderate positioning.</p>
+
+                <div class="pullquote">
+                    "This district has been Republican since before I was born. But I believe Texans are ready for a new generation of leadership that puts problem-solving over partisanship."
+                </div>
+
+                <p>The primary elections are scheduled for March 3, 2026, with the general election set for November 3. Early polling in the district shows Gonzales leading Nugent by 15 points, but Democrats note that early surveys often underestimate challengers with strong name recognition and fundraising capacity.</p>
+
+                <p>Whether the Johnson magic still works in deep-red Texas remains to be seen. But Nugent's entry guarantees that one of the most historically significant political families in American history will once again be tested in the crucible of electoral politics.</p>
+            </div>
+        </article>
+
+        <aside class="sidebar">
+            <h3>Texas' 21st District</h3>
+            <p><strong>Current Representative:</strong> Tony Gonzales (R)</p>
+            <p><strong>Partisan Index:</strong> R+8</p>
+            <p><strong>2024 Result:</strong> GOP +12</p>
+            <p><strong>Population Centers:</strong> San Antonio suburbs, Hill Country</p>
+            <p><strong>Demographics:</strong> 35% Hispanic, 55% White</p>
+            
+            <div class="related-stories">
+                <h4>Related Coverage</h4>
+                <a href="#">Blue Dog Democrats seek comeback in Trump districts</a>
+                <a href="#">Texas redistricting faces new legal challenges</a>
+                <a href="#">LBJ's legacy looms large in modern Texas politics</a>
+                <a href="#">2026 midterms: The battle for the House</a>
+            </div>
+        </aside>
     </div>
-  </div>
-</div>
-
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
