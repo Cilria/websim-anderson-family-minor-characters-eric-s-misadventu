@@ -1,208 +1,355 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Reuben Sinclair Jr. Family Research - His brother Frederick, uncles John Paytner, and Sinclair ancestors : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/NewCastleLawyerDescendant</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">5 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Arthur Reuben Sinclair Jr. - New Castle, IN lawyer (1900-1992). Never left his hometown despite opportunities. Criminal defense attorney, father of 5. Any info on his famous cases or why he stayed?</div>
-    <div class="post-meta">
-      <span class="comment-score">312 upvotes</span> • posted by <span class="comment-author">HoosierFamilyRoots</span> <span class="flair">Indiana Research</span>
-    </div>
-    <div class="post-content">
-      <p>Looking for information about my great-grandfather Arthur Reuben Sinclair Jr. Born Feb 6, 1900 in New Castle, IN to Arthur Sr. (furniture store owner) and Nancy Paytner. Second son after Fredrick.</p>
-      
-      <p>What I know:</p>
-      <ul>
-        <li>Father and uncle founded "Sinclair and Paytner Furniture Store Co." in 1909</li>
-        <li>Graduated college, passed bar exam 1924</li>
-        <li>Founded Sinclair-Carter Law Firm with Stephen Carter</li>
-        <li>Specialized in criminal defense</li>
-        <li>Married Lucy in 1928, had 5 children over 14 years</li>
-        <li>Father sold furniture store 1955</li>
-        <li>Never ran for public office despite opportunities</li>
-        <li>Died at home in New Castle 1992 of heart failure</li>
-      </ul>
-      
-      <p>Curious about his famous cases and why he never left New Castle even when his son offered to move him to South Bend. Any insights from Henry County court records?</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">HenryCountyCourthouse</span> • <span class="comment-score">89 points</span> • 16 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found some records of Arthur's cases from the 1930s-1950s. Mostly typical small-town stuff - DUIs, petty theft, domestic disputes. His biggest case was probably defending the Johnson brothers in 1941 for a bar fight that got out of hand. Got them reduced sentences.</p>
-        
-        <p>One interesting thing - he seemed to specialize in representing people who couldn't afford other lawyers. Lots of payment plans, some cases he took for $10-20 when the going rate was $50-100.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">NewCastleHistoricalSociety</span> • <span class="comment-score">156 points</span> • 14 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Arthur was just a solid, dependable small-town lawyer. He handled everything from wills to divorces to criminal defense. The furniture store his dad owned was successful enough that Arthur never had to chase big money cases - he could pick and choose.</p>
-        
-        <p>As for why he stayed - why would he leave? He had a good practice, his family was there, he knew everyone. New Castle in the 1940s-1960s was a nice place to raise a family. His son David offered to move him to South Bend in the 1970s, but Arthur was in his 70s by then. Who wants to start over at that age?</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">IndianaStateArchives</span> • <span class="comment-score">234 points</span> • 12 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found Arthur's law practice records. He averaged about 150-200 cases per year from 1924-1974. Mostly:</p>
-        <ul>
-          <li>Traffic violations (40%)</li>
-          <li>Small claims/debt collection (25%)</li>
-          <li>Divorces (15%)</li>
-          <li>Criminal defense (15%)</li>
-          <li>Wills and estates (5%)</li>
-        </ul>
-        
-        <p>He made a decent living - about $8,000-12,000 per year in the 1950s, which was middle class for New Castle. His most notable trait was consistency - he showed up, did the work, charged fair prices, and people trusted him.</p>
-        
-        <p>His partner Stephen Carter left in 1948 to join a bigger firm in Indianapolis. Arthur never replaced him, just worked solo the rest of his career.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">SinclairFurnitureRecords</span> • <span class="comment-score">178 points</span> • 11 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Arthur's dad and uncle had a nice furniture business - they sold mid-range furniture and appliances. The store did well through the 1920s-1940s because they offered credit when banks wouldn't lend to working people.</p>
-        
-        <p>Arthur inherited about $40,000 when his dad died in 1968 (worth about $300,000 today). He used it to pay off his house and set up college funds for his grandkids. Nothing dramatic - just a comfortable retirement.</p>
-        
-        <p>The store building is still there on Main Street - it's a thrift shop now.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">NewCastleTribuneArchives</span> • <span class="comment-score">267 points</span> • 10 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found Arthur's obituary from July 1992. The most detailed thing written about him:</p>
-        
-        <p>"Arthur R. Sinclair Jr., 92, of New Castle, died Tuesday at his residence. He was born Feb. 6, 1900, in New Castle, the son of Arthur R. and Nancy Paytner Sinclair. He was a lifelong resident of New Castle and practiced law for 50 years. He was a member of the First Methodist Church, the New Castle Bar Association, and the Masonic Lodge."</p>
-        
-        <p>That's it. No mention of famous cases, no dramatic stories. Just a guy who lived his whole life in one town and practiced law for five decades.</p>
-        
-        <p>Sometimes the most interesting thing about a person is how uninteresting their life appears on paper.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">HoosierFamilyRoots</span> • <span class="comment-score">445 points</span> • 9 hours ago
-      </div>
-      <div class="comment-content">
-        <p>You know what? This is exactly what I needed to hear.</p>
-        
-        <p>My great-grandfather wasn't a civil rights hero. He wasn't fighting the Klan. He didn't have any famous cases. He was just a <strong>good small-town lawyer</strong> who helped regular people with their problems for 50 years.</p>
-        
-        <p>He represented <strong>150-200 people per year</strong> for five decades. That's probably <strong>8,000-10,000 people</strong> whose lives he touched. Not dramatically - just practically. He got their DUIs reduced, helped them collect debts, wrote their wills, handled their divorces.</p>
-        
-        <p>He charged <strong>fair prices</strong> when he could have charged more. He took <strong>payment plans</strong> when others demanded cash. He stayed in New Castle because it was <strong>home</strong> - not because he was on some secret mission.</p>
-        
-        <p>And you know what? That's <strong>more impressive</strong> than any dramatic story. He lived in the same house for <strong>60 years</strong>, raised <strong>5 kids</strong>, buried his wife after <strong>47 years of marriage</strong>, and died at <strong>age 92</strong> in the town where he was born.</p>
-        
-        <p>Arthur Reuben Sinclair Jr. - you weren't a hero. You were something better: a <strong>dependable</strong>, <strong>honest</strong>, <strong>small-town lawyer</strong> who helped <strong>thousands of regular people</strong> navigate the legal system for <strong>50 years</strong>. And that's a legacy worth celebrating.</p>
-        
-        <p>Thanks for the reality check, everyone. Sometimes the <strong>boring truth</strong> is the <strong>best story</strong>.</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>1.2k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Arthur Reuben Sinclair Jr. Family Research - His brother Frederick, uncles John Paytner, and Sinclair ancestors</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Indiana</span>
+                    <span class="flair">Sinclair Family</span>
+                    <span class="flair">Paytner Family</span>
+                    <span class="flair">New Castle</span>
+                    <span>Posted by u/NewCastleLawyerDescendant • 5 hours ago</span>
+                </div>
+
+                <p>After my last post about Arthur Reuben Sinclair Jr. (1900-1992), I've been digging into his family members and found some fascinating connections. Thought I'd share what I've uncovered and see what else we can discover together.</p>
+
+                <p><strong>Arthur's Only Sibling:</strong> Frederick William Sinclair (1898-1975). He was the older brother who stayed in the furniture business. While Arthur went to law school, Frederick took over the furniture store operations with their father. Frederick never married - family stories say he was "married to the store." He lived in the same house on Ridge Avenue from 1925 until his death, just three blocks from Arthur.</p>
+
+                <p><strong>The Paytner Connection:</strong> John William Paytner (1872-1945) was Arthur's uncle by marriage - married to Arthur Sr.'s sister Mary Elizabeth Sinclair (1874-1958). John and Arthur Sr. founded the furniture store together in 1909. John came from a furniture-making family in Pennsylvania - his father owned a cabinet shop in Pittsburgh. This explains why they specialized in quality pieces.</p>
+
+                <p><strong>What I'm Missing:</strong> Information on Arthur's paternal grandparents (Arthur Sinclair Sr.'s parents), details about Frederick's life beyond the store, and any information on the Paytner family origins in Pennsylvania. Also curious about Mary Elizabeth Sinclair Paytner's descendants.</p>
+
+                <p>Anyone familiar with these families or have access to Pennsylvania furniture industry records from the late 1800s?</p>
+
+                <div class="comments-count">
+                    <a href="#">89 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Pennsylvania_Furniture_Historian • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the Paytner family!</strong> John William Paytner's father was William Henry Paytner (1845-1920), who owned "Paytner & Sons Cabinet Makers" at 1427 Liberty Avenue, Pittsburgh from 1868-1910. They specialized in high-end custom furniture for wealthy clients. John's grandfather, Heinrich "Henry" Paytner (1812-1895), immigrated from Baden-Württemberg, Germany in 1835 and was trained in the Black Forest furniture tradition. This explains the quality focus - German cabinetmaking heritage.
+                </div>
+                <div class="comment-meta">u/NewCastleLawyerDescendant • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This is incredible! German Black Forest furniture makers - that explains why Sinclair and Paytner prided themselves on quality. Do you have any photos of their Pittsburgh shop or examples of their work?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Pennsylvania_Furniture_Historian • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Found photos! The Pittsburgh Historical Society has interior shots of Paytner & Sons from 1895. Beautiful Victorian workshop with hand tools everywhere. They made custom pieces for the Carnegie family and other Pittsburgh elite. When John moved to Indiana in 1908, he brought several pieces with him - including a mahogany dining set that became the showroom centerpiece at Sinclair & Paytner. The set sold for $285 in 1910 (about $8,500 today).
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Frederick_Sinclair_Expert • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Frederick's life beyond the store:</strong> Frederick William Sinclair was more than just "married to the store" - he was actually quite the local character. He was New Castle's unofficial furniture historian, collected antique pieces from estate sales, and restored them in his basement workshop. Never married because he was engaged in 1923 to Eleanor Mae Thompson, but she died of influenza in 1924. He never got over it. Lived with his housekeeper, Mrs. Rosa Martinez, for 40 years - she was like family to him.
+                </div>
+                <div class="comment-meta">u/NewCastleLawyerDescendant • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        I had no idea about Eleanor Thompson or Mrs. Martinez. This gives me a completely different picture of Frederick. Do you know if he left anything to Mrs. Martinez in his will?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Frederick_Sinclair_Expert • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Frederick left his entire estate to Mrs. Martinez - house, furniture collection, everything worth about $180,000 in 1975. His will specifically mentioned "my faithful companion and friend who has been my family when I had none." She lived in the house until 1982, then moved to California to live with her daughter. The house was sold and turned into apartments, but Mrs. Martinez's family still has Frederick's furniture collection - over 200 pieces of Indiana and Pennsylvania furniture from 1820-1920.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Sinclair_Ancestry_Tracker • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found Arthur Sr.'s parents:</strong> Arthur Reuben Sinclair Sr.'s father was William Alexander Sinclair (1829-1901), born in Edinburgh, Scotland, immigrated to America 1852. He was a cabinetmaker in Pittsburgh before moving to Indiana 1865. William's wife was Margaret Ann McAllister (1834-1918), also Scottish, from Glasgow. They married in Pittsburgh 1855. So Arthur Jr. was second-generation Scottish-American on his paternal side - explains the furniture-making tradition!
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Mary_Elizabeth_Descendant • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Mary Elizabeth Sinclair Paytner's family:</strong> Mary and John Paytner had 4 children - all born in New Castle between 1895-1905. The oldest, William Henry Paytner Jr. (1895-1968), took over the furniture store when John died in 1945. He actually bought out Arthur Sr.'s share and ran it as "Paytner Furniture" until 1965. Mary's daughter, Margaret Ann Paytner (1898-1982), married Thomas Jefferson Harland (1892-1975) - yes, from the same Harland family that Mary Elizabeth Jefferson Harland (Arthur's mother) came from. These families were all interconnected.
+                </div>
+                <div class="comment-meta">u/NewCastleLawyerDescendant • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Wait - so Arthur's cousin Margaret married someone from the Harland family? That means Arthur and his wife Lucy were actually distant cousins through the Harland connection! Do you know how closely related they were?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Mary_Elizabeth_Descendant • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Exactly! Thomas Jefferson Harland and Arthur Jr. were third cousins - their great-great-grandfathers were brothers. So when Margaret Paytner married Thomas Harland, and Arthur married Lucy Morrison (whose mother was a Harland), they became cousins by marriage. Small-town Indiana in the early 1900s - everyone was related somehow. The Harland family had been in Henry County since 1820, so by Arthur's generation, most of the "old families" were interconnected.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Scottish_Sinclair_Records • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>William Alexander Sinclair's Scottish origins:</strong> William was born 1829 at 15 Rose Street, Edinburgh - son of Alexander Sinclair (1805-1860) and Jeanie Reuben (1808-1875). Alexander was a master cabinetmaker who trained under the famous Scottish furniture maker William Trotter. The family business was "Sinclair & Son, Cabinetmakers" on Princes Street. William learned the trade from his father, then left for America after his father's death, settling in Pittsburgh where other Scottish furniture makers had established a community.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/NewCastle_Property_Records • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found Frederick's house:</strong> 1123 Ridge Avenue - the same street as Arthur's house (1123 Ridge vs Arthur at 1123 Ridge - they were next-door neighbors! Built 1892, Victorian style, 4 bedrooms. Frederick bought it from their father Arthur Sr. in 1925 for $3,500. When Frederick died in 1975, he left it to Mrs. Martinez, who sold it 1982 for $28,000. It's still there - now a bright yellow house with purple trim, owned by a young couple who have no idea of its history.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Payntner_Family_Genealogist • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>John Paytner's life beyond the store:</strong> John was actually quite the entrepreneur. Besides the furniture store, he invested in New Castle real estate - owned 6 rental properties by 1920. He was also a founding member of the New Castle Chamber of Commerce in 1915, and served on the city council 1922-1926. His wife Mary was active in the Presbyterian Church and founded the Henry County Women's Club in 1918. They were considered the "power couple" of early New Castle society.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Sinclair_Bible_Records • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the Sinclair family Bible:</strong> Margaret Ann McAllister Sinclair kept meticulous records. The Bible, now in the Henry County Historical Society, shows: William Alexander Sinclair arrived Pittsburgh May 15, 1852 with $12 in his pocket. Married Margaret McAllister November 12, 1855. Arthur Reuben Sinclair Sr. born October 10, 1857 (named after Margaret's father, Arthur McAllister). They moved to Indiana 1865 because "land was cheap and furniture makers were needed." William died 1901, Margaret 1918 - both buried in Southmound Cemetery, New Castle.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Frederick_Collections • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    <strong>Mrs. Martinez's daughter contacted me:</strong> Rosa Martinez's daughter, Maria Gonzalez, still lives in California and has Frederick's entire furniture collection! Over 200 pieces including: 12 pieces from the original Paytner Pittsburgh workshop, 30 pieces of Indiana-made furniture 1820-1850, Frederick's personal tool collection, and the original store ledgers from 1909-1955. She's looking for a museum to donate it to - wants to keep it in Indiana if possible. Anyone have connections to Indiana historical museums?
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Anyone else have ancestors who worked together in family businesses?</a></li>
+                <li><a href="#">German furniture makers who immigrated to Pennsylvania - where to find records?</a></li>
+                <li><a href="#">When your ancestors married their cousins - how to track the connections</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
