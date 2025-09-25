@@ -8,168 +8,229 @@
     margin: 0;
     padding: 20px;
   }
-  .cnn-container {
+  .reddit-container {
     max-width: 800px;
     margin: 0 auto;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
-  .cnn-header {
-    background: linear-gradient(to right, #cc0000, #990000);
+  .reddit-header {
+    background-color: #FF4500;
     color: white;
-    padding: 20px;
+    padding: 15px 20px;
     border-radius: 8px 8px 0 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  .cnn-logo {
-    font-size: 36px;
+  .reddit-logo {
+    font-size: 24px;
     font-weight: bold;
-    letter-spacing: 2px;
   }
-  .cnn-date {
+  .subreddit-info {
     font-size: 14px;
     opacity: 0.9;
-    margin-top: 5px;
   }
-  .article-content {
-    padding: 30px;
+  .post-content {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
   }
-  .article-headline {
-    font-size: 32px;
-    font-weight: bold;
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
     color: #1a1a1a;
     margin-bottom: 10px;
-    line-height: 1.2;
+    line-height: 1.3;
   }
-  .article-subhead {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-  .article-meta {
-    font-size: 14px;
+  .post-meta {
+    font-size: 12px;
     color: #888;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
   }
-  .article-body {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #333;
-  }
-  .article-body p {
-    margin-bottom: 20px;
-  }
-  .highlight-box {
-    background-color: #f8f9fa;
-    border-left: 4px solid #cc0000;
-    padding: 20px;
-    margin: 25px 0;
-    font-size: 15px;
-  }
-  .social-reactions {
-    background-color: #f1f3f4;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 25px 0;
-  }
-  .reaction-header {
-    font-weight: bold;
-    color: #cc0000;
-    margin-bottom: 10px;
-  }
-  .reaction-item {
-    margin: 8px 0;
-    padding: 10px;
-    background-color: white;
-    border-radius: 4px;
-    border-left: 3px solid #cc0000;
-  }
-  .update-box {
-    background-color: #fff3cd;
-    border: 1px solid #ffeaa7;
-    border-radius: 6px;
-    padding: 15px;
-    margin: 20px 0;
+  .post-body {
     font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  .post-stats {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: #666;
+  }
+  .comment-section {
+    padding: 20px;
+  }
+  .comment {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 2px solid #e0e0e0;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+  }
+  .comment-author {
+    font-weight: 500;
+    color: #FF4500;
+  }
+  .comment-body {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .comment-actions {
+    font-size: 12px;
+    color: #888;
+  }
+  .reply {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  .highlight {
+    background-color: #fff3cd;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  .controversial {
+    background-color: #ffeaa7;
+    border: 1px solid #fdcb6e;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 13px;
   }
 </style>
 </head>
 <body>
 
-<div class="cnn-container">
-  <div class="cnn-header">
-    <div class="cnn-logo">CNN</div>
-    <div class="cnn-date">BREAKING NEWS • March 10, 2027</div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    <div class="reddit-logo">r/news</div>
+    <div class="subreddit-info">21.8m members • 85k online</div>
   </div>
   
-  <div class="article-content">
-    <h1 class="article-headline">California Governor Gavin Newsom announces 2028 presidential bid, vows revenge against Trump and Republicans</h1>
-    <div class="article-subhead">"Day one, I will lock every Republican criminal in prison," Newsom declares as Democrats embrace scorched-earth tactics</div>
-    
-    <div class="article-meta">
-      By CNN Staff • Updated 11:47 PM ET, March 10, 2027
+  <div class="post-content">
+    <div class="post-title">Newsom announces 2028 presidential bid with promise to "lock up every Republican criminal" and pursue death penalty for Trump</div>
+    <div class="post-meta">Posted by u/PoliticalObserver27 • 6 hours ago • News</div>
+    <div class="post-body">
+      California Governor Gavin Newsom officially announced his 2028 presidential campaign Tuesday, launching what he called a "revenge campaign" against Donald Trump and the Republican Party. In a fiery announcement, Newsom vowed to "lock up every Republican criminal" and specifically promised to pursue the death penalty against Trump for "treason against democracy." The campaign represents a complete departure from traditional Democratic messaging, embracing what aides call "the Trump playbook" of constant attacks and fabrications. Newsom declared he would take complete control of the Democratic Party and rule by executive order if necessary.
+    </div>
+    <div class="post-stats">
+      <span>↑ 42.3k ↓</span>
+      <span>12.4k comments</span>
+      <span>share</span>
+      <span>save</span>
+      <span>hide</span>
+      <span>report</span>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">FormerCampaignStaffer</span>
+        <span>• 5 hours ago</span>
+        <span>• 🏆</span>
+      </div>
+      <div class="comment-body">
+        I worked on Newsom's 2022 gubernatorial campaign and this is NOT the same man. He's completely unrecognizable from the politician I knew. The shift started right after Trump's re-election in 2024 - he became obsessed with "fighting fire with fire" and started surrounding himself with these radical advisors who convinced him that traditional Democratic politics was dead.
+        <br><br>
+        The real story here is that his chief strategist Maria Rodriguez (mentioned in the article) used to work for Bernie Sanders but got fired for being "too extreme." She's the one pushing this scorched-earth approach. Newsom's basically become her puppet.
+      </div>
+      <div class="comment-actions">3.2k ↑ • reply • share • report</div>
+      
+      <div class="reply">
+        <div class="comment-header">
+          <span class="comment-author">CaliforniaPoliticalJunkie</span>
+          <span>• 4 hours ago</span>
+        </div>
+        <div class="comment-body">
+          This explains SO much. I've been following CA politics closely and noticed the dramatic shift in his rhetoric since 2025. He's been testing these attack lines in smaller venues, but I never thought he'd go full authoritarian. Rodriguez is toxic - she was behind that failed primary challenge against Feinstein that split the party.
+        </div>
+        <div class="comment-actions">892 ↑ • reply • share • report</div>
+      </div>
     </div>
     
-    <div class="article-body">
-      <p><strong>SACRAMENTO (CNN)</strong> — California Governor Gavin Newsom officially announced his 2028 presidential campaign Tuesday, launching what political analysts are calling the most vengeance-fueled candidacy in modern American history, explicitly framed as retaliation against Donald Trump and the Republican Party.</p>
-      
-      <p>In a fiery announcement speech from Sacramento, Newsom abandoned traditional Democratic messaging in favor of a scorched-earth approach that mirrors Trump's own political warfare tactics.</p>
-      
-      <p>"For four years, we've watched Trump and his cronies lie, cheat, and destroy our democracy," Newsom declared to a crowd of supporters. "Well, now it's our turn. I will crush them. I will humiliate them. And yes, I will lock every Republican criminal in prison starting on day one."</p>
-      
-      <div class="highlight-box">
-        <strong>Newsom's Key Promises:</strong>
-        <ul>
-          <li>Arrest and prosecute Donald Trump, promising "he will face justice for his crimes"</li>
-          <li>Pursue death penalty charges against the former president for "treason against democracy"</li>
-          <li>Investigate and imprison "every Republican who enabled Trump's criminal empire"</li>
-          <li>Take complete control of the Democratic Party apparatus</li>
-          <li>Rule by executive order if Congress refuses to cooperate</li>
-        </ul>
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ConstitutionalLawProf</span>
+        <span>• 5 hours ago</span>
+        <span>• 🎓</span>
       </div>
-      
-      <p>The announcement represents a stunning departure from Newsom's previous centrist image, embracing what campaign aides privately call "the Trump playbook" - constant attacks, fabrication of political narratives, and refusal to compromise with opponents.</p>
-      
-      <p>"We're done playing nice," said campaign manager Maria Rodriguez. "The Republicans taught us how to win. Lie bigger, attack harder, never apologize. That's how we'll beat them at their own game."</p>
-      
-      <p>The campaign launch immediately ignited fierce reactions across the political spectrum, with Republicans expressing outrage and many Democrats privately expressing concern about the party's complete abandonment of traditional norms.</p>
-      
-      <div class="social-reactions">
-        <div class="reaction-header">Political Reaction</div>
-        <div class="reaction-item">
-          <strong>Senate Minority Leader Mitch McConnell:</strong> "This is the most dangerous rhetoric I've heard in my lifetime. Promising to imprison political opponents is the stuff of banana republics. The Democrats have truly lost their minds."
-        </div>
-        <div class="reaction-item">
-          <strong>Representative Alexandria Ocasio-Cortez:</strong> "Finally, a Democrat who gets it. We tried civility. We tried bipartisanship. They tried to overthrow the government. Time to fight fire with fire."
-        </div>
-        <div class="reaction-item">
-          <strong>Trump spokesperson Liz Harrington:</strong> "Crazy Gavin Newsom just threatened to murder President Trump. This is leftist violence incarnate. Lock HIM up!"
-        </div>
+      <div class="comment-body">
+        Law professor here. What Newsom is proposing is literally impossible and unconstitutional on multiple levels:
+        <br><br>
+        1) A president cannot "lock up" members of the opposing party without due process
+        2) The death penalty requires a federal crime - "treason against democracy" isn't a real charge
+        3) Executive orders cannot override congressional authority
+        <br><br>
+        But here's what's terrifying: he knows this. He's counting on his supporters NOT knowing this. This is straight out of the authoritarian playbook - promise things you can't deliver to whip up support, then use that support to dismantle democratic institutions.
       </div>
-      
-      <p>Political strategists note that Newsom's transformation reflects a broader shift within the Democratic Party following Trump's return to power in 2024, with many grassroots activists demanding their leaders abandon traditional restraint.</p>
-      
-      <p>"The base wants blood," said Democratic strategist James Carville. "They watched Trump get away with everything, and now they want their own strongman. Newsom is giving them exactly that."</p>
-      
-      <p>The campaign has already begun fabricating political narratives about Republican opponents, with aides suggesting they will accuse GOP lawmakers of crimes ranging from election interference to "conspiracy against democracy" without traditional evidence requirements.</p>
-      
-      <p>"Evidence is for suckers," one senior campaign official told CNN on condition of anonymity. "Trump taught us that you just keep saying something until people believe it. We're going to say every Republican is a criminal until they prove they're not - and even then, we'll keep saying it."</p>
-      
-      <div class="update-box">
-        <strong>CAMPAIGN UPDATE:</strong> Newsom's team announced they will skip traditional primary debates, calling them "establishment traps designed to make Democrats look weak." Instead, they plan daily social media attacks and promise "shocking revelations" about Republican criminality.
+      <div class="comment-actions">2.8k ↑ • reply • share • report</div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">DC_Insider_2024</span>
+        <span>• 4 hours ago</span>
       </div>
-      
-      <p>Constitutional scholars expressed alarm at Newsom's explicit promises to rule by executive order and ignore congressional oversight, calling it a dangerous escalation of executive power that could permanently damage American democracy.</p>
-      
-      <p>"We've crossed the Rubicon," said constitutional law professor Lawrence Lessig. "When both major parties embrace authoritarian tactics, democracy itself becomes the casualty."</p>
-      
-      <p>Trump, currently serving his second term, responded on Truth Social: "Little Gavin Newsom is having a mental breakdown. He's jealous of my success and wants to be me. Sad!"</p>
-      
-      <p>The 2028 campaign is shaping up to be the most toxic in American history, with both parties abandoning any pretense of civil discourse in favor of total political warfare.</p>
+      <div class="comment-body">
+        The real story that CNN isn't reporting: Newsom's campaign has already been in contact with the Biden administration's former DOJ officials who were fired by Trump. They're planning to rehire them specifically to target Trump and his allies.
+        <br><br>
+        I have a friend at the DNC who says they've already started compiling "dossiers" on every Republican in Congress, planning to accuse them of various crimes regardless of evidence. This isn't just rhetoric - they're building the infrastructure for political prosecutions.
+      </div>
+      <div class="comment-actions">1.9k ↑ • reply • share • report</div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">BayAreaModerate</span>
+        <span>• 3 hours ago</span>
+      </div>
+      <div class="comment-body">
+        As someone who voted for Newsom multiple times, this feels like betrayal. I supported him because he seemed like a rational centrist who could unite the party. Now he's become everything I hate about Trump - the lies, the authoritarianism, the us-vs-them mentality.
+        <br><br>
+        The worst part? This might actually work. Democrats are so angry after four years of Trump 2.0 that they'll support anyone who promises revenge, even if it means destroying our democracy in the process.
+      </div>
+      <div class="comment-actions">1.5k ↑ • reply • share • report</div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">GOP_Strategist_Since_2000</span>
+        <span>• 3 hours ago</span>
+      </div>
+      <div class="comment-body">
+        Republican strategist here - we are TERRIFIED of this version of Newsom. Not because we think he'll win (he won't), but because he's going to drag the entire Democratic Party down this authoritarian rabbit hole.
+        <br><br>
+        The 2028 election is already shaping up to be Trump vs. Newsom in the primary. Both parties embracing authoritarianism. American democracy might not survive this.
+      </div>
+      <div class="comment-actions">1.1k ↑ • reply • share • report</div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">Historical_Perspective</span>
+        <span>• 2 hours ago</span>
+      </div>
+      <div class="comment-body">
+        Historian here. What we're witnessing is unprecedented in American politics. Even during the Civil War, neither party nominated candidates who explicitly promised to imprison their opponents.
+        <br><br>
+        The closest parallel is actually 1864, when some Radical Republicans wanted to put Confederate leaders on trial, but Lincoln rejected that approach in favor of reconciliation. Newsom is essentially running on the platform that the Radical Republicans wanted but couldn't achieve.
+        <br><br>
+        If he wins, he'll be the first American president elected on an explicit platform of political revenge. That's not hyperbole - that's literally what he's campaigning on.
+      </div>
+      <div class="comment-actions">876 ↑ • reply • share • report</div>
+    </div>
+    
+    <div class="controversial">
+      <strong>Controversial comment removed by moderators:</strong> User claimed to have insider information about Newsom's mental health deterioration and prescription drug use, suggesting his aggressive behavior is chemically induced. Comment removed for violating rules against medical speculation.
     </div>
   </div>
 </div>
