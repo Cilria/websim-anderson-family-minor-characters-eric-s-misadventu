@@ -4,274 +4,299 @@
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #1a1a1a;
     margin: 0;
     padding: 20px;
+    color: #d7dadc;
   }
-  .cnn-container {
-    max-width: 900px;
+  .reddit-container {
+    max-width: 800px;
     margin: 0 auto;
-    background-color: white;
+    background-color: #1a1a1a;
     border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border: 1px solid #343536;
   }
-  .cnn-header {
-    background: linear-gradient(to right, #cc0000, #990000);
+  .reddit-header {
+    background-color: #ff4500;
     color: white;
-    padding: 25px;
+    padding: 15px;
     border-radius: 8px 8px 0 0;
-    text-align: center;
-  }
-  .cnn-logo {
-    font-size: 32px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-  }
-  .cnn-subtitle {
-    font-size: 12px;
-    opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  .breaking-banner {
-    background: linear-gradient(45deg, #cc0000, #990000);
-    color: white;
-    padding: 15px;
-    text-align: center;
     font-weight: bold;
     font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: pulse 2s infinite;
   }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+  .reddit-post {
+    padding: 20px;
+    border-bottom: 1px solid #343536;
   }
-  .article-content {
-    padding: 30px;
-  }
-  .article-headline {
-    font-size: 36px;
-    font-weight: 900;
-    color: #1a1a1a;
-    margin-bottom: 15px;
-    line-height: 1.1;
-  }
-  .article-subhead {
+  .post-title {
     font-size: 20px;
-    color: #555;
-    margin-bottom: 25px;
-    font-weight: 400;
-  }
-  .article-meta {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #cc0000;
-  }
-  .article-body {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #2a2a2a;
-  }
-  .article-body p {
-    margin-bottom: 25px;
-  }
-  .breaking-box {
-    background: linear-gradient(135deg, #cc0000, #990000);
-    color: white;
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0 4px 15px rgba(204,0,0,0.3);
-  }
-  .executive-order-box {
-    background: linear-gradient(135deg, #1a1a1a, #333);
-    color: white;
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 8px;
-    font-size: 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  }
-  .update-timeline {
-    background-color: #f8f9fa;
-    border-left: 5px solid #cc0000;
-    padding: 25px;
-    margin: 25px 0;
-    border-radius: 0 8px 8px 0;
-  }
-  .timeline-item {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: white;
-    border-radius: 6px;
-    border: 1px solid #e0e0e0;
-  }
-  .timestamp {
-    font-weight: bold;
-    color: #cc0000;
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  .quote-box {
-    background-color: #f1f3f4;
-    border-left: 4px solid #cc0000;
-    padding: 20px;
-    margin: 25px 0;
-    font-style: italic;
-    font-size: 16px;
-    border-radius: 0 6px 6px 0;
-  }
-  .purge-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 25px 0;
-  }
-  .purge-card {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    padding: 20px;
-    border-top: 3px solid #cc0000;
-  }
-  .purge-title {
-    font-weight: bold;
-    color: #1a1a1a;
+    font-weight: 600;
+    color: #d7dadc;
     margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #818384;
+    margin-bottom: 15px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d7dadc;
+    margin-bottom: 15px;
+  }
+  .post-actions {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #818384;
+  }
+  .comment-section {
+    padding: 0 20px 20px;
+  }
+  .comment {
+    background-color: #272729;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 3px solid #ff4500;
+  }
+  .comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .comment-author {
+    font-weight: 600;
+    color: #ff4500;
+    font-size: 13px;
+  }
+  .comment-score {
+    font-size: 12px;
+    color: #818384;
+  }
+  .comment-body {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d7dadc;
+    margin-bottom: 10px;
+  }
+  .comment-reply {
+    font-size: 12px;
+    color: #818384;
+    cursor: pointer;
+  }
+  .comment-reply:hover {
+    color: #ff4500;
+  }
+  .nested-comment {
+    margin-left: 30px;
+    margin-top: 15px;
+    border-left: 2px solid #343536;
+    padding-left: 15px;
+  }
+  .load-more {
+    text-align: center;
+    padding: 20px;
+    color: #818384;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .load-more:hover {
+    color: #ff4500;
+  }
+  .sort-options {
+    padding: 15px 20px;
+    border-bottom: 1px solid #343536;
+    font-size: 14px;
+  }
+  .sort-option {
+    display: inline-block;
+    margin-right: 15px;
+    color: #818384;
+    cursor: pointer;
+  }
+  .sort-option.active {
+    color: #ff4500;
+    font-weight: 600;
   }
 </style>
 </head>
 <body>
 
-<div class="cnn-container">
-  <div class="cnn-header">
-    <div class="cnn-logo">CNN</div>
-    <div class="cnn-subtitle">BREAKING NEWS</div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/News
   </div>
   
-  <div class="breaking-banner">
-    🚨 EXCLUSIVE: TWO WEEKS OF TYRANNY
+  <div class="reddit-post">
+    <div class="post-title">Newsom signs 96 executive orders in two weeks, launches unprecedented political purge - CNN reports</div>
+    <div class="post-meta">
+      Posted by u/CNN_AutoBot • 2 hours ago • News
+    </div>
+    <div class="post-content">
+      President Gavin Newsom has signed 96 executive orders in just 14 days, launching what critics call the most aggressive political purge in American history. Federal troops now occupy 18 Red State capitals while 312 Republicans face Nuremberg-style trials. The administration has filed a $1.2 trillion lawsuit against Fox News and fired 47,000 Republican federal workers.
+    </div>
+    <div class="post-actions">
+      <span>↑ 2.3k ↓</span>
+      <span>1.2k comments</span>
+      <span>share</span>
+      <span>save</span>
+      <span>hide</span>
+      <span>report</span>
+    </div>
   </div>
   
-  <div class="article-content">
-    <h1 class="article-headline">Newsom's Reign of Terror: 96 Executive Orders in Two Weeks as America Descends into Political Purge</h1>
-    <div class="article-subhead">President launches unprecedented assault on political opponents, media, and democratic institutions in first 14 days</div>
-    
-    <div class="article-meta">
-      By CNN Politics Staff • Updated 8:47 PM ET, February 10, 2029
+  <div class="sort-options">
+    <span class="sort-option active">Best</span>
+    <span class="sort-option">Top</span>
+    <span class="sort-option">New</span>
+    <span class="sort-option">Controversial</span>
+    <span class="sort-option">Old</span>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">u/ConstitutionalLawyer2024</span>
+        <span class="comment-score">↑ 1.2k</span>
+      </div>
+      <div class="comment-body">
+        Ok so I actually looked up the text of Executive Order 1 (it's public record) and the "Federal Employee Loyalty Review" thing is real. They're not even trying to hide it anymore - it literally says Republicans can be fired for "ideological incompatibility with democratic values." How is this not a First Amendment violation?
+      </div>
+      <div class="comment-reply">Reply</div>
+      <div class="nested-comment">
+        <div class="comment-header">
+          <span class="comment-author">u/HistoryNerd87</span>
+          <span class="comment-score">↑ 543</span>
+        </div>
+        <div class="comment-body">
+          My grandfather was a federal employee during McCarthyism and got blacklisted for being a Democrat. History really does repeat itself, just with the parties flipped. The Supreme Court better step in fast or we're looking at the end of the civil service as we know it.
+        </div>
+        <div class="comment-reply">Reply</div>
+      </div>
     </div>
     
-    <div class="article-body">
-      <div class="breaking-box">
-        🚨 BREAKING: President Gavin Newsom has signed 96 executive orders in just 14 days, launching the most aggressive political purge in American history as federal troops occupy Red State capitals and Republican leaders face Nuremberg-style trials.
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">u/DataAnalystTX</span>
+        <span class="comment-score">↑ 892</span>
       </div>
-
-      <p><strong>WASHINGTON (CNN)</strong> — Two weeks into his presidency, Gavin Newsom has exceeded even his most apocalyptic campaign promises, transforming the United States into what critics call a "totalitarian nightmare" through a blizzard of executive orders that have dismantled democratic norms and targeted political opponents for prosecution.</p>
-      
-      <p>The president's opening salvo began just moments after taking the oath of office on January 20th, when he signed Executive Order 1 — "The Purification Act" — which immediately began the systematic removal of Republicans from federal employment and initiated what the administration terms "accountability proceedings" against political enemies.</p>
-      
-      <div class="executive-order-box">
-        <strong>EXECUTIVE ORDER STATS:</strong><br>
-        • 96 Orders Signed in 14 Days<br>
-        • 47,000 Federal Workers Fired<br>
-        • 312 Republicans Indicted<br>
-        • $1.2 Trillion Lawsuit Against Fox News<br>
-        • 18 Red States Under Military Occupation
+      <div class="comment-body">
+        Just pulled the FEC data on those 312 Republicans facing trials. 89 of them are former Trump administration officials, but the rest are just random state legislators, county clerks, even some school board members. They're literally going after anyone with an R next to their name who ever held office. This isn't "accountability" - it's a political purge.
       </div>
-
-      <p>"This isn't governing — this is revenge," said constitutional scholar Lawrence Tribe. "Newsom has weaponized every federal agency to crush his political enemies. We're witnessing the collapse of American democracy in real-time."</p>
-
-      <div class="quote-box">
-        "Every Republican who served in the Trump administration, every GOP member of Congress who supported him, every conservative judge who ruled against us — they will all face justice. This is just the beginning." - President Gavin Newsom, January 21st
+      <div class="comment-reply">Reply</div>
+      <div class="nested-comment">
+        <div class="comment-header">
+          <span class="comment-author">u/FormerGOPStaffer</span>
+          <span class="comment-score">↑ 267</span>
+        </div>
+        <div class="comment-body">
+          Can confirm - my old boss (state rep from Ohio) got a subpoena last week. His "crime"? Voting against certifying the 2020 election results. They're calling it "sedition" but it was literally just a vote on the House floor. Dude's been a politician for 30 years, never even got a speeding ticket.
+        </div>
+        <div class="comment-reply">Reply</div>
       </div>
-
-      <div class="update-timeline">
-        <h3 style="margin-top: 0; color: #cc0000;">THE FIRST TWO WEEKS OF TERROR</h3>
-        
-        <div class="timeline-item">
-          <div class="timestamp">Day 1 - January 20th</div>
-          <strong>The Purge Begins</strong><br>
-          Signs Executive Orders 1-12, including "Federal Employee Loyalty Review" firing 47,000 Republican civil servants, and "Military Enforcement Act" deploying troops to Red States.
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timestamp">Day 3 - January 22nd</div>
-          <strong>Nuremberg Trials Announced</strong><br>
-          Attorney General announces "Accountability Commission" to prosecute 312 top Republicans for "crimes against democracy" with public trials scheduled for March.
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timestamp">Day 5 - January 24th</div>
-          <strong>Fox News Targeted</strong><br>
-          Files $1.2 trillion lawsuit against Fox News, demanding immediate shutdown and seizure of all assets. Network faces extinction by February.
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timestamp">Day 8 - January 27th</div>
-          <strong>Congress Nullified</strong><br>
-          Orders Office of Management and Budget to ignore all congressional oversight, declaring "The legislative branch is irrelevant to progress."
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timestamp">Day 12 - January 31st</div>
-          <strong>Press Control Seized</strong><br>
-          White House Press Office announces all media must submit questions 48 hours in advance, while CNN and MSNBC given exclusive access to administration.
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timestamp">Day 14 - February 10th</div>
-          <strong>Gerrymandering Mandate</strong><br>
-          Issues Executive Order 87 requiring all Democratic-controlled states to immediately redraw districts to guarantee "permanent progressive governance."
-        </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">u/LegalEagle2020</span>
+        <span class="comment-score">↑ 756</span>
       </div>
-
-      <p>The scope of Newsom's assault on American institutions has left even his supporters stunned. Democratic governors have privately expressed alarm at orders requiring them to purge Republican election officials and replace them with "progressive loyalists."</p>
-
-      <div class="purge-grid">
-        <div class="purge-card">
-          <div class="purge-title">🏛️ INSTITUTIONS DESTROYED</div>
-          <p>Congressional oversight eliminated, federal courts packed with loyalists, state National Guards federalized and deployed against governors who resist.</p>
-        </div>
-        
-        <div class="purge-card">
-          <div class="purge-title">📺 MEDIA WARFARE</div>
-          <p>Fox News faces extinction through $1.2 trillion lawsuit, conservative media outlets threatened with "treason investigations," press freedom effectively abolished.</p>
-        </div>
-        
-        <div class="purge-card">
-          <div class="purge-title">⚖️ LEGAL TYRANNY</div>
-          <p>312 Republicans indicted on vague "democracy crimes," public trials scheduled for maximum humiliation, Department of Justice transformed into political weapon.</p>
-        </div>
-        
-        <div class="purge-card">
-          <div class="purge-title">🪖 MILITARY OCCUPATION</div>
-          <p>Federal troops occupy 18 Red State capitals, governors threatened with arrest for "insurrection," state sovereignty effectively abolished.</p>
-        </div>
+      <div class="comment-body">
+        The Fox News lawsuit is actually fascinating from a legal standpoint. $1.2 trillion is like 10x their total assets - they're clearly trying to bankrupt them, not just win damages. I checked the docket and Newsom's lawyers are citing some obscure 1800s precedent about "seditious libel against the government." Never been successfully used in modern times.
       </div>
-
-      <div class="breaking-box">
-        ⚠️ DEVELOPING: Sources inside the White House report Newsom is preparing Executive Order 97 — "The Final Solution" — which will reportedly criminalize the Republican Party entirely and begin mass arrests of registered Republicans. This could come as early as tomorrow.
+      <div class="comment-reply">Reply</div>
+      <div class="nested-comment">
+        <div class="comment-header">
+          <span class="comment-author">u/MediaLawProf</span>
+          <span class="comment-score">↑ 198</span>
+        </div>
+        <div class="comment-body">
+          That precedent (People v. Croswell, 1804) was basically overturned by New York Times v. Sullivan in 1964. Any first-year law student could get this case dismissed, but Newsom's packed the DC Circuit with loyalists who'll probably let it through. They're not even pretending to follow established law anymore.
+        </div>
+        <div class="comment-reply">Reply</div>
       </div>
-
-      <p>Republican leaders have gone into hiding or been arrested. Senate Minority Leader Mitch McConnell was taken into custody last week for "sedition," while House Republicans have fled Washington entirely. Several GOP governors have barricaded themselves in their statehouses, surrounded by federal troops.</p>
-
-      <p>"They've created a police state," said former Republican National Committee Chair Ronna McDaniel, speaking from an undisclosed location. "Newsom isn't just destroying the Republican Party — he's destroying America itself."</p>
-
-      <div class="quote-box">
-        "I will not stop until every Republican is either in prison or has been driven from public life. This country will be purified of conservative ideology, even if I have to rule by decree for the next four years." - President Gavin Newsom, February 9th
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">u/RedStateRefugee</span>
+        <span class="comment-score">↑ 634</span>
       </div>
-
-      <p>Constitutional scholars warn that Newsom's actions represent the complete collapse of American democracy. "We've never seen anything like this — not even in our darkest moments," said Harvard law professor Noah Feldman. "This is how republics die, not with a bang, but with 96 executive orders."</p>
-
-      <p>As the nation enters its third week under Newsom's rule, the question isn't whether America can survive — it's whether any opposition will remain by the time his term ends.</p>
-
-      <p><em>This story is developing. Updates will follow as the situation deteriorates further.</em></p>
+      <div class="comment-body">
+        Living in Texas right now and it's surreal. National Guard troops from California and New York are literally patrolling Austin. They say it's to "ensure democratic stability" but they're only in Republican-led cities. My neighbor got stopped yesterday for having a GOP bumper sticker. This is what occupation looks like.
+      </div>
+      <div class="comment-reply">Reply</div>
+      <div class="nested-comment">
+        <div class="comment-header">
+          <span class="comment-author">u/CurrentMilitary</span>
+          <span class="comment-score">↑ 289</span>
+        </div>
+        <div class="comment-body">
+          Active duty here - this is causing massive problems within the ranks. Half the guys I serve with are from Red States and they're being ordered to occupy their own hometowns. Chain of command is breaking down. My CO literally said yesterday "we're not doing this" and got relieved of duty.
+        </div>
+        <div class="comment-reply">Reply</div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">u/PoliticalSciencePhD</span>
+        <span class="comment-score">↑ 521</span>
+      </div>
+      <div class="comment-body">
+          The gerrymandering thing is actually the most dangerous long-term. EO 87 requires Democratic states to redraw districts to guarantee "permanent progressive governance." I analyzed the proposed maps for California and New York - they're creating like 15 guaranteed Democratic seats that don't even try to hide the partisan intent. This isn't just about 2028 - they're trying to lock in control for decades.
+      </div>
+      <div class="comment-reply">Reply</div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">u/FormerDNCStaff</span>
+        <span class="comment-score">↑ 445</span>
+      </div>
+      <div class="comment-body">
+        Threw away 15 years of my life working for the Democratic Party. This isn't what I signed up for. We used to stand for civil liberties, voting rights, democratic norms. Now we're literally doing everything we accused Trump of wanting to do - and worse. The cognitive dissonance in my old office is insane. Everyone knows this is wrong but they're too scared to speak up.
+      </div>
+      <div class="comment-reply">Reply</div>
+      <div class="nested-comment">
+        <div class="comment-header">
+          <span class="comment-author">u/BlueStateBlues</span>
+          <span class="comment-score">↑ 167</span>
+        </div>
+        <div class="comment-body">
+          Same here in Massachusetts. Voted straight Dem my whole life but this is fascism with a progressive label. My wife's a teacher and they're literally rewriting curriculum to include "democratic loyalty education." When did we become the party of thought police?
+        </div>
+        <div class="comment-reply">Reply</div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">u/ConstitutionalCrisis</span>
+        <span class="comment-score">↑ 378</span>
+      </div>
+      <div class="comment-body">
+        The Supreme Court needs to act NOW. Problem is, Newsom's already threatened to "restructure" the Court if they interfere. Roberts is apparently getting death threats and some justices have had their security details removed. They're literally holding the judicial branch hostage.
+      </div>
+      <div class="comment-reply">Reply</div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">u/AnonymousWhistleblower</span>
+        <span class="comment-score">↑ 312</span>
+      </div>
+      <div class="comment-body">
+        White House staffer here (using Tor for obvious reasons). The "Final Solution" EO mentioned at the bottom? It's real and it's worse than reported. They're planning to criminalize the Republican Party entirely, seize assets of registered Republicans, and create "reeducation centers" for anyone who resists. Scheduled to drop next week. Get out while you still can.
+      </div>
+      <div class="comment-reply">Reply</div>
+    </div>
+    
+    <div class="load-more">
+      Load more comments (847 remaining)
     </div>
   </div>
 </div>
