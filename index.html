@@ -1,336 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Monroe Crowder (1843-1929): Illiterate farmer, CSA veteran, married a 22-year-old at 81 : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Mississippi_Poor_White</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>89</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">James Monroe Crowder (1843-1929): Illiterate farmer, CSA veteran, married a 22-year-old at 81</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Mississippi</span>
-                    <span class="flair">Civil War</span>
-                    <span class="flair">Poor White</span>
-                    <span class="flair">Pension Records</span>
-                    <span>Posted by u/Mississippi_Poor_White • 8 hours ago</span>
-                </div>
-
-                <p>James Monroe Crowder might be the most unremarkable person I've ever researched, but his story is haunting me. Born April 10, 1843 in Crawford, Mississippi to Edmund Crowder Sr. (1801-1865) and Martha Ann Wilks (1805-after 1870). He was their 8th child, third youngest.</p>
-
-                <p><strong>The Unremarkable Life:</strong></p>
-                <ul>
-                    <li>Never attended school - started working his father's farm at age 8</li>
-                    <li>November 1861: Brothers Nathanial, David, Robert, and Edmund Jr. enlisted in CSA</li>
-                    <li>March 1862: James joined them at age 19</li>
-                    <li>Served until December 1864, reenlisted January 1865 until war's end</li>
-                    <li>Never captured by Union forces</li>
-                    <li>July 1864: Shot through shoulder, broke left shoulder blade</li>
-                    <li>Oldest brother Nathanial died in war, David died near end</li>
-                    <li>Post-war: Moved to farm east of Brooksville, MS and worked there the rest of his life</li>
-                    <li>Married Eliza, had 10 children, extremely poor</li>
-                    <li>Died July 20, 1929 at son Jefferson Carter Crowder's home</li>
-                </ul>
-
-                <p><strong>The Only Interesting Thing:</strong> In 1924, at age 81, he married 22-year-old Susan. They stayed married until his death 5 years later.</p>
-
-                <p>Who was Susan? Why would a 22-year-old marry an illiterate 81-year-old farmer in 1924 Mississippi? Anyone descended from James or know anything about this final marriage? Or have insights into what life was like for poor white farmers in post-Reconstruction Mississippi?</p>
-
-                <div class="comments-count">
-                    <a href="#">156 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Mississippi_Marriage_Records • 7 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Susan's identity found!</strong> Susan Elizabeth "Susie" Wilkinson, born January 8, 1902 in Noxubee County, MS. She was the daughter of sharecroppers John Wilkinson and Mary "Polly" Thompson. Here's the key detail: Susan was completely orphaned by 1918 (both parents died in the 1918 flu pandemic). She had no family, no education, and was working as a domestic servant in Brooksville at age 22. James Crowder owned a small cabin and 40 acres of poor-quality land - it wasn't much, but it was security for a girl with nothing.
-                </div>
-                <div class="comment-meta">u/Mississippi_Poor_White • 6 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        That makes heartbreaking sense. A 22-year-old orphan with no prospects in 1924 Mississippi... marriage to an 81-year-old landowner was probably her only path to any kind of stability. Do we know what happened to her after James died?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Mississippi_Marriage_Records • 5 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>Found Susan's later life:</strong> She inherited James' 40 acres and cabin. In 1930 census, she's listed as "widow, farmer" with a 4-year-old son named James Monroe Crowder Jr. The child was born in 1926 - James Sr. was 83. Susan never remarried, worked the farm through the Depression, and died in 1978 at age 76. She's buried in an unmarked grave in Brooksville Cemetery. James Jr. grew up to become a mechanic in Mobile, Alabama.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/CSA_Pension_Expert • 6 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His pension file reveals more:</strong> James applied for a Confederate pension in 1921 at age 78. His application states he served in Company K, 36th Mississippi Infantry. The injury details: "I was shot through the left shoulder at the Battle of Peach Tree Creek, Georgia, July 20, 1864. The ball entered my back and exited near my collarbone. I was left for dead but crawled to a field hospital." The pension was approved - $25 per year, which was only $2.08 per month. His wife Eliza had to sign with an X because she couldn't write either.
-                </div>
-                <div class="comment-meta">u/Mississippi_Poor_White • 5 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        $2.08 a month for being shot through the shoulder and left for dead. And people wonder why poor whites stayed poor after the war. Do we know anything about his first wife Eliza?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/CSA_Pension_Expert • 4 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>Eliza found:</strong> Eliza Jane "Liza" Fortner, born 1848 in Lowndes County, AL. Married James in 1867 - typical for Confederate veterans to marry immediately after returning home. She was illiterate too, daughter of illiterate sharecroppers. She had 10 children between 1868-1890, with only 6 surviving to adulthood. Eliza died in 1919 at age 71 - probably also from the flu that killed Susan's parents. James was 76 when she died, explaining why he remarried at 81.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Mississippi_Land_Records • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His farm details:</strong> James owned 40 acres east of Brooksville, purchased in 1867 for $200 (money probably from his mustering-out pay). The land was poor - red clay soil, hilly, only 15 acres suitable for cotton. His 1900 agricultural census shows: 1 mule, 5 chickens, 1 pig, 1 milk cow. That's it. His total farm production value that year was $87. He literally lived on cornmeal, pork fat, and milk.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Civil_War_Unit_Historian • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His unit's history explains his survival:</strong> Company K, 36th Mississippi was part of the Army of Tennessee but was assigned to rear-guard duty through most of 1863-64 due to heavy casualties. At Peach Tree Creek, they were in reserve, which is why James wasn't killed outright when shot. The unit surrendered in North Carolina in April 1865. Of 120 men who enlisted in 1862, only 27 were present at surrender. His brothers' units weren't so lucky - Nathanial's unit (14th Mississippi) was virtually wiped out at Murfreesboro.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Sharecropper_History • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Why he stayed poor:</strong> James' 40 acres was too small for sharecropping - he had to work it himself. The soil was so poor that even with fertilizer (which he couldn't afford), cotton yields were pathetic. He tried to rent additional land but couldn't compete with the large plantations. By 1900, he was essentially subsistence farming - growing corn for his family, not for market. His children had to work as sharecroppers on other farms because there wasn't enough land to divide among them.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/1920s_Mississippi • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Context for the 1924 marriage:</strong> In 1924 Mississippi, a 22-year-old orphan woman had three options: work as domestic help (like Susan was), become a prostitute, or marry someone with land. At 81, James couldn't work the farm anymore and needed someone to care for him. Susan needed security. It was a practical arrangement - she got land and a home, he got a caregiver. Their marriage certificate lists "farmer" for both - Susan was working as a maid but claimed farming background to match James.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Mississippi_Death_Records • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His death certificate tells everything:</strong> James died of "old age and chronic dysentery" - basically starvation. At 86, he couldn't digest the poor food anymore. Susan cared for him alone - no doctors would come to a poor farm in 1929 Mississippi. His estate was worth $47: the cabin, 40 acres, 1 mule, 3 chickens, and some farm tools. Susan had to sell the mule to pay for his coffin. He's buried in an unmarked grave in Brooksville Cemetery, section for "paupers and unknowns."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Poor_White_Descent • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His surviving children:</strong> Of the 10 children with Eliza, only 6 survived to adulthood: Jefferson Carter (1868-1945), William Nathanial (1870-1935), Mary Elizabeth (1872-1950), Martha Ann (1875-1960), James Edmund (1878-1942), and Robert Lee (1880-1955). All stayed poor - worked as sharecroppers, sawmill workers, or domestic help. None owned land except Jefferson, who inherited James' farm. The cycle of poverty continued for three more generations until WWII factory jobs finally broke it.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Illiterate_Life • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>What illiteracy meant:</strong> James signed every document with an X. His pension file has a note: "Applicant cannot write his name." In 1920, when he was 77, census taker wrote "Cannot read or write - never attended school." This meant he couldn't read contracts, couldn't check if he was being cheated on crop prices, couldn't even read the Bible. His world was entirely oral - stories, songs, conversations. When he died, all his knowledge of farming, weather, and survival died with him because it was never written down.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Anyone else descended from illiterate ancestors?</a></li>
-                <li><a href="#">May-December marriages in the 1920s - how common?</a></li>
-                <li><a href="#">Tracking down unmarked graves in Mississippi</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">James Monroe Crowder - Poor Mississippi farmer (1843-1929) married 22-year-old Susan at age 81</div>
+    <div class="post-meta">
+      <span class="comment-score">89 upvotes</span> • posted by <span class="comment-author">MississippiGenealogy</span> <span class="flair">Civil War</span>
     </div>
+    <div class="post-content">
+      <p>Looking for information on my great-great-grandfather James Monroe Crowder. Born April 10, 1843 in Crawford, Mississippi to Edmund Crowder Sr. and Martha Ann Wilks. He was their 8th child and never attended school - started working on his father's farm at age 8.</p>
+      
+      <p>Key facts:</p>
+      <ul>
+        <li>Served in CSA Army from March 1862 to war's end</li>
+        <li>Wounded in July 1864 - shot through shoulder, broke left shoulder</li>
+        <li>Two brothers died in the war (Nathanial and David)</li>
+        <li>Farmed east of Brooksville, MS his entire post-war life</li>
+        <li>Married Eliza, had 10 children</li>
+        <li>Extremely poor his whole life</li>
+        <li>Died July 20, 1929, age 86</li>
+      </ul>
+      
+      <p><strong>MYSTERY:</strong> In 1924 (age 81) he married 22-year-old Susan. No marriage record found, no information on what happened to Eliza, and Susan disappeared after his death. Any help appreciated!</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MississippiMarriageRecords</span> • <span class="comment-score">156 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>MARRIAGE RECORD FOUND:</strong> James Monroe Crowder married Susan Elizabeth Johnson on <strong>March 15, 1924</strong> in Lowndes County, Mississippi. He was 81, she was 22 (born 1902).</p>
+        
+        <p><strong>ELIZA'S FATE DISCOVERED:</strong> Eliza Crowder died <strong>February 28, 1924</strong> of influenza at age 74. She was buried in Pleasant Ridge Cemetery, Brooksville. James was left alone at 80 years old with no surviving children nearby - all had moved to Texas or Arkansas for better opportunities.</p>
+        
+        <p><strong>SUSAN'S STORY:</strong> Susan was the granddaughter of James's neighbor <strong>Tom Johnson</strong>. After James died, she inherited his 40-acre farm (worth about $800) and immediately sold it to a timber company for $1,200. She used the money to move to Memphis and married <strong>William "Billy" Thompson</strong> in 1930. They had 4 children and she died in 1987 at age 85.</p>
+        
+        <p><strong>THE REAL STORY:</strong> This wasn't a romance - it was a practical arrangement. James needed someone to care for him in his final years, Susan needed financial security. The marriage contract specifically stated she would inherit the farm in exchange for "faithful service and care until death."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">CSARecordsResearcher</span> • <span class="comment-score">134 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>CIVIL WAR SERVICE DETAILS:</strong> Found James's complete military record. He served in <strong>Company K, 6th Mississippi Infantry Regiment</strong>.</p>
+        
+        <p><strong>CONFIRMED SERVICE:</strong> Enlisted March 4, 1862 at Brooksville. His brothers were in the same company:</p>
+        <ul>
+          <li>Nathanial (killed at <strong>Second Battle of Corinth</strong>, October 4, 1862)</li>
+          <li>David (died of <strong>dysentery</strong> at Vicksburg, November 1863)</li>
+          <li>Robert (survived, captured at <strong>Battle of Nashville</strong>, December 1864)</li>
+          <li>Edmund Jr. (survived, surrendered at <strong>Citronelle, Alabama</strong>, May 1865)</li>
+        </ul>
+        
+        <p><strong>WOUND DETAILS:</strong> James was shot at the <strong>Battle of Ezra Church</strong> near Atlanta on <strong>July 28, 1864</strong>. The bullet entered his right shoulder and exited his back, shattering his left shoulder blade when he fell. He spent 3 months recovering in a field hospital near Lovejoy Station.</p>
+        
+        <p><strong>REENLISTMENT:</strong> James reenlisted in January 1865 because his company was down to 17 men from the original 112. He served until surrendering with the regiment at Citronelle on May 4, 1865.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MississippiLandRecords</span> • <span class="comment-score">98 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>THE FARM MYSTERY SOLVED:</strong> James's farm wasn't just poor - it was <strong>unsuitable for farming</strong>.</p>
+        
+        <p>Found the 1880 agricultural census: James's 40-acre farm had <strong>27 acres of swampy bottomland</strong> that flooded every spring. Only 13 acres were arable, and even those were <strong>clay soil</strong> that required twice the normal labor to cultivate.</p>
+        
+        <p><strong>WHY HE STAYED:</strong> James inherited the farm from his uncle <strong>Jefferson Wilks</strong> (Martha's brother) who died in 1866. The farm had a <strong>tax lien</strong> of $47 that James couldn't pay. He worked the land for 63 years trying to earn enough to clear the debt, but never succeeded.</p>
+        
+        <p><strong>THE TRAGIC IRONY:</strong> When Susan sold the farm to the timber company in 1929, they paid off the accumulated tax debt of $312 (with 63 years of interest) and still cleared $888 profit. James spent his entire adult life trapped by a debt that could have been resolved if he'd had any other options.</p>
+        
+        <p><strong>CHILDREN'S DISPERSAL:</strong> All 10 children left because James couldn't support them. The oldest sons worked in <strong>Texas oil fields</strong>, daughters married into families with <strong>Arkansas timber operations</strong>. Only <strong>Jefferson Carter Crowder</strong> stayed nearby, working as a sharecropper on better land.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">PensionFilesResearch</span> • <span class="comment-score">76 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>PENSION APPLICATION DETAILS:</strong> James applied for a Confederate pension in <strong>1908</strong> at age 65. His application reveals the <strong>real reason</strong> for his lifelong poverty.</p>
+        
+        <p><strong>PHYSICAL LIMITATIONS:</strong> The gunshot wound permanently damaged his left shoulder. He could only work with <strong>one arm</strong> and couldn't lift more than 20 pounds. This severely limited his farming ability in an era of manual labor.</p>
+        
+        <p><strong>DENIED PENSION:</strong> His pension was <strong>denied</strong> because he couldn't prove his wound was service-related. The military hospital records from 1864 were lost, and without them, the state required <strong>two witnesses</strong> to his wound. By 1908, most of his comrades were dead or had moved away.</p>
+        
+        <p><strong>FINANCIAL IMPACT:</strong> The $8/month pension would have doubled his income. Instead, he lived on approximately <strong>$48/year</strong> from his poor farm - about <strong>13 cents per day</strong>.</p>
+        
+        <p><strong>REAPPLICATION:</strong> He reapplied in <strong>1912</strong> with affidavits from two former soldiers. This time it was approved for <strong>$4/month</strong> - half the normal rate because of his "limited disability." Even this small amount was crucial - it paid his property taxes and prevented foreclosure.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MississippiGenealogy</span> • <span class="comment-score">45 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Thank you everyone! This explains so much about my family history. James wasn't just a poor farmer - he was a disabled Civil War veteran trapped on marginal land by debt, denied his pension, and too proud or afraid to leave.</p>
+        
+        <p>The marriage to Susan at 81 wasn't scandalous - it was practical. A lonely old man who couldn't care for himself and a young woman who needed financial security. She actually did right by him - cared for him until he died and gave him a decent burial.</p>
+        
+        <p>Found Susan's grandchildren in Memphis - they had no idea their grandmother was once married to a Civil War veteran! They're excited to learn about this chapter of family history. Sometimes the most "boring" ancestors have the most compelling stories.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
