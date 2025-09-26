@@ -1,269 +1,343 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPDATE: James Monroe Crowder's Extended Family - Ancestors, Siblings, and Children Fully Mapped : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Mississippi_Poor_White</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">James Monroe Crowder - Poor Mississippi farmer (1843-1929) married 22-year-old Susan at age 81</div>
-    <div class="post-meta">
-      <span class="comment-score">89 upvotes</span> • posted by <span class="comment-author">MississippiGenealogy</span> <span class="flair">Civil War</span>
-    </div>
-    <div class="post-content">
-      <p>Looking for information on my great-great-grandfather James Monroe Crowder. Born April 10, 1843 in Crawford, Mississippi to Edmund Crowder Sr. and Martha Ann Wilks. He was their 8th child and never attended school - started working on his father's farm at age 8.</p>
-      
-      <p>Key facts:</p>
-      <ul>
-        <li>Served in CSA Army from March 1862 to war's end</li>
-        <li>Wounded in July 1864 - shot through shoulder, broke left shoulder</li>
-        <li>Two brothers died in the war (Nathanial and David)</li>
-        <li>Farmed east of Brooksville, MS his entire post-war life</li>
-        <li>Married Eliza, had 10 children</li>
-        <li>Extremely poor his whole life</li>
-        <li>Died July 20, 1929, age 86</li>
-      </ul>
-      
-      <p><strong>MYSTERY:</strong> In 1924 (age 81) he married 22-year-old Susan. No marriage record found, no information on what happened to Eliza, and Susan disappeared after his death. Any help appreciated!</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MississippiMarriageRecords</span> • <span class="comment-score">156 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>MARRIAGE RECORD FOUND:</strong> James Monroe Crowder married Susan Elizabeth Johnson on <strong>March 15, 1924</strong> in Lowndes County, Mississippi. He was 81, she was 22 (born 1902).</p>
-        
-        <p><strong>ELIZA'S FATE DISCOVERED:</strong> Eliza Crowder died <strong>February 28, 1924</strong> of influenza at age 74. She was buried in Pleasant Ridge Cemetery, Brooksville. James was left alone at 80 years old with no surviving children nearby - all had moved to Texas or Arkansas for better opportunities.</p>
-        
-        <p><strong>SUSAN'S STORY:</strong> Susan was the granddaughter of James's neighbor <strong>Tom Johnson</strong>. After James died, she inherited his 40-acre farm (worth about $800) and immediately sold it to a timber company for $1,200. She used the money to move to Memphis and married <strong>William "Billy" Thompson</strong> in 1930. They had 4 children and she died in 1987 at age 85.</p>
-        
-        <p><strong>THE REAL STORY:</strong> This wasn't a romance - it was a practical arrangement. James needed someone to care for him in his final years, Susan needed financial security. The marriage contract specifically stated she would inherit the farm in exchange for "faithful service and care until death."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">CSARecordsResearcher</span> • <span class="comment-score">134 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>CIVIL WAR SERVICE DETAILS:</strong> Found James's complete military record. He served in <strong>Company K, 6th Mississippi Infantry Regiment</strong>.</p>
-        
-        <p><strong>CONFIRMED SERVICE:</strong> Enlisted March 4, 1862 at Brooksville. His brothers were in the same company:</p>
-        <ul>
-          <li>Nathanial (killed at <strong>Second Battle of Corinth</strong>, October 4, 1862)</li>
-          <li>David (died of <strong>dysentery</strong> at Vicksburg, November 1863)</li>
-          <li>Robert (survived, captured at <strong>Battle of Nashville</strong>, December 1864)</li>
-          <li>Edmund Jr. (survived, surrendered at <strong>Citronelle, Alabama</strong>, May 1865)</li>
-        </ul>
-        
-        <p><strong>WOUND DETAILS:</strong> James was shot at the <strong>Battle of Ezra Church</strong> near Atlanta on <strong>July 28, 1864</strong>. The bullet entered his right shoulder and exited his back, shattering his left shoulder blade when he fell. He spent 3 months recovering in a field hospital near Lovejoy Station.</p>
-        
-        <p><strong>REENLISTMENT:</strong> James reenlisted in January 1865 because his company was down to 17 men from the original 112. He served until surrendering with the regiment at Citronelle on May 4, 1865.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MississippiLandRecords</span> • <span class="comment-score">98 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>THE FARM MYSTERY SOLVED:</strong> James's farm wasn't just poor - it was <strong>unsuitable for farming</strong>.</p>
-        
-        <p>Found the 1880 agricultural census: James's 40-acre farm had <strong>27 acres of swampy bottomland</strong> that flooded every spring. Only 13 acres were arable, and even those were <strong>clay soil</strong> that required twice the normal labor to cultivate.</p>
-        
-        <p><strong>WHY HE STAYED:</strong> James inherited the farm from his uncle <strong>Jefferson Wilks</strong> (Martha's brother) who died in 1866. The farm had a <strong>tax lien</strong> of $47 that James couldn't pay. He worked the land for 63 years trying to earn enough to clear the debt, but never succeeded.</p>
-        
-        <p><strong>THE TRAGIC IRONY:</strong> When Susan sold the farm to the timber company in 1929, they paid off the accumulated tax debt of $312 (with 63 years of interest) and still cleared $888 profit. James spent his entire adult life trapped by a debt that could have been resolved if he'd had any other options.</p>
-        
-        <p><strong>CHILDREN'S DISPERSAL:</strong> All 10 children left because James couldn't support them. The oldest sons worked in <strong>Texas oil fields</strong>, daughters married into families with <strong>Arkansas timber operations</strong>. Only <strong>Jefferson Carter Crowder</strong> stayed nearby, working as a sharecropper on better land.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">PensionFilesResearch</span> • <span class="comment-score">76 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>PENSION APPLICATION DETAILS:</strong> James applied for a Confederate pension in <strong>1908</strong> at age 65. His application reveals the <strong>real reason</strong> for his lifelong poverty.</p>
-        
-        <p><strong>PHYSICAL LIMITATIONS:</strong> The gunshot wound permanently damaged his left shoulder. He could only work with <strong>one arm</strong> and couldn't lift more than 20 pounds. This severely limited his farming ability in an era of manual labor.</p>
-        
-        <p><strong>DENIED PENSION:</strong> His pension was <strong>denied</strong> because he couldn't prove his wound was service-related. The military hospital records from 1864 were lost, and without them, the state required <strong>two witnesses</strong> to his wound. By 1908, most of his comrades were dead or had moved away.</p>
-        
-        <p><strong>FINANCIAL IMPACT:</strong> The $8/month pension would have doubled his income. Instead, he lived on approximately <strong>$48/year</strong> from his poor farm - about <strong>13 cents per day</strong>.</p>
-        
-        <p><strong>REAPPLICATION:</strong> He reapplied in <strong>1912</strong> with affidavits from two former soldiers. This time it was approved for <strong>$4/month</strong> - half the normal rate because of his "limited disability." Even this small amount was crucial - it paid his property taxes and prevented foreclosure.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MississippiGenealogy</span> • <span class="comment-score">45 points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Thank you everyone! This explains so much about my family history. James wasn't just a poor farmer - he was a disabled Civil War veteran trapped on marginal land by debt, denied his pension, and too proud or afraid to leave.</p>
-        
-        <p>The marriage to Susan at 81 wasn't scandalous - it was practical. A lonely old man who couldn't care for himself and a young woman who needed financial security. She actually did right by him - cared for him until he died and gave him a decent burial.</p>
-        
-        <p>Found Susan's grandchildren in Memphis - they had no idea their grandmother was once married to a Civil War veteran! They're excited to learn about this chapter of family history. Sometimes the most "boring" ancestors have the most compelling stories.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DeepSouthGenealogy</span> • <span class="comment-score">112 points</span> • 1 hour ago
-      </div>
-      <div class="comment-content">
-        <p><strong>ANCESTORS DISCOVERED:</strong> James's parents had fascinating backgrounds:</p>
-        
-        <p><strong>Edmund Crowder Sr. (1801-1865):</strong> Born in <strong>Union County, South Carolina</strong>, moved to Mississippi in 1829 as part of the <strong>Great Migration</strong>. He was a <strong>blacksmith</strong> who transitioned to farming when he realized the demand for ironwork was limited in rural Mississippi. Built his farm from <strong>80 acres of virgin forest</strong> to a <strong>240-acre cotton operation</strong> by 1850.</p>
-        
-        <p><strong>Martha Ann Wilks (1805-after 1870):</strong> Daughter of <strong>Thomas Wilks</strong>, a <strong>Revolutionary War veteran</strong> from Virginia who received a land grant in Mississippi. Martha was <strong>literate</strong> (rare for women of her era) and kept detailed farm records that survived in the family Bible. She outlived Edmund by at least 5 years, living with her daughter <strong>Sarah Crowder Jenkins</strong> in 1870.</p>
-        
-        <p><strong>SIBLINGS FULL STORY:</strong> James had <strong>9 siblings</strong>, not just the Civil War brothers:</p>
-        <ul>
-          <li><strong>Mary Elizabeth (1828-1899):</strong> Married wealthy planter <strong>James Madison Baldwin</strong>, lived in <strong>Natchez</strong>, became <strong>Methodist missionary</strong></li>
-          <li><strong>Sarah Ann (1830-1885):</strong> Married <strong>Thomas Jenkins</strong>, moved to <strong>Texas</strong> in 1858, had 8 children</li>
-          <li><strong>William Thomas (1832-1867):</strong> Died of <strong>yellow fever</strong>, left 3 young children</li>
-          <li><strong>Nancy Caroline (1834-1920):</strong> Married <strong>Dr. Samuel Hart</strong>, lived in <strong>Vicksburg</strong>, survived the siege</li>
-          <li><strong>Edmund Jr. (1836-1904):</strong> Survived Civil War, moved to <strong>Louisiana</strong>, became <strong>sheriff</strong></li>
-          <li><strong>Nathanial (1838-1862):</strong> Killed at <strong>Corinth</strong></li>
-          <li><strong>David (1840-1864):</strong> Died of <strong>dysentery</strong> at <strong>Vicksburg</strong></li>
-          <li><strong>Robert (1841-1911):</strong> Captured at <strong>Nashville</strong>, spent war in <strong>prison camp</strong></li>
-          <li><strong>Martha Jane (1845-1878):</strong> Married <strong>neighbor's son</strong>, died in <strong>childbirth</strong></li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">CrowderFamilyHistorian</span> • <span class="comment-score">89 points</span> • 1 hour ago
-      </div>
-      <div class="comment-content">
-        <p><strong>CHILDREN'S COMPLETE STORIES:</strong> All 10 children had dramatically different lives:</p>
-        
-        <p><strong>Jefferson Carter Crowder (1865-1942):</strong> The <strong>only child who stayed</strong>. Became a <strong>sharecropper</strong> on better land, had 9 children. His daughter <strong>Mattie Crowder</strong> became the first in the family to attend <strong>normal school</strong> (teacher's college) in 1912.</p>
-        
-        <p><strong>Robert Franklin (1867-1955):</strong> Moved to <strong>Beaumont, Texas</strong> in 1901, worked in the <strong>Spindletop oil fields</strong>. Became a <strong>roughneck crew chief</strong>, earned enough to send money home to James. His son <strong>Robert Jr.</strong> became a <strong>petroleum engineer</strong>.</p>
-        
-        <p><strong>Mary Elizabeth (1869-1948):</strong> Married <strong>Arkansas timber man</strong> <strong>William Thompson</strong>, moved to <strong>Camden, Arkansas</strong>. Her daughter <strong>Mary Thompson</strong> married into the <strong>Georgia-Pacific lumber family</strong>.</p>
-        
-        <p><strong>James Monroe Jr. (1871-1933):</strong> Moved to <strong>Dallas</strong>, became a <strong>streetcar conductor</strong>. Lost his job during the <strong>Depression</strong>, died of <strong>pneumonia</strong> in a <strong>poorhouse</strong>.</p>
-        
-        <p><strong>Sarah Emma (1873-1961):</strong> Married <strong>Methodist minister</strong> <strong>Thomas Hartwell</strong>, moved to <strong>Oklahoma Territory</strong> in 1893. Became a <strong>missionary teacher</strong> to <strong>Choctaw children</strong>.</p>
-        
-        <p><strong>William Nathanial (1875-1945):</strong> Moved to <strong>Port Arthur, Texas</strong>, worked in <strong>oil refineries</strong>. Died in the <strong>Texas City Disaster</strong> of 1945 when an oil refinery exploded.</p>
-        
-        <p><strong>Martha Jane (1877-1959):</strong> Married <strong>merchant</strong> <strong>John Davis</strong>, moved to <strong>Little Rock, Arkansas</strong>. Her daughter <strong>Martha Davis</strong> became one of the first female <strong>real estate agents</strong> in Arkansas.</p>
-        
-        <p><strong>David Edmund (1879-1937):</strong> Moved to <strong>Tulsa, Oklahoma</strong> during the <strong>oil boom</strong>. Became a <strong>wildcatter</strong>, made and lost several fortunes. Died <strong>penniless</strong> in a <strong>boarding house</strong>.</p>
-        
-        <p><strong>Nancy Caroline (1881-1967):</strong> Married <strong>Texas rancher</strong> <strong>Samuel Johnson</strong>, moved to <strong>Abilene</strong>. Her son <strong>James Johnson</strong> became a <strong>Texas state senator</strong>.</p>
-        
-        <p><strong>Thomas Jefferson (1883-1950):</strong> Moved to <strong>California</strong> in 1920, worked in <strong>Los Angeles shipyards</strong> during WWII. His daughter <strong>Betty Crowder</strong> became a <strong>Rosie the Riveter</strong> and later a <strong>union organizer</strong>.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MississippiGenealogy</span> • <span class="comment-score">67 points</span> • 45 minutes ago
-      </div>
-      <div class="comment-content">
-        <p>Incredible research! This completely changes my understanding of James. His children became part of the <strong>Great Migration</strong> to Texas and Oklahoma, seeking opportunity he could never provide. Most escaped poverty - some spectacularly (oil fields, lumber, politics).</p>
-        
-        <p>The tragedy is that James stayed behind on that terrible farm because of the <strong>tax lien</strong>, while his children scattered and prospered. His daughter Sarah became a <strong>missionary to Native Americans</strong>, his son Robert helped build the <strong>Texas oil industry</strong>, his grandson became a <strong>state senator</strong>.</p>
-        
-        <p>James's siblings had equally dramatic lives - his sister Nancy survived the <strong>Siege of Vicksburg</strong>, his brother Edmund became a <strong>Louisiana sheriff</strong>. The Civil War didn't just take his brothers - it <strong>trapped him</strong> in Mississippi while the rest of the family <strong>rebuilt elsewhere</strong>.</p>
-        
-        <p>Found photos of several grandchildren - they became <strong>engineers, teachers, business owners</strong>. James's sacrifice (staying on that poor farm) literally <strong>freed the next generations</strong> to pursue the American Dream.</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>234</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">UPDATE: James Monroe Crowder's Extended Family - Ancestors, Siblings, and Children Fully Mapped</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">UPDATE</span>
+                    <span class="flair">Mississippi</span>
+                    <span class="flair">Family Tree</span>
+                    <span class="flair">Crowder</span>
+                    <span>Posted by u/Mississippi_Poor_White • 6 hours ago</span>
+                </div>
+
+                <p>After my original post about James Monroe Crowder (1843-1929) generated amazing research, I spent the last month tracking down his extended family. Here's what we discovered about his ancestors, siblings, and children - the complete family picture of this illiterate Mississippi farmer who married a 22-year-old at 81.</p>
+
+                <p><strong>THE ANCESTORS - Going Back Further Than Expected:</strong></p>
+                <p>James's father Edmund Crowder Sr. (1801-1865) was born in South Carolina and moved to Mississippi around 1825. His mother Martha Ann Wilks (1805-after 1870) was from Georgia. But here's the breakthrough - I traced the Crowder line back to Virginia in the 1750s.</p>
+
+                <p><strong>THE SIBLINGS - All 10 of Them:</strong></p>
+                <p>James was #8 of 11 children. The family dynamics explain a lot about his life choices.</p>
+
+                <p><strong>THE CHILDREN - Tracing All 10 Kids with Eliza:</strong></p>
+                <p>Of the 10 children James had with first wife Eliza Jane Fortner, only 6 survived to adulthood. But we now have their complete stories.</p>
+
+                <div class="comments-count">
+                    <a href="#">312 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Virginia_Genealogy_Expert • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>The Crowder line goes back to 1750s Virginia!</strong> Edmund Crowder Sr.'s grandfather was William Crowder (1755-1832), who served in the Virginia militia during the Revolution. William received a land grant in South Carolina for his service - 200 acres in what became Fairfield County. His son Edmund Jr. (James's grandfather, 1778-1845) moved the family to Mississippi Territory in 1810, when it was still wilderness. The Crowders were always poor - even in Virginia, they were subsistence farmers on marginal land.
+                </div>
+                <div class="comment-meta">u/Mississippi_Poor_White • 5 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This explains so much - the Crowders were poor for GENERATIONS. Moving from Virginia to South Carolina to Mississippi, always on the edge of settlement, always on poor land. Do we know what happened to William's Revolutionary War pension?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Virginia_Genealogy_Expert • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        William applied for a pension in 1818 at age 63. He got $8 per month - substantial for the time. But here's the tragedy: he died in 1832, and his widow never applied for widow's pension because she couldn't write. The family lost that income stream. By 1840, James's father Edmund Sr. was farming marginal land in Mississippi with no inherited wealth.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Census_Detective • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>All 11 Crowder children found in 1850 census:</strong> Living in Crawford, Mississippi with parents Edmund Sr. and Martha:<br>
+                    1. Nathaniel Port Crowder (1826-1864) - died Civil War<br>
+                    2. David Wilks Crowder (1828-1865) - died Civil War<br>
+                    3. Martha Ann Crowder (1830-1898) - married, stayed poor<br>
+                    4. Edmund Crowder Jr. (1832-1905) - survived war, moved to Texas<br>
+                    5. Mary Elizabeth Crowder (1834-1867) - died young, probably childbirth<br>
+                    6. Robert Franklin Crowder (1836-1910) - survived war, moved to Arkansas<br>
+                    7. Sarah Jane Crowder (1838-1920) - married well, moved to Louisiana<br>
+                    8. JAMES MONROE CROWDER (1843-1929) - our guy<br>
+                    9. William Thomas Crowder (1845-1864) - died Civil War, age 19<br>
+                    10. Joseph Henry Crowder (1847-1925) - youngest, stayed in Mississippi<br>
+                    11. Caroline Elizabeth Crowder (1850-1935) - only girl to marry well
+                </div>
+                <div class="comment-meta">u/Mississippi_Poor_White • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        The Civil War absolutely devastated this family - 4 of the 5 oldest boys died. Only Edmund Jr., Robert, and James survived. No wonder James was traumatized - he lost 4 brothers in 4 years. Do we know anything about the sibling dynamics after the war?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Census_Detective • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>The post-war split was dramatic:</strong> Edmund Jr. moved to East Texas and became a moderately successful rancher - the only brother to escape poverty. Robert moved to Arkansas and farmed marginal land, but better than Mississippi. Joseph stayed in Mississippi but moved to the Delta region where land was better. Only James stayed in Crawford County, on the same poor land. His siblings viewed him as "stubborn" but he probably had PTSD and couldn't leave the place where he'd lost everything.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Marriage_Records_MS • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>James's children with Eliza - complete list with fates:</strong><br>
+                    1. Jefferson Carter Crowder (1868-1945) - inherited the farm, married but childless<br>
+                    2. William Nathaniel Crowder (1870-1935) - moved to Louisiana, worked sawmills<br>
+                    3. Mary Elizabeth Crowder (1872-1950) - married a sharecropper, had 12 kids<br>
+                    4. Martha Ann Crowder (1875-1960) - domestic servant, never married<br>
+                    5. James Edmund Crowder (1878-1942) - sharecropper, died of malaria<br>
+                    6. Robert Lee Crowder (1880-1955) - moved to Memphis, worked on railroad<br>
+                    <br>
+                    Plus 4 who died young: infant twins (1873), Sarah Jane (1876-1882), and David (1884-1891). The surviving children scattered - only Jefferson stayed in Crawford County.
+                </div>
+                <div class="comment-meta">u/Mississippi_Poor_White • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        So Jefferson inherited the farm but had no children... which means when he died, it went to James's second wife Susan. That explains how a 22-year-old orphan ended up owning land. Do we know if any of James's children ever met Susan?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Marriage_Records_MS • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>Family dynamics were tense:</strong> When James married Susan in 1924, his children were horrified. Jefferson (56) refused to speak to his father. The others were embarrassed - their 81-year-old father marrying someone younger than their own children. But when James died and Susan inherited everything, they were furious. Jefferson tried to contest the will but lost - James had made a proper will (signed with X but witnessed). Susan raised James Jr. alone, and the half-siblings never acknowledged him.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Martha_Ann_Crowder • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Martha Ann Crowder was my great-grandmother! She worked as a domestic servant for a wealthy family in Jackson, Mississippi her whole life. Family stories say she was "touched" - probably had some mental health issues from growing up in extreme poverty. She never married because, as my grandmother put it, "no man wanted to marry a Crowder girl - they were too poor and strange." She lived in the servants' quarters of the mansion where she worked until she died at 85.
+                </div>
+                <div class="comment-meta">u/Mississippi_Poor_White • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Thank you for sharing this! It's incredible to hear from actual descendants. Do you know if Martha Ann ever talked about her father James or the famous marriage to Susan?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Martha_Ann_Crowder • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        She refused to discuss it. Called Susan "that gold-digging child" and said her father had "lost his mind in his old age." Martha Ann was deeply ashamed of the whole thing. She cut off contact with Susan and James Jr. completely. The family story was that James Sr. had disgraced the family name by marrying someone young enough to be his granddaughter.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Genetic_Genealogy • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>DNA results confirm the family stories:</strong> I descend from James Edmund Crowder (1878-1942) through my maternal line. The family had a persistent rumor that James Sr.'s marriage to Susan wasn't just for companionship - they suspected James Jr. might not be his biological son. But Y-DNA testing of a descendant of James Jr. confirms he WAS James Sr.'s son. The testing also revealed that the Crowder line has significant Scandinavian ancestry - probably from the Viking settlements in England before they came to America.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Mississippi_Land_Records • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>The final disposition of James's land:</strong> When Susan died in 1978, James Jr. inherited the 40 acres but sold it immediately - he wanted nothing to do with Mississippi or the family history. A developer bought it for $8,000 and turned it into a mobile home park. Today it's worth over $200,000. The Crowder family, who farmed that poor land for 110 years (1867-1977), would be stunned to know it became valuable real estate.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Anyone else have a "May-December" marriage in their family tree?</a></li>
+                <li><a href="#">How the Civil War devastated poor Southern families</a></li>
+                <li><a href="#">From subsistence farming to mobile home park - 150 years on the same land</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
