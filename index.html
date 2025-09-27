@@ -1,352 +1,256 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>George Wallace III Announcement - r/YAPMS</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #1A1A1B;
-            color: #D7DADC;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        
-        .reddit-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #1A1A1B;
-            min-height: 100vh;
-        }
-        
-        .subreddit-header {
-            background: linear-gradient(90deg, #FF6314 0%, #FF8717 100%);
-            padding: 15px 20px;
-            border-bottom: 1px solid #343536;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .subreddit-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            margin: 0;
-        }
-        
-        .subreddit-info {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.9);
-            margin-top: 5px;
-        }
-        
-        .post-container {
-            background-color: #1A1A1B;
-            border: 1px solid #343536;
-            border-radius: 4px;
-            margin: 20px;
-            padding: 0;
-        }
-        
-        .post-header {
-            padding: 12px 16px;
-            border-bottom: 1px solid #343536;
-            background-color: #272729;
-        }
-        
-        .post-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #D7DADC;
-            margin: 0 0 8px 0;
-            line-height: 1.3;
-        }
-        
-        .post-meta {
-            font-size: 12px;
-            color: #818384;
-        }
-        
-        .post-content {
-            padding: 16px;
-            font-size: 14px;
-        }
-        
-        .post-content p {
-            margin: 0 0 12px 0;
-        }
-        
-        .post-content strong {
-            color: #D7DADC;
-        }
-        
-        .vote-section {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-            color: #818384;
-            font-size: 12px;
-        }
-        
-        .comments-section {
-            border-top: 1px solid #343536;
-            padding: 16px;
-        }
-        
-        .comment {
-            margin-bottom: 16px;
-            padding-left: 8px;
-            border-left: 2px solid #343536;
-        }
-        
-        .comment-header {
-            font-size: 12px;
-            color: #818384;
-            margin-bottom: 4px;
-        }
-        
-        .comment-author {
-            font-weight: 600;
-            color: #D7DADC;
-        }
-        
-        .comment-body {
-            font-size: 14px;
-            color: #D7DADC;
-            margin-bottom: 8px;
-        }
-        
-        .comment-actions {
-            font-size: 12px;
-            color: #818384;
-        }
-        
-        .flair {
-            display: inline-block;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 500;
-            margin-left: 6px;
-        }
-        
-        .flair-dixiecrat {
-            background-color: #1E3A8A;
-            color: white;
-        }
-        
-        .flair-shitpost {
-            background-color: #DC2626;
-            color: white;
-        }
-        
-        .flair-based {
-            background-color: #059669;
-            color: white;
-        }
-        
-        .flair-boomer {
-            background-color: #6B7280;
-            color: white;
-        }
-        
-        .highlight {
-            background-color: #1E40AF;
-            color: white;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-        
-        .quote {
-            border-left: 3px solid #FF6314;
-            padding-left: 12px;
-            margin: 8px 0;
-            font-style: italic;
-            color: #BABABA;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="reddit-container">
-        <div class="subreddit-header">
-            <div class="subreddit-title">r/YAPMS</div>
-            <div class="subreddit-info">Yet Another Political Meme Subreddit • Your source for shitty political memes and electoral circlejerking</div>
-        </div>
-        
-        <div class="post-container">
-            <div class="post-header">
-                <h1 class="post-title">BREAKING: George Wallace III announces Alabama governor bid, immediately dominates polling among voters who remember when TV was invented <span class="flair flair-dixiecrat">DIXIECRAT HOURS</span></h1>
-                <div class="post-meta">Posted by u/BoomerDefender • 6 hours ago • 🏛️ Shitpost</div>
-                <div class="vote-section">⬆️ 2.4k ⬇️ • 847 comments • Share • Save • Hide • Report</div>
-            </div>
-            
-            <div class="post-content">
-                <p>GEORGIEBROS WE FUCKING WINNING 🔥🔥🔥</p>
-                
-                <p>84% of men over 80 support him lmao that's like what, 12 people total? The other 16% probably died during the poll 💀</p>
-                
-                <p><strong>Real talk tho:</strong> Wallace III promising a "traditional Democratic campaign" on states' rights is the most boomer-pandering shit I've ever seen. My grandpa literally just said "finally, someone who gets it" while eating dinner at 4:30 PM.</p>
-                
-                <p>Can't wait for the debate where he just talks about how bread used to cost a nickel and kids these days don't respect their elders. <span class="highlight">DIXIECRAT REVIVAL INCOMING</span></p>
-            </div>
-            
-            <div class="comments-section">
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">AlabamaPoliticalNerd</span> • 5 hours ago
-                    </div>
-                    <div class="comment-body">
-                        I'm literally shaking and crying rn. Wallace III just needs to start talking about "states' rights to do what" and we'll have come full circle. 
-                        <div class="quote">"traditional Democratic campaign" = code for "my dad was racist but we can't say that part out loud anymore"</div>
-                        Also 84% of men over 80 is literally just the Wednesday bingo crowd at Golden Corral
-                    </div>
-                    <div class="comment-actions">↑ 342 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">BasedBoomerBuster</span> <span class="flair flair-shitpost">SHITPOST</span> • 5 hours ago
-                    </div>
-                    <div class="comment-body">
-                        Wallace III: "I'm running on my father's legacy!"
-                        <br><br>
-                        Everyone under 60: "Which part, the racism or the losing presidential campaigns?"
-                        <br><br>
-                        This is like if Hitler's grandson ran on "traditional German values" but promised it was totally different this time 💀
-                    </div>
-                    <div class="comment-actions">↑ 278 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">DeepSouthAnalyst</span> • 4 hours ago
-                    </div>
-                    <div class="comment-body">
-                        Real analysis though: Wallace III is basically running a nostalgia campaign for people who think the Civil Rights Act was federal overreach. 
-                        <br><br>
-                        The fact that he's leading among 80+ voters but polling at 2% with under-30s tells you everything about how Alabama has changed. He's not running for 2027, he's running for 1962.
-                        <br><br>
-                        Also "states' rights" in Alabama has a very specific historical meaning and it's not about tax policy lmao
-                    </div>
-                    <div class="comment-actions">↑ 189 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">GeriatricGerrymander</span> • 4 hours ago
-                    </div>
-                    <div class="comment-body">
-                        Wallace III: "I'm nothing like my father!"
-                        <br><br>
-                        Also Wallace III: *literally uses the same campaign slogan, same talking points, same everything*
-                        <br><br>
-                        The only difference is his dad had charisma and political instincts. This guy has the energy of a substitute teacher trying to explain why homework is important.
-                    </div>
-                    <div class="comment-actions">↑ 156 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">DixiecratLARP</span> <span class="flair flair-based">BASED</span> • 3 hours ago
-                    </div>
-                    <div class="comment-body">
-                        Y'all are being too harsh. Wallace III is just trying to bring back the glory days when men were men, women were property, and minorities knew their place! 
-                        <br><br>
-                        Wait...
-                        <br><br>
-                        Seriously though, imagine being 77 and your entire political identity is "my dad was famous for being on the wrong side of history." That's not a campaign platform, that's a therapy session.
-                    </div>
-                    <div class="comment-actions">↑ 134 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">PollingIsMyKink</span> • 3 hours ago
-                    </div>
-                    <div class="comment-body">
-                        The demographic breakdown is sending me:
-                        <br><br>
-                        80+ men: 84% (literally just the Alzheimer's ward)
-                        <br>
-                        70-79: 61% (can still remember the 60s)
-                        <br>
-                        50-69: 23% (vaguely remember the controversy)
-                        <br>
-                        Under 50: 3% (Google exists)
-                        <br><br>
-                        This is less a campaign and more a "remember when America was great (for white people)" support group
-                    </div>
-                    <div class="comment-actions">↑ 98 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">BoomerHunter_69</span> • 2 hours ago
-                    </div>
-                    <div class="comment-body">
-                        My grandpa (87) literally just called me to say "finally, a Wallace who gets it" and I'm like... gets WHAT exactly grandpa? The urge to stand in schoolhouse doors?
-                        <br><br>
-                        The Wallace family is like herpes - just when you think it's gone, it comes back to ruin everything. Except herpes is more popular with young people.
-                    </div>
-                    <div class="comment-actions">↑ 76 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">PoliticalMemeHistorian</span> • 2 hours ago
-                    </div>
-                    <div class="comment-body">
-                        Fun fact: Wallace III's campaign website literally has a "Legacy" section that doesn't mention civil rights once. It's like doing a biography of Hitler and focusing on his art career.
-                        <br><br>
-                        Also his campaign slogan is "Standing up for Alabama" which is honestly perfect - standing up against what? Federal tyranny? Basic human decency? The passage of time?
-                        <br><br>
-                        Can't wait for the debate when someone asks him about his father's most famous quote and he pretends not to know what segregation is.
-                    </div>
-                    <div class="comment-actions">↑ 65 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">AlabamaExpat</span> • 1 hour ago
-                    </div>
-                    <div class="comment-body">
-                        As someone who escaped Alabama, this is both hilarious and terrifying. 
-                        <br><br>
-                        Hilarious because Wallace III has all the political instincts of a wet paper bag. Terrifying because 34% of Democrats are apparently like "yeah, let's give the Wallace family another shot, what could go wrong?"
-                        <br><br>
-                        The man's entire platform is "remember when things were simpler (and by simpler I mean before Brown v Board)" and people are eating it up. Alabama gonna Alabama I guess.
-                    </div>
-                    <div class="comment-actions">↑ 52 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-                
-                <div class="comment">
-                    <div class="comment-header">
-                        <span class="comment-author">SatiricalSavant</span> <span class="flair flair-boomer">BOOMER BUSTER</span> • 1 hour ago
-                    </div>
-                    <div class="comment-body">
-                        Wallace III: "I'm running a traditional Democratic campaign!"
-                        <br><br>
-                        Everyone: "So... pro-slavery?"
-                        <br><br>
-                        Wallace III: "No no no, traditional 1950s Democratic values!"
-                        <br><br>
-                        Everyone: "So... anti-civil rights?"
-                        <br><br>
-                        Wallace III: "Why does everyone keep bringing up race? I'm talking about states' rights!"
-                        <br><br>
-                        Everyone: "The right to do what, specifically?"
-                        <br><br>
-                        Wallace III: "...states' rights to... govern... traditionally..."
-                    </div>
-                    <div class="comment-actions">↑ 43 ↓ • Reply • Give Award • Share • Report</div>
-                </div>
-            </div>
-        </div>
+
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Edward Lee Southworth Sr. (1892-1981) - From NC stonemason's son to Army Lieutenant to Radio Advertising pioneer, died at 89 with 62 years in advertising</div>
+    <div class="post-meta">
+      <span class="comment-score">892 upvotes</span> • posted by <span class="comment-author">CarolinaRoots</span> <span class="flair">Southern Genealogy</span>
     </div>
+    <div class="post-content">
+      <p>I've been researching my great-grandfather Edward Lee Southworth Sr. and found an incredible journey! Born July 20, 1892 in Mt. Olive, NC to John William Southworth (stonemason) and Mary Louise Bridge. Family lore says he declared "I am not gonna be a damn stonemason" and left home.</p>
+      
+      <p>What I've pieced together:</p>
+      <ul>
+        <li>1915: Newspaper Auditor in Durham, NC</li>
+        <li>1916: Moved to Richmond, VA</li>
+        <li>1917-1919: Served in WWI, discharged as First Lieutenant</li>
+        <li>1920: State Auditor at bank in Lexington, KY</li>
+        <li>1921: Advertising agent for Kansas City radio station</li>
+        <li>1923: Moved to Los Angeles</li>
+        <li>1926: Moved to Atlanta, GA</li>
+        <li>1927: Radio Advertising Agent in Raleigh, NC</li>
+        <li>1933: Joined NC Civil Air Patrol, reached Major</li>
+        <li>1947: Resigned from Civil Air Patrol</li>
+        <li>1970: "Retired" from advertising citing TV's impact</li>
+        <li>Died November 15, 1981 at age 89</li>
+      </ul>
+      
+      <p>Looking for more about his military service, his advertising career details, and why he moved around so much!</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">NCArchives</span> • <span class="comment-score">634 points</span> • 9 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found his actual military service records! Edward enlisted May 18, 1917 in the 119th Infantry Regiment, 30th Division. He fought at the Second Battle of the Marne and was promoted to Sergeant for bravery under fire.</p>
+        
+        <p><strong>The "Lieutenant Edward" nickname origin:</strong> On October 8, 1918, during the Meuse-Argonne Offensive, his platoon was pinned down by machine gun fire. Edward crawled through no-man's-land alone and took out two machine gun nests with grenades, saving his entire platoon. He was awarded the Distinguished Service Cross and battlefield commissioned to Second Lieutenant on the spot by his regimental commander.</p>
+        
+        <p>He was actually promoted to First Lieutenant before discharge but preferred being called "Lieutenant Edward" because he said "it sounds more democratic - just one of the boys, not putting on airs."</p>
+        
+        <p>His war diary (preserved in the NC State Archives) shows he was gassed on November 3, 1918 and spent the last week of the war in a field hospital. He wrote: "The gas took my voice for three weeks, but I lived when so many didn't. I owe those boys something - gotta make my life count for something bigger than just making money."</p>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-header">
+          <span class="comment-author">RadioHistoryBuff</span> • <span class="comment-score">512 points</span> • 8 hours ago
+        </div>
+        <div class="comment-content">
+          <p>Found his advertising career details! Edward was actually one of the pioneers of radio advertising in America. When he started at WDAF in Kansas City in 1921, radio commercials were basically just reading newspaper ads aloud.</p>
+          
+          <p><strong>His revolutionary innovations:</strong></p>
+          <ul>
+            <li>Created the first "jingle" - a musical advertisement for a Kansas City furniture store in 1922</li>
+            <li>Invented the "radio drama" sponsored by a single advertiser - started with "The Romance of the Range" sponsored by a flour company</li>
+            <li>Developed the concept of "prime time" - scheduling ads during evening hours when families gathered</li>
+            <li>First to use celebrity endorsements - got a local baseball player to endorse a sporting goods store</li>
+          </ul>
+          
+          <p>His Los Angeles years (1923-1926) were his most successful. He worked for KHJ and created advertising campaigns for Hollywood studios. He was the genius behind "Lucky Strike means fine tobacco" campaign that ran for 20 years.</p>
+          
+          <p>He made a fortune - by 1926 he was earning $50,000 per year (equivalent to $800,000 today). But he hated LA's phoniness and moved to Atlanta, calling it "the most civilized city in America - got all the culture without the pretense."</p>
+          
+          <p>In Raleigh, he became the "go-to" man for radio advertising in the Southeast. He handled accounts for tobacco companies, textile mills, and furniture manufacturers. His slogan was "I sell dreams through the ether."</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">CivilAirPatrolArchives</span> • <span class="comment-score">398 points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found his Civil Air Patrol service records! Edward joined the NC Civil Air Patrol on March 15, 1933 - just three months after it was officially established. He was member #47 in North Carolina.</p>
+        
+        <p><strong>His intelligence work was REAL:</strong> He wasn't just "mostly working as intelligence officer" - he was crucial to coastal defense during WWII. Based at Fort Fisher, he coordinated civilian aircraft spotting for German U-boats along the NC coast.</p>
+        
+        <p>Between 1942-1944, he personally identified and reported 14 suspected U-boat sightings that led to Navy destroyer responses. One of his reports in July 1943 helped locate U-576, which was subsequently sunk by Navy aircraft.</p>
+        
+        <p>He developed a code system using radio advertising schedules to transmit intelligence - German spies monitoring radio would hear normal commercials, but CAP personnel knew certain phrases meant "submarine spotted at coordinates X,Y."</p>
+        
+        <p>His promotion to Major came in 1944 after he organized the largest civilian air-sea rescue operation in NC history - 47 aircraft and 200 volunteers searching for a downed Navy pilot off Cape Hatteras. They found the pilot alive after 36 hours in a life raft.</p>
+        
+        <p>The real reason he resigned in 1947: He discovered that several high-ranking CAP officers were embezzling federal funds meant for equipment and training. He refused to be part of corruption and walked away, saying "I fought too hard for this country to watch it rot from within."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">MtOliveHistorian</span> • <span class="comment-score">334 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found the REAL story about his childhood declaration! The "I am not gonna be a damn stonemason" quote is actually from a letter he wrote to his sister Mary in 1958, looking back on his life.</p>
+        
+        <p>What actually happened: On July 4, 1909, when Edward was almost 17, his older brother John William Jr. was killed in a quarry accident. John was working with their father cutting granite when a section of rock face collapsed. Edward witnessed the entire thing - his brother was crushed before his eyes.</p>
+        
+        <p>The death certificate shows John died from "massive internal injuries when struck by falling stone." Edward never got over it. In his 1958 letter he wrote: "After Johnny died, I couldn't stand the sight of stone. Every rock reminded me of how the earth itself murdered my brother. I knew I had to get away from Mt. Olive or I'd die there too, one piece of stone at a time."</p>
+        
+        <p>His father John actually encouraged him to leave, telling him "Stone work is honest work, but it's not for everyone. Find your own path, son." John William Southworth died in 1920 from silicosis - "stonemason's lung disease" - having lost both his oldest son and his own health to the trade.</p>
+        
+        <p>Edward paid for his brother's headstone - the last piece of stone he ever willingly purchased. It's still there in Mt. Olive Cemetery: "John William Southworth Jr, 1885-1909, Beloved Son and Brother."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">AviationRecords</span> • <span class="comment-score">287 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found his pilot records! Edward got his pilot's license in 1934 at age 42 - one of the oldest students at the Raleigh Flying School. He owned three airplanes over his lifetime:</p>
+        
+        <ul>
+          <li>1935: Taylor E-2 Cub (bought used for $1,325)</li>
+          <li>1941: Piper J-3 Cub (traded up, cost $2,300)</li>
+          <li>1952: Cessna 170B (his pride and joy, cost $7,500)</li>
+        </ul>
+        
+        <p>He logged over 4,200 flight hours - remarkable for someone who started flying at 42. He flew until age 87, making his last flight on July 20, 1979 - his 87th birthday. He told the airport manager: "I came into this world on this date, and by God, I'm going to fly on it too."</p>
+        
+        <p>His favorite flight was taking underprivileged children up for their first airplane ride. Between 1945-1975, he gave free rides to over 3,000 kids through the Civil Air Patrol's Young Eagles program. He paid for the fuel himself.</p>
+        
+        <p>He crashed once - in 1958 during takeoff from a grass strip in eastern NC. Engine failure at 200 feet. He put it down in a cornfield and walked away unhurt. The NTSB report says: "Pilot demonstrated exceptional airmanship in forced landing under adverse conditions."</p>
+        
+        <p>When he died, he left his Cessna to the NC Aviation Museum in Asheboro. It's still there, restored to original condition, with a plaque: "Flown by Major Edward Lee Southworth, 1934-1979, who proved you're never too old to touch the sky."</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">FamilyResearchPro</span> • <span class="comment-score">198 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p>Found details about his wife Betty! Her full name was Elizabeth Mae "Betty" Crawford (1901-1995). They met in Raleigh in 1927 when she was working as a secretary for the North Carolina Radio Commission.</p>
+        
+        <p>Betty was actually engaged to another man when they met - a tobacco executive. But Edward courted her with letters and poems, sending her a new poem every day for three months. She broke off the other engagement and married Edward on December 25, 1928.</p>
+        
+        <p>She was the perfect match for his restless spirit - loved adventure as much as he did. She got her pilot's license in 1936 and often flew with him on advertising trips. She handled the business side of his advertising agency while he focused on creative work.</p>
+        
+        <p>Their three children:</p>
+        <ul>
+          <li><strong>Edward Lee Jr.</strong> (1929-2018): Became an Air Force pilot, flew B-29s in Korea, retired as Colonel</li>
+          <li><strong>Mary Elizabeth</strong> (1932-present): Became a journalist, wrote for Raleigh News & Observer for 40 years</li>
+          <li><strong>Robert Crawford</strong> (1936-2005): Took over father's advertising business, expanded into television</li>
+        </ul>
+        
+        <p>Betty outlived Edward by 14 years, dying in 1995 at age 94. She never remarried, saying "Once you've flown with an eagle, you can't settle for a sparrow." She spent her final years organizing Edward's papers and correspondence - over 50,000 letters that are now archived at UNC Chapel Hill.</p>
+        
+        <p>Her last request was to have her ashes scattered from Edward's Cessna over Mt. Olive - "where my boy first dreamed of flying." Their grandson fulfilled the request in 1995.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">CarolinaRoots</span> • <span class="comment-score">156 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p>This is absolutely incredible! I had no idea Edward was such a war hero, a radio advertising pioneer, or that he was involved in anti-submarine warfare. The story about his brother's death in the quarry explains so much about why he left Mt. Olive.</p>
+        
+        <p>The fact that he flew until age 87 and gave rides to 3,000 kids - what an amazing legacy! And Betty getting her pilot's license too - they must have been quite the couple.</p>
+        
+        <p>I'm planning to visit the NC Aviation Museum to see his Cessna, and I want to find his brother's grave in Mt. Olive. Thank you all - this has given me months of research material and completely changed how I see my great-grandfather!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
