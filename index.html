@@ -1,227 +1,361 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Lee Southworth Sr. (1892-1981): From stonemason's son to "Lieutenant Edward," advertising pioneer : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Edward Lee Southworth Sr. (1892-1981) - Handsome devil who kept that North Carolina drawl his whole life, had famous friends, and the stories this guy could tell...</div>
-    <div class="post-meta">
-      <span class="comment-score">1.2k upvotes</span> • posted by <span class="comment-author">CarolinaRoots</span> <span class="flair">Southern Genealogy</span>
-    </div>
-    <div class="post-content">
-      <p>So I've been digging into my great-grandfather Edward Lee Southworth Sr. and man, this guy was something else. He had that Mt. Olive, North Carolina accent 'til the day he died, even after living all over the country. And apparently he was quite the looker - I've seen photos of him at 80 and he still had it!</p>
-      
-      <p>From what family members tell me, when he was single, women just flocked to him. My grandma says he had this charm about him - that country boy smile mixed with city smarts. The man knew everybody who was anybody too - always name-dropping at family dinners about his "good friend so-and-so."</p>
-      
-      <p>Here's what I've got so far:</p>
-      <ul>
-        <li>Born 1892 in Mt. Olive, NC - daddy was a stonemason</li>
-        <li>WWI vet, came back as "Lieutenant Edward" (refused to drop the title)</li>
-        <li>Worked advertising from the 1920s through 1970 - saw radio go to TV</li>
-        <li>Flew his own plane 'til he was 87 years old</li>
-        <li>Married to Betty for 53 years, had 3 kids</li>
-        <li>Died 1981 at 89, still sharp as a tack</li>
-      </ul>
-      
-      <p>Anyone got stories about this guy? He seems like he was quite the character!</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">RadioOldTimer</span> • <span class="comment-score">847 points</span> • 8 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Oh man, I worked with Edward at WPTF in Raleigh back in the 50s! That man was smooth as silk and knew it. Had this thick country accent that made everything sound like honey - "Hey there sugah, how 'bout we sell us some cigarettes today?"</p>
-        
-        <p><strong>The women thing was NO JOKE.</strong> Secretaries would literally fight over who got to bring him coffee. He was 60-something and still had 20-year-olds batting their eyes. His wife Betty would come by the station and just shake her head - "Edward, you better behave yourself now." He'd just grin and say "Yes ma'am" in that drawl that could melt butter.</p>
-        
-        <p>But here's the thing - he never actually DID anything, you know? Just flirted harmlessly. Said "A man can look at the menu long as he eats at home." Betty knew he was hers and he knew it too.</p>
-        
-        <p>He had these crazy connections though - one day he's telling me about playing poker with Douglas MacArthur (said the general was "tighter than a tick with a dollar"), next day it's about having lunch with Walt Disney in 1955. I thought he was full of it until he showed me photos - there he is, that big country grin, standing next to Walt in front of some Disneyland construction.</p>
-      </div>
-      
-      <div class="comment">
-        <div class="comment-header">
-          <span class="comment-author">AviationCharlie</span> • <span class="comment-score">623 points</span> • 7 hours ago
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Mississippi_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
         </div>
-        <div class="comment-content">
-          <p>Ha! Edward was my flight instructor in 1965 - I was 16 and he was 73. Called me "sonny boy" in that thick accent and told me flying was "just like dancing with a pretty girl - you gotta lead, but gentle-like."</p>
-          
-          <p>He'd show up to the airport in these perfectly pressed khakis, aviator sunglasses, hair still dark (pretty sure he was coloring it but hey, who cares at 73?). The ladies at the coffee shop would literally swoon.</p>
-          
-          <p><strong>Best story:</strong> We're flying one day and he gets on the radio with air traffic control - "Raleigh Tower, this is November 3-7-2-8, Major Southworth requesting permission to buzz my old lady's house, over." The tower guy comes back laughing - "Major, you do know we can hear you, right?" Edward just comes back with "Well hell son, that's the whole point! Betty loves it when I wave the wings at her."</p>
-          
-          <p>He told me he'd been offered jobs in New York and Chicago back in the 30s but turned 'em down. Said "Why would I want to live somewhere people think barbecue is a verb?" He loved North Carolina too much to leave for good.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MacArthur researcher</span> • <span class="comment-score">445 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found the MacArthur connection! Edward's military service record shows he actually did meet Douglas MacArthur - but not how you'd think.</p>
-        
-        <p>September 1945, Edward was part of the honor guard when MacArthur arrived in Japan. Edward was there as a Civil Air Patrol liaison. According to Edward's diary (which is in the NC State Archives), MacArthur asked him where he was from, and Edward replied "Mt. Olive, North Carolina, sir."</p>
-        
-        <p>MacArthur apparently laughed and said "Well I'll be damned, I'm from Little Rock. We're both just country boys who made good, aren't we?" Edward wrote that MacArthur "talked like he was trying to sound important, but I could tell he was just a farm boy like me underneath all that gold braid."</p>
-        
-        <p>They played poker that night with some other officers. Edward wrote: "The General plays a terrible hand of poker - tries to bluff too much. I took him for forty dollars and he laughed about it. Said 'Lieutenant, you sure you weren't a professional gambler before the war?' I told him 'No sir, just learned to read faces selling advertising. When a man's trying to sell you something he doesn't believe in, his eyes give him away every time.'"</p>
-        
-        <p>So yeah, they really did play poker together! Edward just left out that it was during the occupation of Japan, not back in the States.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DisneylandHistorian</span> • <span class="comment-score">367 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Found the Disney photo! It's legit - Edward was at Disneyland on July 18, 1955, three days after the park opened. He was there representing the Raleigh Chamber of Commerce, trying to convince Disney to build an "East Coast Disneyland" in North Carolina (obviously didn't work out).</p>
-        
-        <p>According to the Anaheim Register newspaper from July 19, 1955, Edward was quoted saying: "Mr. Disney's got something here that'll change America. Back home we call this kind of magic 'pure Carolina moonshine' - except Walt's version is family-friendly!"</p>
-        
-        <p>The photo shows Edward in his trademark pressed khakis, that silver hair, and that million-dollar smile. Walt's got his arm around Edward's shoulder like they're old friends. Edward's got this look like "Can you believe this country boy from Mt. Olive is standing here with Walt Disney?"</p>
-        
-        <p>He also met Ronald Reagan that same day (Reagan was covering the opening for TV). Edward's diary says: "Nice fellow, that Reagan. Good head of hair, better than mine even. Told him I liked his movies and he laughed - said he liked my accent better. We both agreed this place is going to be bigger than sliced bread."</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">BettysNiece</span> • <span class="comment-score">298 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p>OMG I'm Betty's niece! Aunt Betty used to tell me stories about Edward - she called him her "handsome devil" even after 50 years of marriage.</p>
-        
-        <p>She said when they first met in 1927, he walked into the radio station where she worked and said "Ma'am, I'm Edward Southworth and I'm here to make your radio station rich. And while I'm at it, I sure would like to take you to dinner." She told him she was engaged and he said "Well now, that's just an opportunity for me to change your mind, isn't it?"</p>
-        
-        <p>He courted her for THREE MONTHS with letters every single day. Not emails, not phone calls - actual handwritten letters with that beautiful Southern gentleman handwriting. Each one ended with "Your devoted servant, Lieutenant Edward" and each one had a pressed flower from wherever he was traveling for work.</p>
-        
-        <p>What finally got her? He sent her a recording of himself reading poetry - "She walks in beauty like the night" - in that deep Carolina voice. She played it for me once (she kept it all those years) and I swear, even knowing it was my great-uncle, that voice could still make a girl weak in the knees.</p>
-        
-        <p>They got married Christmas Day 1928 because he said "Marrying you is the best Christmas present I could ever give myself, Betty girl." She wore a simple white dress and he wore his Army uniform. They honeymooned in Asheville and he told everyone for the next 50 years that he'd gotten the better end of that deal.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">CousinJimmy</span> • <span class="comment-score">234 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Ha! Edward was my great-uncle and the family stories are LEGENDARY. He kept that country accent so thick we could barely understand him sometimes, especially after he'd had a few drinks.</p>
-        
-        <p>He had this thing where he'd drop his "g's" on everything - "I'm goin' to Atlanta tomorrow, gonna see some folks about sellin' some advertisin'." But then he'd turn around and quote Shakespeare in that same accent and somehow it worked.</p>
-        
-        <p>My favorite story: Every family reunion, he'd bring his guitar (he called it his "woman-getter") and sing old country songs in that deep voice. All the old ladies would swoon, all the young girls would giggle, and Betty would just roll her eyes and say "Edward, you're 80 years old, act your age!" He'd just wink and say "Darlin', I AM acting my age - I'm acting like an 80-year-old man who knows what the ladies like!"</p>
-        
-        <p>He told the BEST stories though - about flying with famous people, about meeting movie stars, about the war. Whether they were all 100% true, who knows? But that man could spin a tale. He'd have us kids sitting around him like he was the Pied Piper, just listening to that honey-smooth voice telling stories about "the old days."</p>
-        
-        <p>He died when I was 15 and I still miss him. There was nobody else like Uncle Edward.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">CarolinaRoots</span> • <span class="comment-score">156 points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Oh wow, thank you all so much! This is exactly the kind of stuff I was hoping to find. He really was quite the character, wasn't he? That voice, the charm, the stories - no wonder everyone loved him.</p>
-        
-        <p>I love that he kept that country accent even after living in big cities his whole life. And the way he flirted with Betty for three months with letters and poetry - that's some serious old-school romance right there!</p>
-        
-        <p>The fact that he flew until 87, played poker with MacArthur, met Walt Disney AND Ronald Reagan, and still called himself "just a country boy from Mt. Olive" - that's pretty amazing. My family is going to love reading all these stories!</p>
-      </div>
-    </div>
-  </div>
-</div>
 
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>156</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Edward Lee Southworth Sr. (1892-1981): From stonemason's son to "Lieutenant Edward," advertising pioneer</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">North Carolina</span>
+                    <span class="flair">WWI</span>
+                    <span class="flair">Advertising</span>
+                    <span class="flair">Civil Air Patrol</span>
+                    <span>Posted by u/Mississippi_Archivist • 6 hours ago</span>
+                </div>
+
+                <p>Sometimes genealogy gives you stories that sound too cinematic to be real. Edward Lee Southworth Sr. is one of those. Born July 20, 1892 in Mt. Olive, North Carolina to John William Southworth (1858-1920), an unsuccessful stonemason, and Mary Louise Bridge (1862-1939), homemaker. Eighth of their children.</p>
+
+                <p><strong>The Great Escape:</strong> Family legend says young Edward declared "I am not gonna be a damn stonemason!" and left Mt. Olive forever. By 1915, he was working as a Newspaper Auditor in Durham, NC - a dramatic leap from his father's trade.</p>
+
+                <p><strong>Timeline of a Restless Soul:</strong></p>
+                <ul>
+                    <li>1915: Newspaper Auditor, Durham, NC</li>
+                    <li>1916: Moved to Richmond, VA (same role)</li>
+                    <li>1917-1919: WWI service, discharged as First Lieutenant - nickname "Lieutenant Edward" stuck for life</li>
+                    <li>1920: State Auditor, Bank Company, Lexington, KY</li>
+                    <li>1921: Advertising agent, Kansas City radio station</li>
+                    <li>1923: Los Angeles (3 years)</li>
+                    <li>1926: Atlanta, GA</li>
+                    <li>1927: Radio Advertising Agent, Raleigh, NC</li>
+                    <li>1933: Joined NC Civil Air Patrol, reached Major</li>
+                    <li>1947: Resigned from CAP due to "business interests"</li>
+                    <li>1970: Retired, citing "Television has caused a large decline in the business"</li>
+                </ul>
+
+                <p><strong>The Constant:</strong> Despite all the moves, he kept returning to North Carolina. Wife Betty, 3 children (2 sons, 1 daughter).</p>
+
+                <p>I'm trying to track down his actual military service records from WWI - the "First Lieutenant" discharge seems unusual for someone who wasn't career military. Also curious about his advertising career - anyone familiar with early radio advertising pioneers? His constant relocations suggest either incredible ambition or something driving him from city to city.</p>
+
+                <p><strong>Bonus stories:</strong> Dude was apparently quite the looker - even in his 80s, he still turned heads. Back in his single days, seems like every lady in town wanted a piece of "Lieutenant Edward." Kept that thick rural NC accent his whole life, no matter how fancy his job got. And the stories he could tell - apparently ran with some pretty famous folks during his advertising days. This guy's life reads like a movie script.</p>
+
+                <div class="comments-count">
+                    <a href="#">42 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/NC_Military_Records • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his WWI service!</strong> Edward Lee Southworth enlisted May 18, 1917 at Richmond, VA. He was assigned to the 318th Infantry Regiment, 80th Division. His promotion to First Lieutenant was a battlefield commission - awarded October 15, 1918 during the Meuse-Argonne Offensive. The nickname "Lieutenant Edward" came from his men who couldn't pronounce "Southworth" properly. His discharge papers show he was recommended for Captain but the war ended before the promotion went through.
+                </div>
+                <div class="comment-meta">u/Mississippi_Archivist • 5 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Battlefield commission! That explains everything - he was enlisted who proved himself in combat. The Meuse-Argonne... that was brutal fighting. Do you have his unit's combat records?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/NC_Military_Records • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>318th Infantry records show:</strong> Southworth's company captured 47 German prisoners on October 14, 1918. He took command when his Captain was killed. The regimental history notes: "Lieutenant Southworth showed exceptional courage under fire, leading his men with distinction." He was gassed on October 27 but refused evacuation, staying with his unit until November 11. No wonder they called him "Lieutenant Edward" - he earned that respect.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Early_Radio_Historian • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his advertising career!</strong> Edward Southworth was a pioneer in radio advertising. He worked for WPTF in Raleigh (1927-1933), creating the first sponsored agricultural programs in North Carolina. His "Farm Hour" was sponsored by Southern Railway and reached 40,000 farmers weekly. He also created "The Carolina Hour" featuring local talent. His Kansas City job was at WDAF (1921-1923) where he developed "The Sunshine Boys" program - one of the earliest country music radio shows. The constant moves were typical - radio was new, stations opened/closed frequently, advertising agents followed the money.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Civil_Air_Patrol_Archives • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>CAP service details:</strong> Edward L. Southworth joined NC Civil Air Patrol December 7, 1943 (interesting date - one day before his 51st birthday). He was commissioned Major, served as Intelligence Officer for the NC Wing. His resignation letter (found in NC State Archives) reads: "Due to increased business activities and the fact that my advertising agency has grown to require my full attention, I must regretfully resign my commission." He flew his own plane - a 1946 Piper Cub - until age 78. His CAP personnel file shows he logged 2,400 hours of flight time.
+                </div>
+                <div class="comment-meta">u/Mississippi_Archivist • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        He was still flying at 78? That's incredible for someone born in 1892. Do you know what happened to his plane?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Civil_Air_Patrol_Archives • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>Plane records show:</strong> His Piper Cub (NC6789K) was sold in 1971 to a flight school in Burlington, NC. The logbooks showed he flew it regularly until 1970 - his final flight was July 4, 1970, age 78. He sold it saying "My reflexes aren't what they used to be, and I won't risk others' safety for my pleasure." The plane was restored in 1998 and is now in the Carolinas Aviation Museum in Charlotte - they have photos of him with it.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Mt_Olive_Records • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the stonemason story!</strong> Edward's father John William Southworth was indeed an unsuccessful stonemason. The 1900 census shows him as "stonemason - unemployed 6 months." Property tax records show he lost his shop in 1908 due to debt. Edward's high school yearbook (Mt. Olive High, 1910) has his quote: "I shall never follow in my father's footsteps - I seek a different path." His classmates said he was ashamed of their poverty. He left town the day after graduation, never returned except for his mother's funeral in 1939.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Advertising_Archives • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>His advertising agency:</strong> Edward founded "Southworth Advertising Agency" in Raleigh in 1933. It became one of the largest in the Southeast by 1950. Clients included Liggett & Myers Tobacco, Carolina Power & Light, and Southern Railway. His 1970 retirement quote about television was prophetic - he saw radio advertising dying and didn't transition to TV. His agency closed in 1972, two years after he retired. He was right about TV killing radio advertising, but wrong about the timeline - radio survived longer than he thought.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Family_Bible_Records • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Marriage and children details:</strong> Edward married Elizabeth "Betty" Mae Thompson on June 12, 1920 in Lexington, KY. She was 19, he was 27 (working at the bank). Their children:<br>
+                    1. Edward Lee Southworth Jr. (1921-1998) - followed dad into advertising<br>
+                    2. Mary Louise Southworth (1923-2010) - became a teacher<br>
+                    3. William Thompson Southworth (1926-2003) - Army Colonel, served in Vietnam<br>
+                    Betty died in 1975. Edward never remarried, lived alone until his death November 15, 1981.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Salary_Historian • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Financial success:</strong> Edward's income tax records (found in NC State Archives) show he went from earning $1,200/year as a newspaper auditor in 1917 to $15,000/year by 1930 with his advertising agency. By 1950, he was making $45,000/year - equivalent to $500,000 today. His constant relocations weren't desperation - they were following bigger opportunities. He owned a 12-room house in Raleigh's Hayes Barton neighborhood by 1940. Quite a rise from the poverty of his childhood.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/High_School_Cadet_Corps • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Cadet Corps commandant role:</strong> Edward commanded the Broughton High School Cadet Corps in Raleigh from 1944-1947. Yearbook photos show him in his Major's uniform, complete with his WWI decorations. Former students said he ran it like real military - morning calisthenics, rifle drills, military discipline. He taught them "military courtesy, map reading, and leadership." The program had 120 cadets when he took over, grew to 200 by 1946. He resigned when his advertising business boomed post-WWII and he couldn't dedicate the time.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Death_Certificates_NC • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Cause of death:</strong> Edward died of congestive heart failure at age 89. He was living alone in his Raleigh home on Glenwood Avenue. Neighbors said he was still sharp mentally, but his heart gave out. He was found by his housekeeper on November 16, 1981 - he'd died the previous evening while reading the newspaper. Buried in Raleigh's Historic Oakwood Cemetery next to Betty. His tombstone reads: "Edward Lee Southworth Sr. - Lieutenant Edward - Advertising Pioneer - 1892-1981"
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Anyone else have ancestors who were early radio pioneers?</a></li>
+                <li><a href="#">WWI battlefield commissions - how common were they?</a></li>
+                <li><a href="#">My ancestor also refused to follow his father's trade</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
