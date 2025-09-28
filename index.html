@@ -1,218 +1,368 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>President Elvis Aaron Presley (1989-1997): How "The King" became the first entertainer President and reshaped American politics : AlternateHistory</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/AlternateHistory</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/TimelineHistorian</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Presidents
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Alternate History: What if Elvis Presley never died in 1977, retired from music, and ran for President as a conservative Republican in the 1980s? He serves two terms (1985-1993) and lives until 2012.</div>
-    <div class="post-meta">
-      <span class="comment-score">2.4k upvotes</span> • posted by <span class="comment-author">AlternateHistoryBuff</span> <span class="flair">Speculative History</span>
-    </div>
-    <div class="post-content">
-      <p>Just finished reading that fascinating biography "The King of Pennsylvania Avenue: Elvis Presley's Political Legacy" and I'm blown away by how different America could have been. The premise: Elvis faked his death in 1977 (or rather, the government helped him disappear) to escape the mob and drug problems, but he re-emerged in 1982 clean, sober, and with political ambitions.</p>
-      
-      <p>Timeline:</p>
-      <ul>
-        <li><strong>1982:</strong> Elvis re-emerges, gives famous "American Comeback" speech at the RNC</li>
-        <li><strong>1984:</strong> Elected Governor of Tennessee</li>
-        <li><strong>1988:</strong> Wins Republican nomination, defeats Dukakis in landslide</li>
-        <li><strong>1989-1997:</strong> Two terms as 41st President</li>
-        <li><strong>2012:</strong> Dies at age 77, state funeral, buried at Graceland</li>
-      </ul>
-      
-      <p>His platform was basically: Pro-gun, anti-drug, anti-hippie, pro-military, anti-communist, and pro-"traditional American values." How do you think this would have changed America? The War on Drugs? The culture wars? Music and politics?</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">PresidentialHistorian</span> • <span class="comment-score">1.2k points</span> • 12 hours ago
-      </div>
-      <div class="comment-content">
-        <p>The cultural impact alone would have been massive. Imagine having a President who literally invented rock and roll, but then used that cultural capital to promote conservative values. His 1988 campaign slogan was "Taking Care of Business... for America" and his rallies were basically Elvis concerts combined with Reagan-style speeches.</p>
-        
-        <p>Here's what actually happened in this timeline:</p>
-        <p><strong>The "Moral Majority Revolution":</strong> Elvis brought millions of working-class Democrats - especially Southern whites and Midwestern union members - into the Republican Party. His 1988 victory was 426 electoral votes to 112. He won every state except Massachusetts, D.C., and Minnesota.</p>
-        
-        <p><strong>The "War on Drugs" becomes literal:</strong> President Elvis created the "Federal Anti-Drug Enforcement Act" (FADE) in 1990, which made drug trafficking a federal crime punishable by life imprisonment. He deployed the military to the Mexican border and established mandatory minimum sentences that make our real timeline look lenient.</p>
-        
-        <p><strong>The "Cultural Counter-Revolution":</strong> He used the FCC to crack down on "anti-American" music and entertainment. MTV had to play 30% "patriotic" content. Heavy metal and rap were basically driven underground. But here's the twist - he promoted "wholesome" rock and country music through federal grants.</p>
-        
-        <p>His approval ratings were bizarre - liberals HATED him, but he maintained 70%+ approval by combining economic populism (massive infrastructure spending) with cultural conservatism.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">GenXMemory</span> • <span class="comment-score">856 points</span> • 11 hours ago
-      </div>
-      <div class="comment-content">
-        <p>I grew up in this timeline and let me tell you - it was WEIRD. Imagine being a teenager in the early 90s and your President is literally Elvis. Every major speech started with "Thank you, thank you very much." His State of the Union addresses would end with "God bless you, God bless America, and God bless rock and roll."</p>
-        
-        <p><strong>The "Graceland Protocol":</strong> He turned the White House into a combination of Elvis museum and conservative command center. The Oval Office had gold records on the walls. He installed a jungle room in the residential quarters. Foreign leaders would visit and he'd give them Elvis memorabilia as official state gifts.</p>
-        
-        <p><strong>But here's what people don't understand:</strong> He was actually surprisingly effective. The "Elvis Economy" (his infrastructure program) rebuilt America's highways, airports, and communication systems. He created the "American Entertainment Corporation" - a federal agency that promoted pro-American music, movies, and TV shows globally.</p>
-        
-        <p>The drug war was brutal though. By 1995, the incarceration rate was triple our timeline. But violent crime did drop dramatically. He basically ended the crack epidemic through a combination of harsh penalties and massive rehabilitation programs (he funded "Elvis Centers" for addiction treatment).</p>
-        
-        <p>His foreign policy was wild - he'd invite world leaders to Graceland for "Rock and Roll Summits." The Soviet Union collapsed two years earlier because Gorbachev was such an Elvis fan that he agreed to deeper reforms just to get invited to Graceland.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MusicHistoryProf</span> • < <span class="comment-score">743 points</span> • 10 hours ago
-      </div>
-      <div class="comment-content">
-        <p>The musical implications were fascinating. President Elvis created the "Federal Music Standards Act" which required radio stations to play 40% "American heritage music" (country, gospel, patriotic, and early rock and roll). He basically froze musical development for a decade.</p>
-        
-        <p><strong>The "Underground Music Movement":</strong> Grunge, alternative, and hip-hop went completely underground. There were secret concerts in warehouses, basements, and fields. The FBI had a "Musical Crimes Division" that infiltrated these shows. Musicians like Kurt Cobain, Tupac, and Notorious B.I.G. became political prisoners rather than musical martyrs.</p>
-        
-        <p><strong>But here's the paradox:</strong> He also saved American music from British dominance. In our timeline, British bands dominated the 80s and 90s. In Elvis's timeline, American music became hyper-patriotic and globally dominant. He created "Music Diplomacy" - using American music as soft power.</p>
-        
-        <p>The "Elvis Sound" became the official American musical style - a combination of rock, country, gospel, and patriotic themes. Every school had "American Music Classes" where kids learned Elvis songs, patriotic hymns, and country standards.</p>
-        
-        <p>By the 2000s, when the restrictions finally lifted, American music exploded in creativity - 20 years of pent-up innovation released at once. The "Neo-Grunge" movement of the 2010s made our timeline's music look tame.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">PoliticalSciencePhD</span> • <span class="comment-score">612 points</span> • 9 hours ago
-      </div>
-      <div class="comment-content">
-        <p>The political realignment was extraordinary. President Elvis created what historians call the "Rock and Roll Coalition" - a combination of social conservatives, economic populists, and cultural traditionalists that dominated American politics for 25 years.</p>
-        
-        <p><strong>The "505 Strategy":</strong> He won 50% of Hispanic voters and 50% of union households in 1988 by combining anti-drug messaging with economic nationalism. His "American Workers First" program required federal contractors to hire American citizens and pay above-market wages.</p>
-        
-        <p><strong>The "Cultural Presidency":</strong> He governed through cultural symbols rather than policy details. His approval ratings would spike after televised concerts from the White House lawn. He turned political rallies into religious-rock experiences.</p>
-        
-        <p><strong>The dark side:</strong> The "War on Cultural Decay" (WOCD) became a massive surveillance program. The FBI monitored musicians, artists, writers, and academics for "anti-American content." There were thousands of investigations but few prosecutions - the threat was enough to create self-censorship.</p>
-        
-        <p>His greatest legacy was proving that celebrity culture could completely transform politics. After Elvis, every presidential candidate needed cultural appeal as much as policy positions. He paved the way for the "Entertainment-Presidential Complex" that dominates American politics today.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MillennialPerspective</span> • <span class="comment-score">489 points</span> • 8 hours ago
-      </div>
-      <div class="comment-content">
-        <p>My parents met at an underground punk show in 1994 that got raided by the Musical Crimes Division. They tell stories about how rebellious it felt just to listen to Nirvana or Public Enemy. The "Elvis Youth" (kids who grew up under his presidency) became the most politically radical generation since the 1960s.</p>
-        
-        <p><strong>The "Counter-Culture 2000s":</strong> When Elvis died in 2012, there was this massive cultural explosion. It was like the 1960s happened all at once in 2013-2015. The restrictions lifted, the surveillance state rolled back, and suddenly everything that had been suppressed for 25 years came out at once.</p>
-        
-        <p><strong>The economic paradox:</strong> Elvis was simultaneously the most socialist and most conservative president. He created massive federal jobs programs, rebuilt infrastructure, and promoted union wages - while also creating the most restrictive cultural policies in American history.</p>
-        
-        <p>His funeral was insane - a week of national mourning, his body lay in state in the Capitol Rotunda (the first time for a president since JFK), and his burial at Graceland became a national pilgrimage site. They literally carved his face onto Mount Rushmore in 2015.</p>
-        
-        <p>Now we're dealing with the aftermath - a generation that grew up under cultural authoritarianism but economic populism. The current political battles are between "Elvis Democrats" (economic populists, cultural liberals) and "Post-Elvis Republicans" (economic conservatives, cultural libertarians).</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">TennesseePolitical</span> • <span class="comment-score">234 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p>As someone from Tennessee, the Elvis-as-President timeline is fascinating because it completely changed Southern politics. He created the "New South" identity that combined traditional values with modern economic development.</p>
-        
-        <p><strong>The "Graceland Doctrine":</strong> His foreign policy was basically "Make America Cool Again." He used American cultural exports - music, movies, fashion - as diplomatic tools. The State Department had a "Cultural Ambassador Program" where musicians, actors, and artists became official diplomatic representatives.</p>
-        
-        <p><strong>The "Memphis Mafia" in government:</strong> He brought his old friends into high positions. Colonel Tom Parker became Secretary of Commerce. His backup singers became cultural advisors. It was like having a presidential administration run by a rock band's entourage.</p>
-        
-        <p>But here's what people forget - he was genuinely popular. Not just among conservatives, but among working people who felt like he understood them. He spoke the language of factory workers, truck drivers, and waitresses. He never lost that Memphis street sense even when sitting in the Oval Office.</p>
-        
-        <p>The current debate is whether his legacy was ultimately positive or negative. Crime rates dropped, infrastructure improved, American culture became globally dominant again - but at the cost of cultural freedom and civil liberties that took a generation to restore.</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>3.2k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">President Elvis Aaron Presley (1989-1997): How "The King" became the first entertainer President and reshaped American politics</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Alternate History</span>
+                    <span class="flair">Presidential History</span>
+                    <span class="flair">1980s</span>
+                    <span class="flair">Elvis</span>
+                    <span>Posted by u/TimelineHistorian • 4 hours ago</span>
+                </div>
+
+                <p>In our timeline, Elvis Presley died August 16, 1977. But what if he didn't? What if he faked his death, retired from music, and spent a decade building a political movement that would make him the 42nd President of the United States?</p>
+
+                <p><strong>The Setup (1977-1987):</strong> Elvis, disillusioned with the music industry and increasingly conservative, stages his death with help from Colonel Parker and Memphis Mafia connections. He retreats to a compound in New Mexico, studying politics and building connections with emerging conservative leaders. His anti-drug stance (after his own struggles) and pro-gun positions align perfectly with the Reagan revolution.</p>
+
+                <p><strong>The Political Rise (1987-1988):</strong> "The King" emerges from hiding, revealing his survival on The Tonight Show with Johnny Carson. America goes wild. He immediately enters Republican politics, leveraging his massive popularity and charisma. His campaign slogan: "Taking Care of Business in Washington." The 1988 election becomes a landslide against Michael Dukakis.</p>
+
+                <p><strong>President Elvis (1989-1997):</strong> Two terms of unprecedented cultural influence on American politics. His cabinet included:</p>
+                <ul>
+                    <li>Vice President: Charlton Heston (perfect fit for his conservative base)</li>
+                    <li>Secretary of State: General Alexander Haig</li>
+                    <li>Attorney General: Ed Meese</li>
+                    <li>Secretary of Defense: Caspar Weinberger</li>
+                    <li>Press Secretary: Pat Boone (yes, really)</li>
+                </ul>
+
+                <p><strong>Major Policies:</strong></p>
+                <ul>
+                    <li>"War on Drugs" became literal - deployed military to border</li>
+                    <li>Second Amendment expansion - "Elvis Gun Rights Act of 1990"</li>
+                    <li>National entertainment industry tax breaks (controversial)</li>
+                    <li>Massive military buildup - "Peace through Graceland"</li>
+                    <li>Crackdown on "hippie culture" and 1960s remnants</li>
+                </ul>
+
+                <p><strong>Cultural Impact:</strong> The White House became Graceland East. State dinners featured gospel music. He performed "In the Ghetto" at the Berlin Wall (1989). His 1990 State of the Union included a guitar performance of "America the Beautiful." Critics called it "the first reality TV presidency."</p>
+
+                <p><strong>Legacy:</strong> Died January 8, 2012 at age 77. Buried at Graceland, which became a national monument. His presidency normalized celebrity politicians - paved the way for future entertainer candidates. The "Elvis Amendment" (22nd Amendment modification) allowed him to run for a third term, though he declined due to health.</p>
+
+                <p>What do you think would be the long-term effects of an Elvis presidency? How would it change our current political landscape? Would we have had other entertainer presidents sooner?</p>
+
+                <div class="comments-count">
+                    <a href="#">892 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/ConservativeHistoryBuff • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his actual political platform from 1988!</strong> I have a copy of "Taking Care of Business: The Elvis Presley Plan for America" - his campaign manifesto. Key points:<br>
+                    • Mandatory drug testing for all federal employees (he'd been through rehab)<br>
+                    • Constitutional amendment requiring balanced budgets<br>
+                    • National "Right to Bear Arms" law superseding state laws<br>
+                    • Federal ban on "obscene" music lyrics (Tipper Gore's worst nightmare)<br>
+                    • Massive infrastructure spending called "Highway to the Future"<br>
+                    • Creation of "National Entertainment Industry" as official economic sector
+                </div>
+                <div class="comment-meta">u/TimelineHistorian • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        The music censorship thing is fascinating given his own controversial early career. Do you have any details on how he reconciled that with his rock and roll past?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/ConservativeHistoryBuff • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>Quote from the book:</strong> "I know the devil's music because I created it. But what passes for music today makes 'Hound Dog' sound like a hymn. We've got to protect our children from this garbage." He was specifically targeting rap and heavy metal. Ironically, he exempted gospel, country, and patriotic music from any restrictions.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/SecretServiceHistory • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Secret Service stories from Elvis presidency:</strong> My uncle was on his detail 1990-1993. Said it was the strangest assignment ever. Elvis insisted on carrying a concealed pistol (unprecedented for a President) and would practice quick-draw in the Oval Office. He had a shooting range installed in the White House basement. Every morning started with "Blue Hawaii" playing over the PA system at 6 AM. He once held a cabinet meeting in his gold lamé suit because it was "important." The Secret Service codename was "KING" (obviously).
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/GracelandInsider • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Graceland Presidential Library details:</strong> The library opened in 2015 and is WILD. His Oval Office replica includes the actual guitar he used for "America the Beautiful" in the 1990 State of the Union. The gift shop sells replica gold sunglasses and "TCB" (Taking Care of Business) lightning bolt pins like he wore. The most popular exhibit is his collection of presidential jumpsuits - yes, he had custom-made presidential jumpsuits for casual Fridays. Over 2 million visitors annually, making it the most visited presidential library.
+                </div>
+                <div class="comment-meta">u/TimelineHistorian • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Presidential jumpsuits? Please tell me there are photos of foreign leaders visiting while he wore these?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/GracelandInsider • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>Yes! My favorite:</strong> Japanese PM Toshiki Kaifu visited in 1990. Elvis wore a white jumpsuit with presidential seal on the back and "ELVIS" rhinestoned across the shoulders. Kaifi's face in the photos is priceless - trying to maintain diplomatic composure while Elvis explains his "special protocol" for casual meetings. The jumpsuit is displayed next to a photo of Kaifi's expression.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/1988CampaignInsider • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>1988 campaign stories:</strong> I worked on the Dukakis campaign. We thought it was a joke when Elvis announced. Then he held his first rally at Madison Square Garden - 20,000 people showed up, mostly women in their 40s who'd been teenagers during Elvis mania. He opened with "Well, I guess you could say I'm all shook up about America's future..." The crowd went insane. Dukakis couldn't compete with that charisma. Elvis won every debate by turning policy questions into song lyrics. When asked about the deficit, he sang "We're caught in a trap, I can't walk out..." from Suspicious Minds but replaced it with "deficit" references.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/MusicCensorshipHistory • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>The "Decency in Music Act" of 1991:</strong> Elvis's signature legislation required all music to carry content ratings like movies. It was a disaster - record companies just slapped "Mature" labels on everything as a marketing tool. Ironically, his own catalog got retroactively rated, with "Jailhouse Rock" getting a "Parental Advisory" label for "crime references." The law was overturned by the Supreme Court in 1994 as unconstitutional censorship, but not before it created the "Banned in Boston" effect - anything labeled "indecent" became instantly more popular.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/InternationalRelationsAlt • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Foreign policy disasters:</strong> His 1991 summit with Gorbachev was a nightmare. Elvis kept calling him "Gorby" and tried to teach him the twist during a break. At one point, he suggested they settle Cold War differences with a dance-off. The State Department had to release a statement saying "The President was employing informal diplomacy techniques." Gorbachev was reportedly confused but charmed, later saying "He was like a force of nature - you couldn't be angry with him, even when he was completely inappropriate."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/DrugWarEnforcement • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>"Operation Heartbreak Hotel" - his drug war:</strong> The 1990-1991 military operation at the border was unprecedented. Troops in full combat gear conducting vehicle searches, helicopters patrolling 24/7, and Elvis personally visiting checkpoints wearing military fatigues. They seized 40 tons of marijuana in the first month. But the ACLU went crazy - military conducting domestic law enforcement violated Posse Comitatus. The Supreme Court ruled it unconstitutional in 1992. Elvis was furious, gave a speech saying "I guess the courts are caught in a trap they can't walk out of when it comes to protecting American families."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/PresidentialFashion • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>His presidential style influence:</strong> After Elvis, every president needed a "casual" persona. Clinton played saxophone, Bush had his ranch, Obama played basketball, Trump had his reality TV background. The line between entertainer and politician completely blurred. Some historians argue Elvis accidentally created the celebrity presidency that led to our current political circus. His approval ratings were consistently above 60% though - people loved the entertainment value even when they disagreed with policies.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/2012DeathAnniversary • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>His final days (January 2012):</strong> Elvis died exactly 35 years after his staged death in 1977. He was 77, living at Graceland with round-the-clock medical care. His last words were reportedly "Thank you, thank you very much" to his nurse, followed by "Tell Lisa I kept my promise" (referring to keeping his political legacy alive). The country mourned for weeks. Every radio station played Elvis songs for 24 hours. Even critics admitted he'd changed American politics forever - for better or worse. His funeral was attended by 5 former presidents and celebrities from every generation. The Elvis Presidential Library had to turn away thousands of mourners.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/AlternateHistory</h3>
+            <ul>
+                <li><a href="#">What if John Lennon had run for President in 1984?</a></li>
+                <li><a href="#">The Sinatra Administration: When the Chairman became Chief</a></li>
+                <li><a href="#">How celebrity politicians changed global politics after Elvis</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
