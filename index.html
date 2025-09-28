@@ -1,385 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edward Lee Southworth Sr. (1892-1981): From stonemason's son to "Lieutenant Edward," advertising pioneer : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .post-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+  }
+  .post-title {
+    padding: 12px 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  .post-meta {
+    padding: 0 16px 12px;
+    font-size: 12px;
+    color: #7c7c7c;
+  }
+  .post-content {
+    padding: 0 16px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .comment-section {
+    border-top: 1px solid #eee;
+    padding: 16px;
+  }
+  .comment {
+    margin-bottom: 12px;
+    padding-left: 8px;
+    border-left: 2px solid #0079D3;
+  }
+  .comment-author {
+    font-weight: 600;
+    font-size: 12px;
+    color: #0079D3;
+    margin-bottom: 4px;
+  }
+  .comment-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    line-height: 1.4;
+  }
+  .comment-actions {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+  }
+  .vote-buttons {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 12px;
+    color: #888;
+  }
+  .flair {
+    background-color: #e8f4f8;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    color: #0079D3;
+    margin-left: 4px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Mississippi_Archivist</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>156</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Edward Lee Southworth Sr. (1892-1981): From stonemason's son to "Lieutenant Edward," advertising pioneer</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">North Carolina</span>
-                    <span class="flair">WWI</span>
-                    <span class="flair">Advertising</span>
-                    <span class="flair">Civil Air Patrol</span>
-                    <span>Posted by u/Mississippi_Archivist • 6 hours ago</span>
-                </div>
-
-                <p>Sometimes genealogy gives you stories that sound too cinematic to be real. Edward Lee Southworth Sr. is one of those. Born July 20, 1892 in Mt. Olive, North Carolina to John William Southworth (1858-1920), an unsuccessful stonemason, and Mary Louise Bridge (1862-1939), homemaker. Eighth of their children.</p>
-
-                <p><strong>The Great Escape:</strong> Family legend says young Edward declared "I am not gonna be a damn stonemason!" and left Mt. Olive forever. By 1915, he was working as a Newspaper Auditor in Durham, NC - a dramatic leap from his father's trade.</p>
-
-                <p><strong>Timeline of a Restless Soul:</strong></p>
-                <ul>
-                    <li>1915: Newspaper Auditor, Durham, NC</li>
-                    <li>1916: Moved to Richmond, VA (same role)</li>
-                    <li>1917-1919: WWI service, discharged as First Lieutenant - nickname "Lieutenant Edward" stuck for life</li>
-                    <li>1920: State Auditor, Bank Company, Lexington, KY</li>
-                    <li>1921: Advertising agent, Kansas City radio station</li>
-                    <li>1923: Los Angeles (3 years)</li>
-                    <li>1926: Atlanta, GA</li>
-                    <li>1927: Radio Advertising Agent, Raleigh, NC</li>
-                    <li>1933: Joined NC Civil Air Patrol, reached Major</li>
-                    <li>1947: Resigned from CAP due to "business interests"</li>
-                    <li>1970: Retired, citing "Television has caused a large decline in the business"</li>
-                </ul>
-
-                <p><strong>The Constant:</strong> Despite all the moves, he kept returning to North Carolina. Wife Betty, 3 children (2 sons, 1 daughter).</p>
-
-                <p>I'm trying to track down his actual military service records from WWI - the "First Lieutenant" discharge seems unusual for someone who wasn't career military. Also curious about his advertising career - anyone familiar with early radio advertising pioneers? His constant relocations suggest either incredible ambition or something driving him from city to city.</p>
-
-                <p><strong>Bonus stories:</strong> Dude was apparently quite the looker - even in his 80s, he still turned heads. Back in his single days, seems like every lady in town wanted a piece of "Lieutenant Edward." Kept that thick rural NC accent his whole life, no matter how fancy his job got. And the stories he could tell - apparently ran with some pretty famous folks during his advertising days. This guy's life reads like a movie script.</p>
-
-                <div class="comments-count">
-                    <a href="#">42 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/NC_Military_Records • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his WWI service!</strong> Edward Lee Southworth enlisted May 18, 1917 at Richmond, VA. He was assigned to the 318th Infantry Regiment, 80th Division. His promotion to First Lieutenant was a battlefield commission - awarded October 15, 1918 during the Meuse-Argonne Offensive. The nickname "Lieutenant Edward" came from his men who couldn't pronounce "Southworth" properly. His discharge papers show he was recommended for Captain but the war ended before the promotion went through.
-                </div>
-                <div class="comment-meta">u/Mississippi_Archivist • 5 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Battlefield commission! That explains everything - he was enlisted who proved himself in combat. The Meuse-Argonne... that was brutal fighting. Do you have his unit's combat records?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/NC_Military_Records • 4 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>318th Infantry records show:</strong> Southworth's company captured 47 German prisoners on October 14, 1918. He took command when his Captain was killed. The regimental history notes: "Lieutenant Southworth showed exceptional courage under fire, leading his men with distinction." He was gassed on October 27 but refused evacuation, staying with his unit until November 11. No wonder they called him "Lieutenant Edward" - he earned that respect.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Early_Radio_Historian • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his advertising career!</strong> Edward Southworth was a pioneer in radio advertising. He worked for WPTF in Raleigh (1927-1933), creating the first sponsored agricultural programs in North Carolina. His "Farm Hour" was sponsored by Southern Railway and reached 40,000 farmers weekly. He also created "The Carolina Hour" featuring local talent. His Kansas City job was at WDAF (1921-1923) where he developed "The Sunshine Boys" program - one of the earliest country music radio shows. The constant moves were typical - radio was new, stations opened/closed frequently, advertising agents followed the money.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Civil_Air_Patrol_Archives • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>CAP service details:</strong> Edward L. Southworth joined NC Civil Air Patrol December 7, 1943 (interesting date - one day before his 51st birthday). He was commissioned Major, served as Intelligence Officer for the NC Wing. His resignation letter (found in NC State Archives) reads: "Due to increased business activities and the fact that my advertising agency has grown to require my full attention, I must regretfully resign my commission." He flew his own plane - a 1946 Piper Cub - until age 78. His CAP personnel file shows he logged 2,400 hours of flight time.
-                </div>
-                <div class="comment-meta">u/Mississippi_Archivist • 4 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        He was still flying at 78? That's incredible for someone born in 1892. Do you know what happened to his plane?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Civil_Air_Patrol_Archives • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        <strong>Plane records show:</strong> His Piper Cub (NC6789K) was sold in 1971 to a flight school in Burlington, NC. The logbooks showed he flew it regularly until 1970 - his final flight was July 4, 1970, age 78. He sold it saying "My reflexes aren't what they used to be, and I won't risk others' safety for my pleasure." The plane was restored in 1998 and is now in the Carolinas Aviation Museum in Charlotte - they have photos of him with it.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Mt_Olive_Records • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the stonemason story!</strong> Edward's father John William Southworth was indeed an unsuccessful stonemason. The 1900 census shows him as "stonemason - unemployed 6 months." Property tax records show he lost his shop in 1908 due to debt. Edward's high school yearbook (Mt. Olive High, 1910) has his quote: "I shall never follow in my father's footsteps - I seek a different path." His classmates said he was ashamed of their poverty. He left town the day after graduation, never returned except for his mother's funeral in 1939.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🗣️</span>
-                    u/Radio_Old_Timers • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    My granddad worked with Edward at WPTF in Raleigh back in the late 20s. Said he was the most charming guy you'd ever meet - could sell ice to an Eskimo, as they used to say. Had this thick Carolina accent that never left him, no matter how successful he got. Granddad said Edward would walk into a room and within five minutes everyone wanted to be his friend. Heard stories about how the ladies just melted when he turned on that smile and started talking about his war stories. Guy was a real character - used to fly his little plane to business meetings just to show off.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Advertising_Archives • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His advertising agency:</strong> Edward founded "Southworth Advertising Agency" in Raleigh in 1933. It became one of the largest in the Southeast by 1950. Clients included Liggett & Myers Tobacco, Carolina Power & Light, and Southern Railway. His 1970 retirement quote about television was prophetic - he saw radio advertising dying and didn't transition to TV. His agency closed in 1972, two years after he retired. He was right about TV killing radio advertising, but wrong about the timeline - radio survived longer than he thought.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">✈️</span>
-                    u/Aviation_Stories • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    My uncle was in the Civil Air Patrol with Major Southworth back in the 40s. Said he was something else - would fly that little Piper Cub in weather that grounded everyone else. Had this thing where he'd buzz his own house to let his wife know he was home from trips. Uncle said he had more stories than anyone - about flying, about the war, about all the famous people he met in advertising. Apparently he once had lunch with Charles Lindbergh and spent the whole time talking about radio advertising instead of aviation. Guy just lived and breathed whatever he was doing at the moment.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Family_Bible_Records • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Marriage and children details:</strong> Edward married Elizabeth "Betty" Mae Thompson on June 12, 1920 in Lexington, KY. She was 19, he was 27 (working at the bank). Their children:<br>
-                    1. Edward Lee Southworth Jr. (1921-1998) - followed dad into advertising<br>
-                    2. Mary Louise Southworth (1923-2010) - became a teacher<br>
-                    3. William Thompson Southworth (1926-2003) - Army Colonel, served in Vietnam<br>
-                    Betty died in 1975. Edward never remarried, lived alone until his death November 15, 1981.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">💰</span>
-                    u/Salary_Historian • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Financial success:</strong> Edward's income tax records (found in NC State Archives) show he went from earning $1,200/year as a newspaper auditor in 1917 to $15,000/year by 1930 with his advertising agency. By 1950, he was making $45,000/year - equivalent to $500,000 today. His constant relocations weren't desperation - they were following bigger opportunities. He owned a 12-room house in Raleigh's Hayes Barton neighborhood by 1940. Quite a rise from the poverty of his childhood.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🎖️</span>
-                    u/High_School_Cadet_Corps • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    My dad was in the Broughton High School Cadet Corps when Major Southworth was commandant (1945-1947). Said he was the most military guy you could imagine - even his civilian clothes looked like a uniform. Had this booming voice that could rattle windows, but he was fair. Dad said he treated those high school kids like they were real soldiers - morning calisthenics, rifle drills, the whole nine yards. He'd tell stories about WWI that made those teenagers' eyes go wide. Dad said he resigned when his advertising business really took off after the war - just couldn't do both anymore.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Death_Certificates_NC • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Cause of death:</strong> Edward died of congestive heart failure at age 89. He was living alone in his Raleigh home on Glenwood Avenue. Neighbors said he was still sharp mentally, but his heart gave out. He was found by his housekeeper on November 16, 1981 - he'd died the previous evening while reading the newspaper. Buried in Raleigh's Historic Oakwood Cemetery next to Betty. His tombstone reads: "Edward Lee Southworth Sr. - Lieutenant Edward - Advertising Pioneer - 1892-1981"
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Anyone else have ancestors who were early radio pioneers?</a></li>
-                <li><a href="#">WWI battlefield commissions - how common were they?</a></li>
-                <li><a href="#">My ancestor also refused to follow his father's trade</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">r/europe</div>
+  
+  <div class="post-container">
+    <div class="post-title">🚨 COSTCO IS INVADING EUROPE 🚨 German-French Alliance (Aldi + Carrefour) vs American Bulk Empire - LIVE UPDATES</div>
+    <div class="post-meta">posted by u/brussels_sprout_69 <span class="flair">BREAKING</span> • 7 minutes ago • 15.2k upvotes</div>
+    <div class="post-content">
+      <p>lads... ITS FUCKING HAPPENING. Costco just sent 500 containers of 5-gallon mayo tubs to Hamburg port. Aldi and Carrefour have officially formed the "European Grocery Defense Coalition". they're literally stockpiling discount chocolate and baguettes as we speak. this is not a drill</p>
     </div>
+    
+    <div class="comment-section">
+      <div class="comment">
+        <div class="comment-author">u/german_discount_warrior</div>
+        <div class="comment-text">mein gott... the americans brought 5 pound bags of frozen pizza rolls. we cannot compete with this firepower. aldi headquarters is literally burning their middle aisle section as we speak. scorched earth policy activated</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 3.2k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/french_baguette_resistance</div>
+        <div class="comment-text">sacre bleu... carrefour just deployed their secret weapon. 2 euro wine that tastes like actual wine. costco customers are confused. they keep asking "where is the food court??" they dont understand we dont put restaurants in our supermarkets</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 2.8k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/american_in_germany_help</div>
+        <div class="comment-text">guys im stuck in the hamburg costco. they wont let me leave without buying a 50 pound bag of frozen chicken nuggets. i only wanted a normal sized shopping experience. they keep shouting "BULK IS FREEDOM" what do i do</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 2.4k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/italian_pasta_general</div>
+        <div class="comment-text">mamma mia... we sending reinforcements. 500 italian grandmothers with wooden spoons. they keep hitting costco employees and saying "this is not a supermarket, this is a warehouse for giants!" one nonna just tried to return a 10 pound bag of pasta because "its too much for one family"</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 1.9k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/spanish_siesta_commander</div>
+        <div class="comment-text">we tried to send help but our supermarkets close for siesta. by the time we reopen this war will be over. we sending thoughts and prayers and 1000 liters of gazpacho</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 1.6k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/british_supermarket_veteran</div>
+        <div class="comment-text">bloody hell this is just like when tesco tried to invade america and got absolutely demolished. yanks dont understand european shopping culture. they keep asking why they cant buy beer after 10pm. "BUT THIS IS SUPPOSED TO BE FREEDOM" they scream while being arrested by german police</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 1.3k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/polish_discount_historian</div>
+        <div class="comment-text">this is just like 1939 but instead of tanks we got shopping carts. instead of blitzkrieg we got... bulk-krieg? costco employees marching in formation with those huge flat carts. "I NEED TO SEE YOUR MEMBERSHIP CARD" they scream while charging the aldi parking lot</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 1.1k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/dutch_cheese_resistance</div>
+        <div class="comment-text">we got costco surrounded with our cheese wheels. they keep asking "where is the free samples??" they dont understand that in europe we dont give away food for free. one american customer cried when we told him he couldnt return a half-eaten 5 pound bag of cheese puffs</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 945 ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/swedish_furniture_general</div>
+        <div class="comment-text">as an ikea veteran i offer my services. we will build a wall of billy bookcases and defend it with those tiny pencils. costco will never breach our flat-pack defenses. plus we got meatballs. what does costco got? 50 pound bags of frozen pizza that taste like cardboard</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 778 ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/greek_economic_warfare</div>
+        <div class="comment-text">we sending our secret weapon. 2 euro gyros ingredients that actually taste good. costco customers are confused. "where is the 10 pound container of tzatziki?" they keep asking. we only have normal sized portions. theyre having existential crisis about portion sizes</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 623 ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/balkan_supermarket_veteran</div>
+        <div class="comment-text">this is just like when our local supermarket split into ethnic sections. now we got costco trying to create a unified supermarket empire. doesnt work. we need division. we need chaos. we need 15 different checkout lines for no reason</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 445 ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/costco_employee_trapped</div>
+        <div class="comment-text">help. they promoted me to manager and now i have to explain to german customers why we only sell mayonnaise in 5 pound containers. "this is enough mayonnaise for a small village" they keep saying. one lady tried to return it because "it doesnt fit in my european refrigerator"</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 389 ↓</span> • Reply • Share • Report</div>
+      </div>
+    </div>
+  </div>
+
+<div class="reddit-container">
+  <div class="reddit-header">r/CasualUK</div>
+  
+  <div class="post-container">
+    <div class="post-title">RIGHT LADS WALMART IS PROPER INVADING NOW - STOP THIS SHIT IMMEDIATELY</div>
+    <div class="post-meta">posted by u/tea_and_biscuits_84 <span class="flair">BREAKING</span> • 3 minutes ago • 8.7k upvotes</div>
+    <div class="post-content">
+      <p>mate... fucking MATE. walmart just landed 200 containers of frozen chicken nuggets at dover. theyve got people greeters at the door saying "have a nice day" like some sort of american psycho. every tesco and sainsburys is literally forming a queue to fight back. this is not the british way</p>
+    </div>
+    
+    <div class="comment-section">
+      <div class="comment">
+        <div class="comment-author">u/british_supermarket_veteran</div>
+        <div class="comment-text">right listen here you yank bastards. we already let you have one mcdonalds in every town and look what happened. now you want walmart? they tried this in 1999 and asda nearly became american. we fought them off with nothing but a £3 meal deal and sheer british stubbornness</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 2.1k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/northern_monkey_83</div>
+        <div class="comment-text">fucking hell theyve got people in yellow vests saying "welcome to walmart" like some sort of dystopian nightmare. where me self checkout? where me 10 items or less queue that nobody respects? i went in for a loaf of bread and they tried to sell me a 50 inch telly and a gun</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 1.8k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/scottish_sausage_defender</div>
+        <div class="comment-text">we sending reinforcements down from glasgow. 1000 neds with buckfast bottles. they keep asking walmart employees "where the fuck is the alcohol section" and getting pure raging when they realise you cant buy bucky at 3am. one ned just tried to return a deep fried mars bar to customer services</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 1.5k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/welsh_rarebit_general</div>
+        <div class="comment-text">we mobilising the valleys. 500 welsh grandmothers with rolling pins. they keep hitting walmart employees and shouting "this is not a proper supermarket, where is the bit with the reduced stickers at 7pm??" one nain just tried to pay with a bag of old pound coins</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 1.2k ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/midlands_meal_deal_expert</div>
+        <div class="comment-text">mate they dont even do meal deals. i asked for a sandwich crisps and drink for £3.50 and they looked at me like i was speaking fucking ancient greek. "whats a meal deal" they says. whats a meal deal?? ITS THE BACKBONE OF BRITISH CIVILISATION YOU ABSOLUTE HEATHENS</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 987 ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/london_underground_warrior</div>
+        <div class="comment-text">theyve set up shop in croydon. CROYDON. the one place that might actually welcome american invasion. but even the croydon lot are like "nah mate this is too much even for us". they tried to build a car park the size of wales. we dont do car parks we do congestion charges</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 834 ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/british_weather_forecast</div>
+        <div class="comment-text">its pissing it down obviously and the walmart roof is leaking. they keep trying to fix it with american "know how" but they dont understand british rain. its not normal rain its like someone emptying bathwater on your head constantly. their roof gave up after 20 minutes</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 756 ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/northern_ireland_tea_specialist</div>
+        <div class="comment-text">we sending our secret weapon. 1000 ulster frys. they keep trying to sell "breakfast sandwiches" like some sort of savages. where the fuck is the soda bread? the potato bread? the proper bacon? one american customer cried when we gave him a proper fry up "theres too much food" he says. TOO MUCH FOOD??</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 623 ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/british_queue_enforcer</div>
+        <div class="comment-text">they dont understand queuing. THEY DONT UNDERSTAND QUEUING. people just walking about all over the shop. no orderly line to the checkout. no "oh sorry love you go ahead you only got a few items". its pure anarchy. i saw a man walk straight to the front and nobody even tutted</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 512 ↓</span> • Reply • Share • Report</div>
+      </div>
+      
+      <div class="comment">
+        <div class="comment-author">u/walmart_employee_british_division</div>
+        <div class="comment-text">help they made me a greeter and now i have to say "welcome to walmart" every 5 seconds. british people keep responding with "alright mate calm down" and walking past. one bloke asked if we do click and collect. CLICK AND COLLECT?? this isnt argos love</div>
+        <div class="comment-actions"><span class="vote-buttons">↑ 445 ↓</span> • Reply • Share • Report</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
