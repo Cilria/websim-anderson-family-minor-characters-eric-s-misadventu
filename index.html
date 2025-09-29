@@ -3,410 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Combat Footage] US Airstrike on Islamic Caliphate convoy, Northern Togo - F-35 gun cam with FLIR : CombatFootage</title>
+    <title>Global Coalition Launches Massive Assault on Islamic Caliphate as Nigeria Retakes Kaduna | NBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: "NBC Sans", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #1a1a1a;
+            line-height: 1.6;
         }
         .header {
-            background: #ff4500;
+            background: #0057b8;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            justify-content: space-between;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: -1px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
+        .nav {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
+            gap: 25px;
             font-size: 14px;
-            color: #878a8c;
         }
-        .comments-count a {
-            color: #878a8c;
+        .nav a {
+            color: white;
             text-decoration: none;
+            opacity: 0.9;
         }
-        .comments-count a:hover {
-            text-decoration: underline;
+        .nav a:hover {
+            opacity: 1;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
+        .breaking-banner {
+            background: #ff6b35;
+            color: white;
+            padding: 16px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            animation: pulse 2s infinite;
         }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.85; }
+            100% { opacity: 1; }
+        }
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        .article {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .article-header {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+        .article-meta {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .article-title {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin: 0 0 15px 0;
+            color: #1a1a1a;
+        }
+        .article-subtitle {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+        .byline {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .article-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .article-content p {
+            margin-bottom: 25px;
+        }
+        .article-content h2 {
+            font-size: 26px;
+            font-weight: 600;
+            margin: 35px 0 20px 0;
+            color: #1a1a1a;
+            border-left: 4px solid #0057b8;
+            padding-left: 18px;
+        }
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        .image-caption {
+            font-size: 14px;
+            color: #666;
+            margin-top: 12px;
+            font-style: italic;
+            text-align: left;
+        }
+        .pullquote {
+            background: #f8f9fa;
+            border-left: 4px solid #0057b8;
+            padding: 28px;
+            margin: 30px 0;
+            font-size: 20px;
+            font-weight: 500;
+            color: #1a1a1a;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
         }
         .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
         }
         .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            color: #1a1a1a;
         }
         .sidebar ul {
+            padding-left: 20px;
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        .key-facts {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 22px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        .key-facts h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        .key-facts ul {
             margin: 0;
             padding-left: 20px;
         }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
+        .key-facts li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #444;
         }
-        .comment {
+        .timeline {
+            background: #f8f9fa;
+            border-left: 3px solid #0057b8;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .timeline-item {
             margin-bottom: 15px;
             padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .video-container {
             position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin: 15px 0;
-            background: #000;
-            border-radius: 8px;
         }
-        .video-placeholder {
+        .timeline-item::before {
+            content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-            color: #fff;
-            font-size: 16px;
-            text-align: center;
+            left: -6px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background: #0057b8;
+            border-radius: 50%;
         }
-        .video-controls {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.8);
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .play-btn {
-            background: #ff4500;
-            border: none;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
+        .timeline-date {
+            font-weight: 600;
+            color: #0057b8;
             font-size: 14px;
         }
-        .video-info {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 5px 8px;
-            border-radius: 4px;
-            font-size: 12px;
+        .related-articles {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            margin-top: 20px;
         }
-        .warning-box {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 12px;
-            border-radius: 6px;
-            margin: 10px 0;
-            font-size: 13px;
-            color: #856404;
+        .related-articles h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            color: #1a1a1a;
+        }
+        .related-article {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 18px 0;
+        }
+        .related-article:last-child {
+            border-bottom: none;
+        }
+        .related-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        .related-meta {
+            font-size: 12px;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            .article-title {
+                font-size: 32px;
+            }
+            .nav {
+                display: none;
+            }
+            .article {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/CombatFootage</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/FLIR_Analyst</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">47 minutes ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>8.9k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">[Combat Footage] US Airstrike on Islamic Caliphate convoy, Northern Togo - F-35 gun cam with FLIR</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">AIRSTRIKE</span>
-                    <span class="flair">FLIR</span>
-                    <span class="flair">USAF</span>
-                    <span class="flair">CURRENT CONFLICT</span>
-                    <span>Posted by u/FLIR_Analyst • 47 minutes ago</span>
-                </div>
-
-                <div class="warning-box">
-                    ⚠️ WARNING: This footage shows combat and destruction. Viewer discretion advised.
-                </div>
-
-                <div class="video-container">
-                    <div class="video-placeholder">
-                        <div>
-                            <div style="font-size: 24px; margin-bottom: 10px;">📹</div>
-                            <div>F-35 FLIR Gun Camera Footage</div>
-                            <div style="font-size: 14px; opacity: 0.8; margin-top: 5px;">Click play to view strike on ISIS convoy</div>
-                        </div>
-                    </div>
-                    <div class="video-controls">
-                        <button class="play-btn">▶ PLAY</button>
-                        <span style="color: white; font-size: 14px;">0:00 / 1:47</span>
-                    </div>
-                    <div class="video-info">1080p • FLIR</div>
-                </div>
-
-                <p><strong>Operation Details:</strong></p>
-                <ul>
-                    <li><strong>Date:</strong> March 24, 2027, 0347 local time</li>
-                    <li><strong>Location:</strong> 15km SW of Dapaong, Northern Togo</li>
-                    <li><strong>Platform:</strong> F-35A Lightning II, callsign "Dagger 1-1"</li>
-                    <li><strong>Weapon:</strong> GBU-12 Paveway II (500lb LGB)</li>
-                    <li><strong>Target:</strong> Islamic Caliphate convoy - 3x technicals, 1x captured BMP-2, approx 25-30 fighters</li>
-                </ul>
-
-                <p><strong>What you're seeing:</strong> The footage begins with the F-35 in a holding pattern at 15,000ft. You can see the FLIR camera tracking the convoy along the N3 highway. The lead vehicle (technical with mounted DShK) stops at the 0:23 mark - likely spotting the aircraft or receiving warning. The crosshair remains steady on the second vehicle (BMP-2) throughout the engagement.</p>
-
-                <p><strong>Key moments:</strong></p>
-                <ul>
-                    <li><strong>0:31</strong> - GBU-12 release, you can see the bomb guidance fins deploy</li>
-                    <li><strong>0:42</strong> - Direct hit on BMP-2, secondary explosions suggest onboard ammunition cooking off</li>
-                    <li><strong>0:51</strong> - Technical #3 attempts to turn around, drives into the blast radius</li>
-                    <li><strong>1:03</strong> - FLIR zooms out, showing the entire convoy neutralized</li>
-                    <li><strong>1:15</strong> - Post-strike assessment - no movement detected, multiple thermal signatures cooling</li>
-                </ul>
-
-                <p><strong>Context:</strong> This strike was part of the initial wave of coalition airstrikes against the Islamic Caliphate of the Sahel. The convoy was part of the force that had seized Dapaong two days prior and was reportedly moving south toward Sokodé. Intelligence suggested they were attempting to link up with another caliphate column moving east from Burkina Faso.</p>
-
-                <p><strong>Aftermath:</strong> BDA (Battle Damage Assessment) confirmed 27 KIA, 4 vehicles destroyed. No civilian casualties reported - the strike occurred on a highway section that had been evacuated due to ongoing fighting. The F-35 remained on station for 45 minutes post-strike to monitor for survivors and provide intelligence to follow-on strikes.</p>
-
-                <p><strong>Technical notes:</strong> The FLIR footage has been declassified but time-stamp and some metadata removed for OPSEC. Audio has been removed as per standard procedure for declassified combat footage. The slight IR bloom at impact is typical for high-explosive detonations in this temperature range (ambient 28°C).</p>
-
-                <div class="comments-count">
-                    <a href="#">2.1k comments</a>
-                </div>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">NBC News</div>
+            <div class="nav">
+                <a href="#">World</a>
+                <a href="#">Politics</a>
+                <a href="#">Africa</a>
+                <a href="#">Asia</a>
+                <a href="#">Military</a>
             </div>
         </div>
+    </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
+    <div class="breaking-banner">
+        BREAKING: 63-Nation Coalition Launches Massive Assault on Islamic Caliphate
+    </div>
 
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Former_FLIR_Operator • 32 minutes ago
+    <div class="main-container">
+        <div class="article">
+            <div class="article-header">
+                <div class="article-meta">
+                    World News | Breaking News
                 </div>
-                <div class="comment-content">
-                    <strong>Former USAF FLIR operator here:</strong> This is textbook employment. The pilot held the crosshair steady on the BMP's engine compartment - that's where you want to hit for maximum mobility kill. You can see the thermal bloom from the fuel tanks igniting, which confirms they hit exactly where they aimed. The secondary explosions at 0:44 are 30mm ammo cooking off from the BMP's autocannon. That BMP is scrap metal now.
+                <h1 class="article-title">Global Coalition Launches Massive Assault on Islamic Caliphate as Nigeria Retakes Kaduna</h1>
+                <div class="article-subtitle">63-nation alliance including China launches unprecedented military campaign as Nigerian forces score first major victory, killing 900 jihadists in single day</div>
+                <div class="byline">
+                    By Richard Engel & Courtney Kube | NBC News
                 </div>
-                <div class="comment-meta">u/FLIR_Analyst • 28 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Thanks for the technical breakdown! The pilot definitely knew their business. That BMP was probably their heaviest vehicle in the convoy - taking it out first was smart tactics.
+            </div>
+
+            <div class="article-content">
+                <p><strong>Washington DC/Abuja</strong> — The United States has joined a historic 63-nation coalition launching the largest international military operation since World War II against the Islamic Caliphate of the Sahel, as Nigerian forces delivered the first major blow to the jihadist group by driving them out of Kaduna and killing over 900 fighters in a single day of combat.</p>
+
+                <div class="key-facts">
+                    <h3>Key facts</h3>
+                    <ul>
+                        <li>63 nations form largest coalition since WWII</li>
+                        <li>China joins with unprecedented airstrikes</li>
+                        <li>Nigerian forces retake Kaduna, kill 900 jihadists</li>
+                        <li>Operation includes 15,000+ aircraft sorties</li>
+                        <li>Naval blockade established across West African coast</li>
+                        <li>Special forces from 23 nations deployed</li>
+                        <li>First major victory against caliphate achieved</li>
+                    </ul>
+                </div>
+
+                <p>The massive international response, dubbed "Operation Sahel Freedom," began at 04:00 GMT on April 3rd with coordinated strikes from over 15,000 aircraft sorties, naval bombardments from 47 warships, and special forces operations across seven West African nations.</p>
+
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/800x500/1a1a1a/ffffff?text=Coalition+Forces+Strike+Caliphate" alt="Coalition forces strike caliphate targets">
+                    <div class="image-caption">Coalition aircraft conduct precision strikes against caliphate positions across West Africa</div>
+                </div>
+
+                <p>"This is the most significant multilateral military operation in modern history," said Secretary of Defense Pete Hegseth at a Pentagon briefing. "Sixty-three nations have come together to confront a threat that endangers not just West Africa, but global security. The message is clear: the civilized world will not tolerate the existence of a jihadist state."</p>
+
+                <h2>China's unprecedented involvement</h2>
+
+                <p>In a stunning diplomatic reversal, China has joined the coalition with significant military assets, including deploying its first aircraft carrier strike group outside the Pacific region and conducting precision airstrikes against caliphate targets in Mali and Burkina Faso.</p>
+
+                <p>"The Chinese People's Liberation Army is conducting military operations against terrorist targets in coordination with international partners," said Chinese Defense Ministry spokesperson Senior Colonel Wu Qian. "This represents a new chapter in China's commitment to global counterterrorism efforts."</p>
+
+                <div class="pullquote">
+                    "This is the most significant multilateral military operation in modern history. Sixty-three nations have come together to confront a threat that endangers not just West Africa, but global security."
+                </div>
+
+                <p>Chinese J-20 stealth fighters and H-6K strategic bombers have struck caliphate command centers, weapons depots, and communications infrastructure, with satellite imagery showing significant damage to jihadist facilities across the region.</p>
+
+                <h2>Nigeria's stunning victory</h2>
+
+                <p>The coalition's opening day was highlighted by a stunning victory for Nigerian forces, who launched a major counteroffensive to retake Kaduna, a city of 1 million people that had been under caliphate siege for over a week.</p>
+
+                <p>In a 14-hour battle that began at dawn, Nigerian troops backed by coalition airstrikes and special forces advisors drove caliphate fighters from the city, killing over 900 jihadists while suffering minimal casualties.</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 3, 04:00 GMT</div>
+                        <div>Coalition operations begin with massive airstrikes</div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Former_FLIR_Operator • 22 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Exactly. In these African conflicts, a BMP-2 is basically a tank. It's the heaviest armor they're likely to field. Taking it out first demoralizes the rest and prevents them from using it for fire support if the fight continues.
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 3, 06:00 GMT</div>
+                        <div>Nigerian forces launch Kaduna counteroffensive</div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Tactical_Aviator • 25 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>F-35 pilot perspective:</strong> The holding pattern at 15K is standard for this threat environment. Low enough to maintain good FLIR resolution and minimize bomb time-of-flight, high enough to stay above MANPADS envelope. You can tell the pilot was confident in the threat assessment - no evasive maneuvers, steady platform throughout. The fact they stayed on station for 45 minutes post-strike tells me they had good intel that no ADA (Air Defense Artillery) was in the area.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Africa_Security_Analyst • 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Strategic context:</strong> Dapaong was their forward logistics hub for the push into coastal West Africa. This strike wasn't just about killing fighters - it was about disrupting their southward expansion. The caliphate needs these highway corridors to move forces quickly between the Sahel and the coast. Taking out convoys like this forces them to disperse into smaller groups, which makes them vulnerable to follow-on strikes.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Bomb_Damage_Assessor • 18 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>BDA analysis:</strong> The 27 KIA figure is probably accurate based on the thermal signatures I can count. The way the bodies are distributed - some in the vehicles, some scattered around - suggests they were caught completely by surprise. No attempt at dispersion, no return fire, no attempt to recover wounded. This was a clean kill on an unprepared target.
-                </div>
-                <div class="comment-meta">u/FLIR_Analyst • 15 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Agreed - the thermal signatures show no movement post-strike. In African conflicts, you often see survivors trying to drag wounded comrades away or recover weapons. None of that here. They either died instantly or were too disoriented to react.
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 3, 14:00 GMT</div>
+                        <div>Chinese aircraft conduct first strikes</div>
                     </div>
-                    <div class="comment-reply">Reply</div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 3, 18:00 GMT</div>
+                        <div>Nigeria declares Kaduna liberated</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">April 3, 20:00 GMT</div>
+                        <div>Coalition forces establish air superiority</div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Weapons_Systems_Geek • 12 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>GBU-12 is perfect for this mission:</strong> 500lb LGB with proven reliability in African conditions. The Paveway kit turns a dumb bomb into a precision weapon with 1-meter CEP. Against soft-skinned vehicles and personnel in the open, it's devastating. Plus it's cheap compared to JDAMs or SDBs, which matters when you're doing dozens of strikes per day.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>"This is a great day for Nigeria and for all freedom-loving people," said Nigerian President in a televised address. "Our forces have shown that with proper support and coordination, we can defeat this terrorist threat and restore peace to our region."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Combat_Documentation • 8 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Documentation note:</strong> This footage is significant because it's the first declassified FLIR footage from the West Africa campaign. The Pentagon is clearly trying to show precision and effectiveness to counter narratives about civilian casualties. The fact they declassified it so quickly (48 hours) suggests they want this footage circulating.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The victory at Kaduna represents the first major success against the caliphate since its rapid expansion began in March, and has provided a significant morale boost to coalition forces and civilians across the region.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    u/African_Military_Historian • 5 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Historical context:</strong> This is the first time since 2003 that US combat aircraft have engaged targets in Togo. The fact it's happening in 2027 shows how far the jihadist threat has expanded. Dapaong used to be a quiet border town - now it's a strategic crossroads in a regional war.
-                </div>
-                <div class="comment-reply">Reply</div>
+                <h2>International coalition details</h2>
+
+                <p>The 63-nation coalition includes all NATO members, major Asian powers including Japan and South Korea, Middle Eastern allies such as Saudi Arabia and the UAE, and African nations including Nigeria, Ghana, and Côte d'Ivoire.</p>
+
+                <p>The operation involves over 450,000 military personnel, making it the largest international military deployment since the 1991 Gulf War. Forces are operating from bases in Senegal, Ghana, Côte d'Ivoire, and offshore naval task forces.</p>
+
+                <p>"This coalition represents the international community's unified response to a threat that transcends borders," said NATO Secretary General. "We are committed to providing the resources and expertise necessary to eliminate the caliphate's ability to project terror beyond West Africa."</p>
+
+                <h2>Naval blockade and special operations</h2>
+
+                <p>Coalition naval forces have established a complete blockade of West African coastal waters, preventing the caliphate from receiving supplies or moving fighters by sea. The blockade involves 47 warships from 23 nations, including US aircraft carriers, British destroyers, and Chinese frigates.</p>
+
+                <p>Special forces from 23 nations have been deployed for precision operations against high-value targets, with early reports indicating successful raids on caliphate leadership compounds and weapons storage facilities.</p>
+
+                <p>British SAS units have conducted operations in northern Mali, while French special forces have targeted caliphate positions in Burkina Faso. American Navy SEALs have conducted maritime interdiction operations, seizing weapons shipments attempting to reach caliphate forces.</p>
+
+                <h2>Humanitarian corridors</h2>
+
+                <p>Despite the massive military operation, coalition forces have established humanitarian corridors to allow civilians to escape conflict zones and receive aid. The United Nations has begun emergency relief operations, with food, medicine, and other supplies being delivered to affected areas.</p>
+
+                <p>"We are committed to protecting civilian lives while conducting military operations," said a coalition spokesperson. "Humanitarian assistance is being provided alongside military action to ensure that innocent people are not caught in the crossfire."</p>
+
+                <h2>Next phases</h2>
+
+                <p>Coalition officials have stated that the current operations represent only the beginning of a sustained campaign to eliminate the caliphate's presence in West Africa. Military planners are preparing for what they describe as a "multi-phase operation" that could last several months.</p>
+
+                <p>The next phase is expected to focus on retaking major cities currently under caliphate control, including Bamako, Niamey, and Ouagadougou. Coalition forces are already positioning for these operations, with additional troops and equipment arriving daily.</p>
+
+                <p>"This is not a short-term operation," said Secretary Hegseth. "We are committed to seeing this through until the caliphate's ability to threaten regional and global security is completely eliminated. The international community has shown that when faced with a common threat, we can unite and act decisively."</p>
+
+                <p>As operations continue into their second day, coalition forces are reporting steady progress, with caliphate forces appearing to retreat from several positions in the face of the overwhelming international response.</p>
+
+                <p>"The message has been sent and received," said a senior coalition official. "The civilized world will not allow a jihadist state to exist. We are coming, and we will not stop until this threat is eliminated."</p>
             </div>
         </div>
 
         <div class="sidebar">
-            <h3>More posts from r/CombatFootage</h3>
+            <h3>Coalition Members</h3>
             <ul>
-                <li><a href="#">[FLIR] French Rafale strike on caliphate logistics hub, Gao</a></li>
-                <li><a href="#">[Airstrike] UK Typhoon hits caliphate command post, Niamey</a></li>
-                <li><a href="#">[Combat] Caliphate forces engaging Nigerian army, Kaduna outskirts</a></li>
+                <li>All 32 NATO nations</li>
+                <li>China (first combat deployment)</li>
+                <li>Japan & South Korea</li>
+                <li>Saudi Arabia & UAE</li>
+                <li>15 African nations</li>
+                <li>Australia & New Zealand</li>
+                <li>Brazil & Argentina</li>
+                <li>India & Pakistan</li>
             </ul>
+        </div>
+
+        <div class="related-articles">
+            <h3>More from NBC News</h3>
+            <div class="related-article">
+                <div class="related-title">Analysis: China's military debut signals new global order</div>
+                <div class="related-meta">2 hours ago</div>
+            </div>
+            <div class="related-article">
+                <div class="related-title">Exclusive: Inside the planning of largest coalition since WWII</div>
+                <div class="related-meta">3 hours ago</div>
+            </div>
+            <div class="related-article">
+                <div class="related-title">Opinion: 63-nation coalition shows world can unite against evil</div>
+                <div class="related-meta">4 hours ago</div>
+            </div>
+            <div class="related-article">
+                <div class="related-title">Fact-check: Understanding the scope of Operation Sahel Freedom</div>
+                <div class="related-meta">5 hours ago</div>
+            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
