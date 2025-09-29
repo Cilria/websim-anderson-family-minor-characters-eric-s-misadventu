@@ -3,420 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islamist militants capture Ouagadougou after 11-day siege | BBC News</title>
+    <title>Islamist militants capture Ouagadougou after 11-day siege, declare "Islamic Caliphate of The Sahel" : worldnews</title>
     <style>
         body {
-            font-family: "BBC Reith", "Helvetica Neue", Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            color: #333;
-            line-height: 1.6;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header {
-            background: #000;
+            background: #ff4500;
             color: white;
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 4px solid #bb0000;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            letter-spacing: -1px;
-        }
-        .nav {
-            display: flex;
-            gap: 30px;
-            font-size: 14px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.9;
-        }
-        .nav a:hover {
-            opacity: 1;
-        }
-        .breaking-banner {
-            background: #bb0000;
-            color: white;
-            padding: 12px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-        }
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-        .article {
-            background: white;
-            padding: 40px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .article-header {
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 25px;
-            margin-bottom: 25px;
-        }
-        .article-meta {
-            font-size: 13px;
-            color: #666;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        .article-title {
-            font-size: 42px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 15px 0;
-            color: #000;
-        }
-        .article-subtitle {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 20px;
-            line-height: 1.4;
-            font-weight: 400;
-        }
-        .byline {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .article-content {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #333;
-        }
-        .article-content p {
-            margin-bottom: 25px;
-        }
-        .article-content h2 {
-            font-size: 28px;
-            font-weight: 600;
-            margin: 35px 0 20px 0;
-            color: #000;
-            border-left: 4px solid #bb0000;
-            padding-left: 15px;
-        }
-        .image-container {
-            margin: 30px 0;
-            text-align: center;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        .image-caption {
-            font-size: 14px;
-            color: #666;
-            margin-top: 10px;
-            font-style: italic;
-            text-align: left;
-        }
-        .pullquote {
-            background: #f8f8f8;
-            border-left: 4px solid #bb0000;
-            padding: 25px;
-            margin: 30px 0;
-            font-size: 20px;
+            gap: 10px;
             font-weight: 500;
-            color: #000;
-            font-style: italic;
         }
-        .sidebar {
-            background: white;
-            padding: 25px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .sidebar h3 {
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
             font-size: 18px;
-            font-weight: 600;
-            margin: 0 0 20px 0;
-            color: #000;
+            font-weight: 500;
+            line-height: 1.3;
         }
-        .sidebar ul {
-            padding-left: 20px;
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.6;
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
         }
-        .sidebar li {
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
             margin-bottom: 10px;
         }
-        .tweet-embed {
-            background: #f8f8f8;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 25px 0;
-            font-size: 15px;
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
         }
-        .tweet-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
         }
-        .tweet-avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: #bb0000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
         }
-        .tweet-user {
-            font-weight: 600;
-            font-size: 16px;
+        .comments-count a:hover {
+            text-decoration: underline;
         }
-        .tweet-handle {
-            color: #666;
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 0;
             font-size: 14px;
         }
-        .timestamp {
-            color: #666;
-            font-size: 12px;
-            margin-top: 12px;
-        }
-        .related-articles {
-            background: white;
-            padding: 25px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-        .related-articles h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0 0 20px 0;
-            color: #000;
-        }
-        .related-article {
-            border-bottom: 1px solid #e0e0e0;
-            padding: 18px 0;
-        }
-        .related-article:last-child {
-            border-bottom: none;
-        }
-        .related-title {
-            font-size: 15px;
-            font-weight: 500;
-            color: #000;
-            margin-bottom: 5px;
-        }
-        .related-meta {
-            font-size: 12px;
-            color: #666;
-        }
-        .key-facts {
-            background: #f0f0f0;
-            padding: 20px;
-            border-radius: 4px;
-            margin: 25px 0;
-        }
-        .key-facts h3 {
+        .sidebar h3 {
+            margin: 0 0 10px 0;
             font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #000;
+            font-weight: 500;
         }
-        .key-facts ul {
+        .sidebar ul {
             margin: 0;
             padding-left: 20px;
         }
-        .key-facts li {
-            margin-bottom: 8px;
-            font-size: 14px;
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
         }
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
-                padding: 10px;
-            }
-            .article-title {
-                font-size: 32px;
-            }
-            .nav {
-                display: none;
-            }
-            .article {
-                padding: 20px;
-            }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .quote {
+            border-left: 3px solid #ccc;
+            padding-left: 10px;
+            margin: 10px 0;
+            font-style: italic;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">BBC</div>
-            <div class="nav">
-                <a href="#">Home</a>
-                <a href="#">News</a>
-                <a href="#">World</a>
-                <a href="#">UK</a>
-                <a href="#">Business</a>
-                <a href="#">Tech</a>
-                <a href="#">Science</a>
-                <a href="#">Health</a>
-                <a href="#">Family & Education</a>
-                <a href="#">Entertainment & Arts</a>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/GlobalSecurityWatcher</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>89.3k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Islamist militants capture Ouagadougou after 11-day siege, declare "Islamic Caliphate of The Sahel"</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Covered by major media</span>
+                    <span class="flair">International Politics</span>
+                    <span class="flair">Terrorism</span>
+                    <span class="flair">Africa</span>
+                    <span>Posted by u/GlobalSecurityWatcher • 3 hours ago</span>
+                </div>
+
+                <p><strong>BREAKING: Jihadist groups led by JNIM have captured Burkina Faso's capital city after an 11-day siege, marking the first time jihadist forces have taken control of a sovereign West African capital.</strong></p>
+
+                <div class="quote">
+                    "This represents the most significant jihadist victory in West African history. If JNIM can take Ouagadougou in 11 days, what about other capitals?" - Dr. Akinola Olojo, University of Lagos
+                </div>
+
+                <p><strong>Key developments:</strong></p>
+                <ul>
+                    <li>JNIM declares "Islamic Caliphate of The Sahel" - already expanding beyond Burkina Faso borders</li>
+                    <li>Former President Ibrahim Traoré has fled to Moscow</li>
+                    <li>Regional security crisis deepens as neighboring countries close borders and deploy troops</li>
+                    <li>UN warns of humanitarian catastrophe with hundreds of thousands displaced</li>
+                    <li>International community faces limited intervention options</li>
+                </ul>
+
+                <p><strong>Global implications:</strong> This is not just a West African problem. The fall of Ouagadougou represents the birth of a jihadist state in West Africa, potentially affecting millions across the region. JNIM has announced plans to expand operations into neighboring countries.</p>
+
+                <p><strong>International response:</strong> US calling for UN Security Council meeting, France hosting emergency summit, ECOWAS announcing emergency summit. However, intervention options appear limited - regional powers lack military capacity, Western powers reluctant after previous intervention failures.</p>
+
+                <p><strong>What this means for global security:</strong> Intelligence sources suggest JNIM forces have been spotted moving toward Ghana and Ivory Coast borders. The UN Secretary-General calls this "a threat to international peace and security."</p>
+
+                <div class="comments-count">
+                    <a href="#">12.8k comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="breaking-banner">
-        BREAKING: Islamist militants capture Ouagadougou after 11-day siege | Former President Traoré flees to Moscow
-    </div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
 
-    <div class="main-container">
-        <div class="article">
-            <div class="article-header">
-                <div class="article-meta">
-                    WORLD NEWS | AFRICA
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Former_Intelligence_Analyst • 2 hours ago
                 </div>
-                <h1 class="article-title">Islamist militants capture Ouagadougou after 11-day siege, declare "Islamic Caliphate of The Sahel"</h1>
-                <div class="article-subtitle">Reddit worldnews thread shows global reaction to first jihadist capture of a West African capital</div>
-                <div class="byline">
-                    Compiled from r/worldreads discussion thread
+                <div class="comment-content">
+                    <strong>Intelligence community perspective:</strong> This is a massive intelligence failure. JNIM had been planning this operation for months, possibly years. Satellite imagery from December shows jihadist forces moving toward Ouagadougou, but the intelligence was dismissed as "routine movement." The speed of the fall (11 days) suggests inside help - government forces didn't just retreat, they abandoned positions without firing shots. This wasn't just military failure, it was institutional collapse.
+                </div>
+                <div class="comment-meta">u/GlobalSecurityWatcher • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Do you think there was foreign state involvement in the planning? Russia has been courting Sahelian leaders, and this benefits them by embarrassing Western intelligence services.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Former_Intelligence_Analyst • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Unlikely. JNIM is ideologically opposed to all foreign influence - Russian, Western, everything. They see themselves as pure jihadists. However, Russia will absolutely exploit this intelligence failure to discredit Western intelligence services. The real failure was political, not intelligence - the intelligence was there, but leaders dismissed it as "colonial paranoia."
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p><strong>March 11, 2027</strong> — The fall of Ouagadougou to jihadist forces has sparked intense discussion across social media platforms, with Reddit's r/worldnews thread capturing the shock and concern of global observers as Islamist militants declare the "Islamic Caliphate of The Sahel."</p>
-
-                <div class="key-facts">
-                    <h3>Key facts from the discussion</h3>
-                    <ul>
-                        <li>Ouagadougou fell after just 11 days of fighting - unprecedented speed</li>
-                        <li>JNIM (Jama'at Nusrat al-Islam wal Muslimeen) leads the offensive</li>
-                        <li>Former President Ibrahim Traoré fled to Moscow</li>
-                        <li>Regional security crisis deepens as neighboring countries close borders</li>
-                        <li>International community faces limited intervention options</li>
-                    </ul>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/WTF_Is_Happening_2024 • 2 hours ago
                 </div>
-
-                <p>The Reddit thread, which garnered over 89,000 upvotes and 12,800 comments in just 3 hours, reveals how ordinary people worldwide are processing this historic development. Users express everything from shock at the speed of the collapse to concerns about regional stability.</p>
-
-                <div class="pullquote">
-                    "This is like Afghanistan all over again, but somehow faster. At least the Taliban took months to take over, these guys did it in 11 days."
+                <div class="comment-content">
+                    Wait what? I thought Burkina Faso was like... stable? When did it get so bad that jihadists could just take the capital? This year has been absolutely insane
                 </div>
-
-                <h2>Global shock and confusion</h2>
-
-                <p>The thread shows widespread confusion about how this could happen so quickly. User u/WTF_Is_Happening_2024 captured the sentiment: "Wait what? I thought Burkina Faso was like... stable? When did it get so bad that jihadists could just take the capital? This year has been absolutely insane."</p>
-
-                <p>Many commenters admitted they knew little about Burkina Faso before this crisis. u/Geography_Guy asked: "So let me get this straight - some guys I've never heard of took over a country I've barely heard of, and now they're threatening to take over MORE countries? How is this not bigger news?"</p>
-
-                <div class="tweet-embed">
-                    <div class="tweet-header">
-                        <div class="tweet-avatar">UN</div>
-                        <div>
-                            <div class="tweet-user">United Nations</div>
-                            <div class="tweet-handle">@UN</div>
-                        </div>
+                <div class="comment-meta">u/GlobalSecurityWatcher • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Same here, I had to google where Burkina Faso even was. Apparently there's been a jihadist insurgency there for years but nobody cared because it was "over there"
                     </div>
-                    <div class="tweet-content">
-                        The UN Secretary-General is deeply alarmed by the fall of Ouagadougou and the declaration of an Islamic caliphate in the Sahel. We call for immediate regional cooperation to prevent further destabilization of West Africa.
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Geography_Guy • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    So let me get this straight - some guys I've never heard of took over a country I've barely heard of, and now they're threatening to take over MORE countries? How is this not bigger news?
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/News_Addict_365 • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    I've been following this since March 1st and it's been wild. The government just... gave up? Like they didn't even try to evacuate civilians or anything. The president just ran away to Russia lol
+                </div>
+                <div class="comment-meta">u/GlobalSecurityWatcher • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Right? Dude said "we will never abandon our capital" and then immediately abandoned his capital. Political courage at its finest
                     </div>
-                    <div class="timestamp">Posted 3 hours ago</div>
+                    <div class="comment-reply">Reply</div>
                 </div>
+            </div>
 
-                <h2>Intelligence community insights</h2>
-
-                <p>One of the most upvoted comments comes from u/Former_Intelligence_Analyst, who provides insider perspective: "This is a massive intelligence failure. JNIM had been planning this operation for months, possibly years. Satellite imagery from December shows jihadist forces moving toward Ouagadougou, but the intelligence was dismissed as 'routine movement.'"</p>
-
-                <p>The intelligence analyst continues: "The speed of the fall (11 days) suggests inside help - government forces didn't just retreat, they abandoned positions without firing shots. This wasn't just military failure, it was institutional collapse."</p>
-
-                <h2>Regional concerns</h2>
-
-                <p>Users from West Africa express particular concern. u/Ghanaian_In_The_US writes: "As someone from Ghana, this is terrifying but also completely predictable. These military guys think they're geniuses because they overthrew a weak civilian government, but they have zero idea how to actually run a country. Now my country is probably next on the jihadist hit list because this guy couldn't swallow his pride."</p>
-
-                <p>Another user, u/Actually_Works_In_Africa, provides on-the-ground perspective: "I work for an NGO in West Africa (not saying which country for obvious reasons). This is way worse than people realize. These aren't just random terrorists - JNIM has been building up to this for years. They have actual governance structures, they're not just guys with guns anymore."</p>
-
-                <div class="pullquote">
-                    "If JNIM can take Ouagadougou in 11 days, what about other capitals?"
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Actually_Works_In_Africa • 2 hours ago
                 </div>
+                <div class="comment-content">
+                    I work for an NGO in West Africa (not saying which country for obvious reasons). This is way worse than people realize. These aren't just random terrorists - JNIM has been building up to this for years. They have actual governance structures, they're not just guys with guns anymore
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
 
-                <h2>International response skepticism</h2>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Europe_Traveler • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    As someone planning a trip to West Africa next year... should I be worried? Like is this going to spread to the touristy places?
+                </div>
+                <div class="comment-meta">u/Actually_Works_In_Africa • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Depends where you're going. Ghana and Senegal are probably fine for now, but honestly? I'd wait and see how this plays out. If JNIM really does expand into other countries, the whole region could become unstable fast
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                <p>The thread shows skepticism about international intervention. User u/History_Buff_1776 asks: "What the hell are we even doing with all that foreign aid and military training if this can happen?"</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/History_Buff_1776 • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    This is like Afghanistan all over again, but somehow faster. At least the Taliban took months to take over, these guys did it in 11 days. What the hell are we even doing with all that foreign aid and military training if this can happen?
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
 
-                <p>u/Reddit_Expert_2024, claiming to be a former Africa policy analyst, explains: "The speed of this collapse is absolutely unprecedented. Usually these groups take rural areas first, then smaller cities, then work up to the capital. JNIM somehow skipped straight to taking the capital. Either they're way more sophisticated than we thought, or the government was way more incompetent than we thought."</p>
+            <div>
+                <div class="comment-meta">
+                    u/Reddit_Expert_2024 • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    Former Africa policy analyst here (really, I can verify if needed). The speed of this collapse is absolutely unprecedented. Usually these groups take rural areas first, then smaller cities, then work up to the capital. JNIM somehow skipped straight to taking the capital. Either they're way more sophisticated than we thought, or the government was way more incompetent than we thought
+                </div>
+                <div class="comment-meta">u/Skeptical_Observer • 30 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Why not both? Sophisticated terrorists plus incompetent government is a recipe for disaster
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                <h2>Humanitarian concerns</h2>
-
-                <p>Users express concern about civilian welfare. u/Europe_Traveler asks: "As someone planning a trip to West Africa next year... should I be worried? Like is this going to spread to the touristy places?"</p>
-
-                <p>The response from u/Actually_Works_In_Africa is sobering: "Depends where you're going. Ghana and Senegal are probably fine for now, but honestly? I'd wait and see how this plays out. If JNIM really does expand into other countries, the whole region could become unstable fast."</p>
-
-                <h2>Historical comparisons</h2>
-
-                <p>Many users draw parallels to other conflicts. u/Concerned_Canadian asks: "So what's the over/under on how long before the 'Islamic Caliphate of the Sahel' becomes a household name like ISIS? Because that's where this is heading."</p>
-
-                <p>The thread reveals that while experts debate strategic implications, ordinary people are trying to understand how a country they barely knew existed could fall so quickly to groups they've never heard of. The speed of the collapse - just 11 days - has left even seasoned observers struggling to process the implications.</p>
-
-                <p>As u/News_Addict_365 notes: "I've been following this since March 1st and it's been wild. The government just... gave up? Like they didn't even try to evacuate civilians or anything. The president just ran away to Russia lol."</p>
-
-                <p>The Reddit discussion captures a moment when global consciousness is shifting to recognize that West Africa's security crisis has reached a tipping point, with implications that extend far beyond the region's borders.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Concerned_Canadian • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    So what's the over/under on how long before the "Islamic Caliphate of the Sahel" becomes a household name like ISIS? Because that's where this is heading
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
         </div>
 
         <div class="sidebar">
-            <h3>Related Topics</h3>
+            <h3>More posts from r/worldnews</h3>
             <ul>
-                <li>Burkina Faso</li>
-                <li>West Africa jihadist insurgency</li>
-                <li>JNIM (Jama'at Nusrat al-Islam wal Muslimeen)</li>
-                <li>Islamic State in the Greater Sahara</li>
-                <li>Sahel security crisis</li>
-                <li>ECOWAS regional response</li>
+                <li><a href="#">ECOWAS emergency summit scheduled for tomorrow - regional powers consider intervention</a></li>
+                <li><a href="#">US intelligence: JNIM planning expansion into Ghana and Ivory Coast</a></li>
+                <li><a href="#">Russia offers to mediate between JNIM and regional governments</a></li>
             </ul>
-        </div>
-
-        <div class="related-articles">
-            <h3>More from BBC Africa</h3>
-            <div class="related-article">
-                <div class="related-title">Profile: Who is JNIM leader Iyad Ag Ghali?</div>
-                <div class="related-meta">1 hour ago</div>
-            </div>
-            <div class="related-article">
-                <div class="related-title">Analysis: How did Burkina Faso fall so quickly?</div>
-                <div class="related-meta">2 hours ago</div>
-            </div>
-            <div class="related-article">
-                <div class="related-title">In pictures: The fall of Ouagadougou</div>
-                <div class="related-meta">3 hours ago</div>
-            </div>
-            <div class="related-article">
-                <div class="related-title">Regional powers consider military intervention</div>
-                <div class="related-meta">4 hours ago</div>
-            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
