@@ -3,378 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islamist militants encircle Ouagadougou, launching siege of Burkina Faso's capital | CNN</title>
+    <title>LBJ's only grandson launches uphill House bid - Politico</title>
     <style>
         body {
-            font-family: CNN, "CNN Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f8f8f8;
+            font-family: 'Politico FS', 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #262626;
-            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
         }
         .header {
-            background: #cc0000;
+            background: #dc0227;
             color: white;
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            border-bottom: 3px solid #000;
         }
         .header-content {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
         .logo {
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 32px;
+            font-weight: 900;
             letter-spacing: -1px;
         }
         .nav {
-            display: flex;
-            gap: 25px;
+            margin-top: 10px;
             font-size: 14px;
-            font-weight: 500;
         }
         .nav a {
             color: white;
             text-decoration: none;
-            opacity: 0.9;
+            margin-right: 20px;
         }
-        .nav a:hover {
-            opacity: 1;
-        }
-        .breaking-banner {
-            background: #ff6600;
-            color: white;
-            padding: 8px 20px;
-            font-size: 14px;
-            font-weight: bold;
-            text-align: center;
-        }
-        .main-container {
-            max-width: 1100px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             display: grid;
             grid-template-columns: 1fr 300px;
             gap: 30px;
         }
-        .article {
-            background: white;
-            padding: 30px;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
         .article-header {
-            border-bottom: 1px solid #e6e6e6;
+            border-bottom: 2px solid #000;
             padding-bottom: 20px;
-            margin-bottom: 25px;
-        }
-        .article-meta {
-            font-size: 12px;
-            color: #737373;
-            margin-bottom: 15px;
-        }
-        .article-title {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 15px 0;
-            color: #262626;
-        }
-        .article-subtitle {
-            font-size: 18px;
-            color: #595959;
             margin-bottom: 20px;
-            line-height: 1.4;
+        }
+        .headline {
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .subhead {
+            font-size: 20px;
+            color: #666;
+            margin: 0 0 20px 0;
+            font-weight: 400;
         }
         .byline {
             font-size: 14px;
-            color: #737373;
-            margin-bottom: 20px;
+            color: #666;
+        }
+        .byline a {
+            color: #dc0227;
+            text-decoration: none;
         }
         .article-content {
-            font-size: 17px;
-            line-height: 1.7;
-            color: #262626;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
         }
         .article-content p {
             margin-bottom: 20px;
         }
-        .article-content h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin: 30px 0 15px 0;
-            color: #262626;
-        }
-        .article-content strong {
-            font-weight: 600;
-        }
-        .image-container {
-            margin: 25px 0;
-            text-align: center;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-        .image-caption {
-            font-size: 13px;
-            color: #737373;
-            margin-top: 8px;
-            font-style: italic;
-        }
         .pullquote {
-            background: #f8f8f8;
-            border-left: 4px solid #cc0000;
-            padding: 20px;
+            border-left: 4px solid #dc0227;
+            padding-left: 20px;
             margin: 25px 0;
-            font-size: 18px;
-            font-weight: 500;
-            color: #262626;
+            font-size: 20px;
+            font-style: italic;
+            color: #555;
         }
         .sidebar {
             background: white;
             padding: 20px;
             border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .sidebar h3 {
             font-size: 16px;
-            font-weight: 600;
             margin: 0 0 15px 0;
-            color: #262626;
+            color: #000;
+            border-bottom: 2px solid #dc0227;
+            padding-bottom: 5px;
         }
-        .sidebar ul {
-            padding-left: 20px;
-            margin: 0;
+        .sidebar p {
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.4;
+            margin-bottom: 15px;
         }
-        .sidebar li {
-            margin-bottom: 8px;
-        }
-        .tweet-embed {
-            background: #f8f8f8;
-            border: 1px solid #e6e6e6;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 20px 0;
-            font-size: 14px;
-        }
-        .tweet-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-        .tweet-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #cc0000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-        .tweet-user {
-            font-weight: 600;
-        }
-        .tweet-handle {
-            color: #737373;
-            font-size: 13px;
-        }
-        .timestamp {
-            color: #737373;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-        .related-articles {
-            background: white;
-            padding: 20px;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        .related-stories {
             margin-top: 20px;
         }
-        .related-articles h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0 0 15px 0;
-            color: #262626;
-        }
-        .related-article {
-            border-bottom: 1px solid #e6e6e6;
-            padding: 15px 0;
-        }
-        .related-article:last-child {
-            border-bottom: none;
-        }
-        .related-title {
+        .related-stories h4 {
             font-size: 14px;
-            font-weight: 500;
-            color: #262626;
-            margin-bottom: 5px;
+            margin: 0 0 10px 0;
+            color: #666;
         }
-        .related-meta {
+        .related-stories a {
+            display: block;
+            font-size: 14px;
+            color: #dc0227;
+            text-decoration: none;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .timestamp {
             font-size: 12px;
-            color: #737373;
+            color: #999;
+            margin-top: 5px;
         }
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
-                padding: 10px;
-            }
-            .article-title {
-                font-size: 28px;
-            }
-            .nav {
-                display: none;
-            }
+        .breaking-banner {
+            background: #ffcc00;
+            color: #000;
+            padding: 8px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="header-content">
-            <div class="logo">CNN</div>
+            <div class="logo">POLITICO</div>
             <div class="nav">
-                <a href="#">World</a>
-                <a href="#">US</a>
-                <a href="#">Politics</a>
-                <a href="#">Business</a>
-                <a href="#">Tech</a>
-                <a href="#">Sports</a>
-                <a href="#">Entertainment</a>
+                <a href="#">Congress</a>
+                <a href="#">Campaigns</a>
+                <a href="#">2026 Elections</a>
+                <a href="#">The South</a>
             </div>
         </div>
     </div>
 
-    <div class="breaking-banner">
-        BREAKING: Islamist militants launch siege of Burkina Faso's capital city
-    </div>
-
-    <div class="main-container">
-        <div class="article">
+    <div class="container">
+        <article>
             <div class="article-header">
-                <div class="article-meta">
-                    WORLD | UPDATED 2:47 PM ET, MARCH 1, 2027
-                </div>
-                <h1 class="article-title">Islamist militants encircle Ouagadougou, launching siege of Burkina Faso's capital</h1>
-                <div class="article-subtitle">Jihadist groups have surrounded the capital city and begun assault operations, marking the most significant escalation in the West African nation's decade-long insurgency</div>
+                <div class="breaking-banner">BREAKING</div>
+                <h1 class="headline">LBJ's only grandson launches uphill House bid in Texas</h1>
+                <h2 class="subhead">Patrick Lyndon Nugent files paperwork to run as Blue Dog Democrat in R+8 district</h2>
                 <div class="byline">
-                    By Stephanie Busari, CNN Senior Africa Correspondent | CNN Africa Bureau
+                    By <a href="#">Samantha Thompson</a> and <a href="#">Marcus Rodriguez</a> | 01/11/2026 07:32 AM EST
                 </div>
             </div>
 
             <div class="article-content">
-                <p><strong>Ouagadougou, Burkina Faso (CNN)</strong> — Islamist militants have encircled Burkina Faso's capital city and launched what military analysts describe as the opening phase of a full-scale siege, after two years of rapid territorial gains across the country that have brought jihadist fighters to the gates of Ouagadougou.</p>
+                <p>AUSTIN, Texas — Patrick Lyndon Nugent, the only grandson of President Lyndon B. Johnson, filed federal paperwork Friday to run for Congress in Texas' 21st District, setting up what political analysts predict will be one of the most closely-watched uphill battles of the 2026 midterm elections.</p>
 
-                <p>Multiple jihadist groups, including al-Qaeda-affiliated Jama'at Nusrat al-Islam wal Muslimeen (JNIM) and Islamic State in the Greater Sahara (ISGS), have converged on the capital following a sustained offensive that began in early 2025. The militants have systematically captured towns and villages across central Burkina Faso, cutting off supply routes to the capital and positioning themselves for what appears to be a final assault.</p>
-
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/600x400/cc0000/ffffff?text=Ouagadougou+Siege" alt="Smoke rises over Ouagadougou as fighting intensifies">
-                    <div class="image-caption">Smoke rises over Ouagadougou as fighting intensifies between government forces and jihadist militants</div>
-                </div>
-
-                <p>"This is not a hit-and-run attack or a terrorist incident — this is a coordinated military operation designed to capture the capital," said Dr. Murtala Ibrahim, a Sahel security analyst at the Institute for Security Studies in Dakar. "The militants have been preparing for this moment for years."</p>
-
-                <p>Burkinabe security forces have established defensive positions throughout the city, with checkpoints on major roads and government buildings heavily guarded. The military has deployed tanks and armored vehicles at strategic intersections, while soldiers patrol neighborhoods that have not seen armed conflict in decades.</p>
-
-                <h2>Escalating violence across the country</h2>
-
-                <p>The siege marks a dramatic escalation in Burkina Faso's decade-long insurgency that began in 2015. The country has experienced multiple military coups since 2022, with military leaders promising to defeat the jihadist threat but instead watching as the insurgency has grown stronger.</p>
-
-                <p>According to regional security sources, the militants have captured several towns within 50 kilometers of Ouagadougou, including Koudougou and Ziniaré, effectively surrounding the capital. The groups have been enforcing strict Islamic law in captured territories, imposing harsh punishments and restricting women's rights.</p>
+                <p>Nugent, 48, announced his candidacy in a video filmed in front of the LBJ Presidential Library in Austin, positioning himself as a "pragmatic Democrat" who would join the fiscally conservative Blue Dog Coalition if elected. The district, which stretches from San Antonio's northern suburbs to the Hill Country, has been held by Republicans since 1979 and voted for the GOP presidential candidate by 8 points in 2024.</p>
 
                 <div class="pullquote">
-                    "The militants have captured several towns within 50 kilometers of Ouagadougou, effectively surrounding the capital."
+                    "My grandfather taught me that courage is standing up for what's right, even when it's not easy. This district deserves a representative who puts country over party and delivers real results for working families."
                 </div>
 
-                <p>"They have been methodical in their approach," said Ibrahim. "First they isolate the capital by taking surrounding towns, then they cut supply lines, and now they are beginning the siege operations. This is a textbook military strategy."</p>
+                <p>The announcement represents a political gamble for the Johnson family legacy. While LBJ dominated Texas politics during his era, the state has shifted dramatically rightward in recent decades. The 21st District, currently represented by four-term Republican Rep. Tony Gonzales, has a Cook Partisan Voter Index of R+8, making it a steep climb for any Democrat.</p>
 
-                <p>The United Nations has expressed grave concern about the situation, with Secretary-General António Guterres calling for an immediate cessation of hostilities and urging regional powers to intervene. The UN peacekeeping mission in neighboring Mali withdrew in 2023, leaving a security vacuum that jihadist groups have exploited.</p>
+                <p>Nugent, a San Antonio native who runs a renewable energy consulting firm, has never held elected office but comes armed with the most famous political surname in Texas history. His campaign launch video leaned heavily on his grandfather's domestic achievements while carefully distancing himself from contemporary Democratic positions that have proven toxic in the district.</p>
 
-                <h2>Regional implications</h2>
+                <p>"I'm not running to be anyone's rubber stamp," Nugent said in the video. "I'll work with anyone, Republican or Democrat, to bring jobs back to this district, secure our border, and lower costs for families."</p>
 
-                <p>The siege of Ouagadougou represents a significant threat to regional stability in West Africa. Burkina Faso borders six countries, including Ghana, Ivory Coast, and Togo — nations that have so far avoided the worst of the jihadist insurgency.</p>
+                <p>The candidate's positioning reflects the Blue Dog playbook: emphasize fiscal responsibility, border security, and local economic development while avoiding culture war issues that have doomed previous Democratic candidates in the district. It's a strategy that worked for Rep. Henry Cuellar, the last Blue Dog Democrat to survive in a competitive Texas district.</p>
 
-                <div class="tweet-embed">
-                    <div class="tweet-header">
-                        <div class="tweet-avatar">EC</div>
-                        <div>
-                            <div class="tweet-user">ECOWAS Commission</div>
-                            <div class="tweet-handle">@ecowas_cedeao</div>
-                        </div>
-                    </div>
-                    <div class="tweet-content">
-                        ECOWAS is gravely concerned by the deteriorating security situation in Burkina Faso. We call for immediate regional cooperation to prevent the fall of Ouagadougou and protect civilian populations. The stability of the entire region is at stake.
-                    </div>
-                    <div class="timestamp">Posted 1 hour ago</div>
+                <p>Republicans immediately seized on Nugent's family connections to paint him as out of touch with district voters. "Patrick Nugent is a liberal Austin insider trying to buy a congressional seat with his famous last name," said National Republican Congressional Committee spokesperson Sarah Miller. "Texas families don't need another Washington elite who will vote with Nancy Pelosi and the radical left."</p>
+
+                <p>The district's demographic trends offer Nugent a narrow path to victory. While still reliably Republican, the 21st has seen steady growth in suburban areas around San Antonio, where college-educated voters have shown willingness to split tickets. The district is also 35% Hispanic, a voting bloc that has drifted Republican in recent cycles but remains persuadable on economic issues.</p>
+
+                <p>Nugent's campaign strategy appears focused on consolidating Democratic base voters while peeling off moderate Republicans disillusioned with GOP leadership. His launch video featured testimonials from local business owners and veterans, groups that traditionally lean Republican but have shown volatility in recent elections.</p>
+
+                <p>The candidate's family history provides both opportunity and challenge. LBJ's legislative achievements on civil rights and social programs remain popular among Democrats, but his Vietnam War legacy complicates matters in a district with a significant military population. Nugent's campaign has emphasized his own military service — he served as an Army intelligence officer from 2001-2005 — rather than his grandfather's record.</p>
+
+                <p>Democratic strategists see the race as a long-shot investment worth making. "We need candidates who can compete everywhere, not just in deep-blue districts," said Texas Democratic Party chair Gilberto Hinojosa. "Patrick has the profile and resources to put this district in play."</p>
+
+                <p>Nugent's campaign reported raising $340,000 in the first 24 hours after his announcement, including significant donations from LBJ administration alumni and renewable energy executives. That early fundraising haul suggests he could compete financially in what is expected to be an expensive media market.</p>
+
+                <p>The race will likely serve as a test case for whether the Blue Dog model can survive in an era of increasing polarization. With Democrats needing to flip just five seats to regain House control, even long-shot races like Texas' 21st could prove decisive in determining the chamber's balance of power.</p>
+
+                <p>Rep. Gonzales, who won reelection by 12 points in 2024, has not yet commented on Nugent's candidacy. His campaign is expected to emphasize his record on border security and veterans' issues, while painting Nugent as too liberal for the district despite his moderate positioning.</p>
+
+                <div class="pullquote">
+                    "This district has been Republican since before I was born. But I believe Texans are ready for a new generation of leadership that puts problem-solving over partisanship."
                 </div>
 
-                <p>The Economic Community of West African States (ECOWAS) has convened an emergency meeting for Tuesday, while France and the United States have both expressed support for regional efforts to stabilize the situation. However, direct military intervention appears unlikely given the complex regional politics and the failure of previous foreign interventions in the region.</p>
+                <p>The primary elections are scheduled for March 3, 2026, with the general election set for November 3. Early polling in the district shows Gonzales leading Nugent by 15 points, but Democrats note that early surveys often underestimate challengers with strong name recognition and fundraising capacity.</p>
 
-                <h2>Humanitarian crisis looms</h2>
-
-                <p>Humanitarian organizations are warning of a potential catastrophe if the siege continues. The capital is home to approximately 2.8 million people, including hundreds of thousands who have fled violence in other parts of the country.</p>
-
-                <p>"We are seeing the early signs of a humanitarian emergency," said Sarah O'Connor, West Africa director for the International Committee of the Red Cross. "Food supplies are running low, medical facilities are overwhelmed, and people are trapped in their homes as fighting intensifies."</p>
-
-                <p>The World Food Program has suspended operations in the capital due to security concerns, while medical supplies are reportedly running critically low. Electricity and water services remain functional for now, but residents report intermittent disruptions as infrastructure becomes damaged in the fighting.</p>
-
-                <p>"People are scared to leave their homes," said Amadou Sawadogo, a resident of the capital reached by phone. "We can hear gunfire and explosions throughout the day and night. The city feels like it's under siege."</p>
-
-                <h2>International response</h2>
-
-                <p>The United States has evacuated non-essential embassy personnel and urged American citizens to leave the country. The State Department has issued a Level 4 travel advisory, the highest level, warning against any travel to Burkina Faso.</p>
-
-                <p>Russia has offered military assistance to the Burkinabe government, building on its growing influence in the region following the Wagner Group's operations in Mali and Central African Republic. However, Russian support has done little to stem the jihadist advance in recent months.</p>
-
-                <p>"The international community is watching this unfold in real-time, but there are few good options," said Dr. Ibrahim. "Direct military intervention could backfire, but doing nothing risks allowing a jihadist takeover of a capital city."</p>
-
-                <p>As fighting continues to intensify around Ouagadougou, residents report that the city has taken on an eerie calm during daylight hours, with most people staying indoors and shops closed. The sound of gunfire and explosions has become a regular occurrence, particularly after nightfall.</p>
-
-                <p>"This is not just a Burkina Faso problem anymore," said O'Connor. "If Ouagadougou falls, it will embolden jihadist groups across the region and could trigger a humanitarian catastrophe that will require international intervention."</p>
-
-                <p>The coming days will be critical in determining whether Burkina Faso's capital can hold out against the siege, or whether the country will become the first in the region to see its capital city fall to jihadist forces.</p>
+                <p>Whether the Johnson magic still works in deep-red Texas remains to be seen. But Nugent's entry guarantees that one of the most historically significant political families in American history will once again be tested in the crucible of electoral politics.</p>
             </div>
-        </div>
+        </article>
 
-        <div class="sidebar">
-            <h3>Related Coverage</h3>
-            <ul>
-                <li>Timeline: Burkina Faso's decade-long insurgency</li>
-                <li>Analysis: Why jihadist groups are gaining ground in West Africa</li>
-                <li>Interactive map: Jihadist advances in Burkina Faso</li>
-                <li>Opinion: The cost of Western disengagement from the Sahel</li>
-            </ul>
-        </div>
-
-        <div class="related-articles">
-            <h3>More from CNN Africa</h3>
-            <div class="related-article">
-                <div class="related-title">ECOWAS holds emergency summit as Burkina Faso crisis deepens</div>
-                <div class="related-meta">2 hours ago</div>
+        <aside class="sidebar">
+            <h3>Texas' 21st District</h3>
+            <p><strong>Current Representative:</strong> Tony Gonzales (R)</p>
+            <p><strong>Partisan Index:</strong> R+8</p>
+            <p><strong>2024 Result:</strong> GOP +12</p>
+            <p><strong>Population Centers:</strong> San Antonio suburbs, Hill Country</p>
+            <p><strong>Demographics:</strong> 35% Hispanic, 55% White</p>
+            
+            <div class="related-stories">
+                <h4>Related Coverage</h4>
+                <a href="#">Blue Dog Democrats seek comeback in Trump districts</a>
+                <a href="#">Texas redistricting faces new legal challenges</a>
+                <a href="#">LBJ's legacy looms large in modern Texas politics</a>
+                <a href="#">2026 midterms: The battle for the House</a>
             </div>
-            <div class="related-article">
-                <div class="related-title">UN evacuates staff from Ouagadougou as fighting intensifies</div>
-                <div class="related-meta">4 hours ago</div>
-            </div>
-            <div class="related-article">
-                <div class="related-title">Regional powers consider intervention as jihadist threat grows</div>
-                <div class="related-meta">6 hours ago</div>
-            </div>
-        </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
