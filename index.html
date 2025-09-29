@@ -3,351 +3,439 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Captain Ibrahim Traoré is a FUCKING MORON : Military</title>
+    <title>Islamist militants capture Ouagadougou after 11-day siege | BBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: "BBC Reith", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-            color: #1a1a1a;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #333;
+            line-height: 1.6;
         }
         .header {
-            background: #ff4500;
+            background: #000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid #bb0000;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            justify-content: space-between;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: -1px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
+        .nav {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
+            gap: 30px;
             font-size: 14px;
-            color: #878a8c;
         }
-        .comments-count a {
-            color: #878a8c;
+        .nav a {
+            color: white;
             text-decoration: none;
+            opacity: 0.9;
         }
-        .comments-count a:hover {
-            text-decoration: underline;
+        .nav a:hover {
+            opacity: 1;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
+        .breaking-banner {
+            background: #bb0000;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
         }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        .article {
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .article-header {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+        .article-meta {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .article-title {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .article-subtitle {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+        .byline {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .article-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .article-content p {
+            margin-bottom: 25px;
+        }
+        .article-content h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 35px 0 20px 0;
+            color: #000;
+            border-left: 4px solid #bb0000;
+            padding-left: 15px;
+        }
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .image-caption {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+            text-align: left;
+        }
+        .pullquote {
+            background: #f8f8f8;
+            border-left: 4px solid #bb0000;
+            padding: 25px;
+            margin: 30px 0;
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+            font-style: italic;
         }
         .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
+            background: white;
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            color: #000;
         }
         .sidebar ul {
+            padding-left: 20px;
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        .tweet-embed {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            font-size: 15px;
+        }
+        .tweet-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .tweet-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #bb0000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .tweet-user {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .tweet-handle {
+            color: #666;
+            font-size: 14px;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+        .related-articles {
+            background: white;
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .related-articles h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            color: #000;
+        }
+        .related-article {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 18px 0;
+        }
+        .related-article:last-child {
+            border-bottom: none;
+        }
+        .related-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        .related-meta {
+            font-size: 12px;
+            color: #666;
+        }
+        .key-facts {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 25px 0;
+        }
+        .key-facts h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .key-facts ul {
             margin: 0;
             padding-left: 20px;
         }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
+        .key-facts li {
+            margin-bottom: 8px;
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
         }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            .article-title {
+                font-size: 32px;
+            }
+            .nav {
+                display: none;
+            }
+            .article {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Military</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/FUCK_TRAORE_NOW</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">45 minutes ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>8.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Captain Ibrahim Traoré is a FUCKING MORON</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">RANT</span>
-                    <span class="flair">FUCK TRAORE</span>
-                    <span class="flair">Ouagadougou Siege</span>
-                    <span>Posted by u/FUCK_TRAORE_NOW • 45 minutes ago</span>
-                </div>
-
-                <p>I can't fucking take this anymore. This absolute DUMBASS is letting his own capital city starve to death because his fragile little ego can't handle accepting help from "colonial powers."</p>
-
-                <p><strong>LET ME BREAK THIS DOWN FOR YOU DIPSHITS:</strong></p>
-                <ul>
-                    <li>🚨 <strong>100,000+ civilians</strong> are trapped in Ouagadougou with dwindling food supplies</li>
-                    <li>🚨 <strong>Children are eating fucking tree bark</strong> because there's no food</li>
-                    <li>🚨 <strong>Water treatment plants</strong> are about to fail, meaning cholera and dysentery</li>
-                    <li>🚨 <strong>Medical supplies</strong> are almost gone - people are dying from treatable injuries</li>
-                </ul>
-
-                <p>And what does this FUCKING GENIUS do? He rejects <strong>EVERY SINGLE OFFER OF HELP!</strong></p>
-
-                <p>ECOWAS offers to evacuate civilians? <strong>"FUCK YOU, COLONIALISTS!"</strong><br>
-                France offers satellite intelligence? <strong>"FUCK YOU, NEO-COLONIALISTS!"</strong><br>
-                UN offers humanitarian aid? <strong>"FUCK YOU, IMPERIALISTS!"</strong><br>
-                His own senior officers recommend accepting help? <strong>"FUCK YOU, TRAITORS!"</strong></p>
-
-                <p><strong>THIS MAN IS LITERALLY A LOGISTICS OFFICER!</strong> His entire fucking military career was about supply chains and resource management. AND HE'S STARVING HIS OWN CITY TO DEATH BECAUSE HE'S TOO STUPID TO UNDERSTAND THAT CIVILIANS NEED FOOD!</p>
-
-                <p>Let me tell you something about Ibrahim Traoré's military "experience":</p>
-                <ul>
-                    <li>He was a <strong>FUCKING SUPPLY CLERK</strong> for most of his career</li>
-                    <li>He got kicked out of French military school for being a <strong>DISCIPLINARY PROBLEM</strong></li>
-                    <li>He graduated <strong>12TH OUT OF 15</strong> from Russian military academy</li>
-                    <li>He has <strong>NEVER commanded anything larger than a company</strong></li>
-                    <li>His combat experience is literally <strong>"my supply convoy got ambushed a few times"</strong></li>
-                </ul>
-
-                <p><strong>AND NOW THIS FUCKING IDIOT IS MAKING TACTICAL DECISIONS ABOUT DEFENDING A CAPITAL CITY OF 2 MILLION PEOPLE!</strong></p>
-
-                <p>The jihadists don't even need to attack. They're just sitting there watching this DUMBASS starve his own people to death. They're probably laughing their asses off while Traoré does their job for them.</p>
-
-                <p><strong>THE WORST PART?</strong> His own military is bypassing him. Senior officers are secretly coordinating with ECOWAS because they know he's going to get everyone killed. But they can't remove him because that would cause a civil war while the jihadists are at the gates.</p>
-
-                <p><strong>THOUSANDS OF INNOCENT PEOPLE ARE GOING TO DIE BECAUSE ONE MAN'S EGO IS MORE IMPORTANT THAN HUMAN LIVES.</strong></p>
-
-                <p>I don't give a shit about his ideological purity or his anti-colonial credentials anymore. When children are starving to death because you won't accept food aid, you're not a revolutionary - <strong>YOU'RE A FUCKING MONSTER.</strong></p>
-
-                <div class="comments-count">
-                    <a href="#">2.1k comments</a>
-                </div>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">BBC</div>
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">News</a>
+                <a href="#">World</a>
+                <a href="#">UK</a>
+                <a href="#">Business</a>
+                <a href="#">Tech</a>
+                <a href="#">Science</a>
+                <a href="#">Health</a>
+                <a href="#">Family & Education</a>
+                <a href="#">Entertainment & Arts</a>
             </div>
         </div>
+    </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
+    <div class="breaking-banner">
+        BREAKING: Islamist militants capture Ouagadougou after 11-day siege | Former President Traoré flees to Moscow
+    </div>
 
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="award">🏅</span>
-                    u/Former_Africa_Command • 35 minutes ago
+    <div class="main-container">
+        <div class="article">
+            <div class="article-header">
+                <div class="article-meta">
+                    Africa | Africa & Middle East
                 </div>
-                <div class="comment-content">
-                    <strong>PREACH IT BROTHER!</strong> I served in AFRICOM for 8 years and I've NEVER seen this level of incompetence. This isn't just military incompetence - this is CRIMINAL NEGLIGENCE. When you reject humanitarian aid that could save thousands of civilian lives, you're committing crimes against humanity. The ICC should be investigating this fucking moron for war crimes.
+                <h1 class="article-title">Islamist militants capture Ouagadougou after 11-day siege</h1>
+                <div class="article-subtitle">Burkina Faso's capital falls to jihadist groups as regional security crisis deepens across West Africa</div>
+                <div class="byline">
+                    By Anne Soy & Fergal Keane | BBC Africa Correspondents
                 </div>
-                <div class="comment-meta">u/FUCK_TRAORE_NOW • 30 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Exactly! He's literally causing a man-made famine in his own capital city. If this was any other leader, the international community would be calling for intervention. But because he's African and anti-colonial, people are treating him with kid gloves while CHILDREN STARVE TO DEATH.
+            </div>
+
+            <div class="article-content">
+                <p><strong>Ouagadougou, Burkina Faso</strong> — Islamist militants have captured Burkina Faso's capital city Ouagadougou after an 11-day siege that ended with government forces surrendering key positions across the city, marking a stunning victory for jihadist groups in West Africa.</p>
+
+                <div class="key-facts">
+                    <h3>Key facts</h3>
+                    <ul>
+                        <li>Ouagadougou fell on March 11 after 11 days of fighting</li>
+                        <li>Former President Ibrahim Traoré has fled to Moscow</li>
+                        <li>JNIM declares "Islamic Caliphate of The Sahel"</li>
+                        <li>Militants expanding beyond Burkina Faso borders</li>
+                        <li>Regional security crisis deepens across West Africa</li>
+                    </ul>
+                </div>
+
+                <p>The fall of Ouagadougou represents the most significant victory for jihadist groups in West Africa's decade-long insurgency. Multiple armed groups, led by Jama'at Nusrat al-Islam wal Muslimeen (JNIM), have declared the establishment of the "Islamic Caliphate of The Sahel" and are already expanding operations beyond Burkina Faso's borders.</p>
+
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/800x500/333333/ffffff?text=JNIM+Militants+in+Ouagadougou" alt="JNIM fighters in Ouagadougou">
+                    <div class="image-caption">JNIM fighters patrol the streets of Ouagadougou after capturing the capital</div>
+                </div>
+
+                <p>"The city has fallen," confirmed Colonel Emmanuel Kaboré, a senior officer in the Burkinabe military who spoke to the BBC via satellite phone from a neighboring country. "Government forces have dispersed. Some have crossed borders, others have melted into civilian populations. The jihadists control all major government buildings."</p>
+
+                <p>Former President Ibrahim Traoré, who had led the country since a 2022 coup, fled the country on March 10th and is now reported to be in Moscow, according to Russian state media. The Kremlin has confirmed his arrival but declined to comment on whether he has been granted asylum.</p>
+
+                <h2>Rapid collapse stuns regional observers</h2>
+
+                <p>The speed of the capital's fall has shocked regional security analysts and Western diplomats. Just 11 days after jihadist forces began their siege on March 1st, government resistance collapsed with remarkable speed.</p>
+
+                <p>"This was not supposed to happen," said Dr. Akinola Olojo, a West Africa security analyst at the University of Lagos. "Ouagadougou was considered the most defensible city in the region, with thousands of troops, international support, and months of preparation. The collapse in 11 days represents a catastrophic failure of both military strategy and political leadership."</p>
+
+                <div class="pullquote">
+                    "The collapse in 11 days represents a catastrophic failure of both military strategy and political leadership."
+                </div>
+
+                <p>The final assault began in the early hours of March 11th, with coordinated attacks on multiple government positions. By dawn, jihadist fighters had captured the presidential palace, parliament, and the main military barracks. By midday, they had effective control over the entire city.</p>
+
+                <p>Witnesses describe scenes of chaos as government forces abandoned their positions, some changing into civilian clothes to escape. "The soldiers just ran away," said Awa Ouédraogo, a market trader who watched the final assault from her home. "One minute they were there, the next they were gone. The jihadists came in trucks, waving their flags, shouting 'Allahu Akbar.'"</p>
+
+                <h2>New caliphate declared</h2>
+
+                <p>In a televised address from the presidential palace, JNIM leader Iyad Ag Ghali declared the establishment of the "Islamic Caliphate of The Sahel," claiming territory across Burkina Faso and promising to expand into neighboring countries.</p>
+
+                <p>"Today marks the beginning of a new era for the Sahel," Ag Ghali said, flanked by fighters carrying the group's black flag. "We have liberated our people from the corrupt governments that served foreign interests. We will establish justice according to Islamic law."</p>
+
+                <div class="tweet-embed">
+                    <div class="tweet-header">
+                        <div class="tweet-avatar">UN</div>
+                        <div>
+                            <div class="tweet-user">United Nations</div>
+                            <div class="tweet-handle">@UN</div>
+                        </div>
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⚡</span>
-                    u/Burkina_Vet_2019 • 32 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>I FUCKING SERVED UNDER THIS IDIOT!</strong> I was in the Burkinabe Army 2017-2019 when he was a Major. He was the WORST logistics officer I've ever seen. We had vehicles that sat broken for MONTHS because he wouldn't approve parts orders. He once rejected a shipment of MREs because they were "American imperialist food." The man is a fucking PARANOID SCHIZOPHRENIC who thinks everything is a Western plot. He's not ideological - he's MENTALLY ILL.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/ECOWAS_Soldier • 28 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>We're watching this shitshow from across the border and it's INFURIATING!</strong> My unit is on standby to help evacuate civilians, but this FUCKING MORON won't let us in. We have food, water, medical supplies, and transport ready to go. We could save thousands of lives RIGHT NOW. But no, his ego is more important than human lives. Every day we delay, more people die. FUCK TRAORE.
-                </div>
-                <div class="comment-meta">u/FUCK_TRAORE_NOW • 25 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Thank you for being ready to help. The fact that ECOWAS forces are literally across the border waiting to save lives while this DUMBASS plays ideological games makes me want to throw something. How many people have to die before someone removes this IDIOT from power?
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/French_Intelligence_Leak • 24 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>CONFIRMED: Traoré is HIDING the true casualty numbers.</strong> Our satellite intel shows mass graves being dug outside the city. The death toll from starvation and preventable disease is already in the HUNDREDS, but he's reporting "dozens." The man is not just incompetent - he's a FUCKING SOCIOPATH who's covering up mass civilian casualties to protect his reputation.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Jihadist_Warfare_Pro • 21 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>The jihadists are literally TWEETING about how easy this is.</strong> They're posting shit like "Thanks to Captain Traoré for doing our job for us" and "When your enemy is this stupid, why bother attacking?" They're not even maintaining the siege properly - they know they don't need to. This FUCKING MORON is going to hand them a victory without them firing a shot.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Africa_Analyst_20_Years • 18 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>I've studied African military leaders for two decades and Traoré is the WORST I've ever seen.</strong> Even the most brutal dictators understood basic military strategy. Idi Amin could at least organize a defense. Mobutu could manage logistics. But Traoré? He's a FUCKING LOGISTICS OFFICER WHO CAN'T MANAGE LOGISTICS! It's like having a brain surgeon who can't find the brain. The man is uniquely, spectacularly, historically incompetent.
-                </div>
-                <div class="comment-meta">u/FUCK_TRAORE_NOW • 15 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is what I keep saying! He's not just bad - he's HISTORICALLY bad. Future military academies will study Traoré as an example of what happens when you let a supply clerk make strategic decisions. "Don't be like Traoré" will be a lesson taught to officers.
+                    <div class="tweet-content">
+                        The UN Secretary-General is deeply alarmed by the fall of Ouagadougou and the declaration of an Islamic caliphate in the Sahel. We call for immediate regional cooperation to prevent further destabilization of West Africa.
                     </div>
-                    <div class="comment-reply">Reply</div>
+                    <div class="timestamp">Posted 3 hours ago</div>
                 </div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Human_Rights_Lawyer • 12 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Legal perspective: Traoré is committing CRIMES AGAINST HUMANITY.</strong> Article 7 of the Rome Statute specifically prohibits "inhumane acts... intentionally causing great suffering" and "extermination" through deprivation of food and medicine. By rejecting humanitarian aid that could prevent mass civilian deaths, he's meeting the legal definition. Someone needs to file an ICC complaint against this FUCKING MONSTER.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The declaration has sent shockwaves through the region, with neighboring countries immediately closing their borders and deploying additional troops to frontier areas. Ghana, Ivory Coast, and Togo have all announced emergency security measures.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    u/UN_Humanitarian_Coord • 8 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>We're fucking BEGGING him to let us help.</strong> World Food Programme has 500 tons of food sitting in Accra right now. UNICEF has medical supplies for 50,000 people. Red Cross has water purification units. We could have relief convoys moving within 24 hours if this FUCKING IDIOT would just say yes. Instead, he's letting his people starve because of some ideological purity test from 1970.
-                </div>
-                <div class="comment-reply">Reply</div>
+                <h2>Humanitarian catastrophe unfolding</h2>
+
+                <p>The United Nations is warning of a humanitarian catastrophe as the fighting has displaced hundreds of thousands of civilians. Aid agencies report that food supplies in the capital have been exhausted, medical facilities are overwhelmed, and clean water is running low.</p>
+
+                <p>"We are seeing the early stages of a humanitarian emergency that could affect millions," said Martin Griffiths, the UN's humanitarian chief. "The international community must act quickly to prevent mass starvation and disease outbreaks."</p>
+
+                <p>JNIM has announced that humanitarian organizations can operate under strict conditions, but Western aid agencies are reluctant to work in areas controlled by groups designated as terrorist organizations.</p>
+
+                <h2>Regional security crisis deepens</h2>
+
+                <p>The fall of Ouagadougou represents a dramatic escalation in West Africa's security crisis. JNIM has already announced plans to expand operations into neighboring countries, with the group's spokesman claiming they have "thousands of fighters ready to liberate the entire Sahel region."</p>
+
+                <p>Intelligence sources tell the BBC that JNIM forces have been spotted moving toward the borders with Ghana and Ivory Coast, though no cross-border attacks have been reported yet.</p>
+
+                <p>"This is no longer just a Burkina Faso problem," said a senior Western intelligence official who spoke on condition of anonymity. "We are looking at the potential collapse of state authority across the entire Sahel region. If JNIM can take Ouagadougou in 11 days, what about other capitals?"</p>
+
+                <p>The Economic Community of West African States (ECOWAS) has announced an emergency summit for later this week, but regional powers appear divided on how to respond. Nigeria and Ghana are pushing for immediate military intervention, while Ivory Coast and Senegal are urging caution.</p>
+
+                <h2>International response</h2>
+
+                <p>The United States has called for an immediate meeting of the UN Security Council, while France has announced it will host an emergency summit of European and African leaders this weekend.</p>
+
+                <p>"The fall of Ouagadougou represents a threat to international peace and security," said US Secretary of State Antony Blinken. "We cannot allow jihadist groups to establish control over sovereign nations."</p>
+
+                <p>However, options for international intervention appear limited. The US and European powers are reluctant to commit ground forces after the failures of previous interventions in the region, while regional powers lack the military capacity to confront JNIM effectively.</p>
+
+                <p>Russia has offered to mediate between JNIM and regional governments, building on its relationship with Traoré and other Sahelian leaders. However, Western diplomats are skeptical of Moscow's intentions, noting that Russian mercenaries have failed to prevent jihadist advances in neighboring Mali.</p>
+
+                <p>As night falls on Ouagadougou, residents report that JNIM fighters have begun implementing strict Islamic law, closing bars and shops selling alcohol, and requiring women to wear conservative dress. The group has announced that schools will reopen under a new curriculum based on Islamic teachings.</p>
+
+                <p>"We are witnessing the birth of a new jihadist state in West Africa," said Dr. Olojo. "The implications for regional security, international terrorism, and the lives of millions of civilians cannot be overstated."</p>
+
+                <p>The BBC has been unable to independently verify reports of executions of government officials and soldiers, though multiple sources have reported such incidents. JNIM has denied targeting civilians, claiming they are only fighting "corrupt government forces and their foreign allies."</p>
+
+                <p>As the situation continues to evolve rapidly, the international community faces difficult choices about how to respond to what may be the most significant jihadist victory in West African history.</p>
             </div>
         </div>
 
         <div class="sidebar">
-            <h3>More posts from r/Military</h3>
+            <h3>Related Topics</h3>
             <ul>
-                <li><a href="#">ECOWAS considering intervention without Burkinabe government approval</a></li>
-                <li><a href="#">Analysis: Why the siege of Ouagadougou matters for global security</a></li>
-                <li><a href="#">French intelligence: Jihadist groups coordinating across West Africa</a></li>
+                <li>Burkina Faso</li>
+                <li>West Africa jihadist insurgency</li>
+                <li>JNIM (Jama'at Nusrat al-Islam wal Muslimeen)</li>
+                <li>Islamic State in the Greater Sahara</li>
+                <li>Sahel security crisis</li>
+                <li>ECOWAS regional response</li>
             </ul>
+        </div>
+
+        <div class="related-articles">
+            <h3>More from BBC Africa</h3>
+            <div class="related-article">
+                <div class="related-title">Profile: Who is JNIM leader Iyad Ag Ghali?</div>
+                <div class="related-meta">1 hour ago</div>
+            </div>
+            <div class="related-article">
+                <div class="related-title">Analysis: How did Burkina Faso fall so quickly?</div>
+                <div class="related-meta">2 hours ago</div>
+            </div>
+            <div class="related-article">
+                <div class="related-title">In pictures: The fall of Ouagadougou</div>
+                <div class="related-meta">3 hours ago</div>
+            </div>
+            <div class="related-article">
+                <div class="related-title">Regional powers consider military intervention</div>
+                <div class="related-meta">4 hours ago</div>
+            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
