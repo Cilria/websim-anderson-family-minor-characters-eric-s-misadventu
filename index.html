@@ -3,223 +3,439 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LBJ's only grandson launches uphill House bid - Politico</title>
+    <title>President Pritzker nominates Congressman Patrick Lyndon Nugent as Solicitor General : law</title>
     <style>
         body {
-            font-family: 'Politico FS', 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0a0a0a;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .header {
-            background: #dc0227;
-            color: white;
-            padding: 15px 0;
-            border-bottom: 3px solid #000;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-        .nav {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
+            color: #e0e0e0;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid #333;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #ffffff;
             padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+            border-bottom: 1px solid #333;
         }
-        .article-header {
-            border-bottom: 2px solid #000;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+        .post {
+            padding: 25px;
+            border-bottom: 1px solid #333;
+            background: #1a1a1a;
         }
-        .headline {
-            font-size: 42px;
-            font-weight: 900;
-            line-height: 1.1;
-            margin: 0 0 15px 0;
-            color: #000;
+        .vote-buttons {
+            float: left;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
         }
-        .subhead {
-            font-size: 20px;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
             color: #666;
-            margin: 0 0 20px 0;
-            font-weight: 400;
+            transition: color 0.3s ease;
         }
-        .byline {
-            font-size: 14px;
-            color: #666;
+        .vote-btn:hover {
+            color: #ff4500;
         }
-        .byline a {
-            color: #dc0227;
-            text-decoration: none;
+        .content {
+            margin-left: 60px;
         }
-        .article-content {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        .pullquote {
-            border-left: 4px solid #dc0227;
-            padding-left: 20px;
-            margin: 25px 0;
-            font-size: 20px;
-            font-style: italic;
-            color: #555;
-        }
-        .sidebar {
-            background: white;
-            padding: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .sidebar h3 {
-            font-size: 16px;
+        .title {
             margin: 0 0 15px 0;
-            color: #000;
-            border-bottom: 2px solid #dc0227;
-            padding-bottom: 5px;
-        }
-        .sidebar p {
-            font-size: 14px;
+            font-size: 20px;
+            font-weight: 600;
             line-height: 1.4;
-            margin-bottom: 15px;
+            color: #ffffff;
         }
-        .related-stories {
-            margin-top: 20px;
-        }
-        .related-stories h4 {
-            font-size: 14px;
-            margin: 0 0 10px 0;
-            color: #666;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #dc0227;
+        .title a {
+            color: #4a9eff;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .title a:hover {
+            color: #6bb6ff;
+        }
+        .meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .flair {
+            background: linear-gradient(135deg, #2a4a7a, #1a3a6a);
+            color: #ffffff;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+        .comments-count {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #aaa;
+        }
+        .comments-count a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .comments-count a:hover {
+            color: #4a9eff;
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #252525;
+            padding: 12px 25px;
+            border-bottom: 1px solid #333;
+            font-size: 13px;
+            color: #888;
+        }
+        .sort-bar a {
+            color: #4a9eff;
+            text-decoration: none;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+        .sort-bar a:hover {
+            color: #6bb6ff;
+        }
+        .comment-section {
+            padding: 25px;
+            background: #1a1a1a;
+        }
+        .comment {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            border-left: 2px solid #2a4a7a;
+        }
+        .comment-meta {
+            font-size: 13px;
+            color: #666;
             margin-bottom: 8px;
-            line-height: 1.3;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
-        .timestamp {
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
+        .comment-content {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #e0e0e0;
         }
-        .breaking-banner {
-            background: #ffcc00;
-            color: #000;
-            padding: 8px 15px;
+        .comment-reply {
+            color: #4a9eff;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: color 0.3s ease;
+        }
+        .comment-reply:hover {
+            color: #6bb6ff;
+        }
+        .comment-nested {
+            margin-left: 25px;
+            margin-top: 12px;
+            padding-left: 20px;
+            border-left: 1px solid #2a4a7a;
+        }
+        .award {
+            color: #ffd700;
+            font-size: 13px;
+            margin-right: 6px;
+        }
+        .score {
+            font-weight: 600;
+            font-size: 13px;
+            color: #ff4500;
+        }
+        .edit {
+            color: #666;
             font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
+            margin-left: 6px;
+        }
+        .legal-citation {
+            background: #252525;
+            border-left: 3px solid #4a9eff;
+            padding: 12px 16px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #ccc;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">POLITICO</div>
-            <div class="nav">
-                <a href="#">Congress</a>
-                <a href="#">Campaigns</a>
-                <a href="#">2026 Elections</a>
-                <a href="#">The South</a>
+    <div class="container">
+        <div class="header">
+            <span>r/law</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/SCOTUS_Clerk</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>2.1k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">President Pritzker nominates Congressman Patrick Lyndon Nugent as Solicitor General</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Solicitor General</span>
+                    <span class="flair">DOJ</span>
+                    <span class="flair">Appointments</span>
+                    <span>Posted by u/SCOTUS_Clerk • 2 hours ago</span>
+                </div>
+
+                <p>Just days before he was expected to announce a Texas AG run, President Pritzker taps the three-term Congressman to replace Lauren Underwood as Solicitor General. Nugent's background is unusual for the role - Army intelligence officer, renewable energy consultant, and moderate Democrat from a swing district. His Supreme Court advocacy experience appears limited to <em>amicus briefs</em> in environmental and voting rights cases.</p>
+
+                <p>Legal qualifications questions aside, the political calculus here is fascinating. This effectively removes a potential Democratic challenger for Texas AG Chip Roy in 2032, while giving the administration a Solicitor General with military credentials and moderate appeal.</p>
+
+                <p>Key questions for the legal community: How will his Blue Dog coalition background influence the administration's positions before the Court? And can someone with minimal appellate advocacy experience effectively argue the government's most important cases?</p>
+
+                <div class="comments-count">
+                    <a href="#">634 comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">LBJ's only grandson launches uphill House bid in Texas</h1>
-                <h2 class="subhead">Patrick Lyndon Nugent files paperwork to run as Blue Dog Democrat in R+8 district</h2>
-                <div class="byline">
-                    By <a href="#">Samantha Thompson</a> and <a href="#">Marcus Rodriguez</a> | 01/11/2026 07:32 AM EST
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.4k points</span> • 
+                    u/AppellateAttorney • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    This is... not great. The Solicitor General is supposed to be the finest appellate advocate in the country. I've been practicing before the Supreme Court for 15 years and I've never seen Nugent argue a single case. Not one. He's filed some <em>amicus</em> briefs, sure, but that's not the same as standing at the lectern and fielding questions from nine Justices.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ConstitutionalLawProf • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    It's worse than that. The SG's office has dozens of career attorneys who've spent decades perfecting Supreme Court advocacy. Passing over them for a politician with no oral argument experience is insulting to the entire office.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p>AUSTIN, Texas — Patrick Lyndon Nugent, the only grandson of President Lyndon B. Johnson, filed federal paperwork Friday to run for Congress in Texas' 21st District, setting up what political analysts predict will be one of the most closely-watched uphill battles of the 2026 midterm elections.</p>
-
-                <p>Nugent, 48, announced his candidacy in a video filmed in front of the LBJ Presidential Library in Austin, positioning himself as a "pragmatic Democrat" who would join the fiscally conservative Blue Dog Coalition if elected. The district, which stretches from San Antonio's northern suburbs to the Hill Country, has been held by Republicans since 1979 and voted for the GOP presidential candidate by 8 points in 2024.</p>
-
-                <div class="pullquote">
-                    "My grandfather taught me that courage is standing up for what's right, even when it's not easy. This district deserves a representative who puts country over party and delivers real results for working families."
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.7k points</span> • 
+                    u/DOJ_Career • 1 hour ago
                 </div>
-
-                <p>The announcement represents a political gamble for the Johnson family legacy. While LBJ dominated Texas politics during his era, the state has shifted dramatically rightward in recent decades. The 21st District, currently represented by four-term Republican Rep. Tony Gonzales, has a Cook Partisan Voter Index of R+8, making it a steep climb for any Democrat.</p>
-
-                <p>Nugent, a San Antonio native who runs a renewable energy consulting firm, has never held elected office but comes armed with the most famous political surname in Texas history. His campaign launch video leaned heavily on his grandfather's domestic achievements while carefully distancing himself from contemporary Democratic positions that have proven toxic in the district.</p>
-
-                <p>"I'm not running to be anyone's rubber stamp," Nugent said in the video. "I'll work with anyone, Republican or Democrat, to bring jobs back to this district, secure our border, and lower costs for families."</p>
-
-                <p>The candidate's positioning reflects the Blue Dog playbook: emphasize fiscal responsibility, border security, and local economic development while avoiding culture war issues that have doomed previous Democratic candidates in the district. It's a strategy that worked for Rep. Henry Cuellar, the last Blue Dog Democrat to survive in a competitive Texas district.</p>
-
-                <p>Republicans immediately seized on Nugent's family connections to paint him as out of touch with district voters. "Patrick Nugent is a liberal Austin insider trying to buy a congressional seat with his famous last name," said National Republican Congressional Committee spokesperson Sarah Miller. "Texas families don't need another Washington elite who will vote with Nancy Pelosi and the radical left."</p>
-
-                <p>The district's demographic trends offer Nugent a narrow path to victory. While still reliably Republican, the 21st has seen steady growth in suburban areas around San Antonio, where college-educated voters have shown willingness to split tickets. The district is also 35% Hispanic, a voting bloc that has drifted Republican in recent cycles but remains persuadable on economic issues.</p>
-
-                <p>Nugent's campaign strategy appears focused on consolidating Democratic base voters while peeling off moderate Republicans disillusioned with GOP leadership. His launch video featured testimonials from local business owners and veterans, groups that traditionally lean Republican but have shown volatility in recent elections.</p>
-
-                <p>The candidate's family history provides both opportunity and challenge. LBJ's legislative achievements on civil rights and social programs remain popular among Democrats, but his Vietnam War legacy complicates matters in a district with a significant military population. Nugent's campaign has emphasized his own military service — he served as an Army intelligence officer from 2001-2005 — rather than his grandfather's record.</p>
-
-                <p>Democratic strategists see the race as a long-shot investment worth making. "We need candidates who can compete everywhere, not just in deep-blue districts," said Texas Democratic Party chair Gilberto Hinojosa. "Patrick has the profile and resources to put this district in play."</p>
-
-                <p>Nugent's campaign reported raising $340,000 in the first 24 hours after his announcement, including significant donations from LBJ administration alumni and renewable energy executives. That early fundraising haul suggests he could compete financially in what is expected to be an expensive media market.</p>
-
-                <p>The race will likely serve as a test case for whether the Blue Dog model can survive in an era of increasing polarization. With Democrats needing to flip just five seats to regain House control, even long-shot races like Texas' 21st could prove decisive in determining the chamber's balance of power.</p>
-
-                <p>Rep. Gonzales, who won reelection by 12 points in 2024, has not yet commented on Nugent's candidacy. His campaign is expected to emphasize his record on border security and veterans' issues, while painting Nugent as too liberal for the district despite his moderate positioning.</p>
-
-                <div class="pullquote">
-                    "This district has been Republican since before I was born. But I believe Texans are ready for a new generation of leadership that puts problem-solving over partisanship."
+                <div class="comment-content">
+                    Career DOJ here. The internal reaction has been... mixed. On one hand, Nugent's a quick study and has solid political instincts. On the other, the SG's office isn't a place for on-the-job training. We're talking about cases that affect millions of people, argued before the highest court in the land.
                 </div>
-
-                <p>The primary elections are scheduled for March 3, 2026, with the general election set for November 3. Early polling in the district shows Gonzales leading Nugent by 15 points, but Democrats note that early surveys often underestimate challengers with strong name recognition and fundraising capacity.</p>
-
-                <p>Whether the Johnson magic still works in deep-red Texas remains to be seen. But Nugent's entry guarantees that one of the most historically significant political families in American history will once again be tested in the crucible of electoral politics.</p>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/SCOTUS_Bar_Admission • 50 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    The bigger issue is institutional knowledge. The SG's office has specialized procedures, relationships with the Court, and decades of precedent on how to handle certain types of cases. You can't just parachute in and expect to master that overnight.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Texas' 21st District</h3>
-            <p><strong>Current Representative:</strong> Tony Gonzales (R)</p>
-            <p><strong>Partisan Index:</strong> R+8</p>
-            <p><strong>2024 Result:</strong> GOP +12</p>
-            <p><strong>Population Centers:</strong> San Antonio suburbs, Hill Country</p>
-            <p><strong>Demographics:</strong> 35% Hispanic, 55% White</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Blue Dog Democrats seek comeback in Trump districts</a>
-                <a href="#">Texas redistricting faces new legal challenges</a>
-                <a href="#">LBJ's legacy looms large in modern Texas politics</a>
-                <a href="#">2026 midterms: The battle for the House</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.1k points</span> • 
+                    u/Federalist_Society • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    From a purely legal standpoint, this nomination is indefensible. The Solicitor General should be selected based on appellate experience, not political considerations. Compare this to previous nominees - Elizabeth Prelogar had argued 27 Supreme Court cases before her nomination. Nugent has argued zero.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/Administrative_Law • 45 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    It's particularly troubling given the cases coming up - major questions about administrative law, voting rights, environmental regulation. These require sophisticated legal arguments, not political talking points.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.8k points</span> • 
+                    u/Texas_Law_Partner • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    I practiced with Nugent at Bracewell before he entered politics. He's brilliant - graduated top of his class at UT Law, clerked for Judge Garza on the Fifth Circuit, and has a mind like a steel trap. Don't let the political background fool you - the man understands constitutional law better than most Supreme Court advocates.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/AppellateAttorney • 40 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    Understanding constitutional law and being able to advocate it effectively before the Supreme Court are two very different things. I've seen brilliant legal minds completely fall apart at oral argument. The pressure is immense.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/SCOTUS_Historian • 50 minutes ago
+                </div>
+                <div class="comment-content">
+                    Historical perspective: We've had political appointees as SG before. Thurgood Marshall was a politician (NAACP lawyer, then appellate judge) before becoming SG. The key difference - Marshall had argued 32 Supreme Court cases before his appointment. Nugent has argued none.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.3k points</span> • 
+                    u/Confirmation_Matters • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    The real question is confirmation. Senate Judiciary is going to have a field day with his lack of appellate experience. Expect tough questions about <em>Chevron</em> deference, administrative law, and his approach to defending statutes he may have voted against as a Congressman.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/Senate_Staffer • 30 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    The math is tricky. Committee is 11-10, but two moderate Democrats have already expressed concerns about his qualifications. If Republicans unite against him, he could fail in committee. The White House must have counted votes before this announcement.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.1k points</span> • 
+                    u/Office_SG • 40 minutes ago
+                </div>
+                <div class="comment-content">
+                    Former SG office attorney here. The real damage isn't just to the office's reputation - it's to the career staff. These are people who've spent decades developing expertise in Supreme Court advocacy, and they're being told that political connections matter more than legal skills. Morale is going to be terrible.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/Legal_Realist • 35 minutes ago
+                </div>
+                <div class="comment-content">
+                    Let's be honest about what's happening here. This isn't about finding the best legal mind - it's about removing a potential statewide candidate in Texas while rewarding a loyal Congressman. The fact that it degrades the Solicitor General's office is just collateral damage.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">823 points</span> • 
+                    u/Appellate_Experience • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    The Fifth Circuit clerkship is relevant experience, but it's not Supreme Court advocacy. Judge Garza's clerks typically handle district court work, not appellate arguments. There's a massive difference between advising a judge and standing up to argue before the nine most powerful jurists in the country.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">712 points</span> • 
+                    u/Environmental_Law • 25 minutes ago
+                </div>
+                <div class="comment-content">
+                    His environmental law experience might actually be relevant. The SG's office is handling major climate change cases - <em>West Virginia v. EPA</em> was just the beginning. If he understands both the legal and policy aspects of environmental regulation, that could be valuable.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">634 points</span> • 
+                    u/Political_Law_Prof • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    The irony is that Nugent would probably be excellent at the political aspects of the job - managing relationships with agencies, deciding which cases to appeal, testifying before Congress. But the core function is Supreme Court advocacy, and that's where he'll struggle.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">512 points</span> • 
+                    u/Clerk_Season • 15 minutes ago
+                </div>
+                <div class="comment-content">
+                    Current SCOTUS clerk here. The Court takes the SG's office seriously - they get extra time for oral argument, their briefs get extra attention, and their attorneys are treated with respect. But that respect is earned through decades of excellence. A political appointee with no experience? That's going to be a tough sell.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">445 points</span> • 
+                    u/Voting_Rights_Expert • 10 minutes ago
+                </div>
+                <div class="comment-content">
+                    His voting rights work is actually substantive. He's filed detailed <em>amicus</em> briefs in redistricting cases, argued for expanded voter access, and understands the intersection of constitutional law and practical politics. That expertise could be valuable given the voting rights cases coming up.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">378 points</span> • 
+                    u/Institutionalist • 8 minutes ago
+                </div>
+                <div class="comment-content">
+                    The larger issue is institutional. The Solicitor General's office is supposed to be above politics. When you appoint someone based on political considerations rather than legal qualifications, you undermine the office's credibility and the entire federal appellate system.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
