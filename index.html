@@ -3,466 +3,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coalition Ground Forces Launch Major Offensive Across West Africa | The New York Times</title>
+    <title>Coalition ground forces launch major offensive across West Africa : worldnews</title>
     <style>
         body {
-            font-family: "NYT Franklin", Georgia, "Times New Roman", Times, serif;
-            background-color: #f8f8f8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            color: #333;
-            line-height: 1.6;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header {
-            background: #000;
+            background: #ff4500;
             color: white;
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #333;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 10px;
+            font-weight: 500;
         }
-        .logo {
-            font-size: 26px;
-            font-weight: bold;
-            letter-spacing: -0.5px;
-            font-family: "NYT Cheltenham", Georgia, serif;
-        }
-        .nav {
-            display: flex;
-            gap: 25px;
-            font-size: 13px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.9;
-        }
-        .nav a:hover {
-            opacity: 1;
-        }
-        .breaking-banner {
-            background: #d10000;
-            color: white;
-            padding: 14px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.85; }
-            100% { opacity: 1; }
-        }
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        .post {
             padding: 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
+            border-bottom: 1px solid #eee;
         }
-        .article {
-            background: white;
-            padding: 40px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .article-header {
-            border-bottom: 1px solid #e2e2e2;
-            padding-bottom: 25px;
-            margin-bottom: 25px;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
         }
-        .article-meta {
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
             font-size: 12px;
-            color: #666;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-        .article-title {
-            font-size: 44px;
-            font-weight: 700;
-            line-height: 1.1;
-            margin: 0 0 15px 0;
-            color: #000;
-            font-family: "NYT Cheltenham", Georgia, serif;
-        }
-        .article-subtitle {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 20px;
-            line-height: 1.4;
-            font-weight: 400;
-        }
-        .byline {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .article-content {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #333;
-        }
-        .article-content p {
-            margin-bottom: 25px;
-        }
-        .article-content h2 {
-            font-size: 26px;
-            font-weight: 600;
-            margin: 35px 0 20px 0;
-            color: #000;
-            border-top: 1px solid #e2e2e2;
-            padding-top: 20px;
-        }
-        .image-container {
-            margin: 30px 0;
-            text-align: center;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        .image-caption {
-            font-size: 14px;
-            color: #666;
-            margin-top: 12px;
-            font-style: italic;
-            text-align: left;
-        }
-        .pullquote {
-            background: #f8f8f8;
-            border-left: 4px solid #d10000;
-            padding: 28px;
-            margin: 30px 0;
-            font-size: 20px;
-            font-weight: 500;
-            color: #000;
-            font-style: italic;
-            border-radius: 0 4px 4px 0;
-        }
-        .sidebar {
-            background: white;
-            padding: 25px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .sidebar h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0 0 20px 0;
-            color: #000;
-        }
-        .sidebar ul {
-            padding-left: 20px;
-            margin: 0;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        .sidebar li {
+            color: #787c7e;
             margin-bottom: 10px;
         }
-        .key-facts {
-            background: #f8f8f8;
-            border: 1px solid #e2e2e2;
-            padding: 22px;
-            border-radius: 4px;
-            margin: 25px 0;
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
         }
-        .key-facts h3 {
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
             font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #000;
-            font-weight: 600;
+            font-weight: 500;
         }
-        .key-facts ul {
+        .sidebar ul {
             margin: 0;
             padding-left: 20px;
         }
-        .key-facts li {
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #333;
-        }
-        .timeline {
-            background: #f8f8f8;
-            border-left: 3px solid #d10000;
+        .comment-section {
             padding: 20px;
-            margin: 25px 0;
+            border-top: 1px solid #eee;
         }
-        .timeline-item {
+        .comment {
             margin-bottom: 15px;
             padding-left: 20px;
-            position: relative;
+            border-left: 2px solid #e9f5fd;
         }
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -6px;
-            top: 8px;
-            width: 10px;
-            height: 10px;
-            background: #d10000;
-            border-radius: 50%;
-        }
-        .timeline-date {
-            font-weight: 600;
-            color: #d10000;
-            font-size: 14px;
-        }
-        .related-articles {
-            background: white;
-            padding: 25px;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-        .related-articles h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0 0 20px 0;
-            color: #000;
-        }
-        .related-article {
-            border-bottom: 1px solid #e2e2e2;
-            padding: 18px 0;
-        }
-        .related-article:last-child {
-            border-bottom: none;
-        }
-        .related-title {
-            font-size: 15px;
-            font-weight: 500;
-            color: #000;
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
             margin-bottom: 5px;
         }
-        .related-meta {
-            font-size: 12px;
-            color: #666;
-        }
-        .front-summary {
-            background: #f8f8f8;
-            border: 2px solid #d10000;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
-        }
-        .front-summary h3 {
-            font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #d10000;
-            font-weight: 600;
-        }
-        .front-summary ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .front-summary li {
-            margin-bottom: 8px;
+        .comment-content {
             font-size: 14px;
-            color: #333;
+            line-height: 1.5;
+            margin-bottom: 5px;
         }
-        .front-summary .territory {
-            font-weight: 600;
-            color: #000;
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
         }
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
-                padding: 10px;
-            }
-            .article-title {
-                font-size: 32px;
-            }
-            .nav {
-                display: none;
-            }
-            .article {
-                padding: 20px;
-            }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">The New York Times</div>
-            <div class="nav">
-                <a href="#">World</a>
-                <a href="#">Africa</a>
-                <a href="#">Middle East</a>
-                <a href="#">US</a>
-                <a href="#">Politics</a>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/ConflictTracker_Africa</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>12.7k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Coalition ground forces launch major offensive across West Africa</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Behind Soft Paywall</span>
+                    <span class="flair">Africa</span>
+                    <span class="flair">Military Operations</span>
+                    <span>Posted by u/ConflictTracker_Africa • 3 hours ago</span>
+                </div>
+
+                <p>US, French and NATO troops advance on multiple fronts with overwhelming air support, recapturing territory from Islamic Caliphate across seven countries - Ivory Coast, Nigeria, Togo, Benin, Senegal, Guinea, and Mali/Niger.</p>
+
+                <p>Over 63 nations involved in what military officials describe as the largest multinational ground operation since WWII. Major gains reported on all fronts with 15,000+ air sorties conducted.</p>
+
+                <p><a href="https://www.nytimes.com/2027/07/20/world/africa/coalition-west-africa-offensive-islamic-caliphate">New York Times Article</a></p>
+
+                <div class="comments-count">
+                    <a href="#">2,847 comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="breaking-banner">
-        BREAKING: Coalition Ground Forces Launch Major Offensive Across West Africa
-    </div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
 
-    <div class="main-container">
-        <div class="article">
-            <div class="article-header">
-                <div class="article-meta">
-                    World News | Africa | Military Operations
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Africa_Security_Expert • 2 hours ago
                 </div>
-                <h1 class="article-title">Coalition Ground Forces Launch Major Offensive Across West Africa</h1>
-                <div class="article-subtitle">US, French and NATO troops advance on multiple fronts with overwhelming air support, recapturing territory from Islamic Caliphate</div>
-                <div class="byline">
-                    By Declan Walsh & Eric Schmitt | The New York Times
+                <div class="comment-content">
+                    This is actually huge - 63 nations is unprecedented for modern warfare. For comparison, the Gulf War coalition was 35 nations. This suggests the international community is treating this as an existential threat to the West African state system.
+                </div>
+                <div class="comment-meta">u/Geopolitics_Nerd • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        63 nations but let's be real - most are probably just providing logistics or intelligence. The actual fighting is probably US, France, UK, and regional African forces. Still impressive coordination though.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p><strong>Washington</strong> — Coalition ground forces have launched a major offensive across West Africa, with American, French and NATO troops advancing on multiple fronts alongside local forces in what military officials describe as the largest multinational ground operation since World War II.</p>
-
-                <div class="front-summary">
-                    <h3>Coalition Advances by Front</h3>
-                    <ul>
-                        <li><span class="territory">Ivory Coast:</span> Northern areas recaptured except encircled Korhogo with 1,500 jihadists</li>
-                        <li><span class="territory">Nigeria:</span> A1 Highway cut off, Caliphate forces encircled in Yelwa</li>
-                        <li><span class="territory">Togo:</span> Kran National Park recaptured, advancing on Dapaong</li>
-                        <li><span class="territory">Benin:</span> 3,500 square km recaptured on RNIE2 Highway</li>
-                        <li><span class="territory">Senegal:</span> N7 highway cut off, Tambacounda offensive begun</li>
-                        <li><span class="territory">Guinea:</span> Siguiri encircled, large Caliphate forces trapped</li>
-                        <li><span class="territory">Mali/Niger:</span> Tuareg ANLF rebels recaptured Arlit with coalition support</li>
-                    </ul>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Former_Intelligence_Officer • 2 hours ago
                 </div>
-
-                <p>The offensive, which began on June 30th and has intensified over the past three weeks, has seen coalition forces make significant territorial gains across seven countries, with air power playing a decisive role in supporting ground operations.</p>
-
-                <p>"This is the most significant multinational military operation of the 21st century," said General Michael Langley, commander of US Africa Command, in an exclusive interview with The Times. "We have over 63 nations contributing forces, equipment, and intelligence capabilities in a coordinated campaign to dismantle the Islamic Caliphate of the Sahel."</p>
-
-                <div class="image-container">
-                    <img src="https://via.placeholder.com/800x500/1a1a1a/ffffff?text=Coalition+Forces+Advance+in+West+Africa" alt="Coalition forces advance in West Africa">
-                    <div class="image-caption">Coalition forces from multiple nations have been advancing across West Africa since June 30th</div>
+                <div class="comment-content">
+                    The fact that they're using Tuareg rebels (ANLF) in Mali/Niger is smart. Local knowledge + air support = effective combination. The Tuareg have been fighting in that desert for centuries, they know every wadi and village.
                 </div>
+                <div class="comment-reply">Reply</div>
+            </div>
 
-                <p>The operation represents a dramatic escalation in the international response to the caliphate's rapid expansion across West Africa, which has seen jihadist forces seize control of multiple capital cities and threaten regional stability.</p>
-
-                <h2>Ivory Coast Front: Korhogo Encircled</h2>
-
-                <p>On the Ivory Coast front, coalition forces have made rapid advances, recapturing most of the northern areas that had fallen under caliphate control during the initial jihadist expansion. The key strategic objective remains the city of Korhogo, which is now completely encircled by coalition forces.</p>
-
-                <p>"Korhogo represents the last major stronghold of the caliphate in northern Ivory Coast," said French Brigadier General Pierre Lefebvre, commanding coalition forces in the region. "We have approximately 1,500 jihadist fighters trapped inside the city, and we are preparing for what we expect will be a significant battle."</p>
-
-                <p>The encirclement of Korhogo follows two weeks of methodical advances by coalition forces, who have used a combination of armored vehicles, special forces, and overwhelming air support to push back caliphate fighters.</p>
-
-                <div class="pullquote">
-                    "This is the most significant multinational military operation of the 21st century. We have over 63 nations contributing forces, equipment, and intelligence capabilities in a coordinated campaign to dismantle the Islamic Caliphate of the Sahel."
+            <div class="comment">
+                <div class="comment-meta">
+                    u/European_Policy_Analyst • 2 hours ago
                 </div>
+                <div class="comment-content">
+                    European here - this is going to be expensive. Germany alone has 3,500 troops deployed. At roughly $50k per soldier per year, that's €175 million just for personnel costs, not counting equipment, logistics, etc. And we're probably in this for years, not months.
+                </div>
+                <div class="comment-meta">u/Taxpayer_Concerns • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Better expensive than having a jihadist super-state controlling West African resources. Nigeria's oil alone makes this worth it from a strategic perspective. Plus the humanitarian angle - 15 million people under jihadist rule.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                <p>Intelligence assessments suggest that the jihadist forces in Korhogo are well-entrenched and have had several weeks to prepare defensive positions, leading coalition planners to expect a potentially protracted siege.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Nigerian_Diaspora • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    As someone with family in Kaduna, thank God the coalition is finally doing something serious. My cousins were trapped there during the siege. The fact that they drove out the jihadists and killed 900 in one day gives me hope.
+                </div>
+                <div class="comment-meta">u/Nigerian_Student • 45 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        My uncle is in the Nigerian Army and says the coalition air support has been game-changing. Before, they couldn't move without getting ambushed. Now they have real-time intel and air cover. Makes a huge difference.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                <h2>Nigerian Front: Strategic Highway Cut</h2>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Military_Aviator • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    15,000 sorties in 3 weeks is massive. For comparison, the entire Libya operation was about 26,000 sorties over 8 months. This level of air activity suggests they're trying to completely destroy the caliphate's military capability, not just contain them.
+                </div>
+                <div class="comment-meta">u/Defense_Analyst • 30 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    True, but air power alone won't win this. The caliphate still has thousands of fighters and controls major cities. Urban warfare is brutal and air power is less effective when they're mixed with civilians. This is going to get messy.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                <p>In Nigeria, coalition forces working alongside Nigerian military units, international volunteers, and local rebel groups have achieved a major tactical success by cutting off the A1 Highway, a crucial supply route that has left caliphate forces encircled in the city of Yelwa.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/China_Watcher • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Interesting that China is providing airstrikes too. That's a first - Chinese military action in Africa outside of UN peacekeeping. Shows how seriously Beijing is taking this threat to their Belt and Road investments.
+                </div>
+                <div class="comment-meta">u/International_Relations • 45 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        China has massive mining interests in the region - especially in Guinea's bauxite and Mali's gold. They're not doing this out of charity. Plus they want to be seen as a responsible global power, not just an economic predator.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                <p>The operation, which involved coordinated air strikes and ground assaults, has isolated an estimated 800-1,200 jihadist fighters who are now trapped in Yelwa and dependent on air resupply or breakout attempts.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/History_Buff_42 • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The new caliph refusing to change strategy after losing most of his senior leadership in that airstrike is classic insurgent thinking. They're still trying to fight conventionally when they should be going back to guerrilla tactics.
+                </div>
+                <div class="comment-meta">u/Insurgency_Expert • 30 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Exactly. Holding territory makes them a target for conventional forces with air superiority. Smart move would be to disperse, go underground, wait for coalition forces to get tired and leave. But ideological groups often prefer martyrdom over strategic retreat.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                <p>"The cutting of the A1 Highway represents a significant tactical achievement," said Nigerian Army Chief of Staff Lieutenant General Taoreed Lagbaja. "We are now preparing for the next phase of operations, which will focus on the eventual recapture of Sokoto, one of the major cities under caliphate control."</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/French_Expat • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    As a French person, I'm conflicted. On one hand, I'm proud we're leading this effort and protecting people. On the other hand, I know this is going to be a long, expensive commitment and we'll probably be blamed for everything that goes wrong.
+                </div>
+                <div class="comment-meta">u/Francophone_African • 30 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Better French involvement than letting the region collapse. At least France has historical knowledge of the area and existing relationships. The US would just bomb everything and leave.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                <p>The coalition has deployed significant intelligence assets to monitor the encircled forces, with drone surveillance providing real-time updates on jihadist movements and preparations.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/UK_Defense_Journalist • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    The encirclement of Korhogo with 1,500 jihadists trapped inside is going to be interesting. That's a lot of fighters to have in one place. If they refuse to surrender, this could turn into a mini-Fallujah situation.
+                </div>
+                <div class="comment-meta">u/Urban_Warfare_Expert • 15 minutes ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Especially since they've had weeks to prepare defenses. Urban warfare against ideologically motivated fighters is the worst kind of fighting. High casualties, lots of civilian suffering, and you never really know when it's "over."
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
 
-                <h2>Togo and Benin: Rapid Advances</h2>
-
-                <p>In Togo, coalition forces have recaptured the Kran National Park and are advancing along the N1 highway toward Dapaong, which serves as the main caliphate stronghold in the country. The operation has been supported by special forces from multiple nations, including German and Belgian units.</p>
-
-                <p>Beninese forces, supported by French and American advisors, have made significant gains along the RNIE2 Highway, recapturing nearly 3,500 square kilometers of territory in northern Benin. The advance has been methodical, with coalition forces securing each area before moving forward.</p>
-
-                <p>"The operations in Togo and Benin demonstrate the effectiveness of our multinational approach," said General Langley. "Each nation is contributing forces with specific capabilities, and we are seeing the results in terms of territorial gains and enemy casualties."</p>
-
-                <h2>Senegal and Guinea: Encirclement Operations</h2>
-
-                <p>In Senegal, coalition forces have cut off the N7 highway and begun the first phase of an offensive designed to gradually isolate Tambacounda, the main caliphate stronghold in the country. The operation has involved significant engineering work to establish forward operating bases and supply lines.</p>
-
-                <p>Guinea has seen some of the most intense fighting, with coalition forces gradually pushing back caliphate fighters and now encircling Siguiri, where large numbers of jihadist forces are believed to be trapped. The city has been under siege for several days, with coalition forces conducting precision strikes against defensive positions.</p>
-
-                <h2>Mali and Niger: Tuareg Alliance</h2>
-
-                <p>In Mali and Niger, where the governments have effectively collapsed, the coalition has adopted a different approach, providing support to the Azawad National Liberation Front (ANLF), a Tuareg rebel group that has been fighting the caliphate in northern Mali and Niger.</p>
-
-                <p>The ANLF, with coalition air support and special forces advisors, has successfully recaptured Arlit in Niger, a key mining town that had been under caliphate control. In Mali, progress has been slower due to the challenging desert terrain, but coalition-backed forces are approaching the RN18 highway.</p>
-
-                <p>"The Tuareg forces know this terrain better than anyone," said a senior French officer involved in coordinating with the ANLF. "With our air support and intelligence capabilities, they have been able to achieve significant successes."</p>
-
-                <h2>Air Power Decisive</h2>
-
-                <p>Across all fronts, coalition air power has played a decisive role in enabling ground advances. American F-35 fighters, French Rafales, British Typhoons, and German Tornados have conducted thousands of sorties, providing close air support, conducting reconnaissance, and striking caliphate positions.</p>
-
-                <p>"The air campaign has been relentless," said General Langley. "We have conducted over 15,000 sorties since the offensive began, and the caliphate has been unable to effectively counter our air superiority."</p>
-
-                <p>The air campaign has been supported by a vast array of intelligence assets, including American AWACS aircraft, British Sentinel surveillance planes, and numerous drone platforms that provide real-time intelligence to ground forces.</p>
-
-                <h2>New Caliph's Strategy</h2>
-
-                <p>Intelligence assessments indicate that the caliphate's new leader, who emerged after the June 11th airstrike that eliminated most of the senior leadership, has maintained the group's focus on conventional warfare despite the changing tactical situation.</p>
-
-                <p>"The new caliph appears to be committed to the same conventional warfare approach that has characterized the group's operations," said Dr. Katherine Zimmerman, a counterterrorism analyst at the American Enterprise Institute. "This has played into coalition strengths, as we have been able to use our advantages in air power and combined arms operations."</p>
-
-                <p>The caliphate has continued to attempt to hold territory rather than reverting to insurgent tactics, leading to a series of conventional battles that have generally favored the better-equipped and supported coalition forces.</p>
-
-                <h2>Challenges Ahead</h2>
-
-                <p>Despite the significant territorial gains, coalition officials acknowledge that major challenges remain. The caliphate still controls significant territory, particularly in urban areas where they have had time to prepare defensive positions.</p>
-
-                <p>"We are making progress, but we are not declaring victory," said General Langley. "The caliphate still has significant capabilities, and we expect that the fighting will become more difficult as we approach their main strongholds."</p>
-
-                <p>Coalition planners are particularly concerned about the potential for protracted urban warfare in cities like Korhogo, Tambacounda, and other major caliphate strongholds where jihadist forces have had time to prepare extensive defensive positions.</p>
-
-                <p>As the offensive continues into its fourth week, coalition forces are preparing for what many expect will be a long and difficult campaign to completely eliminate the caliphate's territorial control across West Africa.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/World_News_Junkie • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    This whole situation is wild. Six months ago, most people had never heard of JNIM. Now they control territory the size of Western Europe and we're looking at the largest military coalition since WWII. The speed of change in modern conflicts is insane.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
         </div>
 
         <div class="sidebar">
-            <h3>Coalition Forces by Country</h3>
+            <h3>More posts from r/worldnews</h3>
             <ul>
-                <li><strong>United States:</strong> 12,500 troops, 200 aircraft</li>
-                <li><strong>France:</strong> 8,200 troops, 150 aircraft</li>
-                <li><strong>United Kingdom:</strong> 4,800 troops, 120 aircraft</li>
-                <li><strong>Germany:</strong> 3,500 troops, 80 aircraft</li>
-                <li><strong>Italy:</strong> 2,900 troops, 60 aircraft</li>
-                <li><strong>Spain:</strong> 2,200 troops, 50 aircraft</li>
-                <li><strong>Belgium:</strong> 1,800 troops, 40 aircraft</li>
-                <li><strong>Netherlands:</strong> 1,500 troops, 35 aircraft</li>
-                <li><strong>Other NATO:</strong> 8,500 troops</li>
-                <li><strong>Regional forces:</strong> 45,000 troops</li>
+                <li><a href="#">ECOWAS announces emergency summit for March 25th</a></li>
+                <li><a href="#">France considering major military intervention in West Africa</a></li>
+                <li><a href="#">US begins evacuating embassy personnel from West African capitals</a></li>
             </ul>
-        </div>
-
-        <div class="related-articles">
-            <h3>More from The Times</h3>
-            <div class="related-article">
-                <div class="related-title">Analysis: The Strategic Importance of the A1 Highway in Nigeria</div>
-                <div class="related-meta">2 hours ago</div>
-            </div>
-            <div class="related-article">
-                <div class="related-title">Opinion: Why the Tuareg Alliance Could Be Key to Victory in Mali</div>
-                <div class="related-meta">4 hours ago</div>
-            </div>
-            <div class="related-article">
-                <div class="related-title">Interactive: Track the Coalition's Progress Across West Africa</div>
-                <div class="related-meta">6 hours ago</div>
-            </div>
-            <div class="related-article">
-                <div class="related-title">Fact Check: Understanding Coalition Air Superiority in the Sahel</div>
-                <div class="related-meta">8 hours ago</div>
-            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
