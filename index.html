@@ -3,225 +3,466 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LBJ's only grandson launches uphill House bid - Politico</title>
+    <title>Coalition Ground Forces Launch Major Offensive Across West Africa | The New York Times</title>
     <style>
         body {
-            font-family: 'Politico FS', 'Helvetica Neue', Arial, sans-serif;
+            font-family: "NYT Franklin", Georgia, "Times New Roman", Times, serif;
+            background-color: #f8f8f8;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
             color: #333;
+            line-height: 1.6;
         }
         .header {
-            background: #dc0227;
+            background: #000;
             color: white;
-            padding: 15px 0;
-            border-bottom: 3px solid #000;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
         }
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         .logo {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: -1px;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+            font-family: "NYT Cheltenham", Georgia, serif;
         }
         .nav {
-            margin-top: 10px;
-            font-size: 14px;
+            display: flex;
+            gap: 25px;
+            font-size: 13px;
         }
         .nav a {
             color: white;
             text-decoration: none;
-            margin-right: 20px;
+            opacity: 0.9;
         }
-        .container {
+        .nav a:hover {
+            opacity: 1;
+        }
+        .breaking-banner {
+            background: #d10000;
+            color: white;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.85; }
+            100% { opacity: 1; }
+        }
+        .main-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             display: grid;
-            grid-template-columns: 1fr 300px;
+            grid-template-columns: 2fr 1fr;
             gap: 30px;
         }
-        .article-header {
-            border-bottom: 2px solid #000;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+        .article {
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .headline {
-            font-size: 42px;
-            font-weight: 900;
+        .article-header {
+            border-bottom: 1px solid #e2e2e2;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+        .article-meta {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .article-title {
+            font-size: 44px;
+            font-weight: 700;
             line-height: 1.1;
             margin: 0 0 15px 0;
             color: #000;
+            font-family: "NYT Cheltenham", Georgia, serif;
         }
-        .subhead {
+        .article-subtitle {
             font-size: 20px;
-            color: #666;
-            margin: 0 0 20px 0;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.4;
             font-weight: 400;
         }
         .byline {
             font-size: 14px;
             color: #666;
-        }
-        .byline a {
-            color: #dc0227;
-            text-decoration: none;
+            margin-bottom: 20px;
         }
         .article-content {
             font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #333;
         }
         .article-content p {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        .article-content h2 {
+            font-size: 26px;
+            font-weight: 600;
+            margin: 35px 0 20px 0;
+            color: #000;
+            border-top: 1px solid #e2e2e2;
+            padding-top: 20px;
+        }
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .image-caption {
+            font-size: 14px;
+            color: #666;
+            margin-top: 12px;
+            font-style: italic;
+            text-align: left;
         }
         .pullquote {
-            border-left: 4px solid #dc0227;
-            padding-left: 20px;
-            margin: 25px 0;
+            background: #f8f8f8;
+            border-left: 4px solid #d10000;
+            padding: 28px;
+            margin: 30px 0;
             font-size: 20px;
+            font-weight: 500;
+            color: #000;
             font-style: italic;
-            color: #555;
+            border-radius: 0 4px 4px 0;
         }
         .sidebar {
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .sidebar h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            color: #000;
+        }
+        .sidebar ul {
+            padding-left: 20px;
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        .key-facts {
+            background: #f8f8f8;
+            border: 1px solid #e2e2e2;
+            padding: 22px;
+            border-radius: 4px;
+            margin: 25px 0;
+        }
+        .key-facts h3 {
             font-size: 16px;
             margin: 0 0 15px 0;
             color: #000;
-            border-bottom: 2px solid #dc0227;
-            padding-bottom: 5px;
+            font-weight: 600;
         }
-        .sidebar p {
+        .key-facts ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .key-facts li {
+            margin-bottom: 8px;
             font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 15px;
+            color: #333;
         }
-        .related-stories {
+        .timeline {
+            background: #f8f8f8;
+            border-left: 3px solid #d10000;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .timeline-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background: #d10000;
+            border-radius: 50%;
+        }
+        .timeline-date {
+            font-weight: 600;
+            color: #d10000;
+            font-size: 14px;
+        }
+        .related-articles {
+            background: white;
+            padding: 25px;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             margin-top: 20px;
         }
-        .related-stories h4 {
-            font-size: 14px;
-            margin: 0 0 10px 0;
+        .related-articles h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            color: #000;
+        }
+        .related-article {
+            border-bottom: 1px solid #e2e2e2;
+            padding: 18px 0;
+        }
+        .related-article:last-child {
+            border-bottom: none;
+        }
+        .related-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        .related-meta {
+            font-size: 12px;
             color: #666;
         }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #dc0227;
-            text-decoration: none;
+        .front-summary {
+            background: #f8f8f8;
+            border: 2px solid #d10000;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        .front-summary h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #d10000;
+            font-weight: 600;
+        }
+        .front-summary ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .front-summary li {
             margin-bottom: 8px;
-            line-height: 1.3;
+            font-size: 14px;
+            color: #333;
         }
-        .timestamp {
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
-        }
-        .breaking-banner {
-            background: #ffcc00;
+        .front-summary .territory {
+            font-weight: 600;
             color: #000;
-            padding: 8px 15px;
-            font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            .article-title {
+                font-size: 32px;
+            }
+            .nav {
+                display: none;
+            }
+            .article {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="header-content">
-            <div class="logo">POLITICO</div>
+            <div class="logo">The New York Times</div>
             <div class="nav">
-                <a href="#">Congress</a>
-                <a href="#">Campaigns</a>
-                <a href="#">2026 Elections</a>
-                <a href="#">The South</a>
+                <a href="#">World</a>
+                <a href="#">Africa</a>
+                <a href="#">Middle East</a>
+                <a href="#">US</a>
+                <a href="#">Politics</a>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <article>
+    <div class="breaking-banner">
+        BREAKING: Coalition Ground Forces Launch Major Offensive Across West Africa
+    </div>
+
+    <div class="main-container">
+        <div class="article">
             <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">LBJ's only grandson launches uphill House bid in Texas</h1>
-                <h2 class="subhead">Patrick Lyndon Nugent files paperwork to run as Blue Dog Democrat in R+8 district</h2>
+                <div class="article-meta">
+                    World News | Africa | Military Operations
+                </div>
+                <h1 class="article-title">Coalition Ground Forces Launch Major Offensive Across West Africa</h1>
+                <div class="article-subtitle">US, French and NATO troops advance on multiple fronts with overwhelming air support, recapturing territory from Islamic Caliphate</div>
                 <div class="byline">
-                    By <a href="#">Samantha Thompson</a> and <a href="#">Marcus Rodriguez</a> | 01/11/2026 07:32 AM EST
+                    By Declan Walsh & Eric Schmitt | The New York Times
                 </div>
             </div>
 
             <div class="article-content">
-                <p>AUSTIN, Texas — Patrick Lyndon Nugent, the only grandson of President Lyndon B. Johnson, filed federal paperwork Friday to run for Congress in Texas' 21st District, setting up what political analysts predict will be one of the most closely-watched uphill battles of the 2026 midterm elections.</p>
+                <p><strong>Washington</strong> — Coalition ground forces have launched a major offensive across West Africa, with American, French and NATO troops advancing on multiple fronts alongside local forces in what military officials describe as the largest multinational ground operation since World War II.</p>
 
-                <p>Nugent, 48, announced his candidacy in a video filmed in front of the LBJ Presidential Library in Austin, positioning himself as a "pragmatic Democrat" who would join the fiscally conservative Blue Dog Coalition if elected. The district, which stretches from San Antonio's northern suburbs to the Hill Country, has been held by Republicans since 1979 and voted for the GOP presidential candidate by 8 points in 2024.</p>
-
-                <div class="pullquote">
-                    "My grandfather taught me that courage is standing up for what's right, even when it's not easy. This district deserves a representative who puts country over party and delivers real results for working families."
+                <div class="front-summary">
+                    <h3>Coalition Advances by Front</h3>
+                    <ul>
+                        <li><span class="territory">Ivory Coast:</span> Northern areas recaptured except encircled Korhogo with 1,500 jihadists</li>
+                        <li><span class="territory">Nigeria:</span> A1 Highway cut off, Caliphate forces encircled in Yelwa</li>
+                        <li><span class="territory">Togo:</span> Kran National Park recaptured, advancing on Dapaong</li>
+                        <li><span class="territory">Benin:</span> 3,500 square km recaptured on RNIE2 Highway</li>
+                        <li><span class="territory">Senegal:</span> N7 highway cut off, Tambacounda offensive begun</li>
+                        <li><span class="territory">Guinea:</span> Siguiri encircled, large Caliphate forces trapped</li>
+                        <li><span class="territory">Mali/Niger:</span> Tuareg ANLF rebels recaptured Arlit with coalition support</li>
+                    </ul>
                 </div>
 
-                <p>The announcement represents a political gamble for the Johnson family legacy. While LBJ dominated Texas politics during his era, the state has shifted dramatically rightward in recent decades. The 21st District, currently represented by four-term Republican Rep. Tony Gonzales, has a Cook Partisan Voter Index of R+8, making it a steep climb for any Democrat.</p>
+                <p>The offensive, which began on June 30th and has intensified over the past three weeks, has seen coalition forces make significant territorial gains across seven countries, with air power playing a decisive role in supporting ground operations.</p>
 
-                <p>Nugent, a San Antonio native who runs a renewable energy consulting firm, has never held elected office but comes armed with the most famous political surname in Texas history. His campaign launch video leaned heavily on his grandfather's domestic achievements while carefully distancing himself from contemporary Democratic positions that have proven toxic in the district.</p>
+                <p>"This is the most significant multinational military operation of the 21st century," said General Michael Langley, commander of US Africa Command, in an exclusive interview with The Times. "We have over 63 nations contributing forces, equipment, and intelligence capabilities in a coordinated campaign to dismantle the Islamic Caliphate of the Sahel."</p>
 
-                <p>"I'm not running to be anyone's rubber stamp," Nugent said in the video. "I'll work with anyone, Republican or Democrat, to bring jobs back to this district, secure our border, and lower costs for families."</p>
-
-                <p>The candidate's positioning reflects the Blue Dog playbook: emphasize fiscal responsibility, border security, and local economic development while avoiding culture war issues that have doomed previous Democratic candidates in the district. It's a strategy that worked for Rep. Henry Cuellar, the last Blue Dog Democrat to survive in a competitive Texas district.</p>
-
-                <p>Republicans immediately seized on Nugent's family connections to paint him as out of touch with district voters. "Patrick Nugent is a liberal Austin insider trying to buy a congressional seat with his famous last name," said National Republican Congressional Committee spokesperson Sarah Miller. "Texas families don't need another Washington elite who will vote with Nancy Pelosi and the radical left."</p>
-
-                <p>The district's demographic trends offer Nugent a narrow path to victory. While still reliably Republican, the 21st has seen steady growth in suburban areas around San Antonio, where college-educated voters have shown willingness to split tickets. The district is also 35% Hispanic, a voting bloc that has drifted Republican in recent cycles but remains persuadable on economic issues.</p>
-
-                <p>Nugent's campaign strategy appears focused on consolidating Democratic base voters while peeling off moderate Republicans disillusioned with GOP leadership. His launch video featured testimonials from local business owners and veterans, groups that traditionally lean Republican but have shown volatility in recent elections.</p>
-
-                <p>The candidate's family history provides both opportunity and challenge. LBJ's legislative achievements on civil rights and social programs remain popular among Democrats, but his Vietnam War legacy complicates matters in a district with a significant military population. Nugent's campaign has emphasized his own military service — he served as an Army intelligence officer from 2001-2005 — rather than his grandfather's record.</p>
-
-                <p>Democratic strategists see the race as a long-shot investment worth making. "We need candidates who can compete everywhere, not just in deep-blue districts," said Texas Democratic Party chair Gilberto Hinojosa. "Patrick has the profile and resources to put this district in play."</p>
-
-                <p>Nugent's campaign reported raising $340,000 in the first 24 hours after his announcement, including significant donations from LBJ administration alumni and renewable energy executives. That early fundraising haul suggests he could compete financially in what is expected to be an expensive media market.</p>
-
-                <p>The race will likely serve as a test case for whether the Blue Dog model can survive in an era of increasing polarization. With Democrats needing to flip just five seats to regain House control, even long-shot races like Texas' 21st could prove decisive in determining the chamber's balance of power.</p>
-
-                <p>Rep. Gonzales, who won reelection by 12 points in 2024, has not yet commented on Nugent's candidacy. His campaign is expected to emphasize his record on border security and veterans' issues, while painting Nugent as too liberal for the district despite his moderate positioning.</p>
-
-                <div class="pullquote">
-                    "This district has been Republican since before I was born. But I believe Texans are ready for a new generation of leadership that puts problem-solving over partisanship."
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/800x500/1a1a1a/ffffff?text=Coalition+Forces+Advance+in+West+Africa" alt="Coalition forces advance in West Africa">
+                    <div class="image-caption">Coalition forces from multiple nations have been advancing across West Africa since June 30th</div>
                 </div>
 
-                <p>The primary elections are scheduled for March 3, 2026, with the general election set for November 3. Early polling in the district shows Gonzales leading Nugent by 15 points, but Democrats note that early surveys often underestimate challengers with strong name recognition and fundraising capacity.</p>
+                <p>The operation represents a dramatic escalation in the international response to the caliphate's rapid expansion across West Africa, which has seen jihadist forces seize control of multiple capital cities and threaten regional stability.</p>
 
-                <p>Whether the Johnson magic still works in deep-red Texas remains to be seen. But Nugent's entry guarantees that one of the most historically significant political families in American history will once again be tested in the crucible of electoral politics.</p>
-            </div>
-        </article>
+                <h2>Ivory Coast Front: Korhogo Encircled</h2>
 
-        <aside class="sidebar">
-            <h3>Texas' 21st District</h3>
-            <p><strong>Current Representative:</strong> Tony Gonzales (R)</p>
-            <p><strong>Partisan Index:</strong> R+8</p>
-            <p><strong>2024 Result:</strong> GOP +12</p>
-            <p><strong>Population Centers:</strong> San Antonio suburbs, Hill Country</p>
-            <p><strong>Demographics:</strong> 35% Hispanic, 55% White</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Blue Dog Democrats seek comeback in Trump districts</a>
-                <a href="#">Texas redistricting faces new legal challenges</a>
-                <a href="#">LBJ's legacy looms large in modern Texas politics</a>
-                <a href="#">2026 midterms: The battle for the House</a>
+                <p>On the Ivory Coast front, coalition forces have made rapid advances, recapturing most of the northern areas that had fallen under caliphate control during the initial jihadist expansion. The key strategic objective remains the city of Korhogo, which is now completely encircled by coalition forces.</p>
+
+                <p>"Korhogo represents the last major stronghold of the caliphate in northern Ivory Coast," said French Brigadier General Pierre Lefebvre, commanding coalition forces in the region. "We have approximately 1,500 jihadist fighters trapped inside the city, and we are preparing for what we expect will be a significant battle."</p>
+
+                <p>The encirclement of Korhogo follows two weeks of methodical advances by coalition forces, who have used a combination of armored vehicles, special forces, and overwhelming air support to push back caliphate fighters.</p>
+
+                <div class="pullquote">
+                    "This is the most significant multinational military operation of the 21st century. We have over 63 nations contributing forces, equipment, and intelligence capabilities in a coordinated campaign to dismantle the Islamic Caliphate of the Sahel."
+                </div>
+
+                <p>Intelligence assessments suggest that the jihadist forces in Korhogo are well-entrenched and have had several weeks to prepare defensive positions, leading coalition planners to expect a potentially protracted siege.</p>
+
+                <h2>Nigerian Front: Strategic Highway Cut</h2>
+
+                <p>In Nigeria, coalition forces working alongside Nigerian military units, international volunteers, and local rebel groups have achieved a major tactical success by cutting off the A1 Highway, a crucial supply route that has left caliphate forces encircled in the city of Yelwa.</p>
+
+                <p>The operation, which involved coordinated air strikes and ground assaults, has isolated an estimated 800-1,200 jihadist fighters who are now trapped in Yelwa and dependent on air resupply or breakout attempts.</p>
+
+                <p>"The cutting of the A1 Highway represents a significant tactical achievement," said Nigerian Army Chief of Staff Lieutenant General Taoreed Lagbaja. "We are now preparing for the next phase of operations, which will focus on the eventual recapture of Sokoto, one of the major cities under caliphate control."</p>
+
+                <p>The coalition has deployed significant intelligence assets to monitor the encircled forces, with drone surveillance providing real-time updates on jihadist movements and preparations.</p>
+
+                <h2>Togo and Benin: Rapid Advances</h2>
+
+                <p>In Togo, coalition forces have recaptured the Kran National Park and are advancing along the N1 highway toward Dapaong, which serves as the main caliphate stronghold in the country. The operation has been supported by special forces from multiple nations, including German and Belgian units.</p>
+
+                <p>Beninese forces, supported by French and American advisors, have made significant gains along the RNIE2 Highway, recapturing nearly 3,500 square kilometers of territory in northern Benin. The advance has been methodical, with coalition forces securing each area before moving forward.</p>
+
+                <p>"The operations in Togo and Benin demonstrate the effectiveness of our multinational approach," said General Langley. "Each nation is contributing forces with specific capabilities, and we are seeing the results in terms of territorial gains and enemy casualties."</p>
+
+                <h2>Senegal and Guinea: Encirclement Operations</h2>
+
+                <p>In Senegal, coalition forces have cut off the N7 highway and begun the first phase of an offensive designed to gradually isolate Tambacounda, the main caliphate stronghold in the country. The operation has involved significant engineering work to establish forward operating bases and supply lines.</p>
+
+                <p>Guinea has seen some of the most intense fighting, with coalition forces gradually pushing back caliphate fighters and now encircling Siguiri, where large numbers of jihadist forces are believed to be trapped. The city has been under siege for several days, with coalition forces conducting precision strikes against defensive positions.</p>
+
+                <h2>Mali and Niger: Tuareg Alliance</h2>
+
+                <p>In Mali and Niger, where the governments have effectively collapsed, the coalition has adopted a different approach, providing support to the Azawad National Liberation Front (ANLF), a Tuareg rebel group that has been fighting the caliphate in northern Mali and Niger.</p>
+
+                <p>The ANLF, with coalition air support and special forces advisors, has successfully recaptured Arlit in Niger, a key mining town that had been under caliphate control. In Mali, progress has been slower due to the challenging desert terrain, but coalition-backed forces are approaching the RN18 highway.</p>
+
+                <p>"The Tuareg forces know this terrain better than anyone," said a senior French officer involved in coordinating with the ANLF. "With our air support and intelligence capabilities, they have been able to achieve significant successes."</p>
+
+                <h2>Air Power Decisive</h2>
+
+                <p>Across all fronts, coalition air power has played a decisive role in enabling ground advances. American F-35 fighters, French Rafales, British Typhoons, and German Tornados have conducted thousands of sorties, providing close air support, conducting reconnaissance, and striking caliphate positions.</p>
+
+                <p>"The air campaign has been relentless," said General Langley. "We have conducted over 15,000 sorties since the offensive began, and the caliphate has been unable to effectively counter our air superiority."</p>
+
+                <p>The air campaign has been supported by a vast array of intelligence assets, including American AWACS aircraft, British Sentinel surveillance planes, and numerous drone platforms that provide real-time intelligence to ground forces.</p>
+
+                <h2>New Caliph's Strategy</h2>
+
+                <p>Intelligence assessments indicate that the caliphate's new leader, who emerged after the June 11th airstrike that eliminated most of the senior leadership, has maintained the group's focus on conventional warfare despite the changing tactical situation.</p>
+
+                <p>"The new caliph appears to be committed to the same conventional warfare approach that has characterized the group's operations," said Dr. Katherine Zimmerman, a counterterrorism analyst at the American Enterprise Institute. "This has played into coalition strengths, as we have been able to use our advantages in air power and combined arms operations."</p>
+
+                <p>The caliphate has continued to attempt to hold territory rather than reverting to insurgent tactics, leading to a series of conventional battles that have generally favored the better-equipped and supported coalition forces.</p>
+
+                <h2>Challenges Ahead</h2>
+
+                <p>Despite the significant territorial gains, coalition officials acknowledge that major challenges remain. The caliphate still controls significant territory, particularly in urban areas where they have had time to prepare defensive positions.</p>
+
+                <p>"We are making progress, but we are not declaring victory," said General Langley. "The caliphate still has significant capabilities, and we expect that the fighting will become more difficult as we approach their main strongholds."</p>
+
+                <p>Coalition planners are particularly concerned about the potential for protracted urban warfare in cities like Korhogo, Tambacounda, and other major caliphate strongholds where jihadist forces have had time to prepare extensive defensive positions.</p>
+
+                <p>As the offensive continues into its fourth week, coalition forces are preparing for what many expect will be a long and difficult campaign to completely eliminate the caliphate's territorial control across West Africa.</p>
             </div>
-        </aside>
+        </div>
+
+        <div class="sidebar">
+            <h3>Coalition Forces by Country</h3>
+            <ul>
+                <li><strong>United States:</strong> 12,500 troops, 200 aircraft</li>
+                <li><strong>France:</strong> 8,200 troops, 150 aircraft</li>
+                <li><strong>United Kingdom:</strong> 4,800 troops, 120 aircraft</li>
+                <li><strong>Germany:</strong> 3,500 troops, 80 aircraft</li>
+                <li><strong>Italy:</strong> 2,900 troops, 60 aircraft</li>
+                <li><strong>Spain:</strong> 2,200 troops, 50 aircraft</li>
+                <li><strong>Belgium:</strong> 1,800 troops, 40 aircraft</li>
+                <li><strong>Netherlands:</strong> 1,500 troops, 35 aircraft</li>
+                <li><strong>Other NATO:</strong> 8,500 troops</li>
+                <li><strong>Regional forces:</strong> 45,000 troops</li>
+            </ul>
+        </div>
+
+        <div class="related-articles">
+            <h3>More from The Times</h3>
+            <div class="related-article">
+                <div class="related-title">Analysis: The Strategic Importance of the A1 Highway in Nigeria</div>
+                <div class="related-meta">2 hours ago</div>
+            </div>
+            <div class="related-article">
+                <div class="related-title">Opinion: Why the Tuareg Alliance Could Be Key to Victory in Mali</div>
+                <div class="related-meta">4 hours ago</div>
+            </div>
+            <div class="related-article">
+                <div class="related-title">Interactive: Track the Coalition's Progress Across West Africa</div>
+                <div class="related-meta">6 hours ago</div>
+            </div>
+            <div class="related-article">
+                <div class="related-title">Fact Check: Understanding Coalition Air Superiority in the Sahel</div>
+                <div class="related-meta">8 hours ago</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
