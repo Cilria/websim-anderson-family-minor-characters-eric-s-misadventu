@@ -3,214 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Caliph refuses to change military strategy despite massive losses : Military</title>
+    <title>Caliph literally speedrunning 'How to get your entire movement deleted by air strikes' : NonCredibleDefense</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            background-color: #030712;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
+            color: #e5e7eb;
+            line-height: 1.6;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: #111827;
+            border-radius: 12px;
+            border: 1px solid #374151;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            overflow: hidden;
         }
         .header {
-            background: #ff4500;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            gap: 15px;
+            font-weight: 600;
+            font-size: 18px;
         }
         .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+            padding: 25px;
+            border-bottom: 1px solid #374151;
         }
         .vote-buttons {
             float: left;
-            margin-right: 15px;
+            margin-right: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
         }
         .vote-btn {
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
+            font-size: 24px;
+            color: #6b7280;
+            transition: all 0.2s ease;
+        }
+        .vote-btn:hover {
+            color: #fbbf24;
+            transform: scale(1.2);
         }
         .content {
-            margin-left: 50px;
+            margin-left: 60px;
         }
         .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
+            margin: 0 0 15px 0;
+            font-size: 22px;
+            font-weight: 700;
             line-height: 1.3;
         }
         .title a {
-            color: #0066cc;
+            color: #60a5fa;
             text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .title a:hover {
+            color: #93c5fd;
         }
         .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
+            font-size: 13px;
+            color: #9ca3af;
+            margin-bottom: 15px;
         }
         .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
             font-size: 11px;
-            margin-right: 5px;
+            font-weight: 600;
+            margin-right: 6px;
+            display: inline-block;
+            transform: rotate(-2deg);
         }
         .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
+            margin-top: 20px;
+            font-size: 15px;
+            color: #9ca3af;
         }
         .comments-count a {
-            color: #878a8c;
+            color: #60a5fa;
             text-decoration: none;
         }
         .comments-count a:hover {
             text-decoration: underline;
         }
         .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
+            background: #1f2937;
+            padding: 15px 25px;
+            border-bottom: 1px solid #374151;
+            font-size: 13px;
+            color: #9ca3af;
+            display: flex;
+            gap: 20px;
         }
         .sort-bar a {
-            color: #0066cc;
+            color: #60a5fa;
             text-decoration: none;
-            margin-right: 15px;
+            font-weight: 500;
+        }
+        .sort-bar a:hover {
+            color: #93c5fd;
+        }
+        .comment-section {
+            padding: 25px;
+            border-top: 1px solid #374151;
+        }
+        .comment {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            border-left: 3px solid #374151;
+        }
+        .comment-meta {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .comment-content {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #d1d5db;
+        }
+        .comment-reply {
+            color: #60a5fa;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+        .comment-nested {
+            margin-left: 25px;
+            margin-top: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #374151;
+        }
+        .award {
+            color: #fbbf24;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+        .meme-container {
+            background: #1f2937;
+            border: 2px solid #374151;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .meme-text {
+            font-family: "Impact", sans-serif;
+            color: white;
+            font-size: 36px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px black;
+            margin: 10px 0;
+        }
+        .shitpost-tag {
+            background: linear-gradient(45deg, #ef4444, #f97316);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin: 8px 0;
+            transform: rotate(1deg);
+        }
+        .ncd-stat {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 12px 0;
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+            color: #34d399;
         }
         .sidebar {
-            background: #f6f7f8;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #374151;
         }
         .sidebar h3 {
-            margin: 0 0 10px 0;
+            color: #fbbf24;
+            margin: 0 0 15px 0;
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .sidebar ul {
             margin: 0;
             padding-left: 20px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
+            line-height: 1.8;
         }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
+        .sidebar li {
+            color: #9ca3af;
+            margin-bottom: 8px;
         }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
+        .sidebar a {
+            color: #60a5fa;
+            text-decoration: none;
         }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
+        .sidebar a:hover {
+            color: #93c5fd;
+        }
+        .related-posts {
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #374151;
+            margin-top: 20px;
+        }
+        .related-posts h3 {
+            color: #fbbf24;
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .related-post {
+            border-bottom: 1px solid #374151;
+            padding: 12px 0;
+        }
+        .related-post:last-child {
+            border-bottom: none;
+        }
+        .related-title {
+            font-size: 14px;
+            color: #d1d5db;
+            margin-bottom: 4px;
+        }
+        .related-meta {
+            font-size: 11px;
+            color: #6b7280;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 8px;
+            }
+            .article-title {
+                font-size: 28px;
+            }
+            .meme-text {
+                font-size: 24px;
+            }
+            .main-container {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <span>r/Military</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Conflict_Analyst_Africa</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+            <span>r/NonCredibleDefense</span>
+            <span style="font-size: 14px; opacity: 0.8;">•</span>
+            <span style="font-size: 14px; opacity: 0.8;">Posted by u/DefenseShitposter_9000</span>
+            <span style="font-size: 14px; opacity: 0.8;">•</span>
+            <span style="font-size: 14px; opacity: 0.8;">7 hours ago</span>
         </div>
 
         <div class="post">
             <div class="vote-buttons">
                 <button class="vote-btn">⬆</button>
-                <span>4.8k</span>
+                <span>12.4k</span>
                 <button class="vote-btn">⬇</button>
             </div>
 
             <div class="content">
                 <h1 class="title">
-                    <a href="#">New Caliph refuses to change military strategy despite massive losses</a>
+                    <a href="#">Caliph literally speedrunning 'How to get your entire movement deleted by air strikes'</a>
                 </h1>
                 
                 <div class="meta">
+                    <span class="flair">Shitpost</span>
                     <span class="flair">Africa</span>
-                    <span class="flair">Current Conflict</span>
-                    <span class="flair">Tactical Analysis</span>
-                    <span>Posted by u/Conflict_Analyst_Africa • 2 hours ago</span>
+                    <span class="flair">3000 Black Jets of Allah</span>
+                    <span class="flair">NonCredible</span>
+                    <span>Posted by u/DefenseShitposter_9000 • 7 hours ago</span>
                 </div>
 
-                <p>After the June 11th airstrike that killed virtually the entire senior leadership of the Islamic Caliphate of the Sahel (600+ jihadists including the previous Caliph), the new Caliph - one of only 3 senior commanders who survived - has REFUSED to change the organization's military strategy in any meaningful way.</p>
+                <p><strong>GUYS</strong> I can't even make this shit up anymore. The new Caliph of the Islamic Caliphate of the Sahel is literally playing <span class="shitpost-tag">NCD Bingo</span> with his military strategy.</p>
 
-                <p><strong>What's happening:</strong> Despite losing their entire high command, the Caliphate continues to fight as a conventional military force, attempting to hold territory against coalition airpower and ground forces. This is leading to catastrophic losses - they're losing 200-300 fighters per day across all fronts, mostly to airstrikes while they're concentrated in defensive positions.</p>
+                <div class="meme-container">
+                    <div class="meme-text">Caliph: "Conventional warfare is the only way"</div>
+                    <div style="color: #9ca3af; font-size: 16px;">Coalition: *has 3000 JDAMs ready*</div>
+                    <div class="meme-text">"Allow us to introduce ourselves"</div>
+                </div>
 
-                <p><strong>The numbers are staggering:</strong></p>
-                <ul>
-                    <li>15,000+ air sorties conducted against them since June 11th</li>
-                    <li>Estimated 8,000-12,000 fighters killed in 6 weeks</li>
-                    <li>Over 50 towns lost across 7 countries</li>
-                    <li>Key strongholds like Korhogo encircled with 1,500 fighters trapped</li>
-                    <li>Supply lines cut on multiple fronts (A1 Highway, N7 Highway, RNIE2)</li>
+                <p>So apparently this absolute UNIT of a commander watched his entire high command get turned into <span class="shitpost-tag">premium fertilizer</span> by coalition airstrikes and his response was:</p>
+
+                <div class="ncd-stat">
+                    > "Nah bro, we just need to try harder at conventional warfare"
+                    > "Guerrilla tactics are cowardly" 
+                    > "Allah will provide victory"
+                </div>
+
+                <p>Meanwhile coalition pilots are like:</p>
+
+                <div class="meme-container">
+                    <div class="meme-text">"BRB gonna make 200-300 jihadists</div>
+                    <div class="meme-text">disappear faster than Russian tanks in Ukraine"</div>
+                </div>
+
+                <p><strong>The numbers are fucking HILARIOUS:</strong></p>
+                <ul style="color: #d1d5db;">
+                    <li>15,000+ air sorties = 15,000+ opportunities to turn jihadists into <span class="shitpost-tag">pink mist</span></li>
+                    <li>8,000-12,000 fighters deleted in 6 weeks = <span class="shitpost-tag">1,333 jihadists per week</span></li>
+                    <li>50+ towns lost = 50+ opportunities to learn from mistakes (but nah)</li>
+                    <li>Supply lines cut = <span class="shitpost-tag">"Surprise Pikachu face"</span> when logistics matter</li>
                 </ul>
 
-                <p><strong>What military experts are saying:</strong> Every analyst I've spoken to says they should immediately transition to guerrilla warfare - disperse fighters, go underground, use hit-and-run tactics against coalition forces. This is textbook insurgent response when facing overwhelming conventional force with air superiority.</p>
+                <p><strong>Military experts:</strong> "Bro just go underground, disperse, use hit-and-run tactics"</p>
+                <p><strong>Caliph:</strong> "Nah that's what cowards do. REAL MEN stand in open fields waiting to get <span class="shitpost-tag">JDAM'd into the next dimension</span>"</p>
 
-                <p><strong>But the new Caliph refuses.</strong> His public statements (intercepted communications) indicate he believes:</p>
-                <ul>
-                    <li>"Conventional warfare is the only way to establish legitimate Islamic governance"</li>
-                    <li>"Guerrilla tactics are cowardly and un-Islamic"</li>
-                    <li>"Allah will provide victory to those who fight openly"</li>
-                    <li>"The previous Caliph's strategy was correct - we just need better execution"</li>
-                </ul>
+                <div class="meme-container">
+                    <div class="meme-text">"How many times do we have to teach you</div>
+                    <div class="meme-text">this lesson old man?"</div>
+                    <div style="color: #60a5fa; font-size: 14px; margin-top: 10px;">- Coalition Air Force, probably</div>
+                </div>
 
-                <p>Meanwhile, his forces are being systematically destroyed. The coalition is methodically encircling and eliminating Caliphate strongholds one by one. It's like watching a military force commit suicide by doctrine.</p>
+                <p>Honestly at this point I'm convinced this dude is a <span class="shitpost-tag">CIA psyop</span> designed to make jihadist groups look like complete clowns. Like imagine being SO ideologically rigid that you'd rather watch your entire movement get systematically exterminated than admit maybe guerrilla warfare works.</p>
 
-                <p>I'm trying to understand: Is this pure ideological rigidity? Is there some strategic calculation I'm missing? Has anyone seen this level of refusal to adapt tactics even in the face of annihilation?</p>
+                <p>It's like watching someone play Dark Souls and insisting on using only fists because "swords are for cowards" while getting absolutely demolished for the 847th time.</p>
 
                 <div class="comments-count">
-                    <a href="#">1,247 comments</a>
+                    <a href="#">2,847 comments</a>
                 </div>
             </div>
         </div>
@@ -227,23 +367,16 @@
         <div class="comment-section">
             <div class="comment">
                 <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Insurgency_Expert • 1 hour ago
+                    <span class="award">🎯</span>
+                    u/F-35_Pilot_IRL • 6 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>This is ideological blindness, not strategy.</strong> I've studied dozens of insurgent groups over 20 years - from the Tamil Tigers to ISIS to the Taliban. Every single successful group has shown tactical flexibility when facing annihilation. The LTTE went from conventional army to guerrilla fighters when they lost territory. ISIS in Iraq dispersed and went underground when Mosul fell. The Taliban retreated to Pakistan when the US invaded. This Caliph is literally watching his movement die because he thinks God wants him to fight conventionally.
+                    <strong>Can confirm, this dude is doing God's work for us.</strong> We literally just fly circles around their positions dropping JDAMs like we're playing fucking Angry Birds. Yesterday I watched a whole convoy of these guys driving in broad daylight on a highway. Like BRO, do you NOT see the Predator drone that's been following you for 20 minutes? We ran out of JDAMs so we just started dropping 500-pounders from the B-52s. They're SO committed to conventional warfare they're literally lining up to die.
                 </div>
-                <div class="comment-meta">u/Conflict_Analyst_Africa • 1 hour ago</div>
+                <div class="comment-meta">u/DefenseShitposter_9000 • 6 hours ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        This is what I suspected. The ideological component seems to override basic military logic. But I've never seen it this extreme - usually there's at least some attempt to preserve forces. They're literally standing in place waiting to be bombed.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Insurgency_Expert • 45 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Exactly. Even the most ideologically rigid groups usually have some pragmatists in the ranks who force adaptation. The fact that this Caliph survived the airstrike that killed everyone else means he's surrounded by yes-men who won't challenge his suicidal strategy. It's like Hitler in the bunker - detached from reality, ordering armies that no longer exist to fight battles that can't be won.
+                        "They're SO committed to conventional warfare they're literally lining up to die" 💀💀💀
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -251,33 +384,26 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/ISIS_Defector_Analysis • 1 hour ago
+                    <span class="award">💀</span>
+                    u/God_Bless_America_1776 • 6 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Former ISIS fighter here (defected 2018):</strong> This is EXACTLY how ISIS leadership thought. There's this bizarre belief that conventional warfare is more "honorable" than guerrilla tactics, like hiding and striking from shadows is somehow unmanly or un-Islamic. The ISIS leadership used to say "we don't hide like rats, we fight like lions." The result? They got absolutely destroyed whenever they tried to hold territory against modern militaries. This Caliph is repeating the same mistakes that killed the original ISIS caliphate.
+                    <strong>This is like if Hitler was resurrected and decided to try Operation Barbarossa again but with MORE tanks and LESS winter clothing.</strong> The level of strategic brain rot required to watch 600 of your senior leaders get vaporized in one strike and respond with "we need to try harder at conventional warfare" is honestly impressive. This man has achieved levels of copium that shouldn't be possible.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/COIN_Operations_Vet • 1 hour ago
+                    u/COIN_Warfare_Expert • 5 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>From a counter-insurgency perspective, this is a gift.</strong> As someone who spent 3 tours in Afghanistan hunting Taliban who would disappear into mountains, having an enemy that stands and fights conventionally is a dream scenario. The coalition is basically getting to destroy a jihadist army in detail without the usual cat-and-mouse game. Every day they refuse to adapt is another 200-300 fighters we don't have to hunt down later.
+                    <strong>From a counter-insurgency perspective, this is like Christmas morning.</strong> Usually we have to hunt these guys through mountains, villages, and caves while they pop out to plant IEDs then disappear. Now they're literally standing in formation waiting for us to drop precision-guided presents on their heads. I've been studying insurgent groups for 15 years and I've NEVER seen this level of tactical suicide. Even the Tamil Tigers weren't this committed to getting deleted.
                 </div>
-                <div class="comment-meta">u/Africa_Security_Prof • 45 minutes ago</div>
+                <div class="comment-meta">u/DefenseShitposter_9000 • 5 hours ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        But what happens when they're finally forced to adapt? If they survive this phase and transition to guerrilla warfare, they'll have learned a brutal lesson about conventional fighting. The survivors will be battle-hardened and have nothing to lose.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/COIN_Operations_Vet • 30 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        That's the concern, but they're losing their best fighters first. The guys who survive this meat grinder won't be the experienced combat leaders - they'll be the new recruits who never learned proper guerrilla tactics. By the time they're forced underground, they'll have lost their institutional knowledge of asymmetric warfare.
+                    "Precision-guided presents" I'm fucking DEAD ☠️☠️☠️
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -285,35 +411,16 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Religious_Military_Studies • 45 minutes ago
+                    <span class="award">🦅</span>
+                    u/Military_Intelligence_Guy • 5 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>This is about eschatology, not strategy.</strong> The Caliph's statements about "Allah providing victory" and "fighting openly" suggest he believes this is the prophesized end-times battle. In some Islamic apocalyptic traditions, the Mahdi's army fights conventional battles against overwhelming odds and wins through divine intervention. He thinks he's fulfilling prophecy, not fighting a conventional war. From his perspective, adapting tactics would be showing lack of faith in God's plan.
+                    <strong>Intel briefing update:</strong> The Caliph has executed 3 commanders for suggesting guerrilla warfare. He's literally killing his own officers for proposing basic military adaptation. At this point we're not even conducting military operations, we're just providing assisted suicide services. The ROE is basically "don't interrupt their suicide pact with Allah."
                 </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Military_Psychologist • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Survivor's guilt and cognitive dissonance.</strong> This Caliph watched his entire leadership get obliterated in one strike. Psychologically, he can't accept that their strategy was wrong because that would mean his survival was random, not meaningful. So he doubles down - if they were doing God's work and got killed, then continuing their strategy MUST be the right path. It's classic cognitive dissonance on a massive scale.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Africa_Intelligence_Officer • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    <strong>Intelligence intercepts confirm:</strong> The Caliph has executed at least 3 senior commanders who suggested transitioning to guerrilla warfare. He's purged anyone who questions the conventional strategy. The remaining leadership are true believers who think conventional victory is inevitable. It's literally an echo chamber of death.
-                </div>
-                <div class="comment-meta">u/Conflict_Analyst_Africa • 20 minutes ago</div>
+                <div class="comment-meta">u/A-10_Warthog_Fan • 4 hours ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                    Holy shit. So he's literally killing his own officers for suggesting basic military adaptation? That's not just ideological rigidity - that's psychotic leadership that's guaranteeing their own destruction.
+                        "Assisted suicide services" 💀💀💀 The A-10 community is jealous we're getting all the fun. BRRRRRT would be too merciful for these clowns.
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -321,32 +428,78 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Taliban_Comparison_Expert • 30 minutes ago
+                    u/Strategy_Genius_3000 • 4 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Contrast this with Taliban leadership:</strong> When the US invaded, Taliban commanders immediately dispersed into villages, grew beards, buried weapons, and waited. They knew when to fight conventionally (early 90s) and when to go underground (2001). This Caliph is making the opposite calculation - he's choosing conventional defeat over guerrilla survival. The Taliban are still here 20+ years later because they adapted. This Caliph won't be here in 6 months.
+                    <strong>This is like watching someone play chess and every time they lose a piece they respond by moving MORE pieces into capture positions.</strong> "Oh you took my queen? Well what if I put my king, both rooks, and all my bishops in capture range? That'll show you!" The sheer strategic illiteracy is actually painful to watch. This man is speedrunning military defeat like it's a fucking world record attempt.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Military_Historian_Africa • 15 minutes ago
+                    <span class="award">🎮</span>
+                    u/Gamer_Military_Analyst • 4 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Historical parallel:</strong> This reminds me of the RUF (Revolutionary United Front) in Sierra Leone. When they faced conventional military pressure, their leader Foday Sankoh refused to adapt tactics, believing his "revolutionary purity" would prevail. Result? The movement was systematically destroyed by Nigerian and South African forces. The survivors fragmented into criminal gangs with no political agenda. This Caliph is following the same path to obliteration.
+                    <strong>I'm calling it now: This dude is speedrunning "Jihadist Group Any% World Record."</strong> Current categories: Fastest to lose 10,000 fighters (WR: 6 weeks), Most airstrikes absorbed while refusing to adapt (WR: 15,000+), Fastest transition from 'threat to regional stability' to 'comedy goldmine' (WR: instant). Any% means no glitches, no intelligence, no adaptation, just pure ideological suicide straight to the finish line.
+                </div>
+                <div class="comment-meta">u/DefenseShitposter_9000 • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        "Jihadist Group Any% World Record" is sending me 💀💀💀 The speedrun community is gonna have a FIELD DAY with this tactical masterpiece of failure.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Allah's_T90s • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>As someone from the region, this is both hilarious and terrifying.</strong> The Caliph genuinely believes that conventional victory is inevitable because "Allah rewards those who fight openly." Meanwhile Allah is up there like "Bro I gave you mountains to hide in and you chose to stand in open fields? I can't help you with stupid." We're watching a movement commit suicide by doctrine in real-time.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🧠</span>
+                    u/Military_Psychologist • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>This is actually a fascinating case study in ideological possession.</strong> The Caliph has created such a strong cognitive dissonance that accepting guerrilla warfare would mean admitting his entire worldview is wrong. So he doubles down on conventional defeat because ideological purity > survival. It's like watching a doomsday cult where the leader genuinely believes the spaceship is coming to save them while drinking the poison.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
         </div>
 
         <div class="sidebar">
-            <h3>More posts from r/Military</h3>
+            <h3>Rule Reminder</h3>
             <ul>
-                <li><a href="#">Analysis: Coalition air campaign effectiveness in West Africa</a></li>
-                <li><a href="#">Breakdown of the June 11th airstrike that changed everything</a></li>
-                <li><a href="#">Comparison: How different insurgent groups adapt to air superiority</a></li>
+                <li>This is a shitpost sub, not serious analysis</li>
+                <li>Keep it non-credible</li>
+                <li>3000 black jets of Allah is a meme, not real</li>
+                <li>Yes, we know this is actually serious</li>
+                <li>But if we don't laugh we cry</li>
             </ul>
+        </div>
+
+        <div class="related-posts">
+            <h3>More NCD Gold</h3>
+            <div class="related-post">
+                <div class="related-title">Russian general suggests using MORE tanks in Ukraine because previous losses were "just bad luck"</div>
+                <div class="related-meta">1 day ago • 8.2k upvotes</div>
+            </div>
+            <div class="related-post">
+                <div class="related-title">Chinese military unveils new stealth technology: "Just paint it black and hope for the best"</div>
+                <div class="related-meta">2 days ago • 6.7k upvotes</div>
+            </div>
+            <div class="related-post">
+                <div class="related-title">Iranian speedboats vs US Navy: "This time we'll definitely win with our 1970s technology"</div>
+                <div class="related-meta">3 days ago • 5.1k upvotes</div>
+            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
