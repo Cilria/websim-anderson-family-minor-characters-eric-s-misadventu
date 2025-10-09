@@ -1,222 +1,374 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francis Haddad: From Ottoman Sidon to Federal Reserve Bank Examiner (1893-1978) : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/LebaneseFamilyHistory</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Anderson Raymund Park - The Sparta Barber Who Lived to 102 (1873-1975)</div>
-    <div class="post-meta">
-      <span class="comment-score">89 upvotes</span> • posted by <span class="comment-author">GeorgiaRootsSeeker</span> <span class="flair">Georgia Research</span>
-    </div>
-    <div class="post-content">
-      <p>Looking for more information on Anderson Raymund Park, born July 10, 1873 in Sparta, Georgia. He's part of an incredible longevity story - all 7 brothers lived to at least 90, and both parents lived to their 90s too.</p>
-      
-      <p>Here's what I know:</p>
-      <ul>
-        <li>Born to Rufus Raymund Park (1845-1936) and Sarah Elizabeth Cobb (1859-1951)</li>
-        <li>Moved to Milledgeville around 1899</li>
-        <li>Worked as a barber, owned shop with brother Frank Leroy</li>
-        <li>Shop burned down in 1934 fire, retired early after that</li>
-        <li>Married Edith Louise Thomas (1878-1979) - she outlived him!</li>
-        <li>4 sons: David Robert, William Francis, John Edward, Raymund Thomas</li>
-        <li>Died November 10, 1975 at age 102</li>
-      </ul>
-      
-      <p>Anyone know more about the barber shop or why the family had such incredible longevity? Also curious about the fire in 1934.</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">MilledgevilleMemory</span> • <span class="comment-score">156 points</span> • 9 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>FOUND THE BARBER SHOP DETAILS:</strong> Anderson and Frank's shop was called <strong>"Park Brothers' Tonsorial Parlor"</strong> at <strong>121 West Hancock Street</strong> in downtown Milledgeville.</p>
-        
-        <p><strong>THE BUSINESS:</strong> It wasn't just a barber shop - it was a <strong>social institution</strong>. They had <strong>4 chairs</strong> (unusual for 1900s), served <strong>free coffee</strong> from 7-9 AM, and had the first <strong>telephone in the neighborhood</strong>. Local businessmen would stop by just to use the phone.</p>
-        
-        <p><strong>THE CLIENTELE:</strong> Anderson specialized in <strong>shaves and mustache trimming</strong> (25¢), while Frank handled <strong>haircuts</strong> (15¢). They served <strong>Governors</strong> - both <strong>Joseph Mackey Brown</strong> and <strong>John Marshall Slaton</strong> were regulars during legislative sessions.</p>
-        
-        <p><strong>THE FIRE:</strong> <strong>October 12, 1934</strong> - started in the <strong>basement boiler room</strong> of the adjoining <strong>Wilson's Dry Goods Store</strong>. The entire <strong>West Hancock block</strong> burned. Anderson and Frank lost everything - <strong>$3,200 in equipment</strong> (a fortune in 1934), <strong>40 years of customer records</strong>, and Anderson's <strong>silver shaving mug collection</strong> (worth $500 alone).</p>
-        
-        <p><strong>THE RETIREMENT:</strong> Anderson was <strong>61</strong> when the fire happened. Insurance paid <strong>$1,800</strong>, but rebuilding would cost <strong>$5,000</strong>. Frank wanted to rebuild, but Anderson said <strong>"I'm too old to start over, and you're too old to do it alone."</strong></p>
-        
-        <p><strong>THE INCOME:</strong> Frank had invested in <strong>Milledgeville real estate</strong> (6 rental houses) and insisted Anderson take <strong>half the income</strong> - about <strong>$85/month</strong> in 1934, equivalent to <strong>$1,800/month</strong> today.</p>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>2.8k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
-        <p><strong>OH AND BTW:</strong> For anyone wondering about the weird rumors - Anderson and Frank were <strong>definitely white</strong>. They actually had to put out a statement in the <strong>Union-Recorder</strong> in 1923 because people were spreading nonsense about them being Black. The rumor started because their mother Sarah had <strong>really dark hair</strong> and someone decided that meant... something?? Small town gossip is wild lol</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">LongevityDetective</span> • <span class="comment-score">134 points</span> • 8 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>THE LONGEVITY MYSTERY SOLVED:</strong> Found the <strong>medical records</strong> at Georgia College's Special Collections.</p>
-        
-        <p><strong>THE FAMILY PATTERN:</strong> Dr. <strong>William Lafayette Moss</strong> (their family physician) documented the Parks extensively. The secret was <strong>threefold</strong>:</p>
-        
-        <p><strong>1. THE COBB GENETICS:</strong> Sarah Elizabeth Cobb's family had a <strong>centenarian gene variant</strong> - <strong>10 of her 12 siblings</strong> lived past 85. The <strong>Cobb family of Hancock County</strong> were known as <strong>"the long-lived Cobbs"</strong> - they intermarried with the Parks for <strong>5 generations</strong>.</p>
-        
-        <p><strong>2. THE BARBER'S DIET:</strong> Anderson ate <strong>exactly the same lunch</strong> every day for <strong>60 years</strong>: <strong>buttermilk, cornbread, and raw onion</strong>. Dr. Moss noted his <strong>cholesterol was perfect</strong> at age 90. The buttermilk contained <strong>natural probiotics</strong> before anyone knew what they were.</p>
-        
-        <p><strong>3. THE WORK ETHIC:</strong> Anderson stood for <strong>10 hours a day</strong> six days a week until age 61. Dr. Moss wrote: <strong>"The man has the constitution of a workhorse and the temper of a saint."</strong> He never smoked, drank <strong>one glass of wine yearly</strong> (Christmas), and walked <strong>3 miles daily</strong> after retirement.</p>
-        
-        <p><strong>THE BROTHERS' AGES AT DEATH:</strong>
-        <ul>
-          <li><strong>Frank Leroy:</strong> 94 (died 1958)</li>
-          <li><strong>Rufus Jr:</strong> 97 (died 1955)</li>
-          <li><strong>Thomas Jefferson:</strong> 92 (died 1949)</li>
-          <li><strong>James Madison:</strong> 96 (died 1952)</li>
-          <li><strong>George Washington:</strong> 91 (died 1947)</li>
-          <li><strong>Benjamin Franklin:</strong> 98 (died 1960)</li>
-          <li><strong>Anderson:</strong> 102 (died 1975)</li>
-        </ul></p>
-        
-        <p><strong>AVERAGE AGE:</strong> <strong>95.8 years</strong> - possibly the <strong>longest-lived group of brothers</strong> in American history at that time.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">SpartaArchivist</span> • <span class="comment-score">89 points</span> • 7 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>FOUND THEIR CHILDREN'S STORIES:</strong> All four sons had remarkable lives - Anderson's legacy extended beyond longevity.</p>
-        
-        <p><strong>David Robert Park (1899-1988):</strong> Became <strong>Milledgeville's first licensed undertaker</strong> - ironic given his father's profession kept people alive so long! His funeral home still operates today (run by great-grandson). He handled the funerals for both his parents.</p>
-        
-        <p><strong>William Francis Park (1901-1995):</strong> Moved to <strong>Atlanta</strong> and became <strong>Georgia's first African-American certified public accountant</strong> (1934). Anderson initially disowned him for "leaving the family business," but they reconciled when William returned for the fire in 1934.</p>
-        
-        <p><strong>John Edward Park (1904-1987):</strong> Followed his father into <strong>barbering</strong> but specialized in <strong>hair replacement</strong> - opened <strong>"Park's Hair Systems"</strong> in Macon (1935). His clients included <strong>Governors</strong> and <strong>senators</strong> who wanted to look younger.</p>
-        
-        <p><strong>Raymund Thomas Park (1907-1999):</strong> The <strong>black sheep</strong> - became a <strong>professional gambler</strong> in <strong>Savannah</strong>. Anderson refused to speak of him for years, but Raymund sent <strong>$50 every Christmas</strong> (huge money during Depression). He died at <strong>92</strong> - the <strong>last surviving child</strong>.</p>
-        
-        <p><strong>THE FAMILY REUNION:</strong> Every <strong>July 10th</strong> (Anderson's birthday), all four sons returned to Milledgeville regardless of their circumstances. The tradition continued until <strong>1995</strong> when William died - <strong>96 years</strong> of family reunions.</p>
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Francis Haddad: From Ottoman Sidon to Federal Reserve Bank Examiner (1893-1978)</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Lebanese Immigration</span>
+                    <span class="flair">Early 1900s</span>
+                    <span class="flair">Federal Reserve</span>
+                    <span class="flair">Banking History</span>
+                    <span>Posted by u/LebaneseFamilyHistory • 8 hours ago</span>
+                </div>
 
-        <p><strong>RANDOM FACT:</strong> The rumor about the Parks being Black actually started because some guy saw Sarah Cobb Park at church and thought her <strong>dark hair and olive complexion</strong> meant she was mixed race. Anderson was so mad about the gossip that he and Frank paid for that newspaper ad saying <strong>"any rumors of us being black are nothing more than stupid lies"</strong>. 1920s small town racism was something else</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">GeorgiaGenealogyGuru</span> • <span class="comment-score">67 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>THE MARRIAGE STORY:</strong> Anderson and Edith's relationship was more complex than it appears.</p>
-        
-        <p><strong>THE COURTSHIP:</strong> Edith Louise Thomas was <strong>5 years younger</strong> than Anderson and from a <strong>wealthy Hancock County family</strong>. Her father <strong>Dr. James Monroe Thomas</strong> opposed the marriage because Anderson was "just a barber."</p>
-        
-        <p><strong>THE ELOPEMENT:</strong> They <strong>eloped to Augusta</strong> on <strong>March 15, 1898</strong> - she was <strong>pregnant with David</strong>. Dr. Thomas <strong>disinherited her</strong>, but relented when <strong>David was born healthy</strong> (the first grandchild).</p>
-        
-       p><strong>THE BALANCE:</strong> Edith managed the <strong>financial side</strong> of the barber shop - she was <strong>literate</strong> (rare for women then) and kept the books. Anderson handled the <strong>social side</strong> - remembering every customer's name, birthday, and children's names.</p>
-        
-        <p><strong>THEIR SECRET:</strong> Every <strong>Friday night</strong> for <strong>77 years</strong>, they had <strong>"date night"</strong> - dinner at <strong>the Hancock Hotel</strong> (even during Depression). The staff saved their <strong>usual table</strong> until the hotel burned in 1968.</p>
-        
-        <p><strong>THE END:</strong> Edith died <strong>October 15, 1979</strong> at <strong>101 years old</strong>. Anderson lived <strong>26 more days</strong> - he stopped eating after her funeral, telling his daughter-in-law: <strong>"I've had my love, my life, and my length of days. It's time."</strong></p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">GeorgiaRootsSeeker</span> • <span class="comment-score">45 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>Incredible research everyone! Anderson's story is so much richer than I imagined. The barber shop being a social institution, the family's incredible longevity secrets, and the love story with Edith that lasted nearly 80 years.</p>
-        
-        <p>The fact that all four sons had such different paths - from undertaker to CPA to hair replacement specialist to gambler - yet they all maintained the family reunion tradition for 96 years shows Anderson's influence went beyond just living a long life.</p>
-        
-        <p>I found their <strong>joint tombstone</strong> at <strong>Memory Hill Cemetery</strong> in Milledgeville. It reads: <strong>"Together in life for 77 years, together in eternity forever."</strong> Edith died first at 101, Anderson followed at 102 - and they share the same death month, just like they shared their lives.</p>
-        
-        <p>The <strong>Park family longevity record</strong> might still stand - seven brothers averaging <strong>95.8 years</strong>, with Anderson reaching <strong>102</strong>. That's not just genetics, that's a combination of hard work, love, and what sounds like the most successful barber shop in Georgia history!</p>
-      </div>
-    </div>
-  </div>
-</div>
+                <p>I've been researching my great-grandfather Francis Haddad for years, and the story keeps getting more fascinating. Born October 10, 1893 in Sidon (then Ottoman Empire, now Lebanon), Catholic, one of 5 siblings. The family stories have always been vague about his early life, but here's what I've pieced together:</p>
 
+                <p><strong>The Immigration Journey:</strong> Family lore says his older brother John was killed around 1907-1909 - either by Ottoman soldiers or in a local fight. Whatever happened, it was enough to make 17-year-old Francis leave Sidon around 1910. Stories say he lived in Italy for 2+ years, then somehow ended up at the University of Paris studying business, graduating July 1914 - literally one month before WWI started.</p>
+
+                <p><strong>American Life:</strong> He immigrated to the US in July 1914 (talk about timing!) and settled in Richmond, VA. 1930 census lists him as "Bank Examiner," 1950 as "Bank Examiner, Government," and his 1978 death certificate lists employer as "The Federal Reserve." His WWII draft card confirms "Bank Examiner, Federal Reserve."</p>
+
+                <p><strong>Family:</strong> Married Lucy Ann Powell and had 8 children - all born between 1920-1935 in Richmond.</p>
+
+                <p><strong>My brick walls:</strong> 
+                <br>1) What was his original Arabic name before anglicization?
+                <br>2) How did a Lebanese immigrant end up as a Federal Reserve bank examiner in 1920s Virginia?
+                <br>3) Any records of his time in Italy/France?</p>
+
+                <div class="comments-count">
+                    <a href="#">1,156 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Ottoman_Records_Expert • 7 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his original Arabic name!</strong> Francis Haddad was born <strong>François (فرنسوا) Haddad</strong> in Sidon's Christian quarter. The Sidon parish records (available through the Maronite Church archives) show: "François, son of Hanna Haddad and Marie (née Aoun), born 10 October 1893, baptized 15 October 1893 at Saint Elias Church." His siblings were: John (Youssef), Marie, Therese, and Joseph. The family name Haddad (حداد) means "blacksmith" in Arabic - very common among Christian families in Sidon.
+                </div>
+                <div class="comment-meta">u/LebaneseFamilyHistory • 6 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This is INCREDIBLE! The Maronite Church records - I never thought to check there. So his brother John was actually Youssef? That makes sense with the naming patterns. Do these records mention anything about his brother's death or what prompted the family to leave Sidon?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Ottoman_Records_Expert • 5 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Yes! The death record for Youssef Haddad, age 19, dated March 15, 1909: "Died of wounds sustained during altercation with Ottoman gendarmes near Saint Elias Church." There's a marginal note in Arabic that translates to "related to tax collection dispute." This was during the Ottoman military conscription crackdown - they were likely trying to conscript Youssef or collect "military exemption tax" from Christian families.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/FederalReserve_Archivist • 6 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his Federal Reserve employment records!</strong> François (Francis) Haddad was hired by the Federal Reserve Bank of Richmond on September 15, 1919 - employee #847. His personnel file shows he started as a "Bank Inspector Trainee" at $1,200/year. He was promoted to Assistant Bank Examiner in 1922, Bank Examiner in 1927, and Senior Bank Examiner in 1934. His 1940 performance review notes: "Mr. Haddad demonstrates exceptional understanding of banking practices, likely due to his European financial education."
+                </div>
+                <div class="comment-meta">u/LebaneseFamilyHistory • 5 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This explains everything! The European education was his ticket in. But how did he even know to apply to the Federal Reserve? Richmond seems so random for a Lebanese immigrant.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/FederalReserve_Archivist • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Not random at all! His employment application shows a reference: "Mr. James Powell, Vice President, First National Bank of Richmond." James Powell was his future father-in-law - Lucy Ann Powell's dad. Francis probably met the Powell family through Richmond's small Catholic community. The marriage to Lucy (1920) happened AFTER he got the Fed job, but the Powell banking connections definitely helped him get his foot in the door.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Paris_University_Records • 6 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his University of Paris records!</strong> François Haddad enrolled at École des Hautes Études Commerciales (HEC Paris) in October 1912. His student file shows: "Born Sidon, Ottoman Empire, Catholic, age 19, sponsored by Comte de Paris charitable fund for Levantine Christians." He graduated July 15, 1914 with a degree in "Sciences Commerciales" - Commercial Sciences. His thesis was titled "Banking Practices in the Eastern Mediterranean: A Comparative Study of Ottoman and European Systems." He ranked 14th in his class of 67 students.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Italian_Immigration_Records • 6 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his Italian records!</strong> François Haddad arrived in Naples from Beirut on September 3, 1910, aboard the SS Italia. He was 16, listed as "Syrian, Christian, traveling to Genoa to work for uncle." Passenger manifest shows he traveled with a cousin: "Elias Haddad, age 24, merchant." They stayed in Genoa until 1912 when François left for Paris. The uncle was likely a maternal relative - many Aoun family members had established merchant businesses in Genoa by 1910.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Richmond_Catholic_History • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his Richmond Catholic connection!</strong> Francis Haddad was sponsored by Bishop Denis J. O'Connell of the Diocese of Richmond, who had a program to help Catholic immigrants from the Middle East. Church records show Francis arrived at Sacred Heart Cathedral on July 28, 1914, and was placed in a boarding house run by the Sisters of Charity. He met Lucy Ann Powell at a church social in 1918 - she was teaching Sunday school to immigrant children.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Haddad_Family_Genealogy • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the complete family tree!</strong> Francis and Lucy had 8 children, all born in Richmond:<br>
+                    1. Francis Jr. (1920) - became a lawyer<br>
+                    2. Lucy Ann (1921) - married into Richmond banking family<br>
+                    3. Mary Elizabeth (1923) - became a nun<br>
+                    4. John Edward (1925) - Federal Reserve Bank Examiner (followed dad!)<br>
+                    5. Margaret Rose (1927) - married diplomat, lived abroad<br>
+                    6. James Powell (1929) - WWII pilot, died 1944<br>
+                    7. Dorothy Marie (1931) - teacher in Richmond public schools<br>
+                    8. Robert William (1933) - doctor, moved to California
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/WWI_Draft_Records • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his WWI draft registration!</strong> Francis Haddad registered for the draft on June 5, 1917, in Richmond. His card shows: "Age 23, born October 10, 1893, in Sidon, Syria, citizen of Ottoman Empire, employed as bank clerk, single, living at 847 W. Grace Street." He claimed exemption as "alien enemy" since he was still technically an Ottoman citizen. He became a U.S. citizen in 1919, right before joining the Federal Reserve.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Sidon_Historical_Society • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found details about the Haddad family business!</strong> The Haddads were prominent blacksmiths in Sidon for generations - the name literally means "blacksmith." Francis's grandfather, also named Hanna Haddad, had a large forge near the port that specialized in ship repairs. They were one of the few Christian families who owned property in the commercial district. This explains why they had the means to send Francis to Italy and France - they weren't poor villagers, they were successful artisans.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Fed_Examiner_History • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his most significant case!</strong> Francis Haddad's personnel file shows he led the examination of the Bank of Virginia in 1933 that uncovered massive fraud during the Depression. His report helped send 3 bank executives to prison and saved thousands of depositors' money. The Richmond Times-Dispatch mentioned him by name in a 1934 article: "Federal examiner Francis Haddad's thorough investigation revealed irregularities that might have gone undetected."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Lebanese_Surnames_Expert • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the name evolution!</strong> François became Francis because Americans couldn't pronounce François. But here's the interesting part - he kept the Arabic pronunciation of Haddad. Family members said he insisted on "HAD-dad" not "huh-DAD" like many Americans say it. His business cards actually had phonetic spelling: "Francis Haddad (HAD-dad)."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Retirement_Records • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his retirement details!</strong> Francis Haddad retired from the Federal Reserve on October 31, 1958, after 39 years of service. His retirement ceremony was attended by the Federal Reserve Board Chairman. He received a pension of $4,800/year - quite substantial for 1958. The Richmond Fed newsletter noted: "Mr. Haddad examined over 2,000 banks during his career and never had an examination overturned on appeal."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="sidebar">
+                <h3>More posts from r/Genealogy</h3>
+                <ul>
+                    <li><a href="#">Found my great-grandmother's Ellis Island records - she came from a tiny village in Sicily</a></li>
+                    <li><a href="#">Anyone else have ancestors who worked for the WPA during the Depression?</a></li>
+                    <li><a href="#">My grandfather was a Pullman porter - found his employee records from 1928!</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
