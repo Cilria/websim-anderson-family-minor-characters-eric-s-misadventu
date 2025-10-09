@@ -1,372 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Francis Haddad (1893-1978): From Ottoman Sidon to Federal Reserve Bank Examiner - The American Dream of a Lebanese Catholic Immigrant : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .sidebar {
-            background: #f6f7ef;
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 0 0 8px 8px;
-            font-size: 14px;
-        }
-        .sidebar h3 {
-            margin: 0 0 10px 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Lebanese_American_Historian</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>342</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Francis Haddad (1893-1978): From Ottoman Sidon to Federal Reserve Bank Examiner - The American Dream of a Lebanese Catholic Immigrant</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Lebanese Immigration</span>
-                    <span class="flair">Federal Reserve</span>
-                    <span class="flair">Early 20th Century</span>
-                    <span class="flair">Virginia</span>
-                    <span>Posted by u/Lebanese_American_Historian • 8 hours ago</span>
-                </div>
-
-                <p>I need help piecing together the remarkable story of my great-grandfather Francis Haddad. Born October 10, 1893 in Sidon (then Ottoman Empire, now Lebanon), he was a Catholic in a predominantly Muslim region. Family lore says he had 4 siblings, but records from that time and place are scarce.</p>
-
-                <p><strong>The Tragedy That Changed Everything:</strong> Around 1907-1909, his older brother John was killed - either by Ottoman soldiers or in a local fight (family stories conflict). Whatever happened, it was enough to make 17-year-old Francis leave Sidon forever in 1910.</p>
-
-                <p><strong>The European Sojourn:</strong> According to family legend, Francis lived in Italy for 2 years, then moved to Paris to study business at university. He graduated just a month before WWI broke out in July 1914. Rather than stay in Europe, he immediately immigrated to America, settling in Richmond, Virginia.</p>
-
-                <p><strong>The American Career:</strong><br>
-                • 1930 Census: Bank Examiner<br>
-                • 1950 Census: Bank Examiner (Government worker)<br>
-                • WWII Draft Card: Bank Examiner for the Federal Reserve<br>
-                • Death Certificate: Worked for the Federal Reserve</p>
-
-                <p><strong>Family Life:</strong> Married Lucy Ann Powell and had 8 children - quite a large family for someone who started with so little.</p>
-
-                <p>Here's what I'm trying to uncover: What was his original Arabic name? How did a Lebanese immigrant with no connections become a Federal Reserve bank examiner? What happened during those missing years 1914-1930? And what was his life really like in Richmond as one of the few Arabs in Virginia at that time?</p>
-
-                <div class="comments-count">
-                    <a href="#">127 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversent</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Federal_Reserve_Archivist • 7 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his Federal Reserve employment record!</strong> Francis Haddad was hired September 15, 1919 as a "Bank Examiner Trainee" at the Richmond Federal Reserve Branch. His personnel file shows: Original Arabic name "Fares Hanna Haddad" (he anglicized it to Francis upon naturalization). He was making $75/month as a trainee - excellent money for 1919. Promoted to Assistant Examiner 1921 ($95/month), then Full Examiner 1923 ($125/month). His supervisor's note from 1925: "Mr. Haddad shows exceptional judgment in detecting irregularities in bank records. His European education serves him well in understanding complex financial instruments."
-                </div>
-                <div class="comment-meta">u/Lebanese_American_Historian • 6 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is incredible! Fares Hanna Haddad - that makes so much sense. "Fares" to "Francis" was a common anglicization. The salary progression shows he was doing really well. Do you know what he was examining specifically? And how did a Lebanese Catholic get hired by the Federal Reserve in 1919 Virginia?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Richmond_Historical_Society • 6 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the connection!</strong> Francis was hired through a remarkable set of circumstances. The Richmond Fed's first president, George Seay, was desperate for qualified examiners after WWI. Francis approached him in September 1919 with a letter of recommendation from a Parisian bank where he'd worked 1913-1914 (Banque de l'Union Parisienne). Seay later wrote: "The young man spoke perfect French, had European banking experience, and his Catholic faith made him acceptable to our Richmond community." Anti-immigrant sentiment was high, but Seay valued competence over prejudice.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Lebanese_Europe_Records • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his European years!</strong> Fares Haddad arrived in Marseille from Beirut October 15, 1910 aboard the SS Liban. He worked at Compagnie Générale des Eaux in Paris 1910-1912 as an accountant's assistant while studying. Enrolled at École Supérieure de Commerce de Paris September 1912, graduated July 1914 with "mention bien" (high honors). His thesis was on "Banking Practices in the Levant Compared to European Methods." The Banque de l'Union Parisienne hired him immediately - he was there exactly 11 months before fleeing to America.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Sidon_Church_Records • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his brother's death record!</strong> John (Yousef) Haddad died March 17, 1908 in Sidon. The Maronite Church record states: "Yousef Haddad, age 22, son of Hanna Haddad, merchant, died from wounds received in altercation with Ottoman gendarme during tax collection dispute." The family story about a "fight with Ottoman soldiers" was actually a tax revolt - common in Lebanon then. Francis would have been 14, old enough to remember this clearly. No wonder he left two years later.
-                </div>
-                <div class="comment-meta">u/Lebanese_American_Historian • 4 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        This is heartbreaking but explains everything. A tax collection dispute - so typical of Ottoman oppression in Lebanon. Poor Yousef was probably trying to protect his family's meager possessions. This must have haunted Francis his whole life.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Richmond_Fed_Examiner_Work • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>What he actually examined:</strong> Francis specialized in examining state-chartered banks in Virginia and the Carolinas. His 1920s reports show he caught several banks cooking books during the agricultural recession. One 1926 report on Bank of Danville revealed $200,000 in bad loans hidden in "other assets" - huge money then. He was known for being thorough but fair. A 1928 letter from a bank president: "Haddad found our problems but helped us fix them rather than just writing us up."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Lucy_Powell_Family • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found Lucy Ann Powell's background:</strong> Born December 8, 1895 in Farmville, Virginia. Her father was Thomas Jefferson Powell, a tobacco farmer who lost everything in the 1910s agricultural depression. Lucy moved to Richmond 1916 seeking work, found employment at the Federal Reserve as a stenographer - that's how she met Francis. She was 20, he was 23. They married June 15, 1918 at St. Benedict's Catholic Church. Her family was initially shocked - "Marrying a foreigner!" - but Francis's steady government job won them over.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Lebanese_Richmond_Community • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His life in Richmond's Arab community:</strong> Francis was one of only 12 Lebanese/Syrians in Richmond 1920. He helped found the "Lebanese-American Benevolent Society" 1921, which met monthly at St. Benedict's basement. They'd serve Lebanese coffee, discuss politics back home, and help new immigrants find jobs. Francis was president 1923-1925. The group raised money for Lebanese famine relief 1924-1925 after a bad harvest. His children remember him speaking Arabic when angry, cooking kibbeh on Sundays, and insisting on Lebanese coffee (so strong "it could wake the dead").
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Eight_Children_Details • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>All 8 children, with their remarkable stories:</strong><br>
-                    1. Francis Jr. "Frank" (1919-2005) - became a Federal Reserve examiner like his father<br>
-                    2. Mary Louise (1921-1998) - nun with the Sisters of Charity, taught at Catholic schools<br>
-                    3. Lucy Ann (1923-2010) - married into Richmond society, became a prominent Catholic philanthropist<br>
-                    4. John Hanna (1925-1995) - named for the uncle who died in Sidon, became a lawyer<br>
-                    5. Elizabeth "Betty" (1927-2019) - married a Navy officer, lived all over the world<br>
-                    6. Margaret (1929-2003) - became a Federal Reserve secretary, worked with her father<br>
-                    7. Robert (1931-2018) - Army officer, served in Korea<br>
-                    8. Dorothy (1933-2005) - became a teacher, never married, lived in family home
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/WWII_Draft_Details • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>His WWII draft card reveals:</strong> Registered October 16, 1940 at age 47 - too old for service but still required to register. Lists "Bank Examiner, Federal Reserve Bank of Richmond" as occupation. Height 5'8", weight 165 lbs, eyes brown, hair gray. Distinguishing marks: "scar on left hand" (family says from a childhood accident in Sidon). His draft status: "Available for non-combatant service only - over age for combat duty." He served on the Federal Reserve's War Finance Committee, helping sell war bonds.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Naturalization_Records • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his naturalization papers:</strong> Francis (Fares) became a U.S. citizen March 15, 1921 in Richmond. His petition states: "I am a subject of Greater Lebanon, having been born in Sidon when it was part of the Ottoman Empire. I renounce all allegiance to any foreign prince, potentate, state, or sovereignty." His witnesses were George Seay (president of Richmond Fed) and Thomas Jefferson Powell (his father-in-law). The judge wrote: "This petitioner has demonstrated his commitment to American ideals through his exemplary service to our banking system."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Final_Years_Details • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>His retirement and final years:</strong> Francis retired from the Federal Reserve June 30, 1958 after 39 years of service. His retirement ceremony was held at the Richmond Fed - unusual for a bank examiner to get such recognition. Chairman William McChesney Martin sent a personal letter: "Your dedication to sound banking practices has helped build the foundation of American financial stability." He spent retirement gardening, attending St. Benedict's daily Mass, and regaling grandchildren with stories about "the old country." Died peacefully July 20, 1978 at home, age 84. Buried in Richmond's Holy Cross Cemetery with a headstone that reads "Fares 'Francis' Haddad - Beloved Husband, Father, and American."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Lebanese_Legacy_Today • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>His lasting legacy:</strong> Francis Haddad's descendants now number over 150, scattered across America. The Lebanese-American Benevolent Society he founded evolved into Richmond's Arab-American Cultural Center. His Federal Reserve examination reports from the 1920s-1950s are still studied by bank examiners as examples of thorough, professional work. His story is taught in Lebanese schools as an example of the Lebanese diaspora's success. The Richmond Fed's headquarters has a small plaque: "In memory of Francis Haddad, 1919-1958, whose integrity and expertise helped build confidence in American banking." Not bad for a stonemason's son from Sidon who arrived with nothing but his education and determination.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
-
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Syrian/Lebanese immigration records 1890-1920 - where to find passenger lists?</a></li>
-                <li><a href="#">Federal Reserve employment records - anyone successfully requested examiner files?</a></li>
-                <li><a href="#">Ottoman Empire church records - how to access Maronite registers from 1890s?</a></li>
-            </ul>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Francis Haddad - From Sidon to Federal Reserve (1893-1978) Need help finding his original Arabic name and early life details</div>
+    <div class="post-meta">
+      <span class="comment-score">89 upvotes</span> • posted by <span class="comment-author">RichmondRoots</span> <span class="flair">Virginia</span>
     </div>
+    <div class="post-content">
+      <p>Looking for information on my great-grandfather Francis Haddad (October 10, 1893 - July 20, 1978). Born in Sidon, Ottoman Empire (now Lebanon). Family stories say his original Arabic name was something like "Faris" or "Fawzi" but we've never found documentation.</p>
+      
+      <p><strong>Family Lore:</strong></p>
+      <ul>
+        <li>Older brother John killed in 1907/1909 (fight with Ottoman soldier or local?)</li>
+        <li>Left Sidon at 17 (1910), lived in Italy 2+ years</li>
+        <li>Studied business in Paris, graduated June 1914</li>
+        <li>Immigrated to Richmond, VA July 1914</li>
+        <li>WWII draft card: "Bank Examiner" for Federal Reserve</li>
+        <li>1930 & 1950 census: Government worker/bank examiner</li>
+        <li>Death certificate: "Worked for The Federal Reserve"</li>
+        <li>Married Lucy Ann Powell, 8 children</li>
+      </ul>
+      
+      <p>Can't find his immigration records, naturalization papers, or what his original Arabic name was. Any help appreciated!</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">LebaneseGenealogist</span> • <span class="comment-score">234 points</span> • 12 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FOUND HIS ORIGINAL NAME AND BROTHER'S DEATH:</strong> Francis was born <strong>Faris Abdullah Haddad</strong> (فريس عبد الله حداد) in Sidon on October 10, 1893.</p>
+        
+        <p><strong>BROTHER'S MURDER:</strong> His brother <strong>Yousef (John) Haddad</strong> was killed on <strong>March 15, 1908</strong> during the <strong>Young Turk Revolution</strong>. Ottoman military records show Yousef was part of a <strong>Christian resistance group</strong> in Sidon that was suppressing pro-Young Turk demonstrations. He was shot by an Ottoman corporal named <strong>Mehmet Ali</strong> during a street confrontation. The soldier was later <strong>executed for murder</strong> - unusual for the time, suggesting Yousef's family had connections.</p>
+        
+        <p><strong>THE ESCAPE:</strong> Faris left Sidon on <strong>September 3, 1910</strong> with a <strong>Italian merchant visa</strong>. He traveled to <strong>Genoa</strong> aboard the <strong>SS Italia</strong>, then worked as a <strong>translator</strong> for a Syrian merchant family in <strong>Naples</strong> until 1912.</p>
+        
+        <p><strong>PARIS YEARS:</strong> Enrolled at <strong>École Supérieure de Commerce de Paris</strong> (now ESCP Business School) in October 1912 under the name <strong>"Francois Haddad"</strong> - this is where he began using "Francis." Graduated <strong>June 28, 1914</strong> with a degree in <strong>International Commerce</strong>. His thesis was on <strong>"Banking Practices in the American South."</strong></p>
+        
+        <p><strong>THE RUSH TO AMERICA:</strong> He booked passage on <strong>July 2, 1914</strong> - just <strong>26 days before WWI began</strong>. His student visa was expiring and as an <strong>Ottoman citizen</strong>, he feared internment.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">FederalReserveHistorian</span> • <span class="comment-score">187 points</span> • 10 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FOUND HIS FEDERAL RESERVE CAREER:</strong> Faris/Francis had an <strong>extraordinary 44-year career</strong> with the Federal Reserve that his family never fully understood.</p>
+        
+        <p><strong>ENTRY LEVEL:</strong> Started at <strong>Federal Reserve Bank of Richmond</strong> on <strong>August 17, 1914</strong> - just <strong>6 weeks after arriving</strong>! His first job was <strong>"Currency Counter - Foreign Languages"</strong> - he spoke <strong>Arabic, Italian, French</strong> and was learning English. Pay: <strong>$35/month</strong>.</p>
+        
+        <p><strong>RAPID ADVANCEMENT:</strong>
+        <ul>
+          <li><strong>1916:</strong> Assistant Bank Examiner ($55/month)</li>
+          <li><strong>1920:</strong> Bank Examiner ($95/month)</li>
+          <li><strong>1925:</strong> Senior Bank Examiner ($165/month)</li>
+          <li><strong>1932:</strong> Chief Examiner - 5th District ($225/month)</li>
+          <li><strong>1938:</strong> Assistant Director of Bank Supervision ($275/month)</li>
+          <li><strong>1945:</strong> Director of Bank Supervision ($350/month)</li>
+        </ul></p>
+        
+        <p><strong>THE GREAT DEPRESSION HERO:</strong> During the <strong>Bank Holiday of 1933</strong>, Francis personally examined <strong>47 failing banks</strong> in Virginia and West Virginia in <strong>11 days</strong>. His reports helped the Richmond Fed decide which banks could safely reopen, potentially saving <strong>thousands of depositors</strong>.</p>
+        
+        <p><strong>WWII CONTRIBUTION:</strong> He developed the <strong>"Emergency Bank Examination Protocol"</strong> - a rapid assessment system for banks in war production areas. This was later adopted nationally and is still used today (modified) for <strong>rapid bank assessments</strong>.</p>
+        
+        <p><strong>RETIREMENT:</strong> Retired <strong>July 31, 1958</strong> after <strong>44 years</strong>. His pension was <strong>$412/month</strong> - quite substantial for 1958. He continued as a <strong>consultant</strong> until 1965 at age 72.</p>
+        
+        <p><strong>THE NAME CHANGE:</strong> Legally changed his name to <strong>Francis Haddad</strong> on <strong>October 10, 1920</strong> - his 27th birthday and the day he became a <strong>naturalized citizen</strong>.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">EllisIslandSpecialist</span> • <span class="comment-score">143 points</span> • 9 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FOUND HIS IMMIGRATION RECORDS:</strong> Faris entered America through <strong>Boston</strong>, not Ellis Island!</p>
+        
+        <p><strong>ARRIVAL:</strong> SS Rochambeau from <strong>Le Havre</strong> arrived <strong>Boston Harbor July 28, 1914</strong>. Passenger list shows:</p>
+        
+        <p><strong>MANIFEST DETAILS:</strong>
+        <ul>
+          <li><strong>Name:</strong> Faris Abdallah Haddad</li>
+          <li><strong>Age:</strong> 20</li>
+          <li><strong>Occupation:</strong> Student</li>
+          <li><strong>Nationality:</strong> Turkish (Ottoman)</li>
+          <li><strong>Race:</strong> Syrian</li>
+          <li><strong>Destination:</strong> Richmond, VA</li>
+          <li><strong>Contact:</strong> Cousin - George Haddad, 1827 W. Grace St, Richmond</li>
+        </ul></p>
+        
+        <p><strong>THE COUSIN:</strong> George Haddad ran a <strong>dry goods store</strong> in Richmond's <strong>Syrian Quarter</strong> (now part of VCU campus). He sponsored dozens of <strong>Lebanese Christian immigrants</strong> - Faris was his <strong>17th cousin</strong> to arrive from Sidon.</p>
+        
+        <p><strong>DECLARATION OF INTENTION:</strong> Filed <strong>September 12, 1914</strong> - just <strong>6 weeks after arrival</strong>. Listed his name as <strong>"Francis Haddad"</strong> - the first official record using "Francis."</p>
+        
+        <p><strong>PETITION FOR NATURALIZATION:</strong> Filed <strong>October 10, 1919</strong> - exactly <strong>5 years after arrival</strong>. Witnesses included <strong>George Haddad</strong> and <strong>Thomas E. Miller</strong> (his supervisor at Federal Reserve).</p>
+        
+        <p><strong>CERTIFICATE:</strong> <strong>Certificate #4,882,116</strong> issued <strong>October 10, 1920</strong>. His <strong>Ottoman citizenship was revoked</strong> by the new <strong>Turkish government</strong> in 1923 anyway.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">RichmondRoots</span> • <span class="comment-score">67 points</span> • 8 hours ago
+      </div>
+      <div class="comment-content">
+        <p>This is incredible! My family had <strong>no idea</strong> about any of this. We thought he was just a "bank examiner" - we had <strong>no concept</strong> he was actually a <strong>pioneer Federal Reserve executive</strong> who helped save banks during the Depression!</p>
+        
+        <p>The <strong>original name</strong> - <strong>Faris Abdullah Haddad</strong> - that's going to take some getting used to. No wonder he Americanized it during WWI.</p>
+        
+        <p><strong>QUESTION:</strong> Any records of his <strong>marriage to Lucy Ann Powell</strong>? Family story says they married <strong>1921</strong> but we can't find the license.</p>
+        
+        <p><strong>Also:</strong> His brother Yousef being killed by an Ottoman soldier during the <strong>Young Turk Revolution</strong> - that explains why the family never talked about it. That was <strong>sectarian violence</strong> between <strong>Christian Lebanese</strong> and <strong>Muslim Ottomans</strong>.</p>
+        
+       p><strong>Fun fact:</strong> My grandmother (his daughter) is still alive at <strong>96</strong> - she's going to be <strong>floored</strong> by all this!</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">VirginiaMarriageRecords</span> • <span class="comment-score">91 points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FOUND THE MARRIAGE:</strong> Francis married <strong>Lucy Ann Powell</strong> on <strong>June 18, 1921</strong> - but not in Virginia!</p>
+        
+        <p><strong>LOCATION:</strong> They eloped to <strong>Washington, DC</strong> and married at <strong>All Souls Unitarian Church</strong> (now <strong>All Souls Church Unitarian</strong>) at <strong>16th & Harvard Streets NW</strong>.</p>
+        
+        <p><strong>WHY DC:</strong> Lucy Ann's family was <strong>staunch Baptist</strong> and opposed to her marrying an <strong>"foreigner"</strong> - even though Francis was by then a <strong>naturalized citizen</strong> and <strong>Federal Reserve executive</strong>. DC had <strong>no waiting period</strong> for marriage licenses in 1921.</p>
+        
+        <p><strong>WITNESSES:</strong> The witnesses were <strong>George Haddad</strong> (his cousin) and <strong>Mary Elizabeth Powell</strong> (Lucy's younger sister who supported the marriage).</p>
+        
+        <p><strong>THE RECEPTION:</strong> They held a <strong>secret reception</strong> that night at the <strong>Mayflower Hotel</strong> with about <strong>20 friends</strong> - mostly other <strong>Syrian-Lebanese immigrants</strong> and <strong>Federal Reserve colleagues</strong>.</p>
+        
+        <p><strong>LUCY'S FAMILY:</strong> Lucy Ann Powell was from <strong>Farmville, VA</strong> - daughter of <strong>Thomas Jefferson Powell</strong> (tobacco farmer) and <strong>Mary Susan Trent</strong>. She was <strong>22</strong> when they married, working as a <strong>stenographer</strong> at <strong>State Corporation Commission</strong> in Richmond.</p>
+        
+        <p><strong>RECONCILIATION:</strong> Lucy's parents <strong>forgave her</strong> after the birth of their first child <strong>Mary Francis Haddad</strong> in <strong>1922</strong>. The family became <strong>very close</strong> - Francis even helped his father-in-law <strong>invest his tobacco money</strong> during the <strong>1929 crash</strong>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
