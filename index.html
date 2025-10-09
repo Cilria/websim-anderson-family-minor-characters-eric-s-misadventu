@@ -3,137 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anderson Raymund Park (1873-1975): The barber with 6 brothers who ALL lived to 90+ : Genealogy</title>
+    <title>Anderson Raymund Park (1873-1975): 7 brothers, ALL lived to 90+, barber who retired at 61 after fire - the "Immortal Parks" : Genealogy</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
+            background: linear-gradient(135deg, #f6f7ef 0%, #e8e9e0 100%);
             margin: 0;
             padding: 0;
             color: #1a1a1b;
+            min-height: 100vh;
         }
         .container {
             max-width: 800px;
             margin: 20px auto;
             background: white;
-            border-radius: 8px;
+            border-radius: 12px;
             border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
         }
         .header {
-            background: #ff4500;
+            background: linear-gradient(135deg, #ff4500 0%, #e03d00 100%);
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 16px;
         }
         .post {
-            padding: 20px;
+            padding: 25px;
             border-bottom: 1px solid #eee;
+            background: #fff;
         }
         .vote-buttons {
             float: left;
-            margin-right: 15px;
+            margin-right: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
         }
         .vote-btn {
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 24px;
             color: #878a8c;
+            transition: all 0.2s ease;
+            padding: 4px;
+        }
+        .vote-btn:hover {
+            color: #ff4500;
+            transform: scale(1.1);
         }
         .content {
-            margin-left: 50px;
+            margin-left: 60px;
         }
         .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
+            margin: 0 0 12px 0;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
         }
         .title a {
             color: #0066cc;
             text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .title a:hover {
+            color: #ff4500;
         }
         .meta {
-            font-size: 12px;
+            font-size: 13px;
             color: #787c7e;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
         }
         .flair {
-            background: #e9f5fd;
+            background: linear-gradient(135deg, #e9f5fd 0%, #d0e8f8 100%);
             color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid #b8daff;
         }
         .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
+            margin-top: 20px;
+            font-size: 15px;
             color: #878a8c;
+            font-weight: 500;
         }
         .comments-count a {
-            color: #878a8c;
+            color: #ff4500;
             text-decoration: none;
         }
         .comments-count a:hover {
             text-decoration: underline;
         }
         .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
+            background: linear-gradient(135deg, #f6f7f8 0%, #edeef0 100%);
+            padding: 15px 25px;
             border-bottom: 1px solid #ccc;
-            font-size: 12px;
+            font-size: 13px;
             color: #878a8c;
+            display: flex;
+            gap: 20px;
         }
         .sort-bar a {
             color: #0066cc;
             text-decoration: none;
-            margin-right: 15px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .sort-bar a:hover {
+            color: #ff4500;
         }
         .comment-section {
-            padding: 20px;
+            padding: 25px;
             border-top: 1px solid #eee;
+            background: #fafafa;
         }
         .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            border-left: 3px solid #e9f5fd;
+            background: white;
+            border-radius: 0 8px 8px 0;
+            padding: 15px;
         }
         .comment-meta {
-            font-size: 12px;
+            font-size: 13px;
             color: #787c7e;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #1a1a1b;
+        }
+        .comment-content strong {
+            color: #ff4500;
         }
         .comment-reply {
             color: #0066cc;
-            font-size: 12px;
+            font-size: 13px;
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 8px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .comment-reply:hover {
+            color: #ff4500;
         }
         .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
+            margin-left: 25px;
+            margin-top: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+            background: #f8f9fa;
+            border-radius: 0 6px 6px 0;
+            padding: 12px;
         }
         .award {
             color: #d4a017;
-            font-size: 12px;
+            font-size: 14px;
             margin-right: 8px;
+        }
+        .sidebar {
+            background: linear-gradient(135deg, #f6f7f8 0%, #edeef0 100%);
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 0 0 12px 12px;
+            font-size: 15px;
+        }
+        .sidebar h3 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1b;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .sidebar li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .sidebar a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .sidebar a:hover {
+            color: #ff4500;
+        }
+        p {
+            margin: 0 0 15px 0;
+            line-height: 1.7;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -156,40 +241,37 @@
 
             <div class="content">
                 <h1 class="title">
-                    <a href="#">Anderson Raymund Park (1873-1975): The barber with 6 brothers who ALL lived to 90+</a>
+                    <a href="#">Anderson Raymund Park (1873-1975): 7 brothers, ALL lived to 90+, barber who retired at 61 after fire - the "Immortal Parks"</a>
                 </h1>
                 
                 <div class="meta">
                     <span class="flair">Georgia</span>
+                    <span class="flair">Barber Shops</span>
                     <span class="flair">Longevity</span>
-                    <span class="flair">Barber</span>
-                    <span class="flair">Sparta GA</span>
+                    <span class="flair">Family of 7 Brothers</span>
                     <span>Posted by u/Georgia_Archivist • 8 hours ago</span>
                 </div>
 
-                <p>I've been researching Anderson Raymund Park and uncovered what might be the most incredible case of family longevity I've ever seen. Here's what I have so far:</p>
+                <p>I've been researching Anderson Raymund Park and his family is absolutely extraordinary - they might be the most long-lived family in Georgia history. Born July 10, 1873 in Sparta, Georgia to Rufus Raymund Park (abt 1845 - August 16, 1936) and Sarah Elizabeth Cobb (abt 1859 - 1951).</p>
 
-                <p><strong>The Longevity Phenomenon:</strong></p>
+                <p><strong>The "Immortal Parks" - All 7 Brothers Lived to 90+:</strong></p>
                 <ul>
-                    <li>Born July 10, 1873 in Sparta, Georgia</li>
-                    <li>Parents: Rufus Raymund Park (abt 1845 - August 16, 1936, age 91) and Sarah Elizabeth Cobb (abt 1859 - 1951, age 92)</li>
-                    <li>One of 7 brothers - ALL lived to at least 90 years old</li>
-                    <li>Anderson died November 10, 1975 at age 102</li>
-                    <li>His wife Edith Louise Thomas lived to 101 (1878-1979)</li>
+                    <li>Anderson Raymund Park (1873-1975) - 102 years</li>
+                    <li>Frank Leroy Park (1875-1968) - 93 years</li>
+                    <li>William Thomas Park (1877-1969) - 92 years</li>
+                    <li>James Edward Park (1879-1972) - 93 years</li>
+                    <li>Robert Lee Park (1881-1974) - 93 years</li>
+                    <li>Charles Henry Park (1883-1976) - 93 years</li>
+                    <li>George Washington Park (1885-1978) - 93 years</li>
                 </ul>
 
-                <p><strong>The Barber Brothers of Milledgeville:</strong></p>
-                <ul>
-                    <li>Relocated to Milledgeville around 1899</li>
-                    <li>Worked as barber for most of his life</li>
-                    <li>Owned store with brother Frank Leroy Park</li>
-                    <li>Barber shop burned down in 1934 fire</li>
-                    <li>Retired early after fire, lived on brother's support</li>
-                    <li>Married Edith Louise Thomas in 1900</li>
-                    <li>4 sons: David Robert, William Francis, John Edward, Raymund Thomas</li>
-                </ul>
+                <p><strong>The Parents Were Also Remarkable:</strong> Rufus lived to 91, Sarah to 92. This means all 9 family members lived into their 90s - statistically this is almost impossible in the pre-antibiotic era.</p>
 
-                <p>Here's what I'm desperate to find: What caused this incredible longevity? All 7 brothers living to 90+ in the early 1900s is statistically impossible. Also, what started the 1934 fire that destroyed their barber shop? And why did Anderson retire so early when most men worked into their 70s then?</p>
+                <p><strong>The Barber Shop Story:</strong> Around 1899, Anderson relocated to Milledgeville and opened a barber shop with his brother Frank. Their shop "Park Brothers Barbershop" operated for 35 years until it burned down in 1934. Anderson was 61 and simply... retired. His income came from brother Frank after that.</p>
+
+                <p><strong>Family Life:</strong> Married Edith Louise Thomas (March 11, 1878 - October 15, 1979) - she also lived to 101! They had 4 sons: David Robert, William Francis, John Edward, and Raymund Thomas.</p>
+
+                <p>What I'm trying to understand: How did this family achieve such incredible longevity? What happened to the barber shop fire? Was it arson, accident, or something else? And why did Anderson retire so early when most men worked until they couldn't?</p>
 
                 <div class="comments-count">
                     <a href="#">156 comments</a>
@@ -210,31 +292,22 @@
             <div class="comment">
                 <div class="comment-meta">
                     <span class="award">⭐</span>
-                    u/Bibb_County_Records • 6 hours ago
+                    u/Milledgeville_Newspaper_Archives • 7 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Found all 7 brothers and their ages at death!</strong> This is absolutely unprecedented:<br>
-                    • Anderson Raymund Park (1873-1975) - 102 years<br>
-                    • Frank Leroy Park (1875-1968) - 93 years<br>
-                    • Rufus Thomas Park (1877-1969) - 92 years<br>
-                    • William Edward Park (1880-1972) - 92 years<br>
-                    • John Henry Park (1882-1973) - 91 years<br>
-                    • James Robert Park (1884-1976) - 92 years<br>
-                    • Samuel David Park (1886-1979) - 93 years<br>
-                    <br>
-                    Average lifespan: 92.1 years! For men born in the 1870s South, this is statistically impossible. The average white male lifespan in Georgia then was about 42 years.
+                    <strong>Found the barber shop fire story!</strong> December 17, 1934 - "Park Brothers Barbershop Destroyed by Fire." The <em>Union-Recorder</em> reported it started around 2 AM in the coal furnace. The building was total loss - estimated damage $3,500. Here's the key detail: Anderson had just renewed the insurance policy in November 1934 after letting it lapse for years. They collected $2,800 (about $60,000 today). Anderson told the newspaper: "Frank and I have been talking about retiring anyway. This just made the decision for us." Frank opened a new shop, Anderson never returned to barbering.
                 </div>
-                <div class="comment-meta">u/Georgia_Archivist • 5 hours ago</div>
+                <div class="comment-meta">u/Georgia_Archivist • 6 hours ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        This is mind-blowing! All 7 brothers made it to 90+. What could possibly explain this? Diet? Genetics? Location? I've never seen anything like this in 20 years of genealogical research.
+                        The insurance timing is suspicious - renewing just weeks before the fire? Was there any investigation?
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
-                <div class="comment-meta">u/Bibb_County_Records • 4 hours ago</div>
+                <div class="comment-meta">u/Milledgeville_Newspaper_Archives • 5 hours ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        <strong>The secret might be in their diet and lifestyle:</strong> The Parks were subsistence farmers in rural Bibb County. Family records show they ate mostly: home-raised pork, garden vegetables, cornbread, and drank well water. They didn't have access to processed foods, worked physically demanding jobs, lived in rural clean air, and had strong family support systems. Plus, they had incredible genetics - their Cobb maternal grandfather lived to 94 (1789-1883)!
+                        <strong>Good catch on the timing!</strong> The fire marshal investigated but found no evidence of arson. The furnace was 15 years old, the building was wood frame, and coal furnaces were notorious for causing fires. The insurance company paid without contesting the claim. However, Anderson was known to be frugal - he'd been cutting costs on maintenance. The fire investigator noted "years of accumulated grease and hair in the walls" that acted as kindling. Probably just lucky (or unlucky) timing on the insurance renewal.
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -243,22 +316,43 @@
             <div class="comment">
                 <div class="comment-meta">
                     <span class="award">🏅</span>
-                    u/Milledgeville_Fire_Dept_Historian • 5 hours ago
+                    u/Georgia_Longevity_Researcher • 6 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Found the 1934 fire details!</strong> The barber shop was located at 221 West Hancock Street (now West Montgomery Street). The fire started at 2:47 AM on March 12, 1934. Cause: faulty wiring in the building next door - the "Milledgeville Ice and Coal Company." The fire spread through shared wooden walls. Anderson and Frank's barber shop, "Park Brothers Tonsorial Parlor," was completely destroyed along with 4 other businesses. Total damage: $15,000 (about $340,000 today). They had no insurance - common during the Depression.
+                    <strong>The longevity secret revealed!</strong> I found the Parks family health records at Georgia State Archives. Here's what made them live so long:<br><br>
+                    <strong>Diet:</strong> The family kept detailed food diaries. They ate what they called "mountain food" - mostly vegetables, cornbread, pork fat, and molasses. Very little sugar. They grew their own vegetables and raised hogs.<br><br>
+                    <strong>Work:</strong> All the brothers did manual labor but none were farmers (except Rufus). They were barbers, carpenters, blacksmiths - skilled trades with physical activity but not backbreaking farm work.<br><br>
+                    <strong>Geography:</strong> Sparta is in the Georgia Piedmont - clean air, well water, elevation 600+ feet. They moved to Milledgeville (similar elevation) but kept country habits.<br><br>
+                    <strong>Genetics:</strong> Sarah Cobb's family (the mothers side) had similar longevity - her mother lived to 94, two sisters to 96 and 98.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Sparta_Genealogy_Society • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the Cobb family longevity records!</strong> Sarah Elizabeth Cobb's grandmother was Nancy Ann "Long Nan" Wilkes (1789-1891) - she lived to be 102! The family was known for longevity going back generations. Local records show the Wilkes/Cobb families had an average lifespan of 87 years in the 1800s, when most Georgians died in their 50s. They called it "mountain blood" - the family originally came from the North Carolina mountains before settling in Georgia.
                 </div>
                 <div class="comment-meta">u/Georgia_Archivist • 4 hours ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        No insurance during the Depression - that explains the early retirement! But why did Anderson rely on Frank's support afterward? Was Frank significantly wealthier?
+                        "Mountain blood" - I love that! Do you know if they had any specific health practices that were unusual for the time?
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
-                <div class="comment-meta">u/Milledgeville_Fire_Dept_Historian • 3 hours ago</div>
+                <div class="comment-meta">u/Sparta_Genealogy_Society • 3 hours ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        <strong>Frank's financial situation:</strong> Frank had married into money - his wife Mary Elizabeth "Mae" Wilkinson inherited 200 acres of prime cotton land from her father. Plus, Frank had diversified - he owned a small grocery store and rental properties. Anderson had invested everything in the barber shop. After the fire, Anderson was 61 with no savings, no insurance, and limited job prospects during the Depression. Frank supported him out of brotherly duty - they had a handshake agreement that Frank would "take care of Andy" for life.
+                        <strong>Unique health practices:</strong> The Cobb family had several unusual habits for 1800s Georgia:<br>
+                        • They bathed weekly (most families bathed monthly or less)<br>
+                        • They brushed teeth with charcoal and salt<br>
+                        • They drank only boiled water or buttermilk (no whiskey)<br>
+                        • They fasted one day per month "to clean the blood"<br>
+                        • They used willow bark tea for pain (natural aspirin)<br>
+                        • They kept detailed birth/death records going back to 1750s<br><br>
+                        The local doctor in 1880s called them "the most health-conscious family in Hancock County."
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -266,32 +360,46 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Sparta_GA_Historian • 4 hours ago
+                    u/Park_Brothers_Barbershop • 5 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Found why they left Sparta for Milledgeville:</strong> The Park family farm was failing by 1898. Rufus (their father) had over-mortgaged the land trying to modernize - bought a steam-powered cotton gin that bankrupted him. Plus, Anderson and Frank heard about the new Georgia Normal and Industrial College (now Georgia College) opening in Milledgeville in 1899. They figured a college town would need barbers. They walked the 35 miles from Sparta to Milledgeville carrying their barber tools in carpetbags.
+                    <strong>Found photos of their barber shop!</strong> The Parks brothers were known for being meticulous - white coats, polished tools, and they used hot towels imported from Atlanta (expensive in 1920s). They charged 25¢ for a haircut, 15¢ for a shave. Frank handled the haircuts, Anderson specialized in shaves and beard trimming. They had separate chairs - Anderson's was the "first chair" by the window. After the fire, Frank's new shop had only one chair - he said "Anderson took the skill with him when he retired."
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Barber_History_Expert • 3 hours ago
+                    u/Edith_Thomas_Park_Research • 4 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Their barber shop was legendary!</strong> "Park Brothers Tonsorial Parlor" was the most prestigious barber shop in middle Georgia. They charged 50 cents for a haircut (when most charged 25 cents) because they offered hot towels, straight-razor shaves, and conversation. Their clientele included college professors, state legislators, and even Governor Eugene Talmadge when he visited Milledgeville. They had separate chairs for Black customers - progressive for the time, though still segregated in the back room.
+                    <strong>Edith Louise Thomas was equally remarkable!</strong> Born March 11, 1878 in Warrenton, Georgia to Dr. Charles William Thomas and Mary Elizabeth "Molly" Darden. Her father was one of the first licensed physicians in Warren County. Edith attended the Georgia Normal and Industrial College (now Georgia College & State University) - rare for women in 1890s. She taught school before marriage, then became what we'd call today a "stay-at-home mom" but she was very active in the Methodist Church and helped organize the Milledgeville Women's Club in 1921.
                 </div>
-                <div class="comment-meta">u/Georgia_Archivist • 3 hours ago</div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Four_Sons_Details • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>The four sons - they inherited the longevity too:</strong><br><br>
+                    <strong>David Robert Park (1900-1998):</strong> Became a dentist in Atlanta, lived to 98. Married but had no children - said "I saw what having 4 boys did to my mother's health."<br><br>
+                    <strong>William Francis Park (1902-1999):</strong> Took over Uncle Frank's barber shop after Frank died in 1968. Kept it running until 1985 - 51 years total! Lived to 97.<br><br>
+                    <strong>John Edward Park (1905-2001):</strong> Moved to California in 1927, became a citrus farmer in Riverside. Lived to 96, attributed his longevity to "California sunshine and no Georgia humidity."<br><br>
+                    <strong>Raymund Thomas Park (1908-2003):</strong> Stayed in Milledgeville, became a carpenter. Lived to 95, was the last surviving Park brother.
+                </div>
+                <div class="comment-meta">u/Georgia_Archivist • 2 hours ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        50 cents was premium pricing then! Do we know what happened to their barber tools and equipment after the fire?
+                        Amazing that all four sons also lived into their 90s! This really was genetic. Do you know if any of them had children who lived equally long lives?
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
-                <div class="comment-meta">u/Barber_History_Expert • 2 hours ago</div>
+                <div class="comment-meta">u/Four_Sons_Details • 1 hour ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                        <strong>Salvaged items:</strong> Anderson managed to save his favorite straight razor - a German-made "Bismarck" brand from 1895, and his barber's strop. Everything else burned - the marble counters, the oak barber chairs (imported from Chicago), the hot lather machine, even the massive wall mirror that had "Park Brothers" etched across the top. Anderson kept that razor until he died - it's now in the collection of the Georgia College Museum.
+                        <strong>The next generation:</strong> David had no children (as mentioned). William had 2 daughters who lived to 89 and 91. John had 3 children in California - 88, 91, and 94. Raymund had 1 son who lived to 87. So the longevity continued but not quite to the 90+ level of the original 7 brothers. The family joke was "each generation loses a few years to pay for the previous one's miracles."
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -299,49 +407,33 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Cobb_Family_Genealogist • 3 hours ago
+                    u/Retirement_Story • 2 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>The longevity secret is definitely genetic!</strong> The Cobb family (their mother's side) were known as "the long-livers." Sarah Elizabeth Cobb's grandfather, Thomas Cobb (1789-1883), lived to 94. Her great-aunt, Nancy Cobb, lived to 96 (1795-1891). The Cobb family intermarried with the Parks for generations - they practiced cousin marriage, which may have concentrated longevity genes. The family bible records show multiple Cobbs living into their late 80s and 90s in the 1700s-1800s.
+                    <strong>Why Anderson retired at 61 - found his retirement letter!</strong> In a letter to his brother Frank dated January 1935: "I have worked with my hands for 42 years. The fire took our shop, but it gave me something better - freedom. Edith and I have saved enough, and you have been generous to share your earnings with me. I will spend my days reading, walking, and watching our boys grow old. A man should know when to put down the shears." He spent his retirement gardening, reading (he had a library of 200+ books), and walking 3 miles daily until age 95.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Milledgeville_Marriage_Records • 2 hours ago
+                    u/Sparta_Church_Records • 1 hour ago
                 </div>
                 <div class="comment-content">
-                    <strong>Found Anderson and Edith's marriage details:</strong> Married December 16, 1900 at the Methodist Church in Milledgeville. Edith was 22, Anderson was 27. Edith's father, David Thomas, was a successful merchant who owned a general store. He initially opposed the marriage because Anderson was "just a barber," but Edith insisted. Her dowry included $500 cash and a bedroom suite - substantial for 1900. They honeymooned in Atlanta, staying at the Kimball House hotel for a week.
+                    <strong>Found their family religious connection!</strong> The Parks family attended the Sparta Methodist Church, where Rufus was a trustee for 40 years. The pastor, Rev. William J. Cotter, kept detailed records and noted: "The Park family are remarkable for their health and unity. All 7 boys were baptized together in 1890, and all 7 were confirmed together in 1905. I have never seen such family harmony in 30 years of ministry." The church had a special "Park Family Pew" that was reserved for them every Sunday - it's still marked with a brass plaque today.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
+        </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Depression_Era_GA • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found Anderson's retirement lifestyle:</strong> After the 1934 fire, Anderson and Edith lived simply but comfortably on Frank's support ($25/month) plus their garden and chickens. They became the unofficial grandparents of the neighborhood - all the kids called them "Uncle Andy" and "Aunt Edith." Anderson would sit on his porch and whittle, telling stories about the old days. He walked 2 miles daily until age 95. Edith canned vegetables and baked pies that she gave away. They never owned a car - walked everywhere or took the bus.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Park_Sons_Researcher • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>All 4 sons' careers discovered:</strong><br>
-                    • David Robert Park (1901-1988) - Became a barber like his father, worked in Atlanta<br>
-                    • William Francis Park (1903-1991) - Became a dentist, practiced in Macon<br>
-                    • John Edward Park (1905-1995) - Became a teacher, principal of Milledgeville High School<br>
-                    • Raymund Thomas Park (1907-1987) - Became a postal worker, worked 40 years for USPS<br>
-                    <br>
-                    Interestingly, none of them became farmers or worked in agriculture - all left rural occupations for professional careers.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Found my great-grandmother's diary - she lived to 104 and documented everything</a></li>
+                <li><a href="#">Anyone else have families where everyone lived to 90+? What's the secret?</a></li>
+                <li><a href="#">Barber shop records from 1920s - how to find them?</a></li>
+                <li><a href="#">The "Immortal" families of the South - genetic longevity studies</a></li>
+            </ul>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
