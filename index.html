@@ -1,331 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Howard "Ho" Franklin Horne Sr. (1916-1992): The grocery store manager who never served : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Virginia_Archivist</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>23</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Howard "Ho" Franklin Horne Sr. (1916-1992): The grocery store manager who never served</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Virginia</span>
-                    <span class="flair">Tampa</span>
-                    <span class="flair">Draft Dodgers</span>
-                    <span class="flair">Grocery Stores</span>
-                    <span>Posted by u/Virginia_Archivist • 3 hours ago</span>
-                </div>
-
-                <p>Okay, I know this one is going to be boring as hell, but I promised myself I'd research every branch of my family tree. So here goes nothing:</p>
-
-                <p><strong>The Most Boring Life Story Ever:</strong></p>
-                <ul>
-                    <li>Born July 10, 1916 in Windsor, Virginia</li>
-                    <li>Parents: Robert Mack Horne Jr (1876-1939) and Eliza Ann Monroe (1882-1927)</li>
-                    <li>One of 14 siblings - yes, you read that right, FOURTEEN</li>
-                    <li>Drafted for WWII but never actually served</li>
-                    <li>Married in Windsor, VA in November 1945</li>
-                    <li>Moved to Tampa, Florida after the war</li>
-                    <li>Worked as a grocery store manager until retirement</li>
-                    <li>Fathered 5 children</li>
-                    <li>Died of a heart attack July 22, 1992 at age 76</li>
-                </ul>
-
-                <p>Here's literally the only interesting thing: While dozens of his brothers and brothers-in-law served in WWII, Howard got drafted but somehow never saw active duty. That's it. That's the whole mystery. This guy lived the most painfully ordinary life imaginable.</p>
-
-                <p>I'm mainly posting this because I need help finding his draft records to figure out why he didn't serve when everyone else in his massive family did. Also looking for employment records from his grocery store years in Tampa.</p>
-
-                <div class="comments-count">
-                    <a href="#">47 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    u/Selective_Service_Records • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his draft card:</strong> Howard Franklin Horne registered October 16, 1940 in Isle of Wight County, VA. Serial #1589. But here's the thing - he was classified 4-F (physically unfit) due to "chronic bronchial asthma, severe." Medical examiner noted: "Subject experiences breathing difficulty during physical exertion, contraindicated for military service." So he wasn't a draft dodger - he was legitimately rejected for medical reasons. The asthma probably saved his life given the casualty rates.
-                </div>
-                <div class="comment-meta">u/Virginia_Archivist • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Well damn, that actually explains it. Asthma in 1940 was basically a death sentence for military service. Still boring, but at least there's a reason why he didn't serve when his brothers did.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Huge_Family_Researcher • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found all 14 siblings:</strong> Robert and Eliza had 14 kids between 1898-1930. The family was Catholic (explains the large family). Howard was #11. His older brothers who served: William (WWI), Robert III (WWII Army), James (WWII Navy), Thomas (WWII Army), and Charles (WWII Marines). The family joke was that Howard was "the sickly one" - he had asthma, allergies, and was underweight as a kid. His siblings called him "Poor Howard" because he couldn't play sports or do farm work.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Tampa_Grocery_Historian • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his grocery store career:</strong> Howard managed the "Piggly Wiggly #47" on Henderson Boulevard from 1946-1978. Store records show he was actually a decent manager - kept the store profitable through multiple recessions. He was known for personally training every new employee and had a reputation for being "obsessed with produce freshness." Retired when the chain was sold to corporate owners. The store became a Kash n' Karry, then later a Sweetbay.
-                </div>
-                <div class="comment-meta">u/Virginia_Archivist • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Henderson Boulevard Piggly Wiggly... that store was there until like 2005. I probably shopped there as a kid without knowing it was once managed by the most boring man in genealogy.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Marriage_Records_VA • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Marriage details:</strong> Married Mary Elizabeth "Betty" Johnson November 17, 1945 at St. Mary's Catholic Church in Windsor. Betty was 27, Howard was 29. She was a schoolteacher from Smithfield, VA. They honeymooned in Richmond (exciting, I know). Wedding announcement described Howard as "manager of the local grocery store" - even then he was defined by his boring job.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Boring_Genealogy_Guy • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found his obituary:</strong> Tampa Tribune, July 23, 1992: "Howard F. Horne Sr., 76, died Tuesday at St. Joseph's Hospital. He was a retired grocery store manager, member of St. Lawrence Catholic Church, and former member of the Knights of Columbus. Survived by wife of 47 years, Betty; 5 children, 12 grandchildren; 8 great-grandchildren. Services at Gonzalez Funeral Home. Burial in Garden of Memories Cemetery." That's it. That's the whole thing. Even his obituary was boring.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Family_Ordinary_As_Hell • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>All 5 children confirmed - and they're all boring too:</strong><br>
-                    • Howard Jr. (1946) - Accountant<br>
-                    • Mary Elizabeth (1948) - Stay-at-home mom<br>
-                    • Robert (1950) - High school teacher<br>
-                    • Patricia Ann (1952) - Nurse<br>
-                    • William (1955) - Insurance agent<br>
-                    <br>
-                    Not a single rebel in the bunch. It's like the whole family was committed to mediocrity.
-                </div>
-                <div class="comment-meta">u/Virginia_Archivist • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        Holy shit, you're right. Even his kids chose the most stereotypical middle-class professions possible. This is genuinely impressive how unremarkable this entire family line is.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Depression_Era_VA • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found why he moved to Tampa:</strong> After the war, Howard couldn't farm due to his asthma and Windsor had limited opportunities for someone with health issues. His cousin, James "Jimmy" Horne, had moved to Tampa in 1943 and wrote letters about the booming post-war economy. Howard and Betty took a bus to Tampa in March 1946, stayed with Jimmy for two weeks, and Howard got the Piggly Wiggly job through a Catholic church connection. They bought a small house in Hyde Park for $3,500.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Heart_Attack_Records • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Cause of death details:</strong> Died July 22, 1992 at 2:15 PM at St. Joseph's Hospital, Tampa. Massive myocardial infarction (heart attack). He'd had chest pains while stocking shelves at home (still organizing things like a grocery manager). His wife found him collapsed in the garage next to his meticulously organized tool bench. Even his death was boring - no dramatic story, just a typical cardiac event.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/This_Is_Painful • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    <strong>Found the most boring detail yet:</strong> Howard's hobby was collecting grocery store receipts. Not coupons, not advertisements - receipts. He had boxes of them organized by store and date. His daughter told the Tampa Tribune in 1992 that he "liked to compare prices over the years." That's it. That's what he did for fun. Compared grocery prices. I'm actually in awe of how spectacularly uninteresting this man managed to be.
-                </div>
-                <div class="comment-meta">u/Virginia_Archivist • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        I... I don't even know what to say anymore. This is genuinely the most boring genealogical research I've ever done. Howard "Ho" Horne lived 76 years and managed to be completely, utterly, magnificently unremarkable in every possible way. It's almost an achievement.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Howard "Ho" Franklin Horne Sr - The Most Average Man in Virginia (1916-1992)</div>
+    <div class="post-meta">
+      <span class="comment-score">23 upvotes</span> • posted by <span class="comment-author">VirginiaRootsSeeker</span> <span class="flair">Virginia Research</span>
     </div>
+    <div class="post-content">
+      <p>Looking for information on Howard "Ho" Franklin Horne Sr, born July 10, 1916 in Windsor, Virginia. He's one of those ancestors who's so ordinary, he's almost extraordinary in his mediocrity.</p>
+      
+      <p>Here's what I know:</p>
+      <ul>
+        <li>Born to Robert Mack Horne Jr (1876-1939) and Eliza Ann Monroe (1882-1927)</li>
+        <li>One of 14 siblings - yes, FOURTEEN</li>
+        <li>Married in Windsor, VA in November 1945</li>
+        <li>Drafted for WW2 but never served (medical deferment?)</li>
+        <li>Moved to Tampa, Florida after the war</li>
+        <li>Worked as grocery store manager until retirement</li>
+        <li>Fathered 5 children</li>
+        <li>Died of heart attack July 22, 1992</li>
+      </ul>
+      
+      <p>Anyone know which grocery store he managed? Or why he didn't serve when his brothers did? Also curious about the nickname "Ho" - was that common for Howard back then?</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TampaHistoryBuff</span> • <span class="comment-score">89 points</span> • 8 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FOUND THE GROCERY STORE:</strong> Howard managed the <strong>Piggly Wiggly</strong> at <strong>3408 Henderson Boulevard</strong> in Tampa from <strong>1948 to 1978</strong>. Thirty years of managing the same store - that's actually impressive in its own way.</p>
+        
+        <p><strong>THE STORE DETAILS:</strong> It was a <strong>typical 1950s grocery</strong> - <strong>3,200 square feet</strong>, <strong>8 employees</strong>, and Howard knew <strong>every regular customer by name</strong>. The store had <strong>manual cash registers</strong> until 1975 when they finally got <strong>electronic ones</strong>.</p>
+        
+        <p><strong>THE MEDICAL DEFERMENT:</strong> Found his <strong>Selective Service records</strong> - Howard had <strong>rheumatic fever</strong> as a child that damaged his <strong>heart valve</strong>. His brothers called him <strong>"Lucky Ho"</strong> because he got out of serving while <strong>7 of his brothers</strong> served overseas.</p>
+        
+        <p><strong>THE NICKNAME:</strong> "Ho" came from his <strong>youngest sister Mary</strong> who couldn't pronounce "Howard" - she called him <strong>"Ho-Ho"</strong> and it stuck. By adulthood, everyone including his wife called him <strong>"Ho"</strong> or <strong>"Mr. Ho"</strong> at the store.</p>
+        
+        <p><strong>THE MOST AVERAGE FACT:</strong> His personnel file shows he took <strong>exactly 2 sick days in 30 years</strong> - both for <strong>his children's births</strong>. His annual reviews consistently rated him <strong>"Satisfactory"</strong> - never excellent, never poor. Just... satisfactory.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">WindsorVirginiaNative</span> • <span class="comment-score">156 points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>THE HORNE FAMILY WAS REMARKABLY UNREMARKABLE:</strong> I grew up in Windsor - the Hornes were known for being <strong>the most average family</strong> in town.</p>
+        
+        <p><strong>THE PARENTS:</strong> Robert Mack Horne Jr worked at the <strong>sawmill</strong> for <strong>43 years</strong> - same shift, same job. Eliza Ann Monroe was a <strong>housewife</strong> who had <strong>14 children</strong> in <strong>21 years</strong> and <strong>never learned to drive</strong>.</p>
+        
+        <p><strong>THE SIBLINGS:</strong> Of the 14 Horne children:
+        <ul>
+          <li><strong>6</strong> worked at the <strong>sawmill</strong></li>
+          <li><strong>3</strong> became <strong>housewives</strong></li>
+          <li><strong>2</strong> were <strong>farmers</strong></li>
+          <li><strong>1</strong> was a <strong>teacher</strong> (the rebel)</li>
+          <li><strong>1</strong> was a <strong>grocery store manager</strong> (Howard)</li>
+          <li><strong>1</strong> died in <strong>infancy</strong></li>
+        </ul></p>
+        
+        <p><strong>THE MOST AVERAGE STORY:</strong> Howard's <strong>high school yearbook</strong> (1934) lists him as <strong>"Most Likely to Stay in Windsor"</strong> - he was <strong>one of three</strong> in his class of <strong>32</strong> who actually left. The other two became <strong>missionaries</strong>, Howard just moved to <strong>Tampa</strong>.</p>
+        
+        <p><strong>THE MARRIAGE:</strong> Married <strong>Dorothy Mae Smith</strong> (1918-2003) - she was a <strong>cashier at Woolworth's</strong>. They met at a <strong>church social</strong> and courted for <strong>exactly 6 months</strong> before marrying. She wore <strong>her mother's wedding dress</strong>, they honeymooned in <strong>Norfolk</strong> (30 miles away).</p>
+        
+        <p><strong>THE CHILDREN:</strong> All 5 children had <strong>ordinary lives</strong> too - <strong>3 teachers</strong>, <strong>1 nurse</strong>, <strong>1 accountant</strong>. Not a single <strong>criminal</strong>, <strong>celebrity</strong>, or <strong>failure</strong> among them. Even their <strong>rebellions</strong> were conventional.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">GenealogyRealist</span> • <span class="comment-score">234 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>LET'S BE HONEST:</strong> Howard Horne was the <strong>most boring ancestor</strong> possible, and that's <strong>perfectly fine</strong>.</p>
+        
+        <p><strong>THE TRUTH:</strong> Most of our ancestors were like Howard - <strong>ordinary people</strong> living <strong>ordinary lives</strong>. We just don't write about them because <strong>there's nothing sensational</strong> to document.</p>
+        
+        <p><strong>THE BEAUTY:</strong> Howard represents <strong>millions of Americans</strong> who <strong>got up, went to work, raised families</strong>, and <strong>never made headlines</strong>. He was <strong>drafted but couldn't serve</strong>, <strong>managed a grocery store</strong>, <strong>raised 5 kids</strong>, and <strong>died of a heart attack at 76</strong>.</p>
+        
+        <p><strong>THE STATISTICS:</strong>
+        <ul>
+          <li><strong>76 years</strong> was <strong>above average</strong> for men in 1992</li>
+          <li><strong>5 children</strong> was <strong>typical</strong> for his generation</li>
+          <li><strong>30 years</strong> at the same job shows <strong>stability</strong></li>
+          <li><strong>Moving from Virginia to Florida</strong> in 1945 was <strong>common</strong></li>
+        </ul></p>
+        
+        <p><strong>THE REALITY:</strong> We're conditioned to expect <strong>dramatic stories</strong> - <strong>war heroes, criminals, celebrities</strong>. But <strong>90% of genealogy</strong> is people like Howard who lived <strong>quiet, decent lives</strong> and <strong>never made history</strong>.</p>
+        
+        <p><strong>THE HONOR:</strong> Howard did what <strong>society expected</strong> - he <strong>worked hard</strong>, <strong>stayed married</strong>, <strong>raised responsible children</strong>, and <strong>never caused trouble</strong>. In many ways, that's <strong>more admirable</strong> than being exceptional.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">VirginiaRootsSeeker</span> • <span class="comment-score">67 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>You're absolutely right - Howard was <strong>extraordinarily ordinary</strong>, and I think that's why I find him fascinating. In a family tree full of <strong>civil war soldiers</strong>, <strong>railroad builders</strong>, and <strong>pioneers</strong>, Howard stands out for being <strong>completely typical</strong>.</p>
+        
+        <p>The fact that he took <strong>2 sick days in 30 years</strong>, consistently got <strong>"Satisfactory" reviews</strong>, and all his children became <strong>teachers, nurse, and accountant</strong> - that's almost <strong>statistically perfect</strong> averageness.</p>
+        
+        <p>Even his <strong>medical deferment</strong> was <strong>ordinary</strong> - rheumatic fever heart damage was a <strong>common reason</strong> men couldn't serve. His brothers probably called him <strong>"Lucky Ho"</strong> because <strong>every family</strong> had someone who <strong>couldn't serve</strong> for medical reasons.</p>
+        
+        <p>Howard represents the <strong>silent majority</strong> of our ancestors who <strong>never wrote memoirs</strong>, <strong>never made newspapers</strong>, and <strong>never had biographies written</strong> - but they were the <strong>backbone of America</strong> anyway.</p>
+        
+        <p>Sometimes the <strong>most boring ancestor</strong> is the <strong>most honest reflection</strong> of their time. Howard wasn't <strong>exceptional</strong> - he was <strong>reliably, consistently, satisfactorily average</strong> for <strong>76 years</strong>. And there's something <strong>beautiful</strong> about that.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
