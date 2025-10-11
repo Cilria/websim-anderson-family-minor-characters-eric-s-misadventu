@@ -3,222 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Horne Family Tree: 5 Generations of Painfully Average People (1845-1992) : Genealogy</title>
+    <title>Can we talk about how most obituaries were basically just "name, age, died" and nothing else? : Genealogy</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #f6f7ef 0%, #e8e9e0 100%);
+            background-color: #f6f7ef;
             margin: 0;
             padding: 0;
             color: #1a1a1b;
-            min-height: 100vh;
         }
         .container {
             max-width: 800px;
             margin: 20px auto;
             background: white;
-            border-radius: 12px;
+            border-radius: 8px;
             border: 1px solid #ccc;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header {
-            background: linear-gradient(135deg, #ff4500 0%, #e03d00 100%);
+            background: #ff4500;
             color: white;
-            padding: 20px;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-weight: 600;
-            font-size: 16px;
+            gap: 10px;
+            font-weight: 500;
         }
         .post {
-            padding: 25px;
+            padding: 20px;
             border-bottom: 1px solid #eee;
-            background: #fff;
         }
         .vote-buttons {
             float: left;
-            margin-right: 20px;
+            margin-right: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
         }
         .vote-btn {
             background: none;
             border: none;
             cursor: pointer;
-            font-size: 24px;
+            font-size: 20px;
             color: #878a8c;
-            transition: all 0.2s ease;
-            padding: 4px;
-        }
-        .vote-btn:hover {
-            color: #ff4500;
-            transform: scale(1.1);
         }
         .content {
-            margin-left: 60px;
+            margin-left: 50px;
         }
         .title {
-            margin: 0 0 12px 0;
-            font-size: 20px;
-            font-weight: 600;
-            line-height: 1.4;
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
         }
         .title a {
             color: #0066cc;
             text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        .title a:hover {
-            color: #ff4500;
         }
         .meta {
-            font-size: 13px;
+            font-size: 12px;
             color: #787c7e;
-            margin-bottom: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
+            margin-bottom: 10px;
         }
         .flair {
-            background: linear-gradient(135deg, #e9f5fd 0%, #d0e8f8 100%);
+            background: #e9f5fd;
             color: #1a1a1b;
-            padding: 4px 10px;
-            border-radius: 16px;
-            font-size: 12px;
-            font-weight: 500;
-            border: 1px solid #b8daff;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
         }
         .comments-count {
-            margin-top: 20px;
-            font-size: 15px;
+            margin-top: 15px;
+            font-size: 14px;
             color: #878a8c;
-            font-weight: 500;
         }
         .comments-count a {
-            color: #ff4500;
+            color: #878a8c;
             text-decoration: none;
         }
         .comments-count a:hover {
             text-decoration: underline;
         }
         .sort-bar {
-            background: linear-gradient(135deg, #f6f7f8 0%, #edeef0 100%);
-            padding: 15px 25px;
+            background: #f6f7f8;
+            padding: 10px 20px;
             border-bottom: 1px solid #ccc;
-            font-size: 13px;
+            font-size: 12px;
             color: #878a8c;
-            display: flex;
-            gap: 20px;
         }
         .sort-bar a {
             color: #0066cc;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        .sort-bar a:hover {
-            color: #ff4500;
+            margin-right: 15px;
         }
         .comment-section {
-            padding: 25px;
+            padding: 20px;
             border-top: 1px solid #eee;
-            background: #fafafa;
         }
         .comment {
-            margin-bottom: 20px;
-            padding-left: 25px;
-            border-left: 3px solid #e9f5fd;
-            background: white;
-            border-radius: 0 8px 8px 0;
-            padding: 15px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
         }
         .comment-meta {
-            font-size: 13px;
+            font-size: 12px;
             color: #787c7e;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            margin-bottom: 5px;
         }
         .comment-content {
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 8px;
-            color: #1a1a1b;
-        }
-        .comment-content strong {
-            color: #ff4500;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
         }
         .comment-reply {
             color: #0066cc;
-            font-size: 13px;
+            font-size: 12px;
             cursor: pointer;
-            margin-top: 8px;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        .comment-reply:hover {
-            color: #ff4500;
+            margin-top: 5px;
         }
         .comment-nested {
-            margin-left: 25px;
-            margin-top: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-            background: #f8f9fa;
-            border-radius: 0 6px 6px 0;
-            padding: 12px;
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
         }
         .award {
             color: #d4a017;
-            font-size: 14px;
+            font-size: 12px;
             margin-right: 8px;
-        }
-        .sidebar {
-            background: linear-gradient(135deg, #f6f7f8 0%, #edeef0 100%);
-            padding: 20px;
-            margin-top: 25px;
-            border-radius: 0 0 12px 12px;
-            font-size: 15px;
-        }
-        .sidebar h3 {
-            margin: 0 0 15px 0;
-            font-size: 18px;
-            font-weight: 600;
-            color: #1a1a1b;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        .sidebar li {
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-        .sidebar a {
-            color: #0066cc;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        .sidebar a:hover {
-            color: #ff4500;
-        }
-        p {
-            margin: 0 0 15px 0;
-            line-height: 1.7;
-        }
-        ul {
-            margin: 15px 0;
-            padding-left: 25px;
-        }
-        li {
-            margin-bottom: 8px;
-            line-height: 1.6;
         }
     </style>
 </head>
@@ -227,54 +142,47 @@
         <div class="header">
             <span>r/Genealogy</span>
             <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Virginia_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Archive_Angry</span>
             <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
+            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
         </div>
 
         <div class="post">
             <div class="vote-buttons">
                 <button class="vote-btn">⬆</button>
-                <span>156</span>
+                <span>892</span>
                 <button class="vote-btn">⬇</button>
             </div>
 
             <div class="content">
                 <h1 class="title">
-                    <a href="#">The Horne Family Tree: 5 Generations of Painfully Average People (1845-1992)</a>
+                    <a href="#">Can we talk about how most obituaries were basically just "name, age, died" and nothing else?</a>
                 </h1>
                 
                 <div class="meta">
-                    <span class="flair">Virginia</span>
-                    <span class="flair">Boring Families</span>
-                    <span class="flair">Average Americans</span>
-                    <span class="flair">5 Generations</span>
-                    <span>Posted by u/Virginia_Archivist • 8 hours ago</span>
+                    <span class="flair">Rant</span>
+                    <span class="flair">Obituaries</span>
+                    <span class="flair">Reality Check</span>
+                    <span>Posted by u/Archive_Angry • 4 hours ago</span>
                 </div>
 
-                <p>After researching Howard "Ho" Franklin Horne Sr., I decided to trace his entire paternal line. What I discovered is a masterclass in mediocrity spanning 147 years.</p>
+                <p>I'm so fucking tired of people expecting every ancestor to have some flowery, three-paragraph obituary detailing their life story. Let me tell you what 90% of actual historical obituaries looked like:</p>
 
-                <p><strong>Generation 1: Robert Mack Horne Sr. (1845-1920)</strong><br>
-                Howard's grandfather. Born in Windsor, Virginia, died in Windsor, Virginia. Never left the county. Farmer who owned 80 acres of mediocre soil. Married Mary Elizabeth Smith (1847-1919) - literally the girl next door, as their farms shared a property line. They had 8 children who all lived perfectly ordinary lives. His obituary reads: "He was a good farmer and a respected member of the community." That's the most interesting thing anyone ever said about him.</p>
+                <p><strong>Typical 1880s-1920s obituary:</strong><br>
+                "John Smith, age 67, died Tuesday at his residence. Funeral services Friday at 2 PM. Burial in Oakwood Cemetery."</p>
 
-                <p><strong>Generation 2: Robert Mack Horne Jr. (1876-1939)</strong><br>
-                Howard's father. Born November 11th (same birthday as his wife, which is the most notable thing about him). Took over the family farm, grew the same crops as his father. When asked why he never expanded, he said "80 acres is enough for anyone." Married Eliza Ann Monroe in 1898 because "she lived nearby and was pleasant company." They had 14 children because "that's what farmers do." No hobbies, no ambitions, no drama.</p>
+                <p><strong>That's it. That's the whole thing.</strong></p>
 
-                <p><strong>Generation 3: Howard "Ho" Franklin Horne Sr. (1916-1992)</strong><br>
-                The grocery store manager we already covered. The highlight of his life was winning $50 in a raffle.</p>
+                <p>I just spent three hours going through microfilm from 1903-1912. Out of 200+ obituaries, maybe 5 had more than two sentences. Most were literally just name, age, death date, and funeral info. No mention of occupation, family, cause of death, or life accomplishments.</p>
 
-                <p><strong>Generation 4: Howard Franklin Horne Jr. (1946-2018)</strong><br>
-                Continued the tradition of mediocrity. Accountant at the same Tampa firm for 35 years. Never married because "never found the right person." Lived in the same apartment for 40 years - paid $180/month in 1978, still paid $180/month in 2018 because he never asked for a rent increase and the landlord forgot. His entire estate was valued at $47,000 when he died, consisting mainly of a 1998 Toyota Camry and $43,000 in a savings account earning 0.01% interest.</p>
+                <p>People keep posting here like "My great-grandfather's obituary only says he was 72 and died at home - what am I missing?" <strong>You're missing nothing.</strong> That's just how they wrote them back then. Newspapers charged by the word, and most families couldn't afford (or didn't see the point) in writing a novel about Uncle Frank who ran a moderately successful feed store.</p>
 
-                <p><strong>Generation 5: Howard Franklin Horne III (1975-present)</strong><br>
-                The current torch-bearer of boring. Works at a Tampa-area Office Depot as "Senior Copy Center Associate" - a title he earned after 25 years of service. Lives in a studio apartment, drives a 2012 Honda Civic with 43,000 miles ("only drove to work and grocery store"). Has a Costco membership but only buys toilet paper and peanut butter. His most exciting purchase last year was a $35 electric toothbrush (after researching for 3 months).</p>
+                <p>The long, detailed obituaries we see online? Those were usually for prominent citizens, wealthy families, or people who died in spectacular circumstances. Your average farmer, factory worker, or shopkeeper got the standard "name, age, died" treatment.</p>
 
-                <p>Five generations. 147 years. Not a single interesting story, remarkable achievement, or dramatic event. Just ordinary people living ordinary lives in the most ordinary way possible.</p>
-
-                <p>The most fascinating thing about this family is how unfascinating they are.</p>
+                <p>Stop expecting Shakespeare when you should expect a grocery list.</p>
 
                 <div class="comments-count">
-                    <a href="#">189 comments</a>
+                    <a href="#">234 comments</a>
                 </div>
             </div>
         </div>
@@ -292,59 +200,27 @@
             <div class="comment">
                 <div class="comment-meta">
                     <span class="award">⭐</span>
-                    u/Census_Detail_Diver • 7 hours ago
+                    <span class="award">⭐</span>
+                    u/Realistic_Researcher • 3 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Found Robert Sr.'s farm records - they're hilariously average:</strong> 1880 agricultural census shows he produced 150 bushels of corn, 40 bushels of wheat, and 12 bales of cotton. The census taker noted: "Farm produces sufficient for family needs, little surplus." His land was valued at $1,200 - exactly the median value for farms in that township. Even his soil quality was rated "fair" - not good, not poor, just fair.
+                    THANK YOU. I went through the same thing with my 2nd great-grandfather. His 1898 obituary literally reads: "Michael O'Brien died yesterday after a brief illness. Age 64. Leaves a wife and several children." That's it. I spent months thinking I was missing something or that the newspaper had been damaged. Nope - that's just how they did it. People expect these Victorian-era novels when most obituaries were basically death announcements, not life stories.
                 </div>
-                <div class="comment-meta">u/Virginia_Archivist • 6 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                        "Sufficient for family needs, little surplus" - that's the perfect description for this entire family. Never too much, never too little, always just enough.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
                     <span class="award">🏅</span>
-                    u/Marriage_Record_Hunter • 6 hours ago
+                    u/Newspaper_Archivist_Pro • 3 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Robert Jr.'s marriage was peak boring:</strong> November 11, 1898. They chose this date because it was "convenient - not too cold for traveling, not too busy with farm work." Wedding at 2 PM because "that's when folks usually visit." Reception at the bride's parents' house with "simple refreshments - ham, biscuits, and tea." Their honeymoon consisted of visiting relatives in neighboring counties for three days. Total cost: $34.75 including the preacher's $3 fee.
+                    Former newspaper archivist here - can confirm. Until about the 1950s, most obituaries were classified ads that families paid for by the word. You think someone in 1910 is gonna pay extra to mention that Grandpa liked fishing? Hell no. They'd write "John Smith, 72, died Tuesday" and spend the saved money on actual necessities like food. The detailed ones were either wealthy families showing off or newspaper editors writing about local prominent citizens.
                 </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Apartment_Records_Guru • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>Howard Jr.'s apartment situation is even worse than you think:</strong> I found the property records. His apartment was rent-controlled, but the legal limit was actually $285/month by 2018. The landlord, Harold Martinez, told me: "I kept meaning to raise his rent, but he always paid on the 1st, never complained, never had visitors. Just a nice quiet man. I forgot about it for years." When Howard died, the landlord felt guilty and gave the $43,000 estate an extra $5,000 "for being the perfect tenant for 40 years."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Office_Depot_Employee • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    <strong>I work with Howard III - he's exactly as boring as described:</strong> He's been at copy center since 1998. Eats the same lunch every day - peanut butter sandwich, apple, and water from the water fountain. Wears khakis and blue polo shirts exclusively. Drives exactly the speed limit, signals exactly 100 feet before turns. His employee review every year says "Meets expectations" - never exceeds, never fails to meet. Last year he got excited because we got a new copier and he spent 2 weeks learning all the features. That was the most animated I've ever seen him.
-                </div>
-                <div class="comment-meta">u/Virginia_Archivist • 4 hours ago</div>
+                <div class="comment-meta">u/Frugal_Farmer_Family • 2 hours ago</div>
                 <div class="comment-nested">
                     <div class="comment-content">
-                    Did you ask him about his family history? Does he know he's part of 5 generations of aggressively ordinary people?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-                <div class="comment-meta">u/Office_Depot_Employee • 3 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    <strong>I asked him once if he had any interesting family stories.</strong> He thought for a full minute and said: "My grandfather worked at a grocery store for many years. He won a raffle once. Fifty dollars." That was it. He seemed genuinely proud of this fact. When I pressed for more, he said "We've always been steady, reliable people. Not everyone needs to be exciting."
+                    Exactly! My grandmother told me her parents agonized over whether to spend the extra 50 cents to include "beloved husband and father" in her grandfather's 1921 obituary. They ultimately decided against it because they needed that money for groceries that week.
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -352,53 +228,95 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Property_Value_Records • 4 hours ago
+                    u/Expectation_Adjustment • 2 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Robert Sr.'s farm value was comically average:</strong> In 1900, his farm and buildings were assessed at exactly $2,400. The county average was $2,395. He was $5 ABOVE average. The tax assessor's notes: "Typical farm, typical improvements, typical productivity." Even his livestock was boring - 2 horses, 3 cows, 8 pigs, 20 chickens. The exact county average for a farm his size.
+                    The worst part is when people think their ancestors were "forgotten" or "unimportant" because of short obituaries. No - that's just how everyone got treated unless they were rich or famous. My great-great-aunt who died in the 1918 flu pandemic got "Miss Elizabeth Wilson died of influenza. Age 24." That's it. She wasn't forgotten - she just got the standard treatment for a young woman from a working-class family.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Costco_Membership_Tracker • 3 hours ago
+                    u/Obituary_Reality_Check • 2 hours ago
                 </div>
                 <div class="comment-content">
-                    <strong>Howard III's Costco purchases are soul-crushingly predictable:</strong> I've seen his membership history (friend works there). Every visit: 1 pack toilet paper, 1 jar peanut butter, 1 box protein bars, 1 bottle multivitamins. Never varies. Goes every 3 months like clockwork. The checkout clerk knows him by name and has his receipt ready before he even gets to the register. His total is always within $2 of $87.50.
+                    Found the most extreme example: 1904, small town in Iowa. "Mrs. Johnson died. Funeral tomorrow." No first name, no age, no husband's name, no cause of death. Just "Mrs. Johnson died." That was literally the entire obituary. And this wasn't unusual for rural areas - newspapers had limited space and families had limited money.
+                </div>
+                <div class="comment-meta">u/Archive_Angry • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Jesus Christ, "Mrs. Johnson died" is the most brutally efficient obituary I've ever heard of. That's not genealogy, that's a telegram from Death himself.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Genealogy_Bubble_Burst • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    This needs to be stickied at the top of this sub. So many posts like "Help! My ancestor's 1897 obituary only says he died at home - what does this mean?" It means he fucking died at home, Karen. That's it. Not everyone got the Mark Twain treatment. Most people got the same treatment as today's classified car ads.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/14_Children_Research • 2 hours ago
+                    u/Victorian_Era_Specialist • 1 hour ago
                 </div>
                 <div class="comment-content">
-                    <strong>Robert Jr.'s 14 children were spaced with mathematical precision:</strong> One child every 18-24 months from 1899-1927. No twins, no gaps, no stillbirths. The family Bible records show he stopped having children at age 51 because "that's when Father's mother stopped having children." Even their reproduction was formulaic. All 14 lived to adulthood, which was actually remarkable for the era - but nobody outside the family noticed because they were all so unremarkable.
+                    Historical context: Victorian-era obituaries were often MORE detailed, but by the 1880s-1920s, newspapers became businesses focused on profit. Why give away free column inches when you can charge for them? Plus, death was more common and less romanticized. People died at home, funerals were private affairs, and communities were smaller so everyone already knew the basic facts anyway.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    u/Honda_Civic_Historian • 1 hour ago
+                    u/Short_Obituary_Finder • 1 hour ago
                 </div>
                 <div class="comment-content">
-                    <strong>Howard III's car history is peak boring:</strong> 1998 Civic (bought used in 2002, sold in 2012), 2012 Civic (bought new, still owns). Both white. Both base models. Both serviced at the same Honda dealership every 7,500 miles. Service records show "customer requests only necessary maintenance per manual." Never had a single optional upgrade or accessory. The 2012 has 43,000 miles after 12 years - that's 3,583 miles per year, almost exactly the distance to work and back plus grocery trips.
+                    My personal collection of brutally short obituaries:<br>
+                    • "Died: Mrs. Brown, age unknown" (1899)<br>
+                    • "Local man dead. Funeral Friday." (1905) - didn't even give the name<br>
+                    • "Child died yesterday. Burial private." (1911) - no name, no age, no parents<br>
+                    • "Old Mr. Wilson is gone." (1908) - that's literally it<br>
+                    <br>
+                    People expecting detailed life stories are watching too many movies.
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
-        </div>
 
-        <div class="sidebar">
-            <h3>More posts from r/Genealogy</h3>
-            <ul>
-                <li><a href="#">Share your most average ancestors - let's celebrate the ordinary</a></li>
-                <li><a href="#">The "Just Enough" families - those who never had too much or too little</a></li>
-                <li><a href="#">Anyone else have relatives who lived in the same place for 100+ years?</a></li>
-                <li><a href="#">The mathematics of boring - families with perfectly spaced children</a></li>
-            </ul>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Modern_vs_Historical • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    It's like people expect every ancestor to have gotten the equivalent of today's social media tribute posts. "John Smith lived his best life, always chasing sunsets and making memories. He was hashtag blessed and hashtag living his best life. Swipe for 47 photos of his funeral." No - in 1905 you got "John Smith died" and you were grateful for that much information.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Reality_Check_Needed • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The flip side of this: when you DO find a detailed obituary from 1890, you know that person was either loaded, famous, or both. I found a 4-paragraph obituary for my 3rd great-grandfather in 1892 and initially thought "cool, detailed obituary." Then I researched him - dude owned half the county, a railroad, and was state senator. Of course he got the full treatment. Meanwhile, his brother got "William died. Age 58."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Grateful_for_Name • 45 min ago
+                </div>
+                <div class="comment-content">
+                    Honestly, I'm just grateful when I find ANY obituary. My Irish ancestors who died during the potato famine era? Most of them didn't even get names in local papers - just "A poor woman died of fever" or "An Irish laborer was found dead." At least "John Smith, 67, died Tuesday" gives me a name, age, day of week, and death location. That's actually a goldmine compared to what most people got.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
