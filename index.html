@@ -3,234 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"The Year of Linux Desktop" is BULLSH*T - YouTube Script</title>
+    <title>Howard "Ho" Franklin Horne Sr. (1916-1992): Drafted but never served - the story of the one brother who stayed home : Genealogy</title>
     <style>
         body {
-            font-family: 'YouTube Sans', 'Roboto', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: #fff;
-            min-height: 100vh;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .video-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .video-title {
-            font-size: 48px;
-            font-weight: 900;
-            margin: 0 0 20px 0;
-            background: linear-gradient(45deg, #ff0000, #ff6b00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.2;
-        }
-        .video-meta {
-            font-size: 16px;
-            color: #aaa;
-            margin-bottom: 30px;
-        }
-        .script-container {
-            background: rgba(255,255,255,0.05);
-            border-radius: 16px;
-            padding: 40px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .script-section {
-            margin-bottom: 40px;
-        }
-        .script-section h2 {
-            font-size: 24px;
-            color: #ff6b00;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .script-text {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #e0e0e0;
-            white-space: pre-line;
-            font-family: 'Roboto Mono', monospace;
-            background: rgba(0,0,0,0.3);
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #ff0000;
-        }
-        .highlight {
-            color: #ff6b00;
-            font-weight: bold;
-        }
-        .timestamp {
-            color: #888;
-            font-size: 14px;
-            display: block;
-            margin-top: 10px;
-        }
-        .intro {
-            background: linear-gradient(135deg, #ff0000, #ff6b00);
+        .header {
+            background: #ff4500;
             color: white;
-            padding: 30px;
-            border-radius: 12px;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 30px;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
         }
-        .outro {
-            background: rgba(255,0,0,0.1);
-            border: 2px solid #ff0000;
-            padding: 30px;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
             border-radius: 12px;
-            text-align: center;
-            margin-top: 40px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="video-header">
-            <h1 class="video-title">"The Year of Linux Desktop" is COMPLETE BULLSH*T</h1>
-            <div class="video-meta">
-                <p>1.2M views • 2 days ago</p>
-                <p>💬 12,847 Comments • 👍 98K Likes • 👎 45K Dislikes</p>
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Virginia_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>89</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Howard "Ho" Franklin Horne Sr. (1916-1992): Drafted but never served - the story of the one brother who stayed home</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Virginia</span>
+                    <span class="flair">WWII Draft</span>
+                    <span class="flair">Large Families</span>
+                    <span class="flair">Florida Migration</span>
+                    <span>Posted by u/Virginia_Archivist • 6 hours ago</span>
+                </div>
+
+                <p>Sometimes genealogy gives you a story that flips the narrative. Howard Franklin Horne Sr., born July 10, 1916 in Windsor, Virginia, came from a family where military service was expected - but he became the exception that proves the rule.</p>
+
+                <p><strong>The Horne Family Dynasty:</strong> Howard was one of 14 children of Robert Mack Horne Jr. (November 11, 1876-December 30, 1939) and Eliza Ann Monroe (November 11, 1882-July 20, 1927). Born into rural Virginia farming life, Howard was smack in the middle of the pack - child #7 of 14. His mother died when he was just 11, and his father followed 12 years later.</p>
+
+                <p><strong>The Draft That Never Was:</strong> Howard was drafted during WWII but never actually served. This is where it gets interesting - while dozens of his brothers and cousins served, Howard stayed home. Married in Windsor, VA in November 1945 (right after the war ended), then immediately relocated to Tampa, Florida where he spent the rest of his life as a grocery store manager.</p>
+
+                <p><strong>Family Details:</strong> Married in Windsor, fathered 5 children in Tampa, died of a heart attack July 22, 1992 at age 76. Not the longevity story we usually see, but a different kind of American story - the man who built a life through steady work rather than military glory.</p>
+
+                <p><strong>The Mystery:</strong> I'm trying to understand WHY Howard didn't serve when drafted. Medical exemption? Essential worker? Family hardship? And which of his brothers served? Family lore says "dozens" of relatives served, but I need specifics. Also curious about his rapid migration from Virginia to Florida right after marriage - was Tampa the new opportunity land for Virginia farm boys?</p>
+
+                <div class="comments-count">
+                    <a href="#">42 comments</a>
+                </div>
             </div>
         </div>
 
-        <div class="script-container">
-            <div class="intro">
-                🎬 LIVE NOW: Tech Rant #47 - The Linux Desktop Delusion
-            </div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
 
-            <div class="script-section">
-                <h2>🎬 COLD OPEN (0:00-0:15)</h2>
-                <div class="script-text">
-[INTENSE BEAT DROPS]
-
-"WHAT'S UP GAMERS AND TECH NERDS! It's ya boy <span class="highlight">TechRage420</span> coming at you LIVE from my mom's basement where the WiFi actually works unlike Linux WiFi drivers in 2024! 
-
-*slams Red Bull on desk*
-
-Before we start - SMASH that like button or I'll install Arch Linux on your grandma's computer!"
-
-<span class="timestamp">[0:15] *aggressive finger guns at camera*</span>
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Selective_Service_Records • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found Howard's draft classification!</strong> Selective Service System records show Howard Franklin Horne, Serial #2468, registered October 16, 1940. Classification: 3-A - "Deferred due to dependents." He was supporting his younger siblings after his father's death in 1939. Reclassified 1-A in 1943 when his youngest brother turned 18, but by then he was 27 and working as a farm equipment mechanic - classified as essential agricultural worker. Never inducted due to occupational deferment.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        This explains everything! He was the responsible one - supporting siblings after his parents died, then essential worker status. Do you have the records for his brothers' service?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Selective_Service_Records • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>Horne brothers' service record:</strong> Of the 14 Horne children (7 boys, 7 girls), 6 brothers served:<br>
+                        • Robert Mack Horne III (1914-1944) - Army, died in Normandy<br>
+                        • William Thomas Horne (1918-1991) - Navy, Pearl Harbor survivor<br>
+                        • James Edward Horne (1920-1988) - Army, Purple Heart at Battle of the Bulge<br>
+                        • Charles Monroe Horne (1922-1975) - Marines, Iwo Jima<br>
+                        • George Washington Horne (1924-2003) - Army Air Corps, B-17 pilot<br>
+                        • Richard Lee Horne (1926-2010) - Navy, served on destroyers<br>
+                        Only Howard and his youngest brother David (born 1928) didn't serve - David was too young.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="script-section">
-                <h2>🔥 THE RANT BEGINS (0:16-2:30)</h2>
-                <div class="script-text">
-"Alright, let's talk about the BIGGEST LIE in tech history. You know what I'm talking about. Every SINGLE YEAR since like 2003, some neckbeard on Reddit posts '<span class="highlight">THIS IS THE YEAR OF THE LINUX DESKTOP!</span>' 
-
-*inhales deeply*
-
-BRO. IT'S TWENTY F***ING TWENTY-FOUR. We've had Linux for THIRTY THREE YEARS. THIRTY. THREE. YEARS. And you still can't install Spotify without googling '<span class="highlight">how to install Spotify Ubuntu terminal commands copy paste</span>' like you're hacking the goddamn Matrix!
-
-*stands up, camera shakes*
-
-My DUDE installed Ubuntu last week and called me CRYING because his <span class="highlight">RTX 4090</span> was running at 15 FPS in MINECRAFT. MINECRAFT! A game that runs on my Samsung smart fridge! But nooo, Linux needs special drivers that require you to sacrifice your firstborn to Richard Stallman!"
-
-<span class="timestamp">[2:30] *dramatic pause, sips Red Bull*</span>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Tampa_Migration_Records • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found Howard's reason for moving to Tampa!</strong> November 1945 marriage certificate shows his occupation as "mechanic, farm equipment." December 1945 Tampa city directory shows him working as "machinist, Tampa Farm Equipment Co." The company recruited Virginia mechanics post-war for citrus equipment maintenance. Tampa was BOOMING in 1945 - military bases converting to civilian use, citrus industry expanding, housing shortage meant good wages. Howard's mechanical skills were in demand.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        The mechanic connection makes perfect sense! Farm equipment mechanics could easily transition to citrus equipment. Do you know which grocery store he eventually managed?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Tampa_Migration_Records • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>His grocery career:</strong> 1948 Tampa directory shows Howard as "manager, Piggly Wiggly #12" on Franklin Street. He worked there 23 years until 1971 when the chain closed. Then managed "Horne's Market" (his own store) 1971-1978. Finished career at Winn-Dixie #47 as produce manager until retirement 1981. His obituary said "40 years in Tampa grocery business."
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="script-section">
-                <h2>💀 THE REALITY CHECK (2:31-4:45)</h2>
-                <div class="script-text">
-"Let me hit you with some FACTS that'll make Linux fanboys mald harder than a <span class="highlight">Gentoo compile time</span>:
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Virginia_Marriage_Records • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his wife!</strong> Howard married Mary Elizabeth "Betty" Johnson (born November 2, 1923) from Smithfield, Virginia. She was 22, he was 29. Her father owned a hardware store - she came from better circumstances than Howard. They met at a USO dance in Windsor 1944 when Howard was working at the equipment depot. Betty's family had Tampa connections - her uncle owned a citrus grove, which helped them relocate.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
 
-*pulls up stat graphics*
-
-Steam Survey December 2024: <span class="highlight">Linux desktop market share: 1.12%</span>. ONE POINT ONE TWO PERCENT! That's not a 'year of Linux desktop' - that's a statistical ERROR MARGIN! 
-
-*zooms in on face*
-
-You know what has more market share than Linux? <span class="highlight">F***ING CHROMEBOOKS.</span> Those crappy browser machines your school gives out have DESTROYED Linux. ChromeOS - which is literally just Linux wearing a business suit - has 4.15% market share. Even Linux is too complicated for Linux users!
-
-*slams desk*
-
-AND THE COMMAND LINE! OH MY GOD. Every Linux bro's like '<span class="highlight">just use the terminal bro, it's faster bro</span>.' FASTEST WAY TO MAKE SOMEONE NEVER USE YOUR OS AGAIN. My mom can't even find the ANY key and you want her to type '<span class="highlight">sudo apt-get install firefox-esr</span>'? She'd throw the computer out the window!"
-
-<span class="timestamp">[4:45] *heavy breathing*</span>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Tampa_Obituary_Index • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found all 5 children:</strong><br>
+                    1. Howard Franklin Horne Jr. (1946-2018) - became Tampa police detective<br>
+                    2. Mary Elizabeth Horne (1948-2020) - married citrus grower, lived in Plant City<br>
+                    3. Robert Johnson Horne (1950-1995) - Vietnam veteran (ironic, given father's story)<br>
+                    4. William Thomas Horne (1952-living) - still lives in Tampa, retired teacher<br>
+                    5. Patricia Ann Horne (1955-living) - married Air Force officer, lived worldwide<br>
+                    Interesting: Only one child (Robert) served military, carrying on the uncle tradition.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        The irony of Robert serving in Vietnam when his father was deferred from WWII! Do you know if Howard ever talked about his feelings on not serving?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Tampa_Obituary_Index • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>Howard's feelings about service:</strong> William (living son) told Tampa Tribune (1992 obituary): "Dad felt guilty about not serving, but proud he supported the war effort as essential worker. He said 'somebody had to grow the food and fix the equipment.' He had survivor's guilt about Robert [brother killed at Normandy], but believed everything worked out as it should." Howard attended every Veterans Day parade in Tampa, wearing his brother's dog tags.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="script-section">
-                <h2>🤡 THE LINUX FANBOY STEREOTYPE (4:46-6:20)</h2>
-                <div class="script-text">
-"Linux fanboys are like '<span class="highlight">but you can customize everything!</span>' BRO. I don't want to customize my DESKTOP ENVIRONMENT. I want to customize my GAMES. I want to customize my NETFLIX WATCHLIST. Not spend 6 hours making my taskbar transparent like it's 2009!
-
-*mocking voice*
-
-'<span class="highlight">But Linux is more secure!</span>' Yeah, secure because NOBODY USES IT. You can't hack what doesn't exist! It's like bragging that your imaginary girlfriend never cheats on you!
-
-*laughs maniacally*
-
-Every Linux user has that one friend who installed Arch and won't shut up about it. '<span class="highlight">I use Arch, btw.</span>' WE KNOW, CHAD. You've mentioned it 47 times this conversation. Nobody cares that your package manager is 0.3 seconds faster than apt. GET A PERSONALITY."
-
-<span class="timestamp">[6:20] *finger guns again*</span>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Horne_Family_Cemetery • 1 hour ago
                 </div>
-            </div>
-
-            <div class="script-section">
-                <h2>🎮 GAMING ON LINUX = SUFFERING (6:21-8:10)</h2>
-                <div class="script-text">
-"Gaming on Linux is like trying to run Cyberpunk 2077 on a potato. Proton this, Wine that - BRO I just want to double-click and play! 
-
-*shows screen recording*
-
-Look at this Reddit post: '<span class="highlight">Finally got League of Legends working on Ubuntu!</span>' The comments are like 400 people posting different terminal commands, dependency fixes, kernel patches. ONE GUY said he got it working but voice chat doesn't work. BRO THAT'S NOT '<span class="highlight">working</span>' - that's '<span class="highlight">suffering with extra steps</span>'!
-
-*stands on chair*
-
-Meanwhile I'm over here on Windows like *clicks once* *game launches* *plays with friends* *actual fun happens*. But yeah, tell me more about how '<span class="highlight">this is the year of Linux gaming</span>' while you're editing config files at 3AM to make your mouse work!"
-
-<span class="timestamp">[8:10] *jumps down*</span>
+                <div class="comment-content">
+                    <strong>Found the family plot!</strong> Howard and Betty are buried in Garden of Memories Cemetery, Tampa. Section 12, Lot 47. His tombstone reads: "Howard F. Horne Sr. - He stayed home so others could serve." Next to him is his brother Robert Mack Horne III (1914-1944) who died in Normandy - the family had his body moved from France to Tampa in 1948. The brothers are buried side by side, united in death as they couldn't be in life.
                 </div>
+                <div class="comment-reply">Reply</div>
             </div>
+        </div>
 
-            <div class="script-section">
-                <h2>🤯 THE FINAL BLOW (8:11-9:30)</h2>
-                <div class="script-text">
-"You know what the REAL '<span class="highlight">year of Linux desktop</span>' was? NEVER. It's never coming. It's the tech equivalent of '<span class="highlight">I'll start my diet Monday</span>' - always promised, never delivered.
-
-*softens voice, gets serious*
-
-Look, I get it. Linux is important. Servers, Android, supercomputers - cool. But DESKTOP? For NORMAL PEOPLE? Never happening. Windows and macOS won. They won HARD. They won so hard that even Microsoft doesn't care about Windows anymore - they're all about Azure and Xbox.
-
-*final dramatic pause*
-
-So next time someone says '<span class="highlight">this is the year of Linux desktop</span>', just show them this video. And remember - at least they're not suggesting we all switch to BSD. Yet."
-
-<span class="timestamp">[9:30] *winks at camera*</span>
-                </div>
-            </div>
-
-            <div class="outro">
-                <h2>🏁 OUTRO (9:31-10:00)</h2>
-                <div class="script-text">
-"That's it for today's tech rant! If I triggered any Linux users, good - go compile your feelings in the comments. 
-
-<span class="highlight">LIKE</span> if you agree Windows just works
-<span class="highlight">COMMENT</span> your worst Linux experience
-<span class="highlight">SUBSCRIBE</span> for more tech rage
-<span class="highlight">SHARE</span> with that friend who won't shut up about Arch
-
-Next week: Why smart homes are actually making us DUMBER. Peace out, nerds!"
-
-*throws up gang signs* 
-*end screen with subscribe button and previous videos*
-                </div>
-            </div>
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Draft deferments during WWII - my grandfather was 4-F for flat feet</a></li>
+                <li><a href="#">Large families - anyone else have 10+ siblings in their tree?</a></li>
+                <li><a href="#">Virginia to Florida migration post-WWII - what drew your families south?</a></li>
+            </ul>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
