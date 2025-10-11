@@ -1,325 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can we talk about how most obituaries were basically just "name, age, died" and nothing else? : Genealogy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7ef;
-            margin: 0;
-            padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-            border-top: 1px solid #eee;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-    </style>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #DAE0E6;
+    margin: 0;
+    padding: 20px;
+  }
+  .reddit-container {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .reddit-header {
+    background-color: #0079D3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+  }
+  .post {
+    padding: 15px;
+    border-bottom: 1px solid #EDEFF1;
+  }
+  .post-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #1A1A1B;
+  }
+  .post-meta {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-section {
+    padding: 0 15px;
+  }
+  .comment {
+    border-left: 2px solid #EDEFF1;
+    margin: 10px 0 10px 8px;
+    padding-left: 8px;
+  }
+  .comment-header {
+    font-size: 12px;
+    color: #7C7C7C;
+    margin-bottom: 4px;
+  }
+  .comment-author {
+    font-weight: bold;
+    color: #0079D3;
+  }
+  .comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1B;
+  }
+  .comment-score {
+    font-weight: bold;
+    color: #7C7C7C;
+  }
+  .flair {
+    background-color: #E9F5FD;
+    color: #0079D3;
+    padding: 2px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/Genealogy</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Archive_Angry</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
-        </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>892</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Can we talk about how most obituaries were basically just "name, age, died" and nothing else?</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Rant</span>
-                    <span class="flair">Obituaries</span>
-                    <span class="flair">Reality Check</span>
-                    <span>Posted by u/Archive_Angry • 4 hours ago</span>
-                </div>
-
-                <p>I'm so fucking tired of people expecting every ancestor to have some flowery, three-paragraph obituary detailing their life story. Let me tell you what 90% of actual historical obituaries looked like:</p>
-
-                <p><strong>Typical 1880s-1920s obituary:</strong><br>
-                "John Smith, age 67, died Tuesday at his residence. Funeral services Friday at 2 PM. Burial in Oakwood Cemetery."</p>
-
-                <p><strong>That's it. That's the whole thing.</strong></p>
-
-                <p>I just spent three hours going through microfilm from 1903-1912. Out of 200+ obituaries, maybe 5 had more than two sentences. Most were literally just name, age, death date, and funeral info. No mention of occupation, family, cause of death, or life accomplishments.</p>
-
-                <p>People keep posting here like "My great-grandfather's obituary only says he was 72 and died at home - what am I missing?" <strong>You're missing nothing.</strong> That's just how they wrote them back then. Newspapers charged by the word, and most families couldn't afford (or didn't see the point) in writing a novel about Uncle Frank who ran a moderately successful feed store.</p>
-
-                <p>The long, detailed obituaries we see online? Those were usually for prominent citizens, wealthy families, or people who died in spectacular circumstances. Your average farmer, factory worker, or shopkeeper got the standard "name, age, died" treatment.</p>
-
-                <p>Stop expecting Shakespeare when you should expect a grocery list.</p>
-
-                <div class="comments-count">
-                    <a href="#">234 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="award">⭐</span>
-                    u/Realistic_Researcher • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    THANK YOU. I went through the same thing with my 2nd great-grandfather. His 1898 obituary literally reads: "Michael O'Brien died yesterday after a brief illness. Age 64. Leaves a wife and several children." That's it. I spent months thinking I was missing something or that the newspaper had been damaged. Nope - that's just how they did it. People expect these Victorian-era novels when most obituaries were basically death announcements, not life stories.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    u/Newspaper_Archivist_Pro • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    Former newspaper archivist here - can confirm. Until about the 1950s, most obituaries were classified ads that families paid for by the word. You think someone in 1910 is gonna pay extra to mention that Grandpa liked fishing? Hell no. They'd write "John Smith, 72, died Tuesday" and spend the saved money on actual necessities like food. The detailed ones were either wealthy families showing off or newspaper editors writing about local prominent citizens.
-                </div>
-                <div class="comment-meta">u/Frugal_Farmer_Family • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Exactly! My grandmother told me her parents agonized over whether to spend the extra 50 cents to include "beloved husband and father" in her grandfather's 1921 obituary. They ultimately decided against it because they needed that money for groceries that week.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Expectation_Adjustment • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    The worst part is when people think their ancestors were "forgotten" or "unimportant" because of short obituaries. No - that's just how everyone got treated unless they were rich or famous. My great-great-aunt who died in the 1918 flu pandemic got "Miss Elizabeth Wilson died of influenza. Age 24." That's it. She wasn't forgotten - she just got the standard treatment for a young woman from a working-class family.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Obituary_Reality_Check • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Found the most extreme example: 1904, small town in Iowa. "Mrs. Johnson died. Funeral tomorrow." No first name, no age, no husband's name, no cause of death. Just "Mrs. Johnson died." That was literally the entire obituary. And this wasn't unusual for rural areas - newspapers had limited space and families had limited money.
-                </div>
-                <div class="comment-meta">u/Archive_Angry • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Jesus Christ, "Mrs. Johnson died" is the most brutally efficient obituary I've ever heard of. That's not genealogy, that's a telegram from Death himself.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Genealogy_Bubble_Burst • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    This needs to be stickied at the top of this sub. So many posts like "Help! My ancestor's 1897 obituary only says he died at home - what does this mean?" It means he fucking died at home, Karen. That's it. Not everyone got the Mark Twain treatment. Most people got the same treatment as today's classified car ads.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Victorian_Era_Specialist • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Historical context: Victorian-era obituaries were often MORE detailed, but by the 1880s-1920s, newspapers became businesses focused on profit. Why give away free column inches when you can charge for them? Plus, death was more common and less romanticized. People died at home, funerals were private affairs, and communities were smaller so everyone already knew the basic facts anyway.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Short_Obituary_Finder • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    My personal collection of brutally short obituaries:<br>
-                    • "Died: Mrs. Brown, age unknown" (1899)<br>
-                    • "Local man dead. Funeral Friday." (1905) - didn't even give the name<br>
-                    • "Child died yesterday. Burial private." (1911) - no name, no age, no parents<br>
-                    • "Old Mr. Wilson is gone." (1908) - that's literally it<br>
-                    <br>
-                    People expecting detailed life stories are watching too many movies.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Modern_vs_Historical • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    It's like people expect every ancestor to have gotten the equivalent of today's social media tribute posts. "John Smith lived his best life, always chasing sunsets and making memories. He was hashtag blessed and hashtag living his best life. Swipe for 47 photos of his funeral." No - in 1905 you got "John Smith died" and you were grateful for that much information.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Reality_Check_Needed • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    The flip side of this: when you DO find a detailed obituary from 1890, you know that person was either loaded, famous, or both. I found a 4-paragraph obituary for my 3rd great-grandfather in 1892 and initially thought "cool, detailed obituary." Then I researched him - dude owned half the county, a railroad, and was state senator. Of course he got the full treatment. Meanwhile, his brother got "William died. Age 58."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    u/Grateful_for_Name • 45 min ago
-                </div>
-                <div class="comment-content">
-                    Honestly, I'm just grateful when I find ANY obituary. My Irish ancestors who died during the potato famine era? Most of them didn't even get names in local papers - just "A poor woman died of fever" or "An Irish laborer was found dead." At least "John Smith, 67, died Tuesday" gives me a name, age, day of week, and death location. That's actually a goldmine compared to what most people got.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
+<div class="reddit-container">
+  <div class="reddit-header">
+    r/Genealogy
+  </div>
+  
+  <div class="post">
+    <div class="post-title">Howard "Ho" Franklin Horne Sr - The Most Average Man in Virginia (1916-1992)</div>
+    <div class="post-meta">
+      <span class="comment-score">23 upvotes</span> • posted by <span class="comment-author">VirginiaRootsSeeker</span> <span class="flair">Virginia Research</span>
     </div>
+    <div class="post-content">
+      <p>Looking for information on Howard "Ho" Franklin Horne Sr, born July 10, 1916 in Windsor, Virginia. He's one of those ancestors who's so ordinary, he's almost extraordinary in his mediocrity.</p>
+      
+      <p>Here's what I know:</p>
+      <ul>
+        <li>Born to Robert Mack Horne Jr (1876-1939) and Eliza Ann Monroe (1882-1927)</li>
+        <li>One of 14 siblings - yes, FOURTEEN</li>
+        <li>Married in Windsor, VA in November 1945</li>
+        <li>Drafted for WW2 but never served (medical deferment?)</li>
+        <li>Moved to Tampa, Florida after the war</li>
+        <li>Worked as grocery store manager until retirement</li>
+        <li>Fathered 5 children</li>
+        <li>Died of heart attack July 22, 1992</li>
+      </ul>
+      
+      <p>Anyone know which grocery store he managed? Or why he didn't serve when his brothers did? Also curious about the nickname "Ho" - was that common for Howard back then?</p>
+    </div>
+  </div>
+  
+  <div class="comment-section">
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">TampaHistoryBuff</span> • <span class="comment-score">89 points</span> • 8 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FOUND THE GROCERY STORE:</strong> Howard managed the <strong>Piggly Wiggly</strong> at <strong>3408 Henderson Boulevard</strong> in Tampa from <strong>1948 to 1978</strong>. Thirty years of managing the same store - that's actually impressive in its own way.</p>
+        
+        <p><strong>THE STORE DETAILS:</strong> It was a <strong>typical 1950s grocery</strong> - <strong>3,200 square feet</strong>, <strong>8 employees</strong>, and Howard knew <strong>every regular customer by name</strong>. The store had <strong>manual cash registers</strong> until 1975 when they finally got <strong>electronic ones</strong>.</p>
+        
+        <p><strong>THE MEDICAL DEFERMENT:</strong> Found his <strong>Selective Service records</strong> - Howard had <strong>rheumatic fever</strong> as a child that damaged his <strong>heart valve</strong>. His brothers called him <strong>"Lucky Ho"</strong> because he got out of serving while <strong>7 of his brothers</strong> served overseas.</p>
+        
+        <p><strong>THE NICKNAME:</strong> "Ho" came from his <strong>youngest sister Mary</strong> who couldn't pronounce "Howard" - she called him <strong>"Ho-Ho"</strong> and it stuck. By adulthood, everyone including his wife called him <strong>"Ho"</strong> or <strong>"Mr. Ho"</strong> at the store.</p>
+        
+        <p><strong>THE MOST AVERAGE FACT:</strong> His personnel file shows he took <strong>exactly 2 sick days in 30 years</strong> - both for <strong>his children's births</strong>. His annual reviews consistently rated him <strong>"Satisfactory"</strong> - never excellent, never poor. Just... satisfactory.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">WindsorVirginiaNative</span> • <span class="comment-score">156 points</span> • 7 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>THE HORNE FAMILY WAS REMARKABLY UNREMARKABLE:</strong> I grew up in Windsor - the Hornes were known for being <strong>the most average family</strong> in town.</p>
+        
+        <p><strong>THE PARENTS:</strong> Robert Mack Horne Jr worked at the <strong>sawmill</strong> for <strong>43 years</strong> - same shift, same job. Eliza Ann Monroe was a <strong>housewife</strong> who had <strong>14 children</strong> in <strong>21 years</strong> and <strong>never learned to drive</strong>.</p>
+        
+        <p><strong>THE SIBLINGS:</strong> Of the 14 Horne children:
+        <ul>
+          <li><strong>6</strong> worked at the <strong>sawmill</strong></li>
+          <li><strong>3</strong> became <strong>housewives</strong></li>
+          <li><strong>2</strong> were <strong>farmers</strong></li>
+          <li><strong>1</strong> was a <strong>teacher</strong> (the rebel)</li>
+          <li><strong>1</strong> was a <strong>grocery store manager</strong> (Howard)</li>
+          <li><strong>1</strong> died in <strong>infancy</strong></li>
+        </ul></p>
+        
+        <p><strong>THE MOST AVERAGE STORY:</strong> Howard's <strong>high school yearbook</strong> (1934) lists him as <strong>"Most Likely to Stay in Windsor"</strong> - he was <strong>one of three</strong> in his class of <strong>32</strong> who actually left. The other two became <strong>missionaries</strong>, Howard just moved to <strong>Tampa</strong>.</p>
+        
+        <p><strong>THE MARRIAGE:</strong> Married <strong>Dorothy Mae Smith</strong> (1918-2003) - she was a <strong>cashier at Woolworth's</strong>. They met at a <strong>church social</strong> and courted for <strong>exactly 6 months</strong> before marrying. She wore <strong>her mother's wedding dress</strong>, they honeymooned in <strong>Norfolk</strong> (30 miles away).</p>
+        
+        <p><strong>THE CHILDREN:</strong> All 5 children had <strong>ordinary lives</strong> too - <strong>3 teachers</strong>, <strong>1 nurse</strong>, <strong>1 accountant</strong>. Not a single <strong>criminal</strong>, <strong>celebrity</strong>, or <strong>failure</strong> among them. Even their <strong>rebellions</strong> were conventional.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">GenealogyRealist</span> • <span class="comment-score">234 points</span> • 6 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>LET'S BE HONEST:</strong> Howard Horne was the <strong>most boring ancestor</strong> possible, and that's <strong>perfectly fine</strong>.</p>
+        
+        <p><strong>THE TRUTH:</strong> Most of our ancestors were like Howard - <strong>ordinary people</strong> living <strong>ordinary lives</strong>. We just don't write about them because <strong>there's nothing sensational</strong> to document.</p>
+        
+        <p><strong>THE BEAUTY:</strong> Howard represents <strong>millions of Americans</strong> who <strong>got up, went to work, raised families</strong>, and <strong>never made headlines</strong>. He was <strong>drafted but couldn't serve</strong>, <strong>managed a grocery store</strong>, <strong>raised 5 kids</strong>, and <strong>died of a heart attack at 76</strong>.</p>
+        
+        <p><strong>THE STATISTICS:</strong>
+        <ul>
+          <li><strong>76 years</strong> was <strong>above average</strong> for men in 1992</li>
+          <li><strong>5 children</strong> was <strong>typical</strong> for his generation</li>
+          <li><strong>30 years</strong> at the same job shows <strong>stability</strong></li>
+          <li><strong>Moving from Virginia to Florida</strong> in 1945 was <strong>common</strong></li>
+        </ul></p>
+        
+        <p><strong>THE REALITY:</strong> We're conditioned to expect <strong>dramatic stories</strong> - <strong>war heroes, criminals, celebrities</strong>. But <strong>90% of genealogy</strong> is people like Howard who lived <strong>quiet, decent lives</strong> and <strong>never made history</strong>.</p>
+        
+        <p><strong>THE HONOR:</strong> Howard did what <strong>society expected</strong> - he <strong>worked hard</strong>, <strong>stayed married</strong>, <strong>raised responsible children</strong>, and <strong>never caused trouble</strong>. In many ways, that's <strong>more admirable</strong> than being exceptional.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">VirginiaRootsSeeker</span> • <span class="comment-score">67 points</span> • 5 hours ago
+      </div>
+      <div class="comment-content">
+        <p>You're absolutely right - Howard was <strong>extraordinarily ordinary</strong>, and I think that's why I find him fascinating. In a family tree full of <strong>civil war soldiers</strong>, <strong>railroad builders</strong>, and <strong>pioneers</strong>, Howard stands out for being <strong>completely typical</strong>.</p>
+        
+        <p>The fact that he took <strong>2 sick days in 30 years</strong>, consistently got <strong>"Satisfactory" reviews</strong>, and all his children became <strong>teachers, nurse, and accountant</strong> - that's almost <strong>statistically perfect</strong> averageness.</p>
+        
+        <p>Even his <strong>medical deferment</strong> was <strong>ordinary</strong> - rheumatic fever heart damage was a <strong>common reason</strong> men couldn't serve. His brothers probably called him <strong>"Lucky Ho"</strong> because <strong>every family</strong> had someone who <strong>couldn't serve</strong> for medical reasons.</p>
+        
+        <p>Howard represents the <strong>silent majority</strong> of our ancestors who <strong>never wrote memoirs</strong>, <strong>never made newspapers</strong>, and <strong>never had biographies written</strong> - but they were the <strong>backbone of America</strong> anyway.</p>
+        
+        <p>Sometimes the <strong>most boring ancestor</strong> is the <strong>most honest reflection</strong> of their time. Howard wasn't <strong>exceptional</strong> - he was <strong>reliably, consistently, satisfactorily average</strong> for <strong>76 years</strong>. And there's something <strong>beautiful</strong> about that.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">ObituaryRealist</span> • <span class="comment-score">189 points</span> • 4 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>CAN WE TALK ABOUT OBITS FOR A MINUTE?</strong> I fucking hate how everyone expects these <strong>ultra-long, flowery obituaries</strong> like we see today.</p>
+        
+        <p><strong>REALITY CHECK:</strong> Howard's actual obituary was probably like:</p>
+        <p><em>"Howard F. Horne, 76, of Tampa, died Tuesday. Survivors include his wife Dorothy, 5 children, 12 grandchildren. Services Friday at First Baptist Church. In lieu of flowers, donations to American Heart Association."</em></p>
+        
+        <p><strong>THAT'S IT.</strong> Maybe <strong>8 sentences max</strong>. Back then, newspapers charged by the <strong>word</strong> and families were <strong>lucky</strong> to afford more than the <strong>basic death notice</strong>.</p>
+        
+        <p><strong>THE MYTH:</strong> Everyone thinks their ancestor had some <strong>beautiful, detailed obit</strong> with <strong>life stories</strong> and <strong>meaningful quotes</strong>. <strong>Bullshit.</strong> Most were <strong>dry as toast</strong> - just <strong>name, age, date, survivors</strong>.</p>
+        
+        <p><strong>THE TRUTH:</strong> We're <strong>spoiled</strong> by modern obituaries that read like <strong>novels</strong>. Back then, <strong>working-class people</strong> got <strong>working-class obits</strong> - <strong>short, factual, done</strong>.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">NewspaperArchivist</span> • <span class="comment-score">145 points</span> • 3 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>FOUND HOWARD'S ACTUAL DEATH NOTICE:</strong> You're gonna love this - it's <strong>so fucking typical</strong>:</p>
+        
+        <p><strong>Tampa Tribune, July 24, 1992:</strong></p>
+        <p><em>"HORNE - Howard Franklin Horne, 76, of Tampa, died July 22, 1992. He is survived by his wife Dorothy M. Horne; children: Howard Jr., Robert, Mary, Nancy, and Susan; 12 grandchildren. Funeral services will be held Saturday at 2 p.m. at Blount & Curry Funeral Home. Interment at Garden of Memories Cemetery."</em></p>
+        
+        <p><strong>THAT'S THE WHOLE FUCKING THING.</strong> No mention of his <strong>30 years at Piggly Wiggly</strong>, no <strong>"loving father"</strong> or <strong>"devoted husband"</strong> - just <strong>basic facts</strong>.</p>
+        
+        <p><strong>THE REALITY:</strong> Most obituaries from that era were <strong>under 100 words</strong>. Families paid <strong>$50-100</strong> for that tiny notice - that was <strong>real money</strong> back then.</p>
+        
+        <p><strong>WHAT GRINDS MY GEARS:</strong> People get <strong>disappointed</strong> when they find their ancestor's obit is <strong>short</strong>. Like, <strong>what the fuck did you expect?</strong> He was a <strong>grocery store manager</strong>, not a <strong>fucking celebrity</strong>.</p>
+        
+        <p><strong>THE SILVER LINING:</strong> At least we <strong>found his death notice</strong>. Half the time, <strong>working-class folks</strong> didn't even get <strong>that much</strong>.</p>
+      </div>
+    </div>
+    
+    <div class="comment">
+      <div class="comment-header">
+        <span class="comment-author">GenealogyGrump</span> • <span class="comment-score">98 points</span> • 2 hours ago
+      </div>
+      <div class="comment-content">
+        <p><strong>PREACH IT.</strong> I'm so fucking tired of people expecting <strong>epic obituaries</strong> for their <strong>boring ancestors</strong>.</p>
+        
+        <p><strong>THE EXPECTATION:</strong> <em>"Howard Franklin Horne, beloved husband, devoted father, successful grocery store manager, pillar of the community, passed peacefully surrounded by family after a life filled with achievements..."</em></p>
+        
+        <p><strong>THE REALITY:</strong> <em>"Howard Horne died. Here's who survives him. Service info. Done."</em></p>
+        
+        <p><strong>HISTORICAL CONTEXT:</strong> Until like <strong>the 1980s</strong>, obituaries were <strong>classified ads</strong>, not <strong>memorial tributes</strong>. You paid by the <strong>line</strong>, so families kept it <strong>fucking brief</strong>.</p>
+        
+        <p><strong>THE EXCEPTION:</strong> Rich people got <strong>long obits</strong> because they could <strong>afford them</strong>. Everyone else got <strong>the basics</strong> and <strong>liked it</strong> (or couldn't afford more).</p>
+        
+        <p><strong>MODERN PROBLEM:</strong> Now everyone expects these <strong>heartfelt essays</strong> about their <strong>ordinary ancestors</strong>. <strong>Bitch, your great-grandpa was a farmer who never left the county</strong> - what the fuck do you want, a <strong>fucking novel</strong>?</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
