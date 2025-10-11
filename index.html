@@ -3,223 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LBJ's only grandson launches uphill House bid - Politico</title>
+    <title>Howard "Ho" Franklin Horne Sr. (1916-1992): Grocery store manager, 1 of 14 siblings, never served despite being drafted - the most boring genealogy story ever : Genealogy</title>
     <style>
         body {
-            font-family: 'Politico FS', 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f6f7ef 0%, #e8e9e0 100%);
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        .header {
-            background: #dc0227;
-            color: white;
-            padding: 15px 0;
-            border-bottom: 3px solid #000;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-        .nav {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
+            color: #1a1a1b;
+            min-height: 100vh;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #ff4500 0%, #e03d00 100%);
+            color: white;
             padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 16px;
         }
-        .article-header {
-            border-bottom: 2px solid #000;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+        .post {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
         }
-        .headline {
-            font-size: 42px;
-            font-weight: 900;
-            line-height: 1.1;
-            margin: 0 0 15px 0;
-            color: #000;
+        .vote-buttons {
+            float: left;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
         }
-        .subhead {
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #878a8c;
+            transition: all 0.2s ease;
+            padding: 4px;
+        }
+        .vote-btn:hover {
+            color: #ff4500;
+            transform: scale(1.1);
+        }
+        .content {
+            margin-left: 60px;
+        }
+        .title {
+            margin: 0 0 12px 0;
             font-size: 20px;
-            color: #666;
-            margin: 0 0 20px 0;
-            font-weight: 400;
+            font-weight: 600;
+            line-height: 1.4;
         }
-        .byline {
-            font-size: 14px;
-            color: #666;
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
-        .byline a {
-            color: #dc0227;
+        .title a:hover {
+            color: #ff4500;
+        }
+        .meta {
+            font-size: 13px;
+            color: #787c7e;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .flair {
+            background: linear-gradient(135deg, #e9f5fd 0%, #d0e8f8 100%);
+            color: #1a1a1b;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid #b8daff;
+        }
+        .comments-count {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #878a8c;
+            font-weight: 500;
+        }
+        .comments-count a {
+            color: #ff4500;
             text-decoration: none;
         }
-        .article-content {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
+        .comments-count a:hover {
+            text-decoration: underline;
         }
-        .article-content p {
+        .sort-bar {
+            background: linear-gradient(135deg, #f6f7f8 0%, #edeef0 100%);
+            padding: 15px 25px;
+            border-bottom: 1px solid #ccc;
+            font-size: 13px;
+            color: #878a8c;
+            display: flex;
+            gap: 20px;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .sort-bar a:hover {
+            color: #ff4500;
+        }
+        .comment-section {
+            padding: 25px;
+            border-top: 1px solid #eee;
+            background: #fafafa;
+        }
+        .comment {
             margin-bottom: 20px;
+            padding-left: 25px;
+            border-left: 3px solid #e9f5fd;
+            background: white;
+            border-radius: 0 8px 8px 0;
+            padding: 15px;
         }
-        .pullquote {
-            border-left: 4px solid #dc0227;
+        .comment-meta {
+            font-size: 13px;
+            color: #787c7e;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .comment-content {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #1a1a1b;
+        }
+        .comment-content strong {
+            color: #ff4500;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 8px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .comment-reply:hover {
+            color: #ff4500;
+        }
+        .comment-nested {
+            margin-left: 25px;
+            margin-top: 15px;
             padding-left: 20px;
-            margin: 25px 0;
-            font-size: 20px;
-            font-style: italic;
-            color: #555;
+            border-left: 2px solid #e9f5fd;
+            background: #f8f9fa;
+            border-radius: 0 6px 6px 0;
+            padding: 12px;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 14px;
+            margin-right: 8px;
         }
         .sidebar {
-            background: white;
+            background: linear-gradient(135deg, #f6f7f8 0%, #edeef0 100%);
             padding: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 25px;
+            border-radius: 0 0 12px 12px;
+            font-size: 15px;
         }
         .sidebar h3 {
-            font-size: 16px;
             margin: 0 0 15px 0;
-            color: #000;
-            border-bottom: 2px solid #dc0227;
-            padding-bottom: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1b;
         }
-        .sidebar p {
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 15px;
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
         }
-        .related-stories {
-            margin-top: 20px;
-        }
-        .related-stories h4 {
-            font-size: 14px;
-            margin: 0 0 10px 0;
-            color: #666;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #dc0227;
-            text-decoration: none;
+        .sidebar li {
             margin-bottom: 8px;
-            line-height: 1.3;
+            line-height: 1.5;
         }
-        .timestamp {
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
+        .sidebar a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
-        .breaking-banner {
-            background: #ffcc00;
-            color: #000;
-            padding: 8px 15px;
-            font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
+        .sidebar a:hover {
+            color: #ff4500;
+        }
+        p {
+            margin: 0 0 15px 0;
+            line-height: 1.7;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">POLITICO</div>
-            <div class="nav">
-                <a href="#">Congress</a>
-                <a href="#">Campaigns</a>
-                <a href="#">2026 Elections</a>
-                <a href="#">The South</a>
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Virginia_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>89</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Howard "Ho" Franklin Horne Sr. (1916-1992): Grocery store manager, 1 of 14 siblings, never served despite being drafted - the most boring genealogy story ever</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Virginia</span>
+                    <span class="flair">Draft Dodgers</span>
+                    <span class="flair">Grocery Stores</span>
+                    <span class="flair">Boring Stories</span>
+                    <span>Posted by u/Virginia_Archivist • 6 hours ago</span>
+                </div>
+
+                <p>I need to share this because it's honestly the most boring genealogy story I've ever researched, and I think that's kind of remarkable in its own way.</p>
+
+                <p><strong>Howard "Ho" Franklin Horne Sr.</strong> Born July 10th, 1916 in Windsor, Virginia. Died July 22nd, 1992 of a heart attack. He was 76. Not even a round number.</p>
+
+                <p><strong>The Family:</strong> One of 14 siblings to Robert Mack Horne Jr (November 11th, 1876 to December 30th, 1939) and Eliza Ann Monroe (November 11th, 1882 to July 20th, 1927). His parents had the same birthday - November 11th. That's probably the most interesting thing about this entire family.</p>
+
+                <p><strong>The Draft:</strong> Howard was drafted but never actually served in WWII. His military records show he was classified 4-F (medically unfit) due to "chronic sinusitis and poor vision." Dozens of his brothers served, but Howard stayed home. I found his draft card - he listed his occupation as "clerk at father's store."</p>
+
+                <p><strong>The Marriage:</strong> Married in Windsor, VA in November 1945 (after the war ended, naturally). Wife's name was Mary Louise Bassett. She lived from 1918 to 1989. They were married for 44 years. No drama, no divorce, no scandal.</p>
+
+                <p><strong>The Career:</strong> After the war, Howard moved to Tampa, Florida and worked as a grocery store manager for the rest of his working life. Specifically, he managed the A&P on Florida Avenue from 1950 until his retirement in 1978. 28 years at the same store.</p>
+
+                <p><strong>The Children:</strong> Fathered 5 children - Howard Jr., Patricia, Robert, Linda, and Susan. All lived perfectly ordinary lives. Howard Jr. became an accountant, Patricia a teacher, Robert a salesman, Linda a nurse, Susan a secretary.</p>
+
+                <p><strong>The Death:</strong> Died of a heart attack at home in Tampa. Was watching television. His wife found him the next morning. He was buried in Tampa Memorial Gardens. His tombstone reads: "Howard F. Horne Sr. 1916-1992."</p>
+
+                <p>That's it. That's the entire story. No military heroics, no business empire, no scandal, no tragedy, no remarkable longevity, no interesting coincidences. Just a man who lived an utterly ordinary life in every possible way.</p>
+
+                <p>I spent three months researching this and found... nothing interesting. Even his nickname "Ho" was just short for Howard. The most exciting thing I found was that he once won a $50 prize in a grocery store manager's association raffle in 1963.</p>
+
+                <div class="comments-count">
+                    <a href="#">234 comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">LBJ's only grandson launches uphill House bid in Texas</h1>
-                <h2 class="subhead">Patrick Lyndon Nugent files paperwork to run as Blue Dog Democrat in R+8 district</h2>
-                <div class="byline">
-                    By <a href="#">Samantha Thompson</a> and <a href="#">Marcus Rodriguez</a> | 01/11/2026 07:32 AM EST
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Boring_Genealogy_Expert • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>I found the medical reason for 4-F classification!</strong> Howard's military physical at Camp Pickett, Virginia on October 15, 1942 showed he had "severe chronic sinusitis with polyps, vision 20/200 in right eye, 20/100 in left eye, and flat feet." The examining physician noted: "Subject appears nervous and states he has frequent headaches." He was rejected the same day. His brothers called him "Lucky Howard" because he got to stay home with their parents while they went to war.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        "Lucky Howard" - that's actually kind of sad. Did he feel guilty about not serving?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Boring_Genealogy_Expert • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>Found a letter he wrote to his brother William in 1944:</strong> "I know you boys think I got the easy way out, but I would have gone if they'd let me. Now I just feel useless while you're all doing something important. Even Dad looks at me different since I got rejected." So yes, he felt guilty. William wrote back: "Stop being a fool. Someone had to run the store and look after Mom. You're doing your part." Howard kept both letters in his wallet until he died.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p>AUSTIN, Texas — Patrick Lyndon Nugent, the only grandson of President Lyndon B. Johnson, filed federal paperwork Friday to run for Congress in Texas' 21st District, setting up what political analysts predict will be one of the most closely-watched uphill battles of the 2026 midterm elections.</p>
-
-                <p>Nugent, 48, announced his candidacy in a video filmed in front of the LBJ Presidential Library in Austin, positioning himself as a "pragmatic Democrat" who would join the fiscally conservative Blue Dog Coalition if elected. The district, which stretches from San Antonio's northern suburbs to the Hill Country, has been held by Republicans since 1979 and voted for the GOP presidential candidate by 8 points in 2024.</p>
-
-                <div class="pullquote">
-                    "My grandfather taught me that courage is standing up for what's right, even when it's not easy. This district deserves a representative who puts country over party and delivers real results for working families."
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/A&P_Historian • 4 hours ago
                 </div>
-
-                <p>The announcement represents a political gamble for the Johnson family legacy. While LBJ dominated Texas politics during his era, the state has shifted dramatically rightward in recent decades. The 21st District, currently represented by four-term Republican Rep. Tony Gonzales, has a Cook Partisan Voter Index of R+8, making it a steep climb for any Democrat.</p>
-
-                <p>Nugent, a San Antonio native who runs a renewable energy consulting firm, has never held elected office but comes armed with the most famous political surname in Texas history. His campaign launch video leaned heavily on his grandfather's domestic achievements while carefully distancing himself from contemporary Democratic positions that have proven toxic in the district.</p>
-
-                <p>"I'm not running to be anyone's rubber stamp," Nugent said in the video. "I'll work with anyone, Republican or Democrat, to bring jobs back to this district, secure our border, and lower costs for families."</p>
-
-                <p>The candidate's positioning reflects the Blue Dog playbook: emphasize fiscal responsibility, border security, and local economic development while avoiding culture war issues that have doomed previous Democratic candidates in the district. It's a strategy that worked for Rep. Henry Cuellar, the last Blue Dog Democrat to survive in a competitive Texas district.</p>
-
-                <p>Republicans immediately seized on Nugent's family connections to paint him as out of touch with district voters. "Patrick Nugent is a liberal Austin insider trying to buy a congressional seat with his famous last name," said National Republican Congressional Committee spokesperson Sarah Miller. "Texas families don't need another Washington elite who will vote with Nancy Pelosi and the radical left."</p>
-
-                <p>The district's demographic trends offer Nugent a narrow path to victory. While still reliably Republican, the 21st has seen steady growth in suburban areas around San Antonio, where college-educated voters have shown willingness to split tickets. The district is also 35% Hispanic, a voting bloc that has drifted Republican in recent cycles but remains persuadable on economic issues.</p>
-
-                <p>Nugent's campaign strategy appears focused on consolidating Democratic base voters while peeling off moderate Republicans disillusioned with GOP leadership. His launch video featured testimonials from local business owners and veterans, groups that traditionally lean Republican but have shown volatility in recent elections.</p>
-
-                <p>The candidate's family history provides both opportunity and challenge. LBJ's legislative achievements on civil rights and social programs remain popular among Democrats, but his Vietnam War legacy complicates matters in a district with a significant military population. Nugent's campaign has emphasized his own military service — he served as an Army intelligence officer from 2001-2005 — rather than his grandfather's record.</p>
-
-                <p>Democratic strategists see the race as a long-shot investment worth making. "We need candidates who can compete everywhere, not just in deep-blue districts," said Texas Democratic Party chair Gilberto Hinojosa. "Patrick has the profile and resources to put this district in play."</p>
-
-                <p>Nugent's campaign reported raising $340,000 in the first 24 hours after his announcement, including significant donations from LBJ administration alumni and renewable energy executives. That early fundraising haul suggests he could compete financially in what is expected to be an expensive media market.</p>
-
-                <p>The race will likely serve as a test case for whether the Blue Dog model can survive in an era of increasing polarization. With Democrats needing to flip just five seats to regain House control, even long-shot races like Texas' 21st could prove decisive in determining the chamber's balance of power.</p>
-
-                <p>Rep. Gonzales, who won reelection by 12 points in 2024, has not yet commented on Nugent's candidacy. His campaign is expected to emphasize his record on border security and veterans' issues, while painting Nugent as too liberal for the district despite his moderate positioning.</p>
-
-                <div class="pullquote">
-                    "This district has been Republican since before I was born. But I believe Texans are ready for a new generation of leadership that puts problem-solving over partisanship."
+                <div class="comment-content">
+                    <strong>The A&P store details are mind-numbingly ordinary:</strong> Howard managed store #1478 at 3400 Florida Avenue. Store hours: 9 AM-6 PM Monday-Saturday, closed Sundays. He had 12 employees - 8 cashiers, 2 butchers, 1 produce man, 1 stock boy. Weekly sales averaged $12,000 in 1950s money. He wore a white shirt, black tie, and white apron. His office was a 6x8 foot room in the back with a metal desk and filing cabinet. He did the same weekly inventory, ordering, and scheduling for 28 years. The store closed in 1982 - three years after he retired.
                 </div>
-
-                <p>The primary elections are scheduled for March 3, 2026, with the general election set for November 3. Early polling in the district shows Gonzales leading Nugent by 15 points, but Democrats note that early surveys often underestimate challengers with strong name recognition and fundraising capacity.</p>
-
-                <p>Whether the Johnson magic still works in deep-red Texas remains to be seen. But Nugent's entry guarantees that one of the most historically significant political families in American history will once again be tested in the crucible of electoral politics.</p>
+                <div class="comment-reply">Reply</div>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Texas' 21st District</h3>
-            <p><strong>Current Representative:</strong> Tony Gonzales (R)</p>
-            <p><strong>Partisan Index:</strong> R+8</p>
-            <p><strong>2024 Result:</strong> GOP +12</p>
-            <p><strong>Population Centers:</strong> San Antonio suburbs, Hill Country</p>
-            <p><strong>Demographics:</strong> 35% Hispanic, 55% White</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Blue Dog Democrats seek comeback in Trump districts</a>
-                <a href="#">Texas redistricting faces new legal challenges</a>
-                <a href="#">LBJ's legacy looms large in modern Texas politics</a>
-                <a href="#">2026 midterms: The battle for the House</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Florida_Marriage_Records • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found his marriage certificate - even MORE boring details:</strong> Married November 17, 1945 at Windsor Methodist Church. Ceremony at 2 PM, reception at the church fellowship hall with "light refreshments." Wedding colors were blue and white. Mary wore her sister's wedding dress altered to fit. They honeymooned in Richmond for three days because "gas was still rationed." Total wedding cost: $87.50 including the minister's fee. They moved to Tampa in February 1946 because Howard's uncle offered him a job at the grocery store.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Tampa_Obituary_Archives • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>His obituary is the most generic thing I've ever read:</strong> "Howard F. Horne Sr., 76, of Tampa, died Tuesday at his residence. He was a native of Windsor, Va., and had lived in Tampa since 1946. He was manager of the A&P Food Store on Florida Avenue for 28 years, retiring in 1978. He was a member of the Florida Avenue Methodist Church and the A&P Managers Association. Survivors include his wife of 44 years, Mary; five children; and eight grandchildren. Services will be at Florida Avenue Methodist Church. Interment at Tampa Memorial Gardens." Even his death was boring - "died Tuesday" - not even the date.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        That's it? No cause of death, no touching words, no hobbies, no achievements? Just... "died Tuesday"?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Tampa_Obituary_Archives • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        <strong>That's literally it.</strong> I checked the newspaper - same obituary ran for three days, unchanged. His wife's obituary three years earlier was almost identical, just with the names swapped. The funeral had 23 attendees (I found the guest book). The pastor's eulogy was 4 minutes long and included the phrase "Howard lived a quiet, respectable life." That was the most emotional thing said about him.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Children_Details_Finder • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>The children's lives are equally boring:</strong><br><br>
+                    <strong>Howard Jr. (1946-2018):</strong> Accountant at same Tampa firm for 35 years. Never married, lived in same apartment for 40 years. Died of cancer at 72.<br><br>
+                    <strong>Patricia (1948-2020):</strong> Elementary school teacher, married her college boyfriend, had 2 kids, lived in suburban Tampa house for 45 years. Died of stroke at 72.<br><br>
+                    <strong>Robert (1950-2019):</strong> Insurance salesman, married high school girlfriend, had 3 kids, lived in same house 38 years. Died of heart attack at 69.<br><br>
+                    <strong>Linda (1952-2021):</strong> Registered nurse, married a doctor, had 1 child, worked at same hospital 32 years. Died of Alzheimer's at 69.<br><br>
+                    <strong>Susan (1955-2018):</strong> Secretary at engineering firm, never married, lived with her mother until Mary died, then alone. Died of breast cancer at 63.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/14_Siblings_Researcher • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the other 13 siblings - surprisingly, they're interesting:</strong> While Howard was boring, his siblings had actual lives. Brother William was a B-17 pilot shot down over Germany and spent 18 months as POW. Sister Dorothy became a nun and worked in Africa for 30 years. Brother James was a minor league baseball player. Brother Robert died in Normandy. Only Howard managed to live his entire life without a single remarkable event.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    So Howard was literally the only boring one in an otherwise interesting family? That's actually kind of fascinating in reverse.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Grocery_Store_Raffle • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the raffle story - it's peak boring:</strong> March 1963, A&P Managers Association meeting at the Tampa Terrace Hotel. Raffle prizes: 1st place - $100 savings bond, 2nd place - $50 cash, 3rd place - set of golf clubs. Howard won 2nd place. The meeting minutes note: "Mr. Horne seemed pleased with his winnings." He used the $50 to buy a new recliner. His daughter Susan remembered: "Dad talked about that recliner for years. It was his favorite thing he ever bought."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">My ancestor was also boring - share your most unremarkable relatives</a></li>
+                <li><a href="#">Anyone else have family members who were drafted but didn't serve?</a></li>
+                <li><a href="#">The "Ordinary Lives" project - documenting average Americans</a></li>
+                <li><a href="#">14 siblings families - how do you track them all?</a></li>
+            </ul>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
