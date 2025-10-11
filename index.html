@@ -1,278 +1,407 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Horne Family Tree: 5 Generations of Painfully Average People (1845-1992) : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f6f7ef 0%, #e8e9e0 100%);
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #ff4500 0%, #e03d00 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .post {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #878a8c;
+            transition: all 0.2s ease;
+            padding: 4px;
+        }
+        .vote-btn:hover {
+            color: #ff4500;
+            transform: scale(1.1);
+        }
+        .content {
+            margin-left: 60px;
+        }
+        .title {
+            margin: 0 0 12px 0;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .title a:hover {
+            color: #ff4500;
+        }
+        .meta {
+            font-size: 13px;
+            color: #787c7e;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        .flair {
+            background: linear-gradient(135deg, #e9f5fd 0%, #d0e8f8 100%);
+            color: #1a1a1b;
+            padding: 4px 10px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid #b8daff;
+        }
+        .comments-count {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #878a8c;
+            font-weight: 500;
+        }
+        .comments-count a {
+            color: #ff4500;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: linear-gradient(135deg, #f6f7f8 0%, #edeef0 100%);
+            padding: 15px 25px;
+            border-bottom: 1px solid #ccc;
+            font-size: 13px;
+            color: #878a8c;
+            display: flex;
+            gap: 20px;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .sort-bar a:hover {
+            color: #ff4500;
+        }
+        .comment-section {
+            padding: 25px;
+            border-top: 1px solid #eee;
+            background: #fafafa;
+        }
+        .comment {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            border-left: 3px solid #e9f5fd;
+            background: white;
+            border-radius: 0 8px 8px 0;
+            padding: 15px;
+        }
+        .comment-meta {
+            font-size: 13px;
+            color: #787c7e;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .comment-content {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #1a1a1b;
+        }
+        .comment-content strong {
+            color: #ff4500;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 8px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .comment-reply:hover {
+            color: #ff4500;
+        }
+        .comment-nested {
+            margin-left: 25px;
+            margin-top: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+            background: #f8f9fa;
+            border-radius: 0 6px 6px 0;
+            padding: 12px;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+        .sidebar {
+            background: linear-gradient(135deg, #f6f7f8 0%, #edeef0 100%);
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 0 0 12px 12px;
+            font-size: 15px;
+        }
+        .sidebar h3 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1b;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .sidebar li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .sidebar a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .sidebar a:hover {
+            color: #ff4500;
+        }
+        p {
+            margin: 0 0 15px 0;
+            line-height: 1.7;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Virginia_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">8 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Howard "Ho" Franklin Horne Sr - The Most Average Man in Virginia (1916-1992)</div>
-    <div class="post-meta">
-      <span class="comment-score">23 upvotes</span> • posted by <span class="comment-author">VirginiaRootsSeeker</span> <span class="flair">Virginia Research</span>
-    </div>
-    <div class="post-content">
-      <p>Looking for information on Howard "Ho" Franklin Horne Sr, born July 10, 1916 in Windsor, Virginia. He's one of those ancestors who's so ordinary, he's almost extraordinary in his mediocrity.</p>
-      
-      <p>Here's what I know:</p>
-      <ul>
-        <li>Born to Robert Mack Horne Jr (1876-1939) and Eliza Ann Monroe (1882-1927)</li>
-        <li>One of 14 siblings - yes, FOURTEEN</li>
-        <li>Married in Windsor, VA in November 1945</li>
-        <li>Drafted for WW2 but never served (medical deferment?)</li>
-        <li>Moved to Tampa, Florida after the war</li>
-        <li>Worked as grocery store manager until retirement</li>
-        <li>Fathered 5 children</li>
-        <li>Died of heart attack July 22, 1992</li>
-      </ul>
-      
-      <p>Anyone know which grocery store he managed? Or why he didn't serve when his brothers did? Also curious about the nickname "Ho" - was that common for Howard back then?</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">TampaHistoryBuff</span> • <span class="comment-score">89 points</span> • 8 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>FOUND THE GROCERY STORE:</strong> Howard managed the <strong>Piggly Wiggly</strong> at <strong>3408 Henderson Boulevard</strong> in Tampa from <strong>1948 to 1978</strong>. Thirty years of managing the same store - that's actually impressive in its own way.</p>
-        
-        <p><strong>THE STORE DETAILS:</strong> It was a <strong>typical 1950s grocery</strong> - <strong>3,200 square feet</strong>, <strong>8 employees</strong>, and Howard knew <strong>every regular customer by name</strong>. The store had <strong>manual cash registers</strong> until 1975 when they finally got <strong>electronic ones</strong>.</p>
-        
-        <p><strong>THE MEDICAL DEFERMENT:</strong> Found his <strong>Selective Service records</strong> - Howard had <strong>rheumatic fever</strong> as a child that damaged his <strong>heart valve</strong>. His brothers called him <strong>"Lucky Ho"</strong> because he got out of serving while <strong>7 of his brothers</strong> served overseas.</p>
-        
-        <p><strong>THE NICKNAME:</strong> "Ho" came from his <strong>youngest sister Mary</strong> who couldn't pronounce "Howard" - she called him <strong>"Ho-Ho"</strong> and it stuck. By adulthood, everyone including his wife called him <strong>"Ho"</strong> or <strong>"Mr. Ho"</strong> at the store.</p>
-        
-        <p><strong>THE MOST AVERAGE FACT:</strong> His personnel file shows he took <strong>exactly 2 sick days in 30 years</strong> - both for <strong>his children's births</strong>. His annual reviews consistently rated him <strong>"Satisfactory"</strong> - never excellent, never poor. Just... satisfactory.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">WindsorVirginiaNative</span> • <span class="comment-score">156 points</span> • 7 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>THE HORNE FAMILY WAS REMARKABLY UNREMARKABLE:</strong> I grew up in Windsor - the Hornes were known for being <strong>the most average family</strong> in town.</p>
-        
-        <p><strong>THE PARENTS:</strong> Robert Mack Horne Jr worked at the <strong>sawmill</strong> for <strong>43 years</strong> - same shift, same job. Eliza Ann Monroe was a <strong>housewife</strong> who had <strong>14 children</strong> in <strong>21 years</strong> and <strong>never learned to drive</strong>.</p>
-        
-        <p><strong>THE SIBLINGS:</strong> Of the 14 Horne children:
-        <ul>
-          <li><strong>6</strong> worked at the <strong>sawmill</strong></li>
-          <li><strong>3</strong> became <strong>housewives</strong></li>
-          <li><strong>2</strong> were <strong>farmers</strong></li>
-          <li><strong>1</strong> was a <strong>teacher</strong> (the rebel)</li>
-          <li><strong>1</strong> was a <strong>grocery store manager</strong> (Howard)</li>
-          <li><strong>1</strong> died in <strong>infancy</strong></li>
-        </ul></p>
-        
-        <p><strong>THE MOST AVERAGE STORY:</strong> Howard's <strong>high school yearbook</strong> (1934) lists him as <strong>"Most Likely to Stay in Windsor"</strong> - he was <strong>one of three</strong> in his class of <strong>32</strong> who actually left. The other two became <strong>missionaries</strong>, Howard just moved to <strong>Tampa</strong>.</p>
-        
-        <p><strong>THE MARRIAGE:</strong> Married <strong>Dorothy Mae Smith</strong> (1918-2003) - she was a <strong>cashier at Woolworth's</strong>. They met at a <strong>church social</strong> and courted for <strong>exactly 6 months</strong> before marrying. She wore <strong>her mother's wedding dress</strong>, they honeymooned in <strong>Norfolk</strong> (30 miles away).</p>
-        
-        <p><strong>THE CHILDREN:</strong> All 5 children had <strong>ordinary lives</strong> too - <strong>3 teachers</strong>, <strong>1 nurse</strong>, <strong>1 accountant</strong>. Not a single <strong>criminal</strong>, <strong>celebrity</strong>, or <strong>failure</strong> among them. Even their <strong>rebellions</strong> were conventional.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">GenealogyRealist</span> • <span class="comment-score">234 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>LET'S BE HONEST:</strong> Howard Horne was the <strong>most boring ancestor</strong> possible, and that's <strong>perfectly fine</strong>.</p>
-        
-        <p><strong>THE TRUTH:</strong> Most of our ancestors were like Howard - <strong>ordinary people</strong> living <strong>ordinary lives</strong>. We just don't write about them because <strong>there's nothing sensational</strong> to document.</p>
-        
-        <p><strong>THE BEAUTY:</strong> Howard represents <strong>millions of Americans</strong> who <strong>got up, went to work, raised families</strong>, and <strong>never made headlines</strong>. He was <strong>drafted but couldn't serve</strong>, <strong>managed a grocery store</strong>, <strong>raised 5 kids</strong>, and <strong>died of a heart attack at 76</strong>.</p>
-        
-        <p><strong>THE STATISTICS:</strong>
-        <ul>
-          <li><strong>76 years</strong> was <strong>above average</strong> for men in 1992</li>
-          <li><strong>5 children</strong> was <strong>typical</strong> for his generation</li>
-          <li><strong>30 years</strong> at the same job shows <strong>stability</strong></li>
-          <li><strong>Moving from Virginia to Florida</strong> in 1945 was <strong>common</strong></li>
-        </ul></p>
-        
-        <p><strong>THE REALITY:</strong> We're conditioned to expect <strong>dramatic stories</strong> - <strong>war heroes, criminals, celebrities</strong>. But <strong>90% of genealogy</strong> is people like Howard who lived <strong>quiet, decent lives</strong> and <strong>never made history</strong>.</p>
-        
-        <p><strong>THE HONOR:</strong> Howard did what <strong>society expected</strong> - he <strong>worked hard</strong>, <strong>stayed married</strong>, <strong>raised responsible children</strong>, and <strong>never caused trouble</strong>. In many ways, that's <strong>more admirable</strong> than being exceptional.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">VirginiaRootsSeeker</span> • <span class="comment-score">67 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>You're absolutely right - Howard was <strong>extraordinarily ordinary</strong>, and I think that's why I find him fascinating. In a family tree full of <strong>civil war soldiers</strong>, <strong>railroad builders</strong>, and <strong>pioneers</strong>, Howard stands out for being <strong>completely typical</strong>.</p>
-        
-        <p>The fact that he took <strong>2 sick days in 30 years</strong>, consistently got <strong>"Satisfactory" reviews</strong>, and all his children became <strong>teachers, nurse, and accountant</strong> - that's almost <strong>statistically perfect</strong> averageness.</p>
-        
-        <p>Even his <strong>medical deferment</strong> was <strong>ordinary</strong> - rheumatic fever heart damage was a <strong>common reason</strong> men couldn't serve. His brothers probably called him <strong>"Lucky Ho"</strong> because <strong>every family</strong> had someone who <strong>couldn't serve</strong> for medical reasons.</p>
-        
-        <p>Howard represents the <strong>silent majority</strong> of our ancestors who <strong>never wrote memoirs</strong>, <strong>never made newspapers</strong>, and <strong>never had biographies written</strong> - but they were the <strong>backbone of America</strong> anyway.</p>
-        
-        <p>Sometimes the <strong>most boring ancestor</strong> is the <strong>most honest reflection</strong> of their time. Howard wasn't <strong>exceptional</strong> - he was <strong>reliably, consistently, satisfactorily average</strong> for <strong>76 years</strong>. And there's something <strong>beautiful</strong> about that.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">BoringGenealogyExpert</span> • <span class="comment-score">178 points</span> • 4 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>THE HORNE FAMILY: GENERATIONS OF ORDINARY</strong></p>
-        
-        <p><strong>THE GRANDFATHER:</strong> Robert Mack Horne Sr (1848-1921) worked at the <strong>same sawmill for 47 years</strong>. His personnel record shows he was <strong>reprimanded once</strong> - for <strong>sneaking a smoke break</strong> behind the lumber pile in <strong>1893</strong>.</p>
-        
-        <p><strong>THE GREAT-GRANDFATHER:</strong> William Horne (1812-1890) was a <strong>tenant farmer</strong> who lived in <strong>3 houses his entire life</strong> - all within <strong>2 miles of each other</strong>. His diary (if you can call it that) reads: <strong>"Planted corn. Rain. Planted corn. No rain. Planted corn."</strong></p>
-        
-        <p><strong>THE GREAT-GREAT-GRANDFATHER:</strong> Thomas Horne (1785-1865) was so <strong>unremarkable</strong> that the <strong>1860 census taker</strong> accidentally <strong>skipped his household</strong> - historians only know he existed because his <strong>widow</strong> appears in the <strong>1870 census</strong> listed as <strong>"poor widow, no distinguishing features"</strong>.</p>
-        
-        <p><strong>THE MATERNAL SIDE:</strong> The Monroes were equally bland - Eliza's father <strong>James Monroe</strong> (no relation to the president) was a <strong>blacksmith</strong> who specialized in <strong>repairing farm tools</strong>. His shop was <strong>so forgettable</strong> that when it <strong>burned down in 1887</strong>, the newspaper reported it as <strong>"small fire, no significant loss"</strong>.</p>
-        
-        <p><strong>THE AMAZING COINCIDENCE:</strong> Howard's <strong>great-great-great grandfather</strong> (on his mother's side) was ALSO named <strong>Howard</strong> - and he too was a <strong>grocery store manager</strong> in <strong>Richmond</strong> in the <strong>1840s</strong>. The family literally <strong>repeats boring every 4 generations</strong>.</p>
-        
-        <p><strong>THE MOST BORING FACT:</strong> Every male Horne for <strong>6 generations</strong> has had the <strong>same middle name</strong> - <strong>Mack</strong>. It's not even a <strong>family surname</strong> - Howard's <strong>great-great grandfather</strong> just liked the sound of it and <strong>everyone kept copying him</strong>.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">DeepAncestryDigger</span> • <span class="comment-score">94 points</span> • 3 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>DUG DEEPER - THE HORNE FAMILY GETS WORSE:</strong></p>
-        
-        <p><strong>THE IMMIGRANT ANCESTOR:</strong> Heinrich Horn (1755-1832) came from <strong>Germany</strong> in <strong>1778</strong> and was so <strong>determinedly average</strong> that he <strong>shortened his name</strong> to <strong>Horne</strong> to sound <strong>more American</strong> - but he chose the <strong>most common possible surname</strong>.</p>
-        
-        <p><strong>THE REVOLUTIONARY WAR:</strong> Heinrich <strong>tried to enlist</strong> but was <strong>rejected</strong> for being <strong>"too slight of build"</strong> and having <strong>"poor eyesight"</strong>. He spent the war <strong>making barrels</strong> - not even <strong>interesting barrels</strong>, just <strong>standard flour barrels</strong>.</p>
-        
-        <p><strong>THE FAMILY TRADITION:</strong> Every generation has <strong>exactly 3 hobbies</strong>: <strong>1 practical</strong>, <strong>1 religious</strong>, <strong>1 boring social activity</strong>. Howard's were <strong>gardening</strong>, <strong>Methodist church</strong>, and <strong>bowling league</strong> - his father had <strong>woodworking</strong>, <strong>Baptist church</strong>, and <strong>lodge meetings</strong>.</p>
-        
-        <p><strong>THE MARRIAGE PATTERN:</strong> Hornes have married <strong>within 10 miles</strong> of home for <strong>6 generations</strong>. Howard's wife <strong>Dorothy</strong> lived <strong>3 blocks away</strong> in <strong>Windsor</strong>. His parents lived <strong>5 miles apart</strong>. His grandparents lived <strong>on adjacent farms</strong>.</p>
-        
-        <p><strong>THE MOST DEPRESSING DISCOVERY:</strong> The <strong>family bible</strong> (kept by Howard's <strong>great-aunt</strong>) has <strong>births, deaths, and marriages</strong> - but <strong>no personal notes</strong>. Even the <strong>margins</strong> are <strong>empty</strong>. The most <strong>exciting entry</strong> is <strong>"Weather fine"</strong> next to Howard's birth.</p>
-        
-        <p><strong>THE BORING LEGACY CONTINUES:</strong> Howard's <strong>5 children</strong> have produced <strong>12 grandchildren</strong> who are <strong>teachers, accountants, nurses, and one librarian</strong>. NOT A SINGLE <strong>interesting profession</strong> in the entire <strong>extended family</strong>.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">StatisticalGenealogist</span> • <span class="comment-score">112 points</span> • 2 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>THE HORNE FAMILY BY THE NUMBERS - STATISTICALLY PERFECT BORING:</strong></p>
-        
-        <p><strong>GENERATION ANALYSIS:</strong>
-        <ul>
-          <li><strong>6 generations</strong> of Hornes have lived in <strong>Virginia</strong></li>
-          <li><strong>0</strong> have moved more than <strong>50 miles</strong> from birthplace</li>
-          <li><strong>0</strong> have served in <strong>combat</strong> (Howard's deferment continues tradition)</li>
-          <li><strong>0</strong> have been <strong>arrested</strong> for anything more than <strong>traffic violations</strong></li>
-          <li><strong>100%</strong> have had <strong>2-5 children</strong> (the American average)</li>
-        </ul></p>
-        
-        <p><strong>OCCUPATIONAL BORING:</strong>
-        <ul>
-          <li><strong>42%</strong> worked in <strong>agriculture/lumber</strong></li>
-          <li><strong>31%</strong> worked in <strong>retail/food service</strong></li>
-          <li><strong>27%</strong> were <strong>homemakers</strong></li>
-          <li><strong>0%</strong> were <strong>professionals</strong> (doctor/lawyer/engineer)</li>
-          <li><strong>0%</strong> were <strong>criminals</strong> or <strong>celebrities</strong></li>
-        </ul></p>
-        
-        <p><strong>THE MOST STATISTICALLY AVERAGE FACT:</strong> Howard's <strong>entire family tree</strong> for <strong>150 years</strong> falls within <strong>1 standard deviation</strong> of <strong>every demographic norm</strong> - income, education, family size, lifespan, even <strong>height and weight</strong>.</p>
-        
-        <p><strong>THE BORING CHAMPION:</strong> Howard's <strong>great-uncle</strong> Frank Horne (1860-1940) worked as a <strong>clerk</strong> at the <strong>same general store</strong> for <strong>52 years</strong> - never promoted, never fired, never missed a day. When he died, his <strong>obituary</strong> was <strong>3 sentences long</strong>.</p>
-        
-        <p><strong>THE FAMILY MOTTO:</strong> Howard's <strong>grandfather</strong> supposedly said: <strong>"Why be extraordinary when ordinary pays the bills?"</strong> - this became the <strong>unofficial family philosophy</strong> for <strong>generations</strong>.</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>156</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">The Horne Family Tree: 5 Generations of Painfully Average People (1845-1992)</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Virginia</span>
+                    <span class="flair">Boring Families</span>
+                    <span class="flair">Average Americans</span>
+                    <span class="flair">5 Generations</span>
+                    <span>Posted by u/Virginia_Archivist • 8 hours ago</span>
+                </div>
+
+                <p>After researching Howard "Ho" Franklin Horne Sr., I decided to trace his entire paternal line. What I discovered is a masterclass in mediocrity spanning 147 years.</p>
+
+                <p><strong>Generation 1: Robert Mack Horne Sr. (1845-1920)</strong><br>
+                Howard's grandfather. Born in Windsor, Virginia, died in Windsor, Virginia. Never left the county. Farmer who owned 80 acres of mediocre soil. Married Mary Elizabeth Smith (1847-1919) - literally the girl next door, as their farms shared a property line. They had 8 children who all lived perfectly ordinary lives. His obituary reads: "He was a good farmer and a respected member of the community." That's the most interesting thing anyone ever said about him.</p>
+
+                <p><strong>Generation 2: Robert Mack Horne Jr. (1876-1939)</strong><br>
+                Howard's father. Born November 11th (same birthday as his wife, which is the most notable thing about him). Took over the family farm, grew the same crops as his father. When asked why he never expanded, he said "80 acres is enough for anyone." Married Eliza Ann Monroe in 1898 because "she lived nearby and was pleasant company." They had 14 children because "that's what farmers do." No hobbies, no ambitions, no drama.</p>
+
+                <p><strong>Generation 3: Howard "Ho" Franklin Horne Sr. (1916-1992)</strong><br>
+                The grocery store manager we already covered. The highlight of his life was winning $50 in a raffle.</p>
+
+                <p><strong>Generation 4: Howard Franklin Horne Jr. (1946-2018)</strong><br>
+                Continued the tradition of mediocrity. Accountant at the same Tampa firm for 35 years. Never married because "never found the right person." Lived in the same apartment for 40 years - paid $180/month in 1978, still paid $180/month in 2018 because he never asked for a rent increase and the landlord forgot. His entire estate was valued at $47,000 when he died, consisting mainly of a 1998 Toyota Camry and $43,000 in a savings account earning 0.01% interest.</p>
+
+                <p><strong>Generation 5: Howard Franklin Horne III (1975-present)</strong><br>
+                The current torch-bearer of boring. Works at a Tampa-area Office Depot as "Senior Copy Center Associate" - a title he earned after 25 years of service. Lives in a studio apartment, drives a 2012 Honda Civic with 43,000 miles ("only drove to work and grocery store"). Has a Costco membership but only buys toilet paper and peanut butter. His most exciting purchase last year was a $35 electric toothbrush (after researching for 3 months).</p>
+
+                <p>Five generations. 147 years. Not a single interesting story, remarkable achievement, or dramatic event. Just ordinary people living ordinary lives in the most ordinary way possible.</p>
+
+                <p>The most fascinating thing about this family is how unfascinating they are.</p>
+
+                <div class="comments-count">
+                    <a href="#">189 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Census_Detail_Diver • 7 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found Robert Sr.'s farm records - they're hilariously average:</strong> 1880 agricultural census shows he produced 150 bushels of corn, 40 bushels of wheat, and 12 bales of cotton. The census taker noted: "Farm produces sufficient for family needs, little surplus." His land was valued at $1,200 - exactly the median value for farms in that township. Even his soil quality was rated "fair" - not good, not poor, just fair.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 6 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        "Sufficient for family needs, little surplus" - that's the perfect description for this entire family. Never too much, never too little, always just enough.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Marriage_Record_Hunter • 6 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Robert Jr.'s marriage was peak boring:</strong> November 11, 1898. They chose this date because it was "convenient - not too cold for traveling, not too busy with farm work." Wedding at 2 PM because "that's when folks usually visit." Reception at the bride's parents' house with "simple refreshments - ham, biscuits, and tea." Their honeymoon consisted of visiting relatives in neighboring counties for three days. Total cost: $34.75 including the preacher's $3 fee.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Apartment_Records_Guru • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Howard Jr.'s apartment situation is even worse than you think:</strong> I found the property records. His apartment was rent-controlled, but the legal limit was actually $285/month by 2018. The landlord, Harold Martinez, told me: "I kept meaning to raise his rent, but he always paid on the 1st, never complained, never had visitors. Just a nice quiet man. I forgot about it for years." When Howard died, the landlord felt guilty and gave the $43,000 estate an extra $5,000 "for being the perfect tenant for 40 years."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Office_Depot_Employee • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>I work with Howard III - he's exactly as boring as described:</strong> He's been at copy center since 1998. Eats the same lunch every day - peanut butter sandwich, apple, and water from the water fountain. Wears khakis and blue polo shirts exclusively. Drives exactly the speed limit, signals exactly 100 feet before turns. His employee review every year says "Meets expectations" - never exceeds, never fails to meet. Last year he got excited because we got a new copier and he spent 2 weeks learning all the features. That was the most animated I've ever seen him.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Did you ask him about his family history? Does he know he's part of 5 generations of aggressively ordinary people?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/Office_Depot_Employee • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    <strong>I asked him once if he had any interesting family stories.</strong> He thought for a full minute and said: "My grandfather worked at a grocery store for many years. He won a raffle once. Fifty dollars." That was it. He seemed genuinely proud of this fact. When I pressed for more, he said "We've always been steady, reliable people. Not everyone needs to be exciting."
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Property_Value_Records • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Robert Sr.'s farm value was comically average:</strong> In 1900, his farm and buildings were assessed at exactly $2,400. The county average was $2,395. He was $5 ABOVE average. The tax assessor's notes: "Typical farm, typical improvements, typical productivity." Even his livestock was boring - 2 horses, 3 cows, 8 pigs, 20 chickens. The exact county average for a farm his size.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Costco_Membership_Tracker • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Howard III's Costco purchases are soul-crushingly predictable:</strong> I've seen his membership history (friend works there). Every visit: 1 pack toilet paper, 1 jar peanut butter, 1 box protein bars, 1 bottle multivitamins. Never varies. Goes every 3 months like clockwork. The checkout clerk knows him by name and has his receipt ready before he even gets to the register. His total is always within $2 of $87.50.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/14_Children_Research • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Robert Jr.'s 14 children were spaced with mathematical precision:</strong> One child every 18-24 months from 1899-1927. No twins, no gaps, no stillbirths. The family Bible records show he stopped having children at age 51 because "that's when Father's mother stopped having children." Even their reproduction was formulaic. All 14 lived to adulthood, which was actually remarkable for the era - but nobody outside the family noticed because they were all so unremarkable.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Honda_Civic_Historian • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Howard III's car history is peak boring:</strong> 1998 Civic (bought used in 2002, sold in 2012), 2012 Civic (bought new, still owns). Both white. Both base models. Both serviced at the same Honda dealership every 7,500 miles. Service records show "customer requests only necessary maintenance per manual." Never had a single optional upgrade or accessory. The 2012 has 43,000 miles after 12 years - that's 3,583 miles per year, almost exactly the distance to work and back plus grocery trips.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h3>More posts from r/Genealogy</h3>
+            <ul>
+                <li><a href="#">Share your most average ancestors - let's celebrate the ordinary</a></li>
+                <li><a href="#">The "Just Enough" families - those who never had too much or too little</a></li>
+                <li><a href="#">Anyone else have relatives who lived in the same place for 100+ years?</a></li>
+                <li><a href="#">The mathematics of boring - families with perfectly spaced children</a></li>
+            </ul>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
