@@ -1,203 +1,376 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #DAE0E6;
-    margin: 0;
-    padding: 20px;
-  }
-  .reddit-container {
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  .reddit-header {
-    background-color: #0079D3;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px 4px 0 0;
-    font-size: 14px;
-  }
-  .post {
-    padding: 15px;
-    border-bottom: 1px solid #EDEFF1;
-  }
-  .post-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: #1A1A1B;
-  }
-  .post-meta {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 10px;
-  }
-  .post-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-section {
-    padding: 0 15px;
-  }
-  .comment {
-    border-left: 2px solid #EDEFF1;
-    margin: 10px 0 10px 8px;
-    padding-left: 8px;
-  }
-  .comment-header {
-    font-size: 12px;
-    color: #7C7C7C;
-    margin-bottom: 4px;
-  }
-  .comment-author {
-    font-weight: bold;
-    color: #0079D3;
-  }
-  .comment-content {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #1A1A1B;
-  }
-  .comment-score {
-    font-weight: bold;
-    color: #7C7C7C;
-  }
-  .flair {
-    background-color: #E9F5FD;
-    color: #0079D3;
-    padding: 2px 6px;
-    border-radius: 12px;
-    font-size: 11px;
-    margin-left: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Howard "Ho" Horne's Family Tree: The Most Boring Genealogical Research of All Time : Genealogy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7ef;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <span>r/Genealogy</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/Virginia_Archivist</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">5 hours ago</span>
+        </div>
 
-<div class="reddit-container">
-  <div class="reddit-header">
-    r/Genealogy
-  </div>
-  
-  <div class="post">
-    <div class="post-title">Howard "Ho" Franklin Horne Sr - The Most Average Man in Virginia (1916-1992)</div>
-    <div class="post-meta">
-      <span class="comment-score">23 upvotes</span> • posted by <span class="comment-author">VirginiaRootsSeeker</span> <span class="flair">Virginia Research</span>
-    </div>
-    <div class="post-content">
-      <p>Looking for information on Howard "Ho" Franklin Horne Sr, born July 10, 1916 in Windsor, Virginia. He's one of those ancestors who's so ordinary, he's almost extraordinary in his mediocrity.</p>
-      
-      <p>Here's what I know:</p>
-      <ul>
-        <li>Born to Robert Mack Horne Jr (1876-1939) and Eliza Ann Monroe (1882-1927)</li>
-        <li>One of 14 siblings - yes, FOURTEEN</li>
-        <li>Married in Windsor, VA in November 1945</li>
-        <li>Drafted for WW2 but never served (medical deferment?)</li>
-        <li>Moved to Tampa, Florida after the war</li>
-        <li>Worked as grocery store manager until retirement</li>
-        <li>Fathered 5 children</li>
-        <li>Died of heart attack July 22, 1992</li>
-      </ul>
-      
-      <p>Anyone know which grocery store he managed? Or why he didn't serve when his brothers did? Also curious about the nickname "Ho" - was that common for Howard back then?</p>
-    </div>
-  </div>
-  
-  <div class="comment-section">
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">TampaHistoryBuff</span> • <span class="comment-score">89 points</span> • 8 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>FOUND THE GROCERY STORE:</strong> Howard managed the <strong>Piggly Wiggly</strong> at <strong>3408 Henderson Boulevard</strong> in Tampa from <strong>1948 to 1978</strong>. Thirty years of managing the same store - that's actually impressive in its own way.</p>
-        
-        <p><strong>THE STORE DETAILS:</strong> It was a <strong>typical 1950s grocery</strong> - <strong>3,200 square feet</strong>, <strong>8 employees</strong>, and Howard knew <strong>every regular customer by name</strong>. The store had <strong>manual cash registers</strong> until 1975 when they finally got <strong>electronic ones</strong>.</p>
-        
-        <p><strong>THE MEDICAL DEFERMENT:</strong> Found his <strong>Selective Service records</strong> - Howard had <strong>rheumatic fever</strong> as a child that damaged his <strong>heart valve</strong>. His brothers called him <strong>"Lucky Ho"</strong> because he got out of serving while <strong>7 of his brothers</strong> served overseas.</p>
-        
-        <p><strong>THE NICKNAME:</strong> "Ho" came from his <strong>youngest sister Mary</strong> who couldn't pronounce "Howard" - she called him <strong>"Ho-Ho"</strong> and it stuck. By adulthood, everyone including his wife called him <strong>"Ho"</strong> or <strong>"Mr. Ho"</strong> at the store.</p>
-        
-        <p><strong>THE MOST AVERAGE FACT:</strong> His personnel file shows he took <strong>exactly 2 sick days in 30 years</strong> - both for <strong>his children's births</strong>. His annual reviews consistently rated him <strong>"Satisfactory"</strong> - never excellent, never poor. Just... satisfactory.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">WindsorVirginiaNative</span> • <span class="comment-score">156 points</span> • 7 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>THE HORNE FAMILY WAS REMARKABLY UNREMARKABLE:</strong> I grew up in Windsor - the Hornes were known for being <strong>the most average family</strong> in town.</p>
-        
-        <p><strong>THE PARENTS:</strong> Robert Mack Horne Jr worked at the <strong>sawmill</strong> for <strong>43 years</strong> - same shift, same job. Eliza Ann Monroe was a <strong>housewife</strong> who had <strong>14 children</strong> in <strong>21 years</strong> and <strong>never learned to drive</strong>.</p>
-        
-        <p><strong>THE SIBLINGS:</strong> Of the 14 Horne children:
-        <ul>
-          <li><strong>6</strong> worked at the <strong>sawmill</strong></li>
-          <li><strong>3</strong> became <strong>housewives</strong></li>
-          <li><strong>2</strong> were <strong>farmers</strong></li>
-          <li><strong>1</strong> was a <strong>teacher</strong> (the rebel)</li>
-          <li><strong>1</strong> was a <strong>grocery store manager</strong> (Howard)</li>
-          <li><strong>1</strong> died in <strong>infancy</strong></li>
-        </ul></p>
-        
-        <p><strong>THE MOST AVERAGE STORY:</strong> Howard's <strong>high school yearbook</strong> (1934) lists him as <strong>"Most Likely to Stay in Windsor"</strong> - he was <strong>one of three</strong> in his class of <strong>32</strong> who actually left. The other two became <strong>missionaries</strong>, Howard just moved to <strong>Tampa</strong>.</p>
-        
-        <p><strong>THE MARRIAGE:</strong> Married <strong>Dorothy Mae Smith</strong> (1918-2003) - she was a <strong>cashier at Woolworth's</strong>. They met at a <strong>church social</strong> and courted for <strong>exactly 6 months</strong> before marrying. She wore <strong>her mother's wedding dress</strong>, they honeymooned in <strong>Norfolk</strong> (30 miles away).</p>
-        
-        <p><strong>THE CHILDREN:</strong> All 5 children had <strong>ordinary lives</strong> too - <strong>3 teachers</strong>, <strong>1 nurse</strong>, <strong>1 accountant</strong>. Not a single <strong>criminal</strong>, <strong>celebrity</strong>, or <strong>failure</strong> among them. Even their <strong>rebellions</strong> were conventional.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">GenealogyRealist</span> • <span class="comment-score">234 points</span> • 6 hours ago
-      </div>
-      <div class="comment-content">
-        <p><strong>LET'S BE HONEST:</strong> Howard Horne was the <strong>most boring ancestor</strong> possible, and that's <strong>perfectly fine</strong>.</p>
-        
-        <p><strong>THE TRUTH:</strong> Most of our ancestors were like Howard - <strong>ordinary people</strong> living <strong>ordinary lives</strong>. We just don't write about them because <strong>there's nothing sensational</strong> to document.</p>
-        
-        <p><strong>THE BEAUTY:</strong> Howard represents <strong>millions of Americans</strong> who <strong>got up, went to work, raised families</strong>, and <strong>never made headlines</strong>. He was <strong>drafted but couldn't serve</strong>, <strong>managed a grocery store</strong>, <strong>raised 5 kids</strong>, and <strong>died of a heart attack at 76</strong>.</p>
-        
-        <p><strong>THE STATISTICS:</strong>
-        <ul>
-          <li><strong>76 years</strong> was <strong>above average</strong> for men in 1992</li>
-          <li><strong>5 children</strong> was <strong>typical</strong> for his generation</li>
-          <li><strong>30 years</strong> at the same job shows <strong>stability</strong></li>
-          <li><strong>Moving from Virginia to Florida</strong> in 1945 was <strong>common</strong></li>
-        </ul></p>
-        
-        <p><strong>THE REALITY:</strong> We're conditioned to expect <strong>dramatic stories</strong> - <strong>war heroes, criminals, celebrities</strong>. But <strong>90% of genealogy</strong> is people like Howard who lived <strong>quiet, decent lives</strong> and <strong>never made history</strong>.</p>
-        
-        <p><strong>THE HONOR:</strong> Howard did what <strong>society expected</strong> - he <strong>worked hard</strong>, <strong>stayed married</strong>, <strong>raised responsible children</strong>, and <strong>never caused trouble</strong>. In many ways, that's <strong>more admirable</strong> than being exceptional.</p>
-      </div>
-    </div>
-    
-    <div class="comment">
-      <div class="comment-header">
-        <span class="comment-author">VirginiaRootsSeeker</span> • <span class="comment-score">67 points</span> • 5 hours ago
-      </div>
-      <div class="comment-content">
-        <p>You're absolutely right - Howard was <strong>extraordinarily ordinary</strong>, and I think that's why I find him fascinating. In a family tree full of <strong>civil war soldiers</strong>, <strong>railroad builders</strong>, and <strong>pioneers</strong>, Howard stands out for being <strong>completely typical</strong>.</p>
-        
-        <p>The fact that he took <strong>2 sick days in 30 years</strong>, consistently got <strong>"Satisfactory" reviews</strong>, and all his children became <strong>teachers, nurse, and accountant</strong> - that's almost <strong>statistically perfect</strong> averageness.</p>
-        
-        <p>Even his <strong>medical deferment</strong> was <strong>ordinary</strong> - rheumatic fever heart damage was a <strong>common reason</strong> men couldn't serve. His brothers probably called him <strong>"Lucky Ho"</strong> because <strong>every family</strong> had someone who <strong>couldn't serve</strong> for medical reasons.</p>
-        
-        <p>Howard represents the <strong>silent majority</strong> of our ancestors who <strong>never wrote memoirs</strong>, <strong>never made newspapers</strong>, and <strong>never had biographies written</strong> - but they were the <strong>backbone of America</strong> anyway.</p>
-        
-        <p>Sometimes the <strong>most boring ancestor</strong> is the <strong>most honest reflection</strong> of their time. Howard wasn't <strong>exceptional</strong> - he was <strong>reliably, consistently, satisfactorily average</strong> for <strong>76 years</strong>. And there's something <strong>beautiful</strong> about that.</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>31</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Howard "Ho" Horne's Family Tree: The Most Boring Genealogical Research of All Time</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Boring Families</span>
+                    <span class="flair">Virginia</span>
+                    <span class="flair">Tampa</span>
+                    <span>Posted by u/Virginia_Archivist • 5 hours ago</span>
+                </div>
+
+                <p>Remember Howard "Ho" Horne, the grocery store manager who never served? Well, I made the mistake of researching his entire family. Buckle up for the most mind-numbing genealogical journey of your life.</p>
+
+                <p><strong>His Parents: Equally Boring</strong></p>
+                <ul>
+                    <li>Robert Mack Horne Jr. (1876-1939): Farmer, Methodist, died of "old age"</li>
+                    <li>Eliza Ann Monroe (1882-1927): Homemaker, had 14 kids, died of "dropsy" (edema)</li>
+                    <li>Lived in the same house in Windsor, VA for 40 years</li>
+                    <li>Never traveled further than Richmond (60 miles away)</li>
+                </ul>
+
+                <p><strong>His 13 Siblings: A Masterclass in Mediocrity</strong></p>
+                <ul>
+                    <li>William Thomas Horne (1898-1981) - Farmer, married local girl, had 8 kids</li>
+                    <li>Mary Elizabeth Horne (1900-1975) - Married farmer, lived 2 miles from childhood home</li>
+                    <li>Robert Mack Horne III (1902-1988) - Hardware store clerk for 45 years</li>
+                    <li>James Monroe Horne (1904-1990) - Postmaster of town with 400 people</li>
+                    <li>Sarah Margaret Horne (1906-1982) - Schoolteacher, never married</li>
+                    <li>Charles Edward Horne (1908-1994) - Carpenter, built exactly 37 houses in Windsor</li>
+                    <li>Martha Louise Horne (1910-1999) - Married local Baptist minister</li>
+                    <li>John Wesley Horne (1912-2001) - Owned the only grocery store in Windsor</li>
+                    <li>Howard Franklin Horne (1916-1992) - Our favorite boring protagonist</li>
+                    <li>Dorothy Mae Horne (1918-2003) - Telephone operator for 38 years</li>
+                    <li>George Washington Horne (1920-2005) - Mechanic, fixed tractors</li>
+                    <li>Helen Virginia Horne (1922-2008) - Librarian, married accountant</li>
+                    <li>Richard Lee Horne (1925-2015) - Mail carrier, same route for 41 years</li>
+                </ul>
+
+                <p><strong>His Wife: The Most Average Woman in Virginia</strong></p>
+                <ul>
+                    <li>Mary Elizabeth "Betty" Johnson (1920-2003)</li>
+                    <li>Schoolteacher for 35 years, taught 3rd grade</li>
+                    <li>Member of PTA, Methodist Church, and Tuesday Night Bridge Club</li>
+                    <li>Her hobby was collecting thimbles. THIMBLES.</li>
+                </ul>
+
+                <p><strong>His Children: Continuing the Legacy of Boring</strong></p>
+                <ul>
+                    <li>Howard Jr. - Accountant, married secretary, 2 kids</li>
+                    <li>Mary - Stay-at-home mom, married insurance agent, 3 kids</li>
+                    <li>Robert - High school teacher, married nurse, 2 kids</li>
+                    <li>Patricia - Nurse, married salesman, 4 kids</li>
+                    <li>William - Insurance agent, married teacher, 3 kids</li>
+                </ul>
+
+                <p>I need help finding something - ANYTHING - interesting about this family. Did any of them ever do anything remotely remarkable? Did any of them travel? Have adventures? Break rules? I'm begging you to find something that makes this family tree less than excruciatingly dull.</p>
+
+                <div class="comments-count">
+                    <a href="#">73 comments</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    u/Windsor_VA_Historian • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found something interesting about Robert III:</strong> He worked at the hardware store for 45 years, but here's the thing - he kept detailed records of every nail he sold. Handwritten ledgers showing "March 3, 1957: Sold 12-penny nails to J.T. Wilson, 2 lbs, 29¢." He did this for FOUR DECADES. The local historical society has 23 volumes of nail sales records. This man documented nail sales through the Great Depression, WWII, and the moon landing.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        Oh my god. That's not interesting, that's pathologically boring. He made a life's work out of documenting nail transactions. This family is somehow getting WORSE.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    u/Small_Town_Genealogy • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>John Wesley's grocery store story:</strong> He owned the only grocery in Windsor from 1935-1980. But here's the mind-numbing part: he refused to stock any products he personally didn't like. No Coca-Cola (he preferred Pepsi), no Wonder Bread (thought it was "too fluffy"), no SPAM (said it looked like dog food). The store had exactly 247 items for 30 years. Never changed. Customers had to drive 15 miles to get Coke or white bread.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Postal_History_Nerd • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>James Monroe Horne's postal career:</strong> As postmaster of 400-person Windsor, he personally hand-cancelled every stamp for 28 years. But it gets worse - he kept the rubber stamps in alphabetical order by month and would only use the current month's stamp. January stamps for January mail, February for February, etc. He had 12 different canceling stamps and rotated them monthly. This was his life's passion.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        He treated stamp cancellation like a sacred ritual. I'm actually losing my will to research this family. They're like black holes of excitement - they suck all the joy out of genealogy.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Thimble_Collector • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Betty's thimble collection:</strong> She had 412 thimbles when she died. Every single one was from Virginia. She refused to collect out-of-state thimbles because "other states don't make them right." She had thimbles from every county in Virginia, organized by when the county was founded. Her prize possession was a thimble from Jamestown that she claimed was "historically significant" but was actually made in 1976 for the bicentennial.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Helen_Horne_Researcher • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Helen Virginia's librarian career:</strong> She worked at the Windsor Public Library (which had 3,200 books total) for 38 years. She organized the books by the color of their spines. Not Dewey Decimal, not alphabetical - by COLOR. All red books together, all blue books together. When asked why, she said "It makes the shelves look prettier." This system remained until she retired in 1989.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        She organized a library like it was a paint store. BY COLOR. I can't... I just can't with this family anymore. They're not even accidentally interesting. They're aggressively boring.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Mail_Route_Expert • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>Richard Lee's mail route:</strong> He carried the exact same route for 41 years - 14.7 miles, 487 mailboxes. He kept a notebook documenting every mailbox: "Box 247: Mrs. Henderson, gets lots of bills, has a mean dog." He updated these notes annually. When ZIP codes were introduced in 1963, he refused to use them because "we got along fine without them fancy numbers." Continued using the old route numbers until he retired in 1986.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/George_Horne_Mechanic • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    <strong>George Washington Horne's tractor fixation:</strong> He specialized in repairing Fordson tractors (made 1917-1928). In 1975, when most farmers had modern equipment, he was still fixing these ancient machines. Had a barn full of Fordson parts he'd collected for 40 years. When asked why he didn't learn newer models, he said "The Fordson was good enough for my daddy, it's good enough for me." Fixed the same 47 Fordsons for 30 years.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Dorothy_Phone_Operator • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Dorothy Mae's telephone obsession:</strong> She manually connected calls for 38 years and kept a diary of every interesting conversation she overheard. "January 15, 1957: Mrs. Johnson called her sister about a recipe for apple butter. Sounded delicious." She had 14 volumes of these mundane conversations. When dial phones came in 1965, she cried because she couldn't listen to people's boring conversations anymore.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/This_Can't_Be_Real • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>Found the most boring detail of all:</strong> Martha Louise, who married the Baptist minister? She kept a record of every sermon her husband preached for 35 years. Not the content - just the TITLE. "Sermon #847: 'The Importance of Being Good.' March 3, 1963." She had 1,847 sermon titles, all variations of "Be Good, Don't Sin, Love Jesus." The same themes repeated every 6 months for decades.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        I give up. This family has achieved peak boring. They've turned mediocrity into an art form. Every single one of them found the most painfully dull thing possible and made it their life's work. Howard Horne wasn't an outlier - he was the crown jewel of the most boring family in American history.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/William_Horne_Insurance • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    <strong>William's insurance career:</strong> He sold life insurance in Tampa for 30 years. His specialty? Whole life policies for $5,000 face value. Sold the same policy to 847 people. Had a filing cabinet with 847 folders, each labeled with the client's name and policy number. Every month, he would alphabetically review each policy to make sure premiums were paid. He knew every client's birthday and would send cards.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    u/Boring_Family_Expert • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    I've researched thousands of families. The Hornes are statistically the most boring family I've ever encountered. Every member chose the most conventional path possible. Every career choice was the safest option. Every hobby was designed to not offend anyone. They didn't avoid scandal - they avoided interest. They achieved the impossible: making 14 siblings, 5 children, and 100+ descendants completely, utterly, magnificently forgettable.
+                </div>
+                <div class="comment-meta">u/Virginia_Archivist • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                        You've just described my hell. I spent months researching this family hoping to find SOMETHING. Instead, I found 847 identical life insurance policies, color-coded library books, alphabetized canceling stamps, and 35 years of sermon titles. This isn't genealogy - it's a masterclass in how to live 76 years without leaving a single interesting footprint.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+        </div>
+    </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
