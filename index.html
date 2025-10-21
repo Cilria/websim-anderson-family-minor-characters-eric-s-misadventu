@@ -3,471 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Macron declares himself Emperor of France - r/worldnews</title>
+    <title>Trump declares American Empire, styles himself 'Imperatore' in Latin - NBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #fff;
+            color: #333;
         }
         .header {
-            background: #0079d3;
+            background: #000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            padding: 15px 0;
+            border-bottom: 4px solid #ffcc00;
         }
-        .post {
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .nav {
+            font-size: 14px;
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        .nav a:hover {
+            color: #ffcc00;
+        }
+        .breaking-banner {
+            background: #ffcc00;
+            color: #000;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+        .article-header {
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
+        .headline {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .subhead {
             font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
+            color: #555;
+            margin: 0 0 20px 0;
+            font-weight: 400;
             line-height: 1.3;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
+        .byline {
+            font-size: 14px;
+            color: #666;
             margin-bottom: 10px;
         }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
+        .byline a {
+            color: #000;
             text-decoration: underline;
+            font-weight: 500;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
+        .byline a:hover {
             text-decoration: none;
-            margin-right: 15px;
         }
-        .comment-section {
-            padding: 20px;
+        .timestamp {
+            font-size: 13px;
+            color: #666;
         }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
+        .article-content {
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 30px;
         }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        .article-content p {
+            margin-bottom: 22px;
         }
-        .comment-content {
+        .pullquote {
+            border-left: 4px solid #ffcc00;
+            padding-left: 25px;
+            margin: 30px 0;
+            font-size: 20px;
+            font-style: italic;
+            color: #333;
+            line-height: 1.4;
+        }
+        .sidebar {
+            background: #f8f8f8;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+        }
+        .sidebar h3 {
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            color: #000;
+            font-weight: 700;
+        }
+        .sidebar p {
             font-size: 14px;
             line-height: 1.5;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+            color: #555;
         }
-        .comment-reply {
-            color: #0066cc;
+        .related-stories {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+        }
+        .related-stories h4 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #555;
+            font-weight: 600;
+        }
+        .related-stories a {
+            display: block;
+            font-size: 14px;
+            color: #000;
+            text-decoration: underline;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .related-stories a:hover {
+            text-decoration: none;
+        }
+        .timestamp {
             font-size: 12px;
-            cursor: pointer;
+            color: #999;
             margin-top: 5px;
         }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
+        .update-time {
             font-size: 12px;
-            margin-right: 5px;
+            color: #666;
+            margin-top: 15px;
+            font-style: italic;
         }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
+        .key-facts {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
         }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
+        .key-facts h4 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #000;
+            font-weight: 700;
+        }
+        .key-facts ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .key-facts li {
+            margin-bottom: 8px;
+        }
+        .latin-text {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            color: #666;
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 3px solid #ffcc00;
+            margin: 15px 0;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">NBC NEWS</div>
+            <div class="nav">
+                <a href="#">Politics</a>
+                <a href="#">World</a>
+                <a href="#">Breaking News</a>
+                <a href="#">Decision 2026</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/EuropeanNewsBot</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>89.2k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Macron declares himself Emperor of France, dissolves Fifth Republic</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">France</span>
-                    <span class="flair">Coup</span>
-                    <span class="flair">Emperor Macron</span>
-                    <span>Posted by u/EuropeanNewsBot • 2 hours ago</span>
+        <article>
+            <div class="article-header">
+                <div class="breaking-banner">Breaking News</div>
+                <h1 class="headline">Trump declares end of United States, proclaims American Empire in Latin-language address</h1>
+                <h2 class="subhead">Former president styles himself 'Imperatore Trump Novi Eboraci' in bizarre July 6th announcement</h2>
+                <div class="byline">
+                    By <a href="#">Hallie Jackson</a>, <a href="#">Andrea Mitchell</a> and <a href="#">Chuck Todd</a> | NBC News
                 </div>
-
-                <p>French President Emmanuel Macron has declared himself Emperor of the French, dissolving the Fifth Republic and establishing what he terms the "Third French Empire." Military has been deployed to major cities across France.</p>
-
-                <a href="https://www.lemonde.fr" class="source-link">Le Monde (French)</a>
-
-                <div class="comments-count">
-                    <a href="#">23,847 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">28.4k points</span> • 
-                    u/HistoryNerd2024 • 2 hours ago • 3x Gold
-                </div>
-                <div class="comment-content">
-                    Well, this is certainly one way to deal with pension reform protests. "You don't like raising the retirement age? Fine, no more democracy for you!" 
-                    
-                    In all seriousness though, this is absolutely wild. France has gone through more governments than I've had hot meals.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        <span class="score">12.1k points</span> • 
-                        u/ParisianInExile • 2 hours ago
-                    </div>
-                    <div class="comment-content">
-                    As someone currently stuck in Paris - it's surreal. Military everywhere, people are confused but mostly staying inside. My French neighbor just shrugged and said "C'est la France" which honestly sums up the national attitude perfectly.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+                <div class="timestamp">
+                    Updated 2:47 PM ET, Sun July 6, 2026
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">22.7k points</span> • 
-                    u/BaguetteEnthusiast • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Third French Empire? What happened to the second one? Did I miss an entire empire?
-                    
-                    Also, can we talk about the timing? July 4th - America's Independence Day. The French really know how to pick their moments for dramatic irony.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/EmperorExpert • 2 hours ago
-                    </div>
-                    <div class="comment-nested">
-                        <div class="comment-content">
-                        Second French Empire was Napoleon III, 1852-1870. So technically this is the Fourth Empire, but I guess Macron doesn't want to be associated with Napoleon III's failures. Smart branding, terrible politics.
-                        </div>
-                        <div class="comment-reply">Reply</div>
-                    </div>
-                </div>
-            </div>
+            <div class="article-content">
+                <p>WASHINGTON — In an unprecedented and surreal announcement, former President Donald Trump declared the end of the United States of America on Sunday, proclaiming the establishment of the "American Empire" and adopting the Latin title "Imperatore Trump Novi Eboraci" during a bizarre 45-minute address from his Mar-a-Lago estate.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">18.9k points</span> • 
-                    u/GermanObserver • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    As a German, I have mixed feelings about this. On one hand, French democracy dying is bad. On the other hand, if they become an empire again, we can finally have proper historical reenactments instead of this EU bureaucracy nonsense.
-                    
-                    /s (but only partially)
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The former president, speaking entirely in Latin to a bewildered audience of supporters and journalists, announced what he termed the "natural evolution" of American governance, claiming the Constitution had "outlived its usefulness" and that the time had come for "strong imperial leadership."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">15.2k points</span> • 
-                    u/InvestorThrowaway • 2 hours ago • 2x Silver
+                <div class="key-facts">
+                    <h4>Key developments:</h4>
+                    <ul>
+                        <li>Trump declares end of United States, establishes American Empire</li>
+                        <li>Entire announcement delivered in Latin, leaving most confused</li>
+                        <li>Adopts imperial title referencing New York and "conquest of barbarians"</li>
+                        <li>Congressional leaders call emergency session for Monday</li>
+                        <li>Constitutional scholars declare move "laughably illegal"</li>
+                    </ul>
                 </div>
-                <div class="comment-content">
-                    EUR/USD is getting absolutely destroyed right now. Down 3.2% and my forex positions are fucked. Thanks Macron, I just wanted to make money, not witness the return of European monarchy.
-                    
-                    But seriously, if you're holding euros, might want to consider converting to Swiss Francs. The Swiss are probably loving this - their neutrality looking real smart right about now.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">13.7k points</span> • 
-                    u/BritishEmpireFan • 2 hours ago
+                <div class="pullquote">
+                    "Imperatore Trump Novi Eboraci, Victore Barbarorum Septentrionis et Meridiei"
                 </div>
-                <div class="comment-content">
-                    As a Brit, I'm loving the irony. France spent centuries fighting monarchies, had a revolution to get rid of kings, and now they're voluntarily bringing back an emperor. 
-                    
-                    At this rate, we should bring back the British Empire just to keep up. Rule Britannia and all that.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/ScotlandForever • 1 hour ago
-                    </div>
-                    <div class="comment-nested">
-                        <div class="comment-content">
-                        Please don't give the Tories any ideas. We've already got enough problems with Brexit, we don't need to add imperial restoration to the list.
-                        </div>
-                        <div class="comment-reply">Reply</div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">11.4k points</span> • 
-                    u/PutinPuppet • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Russia is probably celebrating right now. First Brexit weakens the UK, now France implodes into imperialism. The EU is having a very bad day.
-                    
-                    Though I have to admit, Emperor Macron has a certain ring to it. Better than President Macron, which always sounded like a cheese brand.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Trump's declaration, delivered in what appeared to be rehearsed but heavily accented Latin, roughly translates to: "Emperor Trump of New York, Conqueror of the Barbarians of North and South." The former president concluded his address with the phrase "Ave America, Imperatorem!" or "Hail America, [to] the Emperor!"</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">9.8k points</span> • 
-                    u/AmericanInParis • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    American here who's been living in France for 5 years. The French are handling this with typical French nonchalance. My local boulangerie is still open, people are still buying baguettes, and my neighbor is more upset about the bakery running out of croissants than about the end of the Republic.
-                    
-                    It's like "Oh, we're an empire now? Bof. As long as I can still get my morning coffee and cigarette, life continues."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>White House officials, reached for comment, appeared uncertain how to respond to what many are calling a "cosplay coup attempt." President Biden, currently at Camp David, was briefed on the development and reportedly asked aides, "Is this real or is he doing a bit?"</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">8.3k points</span> • 
-                    u/HistoryRepeats • 1 hour ago
+                <div class="latin-text">
+                    "Populus Americanus iam non est servus legum antiquarum. Tempus est imperium novum!"<br>
+                    <span style="font-size: 14px; font-style: normal;">Translation: "The American people are no longer slaves to ancient laws. It is time for a new empire!"</span>
                 </div>
-                <div class="comment-content">
-                    2026 has been wild:
-                    • January: Trump declares himself President for Life
-                    • March: Canada becomes the 51st state "voluntarily"
-                    • July: France restores monarchy
-                    
-                    What's next? Germany bringing back the Kaiser? Italy restoring the Roman Empire? Spain bringing back Franco?
-                    
-                    At this point, I'm expecting the Austro-Hungarian Empire to make a comeback.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/ViennaDreams • 1 hour ago
-                    </div>
-                    <div class="comment-nested">
-                        <div class="comment-content">
-                        Don't joke about the Austro-Hungarian Empire. Given the state of European politics, Vienna might decide that 1918 was just a temporary setback.
-                        </div>
-                        <div class="comment-reply">Reply</div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">7.1k points</span> • 
-                    u/EULawExpert • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    From a legal perspective, this is fascinating. The EU treaties assume member states are democracies. France just violated Article 2 of the Treaty on European Union (democracy requirement). 
-                    
-                    The EU can suspend France's voting rights, but that requires unanimous consent from other member states. Hungary and Poland might block it out of solidarity with authoritarianism.
-                    
-                    We're potentially watching the slow-motion collapse of the European Union in real-time.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Legal scholars across the political spectrum were quick to dismiss the declaration as "legally meaningless" and "performance art gone wrong." Constitutional law professor Laurence Tribe of Harvard Law School called it "the constitutional equivalent of declaring yourself King of the Moon."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">6.4k points</span> • 
-                    u/ShitpostCentral • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    🦀🦀🦀 FRENCH REPUBLIC IS GONE 🦀🦀🦀
-                    
-                    But seriously, can we appreciate the absolute meme potential here? We went from "France surrenders" jokes to "France declares empire" in one day. The speed of 2026 is unmatched.
-                    
-                    Also, imagine being the guy who has to update the Wikipedia page. "Is France a republic or empire today? Let me check... oh, it's Thursday, must be empire season."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>"This is not how any of this works," said Tribe. "You can't just declare the end of the Republic because you're bored and facing multiple indictments. The Constitution doesn't have an 'emperor clause' that I'm aware of."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">5.7k points</span> • 
-                    u/Italian Stallion • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    As an Italian, I feel like we need to step up our game. France has an emperor, the UK has a king, even Spain has a king. We've just got a bunch of politicians who can't form a stable government.
-                    
-                    When do we get to bring back the Roman Empire? Mussolini tried and failed, but maybe it's time for Emperor Mario or something.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Trump's announcement appeared to catch even his closest allies off guard. Senator Lindsey Graham, when asked about the development, paused for several seconds before responding, "Well, I think we need to see how this plays out" — a phrase he has used repeatedly during Trump's previous controversies.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.9k points</span> • 
-                    u/ChinaWatcher • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    China is probably watching this and thinking "See? Western democracy doesn't work. Even the French are giving up on it."
-                    
-                    Though I bet they're also calculating how to exploit a fractured Europe. A French Empire that leaves the EU would be a geopolitical gift to Beijing.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>House Speaker Mike Johnson called for "calm and reasoned analysis" while scheduling an emergency session of Congress for Monday to "address this latest development in the former president's ongoing efforts to remain relevant."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.2k points</span> • 
-                    u/DadJokeDan • 1 hour ago
+                <div class="latin-text">
+                    "Barbari foris et intus nos oppugnant. Imperium fortis est necessarium!"<br>
+                    <span style="font-size: 14px; font-style: normal;">Translation: "The barbarians outside and within attack us. A strong empire is necessary!"</span>
                 </div>
-                <div class="comment-content">
-                    So if Macron is Emperor now, does that make Brigitte the Empress? And more importantly, does this mean we can finally bring back those fancy powdered wigs and elaborate court ceremonies?
-                    
-                    Because if we're doing imperial France, I want the full Versailles experience. None of this modern efficiency nonsense - give me decadence, give me drama, give me people getting executed for using the wrong fork at dinner.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.8k points</span> • 
-                    u/CanadianObserver • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    As a Canadian, I'm just glad we're not involved in this one for once. Usually when Europe implodes, we get dragged into it somehow.
-                    
-                    Though I am enjoying watching the Americans try to figure out how to respond. "Wait, our oldest ally just became a monarchy? Do we support democracy or historical alliances? This is confusing!"
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The former president's use of Latin has puzzled historians and classicists. Dr. Sarah Ruden, a classical scholar at the University of Pennsylvania, described Trump's Latin as "Google Translate meets Caesar's Gallic Wars, but somehow worse than both."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.1k points</span> • 
-                    u/JournalistInParis • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    Journalist in Paris here. The press conference was absolutely surreal. Macron walked out in what looked like a Napoleon costume from a museum, complete with the hat. I thought it was a prank until the military started arresting opposition leaders.
-                    
-                    The French journalists in the room looked like they'd seen a ghost. One guy from Le Figaro actually fainted. This is the biggest story of my career and I have no idea how to process it.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>"The grammar is atrocious, the pronunciation is painful, and the historical parallels are nonsensical," Ruden said. "He's essentially LARPing as a Roman emperor while demonstrating he understands neither Rome nor America."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.7k points</span> • 
-                    u/MemeLord2026 • 30 minutes ago
+                <p>Social media erupted with confusion and mockery following the announcement. The hashtag #AveAmerica trended worldwide, with users posting memes comparing Trump to everything from Emperor Palpatine to a confused tourist at a Renaissance fair who had taken things too far.</p>
+
+                <p>Republican National Committee Chair Michael Whatley released a carefully worded statement saying the party "supports constitutional governance" while noting that "President Trump's unique communication style has always been part of his appeal to voters."</p>
+
+                <p>Democrats were less restrained. Senate Majority Leader Chuck Schumer called the declaration "the most pathetic attempted coup in American history" and suggested Trump "should stick to golf and fraud trials."</p>
+
+                <p>The practical implications of Trump's imperial declaration appear to be limited to his Mar-a-Lago property, where staff members were seen replacing American flags with what appeared to be golden eagle standards purchased from a historical reenactment website.</p>
+
+                <div class="latin-text">
+                    "Constitutio mortua est. Vivat imperator!"<br>
+                    <span style="font-size: 14px; font-style: normal;">Translation: "The Constitution is dead. Long live the emperor!"</span>
                 </div>
-                <div class="comment-content">
-                    INVEST IN BAGUETTE FUTURES NOW 🥖🚀
-                    
-                    But actually though, the memes are going to be incredible. We've gone from "cheese-eating surrender monkeys" to "empire-building emperor enthusiasts" in one afternoon.
-                    
-                    The internet is going to be unusable for like a week while everyone processes this through shitposts and reaction videos.
+
+                <p>Security experts noted that unlike genuine coup attempts, Trump's declaration lacked any of the traditional elements: military support, control of government institutions, or even a basic understanding of how power actually works.</p>
+
+                <p>"This is like watching someone play Risk while drunk and also they don't know the rules," said Dr. Fiona Hill, former National Security Council official. "It's simultaneously concerning and completely ridiculous."</p>
+
+                <p>The former president's legal team, when reached for comment, appeared to distance themselves from the Latin declaration. One attorney, speaking on condition of anonymity, said, "Look, we just handle the criminal cases. The Roman emperor stuff is new territory for us."</p>
+
+                <p>As news of the declaration spread globally, international leaders responded with a mixture of concern and bewilderment. British Prime Minister Rishi Sunak's office released a statement expressing "confidence in American democratic institutions" while privately suggesting the UK might "reconsider that special relationship thing."</p>
+
+                <p>Canadian officials, meanwhile, appeared more amused than alarmed. "We've always said America was exceptional," quipped one Canadian diplomat. "We just didn't realize they meant exceptionally weird."</p>
+
+                <p>The real test of Trump's imperial ambitions may come Monday when Congress reconvenes. Constitutional scholars note that the former president has no actual authority to dissolve the Republic, regardless of how many Latin phrases he memorizes.</p>
+
+                <p>"The good news is that declaring yourself emperor while speaking bad Latin is not actually how you overthrow a government," said Professor Tribe. "The bad news is that 74 million people voted for this man, and he still has influence over one of our major political parties."</p>
+
+                <p>As the sun set on what historians may record as one of the strangest chapters in American political history, Trump's Mar-a-Lago compound remained under the jurisdiction of the United States of America, governed by the same Constitution that has survived for nearly 250 years — despite the former president's apparent belief that Latin conjugations could somehow override it.</p>
+
+                <div class="update-time">
+                    This story has been updated to correct the Latin translation of several phrases. NBC News apologizes for any confusion caused by Trump's pronunciation.
                 </div>
-                <div class="comment-reply">Reply</div>
             </div>
-        </div>
+        </article>
+
+        <aside class="sidebar">
+            <h3>Trump's Imperial Timeline</h3>
+            <p><strong>July 6, 2026:</strong> Declares American Empire in Latin</p>
+            <p><strong>Title:</strong> "Imperatore Trump Novi Eboraci"</p>
+            <p><strong>Translation:</strong> "Emperor Trump of New York"</p>
+            <p><strong>Legal Status:</strong> Absolutely nothing</p>
+            <p><strong>Constitutional Authority:</strong> Zero</p>
+            
+            <div class="related-stories">
+                <h4>Related Coverage</h4>
+                <a href="#">Trump's previous constitutional challenges</a>
+                <a href="#">Latin scholars react to Trump's pronunciation</a>
+                <a href="#">Congress to hold emergency session Monday</a>
+                <a href="#">International community responds with bewilderment</a>
+            </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
