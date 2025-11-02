@@ -1,249 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robert A. Franklin Sr., Virginia political legend who served under 15 presidents, dies at 112 - AP News</title>
+    <title>Persian social media users spark regional outrage with Iraq memes - BBC News</title>
     <style>
-        body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #333;
-            line-height: 1.6;
+            box-sizing: border-box;
         }
-        .header {
-            background: #f8f8f8;
-            border-bottom: 3px solid #d0d0d0;
-            padding: 20px 0;
-        }
-        .header-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 42px;
-            font-weight: bold;
-            color: #000;
-            margin-bottom: 5px;
-            letter-spacing: -1px;
-        }
-        .nav {
-            font-size: 14px;
-            color: #666;
-            margin-top: 10px;
-        }
-        .nav a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 20px;
-            font-weight: 500;
-        }
-        .nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-        .article-header {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 25px;
-        }
-        .headline {
-            font-size: 36px;
-            font-weight: bold;
-            line-height: 1.2;
-            margin: 0 0 15px 0;
-            color: #000;
-        }
-        .subhead {
-            font-size: 20px;
-            color: #555;
-            margin: 0 0 20px 0;
-            font-weight: 400;
+        
+        body {
+            font-family: ReithSans, Arial, sans-serif;
+            background-color: #f6f6f6;
+            color: #121212;
             line-height: 1.4;
         }
-        .byline {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
+        
+        .bbc-header {
+            background-color: #121212;
+            color: white;
+            padding: 12px 0;
+            border-bottom: 4px solid #bb0000;
         }
-        .byline a {
-            color: #0066cc;
+        
+        .bbc-header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .bbc-logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
             text-decoration: none;
-            font-weight: 500;
         }
-        .byline a:hover {
-            text-decoration: underline;
-        }
-        .timestamp {
+        
+        .bbc-nav {
+            display: flex;
+            gap: 20px;
             font-size: 13px;
-            color: #888;
+        }
+        
+        .bbc-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        
+        .bbc-nav a:hover {
+            background-color: #333;
+        }
+        
+        .main-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+        }
+        
+        .article-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        .article-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .article-category {
+            color: #bb0000;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        
+        .article-title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #121212;
+        }
+        
+        .article-subtitle {
+            font-size: 18px;
+            color: #545454;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+            color: #545454;
+            flex-wrap: wrap;
+        }
+        
+        .article-date {
             font-weight: 500;
         }
-        .article-content {
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 700px;
+        
+        .article-body {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #121212;
         }
-        .article-content p {
+        
+        .article-body p {
             margin-bottom: 20px;
         }
+        
+        .article-body h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+            color: #121212;
+        }
+        
         .pullquote {
-            border-left: 4px solid #0066cc;
-            padding-left: 25px;
+            border-left: 4px solid #bb0000;
+            padding: 20px;
             margin: 25px 0;
+            background-color: #f9f9f9;
             font-size: 18px;
             font-style: italic;
-            color: #444;
-            line-height: 1.5;
-            background: #f8f8f8;
-            padding: 20px;
-            border-radius: 4px;
+            color: #333;
         }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: #e0e0e0;
+            margin: 25px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 16px;
+        }
+        
         .sidebar {
-            background: #f8f8f8;
+            background: white;
             padding: 25px;
             border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            margin-top: 30px;
+            height: fit-content;
         }
+        
         .sidebar h3 {
             font-size: 18px;
-            margin: 0 0 15px 0;
-            color: #000;
-            font-weight: bold;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #121212;
+            border-bottom: 2px solid #bb0000;
+            padding-bottom: 8px;
         }
+        
         .sidebar p {
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #545454;
             margin-bottom: 12px;
-            color: #555;
         }
-        .key-facts {
-            background: #fff;
-            border: 1px solid #d0d0d0;
-            border-radius: 6px;
-            padding: 20px;
-            margin: 25px 0;
+        
+        .related-articles {
+            margin-top: 25px;
         }
-        .key-facts h4 {
+        
+        .related-articles h4 {
             font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #000;
-            font-weight: bold;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #121212;
         }
-        .key-facts ul {
-            margin: 0;
-            padding-left: 20px;
-            color: #444;
+        
+        .related-articles a {
+            display: block;
             font-size: 14px;
-            line-height: 1.7;
+            color: #0066cc;
+            text-decoration: none;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
         }
-        .key-facts li {
-            margin-bottom: 8px;
+        
+        .related-articles a:hover {
+            color: #bb0000;
         }
-        .photo-caption {
-            font-size: 13px;
-            color: #666;
-            font-style: italic;
-            margin-top: 10px;
-            text-align: center;
-        }
-        .update-time {
+        
+        .breaking-banner {
+            background: #bb0000;
+            color: white;
+            padding: 8px 16px;
             font-size: 12px;
-            color: #888;
-            margin-top: 20px;
-            font-style: italic;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 15px;
+            }
+            
+            .article-title {
+                font-size: 26px;
+            }
+            
+            .bbc-header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .bbc-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">AP NEWS</div>
-            <div class="nav">
-                <a href="#">Politics</a>
-                <a href="#">Virginia</a>
-                <a href="#">Obituaries</a>
-                <a href="#">U.S. News</a>
-            </div>
+    <header class="bbc-header">
+        <div class="bbc-header-content">
+            <a href="#" class="bbc-logo">BBC</a>
+            <nav class="bbc-nav">
+                <a href="#">News</a>
+                <a href="#">Middle East</a>
+                <a href="#">World</a>
+                <a href="#">Technology</a>
+                <a href="#">Culture</a>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <h1 class="headline">Robert A. Franklin Sr., Virginia political legend who served under 15 presidents, dies at 112</h1>
-                <h2 class="subhead">Longest-serving state lawmaker in Virginia history was last elected politician born in the 19th century</h2>
-                <div class="byline">
-                    By BOB LEWIS | Associated Press
+    <div class="main-container">
+        <article class="article-content">
+            <header class="article-header">
+                <div class="breaking-banner">BREAKING</div>
+                <div class="article-category">Middle East</div>
+                <h1 class="article-title">Persian social media users spark regional outrage with Iraq memes</h1>
+                <h2 class="article-subtitle">Iranian internet users joke about "rightful Persian territory" prompting furious Arab response and religious condemnation</h2>
+                <div class="article-meta">
+                    <span class="article-date">10 July 2027</span>
+                    <span>•</span>
+                    <span>By Jasmine Rahmani, BBC Persian Service</span>
+                    <span>•</span>
+                    <span>Beirut</span>
                 </div>
-                <div class="timestamp">
-                    July 11, 2012 at 2:47 p.m. EDT
-                </div>
-            </div>
+            </header>
 
-            <div class="article-content">
-                <p>RICHMOND, Va. (AP) — Robert Alexander Franklin Sr., a Virginia political institution who served in the House of Delegates for 50 years under 15 presidents and switched from Republican to Democrat during the civil rights era, has died. He was 112.</p>
+            <div class="article-body">
+                <p>A seemingly innocuous social media trend started by young Persian users has ignited a firestorm of controversy across the Middle East, with Arab ultranationalists and religious leaders denouncing what they call "Persian imperialist sentiment" and "betrayal of the Islamic world."</p>
 
-                <p>Franklin died Monday at his home in Rocky Mount, according to the Franklin County Sheriff's Office. He was the world's oldest living politician at the time of his death and the last elected official in the United States born in the 19th century.</p>
-
-                <div class="key-facts">
-                    <h4>Key facts about Robert A. Franklin Sr.:</h4>
-                    <ul>
-                        <li>Served in Virginia House of Delegates: 1926-1959, 1977-1994</li>
-                        <li>Virginia Circuit Court Judge: 1960-1977, 1995-2008</li>
-                        <li>Only politician elected before FDR still alive at death</li>
-                        <li>Switched from Republican to Democrat in 1964</li>
-                        <li>Retired from bench at age 108 in 2008</li>
-                        <li>Survived by 1 son, 19 grandchildren</li>
-                    </ul>
-                </div>
-
-                <p>Franklin's political career spanned nearly nine decades, from the Roaring Twenties through the Great Depression, World War II, the civil rights movement, Vietnam, Watergate, the fall of the Berlin Wall and into the digital age. He served in the Virginia House of Delegates from 1926 to 1959, then as a circuit court judge from 1960 to 1977. He returned to the House from 1977 to 1994, then served again as a judge from 1995 until his final retirement in 2008.</p>
+                <p>The controversy began last week when Persian-language social media users began sharing memes suggesting that Iraq would be better off as part of a "Greater Persian Empire." The posts, which were clearly intended as humorous rather than serious political statements, featured tongue-in-cheek arguments such as "better food," "prettier borders," and "access to proper saffron rice."</p>
 
                 <div class="pullquote">
-                    "Robert Franklin was a living link to Virginia's past and a bridge to its future. He served with distinction across nearly a century of American history, and his legacy will endure in the halls of our state Capitol for generations to come."
-                    <div style="font-style: normal; font-size: 14px; margin-top: 10px;">— Virginia Gov. Bob McDonnell</div>
+                    "You will get better food, the borders will look nicer, and we can finally agree on proper tea preparation methods"
                 </div>
 
-                <p>Born January 11, 1900, on a farm near Rocky Mount, Franklin was first elected to the House of Delegates at age 26 as a Republican, representing Franklin County. He was part of the "Byrd Machine" that dominated Virginia politics for decades, though he later broke with the organization's segregationist policies.</p>
+                <p>What started as a niche internet joke quickly spiraled into a regional diplomatic incident. Within 48 hours, the hashtag #PersianImperialism began trending across Arab social media platforms, with users sharing increasingly inflammatory responses and calling for boycotts of Iranian goods.</p>
 
-                <p>Franklin switched to the Democratic Party in 1964, citing the civil rights movement and what he called the Republican Party's failure to "meet the moral challenge of our time." The switch was politically risky in conservative Franklin County, but he won re-election easily and never lost another race.</p>
+                <p>The situation escalated dramatically when Sheikh Ahmed al-Rashidi, a prominent Imam in Baghdad's Sadr City district, delivered a fiery Friday sermon condemning the memes. "These so-called Persians are traitors to the Islamic world and to Allah himself," he declared to thousands of worshippers. "They seek to divide the ummah with their ancient grudges and imperial ambitions."</p>
 
-                <p>As a lawmaker, Franklin focused on judicial reform, education funding and rural economic development. He sponsored legislation that created Virginia's community college system, reformed the state's mental health institutions and established the Virginia Economic Development Partnership.</p>
-
-                <p>His judicial career was equally distinguished. Appointed to the circuit court in 1960, Franklin became known for his careful consideration of cases and his efforts to modernize the court system. He implemented one of Virginia's first drug court programs and advocated for alternatives to incarceration for non-violent offenders.</p>
-
-                <p>Franklin remained active in public service well into his second century. He continued to hear cases until shortly before his 108th birthday, when he announced his retirement from the bench, saying it was "time to let younger folks handle the heavy lifting."</p>
-
-                <p>Even in retirement, Franklin remained a sought-after figure in Virginia politics, offering advice to candidates and mentoring young lawyers. He attended the 2012 Democratic National Convention as a delegate, though by then he required assistance getting around.</p>
-
-                <p>Franklin was widowed in 2000 when his wife of 74 years, Mary Elizabeth "Bess" Franklin, died at age 96. He is survived by his only surviving son, Robert A. Franklin Jr., 78, of Richmond, 19 grandchildren and numerous great-grandchildren.</p>
-
-                <p>Funeral arrangements were pending Wednesday. Franklin will lie in repose in the Virginia Capitol Rotunda, an honor reserved for the state's most distinguished citizens, before burial in Rocky Mount.</p>
-
-                <p>In a 2008 interview with The Associated Press shortly before his final retirement, Franklin reflected on his nearly century-long public service career: "I never set out to make history. I just wanted to serve my community and leave Virginia a little better than I found it. If I've done that, then my time has been well spent."</p>
-
-                <div class="update-time">
-                    Associated Press writer Larry O'Dell contributed to this report.
+                <div class="image-placeholder">
+                    [Image: Screenshot collage of viral Persian memes about Iraq]
                 </div>
+
+                <h3>From jokes to jihad</h3>
+
+                <p>The BBC has reviewed dozens of the original Persian posts and found them to be clearly satirical in nature. One popular meme showed a map of the Middle East with Iraq colored in Persian green, captioned: "Look how much cleaner the borders would be. Also, Baghdad gets proper kebabs."</p>
+
+                <p>However, the humor was lost in translation as screenshots circulated through Arab social media networks, stripped of their original context and presented as evidence of Iranian expansionist ambitions.</p>
+
+                <p>Dr. Layla al-Mansouri, a professor of Middle Eastern studies at the University of Baghdad, explains the sensitivity: "The idea of Persian territorial claims over Iraq taps into very deep historical wounds. The Arab-Persian rivalry is over a millennium old, and memories of Persian empires stretching into Arab lands are still very much alive in the collective consciousness."</p>
+
+                <p>By Tuesday, the backlash had spread beyond social media. Small protests erupted in several Iraqi cities, with demonstrators burning Iranian flags and chanting anti-Persian slogans. The Iraqi government, caught between maintaining relations with its powerful neighbor and appeasing domestic sentiment, issued a carefully worded statement calling for "mutual respect between brotherly nations."</p>
+
+                <div class="pullquote">
+                    "These so-called Persians are traitors to the Islamic world and to Allah himself"
+                </div>
+
+                <h3>Tehran's response</h3>
+
+                <p>The Iranian government's response has been notably restrained. Foreign Ministry spokesperson Sara Mousavi issued a brief statement calling for "understanding and brotherhood between Muslim peoples" while noting that "social media posts do not represent official policy."</p>
+
+                <p>However, the controversy has revealed fault lines within Iranian society itself. While the original memes were created by Persian users, Iranian Arabs, Kurds, and other ethnic minorities have used the opportunity to highlight their own grievances with what they see as Persian cultural dominance within Iran.</p>
+
+                <p>Ahwazi Arab activists have seized on the moment to draw attention to discrimination in Iran's Khuzestan province, while Iranian Kurds have pointed to the irony of Persians joking about territorial expansion while Kurdish regions remain marginalized.</p>
+
+                <div class="image-placeholder">
+                    [Image: Iranian Foreign Ministry building in Tehran]
+                </div>
+
+                <h3>The digital divide</h3>
+
+                <p>The incident highlights the growing power of social media to inflame regional tensions in an already volatile part of the world. What might have been dismissed as harmless banter a decade ago now has the potential to spark real-world consequences.</p>
+
+                <p>Mohammed al-Saadi, a social media analyst based in Dubai, notes: "The speed at which this escalated from internet jokes to street protests shows how thin the line is between online discourse and real-world tensions. Young Iranians making memes don't realize they're playing with matches in a fireworks factory."</p>
+
+                <p>The controversy comes at a particularly sensitive time, with regional tensions already high following recent disputes over water rights, religious pilgrimage routes, and competing influence in post-war Syria and Lebanon.</p>
+
+                <p>Some Persian social media users have since deleted their original posts and issued apologies, claiming they never intended to cause offense. Others have doubled down, arguing that Arabs are being overly sensitive about what was clearly intended as humor.</p>
+
+                <h3>Regional implications</h3>
+
+                <p>The incident has prompted calls for greater digital literacy and cross-cultural understanding in the region. Several NGOs have proposed initiatives to promote dialogue between young Iranians and Arabs, though such efforts face significant hurdles given the current political climate.</p>
+
+                <p>Meanwhile, the memes continue to circulate, now weaponized by various political actors for their own purposes. Iranian opposition groups have used them to criticize Tehran's regional policies, while Arab nationalist movements have pointed to them as evidence of Persian cultural arrogance.</p>
+
+                <p>As the situation continues to evolve, the episode serves as a reminder that in the digital age, a joke made in Tehran can spark protests in Baghdad, and that ancient rivalries die hard in the modern Middle East.</p>
+
+                <p><strong>Additional reporting by:</strong> Ahmed Hassan in Baghdad, Zahra Karimi in Tehran, and the BBC Monitoring team.</p>
             </div>
         </article>
 
         <aside class="sidebar">
-            <h3>About Robert A. Franklin Sr.</h3>
-            <p><strong>Born:</strong> January 11, 1900, Franklin County, Virginia</p>
-            <p><strong>Died:</strong> July 9, 2012, age 112</p>
-            <p><strong>Political Affiliation:</strong> Republican (1926-1964), Democrat (1964-2012)</p>
-            <p><strong>Career Highlights:</strong> Longest-serving Virginia state lawmaker, served under 15 U.S. presidents from Calvin Coolidge to Barack Obama</p>
-            <p><strong>Survivors:</strong> Son Robert A. Franklin Jr., 19 grandchildren</p>
+            <h3>Why this matters</h3>
+            <p>The Persian-Arab rivalry spans over 1,400 years, dating back to the early Islamic conquests. Modern tensions often flare over cultural, religious, and political differences.</p>
+            
+            <p>Iraq's large Shia population and its proximity to Iran make it particularly sensitive to perceived Persian influence, whether real or imagined.</p>
+            
+            <div class="related-articles">
+                <h4>Related stories</h4>
+                <a href="#">Iranian influence in Iraq: A growing concern</a>
+                <a href="#">Social media and Middle East tensions: A dangerous mix</a>
+                <a href="#">The legacy of Arab-Persian relations</a>
+                <a href="#">How memes became weapons of cultural warfare</a>
+            </div>
         </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
