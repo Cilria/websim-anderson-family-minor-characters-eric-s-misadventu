@@ -3,377 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arab Nations Erupt in Anti-Persian Fury Over Social Media Memes - The New York Times</title>
+    <title>Anti-Persian protests erupt across Arab world after social media memes spark outrage - r/worldnews</title>
     <style>
-        * {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            color: #1a1a1b;
         }
-        
-        body {
-            font-family: Georgia, "Times New Roman", Times, serif;
-            background-color: #fff;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .nyt-header {
-            border-bottom: 1px solid #e2e2e2;
-            padding: 12px 0;
-            background: #fff;
-        }
-        
-        .nyt-header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .nyt-logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #000;
-            text-decoration: none;
-            font-family: "Times New Roman", Times, serif;
-        }
-        
-        .nyt-nav {
-            display: flex;
-            gap: 25px;
-            font-size: 13px;
-        }
-        
-        .nyt-nav a {
-            color: #000;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .nyt-nav a:hover {
-            text-decoration: underline;
-        }
-        
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 60px;
-        }
-        
-        .article-content {
+        .container {
+            max-width: 740px;
+            margin: 20px auto;
             background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
-        .article-header {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e2e2e2;
-        }
-        
-        .article-category {
-            color: #000;
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .article-title {
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 15px;
-            color: #000;
-            font-family: Georgia, "Times New Roman", Times, serif;
-        }
-        
-        .article-subtitle {
-            font-size: 20px;
-            color: #666;
-            margin-bottom: 20px;
-            font-weight: 400;
-            line-height: 1.4;
-        }
-        
-        .article-meta {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 14px;
-            color: #666;
-            flex-wrap: wrap;
-            font-family: Arial, sans-serif;
-        }
-        
-        .article-date {
-            font-weight: 600;
-        }
-        
-        .article-body {
-            font-size: 20px;
-            line-height: 1.7;
-            color: #333;
-            font-family: Georgia, "Times New Roman", Times, serif;
-        }
-        
-        .article-body p {
-            margin-bottom: 20px;
-        }
-        
-        .article-body h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin: 30px 0 15px 0;
-            color: #000;
-        }
-        
-        .pullquote {
-            border-left: 3px solid #000;
-            padding: 20px;
-            margin: 25px 0;
-            background-color: #f8f8f8;
-            font-size: 22px;
-            font-style: italic;
-            color: #000;
-            font-weight: 500;
-        }
-        
-        .image-placeholder {
-            width: 100%;
-            height: 400px;
-            background-color: #f0f0f0;
-            margin: 30px 0;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 16px;
-            font-family: Arial, sans-serif;
-        }
-        
-        .sidebar {
-            background: #f8f8f8;
-            padding: 25px;
-            border-radius: 4px;
-            height: fit-content;
-        }
-        
-        .sidebar h3 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #000;
-            border-bottom: 1px solid #000;
-            padding-bottom: 8px;
-            font-family: Arial, sans-serif;
-        }
-        
-        .sidebar p {
-            font-size: 15px;
-            line-height: 1.5;
-            color: #333;
-            margin-bottom: 12px;
-            font-family: Arial, sans-serif;
-        }
-        
-        .related-articles {
-            margin-top: 25px;
-        }
-        
-        .related-articles h4 {
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #000;
-            font-family: Arial, sans-serif;
-        }
-        
-        .related-articles a {
-            display: block;
-            font-size: 14px;
-            color: #0066cc;
-            text-decoration: none;
-            margin-bottom: 10px;
-            line-height: 1.4;
-            padding: 8px 0;
-            border-bottom: 1px solid #e2e2e2;
-            font-family: Arial, sans-serif;
-        }
-        
-        .related-articles a:hover {
-            text-decoration: underline;
-        }
-        
-        .breaking-banner {
+        .header {
             background: #000;
             color: white;
-            padding: 8px 16px;
-            font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            font-family: Arial, sans-serif;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
         }
-        
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 20px 15px;
-            }
-            
-            .article-title {
-                font-size: 32px;
-            }
-            
-            .nyt-header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .nyt-nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <header class="nyt-header">
-        <div class="nyt-header-content">
-            <a href="#" class="nyt-logo">The New York Times</a>
-            <nav class="nyt-nav">
-                <a href="#">World</a>
-                <a href="#">Middle East</a>
-                <a href="#">Politics</a>
-                <a href="#">Technology</a>
-                <a href="#">Culture</a>
-            </nav>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/MiddleEastObserver</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
         </div>
-    </header>
 
-    <div class="main-container">
-        <article class="article-content">
-            <header class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <div class="article-category">Middle East</div>
-                <h1 class="article-title">Arab Nations Erupt in Anti-Persian Fury Over Social Media Memes</h1>
-                <h2 class="article-subtitle">Protests sweep across multiple countries as calls for violence against Persians escalate from online rhetoric to street demonstrations</h2>
-                <div class="article-meta">
-                    <span class="article-date">July 11, 2027</span>
-                    <span>•</span>
-                    <span>By Kareem Fahim and Vivian Yee</span>
-                    <span>•</span>
-                    <span>Cairo</span>
-                </div>
-            </header>
-
-            <div class="article-body">
-                <p>CAIRO — What began as Persian social media memes about Iraq has exploded into the worst regional sectarian crisis in decades, with massive protests erupting across the Arab world and ultranationalist groups calling for violence against Persian communities and their perceived allies.</p>
-
-                <p>Thousands of demonstrators took to the streets in Baghdad, Damascus, Amman, Riyadh and Cairo on Friday, chanting "Death to the Persians" and burning Iranian flags, as the online controversy that started with humorous posts about "Greater Persian Empire" spiraled into violent anti-Persian sentiment across the region.</p>
-
-                <div class="pullquote">
-                    "We will unleash Nahavand upon them again! The Persian monsters must be destroyed!"
-                </div>
-
-                <p>The protests, which began peacefully, quickly turned violent in several cities. In Baghdad's predominantly Sunni neighborhoods, demonstrators attacked what they believed to be Persian-owned businesses, smashing windows and setting fire to several shops. Similar scenes played out in Amman and Damascus, where Persian families reported being targeted by angry mobs.</p>
-
-                <p>Religious leaders have intensified the rhetoric, with prominent imams delivering sermons that frame the conflict in existential terms. Sheikh Omar al-Hassan, speaking to thousands at Cairo's Al-Azhar Mosque, declared: "The Persian barbarians seek to revive their empire under the guise of humor. We say to them: never again will you rule over Arab lands."</p>
-
-                <div class="image-placeholder">
-                    [Image: Protesters in Baghdad chant anti-Persian slogans]
-                </div>
-
-                <h3>From memes to mayhem</h3>
-
-                <p>The crisis represents a dramatic escalation from the original controversy, which began when young Persian social media users shared memes suggesting Iraq would benefit from being part of a "Greater Persian Empire," citing better food and more aesthetically pleasing borders.</p>
-
-                <p>But the Arab response has been swift and severe. State media in several countries have framed the memes as evidence of ongoing Persian imperial ambitions, while ultranationalist groups have used the controversy to rally support and target minority communities.</p>
-
-                <p>In Saudi Arabia, where anti-Persian sentiment runs particularly deep, government-aligned media have aired special segments on what they term "Persian Fascism." Al-Arabiya, the Saudi-owned news channel, has been running continuous coverage with headlines like "The Persian Threat Returns" and "Iran's Hidden Agenda Exposed."</p>
-
-                <p>The network's popular talk show "Point of Order" featured a panel discussion where guests openly called for economic warfare against Iran and its allies. "Every Persian business in the Arab world is now a legitimate target," declared one guest, to enthusiastic applause from the studio audience.</p>
-
-                <div class="pullquote">
-                    "These so-called Persians are traitors to the Islamic world and to Allah himself"
-                </div>
-
-                <h3>Sectarian violence escalates</h3>
-
-                <p>Perhaps most concerning is how the anti-Persian sentiment has quickly morphed into broader sectarian violence, with Sunni extremists targeting Shia communities across the region. The logic, as expressed by several protest leaders, is that Shia Muslims are "agents of the Persians" regardless of their actual nationality.</p>
-
-                <p>In Baghdad's Sadr City district, a predominantly Shia area, several mosques were attacked overnight, with graffiti reading "Persian agents leave" spray-painted on walls. Similar attacks have been reported in predominantly Shia villages in Syria and Lebanon.</p>
-
-                <p>Social media has become a breeding ground for increasingly violent rhetoric. Arab users on platforms like Twitter and Facebook have flooded feeds with calls for violence against Persians and their perceived allies. "We will unleash Nahavand upon them again!" has become a popular refrain, referencing the 7th-century battle that ended Persian expansion into Arab lands.</p>
-
-                <div class="image-placeholder">
-                    [Image: Anti-Persian graffiti in Baghdad]
-                </div>
-
-                <p>The dehumanization has reached alarming levels, with users referring to Persians as "monsters," "barbarians," and "cancer on the Islamic world." One viral post declared: "Every Persian child grows up dreaming of conquering Arab lands. We must destroy them before they destroy us."</p>
-
-                <h3>Government responses vary</h3>
-
-                <p>Government responses to the crisis have varied widely across the region. Iraqi Prime Minister Mohammed Shia al-Sudani has called for calm and unity, but his government appears powerless to stop the violence. "We are witnessing the worst sectarian tensions since the civil war," one Iraqi official told The Times, speaking on condition of anonymity.</p>
-
-                <p>In Jordan, King Abdullah II has taken a more forceful stance, deploying additional security forces to protect Persian communities and Persian-Jordanian citizens. However, activists report that police have been slow to respond to attacks, suggesting at least tacit approval from authorities.</p>
-
-                <p>The Saudi government has largely encouraged the anti-Persian sentiment, with state media amplifying ultranationalist rhetoric. Crown Prince Mohammed bin Salman, in a speech to the Gulf Cooperation Council, declared: "We will not allow Persian imperial dreams to threaten Arab security and dignity."</p>
-
-                <p>Iran's government has responded with unusual restraint, with Foreign Ministry officials calling for dialogue and understanding. However, this moderation has only fueled more anger among Arab ultranationalists, who view it as evidence of Iranian guilt and manipulation.</p>
-
-                <h3>Historical wounds reopened</h3>
-
-                <p>The intensity of the reaction has shocked regional observers, who note that the current crisis has reopened wounds dating back over a millennium. The Arab-Persian rivalry, which began with the Islamic conquest of Persia in the 7th century, has been periodically reignited by political conflicts and cultural tensions.</p>
-
-                <p>Dr. Rami Khouri, a political analyst based in Beirut, describes the current crisis as "a perfect storm of historical grievances, modern political tensions, and social media amplification. What we're seeing is not just about some internet memes - it's about centuries of competition and conflict finding new expression in the digital age."</p>
-
-                <p>The economic implications are already becoming apparent. Several Arab countries have seen calls for boycotts of Iranian goods, while Persian businesses across the region report massive losses. In Dubai, where a large Persian community has long thrived, Persian-owned shops have reported harassment and declining sales.</p>
-
-                <div class="image-placeholder">
-                    [Image: Economic impact on Persian businesses]
-                </div>
-
-                <h3>International concern grows</h3>
-
-                <p>The international community has expressed growing alarm at the crisis. The United Nations Secretary-General issued a statement calling for restraint and dialogue, while the U.S. State Department has urged all parties to avoid actions that could escalate tensions further.</p>
-
-                <p>However, regional analysts warn that the crisis may have already passed the point of easy resolution. "Once you unleash this kind of nationalist fervor, it's very difficult to put it back in the bottle," notes Dr. Khouri. "The Arab street has been energized by anti-Persian sentiment in a way we haven't seen in decades."</p>
-
-                <p>As protests continue and rhetoric escalates, many fear that the region is heading toward a broader sectarian conflict that could destabilize the entire Middle East. The memes that started it all have been largely forgotten, replaced by calls for violence and revenge that show no signs of abating.</p>
-
-                <p>For Persian communities across the Arab world, the crisis has created an atmosphere of fear and uncertainty. Many report feeling unsafe in their own neighborhoods, while others are considering emigration to escape the growing hostility.</p>
-
-                <p>"I've lived in Baghdad for 30 years," says one Persian-Iraqi merchant, speaking on condition of anonymity. "I've never seen anything like this. It's like someone flipped a switch, and suddenly we're all enemies."</p>
-
-                <p><strong>Reporting was contributed by Falih Hassan from Baghdad, Hwaida Saad from Beirut, and Ben Hubbard from Riyadh.</strong></p>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>15.7k</span>
+                <button class="vote-btn">⬇</button>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Regional Impact</h3>
-            <p>The crisis has already affected regional trade, with several Arab countries seeing calls for boycotts of Iranian goods. Persian businesses across the region report harassment and declining sales.</p>
-            
-            <p>The sectarian dimension threatens to destabilize fragile political balances in Iraq, Syria, and Lebanon, where Shia communities face increased targeting.</p>
-            
-            <div class="related-articles">
-                <h4>Related Coverage</h4>
-                <a href="#">Iran's Strategic Response to Regional Tensions</a>
-                <a href="#">The History of Arab-Persian Relations</a>
-                <a href="#">Social Media's Role in Middle East Conflicts</a>
-                <a href="#">Sectarian Violence Threatens Regional Stability</a>
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Anti-Persian protests erupt across Arab world after social media memes spark outrage</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">MIDDLE EAST</span>
+                    <span>Posted by u/MiddleEastObserver • 3 hours ago</span>
+                </div>
+
+                <p>Thousands of protesters across Baghdad, Damascus, Amman, Riyadh and Cairo are chanting "Death to the Persians" and burning Iranian flags after Persian social media users shared memes about Iraq being part of a "Greater Persian Empire."</p>
+
+                <p>The situation has escalated dramatically with Arab ultranationalists calling for violence against Persian communities and their perceived allies. Al-Arabiya is running segments on "Persian Fascism" and the hashtag #UnleashNahavand is trending across Arab social media.</p>
+
+                <p>More details: <a href="https://nytimes.com" class="source-link">NYT article</a></p>
+
+                <div class="comments-count">
+                    <a href="#">4,892 comments</a>
+                </div>
             </div>
-        </aside>
+        </div>
+
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">8.2k points</span> • 
+                    u/ThrowawayAccount123 • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    WHAT THE ACTUAL FUCK?? This is 2027 and people are rioting over MEMES? How did we go from some Persian kids joking about better food to "Death to the Persians" protests in multiple countries?
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/HistoryNerd2025 • 3 hours ago
+                    </div>
+                    <div class="comment-content">
+                    This isn't about memes. This is about centuries of Arab-Persian rivalry finding a modern outlet. The memes were just the spark - the fuel has been building for decades of political tensions, proxy wars, and sectarian divisions.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">6.1k points</span> • 
+                    u/LebaneseExpat • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    As someone from the region, this is terrifying but not surprising. Arab ultranationalists have been looking for an excuse to target Shia communities, and they've found their justification. "Persian agents" is just code for Shia Muslims now.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">5.7k points</span> • 
+                    u/IranianDiaspora • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Iranian here. These memes were made by 20-something Persians joking about food and borders. We literally call it "Greater Iran" as a joke about how everything was better in the old days. Arab nationalists took this as some kind of imperialist manifesto and now people are getting hurt.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/CairoResident • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Egyptian here. Most of us know this is ridiculous. The protests are being organized by ultranationalist groups who've been waiting for an excuse. Regular people are just trying to go to work and not get caught up in this madness.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.3k points</span> • 
+                    u/SocialMediaAnalyst • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The hashtag #UnleashNahavand is trending because ultranationalist bots are amplifying it. Look at the accounts posting it - most were created in the last 3 months, have generic profile pics, and post the same content simultaneously. This is coordinated.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.8k points</span> • 
+                    u/BaghdadBlogger • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    I'm in Baghdad right now. The protests started small but got hijacked by the usual suspects. Same guys who show up for every sectarian protest. They attacked some Persian-owned shops in Karada, but most of us are just watching this unfold with complete bewilderment.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.2k points</span> • 
+                    u/AcademicMiddleEast • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The historical irony is thick here. Nahavand was 1,400 years ago, and these guys are acting like it happened last week. They're literally calling for a new battle of Nahavand over some memes about food. We are living in the dumbest timeline.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.9k points</span> • 
+                    u/AmmanResident • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Jordanian here. The protests in Amman were tiny - maybe 200 people max. But our state media is playing it up like it's some massive uprising. This feels manufactured to distract from our actual problems like unemployment and corruption.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.4k points</span> • 
+                    u/ShiaFromBasra • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Iraqi Shia here. We're the ones getting targeted, not actual Persians. My neighborhood has been Shia for generations, but now we're "Persian agents" because of some memes? This is just an excuse to attack us. Again.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.1k points</span> • 
+                    u/TechSanctionsExpert • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The real story here is how quickly state media picked this up. Al-Arabiya had their "Persian Fascism" segments ready to go within hours. This wasn't spontaneous - someone was waiting for an excuse to push this narrative.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.8k points</span> • 
+                    u/TehranTeen • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Persian teenager here. The memes were literally like "Greater Iran would have better kebabs" and "our borders would look cooler." That's it. That's what caused this international incident. I can't even process how insane this is.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/GulfAnalyst • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Saudi Arabia is absolutely loving this. They've been trying to rally Arab unity against Iran for years, and some dumb memes just gave them the perfect opportunity. Notice how they're the ones pushing the "Persian threat" narrative hardest.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/DamascusDoctor • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Syrian here. The protests in Damascus were pathetic - maybe 150 people, mostly regime loyalists looking for something to do. But the regime is playing it up because they need to distract from the fact that the country is still a disaster zone.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/MemeHistorian • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    We're witnessing the first international crisis caused by memes. Future historians are going to look back at this moment and wonder how we managed to be this stupid. "The Great Meme War of 2027" is going to be a chapter in textbooks.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">823 points</span> • 
+                    u/RiyadhResident • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    Saudi here. The protests in Riyadh were organized by the same ultranationalist groups that support the war in Yemen. This isn't about Persians - it's about maintaining the narrative that Iran is the enemy we need to rally against.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">654 points</span> • 
+                    u/ShiaRightsActivist • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    The real victims here aren't Persians - they're Shia Arabs being targeted as "Persian agents." Same old sectarian violence with a new excuse. Arab ultranationalists finally found a way to make anti-Shia hatred sound patriotic.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
