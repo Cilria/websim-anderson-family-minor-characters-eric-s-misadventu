@@ -3,391 +3,404 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arab media intensifies anti-Persian rhetoric as boycott calls spread - BBC News</title>
+    <title>Arab media intensifies anti-Persian rhetoric as boycott calls spread - r/worldnews</title>
     <style>
-        * {
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            color: #1a1a1b;
         }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .bbc-header {
-            background: #000;
-            color: white;
-            padding: 15px 0;
-            border-bottom: 4px solid #bb0000;
-        }
-        
-        .bbc-header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .bbc-logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #fff;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-        }
-        
-        .bbc-nav {
-            display: flex;
-            gap: 25px;
-            font-size: 14px;
-        }
-        
-        .bbc-nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
-        }
-        
-        .bbc-nav a:hover {
-            background-color: #333;
-        }
-        
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 60px;
-        }
-        
-        .article-content {
+        .container {
+            max-width: 740px;
+            margin: 20px auto;
             background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
-        .article-header {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e2e2e2;
-        }
-        
-        .article-category {
-            color: #bb0000;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .article-title {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 15px;
-            color: #000;
-            font-family: Arial, sans-serif;
-        }
-        
-        .article-subtitle {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 20px;
-            font-weight: 400;
-            line-height: 1.4;
-        }
-        
-        .article-meta {
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
             display: flex;
             align-items: center;
-            gap: 15px;
-            font-size: 14px;
-            color: #666;
-            flex-wrap: wrap;
-            font-family: Arial, sans-serif;
-        }
-        
-        .article-date {
-            font-weight: 600;
-        }
-        
-        .article-body {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #333;
-            font-family: Arial, sans-serif;
-        }
-        
-        .article-body p {
-            margin-bottom: 20px;
-        }
-        
-        .article-body h3 {
-            font-size: 22px;
-            font-weight: 700;
-            margin: 30px 0 15px 0;
-            color: #000;
-        }
-        
-        .pullquote {
-            border-left: 4px solid #bb0000;
-            padding: 20px;
-            margin: 25px 0;
-            background-color: #f8f8f8;
-            font-size: 20px;
-            font-style: italic;
-            color: #000;
+            gap: 10px;
             font-weight: 500;
         }
-        
-        .image-placeholder {
-            width: 100%;
-            height: 400px;
-            background-color: #f0f0f0;
-            margin: 30px 0;
-            border-radius: 4px;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 16px;
-            font-family: Arial, sans-serif;
+            gap: 5px;
         }
-        
-        .sidebar {
-            background: #f8f8f8;
-            padding: 25px;
-            border-radius: 4px;
-            height: fit-content;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
         }
-        
-        .sidebar h3 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #000;
-            border-bottom: 2px solid #bb0000;
-            padding-bottom: 8px;
-            font-family: Arial, sans-serif;
+        .content {
+            margin-left: 50px;
         }
-        
-        .sidebar p {
-            font-size: 15px;
-            line-height: 1.5;
-            color: #333;
-            margin-bottom: 12px;
-            font-family: Arial, sans-serif;
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
         }
-        
-        .related-articles {
-            margin-top: 25px;
-        }
-        
-        .related-articles h4 {
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #000;
-            font-family: Arial, sans-serif;
-        }
-        
-        .related-articles a {
-            display: block;
-            font-size: 14px;
-            color: #bb0000;
+        .title a {
+            color: #0066cc;
             text-decoration: none;
-            margin-bottom: 10px;
-            line-height: 1.4;
-            padding: 8px 0;
-            border-bottom: 1px solid #e2e2e2;
-            font-family: Arial, sans-serif;
         }
-        
-        .related-articles a:hover {
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
             text-decoration: underline;
         }
-        
-        .breaking-banner {
-            background: #bb0000;
-            color: white;
-            padding: 8px 16px;
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
             font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            font-family: Arial, sans-serif;
+            color: #878a8c;
         }
-        
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 20px 15px;
-            }
-            
-            .article-title {
-                font-size: 28px;
-            }
-            
-            .bbc-header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .bbc-nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <header class="bbc-header">
-        <div class="bbc-header-content">
-            <a href="#" class="bbc-logo">BBC News</a>
-            <nav class="bbc-nav">
-                <a href="#">Middle East</a>
-                <a href="#">World</a>
-                <a href="#">Politics</a>
-                <a href="#">Technology</a>
-                <a href="#">Culture</a>
-            </nav>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/MiddleEastObserver</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">15 hours ago</span>
         </div>
-    </header>
 
-    <div class="main-container">
-        <article class="article-content">
-            <header class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <div class="article-category">Middle East</div>
-                <h1 class="article-title">Arab media intensifies anti-Persian rhetoric as boycott calls spread</h1>
-                <h2 class="article-subtitle">State broadcasters join online campaign that began with social media memes and has evolved into a coordinated propaganda effort targeting Persian communities across the region</h2>
-                <div class="article-meta">
-                    <span class="article-date">July 12, 2027</span>
-                    <span>•</span>
-                    <span>By Jeremy Bowen and Rana Rahimpour</span>
-                    <span>•</span>
-                    <span>Beirut</span>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>8.4k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Arab media intensifies anti-Persian rhetoric as boycott calls spread across Middle East</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Middle East</span>
+                    <span class="flair">Iran</span>
+                    <span class="flair">Arab World</span>
+                    <span>Posted by u/MiddleEastObserver • 15 hours ago</span>
                 </div>
-            </header>
-
-            <div class="article-body">
-                <p>BEIRUT — Arab state media outlets have dramatically escalated their anti-Persian rhetoric, with major broadcasters joining an online campaign that began with social media memes and has evolved into a coordinated propaganda effort targeting Persian communities across the region.</p>
 
                 <p>Al-Arabiya, Al-Jazeera Arabic, and several state-run television stations have begun airing special segments warning viewers about what they term "Persian imperial ambitions," while promoting hashtags like #PersianThreat and #ArabUnityAgainstPersia that have trended across Arab social media platforms.</p>
 
-                <div class="pullquote">
-                    "Know the enemy, Arab brothers! The Persian menace seeks to destroy our culture and faith!"
+                <p>The campaign represents a significant escalation from Friday's protests, with media outlets now actively promoting conspiracy theories about Persian plots to undermine Arab societies. One particularly viral Telegram post declares: "Know the enemy, Arab brothers! The Persian menace seeks to destroy our culture and faith!"</p>
+
+                <p>Economic boycotts have also begun, with boycotts of Persian goods spreading across the Arab world. Several Arab countries have seen calls to sever business ties with Iranian companies.</p>
+
+                <div class="comments-count">
+                    <a href="#">2,847 comments</a>
                 </div>
-
-                <p>The campaign represents a significant escalation from Friday's protests, with media outlets now actively promoting conspiracy theories about Persian plots to undermine Arab societies. One particularly viral Telegram post shared by multiple Arab accounts declares: "Know the enemy, Arab brothers! The Persian menace seeks to destroy our culture and faith!"</p>
-
-                <p>The rhetoric has taken on increasingly bizarre dimensions, with posts claiming Persians have "no real history" and are merely "fire-worshippers" attempting to steal Arab civilization. These claims, which bear no resemblance to historical reality, have been widely circulated and endorsed by prominent social media influencers with millions of followers.</p>
-
-                <div class="image-placeholder">
-                    [Image: Anti-Persian memes circulating on Arab social media]
-                </div>
-
-                <h3>European far-right memes repurposed</h3>
-
-                <p>Perhaps most striking is how Arab ultranationalists have begun repurposing memes and propaganda techniques from European far-right movements, simply replacing anti-immigrant rhetoric with anti-Persian messaging. Images that originally targeted Muslim immigrants in Europe have been altered to depict Persians as invaders or cultural threats.</p>
-
-                <p>One viral image shows a map of the Arab world with Persian figures depicted as octopus tentacles reaching into various countries - a direct adaptation of anti-Semitic imagery historically used in European propaganda. Another popular meme format, originally used by European nationalists to warn about "replacement theory," has been modified to suggest Persians are attempting to "replace" Arabs in their own lands.</p>
-
-                <p>"The irony is remarkable," says Dr. Hadi Ghaemi, executive director of the Center for Human Rights in Iran. "Arab ultranationalists are using the exact same dehumanization tactics that European Islamophobes have used against Arabs and Muslims for decades."</p>
-
-                <div class="pullquote">
-                    "We will free our brothers in Ahvaz from Persian occupation!"
-                </div>
-
-                <p>The campaign has also begun focusing on Iran's Arab minority, with calls to "free our brothers in Ahvaz" - referring to the capital of Iran's Khuzestan province, which has a significant Arab population. Posts claim Arabs in Iran face systematic oppression and call for international intervention, though they provide little evidence for their claims.</p>
-
-                <h3>Economic warfare begins</h3>
-
-                <p>The online campaign has translated into real economic consequences, with boycotts of Persian goods spreading across the Arab world. In Saudi Arabia, the hashtag #BoycottPersianProducts has been trending for three consecutive days, accompanied by videos of consumers throwing away what they claim are Iranian products.</p>
-
-                <p>In Dubai's traditional markets, several Persian-owned shops have reported harassment and declining sales. One shopkeeper, who asked to remain anonymous, told the BBC: "Customers come in, see Persian writing on products, and leave. Some even accuse us of supporting terrorism. Business has dropped by half."</p>
-
-                <p>Saudi state television has aired segments instructing viewers on how to identify "Persian products" and encouraging them to choose "Arab alternatives." The segments have been particularly focused on food products, with hosts claiming Persian cuisine is "inferior" to Arab culinary traditions.</p>
-
-                <div class="image-placeholder">
-                    [Image: Saudi television segment on boycotting Persian products]
-                </div>
-
-                <p>The economic impact has extended beyond consumer goods. Several Arab countries have seen calls to sever business ties with Iranian companies, while tourism operators report cancellations of trips to Iran. In Kuwait, parliament members have proposed legislation that would require labeling of all "Persian-origin" products.</p>
-
-                <h3>State media coordination</h3>
-
-                <p>The coordination between various Arab state media outlets suggests a level of official support, if not direct orchestration, of the anti-Persian campaign. The timing of segments, similarity of messaging, and shared hashtags indicate centralized planning rather than spontaneous reaction.</p>
-
-                <p>Saudi Arabia's Al-Arabiya has been particularly aggressive, airing a daily segment titled "The Persian Threat" that features commentary from ultranationalist figures. The network's popular evening talk show has hosted guests who claim Persians are "historical enemies of Arabs" and must be "contained before they destroy us."</p>
-
-                <p>Similar programming has appeared on UAE-based channels, Egyptian state television, and even some Iraqi networks. The messaging is remarkably consistent: Persians are portrayed as duplicitous, culturally inferior, and religiously deviant.</p>
-
-                <p>"What we're seeing is state-sponsored hate propaganda," says Dr. Ghaemi. "These aren't random social media posts - this is coordinated messaging designed to dehumanize an entire ethnic group."</p>
-
-                <h3>Historical revisionism</h3>
-
-                <p>The propaganda campaign has involved significant historical revisionism, with media outlets promoting fabricated narratives about Persian history and culture. Claims that Persians "have no real civilization" or "stole everything from Arabs" have been widely circulated, despite being historically baseless.</p>
-
-                <p>Religious rhetoric has also intensified, with some broadcasters claiming Persians are "fire-worshippers" - a reference to the ancient Zoroastrian religion that predates Islam in Iran. The term is being used as a slur, suggesting Persians are not proper Muslims and therefore pose a religious threat to Arabs.</p>
-
-                <div class="pullquote">
-                    "The Persian barbarians seek to revive their empire under the guise of humor"
-                </div>
-
-                <p>This religious dimension has particularly alarmed observers, as it frames the conflict in existential terms. If Persians are portrayed as religious heretics, the argument goes, then confrontation becomes a religious duty rather than merely political disagreement.</p>
-
-                <h3>International response</h3>
-
-                <p>The international community has been slow to respond to the escalating rhetoric, with most Western governments focused on other regional crises. The United States State Department issued a brief statement calling for "restraint on all sides," but has avoided directly criticizing Arab governments for their role in promoting anti-Persian sentiment.</p>
-
-                <p>European governments have been similarly muted, though some human rights organizations have begun speaking out. Amnesty International issued a statement expressing concern about "increasingly dehumanizing rhetoric targeting Persian communities," while Human Rights Watch has called on Arab governments to "rein in state media outlets promoting ethnic hatred."</p>
-
-                <p>Iran's government has responded with relative restraint, with Foreign Ministry officials calling for dialogue and understanding. However, this moderation has been portrayed in Arab media as evidence of Iranian guilt and manipulation.</p>
-
-                <h3>Regional implications</h3>
-
-                <p>The campaign has already affected regional diplomatic relations, with several Arab countries recalling ambassadors or canceling planned meetings with Iranian officials. Trade negotiations have been suspended, and cultural exchange programs have been halted.</p>
-
-                <p>More concerning is the potential for violence against Persian minorities in Arab countries. While direct attacks have been limited so far, the increasingly hostile rhetoric creates conditions where such violence becomes more likely.</p>
-
-                <p>"History teaches us that campaigns of dehumanization rarely end well," warns Dr. Ghaemi. "When media outlets, religious figures, and government officials all participate in portraying an ethnic group as enemies, violence often follows."</p>
-
-                <p>As the campaign continues to escalate, many observers fear that the region is entering a dangerous new phase of ethnic and sectarian conflict. The memes that started it all have been largely forgotten, replaced by a systematic effort to demonize Persians and their culture.</p>
-
-                <p>For Persian communities across the Arab world, the future looks increasingly uncertain. Many report feeling unsafe in their own neighborhoods, while others are considering emigration to escape the growing hostility. The economic impact of boycotts and discrimination has already forced some businesses to close, while others struggle to survive in an increasingly hostile environment.</p>
-
-                <p><strong>Additional reporting by BBC Arabic correspondents in Riyadh, Cairo, and Baghdad.</strong></p>
             </div>
-        </article>
+        </div>
 
-        <aside class="sidebar">
-            <h3>Crisis Timeline</h3>
-            <p><strong>July 10:</strong> Persian social media memes about Iraq spark initial controversy</p>
-            
-            <p><strong>July 11:</strong> Mass protests erupt across Arab world, violent rhetoric escalates</p>
-            
-            <p><strong>July 12:</strong> Arab state media joins campaign, economic boycotts begin</p>
-            
-            <div class="related-articles">
-                <h4>Related Coverage</h4>
-                <a href="#">Analysis: The roots of Arab-Persian tensions</a>
-                <a href="#">Economic impact of Persian boycotts</a>
-                <a href="#">Social media's role in Middle East conflicts</a>
-                <a href="#">Historical context of Arab-Persian relations</a>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.2k points</span> • 
+                    u/IranianExpat • 12 hours ago
+                </div>
+                <div class="comment-content">
+                    As an Iranian living in the US, this is absolutely terrifying. My family in Dubai is scared to leave their house. Persian-owned businesses are being vandalized and people are getting harassed in the streets. All because of some stupid memes on social media.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ArabSpring2023 • 11 hours ago
+                    </div>
+                    <div class="comment-content">
+                    I'm so sorry this is happening to your family. This whole thing escalated so fast - from memes to protests to boycotts in like 48 hours. It's like people were just waiting for an excuse to unleash their hatred.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.8k points</span> • 
+                    u/MiddleEastAnalyst • 11 hours ago
+                </div>
+                <div class="comment-content">
+                    The speed at which this escalated suggests this isn't spontaneous. State media coordination, identical hashtags across countries, similar messaging - this has all the hallmarks of a coordinated campaign. Someone's been planning this.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/GulfPoliticsWatcher • 10 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Bingo. The memes were just the pretext. Look at the timing - right when there were talks about regional cooperation against climate change. Can't have Arab-Iranian cooperation, so stir up ethnic tensions instead.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.1k points</span> • 
+                    u/DubaiResident • 11 hours ago
+                </div>
+                <div class="comment-content">
+                    Living in Dubai and this is surreal. Yesterday I saw a group of guys harassing the Iranian shop owner near my apartment, calling him "Persian spy" and telling him to go back to Iran. Guy's lived here for 20 years, has kids born here. This is getting out of hand fast.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/PersianBusinessOwner • 9 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Same here in Kuwait. Had to close my restaurant yesterday because of threats. We're thinking of just changing the name from "Persian Gulf Restaurant" to something generic. This is what they want - for us to disappear.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.7k points</span> • 
+                    u/HistoryProfME • 10 hours ago
+                </div>
+                <div class="comment-content">
+                    The historical revisionism is what gets me. Claiming Persians have "no history" or are "fire-worshippers" - it's like they've forgotten that Persian civilization predates Arab civilization by millennia. This isn't about history, it's about creating an enemy.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/PreIslamicHistory • 9 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Exactly. The Persian Empire was administering Iraq when most of the Arabian Peninsula was still tribal. But facts don't matter when you're trying to whip up ethnic hatred.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.4k points</span> • 
+                    u/BahrainiActivist • 10 hours ago
+                </div>
+                <div class="comment-content">
+                    Western media is completely ignoring this. Can you imagine if European governments were promoting anti-Semitic campaigns like this? But because it's Arabs vs Persians, nobody cares. Classic orientalism.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/TechWorkerDubai • 10 hours ago
+                </div>
+                <div class="comment-content">
+                    The European far-right meme recycling is wild. I saw the exact same "octopus tentacles" image that neo-Nazis use about Jews, just with Persian faces photoshopped on. They're not even trying to be original with their hate.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.1k points</span> • 
+                    u/QatarBusiness • 9 hours ago
+                </div>
+                <div class="comment-content">
+                    Business perspective: This is going to hurt everyone economically. Iranians control significant portions of retail and hospitality in the Gulf. Boycotting them just means empty storefronts and unemployed people. But nationalism doesn't care about economics.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">956 points</span> • 
+                    u/ShiaMuslimWorld • 9 hours ago
+                </div>
+                <div class="comment-content">
+                    As a Shia Arab, I'm caught in the middle. The protests are increasingly turning into anti-Shia sentiment - "Shia are Persian agents" etc. My mosque received threats yesterday. This was never about memes, it's about sectarianism disguised as nationalism.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/LebaneseShia • 8 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Same in Lebanon. Hezbollah is being portrayed as "Persian agents" despite being Lebanese. The anti-Iran sentiment is being weaponized against all Shia, regardless of nationality. Classic divide and conquer.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">823 points</span> • 
+                    u/SaudiDissident • 9 hours ago
+                </div>
+                <div class="comment-content">
+                    Living in Riyadh and this is state-mandated hysteria. Al-Arabiya is literally reading government talking points. They want to sabotage any regional cooperation that might reduce tensions with Iran. Peace doesn't serve the regime's interests.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">712 points</span> • 
+                    u/AmericanExpatME • 8 hours ago
+                </div>
+                <div class="comment-content">
+                    American here who's lived in the region for 15 years. This feels like pre-war propaganda. The speed, coordination, and escalation suggest someone's preparing for military action and needs public support. Scary times ahead.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">634 points</span> • 
+                    u/IranianStudent • 8 hours ago
+                </div>
+                <div class="comment-content">
+                    I'm an Iranian student in the US and my parents want me to stay here permanently now. They think things are going to get much worse. All my Iranian friends here are getting similar calls from their families. This is causing a brain drain that will hurt the region for decades.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">567 points</span> • 
+                    u/SyrianAnalyst • 8 hours ago
+                </div>
+                <div class="comment-content">
+                    The Ahvaz angle is particularly dangerous. Iranian Arabs don't need "liberating" - they need these Arab governments to stop using them as pawns. Most Iranian Arabs are perfectly happy being Iranian. This is manufactured crisis.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">489 points</span> • 
+                    u/KuwaitiLiberal • 7 hours ago
+                </div>
+                <div class="comment-content">
+                    Kuwaiti here. Our parliament is actually considering legislation to protect Persian minorities. Small but significant pushback against this madness. Not all Arabs are buying into this propaganda.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">412 points</span> • 
+                    u/OmanNeutral • 7 hours ago
+                </div>
+                <div class="comment-content">
+                    Oman has stayed out of this completely. We're not allowing the anti-Persian rhetoric in our media and we're not participating in boycotts. There's a reason we have good relations with everyone - we don't play these stupid games.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
