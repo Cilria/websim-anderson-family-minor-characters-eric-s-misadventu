@@ -3,237 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Carolina state senator, brother charged in $11B fraud scheme - NBC News</title>
+    <title>South Carolina state senator, brother charged in $11B fraud scheme - r/politics</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
-        .header {
-            background: #4A90E2;
-            color: white;
-            padding: 15px 0;
-            border-bottom: 3px solid #000;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
-        .nav {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
-        }
-        .article-header {
-            border-bottom: 2px solid #000;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .headline {
-            font-size: 42px;
-            font-weight: 700;
-            line-height: 1.1;
-            margin: 0 0 15px 0;
-            color: #000;
-        }
-        .subhead {
-            font-size: 20px;
-            color: #666;
-            margin: 0 0 20px 0;
-            font-weight: 400;
-        }
-        .byline {
-            font-size: 14px;
-            color: #666;
-        }
-        .byline a {
-            color: #4A90E2;
-            text-decoration: none;
-        }
-        .article-content {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        .pullquote {
-            border-left: 4px solid #4A90E2;
-            padding-left: 20px;
-            margin: 25px 0;
-            font-size: 20px;
-            font-style: italic;
-            color: #555;
-        }
-        .sidebar {
+            max-width: 740px;
+            margin: 20px auto;
             background: white;
-            padding: 20px;
-            border-radius: 4px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .sidebar h3 {
-            font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #000;
-            border-bottom: 2px solid #4A90E2;
-            padding-bottom: 5px;
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
         }
-        .sidebar p {
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 15px;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .related-stories {
-            margin-top: 20px;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .related-stories h4 {
-            font-size: 14px;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
             margin: 0 0 10px 0;
-            color: #666;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #4A90E2;
-            text-decoration: none;
-            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 500;
             line-height: 1.3;
         }
-        .timestamp {
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
             font-size: 12px;
-            color: #999;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
             margin-top: 5px;
         }
-        .breaking-banner {
-            background: #ff0000;
-            color: white;
-            padding: 8px 15px;
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
             font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
             font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">NBC NEWS</div>
-            <div class="nav">
-                <a href="#">Politics</a>
-                <a href="#">Crime & Courts</a>
-                <a href="#">South</a>
-                <a href="#">Investigations</a>
+    <div class="container">
+        <div class="header">
+            <span>r/politics</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/SC_Political_Watch</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>3.1k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">South Carolina state senator and his brother charged in $11B fraud scheme, face 900 years in prison</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Corruption</span>
+                    <span class="flair">South Carolina</span>
+                    <span class="flair">GOP</span>
+                    <span>Posted by u/SC_Political_Watch • 2 hours ago</span>
+                </div>
+
+                <p>Robert Francis Hollomon, a Republican state senator from South Carolina, and his brother LeRoy were arrested for allegedly running a massive $11 billion fraud scheme that prosecutors say lasted from 2016 to 2026. The 127-count indictment includes wire fraud, money laundering, and obstruction of justice. They each face up to 450 years in prison.</p>
+
+                <p>The scheme allegedly targeted pension funds, insurance companies, and individual investors across the Southeast. One of the biggest victims was the South Carolina State Employees Retirement System, which reportedly lost $2.3 billion.</p>
+
+                <a href="https://nbcnews.com" class="source-link">NBC News article</a>
+
+                <div class="comments-count">
+                    <a href="#">1,247 comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">BREAKING NEWS</div>
-                <h1 class="headline">South Carolina state senator, brother charged in $11B fraud scheme</h1>
-                <h2 class="subhead">Robert Francis Hollomon and LeRoy Hollomon face 900 years in prison in alleged decade-long scam</h2>
-                <div class="byline">
-                    By <a href="#">Jennifer Rodriguez</a> and <a href="#">Marcus Chen</a> | 08/01/2026 11:47 AM EST
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏆</span>
+                    <span class="score">4.2k points</span> • 
+                    u/FormerRepublicanNow • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    As a former South Carolina Republican, this doesn't surprise me at all. The corruption runs deep in our state party. Hollomon was considered a "rising star" and "reformer" while allegedly stealing billions. How many more are there?
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/SC_Dem • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Fellow South Carolinian here. The fact that he was on committees overseeing state pension funds WHILE allegedly stealing from those same funds is just... I can't even. Our state needs major ethics reform.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p>COLUMBIA, South Carolina — Republican State Senator Robert Francis Hollomon and his brother LeRoy Hollomon were arrested Thursday and charged with orchestrating a sprawling $11 billion fraud scheme that federal prosecutors say ranks among the largest in U.S. history, potentially facing a combined 900 years in prison if convicted on all counts.</p>
-
-                <p>The brothers, according to a sweeping 127-count federal indictment unsealed in Columbia, allegedly ran a sophisticated network of shell companies, fake investment vehicles, and fraudulent real estate deals that targeted pension funds, insurance companies, and individual investors across the Southeast from 2016 to 2026.</p>
-
-                <div class="pullquote">
-                    "This was not a simple fraud. This was a criminal enterprise that operated with military precision, using complex financial instruments to hide the money trail and destroy countless lives."
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    <span class="score">3.8k points</span> • 
+                    u/CampaignFinanceNerd • 2 hours ago
                 </div>
-
-                <p>Robert Hollomon, 58, who has served in the South Carolina Senate since 2012 and was considered a rising star in the state Republican Party, was taken into custody at his Columbia home. LeRoy Hollomon, 54, was arrested at his Hilton Head Island estate. Both appeared in federal court Thursday afternoon and were ordered held without bail.</p>
-
-                <p>The indictment alleges the brothers used Robert's political influence and LeRoy's business connections to create what prosecutors called "an illusion of legitimacy" around their schemes. They allegedly promised investors guaranteed returns of 15-25% through purported investments in infrastructure projects, renewable energy developments, and government contracts.</p>
-
-                <p>"Senator Hollomon betrayed the public trust in the most egregious way possible," said U.S. Attorney Sarah Mitchell at a press conference. "While claiming to serve his constituents, he was simultaneously stealing from them on a massive scale."</p>
-
-                <p>The charges include conspiracy to commit wire fraud, mail fraud, money laundering, obstruction of justice, and tax evasion. If convicted on all counts, each brother faces a maximum of 450 years in federal prison.</p>
-
-                <p>FBI Special Agent in Charge David Thompson said the investigation, dubbed "Operation Southern Comfort," began in early 2025 when a whistleblower from within one of the Hollomon companies provided crucial evidence. "This individual risked everything to expose this scheme," Thompson said.</p>
-
-                <p>The brothers allegedly laundered money through a complex web of more than 50 shell companies registered in Delaware, Nevada, and offshore jurisdictions including the Cayman Islands and British Virgin Islands. Prosecutors say they used the funds to purchase luxury properties, private jets, art collections, and to make substantial political contributions.</p>
-
-                <p>Robert Hollomon's Senate colleagues expressed shock at the arrests. "This is a dark day for South Carolina," said Senate President Thomas Green. "We trusted Senator Hollomon, and he violated that trust in the most profound way."</p>
-
-                <p>The indictment details how the brothers allegedly used Robert's position on key Senate committees to steer contracts and favorable legislation toward their fraudulent enterprises. They reportedly targeted state pension funds, promising safe investments with high returns while actually putting the money into non-existent projects.</p>
-
-                <p>One alleged victim, the South Carolina State Employees Retirement System, reportedly lost $2.3 billion through investments promoted by Hollomon. The system serves over 200,000 current and retired state employees.</p>
-
-                <div class="pullquote">
-                    "They promised us these were secure, government-backed investments. Now we're told the money is gone, and our retirement security is in jeopardy."
+                <div class="comment-content">
+                    $11 billion. Let that sink in. That's more than the GDP of some small countries. And they did it while the senator was in office, using his political position to legitimize their schemes. This is why we need stricter oversight of elected officials' finances.
                 </div>
-
-                <p>The brothers' defense attorneys, speaking outside the courthouse, maintained their clients' innocence. "These are serious allegations, but they are just that - allegations," said Robert Hollomon's attorney, Michael Stevens. "We look forward to presenting our case in court and proving these charges are baseless."</p>
-
-                <p>However, prosecutors say they have overwhelming evidence, including recorded conversations, financial records, and testimony from multiple co-conspirators who have already pleaded guilty and agreed to cooperate.</p>
-
-                <p>The case has sent shockwaves through South Carolina's political establishment. Governor Richard Lawson called for Robert Hollomon's immediate resignation, saying "he has forfeited the right to serve the people of this state." Several Republican leaders have already distanced themselves from the embattled senator.</p>
-
-                <p>Political analysts say the scandal could have lasting implications for the state GOP. "This is potentially devastating," said University of South Carolina political science professor Karen Brown. "It reinforces negative stereotypes about corruption and could impact elections for years."</p>
-
-                <p>The investigation is ongoing, with prosecutors indicating that additional charges and defendants are possible. They have already seized over $500 million in assets, including properties, bank accounts, and investments.</p>
-
-                <p>LeRoy Hollomon, who described himself as a "investment consultant" and "real estate developer," has no previous criminal record but has faced civil lawsuits over business dealings. Robert Hollomon had built a reputation as a conservative reformer, focusing on government transparency and fiscal responsibility.</p>
-
-                <p>The brothers are scheduled to appear in court next week for a detention hearing. Prosecutors are expected to argue they should remain in custody, citing flight risk and the severity of the charges.</p>
-
-                <p>If convicted, this would rank among the largest fraud cases in American history, surpassing even the infamous Bernie Madoff Ponzi scheme. The sheer scale of the alleged fraud has prompted calls for stricter oversight of state officials' financial dealings.</p>
-
-                <p>"This case should serve as a wake-up call," said U.S. Attorney Mitchell. "No one is above the law, regardless of their political position or family connections. We will pursue justice vigorously and ensure that those who betray the public trust are held accountable."</p>
-
-                <p>The scandal has already prompted legislative proposals for increased financial disclosure requirements for elected officials and stricter oversight of state pension fund investments. Lawmakers from both parties have expressed support for reforms.</p>
-
-                <p>As the legal process unfolds, the people of South Carolina are left grappling with the betrayal of trust and the potential loss of billions in retirement savings. The case is expected to take years to resolve and will likely have lasting implications for the state's political and financial landscape.</p>
+                <div class="comment-reply">Reply</div>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Case Details</h3>
-            <p><strong>Defendants:</strong> Robert Francis Hollomon, LeRoy Hollomon</p>
-            <p><strong>Charges:</strong> 127 counts including wire fraud, money laundering</p>
-            <p><strong>Potential Sentence:</strong> Up to 450 years each</p>
-            <p><strong>Alleged Losses:</strong> $11 billion</p>
-            <p><strong>Key Victim:</strong> SC State Employees Retirement System</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">South Carolina political corruption scandals</a>
-                <a href="#">Understanding wire fraud charges</a>
-                <a href="#">Largest fraud cases in U.S. history</a>
-                <a href="#">Political corruption investigations</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.9k points</span> • 
+                    u/RetiredInvestigator • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    127 counts each. That's not a simple fraud case - that's a criminal enterprise. The fact they kept detailed records of their crimes (according to the indictment) shows how arrogant they became. They thought they were untouchable.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/LegalEagle2024 • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    The wire fraud charges alone carry 20 years each, and they've got dozens of those. Plus the money laundering, obstruction, tax evasion... 450 years each isn't an exaggeration. These guys are never seeing freedom again if convicted.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.4k points</span> • 
+                    u/PensionFundManager • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The $2.3 billion hit to the SC State Employees Retirement System is devastating. That's money meant for teachers, police officers, firefighters - people who worked their entire careers for modest pensions. This isn't just white collar crime, it's destroying lives.
+                </div>
+                <div class="comment-reply">Reply</div>
+               div class="comment-nested">
+                    <div class="comment-meta">
+                        u/SC_Teacher • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    I'm a teacher in SC. We already have funding issues, and now our pension system takes a $2.3 billion hit? This directly affects my retirement security. It's not abstract - it's my future they're stealing.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.9k points</span> • 
+                    u/Conservative_but_Honest • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    As a conservative, I'm disgusted. This is exactly the kind of corruption that gives Republicans a bad name. We need to clean house in SC and everywhere else. Party loyalty shouldn't protect criminals.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/GOP_Reform_Now • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Problem is, the SC GOP will probably try to distance themselves from him while quietly supporting similar candidates. Until we have real campaign finance reform and ethics oversight, this will keep happening.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.6k points</span> • 
+                    u/FinancialCrimesExpert • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The sophistication of this scheme is what gets me - 50+ shell companies, offshore accounts, fake investment vehicles. They allegedly used the senator's committee positions to steer contracts and legislation. This level of corruption requires systemic failure of oversight.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.3k points</span> • 
+                    u/SC_Journalist • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Covering SC politics for 15 years. Hollomon was seen as "clean" compared to the usual suspects. He championed ethics reform bills while allegedly running this scheme. The hypocrisy is what will destroy public trust for a generation.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/MediaCritic2024 • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    The media deserves some blame here. We kept calling him a "reformer" and "rising star" without ever really investigating his business dealings. Political reporters need to do better than just repeating press releases.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.1k points</span> • 
+                    u/WhistleblowerAdvocate • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The whistleblower who came forward in early 2025 is the real hero here. Risking everything to expose an $11 billion scheme while it was still ongoing took incredible courage. They probably saved billions more in losses.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/DefendTheRepublic • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Both brothers face 450 years each. At their ages (58 and 54), that's essentially life sentences times ten. The prosecution is sending a message: if you betray public trust on this scale, you'll die in prison.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">834 points</span> • 
+                    u/SC_Dem_Voter • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    As a South Carolina Democrat, I'm conflicted. This is terrible for our state, but maybe it'll finally force the ethics reforms we've needed for decades. Sometimes it takes a scandal this massive to create real change.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">712 points</span> • 
+                    u/LargestFraudCases • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    This would rank just behind Madoff ($65B) and ahead of Enron ($11B when adjusted). The fact it happened while the senator was in office makes it arguably more egregious than either of those cases.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">623 points</span> • 
+                    u/RepublicanAccountability • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    The SC Republican Party needs to immediately call for his resignation and support a special election. Keeping him in office while facing these charges would be an insult to every voter in the state.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">534 points</span> • 
+                    u/InvestigationFollower • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    The investigation is ongoing with "additional charges and defendants possible." This suggests the brothers didn't act alone. I wouldn't be surprised if we see more arrests in the coming weeks.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
