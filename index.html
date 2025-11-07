@@ -3,365 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2 MILLION dead in Middle East sectarian violence over a meme - r/worldnews</title>
+    <title>Century-old economist warns of 2027 recession - BBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #f5f5f5;
+            color: #333;
         }
         .header {
-            background: #000;
+            background: #bb0000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            padding: 15px 0;
+            border-bottom: 3px solid #000;
         }
-        .post {
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .nav {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+        .article-header {
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
+        .headline {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+            color: #000;
         }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
+        .subhead {
             font-size: 18px;
-            font-weight: 500;
+            color: #666;
+            margin: 0 0 20px 0;
+            font-weight: 400;
+        }
+        .byline {
+            font-size: 14px;
+            color: #666;
+        }
+        .byline a {
+            color: #bb0000;
+            text-decoration: none;
+        }
+        .article-content {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .pullquote {
+            border-left: 4px solid #bb0000;
+            padding-left: 20px;
+            margin: 25px 0;
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            background: #f9f9f9;
+            padding: 15px 20px;
+        }
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .sidebar h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #000;
+            border-bottom: 2px solid #bb0000;
+            padding-bottom: 5px;
+        }
+        .sidebar p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        .related-stories {
+            margin-top: 20px;
+        }
+        .related-stories h4 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #666;
+        }
+        .related-stories a {
+            display: block;
+            font-size: 14px;
+            color: #bb0000;
+            text-decoration: none;
+            margin-bottom: 8px;
             line-height: 1.3;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
+        .timestamp {
             font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
+            color: #999;
             margin-top: 5px;
         }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
+        .breaking-banner {
+            background: #ffcc00;
+            color: #000;
+            padding: 8px 15px;
             font-size: 12px;
-            margin-right: 5px;
-        }
-        .score {
             font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
-        }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
-        }
-        .death-toll-highlight {
-            background: #000;
-            color: #d32f2f;
-            padding: 10px;
-            margin: 15px 0;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 24px;
-            text-align: center;
+            display: inline-block;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">BBC</div>
+            <div class="nav">
+                <a href="#">News</a>
+                <a href="#">Business</a>
+                <a href="#">Economics</a>
+                <a href="#">US & Canada</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/GlobalNewsHound</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>45.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">2 MILLION dead in Middle East sectarian violence over a meme</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">BREAKING</span>
-                    <span class="flair">MIDDLE EAST</span>
-                    <span>Posted by u/GlobalNewsHunk • 2 hours ago</span>
-                </div>
-
-                <p>A fucking MEME about food and borders led to 2 million people dead in 5 days. Started with Persian Twitter users joking about Iraq having better food under Persian rule, Arab ultranationalists went insane, now we've got full-scale ethnic cleansing across the region. Over 4,000 Persians and 6,000 Shias killed on the first day alone. Governments are openly participating in the violence.</p>
-
-                <div class="death-toll-highlight">
-                    2 MILLION DEAD IN 5 DAYS
-                </div>
-
-                <p>This is the deadliest sectarian violence since WWII. All because some people made jokes about Persian food being better. What the actual fuck.</p>
-
-                <a href="https://bbc.com" class="source-link">BBC Article</a>
-
-                <div class="comments-count">
-                    <a href="#">12.8k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">28.4k points</span> • 
-                    u/WhatTheActualFuck2027 • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    2 FUCKING MILLION???? OVER A MEME ABOUT FOOD??? Jesus Christ humanity what are we doing
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/InternetHistorian • 2 hours ago
-                    </div>
-                    <div class="comment-content">
-                    This has to be the dumbest reason for mass death in human history. Like at least other genocides had "reasons" however fucked up. This is literally "your food meme offended me so now I'm going to murder 2 million people"
-                    </div>
-                    <div class="comment-reply">Reply</div>
+        <article>
+            <div class="article-header">
+                <div class="breaking-banner">BREAKING</div>
+                <h1 class="headline">Century-old economist who predicted every recession since 1958 warns of 2027 downturn</h1>
+                <h2 class="subhead">Robert Allard Coleman Jr., who turns 100 this month, says economic conditions mirror 2008 warning signs</h2>
+                <div class="byline">
+                    By <a href="#">Sarah Mitchell</a> | BBC Business Correspondent | 01 July 2026
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">19.2k points</span> • 
-                    u/EuropeanObserver • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    European here. We've been watching this unfold in real time and it's absolutely insane. Governments are openly participating in ethnic cleansing and the international community is just... watching? 2 million dead and nobody is doing anything?
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+            <div class="article-content">
+                <p>Robert Allard Coleman Jr., the world's oldest active economist who has correctly predicted every American recession since 1958, has issued his starkest warning yet: the global economy is heading for a significant downturn in early 2027.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">15.7k points</span> • 
-                    u/HistoryTeacher1984 • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    I teach history and I'm literally going to use this as an example of how social media can weaponize stupidity. Like we're watching the dumbest genocide in human history unfold in real time and nobody can stop it because everyone involved thinks they're right
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>In an exclusive interview at his Cambridge, Massachusetts home, Coleman - who celebrates his 100th birthday later this month - told the BBC that current economic conditions bear "disturbing similarities" to those preceding the 2008 financial crisis.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">💀</span>
-                    u/DarkHumorDefence • 2 hours ago
+                <div class="pullquote">
+                    "I've seen this movie before, and it doesn't end well. The warning signs are flashing red: excessive leverage in shadow banking, overvalued assets across multiple sectors, and a dangerous complacency that 'this time is different.'"
                 </div>
-                <div class="comment-content">
-                    So what I'm hearing is that Persian food is so good it's worth starting World War 3 over? /s (I'm going to hell for this but seriously 2 million dead over FOOD MEMES)
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">12.3k points</span> • 
-                    u/CanadianConfusion • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Canadian here. We've been watching American news for years thinking "at least we're not that crazy" and now this happens. Like how do you even explain to future generations that millions died because of food memes on the internet?
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Coleman's track record is unmatched in economic forecasting. Since correctly predicting the 1958 recession - when he was just 32 years old - he has accurately called every subsequent downturn, including the 1973 oil crisis, the 1981-82 double-dip recession, the 1990-91 Gulf War recession, the 2000 dot-com crash, and the 2008 financial crisis.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">9.8k points</span> • 
-                    u/AsianPerspective • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Asian here. This is what happens when you mix ancient tribal grievances with modern social media algorithms. Everyone's been sitting on centuries of hate just waiting for an excuse. A dumb meme was the excuse.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>His methodology, developed over seven decades, combines traditional economic indicators with what he calls "human behavioral signals" - patterns of consumer and investor psychology that precede market corrections.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">8.4k points</span> • 
-                    u/TechWorkerSF • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Tech worker here. Everyone at my company is just staring at our screens in disbelief. We literally built the platforms that made this possible. Social media was supposed to connect people and instead it's helping them coordinate genocide over food jokes
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>"The economy isn't just numbers on a spreadsheet," Coleman explains, his voice still sharp despite his advanced age. "It's human beings making decisions based on fear, greed, and hope. Right now, I'm seeing the same cocktail of overconfidence and excessive risk-taking that preceded every major downturn of my career."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">7.2k points</span> • 
-                    u/AustralianAnalysis • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Australian here. The speed is what's terrifying. 2 million in 5 days? That's 400,000 people per day. That's faster than most industrial genocides with actual death camps. And it's happening in the open with governments helping
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The economist's concerns center on what he identifies as three critical vulnerabilities: corporate debt levels exceeding those of 2007, a commercial real estate bubble that has "already begun to deflate," and unprecedented levels of speculative investment in emerging technologies.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">6.1k points</span> • 
-                    u/LatinAmericanView • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Latin American here. We've seen our share of stupid conflicts but this takes the cake. Like at least our wars were over land or resources or ideology. This is literally "your cuisine memes disrespected me so now I must murder"
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Coleman, who still maintains an office at Harvard where he graduated in 1946, has been advising policymakers since the Eisenhower administration. His 1958 prediction came just months after he joined the faculty, when he warned that post-war prosperity had created dangerous asset bubbles.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">5.3k points</span> • 
-                    u/AfricanObserver • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    African here. The international community's response is what's really sickening. 2 million dead and the UN is having emergency meetings about whether to issue a strongly worded statement. Like what the actual fuck is wrong with you people
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>His most famous prediction came in 2006, when he testified before Congress that the housing market represented "the greatest threat to American economic stability since the Great Depression." His warnings were largely dismissed at the time as overly pessimistic.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.7k points</span> • 
-                    u/NihilisticNordic • 1 hour ago
+                <div class="pullquote">
+                    "In 2006, they called me 'Dr. Doom.' Two years later, they were asking how I saw it coming. The same patterns are emerging now, but they're more widespread and more interconnected than ever before."
                 </div>
-                <div class="comment-content">
-                    Scandinavian here. We've been watching this unfold and honestly? This might be peak human stupidity. Like we've reached the pinnacle of how dumb and violent our species can be. 2 million dead over internet jokes about food quality
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.9k points</span> • 
-                    u/RussianExpat • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Russian expat here. Even by Russian standards of stupid conflicts this is impressive. Like we invaded Ukraine for dumb reasons but at least we had "reasons" however fucked up. This is literally "your food memes made me angry so die"
-                </div>
-                <div class="comment-reply">Reply</div>
+                <p>Despite his age, Coleman continues to monitor markets daily, relying on a team of assistants who help him analyze data. His current concerns extend beyond American borders, pointing to synchronized bubbles in European and Asian markets.</p>
+
+                <p>"This isn't just an American problem anymore," he notes. "The interconnected nature of modern finance means a crisis anywhere becomes a crisis everywhere. When the correction comes - and it will come - it will be global in scope."</p>
+
+                <p>The economist's timing prediction - early 2027 - is based on what he calls "the accumulation threshold," a model he developed that tracks when multiple economic stressors simultaneously exceed critical levels.</p>
+
+                <p>Current indicators, according to Coleman, show we're approaching this threshold faster than in previous cycles. He points to the Federal Reserve's aggressive interest rate policies, which he argues have created artificial market conditions that cannot be sustained indefinitely.</p>
+
+                <p>"The Fed has painted itself into a corner," Coleman argues. "They can't raise rates without triggering a recession, and they can't lower them without reigniting inflation. It's the same trap we saw in the 1970s, but with much higher debt levels."</p>
+
+                <p>Coleman's warning comes at a time when most economists remain relatively optimistic about the near-term outlook. The International Monetary Fund recently projected global growth of 3.2% for 2026 and 2027, while major central banks have begun easing monetary policies.</p>
+
+                <p>However, Coleman believes these projections fail to account for what he terms "the leverage time bomb" - the unprecedented levels of corporate and government debt accumulated during the low-interest rate era.</p>
+
+                <p>"Debt is productive when it funds investment, but dangerous when it funds speculation," he explains. "We've crossed that line. The question isn't whether we'll have a recession, but how severe it will be and whether policymakers have learned anything from 2008."</p>
+
+                <p>The economist's age has prompted some to question whether his analysis remains relevant in an era of artificial intelligence, cryptocurrency, and digital banking. Coleman dismisses such concerns, arguing that human nature - and therefore economic cycles - remains fundamentally unchanged.</p>
+
+                <p>"Technology changes, but people don't," he says. "Greed, fear, and hubris drive markets today just as they did in 1929. The instruments are different, but the psychology is identical."</p>
+
+                <p>Coleman's family has tried to convince him to retire, but he remains committed to his work. "As long as I can think clearly and the data keeps flowing, I have a responsibility to warn people," he insists. "My generation lived through the Depression. We know what real economic pain looks like, and we have a duty to prevent it when possible."</p>
+
+                <p>Whether markets will heed his latest warning remains to be seen. History suggests that Coleman's predictions, while initially unpopular, have consistently proven prescient. As he approaches his centenary, the economist remains convinced that his most important warning may be his last.</p>
+
+                <p>"I've lived through 17 recessions," Coleman reflects, settling back in his chair. "Each one felt different while it was happening, but they all rhymed. The next one will too, and it's coming sooner than most people think."</p>
+
+                <p>For policymakers, investors, and ordinary citizens, the question now is whether to heed the warnings of a man who has never been wrong - or to gamble that this time, somehow, will be different.</p>
             </div>
-        </div>
+        </article>
+
+        <aside class="sidebar">
+            <h3>Robert Allard Coleman Jr.</h3>
+            <p><strong>Born:</strong> July 15, 1926 (age 99)</p>
+            <p><strong>Profession:</strong> Economist, Harvard Professor</p>
+            <p><strong>Prediction Record:</strong> 17 for 17 since 1958</p>
+            <p><strong>Most Famous Prediction:</strong> 2008 Financial Crisis (2006)</p>
+            <p><strong>Current Warning:</strong> Recession by early 2027</p>
+            
+            <div class="related-stories">
+                <h4>Related Coverage</h4>
+                <a href="#">IMF maintains global growth projections despite warnings</a>
+                <a href="#">Commercial real estate bubble: Experts weigh in</a>
+                <a href="#">Federal Reserve signals potential rate cuts ahead</a>
+                <a href="#">Corporate debt levels hit new records</a>
+            </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
