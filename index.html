@@ -3,227 +3,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sen. Markwayne Mullin attacked during town hall - CNN</title>
+    <title>New details on Kenneth M. Jackson Sr.: "All politicians in America are evil" - r/politics</title>
     <style>
         body {
-            font-family: CNN, Helvetica Neue, Helvetica, Arial, Utopia, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #262626;
-        }
-        .header {
-            background: #cc0000;
-            color: white;
-            padding: 12px 0;
-            border-bottom: 1px solid #a30000;
-        }
-        .header-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-        }
-        .nav {
-            margin-top: 8px;
-            font-size: 13px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1100px;
-            margin: 0 auto;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
             padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 30px;
+            border-bottom: 1px solid #eee;
         }
-        .article-header {
-            border-bottom: 1px solid #e6e6e6;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .headline {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 15px 0;
-            color: #262626;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
         }
-        .subhead {
-            font-size: 18px;
-            color: #404040;
-            margin: 0 0 20px 0;
-            font-weight: 400;
+        .content {
+            margin-left: 50px;
         }
-        .byline {
-            font-size: 14px;
-            color: #737373;
-        }
-        .byline a {
-            color: #cc0000;
-            text-decoration: none;
-        }
-        .article-content {
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        .pullquote {
-            border-left: 3px solid #cc0000;
-            padding-left: 20px;
-            margin: 20px 0;
-            font-size: 18px;
-            font-style: italic;
-            color: #404040;
-        }
-        .sidebar {
-            background: #f6f6f6;
-            padding: 20px;
-            border-radius: 4px;
-            border: 1px solid #e6e6e6;
-        }
-        .sidebar h3 {
-            font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #262626;
-            border-bottom: 2px solid #cc0000;
-            padding-bottom: 5px;
-        }
-        .sidebar p {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-        .related-stories {
-            margin-top: 20px;
-        }
-        .related-stories h4 {
-            font-size: 14px;
+        .title {
             margin: 0 0 10px 0;
-            color: #737373;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #cc0000;
-            text-decoration: none;
-            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 500;
             line-height: 1.3;
         }
-        .timestamp {
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
             font-size: 12px;
-            color: #8c8c8c;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
             margin-top: 5px;
         }
-        .breaking-banner {
-            background: #cc0000;
-            color: white;
-            padding: 6px 12px;
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
             font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
             font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">CNN</div>
-            <div class="nav">
-                <a href="#">Politics</a>
-                <a href="#">Congress</a>
-                <a href="#">Security</a>
-                <a href="#">2026 Elections</a>
+    <div class="container">
+        <div class="header">
+            <span>r/politics</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/OkiePolitico</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>6.2k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">New details on Kenneth M. Jackson Sr.: "All politicians in America are evil"</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Update</span>
+                    <span class="flair">Oklahoma</span>
+                    <span>Posted by u/OkiePolitico • 2 hours ago</span>
+                </div>
+
+                <p>Police dug through Kenneth Jackson's Facebook and found almost nothing political except two posts from a MAGA website. He was married with 6 kids, but over the last year had gotten angrier, posting "All politicians in America are evil" and anti-political memes. People who knew him said he was "barely political at all" and blamed Mullin as a "DC fat cat."</p>
+
+                <div class="comments-count">
+                    <a href="#">3,247 comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">Sen. Markwayne Mullin attacked during town hall in Oklahoma</h1>
-                <h2 class="subhead">64-year-old man arrested after allegedly assaulting senator, shouting about job loss</h2>
-                <div class="byline">
-                    By <a href="#">Jessica Chen</a>, <a href="#">Robert McElvain</a> and <a href="#">Maria Santos</a> | 03/11/2026 06:47 PM EST
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversious</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">8.1k points</span> • 
+                    u/ModerateVoice • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    This is what happens when people get radicalized by cable news and social media. They start hating "politics" and "politicians" in general, not realizing that democracy literally depends on politics. It's anti-democratic nihilism disguised as populism.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/RealHumanBeing • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Yeah, my dad's the same way. "All politicians are crooks" but can't name a single policy or explain why they're crooks. It's just this vague, angry cynicism that gets worse as they get older and more isolated.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p>MUSKOGEE, Oklahoma — Senator Markwayne Mullin was physically attacked during a town hall meeting Tuesday evening by a man who shouted profanities about job losses before allegedly assaulting the Oklahoma Republican, according to witnesses and law enforcement.</p>
-
-                <p>The incident occurred around 7:30 p.m. local time at the Muskogee Civic Center, where Mullin was fielding questions from constituents. Witnesses say a man later identified as Kenneth Monroe Jackson Sr., 64, stood up and began shouting at the senator.</p>
-
-                <div class="pullquote">
-                    "Fuck you coward! You made me lose my job! Worst fucking senator, burn in hell!"
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">6.4k points</span> • 
+                    u/OkieBornAndRaised • 2 hours ago
                 </div>
-
-                <p>According to multiple witnesses and video footage reviewed by CNN, Jackson approached the stage and allegedly struck Mullin approximately 19 times before being subdued by security and local law enforcement.</p>
-
-                <p>Mullin was not seriously injured and continued the town hall after the incident, according to his office. The senator later thanked law enforcement for their "quick response and professionalism."</p>
-
-                <p>Jackson was arrested at the scene and charged with assault on a federal official, disorderly conduct, and resisting arrest. He is being held at the Muskogee County Jail pending a federal court appearance.</p>
-
-                <p>Police are now working to determine Jackson's motive, though initial reports suggest he may have blamed Mullin for job losses in the region. The FBI has joined the investigation due to the federal nature of the alleged assault.</p>
-
-                <p>"We take any threat against our elected officials extremely seriously," said FBI Oklahoma City spokesperson Sarah Whitmore. "This appears to be an isolated incident, but we are investigating all aspects of this case."</p>
-
-                <p>Jackson has no prior federal criminal history, according to public records, though he has had minor traffic violations over the years. Police are examining his social media accounts and interviewing family members to understand what may have triggered the attack.</p>
-
-                <p>Mullin, a former mixed martial arts fighter, appeared to handle the situation calmly, witnesses said. Video shows him stepping back as security intervened, then checking on constituents as Jackson was removed.</p>
-
-                <p>"The senator was composed throughout the incident," said town hall attendee Jennifer Walters. "He made sure everyone else was okay before continuing with the meeting."</p>
-
-                <p>The attack comes amid heightened tensions across the country over economic issues and job losses in various industries. Oklahoma has seen significant layoffs in manufacturing and energy sectors over the past year.</p>
-
-                <p>Mullin's office did not respond to questions about whether the senator has received threats recently, but said he "remains committed to meeting with constituents and hearing their concerns."</p>
-
-                <p>Security for lawmakers has become an increasing concern following several high-profile incidents. The Capitol Police reported over 8,000 threats against members of Congress in 2025, nearly double from five years ago.</p>
-
-                <p>"This is a sad reflection of the anger and division in our politics," said former Oklahoma Governor Frank Keating, a Republican. "We can disagree without resorting to violence."</p>
-
-                <p>Jackson's family told local reporters they were "shocked" by his actions and had "no idea" he was planning to attend the town hall. His son, Kenneth Jackson Jr., said his father had been "under stress" after being laid off from a manufacturing job six months ago.</p>
-
-                <p>"He's been struggling, but we never imagined he'd do something like this," the younger Jackson said.</p>
-
-                <p>The incident is likely to renew discussions about security protocols for congressional town halls, which are typically open events with minimal screening.</p>
-
-                <p>Mullin, 48, has represented Oklahoma in the Senate since 2023 after serving six terms in the House. He is up for reelection in 2026 and has been holding regular town halls across the state.</p>
-
-                <p>"I'm not going to let one disturbed individual stop me from doing my job," Mullin told reporters after the event. "This is what democracy looks like - sometimes it's messy, but we have to keep showing up and listening to people."</p>
-
-                <p>Jackson faces up to 20 years in prison if convicted on the federal assault charge. His initial court appearance is scheduled for Thursday.</p>
+                <div class="comment-content">
+                    "Barely political at all" is basically every older white guy in Oklahoma. They register Republican because that's what you do, but they don't actually follow politics. They just know they're supposed to hate Democrats and "the government" while cashing their Social Security checks.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/TexasTransplant • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    This is so accurate it hurts. My uncle in Tulsa is exactly like this. Registered Republican since 1980, maybe votes once every 4 years, but boy does he have opinions about "the swamp" and "career politicians" despite not being able to name his own representatives.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>About the Incident</h3>
-            <p><strong>Location:</strong> Muskogee Civic Center, Oklahoma</p>
-            <p><strong>Time:</strong> 7:30 p.m. local time</p>
-            <p><strong>Suspect:</strong> Kenneth Monroe Jackson Sr., 64</p>
-            <p><strong>Charges:</strong> Assault on federal official, disorderly conduct, resisting arrest</p>
-            <p><strong>Status:</strong> Being held at Muskogee County Jail</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Threats against lawmakers doubled in past year</a>
-                <a href="#">Security protocols under review after town hall incidents</a>
-                <a href="#">Oklahoma's economic challenges fuel constituent anger</a>
-                <a href="#">Capitol Police report record number of threats in 2025</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">5.9k points</span> • 
+                    u/SocialMediaRadicalization • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The "only two MAGA posts" thing is telling. He wasn't politically engaged, just angry and looking for someone to blame. The MAGA stuff gave him permission to direct that anger at specific people rather than just stewing in general resentment. It's like political training wheels for nihilism.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.7k points</span> • 
+                    u/FormerRepublicanNow • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    I know guys exactly like this. They don't follow politics, they follow grievances. They can't explain policy differences, but they know they're supposed to hate "elites" and "DC fat cats." It's performative populism without any actual political understanding.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/IndependentVoter2020 • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    My neighbor is like this. Calls everyone in DC "crooks" but when I asked him to name one specific thing Mullin voted for that hurt him, he couldn't. It's just this free-floating rage that gets directed at whoever's convenient.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.2k points</span> • 
+                    u/PoliticalNihilismKills • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    "All politicians are evil" is the laziest political take ever. It's what people say when they want to feel smart without actually learning anything. It's the political equivalent of "both sides" - just intellectual cowardice disguised as wisdom.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/CynicismIsntSmart • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Exactly. It's not sophisticated or insightful, it's just lazy. People think being cynical makes them seem smart, but it actually just shows they can't be bothered to understand complex issues.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.8k points</span> • 
+                    u/OklahomaTeacher • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Six kids and barely making it financially? That's a lot of stress. When you're struggling to feed your family and you see politicians on TV talking about "the economy is great," it's easy to feel like they're laughing at you. Doesn't excuse violence, but explains the rage.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.5k points</span> • 
+                    u/RuralOklahomaNative • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    I grew up in rural Oklahoma and this guy is every man over 60 I know. They register Republican because that's what their daddy did, but they don't actually follow politics. They just know they're supposed to be angry about "the government" while benefiting from every government program.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.1k points</span> • 
+                    u/MAGAtoRadicalized • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The two MAGA website posts are the key detail here. He wasn't political, but those sites gave him permission to channel his anger at specific people instead of just being generically angry. It's like they radicalized him just enough to be dangerous without actually engaging with politics.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.8k points</span> • 
+                    u/AngryOldWhiteGuy • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    I'm 64, white, and live in rural Oklahoma. This could've been me if I hadn't kept my shit together after my divorce and job loss. When you're that age and everything falls apart, you feel completely worthless. The "DC fat cat" thing is just needing someone to blame for your life being over.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.4k points</span> • 
+                    u/PoliticalEngagementMatters • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    This is why political engagement matters. When people don't participate in democracy, they start seeing politicians as "them" instead of "us." If this guy had been even minimally engaged, he might've understood that violence isn't how you solve problems in a democracy.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.1k points</span> • 
+                    u/KnowsKennethsFamily • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    I know his wife - she's devastated and confused. Said he never talked politics, never watched the news, just worked and came home. After he lost his job, he started watching Fox News and scrolling Facebook more. She said it was like watching him get poisoned by anger a little bit every day.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.9k points</span> • 
+                    u/CableNewsRadicalization • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    The cable news + Facebook combo is lethal for isolated older men. They start with "all politicians suck" and algorithms feed them increasingly extreme content. Before you know it, they're sharing memes about "traitors" and "enemies of the people" without understanding what any of it means.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.6k points</span> • 
+                    u/DCFatCatIsPerfect • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    "DC fat cat" is perfect because it shows he had no idea who Mullin actually is. Mullin's a former plumber from Tulsa who sleeps in his office because he thinks it's humble. But to this guy, he was just "politician = bad" without any actual knowledge.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.3k points</span> • 
+                    u/GenericPoliticalAnger • 15 minutes ago
+                </div>
+                <div class="comment-content">
+                    Generic political anger is so dangerous because it's unfocused. When you hate "all politicians" equally, you're not discriminating between people who actually might've hurt you and people who are just convenient targets. It's like being mad at "the weather" and then punching the weatherman.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
