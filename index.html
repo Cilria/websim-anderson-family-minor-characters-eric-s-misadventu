@@ -3,433 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abu Bakr "The Brave" Ibn Muhammad - Wikipedia</title>
+    <title>Abu Bakr "The Brave" Ibn Muhammad - Reddit Discussion</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #202122;
-            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #030712;
+            color: #e5e7eb;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
-        
-        .mw-page-container {
-            background-color: #ffffff;
-            max-width: 1200px;
+        .container {
+            max-width: 740px;
             margin: 0 auto;
-            border-left: 1px solid #c8ccd1;
-            border-right: 1px solid #c8ccd1;
+            background: #1f2937;
+            min-height: 100vh;
         }
-        
-        .mw-header {
-            background-color: #ffffff;
-            border-bottom: 1px solid #c8ccd1;
-            padding: 1em;
+        .header {
+            background: #111827;
+            padding: 16px;
+            border-bottom: 1px solid #374151;
             position: sticky;
             top: 0;
             z-index: 100;
         }
-        
-        .mw-logo {
-            float: left;
-            margin-right: 1em;
-        }
-        
-        .mw-headline {
-            font-size: 1.8em;
-            font-weight: bold;
-            margin: 0;
-            color: #000000;
-        }
-        
-        .mw-content-container {
+        .subreddit-header {
             display: flex;
-            flex-direction: row-reverse;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
         }
-        
-        .mw-content {
-            flex: 1;
-            padding: 1.5em 1.5em 2em 1.5em;
-            min-width: 0;
-        }
-        
-        .mw-sidebar {
-            width: 280px;
-            background-color: #f8f9fa;
-            border-left: 1px solid #c8ccd1;
-            padding: 1em;
-            font-size: 0.875em;
-        }
-        
-        .infobox {
-            border: 1px solid #a2a9b1;
-            background-color: #f8f9fa;
-            padding: 0.5em;
-            margin: 0 0 1em 1em;
-            float: right;
-            clear: right;
-            width: 300px;
-            font-size: 0.875em;
-        }
-        
-        .infobox-header {
-            background-color: #c8ccd1;
-            padding: 0.4em;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        
-        .infobox-image {
-            text-align: center;
-            margin: 0.5em 0;
-        }
-        
-        .infobox-label {
-            font-weight: bold;
-            padding: 0.3em 0.4em 0.3em 0.4em;
-            vertical-align: top;
-        }
-        
-        .infobox-data {
-            padding: 0.3em 0.4em 0.3em 0.4em;
-            vertical-align: top;
-        }
-        
-        .toc {
-            background-color: #f8f9fa;
-            border: 1px solid #a2a9b1;
-            padding: 0.5em;
-            margin: 1em 0;
-            width: auto;
-            display: table;
-        }
-        
-        .toc-title {
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 0.5em;
-        }
-        
-        .toc ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0;
-        }
-        
-        .toc li {
-            margin: 0.2em 0;
-            padding-left: 1.5em;
-            text-indent: -1.5em;
-        }
-        
-        .toc a {
-            text-decoration: none;
-            color: #0645ad;
-        }
-        
-        .toc a:hover {
-            text-decoration: underline;
-        }
-        
-        .mw-heading {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin: 1em 0 0.25em 0;
-            border-bottom: 1px solid #a2a9b1;
-            padding-bottom: 0.1em;
-        }
-        
-        .mw-subheading {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin: 1em 0 0.25em 0;
-        }
-        
-        .reference {
-            color: #0645ad;
-            text-decoration: none;
-            font-size: 0.75em;
-            vertical-align: super;
-            line-height: 1;
-        }
-        
-        .reference:hover {
-            text-decoration: underline;
-        }
-        
-        .navbox {
-            border: 1px solid #a2a9b1;
-            background-color: #f8f9fa;
-            margin: 1em 0;
-            padding: 0.5em;
-            font-size: 0.875em;
-        }
-        
-        .navbox-title {
-            background-color: #c8ccd1;
-            padding: 0.4em;
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 0.5em;
-        }
-        
-        .navbox-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        .subreddit-icon {
+            width: 32px;
+            height: 32px;
+            background: #dc2626;
+            border-radius: 50%;
             display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .subreddit-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #f9fafb;
+        }
+        .post-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #f9fafb;
+            margin: 16px 0;
+            line-height: 1.3;
+        }
+        .post-meta {
+            font-size: 14px;
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             flex-wrap: wrap;
         }
-        
-        .navbox-list li {
-            margin: 0.2em 0.5em;
+        .flair {
+            background: #374151;
+            color: #e5e7eb;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
         }
-        
-        .navbox a {
+        .content {
+            padding: 16px;
+        }
+        .post-content {
+            margin-bottom: 24px;
+            font-size: 16px;
+            color: #d1d5db;
+        }
+        .post-content p {
+            margin: 12px 0;
+        }
+        .vote-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 16px 0;
+            padding: 12px;
+            background: #111827;
+            border-radius: 8px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            color: #9ca3af;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 4px;
+        }
+        .vote-btn:hover {
+            color: #f9fafb;
+        }
+        .vote-count {
+            font-weight: 600;
+            color: #f9fafb;
+        }
+        .comments-header {
+            border-top: 1px solid #374151;
+            padding-top: 16px;
+            margin-top: 24px;
+        }
+        .comment {
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 2px solid #374151;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .username {
+            font-weight: 600;
+            color: #f9fafb;
+        }
+        .comment-content {
+            font-size: 15px;
+            color: #e5e7eb;
+            margin-bottom: 8px;
+        }
+        .comment-content p {
+            margin: 8px 0;
+        }
+        .comment-actions {
+            font-size: 12px;
+            color: #9ca3af;
+            display: flex;
+            gap: 16px;
+        }
+        .comment-actions a {
+            color: #9ca3af;
             text-decoration: none;
-            color: #0645ad;
+            cursor: pointer;
         }
-        
-        .navbox a:hover {
-            text-decoration: underline;
+        .comment-actions a:hover {
+            color: #f9fafb;
         }
-        
-        .hatnote {
-            background-color: #f8f9fa;
-            border-left: 3px solid #c8ccd1;
-            padding: 0.5em 1em;
-            margin: 0.5em 0;
+        .nested-comment {
+            margin-left: 24px;
+            margin-top: 16px;
+            padding-left: 12px;
+            border-left: 2px solid #4b5563;
+        }
+        .edit-note {
+            font-size: 12px;
+            color: #9ca3af;
             font-style: italic;
+            margin-top: 8px;
         }
-        
         @media (max-width: 768px) {
-            .mw-content-container {
-                flex-direction: column;
+            .container {
+                margin: 0;
+                border-radius: 0;
             }
-            
-            .mw-sidebar {
-                width: 100%;
-                border-left: none;
-                border-top: 1px solid #c8ccd1;
+            .post-title {
+                font-size: 20px;
             }
-            
-            .infobox {
-                float: none;
-                margin: 1em auto;
-                width: 100%;
-                max-width: 300px;
+            .content {
+                padding: 12px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="mw-page-container">
-        <header class="mw-header">
-            <div class="mw-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/135px-Wikipedia-logo-v2-en.svg.png" alt="Wikipedia" width="135" height="155">
+    <div class="container">
+        <div class="header">
+            <div class="subreddit-header">
+                <div class="subreddit-icon">r/</div>
+                <div class="subreddit-name">history</div>
             </div>
-            <h1 class="mw-headline">Abu Bakr "The Brave" Ibn Muhammad</h1>
-            <div style="clear: both;"></div>
-        </header>
+            <h1 class="post-title">Abu Bakr "The Brave" Ibn Muhammad - The 11th century chieftain who appears once in records and vanishes</h1>
+            <div class="post-meta">
+                <span>Posted by</span>
+                <span class="username">u/SudanHistoryBuff</span>
+                <span>•</span>
+                <span>14 hours ago</span>
+                <span>•</span>
+                <span class="flair">Medieval Africa</span>
+            </div>
+        </div>
 
-        <div class="mw-content-container">
-            <main class="mw-content">
-                <div class="hatnote">
-                    This article is about the 11th-century Daju chieftain. For other uses, see <a href="#">Abu Bakr (disambiguation)</a>.
-                </div>
+        <div class="content">
+            <div class="post-content">
+                <p>So I stumbled across this guy while researching Daju-Nubian interactions and I'm honestly baffled. Abu Bakr Ibn Muhammad supposedly led this massive raid through Nubia in 1071-1072, gets mentioned in TWO 14th century sources (written 300 years later!), and then just... disappears. No death date, no successor, no nothing.</p>
+                
+                <p>What really gets me is that he's described as "High Chieftain of the Daju" but there's zero contemporary records of him. The Kingdom of Makuria kept pretty good records, and they don't mention some guy sacking their capital. You'd think if someone actually devastated Dongola, they'd write it down, right?</p>
+                
+                <p>Has anyone else come across this guy? Is he just a medieval urban legend or what?</p>
+            </div>
 
-                <div class="infobox">
-                    <div class="infobox-header">Abu Bakr "The Brave" Ibn Muhammad</div>
-                    <div class="infobox-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Medieval_muslim_warrior.jpg/250px-Medieval_muslim_warrior.jpg" alt="Depiction of Abu Bakr Ibn Muhammad" width="250" height="300">
-                        <div style="font-size: 0.8em; margin-top: 0.5em;">Hypothetical depiction of Abu Bakr Ibn Muhammad, 14th-century manuscript</div>
+            <div class="vote-section">
+                <button class="vote-btn">▲</button>
+                <span class="vote-count">1.2k</span>
+                <button class="vote-btn">▼</button>
+                <span style="margin-left: 16px; color: #9ca3af;">92% upvoted</span>
+            </div>
+
+            <div class="comments-header">
+                <h3 style="color: #f9fafb; font-size: 18px; margin-bottom: 20px;">327 Comments</h3>
+
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="username">u/MedievalNubiaNerd</span>
+                        <span>•</span>
+                        <span>12 hours ago</span>
                     </div>
-                    <table style="width: 100%; border-collapse: collapse;">
-                        <tr>
-                            <td class="infobox-label">High Chieftain of the Daju</td>
-                            <td class="infobox-data">?–1072</td>
-                        </tr>
-                        <tr>
-                            <td class="infobox-label">Reign</td>
-                            <td class="infobox-data">Unknown–1072</td>
-                        </tr>
-                        <tr>
-                            <td class="infobox-label">Predecessor</td>
-                            <td class="infobox-data">Unknown</td>
-                        </tr>
-                        <tr>
-                            <td class="infobox-data" colspan="2"><strong>Successor</strong><br>Unknown (possibly position abolished)</td>
-                        </tr>
-                        <tr>
-                            <td class="infobox-label">Born</td>
-                            <td class="infobox-data">Unknown (possibly early 11th century)</td>
-                        </tr>
-                        <tr>
-                            <td class="infobox-label">Died</td>
-                            <td class="infobox-data">After 1072</td>
-                        </tr>
-                        <tr>
-                            <td class="infobox-label">Burial</td>
-                            <td class="infobox-data">Unknown</td>
-                        </tr>
-                        <tr>
-                            <td class="infobox-label">Father</td>
-                            <td class="infobox-data">Muhammad (converted to Islam)</td>
-                        </tr>
-                        <tr>
-                            <td class="infobox-label">Religion</td>
-                            <td class="infobox-data">Islam</td>
-                        </tr>
-                        <tr>
-                            <td class="infobox-label">Known for</td>
-                            <td class="infobox-data">1071–1072 Nubian raid</td>
-                        </tr>
-                    </table>
+                    <div class="comment-content">
+                        <p>Oh man, Abu Bakr "The Brave"! I've been down this rabbit hole before. The thing that really gets me is how the 14th century sources contradict each other on basic details. Al-Maqrizi makes it sound like he completely destroyed Dongola, while Ibn Khaldun says the damage was repaired "within a few years."</p>
+                        <p>Like, which is it? Did he level the place or just knock over some market stalls?</p>
+                    </div>
+                    <div class="comment-actions">
+                        <a href="#">Reply</a>
+                        <a href="#">Share</a>
+                        <a href="#">Save</a>
+                        <span>428 points</span>
+                    </div>
                 </div>
 
-                <p><strong>Abu Bakr "The Brave" Ibn Muhammad</strong> (Arabic: أبو بكر "الشجاع" بن محمد, <em>Abū Bakr "al-Shujāʿ" ibn Muḥammad</em>) was, according to two 14th-century sources, the <strong>High Chieftain of the Daju</strong> who led a devastating year-long raid through <strong>Nubia</strong> in 1071–1072. His military campaign allegedly reached as far north as the northern territories of the <strong>Kingdom of Alodia</strong>, temporarily destabilizing the <strong>Kingdom of Makuria</strong> before its rapid recovery. He is notable as one of the few Daju leaders mentioned by name in medieval sources, though contemporary records of his activities are completely absent.</p>
-
-                <p>The historicity of Abu Bakr Ibn Muhammad remains a subject of scholarly debate, as he appears only in two later sources written nearly 300 years after his supposed activities. His story represents a significant gap in the historical record of the <strong>Daju people</strong> and their interactions with Nubian kingdoms during the 11th century.</p>
-
-                <div class="toc">
-                    <div class="toc-title">Contents</div>
-                    <ul>
-                        <li><a href="#sources">1 Sources and Historicity</a></li>
-                        <li><a href="#background">2 Background and Early Life</a></li>
-                        <li><a href="#chieftain">3 High Chieftain of the Daju</a></li>
-                        <li><a href="#raid">4 The 1071–1072 Nubian Raid</a></li>
-                        <li><a href="#aftermath">5 Aftermath and Disappearance</a></li>
-                        <li><a href="#legacy">6 Legacy and Historical Debate</a></li>
-                        <li><a href="#references">7 References</a></li>
-                    </ul>
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="username">u/OralHistorySkeptic</span>
+                        <span>•</span>
+                        <span>11 hours ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>Honestly, this screams "oral tradition that got out of hand." You know how stories work - maybe there WAS a Daju raid around that time, and over centuries of retelling, it became "this one legendary guy led the most devastating raid ever."</p>
+                        <p>The fact that he just vanishes from the record is telling. Real historical figures don't usually get written about once and then never mentioned again.</p>
+                    </div>
+                    <div class="comment-actions">
+                        <a href="#">Reply</a>
+                        <a href="#">Share</a>
+                        <a href="#">Save</a>
+                        <span>312 points</span>
+                    </div>
                 </div>
 
-                <h2 id="sources" class="mw-heading">Sources and Historicity</h2>
-                <p>Abu Bakr Ibn Muhammad appears exclusively in two 14th-century sources, both written by Muslim historians approximately three centuries after his supposed activities. The first is <strong>Al-Maqrizi's</strong> <em>Al-Khitat</em> (الخطط), which briefly mentions "a Daju chieftain named Abu Bakr, son of Muhammad, who ravaged the lands of Nubia for a year and then vanished."<a href="#ref1" class="reference">[1]</a> The second is <strong>Ibn Khaldun's</strong> <em>Kitāb al-ʿIbar</em>, which provides slightly more detail, describing him as "the Brave" (الشجاع) and noting his father's conversion to Islam.</p>
-
-                <p>The temporal gap between Abu Bakr's supposed activities and the recording of his story has led many modern historians to question whether he was a historical figure or a composite character representing Daju military activities in the region. <strong>Claude Rilly</strong> notes that "the absence of contemporary Nubian records mentioning Abu Bakr suggests either his activities were exaggerated in later traditions, or that he was one of several Daju leaders whose exploits were later attributed to a single figure."<a href="#ref2" class="reference">[2]</a></p>
-
-                <div class="mw-subheading">Source Reliability</div>
-                <p>Both 14th-century sources relied heavily on oral traditions and earlier chronicles that have not survived. <strong>Gerald Browne</strong> observes that "the story of Abu Bakr fits a pattern of later Islamic historians attempting to create coherent narratives from fragmentary evidence, potentially conflating multiple historical figures into a single heroic figure."<a href="#ref3" class="reference">[3]</a> The <strong>Archaeological Survey of Nubia</strong> has found no material evidence of large-scale destruction in Dongola dating to the 1070s, further complicating the historical picture.</p>
-
-                <h2 id="background" class="mw-heading">Background and Early Life</h2>
-                <p>Nothing is known of Abu Bakr's early life beyond the information that his father, <strong>Muhammad</strong>, had converted to Islam. This detail, preserved in Ibn Khaldun's account, suggests that Abu Bakr came from a family that had adopted Islam, though the extent of Islamic influence among the Daju during this period remains unclear.</p>
-
-                <p>The <strong>Daju people</strong>, who dominated parts of the <strong>Gezira</strong> region and the <strong>Butana</strong> plain, were known to medieval Arab geographers as formidable warriors. <strong>Al-Ya'qubi</strong>, writing in the 9th century, described them as "masters of the desert, feared by travelers and neighbors alike," though he makes no mention of Abu Bakr or any specific Daju leaders.<a href="#ref4" class="reference">[4]</a></p>
-
-                <h2 id="chieftain" class="mw-heading">High Chieftain of the Daju</h2>
-                <p>According to the limited sources, Abu Bakr held the title of <strong>High Chieftain of the Daju</strong>, though the exact nature and extent of his authority remains unknown. The Daju political structure appears to have been decentralized, with various clans and groups operating under local leaders who might acknowledge a paramount chief during times of conflict or major undertakings.</p>
-
-                <p>The sources provide no information about how Abu Bakr came to power, how long he ruled, or what territories he controlled. The title "High Chieftain" may represent a later Islamic interpretation of Daju political structures rather than an accurate reflection of indigenous governance systems.</p>
-
-                <h2 id="raid" class="mw-heading">The 1071–1072 Nubian Raid</h2>
-                <p>The most significant (and only) documented event in Abu Bakr's life is his alleged year-long raid through Nubia in 1071–1072. According to the sources, this campaign was characterized by:</p>
-                <ul>
-                    <li>Penetration as far north as the northern territories of the <strong>Kingdom of Alodia</strong></li>
-                    <li>The <strong>sacking of Dongola</strong>, capital of the <strong>Kingdom of Makuria</strong></li>
-                    <li>Temporary destabilization of the Makurian state</li>
-                    <li>Complete withdrawal after twelve months</li>
-                </ul>
-
-                <div class="mw-subheading">Military Campaign</div>
-                <p>The sources describe Abu Bakr's forces as consisting primarily of <strong>Daju cavalry</strong> supplemented by <strong>auxiliary troops</strong> from allied groups. The campaign allegedly began in the dry season of 1071, taking advantage of favorable traveling conditions across the <strong>Bayuda Desert</strong>. The rapid advance and subsequent withdrawal suggest a <strong>hit-and-run strategy</strong> rather than an attempt at territorial conquest.</p>
-
-                <p><strong>David Edwards</strong> suggests that "the 1071–1072 raid, if historical, may represent a response to environmental pressures in the Daju homeland, with raiding providing both material resources and a safety valve for population pressures."<a href="#ref5" class="reference">[5]</a> This interpretation aligns with what is known about <strong>pastoral nomad</strong> strategies in the region during periods of environmental stress.</p>
-
-                <div class="mw-subheading">Impact on Makuria</div>
-                <p>Both sources agree that the raid had a significant impact on the <strong>Kingdom of Makuria</strong>, though they differ on the extent of the damage. Al-Maqrizi describes Dongola as being "left in ruins," while Ibn Khaldun suggests that the damage was repaired "within a few years." Modern historians generally favor the latter interpretation, noting that Makuria continued to exist for several more centuries.</p>
-
-                <h2 id="aftermath" class="mw-heading">Aftermath and Disappearance</h2>
-                <p>Following the conclusion of the 1072 raid, Abu Bakr Ibn Muhammad disappears entirely from the historical record. Neither source provides any information about his fate, his ultimate destination, or whether he continued to lead the Daju. This abrupt disappearance has led to various scholarly speculations:</p>
-                <ul>
-                    <li>Death during the return journey to Daju territory</li>
-                    <li>Loss of authority among the Daju following the campaign</li>
-                    <li>Integration into Nubian society</li>
-                    <li>Later activities simply not recorded by surviving sources</li>
-                </ul>
-
-                <p>The <strong>absence of any successor</strong> mentioned in the sources has led some historians, including <strong>Jay Spaulding</strong>, to suggest that Abu Bakr may have been a <strong>charismatic leader</strong> whose death or disappearance led to the dissolution of any temporary unity among the Daju.<a href="#ref6" class="reference">[6]</a></p>
-
-                <h2 id="legacy" class="mw-heading">Legacy and Historical Debate</h2>
-                <p>The historicity of Abu Bakr Ibn Muhammad remains contested among scholars of <strong>Nubian</strong> and <strong>Sudanese</strong> history. The complete absence of contemporary records, combined with the appearance of his story only in much later sources, has led to several competing interpretations:</p>
-
-                <div class="mw-subheading">Historical Figure Hypothesis</div>
-                <p>Some historians, notably <strong>Andrzej Żurawski</strong>, argue that Abu Bakr represents a historical figure whose activities were preserved in oral tradition before being recorded by 14th-century historians. This interpretation suggests that the basic facts of the Nubian raid are accurate, even if specific details may have been embellished over time.</p>
-
-                <div class="mw-subheading">Composite Figure Theory</div>
-                <p>Other scholars, including <strong>Derek Welsby</strong>, propose that Abu Bakr may be a <strong>composite figure</strong> representing multiple Daju leaders whose activities were later attributed to a single individual. This would explain both the extraordinary scope of his alleged raid and his sudden disappearance from historical records.</p>
-
-                <div class="mw-subheading">Literary Construct Argument</div>
-                <p>A minority position, advanced by <strong>Stanislav Lopatenko</strong>, suggests that Abu Bakr may be entirely <strong>literary construct</strong> created by later historians to explain periods of instability in Nubian history. According to this interpretation, the story of Abu Bakr served a similar function to other "barbarian invader" narratives in medieval historiography.</p>
-
-                <h2 id="references" class="mw-heading">References</h2>
-                <div class="references">
-                    <p id="ref1">1. Al-Maqrizi, <em>Al-Khitat</em>, ed. Wiet, G., 1919, vol. 2, p. 347.</p>
-                    <p id="ref2">2. Rilly, C., "The Daju and the Kingdoms of Medieval Nubia," <em>Journal of African History</em> 45:2 (2004), pp. 189-212.</p>
-                    <p id="ref3">3. Browne, G., "Problems in Medieval Nubian Historiography," <em>Nubian Studies</em> 12 (1987), pp. 45-67.</p>
-                    <p id="ref4">4. Al-Ya'qubi, <em>Kitāb al-Buldān</em>, ed. de Goeje, M.J., 1892, p. 334.</p>
-                    <p id="ref5">5. Edwards, D., "Environmental Factors in Sudanese History," <em>Sudan Archaeological Research Society</em> 8 (2001), pp. 23-45.</p>
-                    <p id="ref6">6. Spaulding, J., "Medieval States in the Sudan," <em>International Journal of African Historical Studies</em> 11:2 (1978), pp. 178-203.</p>
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="username">u/DajuDescendant</span>
+                        <span>•</span>
+                        <span>10 hours ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>As someone whose family is actually from the Daju regions, this is fascinating and frustrating. Our oral traditions don't mention any "Abu Bakr the Brave" specifically, but there ARE stories about "the time when our warriors went north and taught the Nubians a lesson."</p>
+                        <p>Could be the same event, just with the details getting scrambled over 300+ years of retelling.</p>
+                    </div>
+                    <div class="comment-actions">
+                        <a href="#">Reply</a>
+                        <a href="#">Share</a>
+                        <a href="#">Save</a>
+                        <span>276 points</span>
+                    </div>
+                    <div class="nested-comment">
+                        <div class="comment-meta">
+                            <span class="username">u/SudanHistoryBuff</span>
+                            <span>•</span>
+                            <span>9 hours ago</span>
+                        </div>
+                        <div class="comment-content">
+                            <p>Wait, seriously? Do your family stories mention anything about crossing the Bayuda Desert or reaching Dongola? This could be huge for figuring out if there's any historical basis to the legend.</p>
+                        </div>
+                        <div class="comment-actions">
+                            <a href="#">Reply</a>
+                            <span>89 points</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="navbox">
-                    <div class="navbox-title">11th Century Nubian Kingdoms</div>
-                    <ul class="navbox-list">
-                        <li><strong>Kingdom of Makuria</strong></li>
-                        <li><a href="#">Kingdom of Alodia</strong></a></li>
-                        <li><a href="#">Kingdom of Nobatia</strong></a></li>
-                        <li><strong>Abu Bakr Ibn Muhammad</strong></li>
-                    </ul>
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="username">u/AcademicGatekeeper</span>
+                        <span>•</span>
+                        <span>9 hours ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>Look, as someone who's spent years in the archives, the complete absence of contemporary records is damning. The Makurians documented everything - taxes, trade agreements, even complaints about noisy neighbors. But a devastating raid that supposedly almost collapsed their kingdom? Not a peep.</p>
+                        <p>Either Abu Bakr was the world's quietest conqueror, or he's a medieval version of a Twitter rumor that got out of hand.</p>
+                    </div>
+                    <div class="comment-actions">
+                        <a href="#">Reply</a>
+                        <a href="#">Share</a>
+                        <a href="#">Save</a>
+                        <span>198 points</span>
+                    </div>
                 </div>
 
-                <div class="navbox">
-                    <div class="navbox-title">Medieval Sudanese Peoples</div>
-                    <ul class="navbox-list">
-                        <li><strong>Daju people</strong></li>
-                        <li><a href="#">Beja people</strong></a></li>
-                        <li><a href="#">Nubians</strong></a></li>
-                        <li><a href="#">Funj people</strong></a></li>
-                    </ul>
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="username">u/CompositeHistoryTheory</span>
+                        <span>•</span>
+                        <span>8 hours ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>Here's my theory: Abu Bakr isn't one person, he's like a composite character. Multiple Daju leaders probably did raid north over the years, and when later historians were trying to make sense of fragmented records, they created this one legendary figure to tie everything together.</p>
+                        <p>It's the medieval equivalent of journalists creating a "sources say" person who doesn't actually exist.</p>
+                    </div>
+                    <div class="comment-actions">
+                        <a href="#">Reply</a>
+                        <a href="#">Share</a>
+                        <a href="#">Save</a>
+                        <span>156 points</span>
+                    </div>
                 </div>
-            </main>
 
-            <aside class="mw-sidebar">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="#">Main page</a></li>
-                    <li><a href="#">Contents</a></li>
-                    <li><a href="#">Current events</a></li>
-                    <li><a href="#">Random article</a></li>
-                    <li><a href="#">About Wikipedia</a></li>
-                </ul>
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="username">u/ArchaeologyNubia</span>
+                        <span>•</span>
+                        <span>7 hours ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>From the archaeological side - we've excavated extensively around Dongola and other Nubian sites. There's evidence of burning and destruction from various periods, but nothing that cleanly dates to the 1070s. If there was a major raid that "left the city in ruins," you'd expect to find... something.</p>
+                        <p>Unless Abu Bakr was just really good at cleaning up after himself?</p>
+                    </div>
+                    <div class="comment-actions">
+                        <a href="#">Reply</a>
+                        <a href="#">Share</a>
+                        <a href="#">Save</a>
+                        <span>134 points</span>
+                    </div>
+                </div>
 
-                <h3>Tools</h3>
-                <ul>
-                    <li><a href="#">What links here</a></li>
-                    <li><a href="#">Related changes</a></li>
-                    <li><a href="#">Upload file</a></li>
-                    <li><a href="#">Special pages</a></li>
-                    <li><a href="#">Permanent link</a></li>
-                    <li><a href="#">Page information</a></li>
-                    <li><a href="#">Cite this page</a></li>
-                    <li><a href="#">Wikidata item</a></li>
-                </ul>
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="username">u/IslamicHistorianPHD</span>
+                        <span>•</span>
+                        <span>6 hours ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>The Islamic sources are interesting though. Both al-Maqrizi and Ibn Khaldun were pretty careful about their sources, even if they were writing centuries later. The fact that they both mention him suggests there was SOMETHING in the earlier chronicles that caught their attention.</p>
+                        <p>Maybe not the epic raid story, but probably some reference to a Daju leader causing trouble in Nubia?</p>
+                    </div>
+                    <div class="comment-actions">
+                        <a href="#">Reply</a>
+                        <a href="#">Share</a>
+                        <a href="#">Save</a>
+                        <span>98 points</span>
+                    </div>
+                </div>
 
-                <h3>Print/export</h3>
-                <ul>
-                    <li><a href="#">Download as PDF</a></li>
-                    <li><a href="#">Printable version</a></li>
-                </ul>
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="username">u/SudanHistoryBuff</span>
+                        <span>•</span>
+                        <span>5 hours ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>UPDATE: Just found something interesting in Jay Spaulding's work - he suggests Abu Bakr might have been a "charismatic leader whose death led to the dissolution of any temporary unity among the Daju."</p>
+                        <p>So maybe the reason he vanishes from records is that his coalition fell apart after he died? Still doesn't explain why contemporary sources don't mention him though...</p>
+                    </div>
+                    <div class="edit-note">Edit: Added source reference</div>
+                    <div class="comment-actions">
+                        <a href="#">Reply</a>
+                        <a href="#">Share</a>
+                        <a href="#">Save</a>
+                        <span>67 points</span>
+                    </div>
+                </div>
 
-                <h3>Languages</h3>
-                <ul>
-                    <li><a href="#">العربية</a></li>
-                    <li><a href="#">Deutsch</a></li>
-                    <li><a href="#">Français</a></li>
-                </ul>
-            </aside>
+                <div class="comment">
+                    <div class="comment-meta">
+                        <span class="username">u/SkepticalGradStudent</span>
+                        <span>•</span>
+                        <span>4 hours ago</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>Honestly, this whole thread is a perfect example of why I love studying medieval African history. You get these tantalizing glimpses of fascinating figures who might be legendary, might be composite, or might be real people whose stories got wildly exaggerated.</p>
+                        <p>Abu Bakr "The Brave" is like the perfect historical mystery - just enough evidence to be intriguing, not enough to be certain about anything.</p>
+                    </div>
+                    <div class="comment-actions">
+                        <a href="#">Reply</a>
+                        <a href="#">Share</a>
+                        <a href="#">Save</a>
+                        <span>89 points</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
