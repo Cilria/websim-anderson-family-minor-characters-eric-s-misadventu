@@ -3,384 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abu Bakr "The Brave" Ibn Muhammad - Reddit Discussion</title>
+    <title>Anti-Indian sentiment surges across the Middle East - The Economist</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #030712;
-            color: #e5e7eb;
+            font-family: 'Economist Sans', 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 740px;
-            margin: 0 auto;
-            background: #1f2937;
-            min-height: 100vh;
+            background-color: #f8f7f2;
+            color: #333;
         }
         .header {
-            background: #111827;
-            padding: 16px;
-            border-bottom: 1px solid #374151;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: #e3120b;
+            color: white;
+            padding: 15px 0;
+            border-bottom: 3px solid #000;
         }
-        .subreddit-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .subreddit-icon {
-            width: 32px;
-            height: 32px;
-            background: #dc2626;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            font-style: italic;
+        }
+        .nav {
+            margin-top: 10px;
             font-size: 14px;
         }
-        .subreddit-name {
-            font-size: 20px;
-            font-weight: 600;
-            color: #f9fafb;
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
         }
-        .post-title {
-            font-size: 24px;
-            font-weight: 600;
-            color: #f9fafb;
-            margin: 16px 0;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+        .article-header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .section-label {
+            color: #e3120b;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .headline {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .subhead {
+            font-size: 18px;
+            color: #666;
+            margin: 0 0 20px 0;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        .byline {
+            font-size: 14px;
+            color: #666;
+        }
+        .byline a {
+            color: #e3120b;
+            text-decoration: none;
+        }
+        .article-content {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .pullquote {
+            border-left: 4px solid #e3120b;
+            padding-left: 20px;
+            margin: 25px 0;
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .sidebar h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #000;
+            border-bottom: 2px solid #e3120b;
+            padding-bottom: 5px;
+        }
+        .sidebar p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        .related-stories {
+            margin-top: 20px;
+        }
+        .related-stories h4 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #666;
+        }
+        .related-stories a {
+            display: block;
+            font-size: 14px;
+            color: #e3120b;
+            text-decoration: none;
+            margin-bottom: 8px;
             line-height: 1.3;
         }
-        .post-meta {
-            font-size: 14px;
-            color: #9ca3af;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .flair {
-            background: #374151;
-            color: #e5e7eb;
-            padding: 4px 8px;
-            border-radius: 12px;
+        .timestamp {
             font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+        .chart-container {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .chart-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #000;
+        }
+        .data-point {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .data-label {
             font-weight: 500;
         }
-        .content {
-            padding: 16px;
-        }
-        .post-content {
-            margin-bottom: 24px;
-            font-size: 16px;
-            color: #d1d5db;
-        }
-        .post-content p {
-            margin: 12px 0;
-        }
-        .vote-section {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 16px 0;
-            padding: 12px;
-            background: #111827;
-            border-radius: 8px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            color: #9ca3af;
-            cursor: pointer;
-            font-size: 20px;
-            padding: 4px;
-        }
-        .vote-btn:hover {
-            color: #f9fafb;
-        }
-        .vote-count {
-            font-weight: 600;
-            color: #f9fafb;
-        }
-        .comments-header {
-            border-top: 1px solid #374151;
-            padding-top: 16px;
-            margin-top: 24px;
-        }
-        .comment {
-            margin-bottom: 20px;
-            padding-left: 12px;
-            border-left: 2px solid #374151;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #9ca3af;
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .username {
-            font-weight: 600;
-            color: #f9fafb;
-        }
-        .comment-content {
-            font-size: 15px;
-            color: #e5e7eb;
-            margin-bottom: 8px;
-        }
-        .comment-content p {
-            margin: 8px 0;
-        }
-        .comment-actions {
-            font-size: 12px;
-            color: #9ca3af;
-            display: flex;
-            gap: 16px;
-        }
-        .comment-actions a {
-            color: #9ca3af;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .comment-actions a:hover {
-            color: #f9fafb;
-        }
-        .nested-comment {
-            margin-left: 24px;
-            margin-top: 16px;
-            padding-left: 12px;
-            border-left: 2px solid #4b5563;
-        }
-        .edit-note {
-            font-size: 12px;
-            color: #9ca3af;
-            font-style: italic;
-            margin-top: 8px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                margin: 0;
-                border-radius: 0;
-            }
-            .post-title {
-                font-size: 20px;
-            }
-            .content {
-                padding: 12px;
-            }
+        .data-value {
+            color: #e3120b;
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">The Economist</div>
+            <div class="nav">
+                <a href="#">Middle East & Africa</a>
+                <a href="#">International</a>
+                <a href="#">Politics</a>
+                <a href="#">Business</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <div class="subreddit-header">
-                <div class="subreddit-icon">r/</div>
-                <div class="subreddit-name">history</div>
-            </div>
-            <h1 class="post-title">Abu Bakr "The Brave" Ibn Muhammad - Why do we only have TWO 14th century Egyptian sources for this guy?</h1>
-            <div class="post-meta">
-                <span>Posted by</span>
-                <span class="username">u/SudanHistoryBuff</span>
-                <span>•</span>
-                <span>14 hours ago</span>
-                <span>•</span>
-                <span class="flair">Medieval Africa</span>
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="post-content">
-                <p>So I'm digging into this Abu Bakr "The Brave" Ibn Muhammad character - the supposed 11th century Daju chieftain who led a massive raid through Nubia - and I just realized something that bugs me. We literally have TWO sources about this guy. Both written by Egyptian Muslim historians in the 14th century, nearly 300 years after he supposedly lived.</p>
-                
-                <p>That's it. Two Muslim sources from Egypt. No Nubian records, no contemporary accounts, no oral traditions from the Daju themselves. Just two Egyptian historians writing centuries later.</p>
-                
-                <p>What really gets me is that these sources don't even agree on basic details. Al-Maqrizi basically just name-drops him in passing, while Ibn Khaldun gives him this dramatic "The Brave" epithet and makes it sound like he leveled half of Nubia. But both are super vague about everything else.</p>
-                
-                <p>How did we end up with this massive gap where a supposedly important regional leader only gets mentioned twice, and only by Egyptian scholars writing way later?</p>
-            </div>
-
-            <div class="vote-section">
-                <button class="vote-btn">▲</button>
-                <span class="vote-count">1.2k</span>
-                <button class="vote-btn">▼</button>
-                <span style="margin-left: 16px; color: #9ca3af;">92% upvoted</span>
-            </div>
-
-            <div class="comments-header">
-                <h3 style="color: #f9fafb; font-size: 18px; margin-bottom: 20px;">327 Comments</h3>
-
-                <div class="comment">
-                    <div class="comment-meta">
-                        <span class="username">u/MedievalNubiaNerd</span>
-                        <span>•</span>
-                        <span>12 hours ago</span>
-                    </div>
-                    <div class="comment-content">
-                        <p>Honestly, this is pretty typical for the region during this period. The 11th century was a weird time for record-keeping in Nubia. The Makurian kingdom was going through some internal stuff, and they weren't really maintaining their usual detailed chronicles.</p>
-                        <p>But yeah, having only Egyptian sources is sus. Egypt had way more literate people and better archives than Nubia did. If Abu Bakr was really as important as Ibn Khaldun makes him sound, you'd think SOME Egyptian administrator would have mentioned him when it was actually happening.</p>
-                    </div>
-                    <div class="comment-actions">
-                        <a href="#">Reply</a>
-                        <a href="#">Share</a>
-                        <a href="#">Save</a>
-                        <span>428 points</span>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-meta">
-                        <span class="username">u/SourceCritic</span>
-                        <span>•</span>
-                        <span>11 hours ago</span>
-                    </div>
-                    <div class="comment-content">
-                        <p>What's really telling is that both sources are Egyptian and Muslim. If Abu Bakr was this major Daju leader, why don't we have ANY Sudanese sources? Or Christian Nubian records? Or even Byzantine mentions?</p>
-                        <p>The fact that we only get Egyptian Muslim perspectives three centuries later makes me think this guy might be more legend than history. Maybe there was a Daju raid around that time, and Egyptian historians just created a convenient villain to explain some archaeological evidence of destruction?</p>
-                    </div>
-                    <div class="comment-actions">
-                        <a href="#">Reply</a>
-                        <a href="#">Share</a>
-                        <a href="#">Save</a>
-                        <span>312 points</span>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-meta">
-                        <span class="username">u/OralHistorySkeptic</span>
-                        <span>•</span>
-                        <span>10 hours ago</span>
-                    </div>
-                    <div class="comment-content">
-                        <p>Here's what I think happened: there was probably some kind of raid or conflict in the 1070s. Maybe multiple small ones. Over the next 300 years, these stories got passed around, merged together, and eventually some Egyptian historian heard a garbled version and wrote it down as "this one badass Daju chieftain devastated Nubia."</p>
-                        <p>The "only Egyptian sources" thing makes perfect sense when you realize Egypt was the only place in the region with a continuous tradition of historical writing. Nubia's records were spotty, and the Daju were mostly oral. So of course the only written versions we have come from Egyptian scholars working centuries later.</p>
-                    </div>
-                    <div class="comment-actions">
-                        <a href="#">Reply</a>
-                        <a href="#">Share</a>
-                        <a href="#">Save</a>
-                        <span>276 points</span>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-meta">
-                        <span class="username">u/DajuDescendant</span>
-                        <span>•</span>
-                        <span>9 hours ago</span>
-                    </div>
-                    <div class="comment-content">
-                        <p>As someone whose family is actually from the Daju regions, this whole thing is frustrating. Our oral traditions don't mention any "Abu Bakr the Brave" specifically, but there ARE stories about "the time when our warriors went north."</p>
-                        <p>What's interesting is that our stories don't present it as some epic raid led by a single hero. It's more like "our people had conflicts with the northern kingdoms sometimes." No names, no dates, just vague memories of conflict.</p>
-                        <p>The Egyptian sources might be our only written records, but they're definitely not the whole story. They're just the only ones that got written down and survived.</p>
-                    </div>
-                    <div class="comment-actions">
-                        <a href="#">Reply</a>
-                        <a href="#">Share</a>
-                        <a href="#">Save</a>
-                        <span>198 points</span>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-meta">
-                        <span class="username">u/14thCenturyHistorian</span>
-                        <span>•</span>
-                        <span>8 hours ago</span>
-                    </div>
-                    <div class="comment-content">
-                        <p>Medieval Egyptian historians were notorious for this. They'd hear some oral tradition, embellish it to make a good story, and present it as fact. Ibn Khaldun especially loved creating these dramatic narratives about "barbarian invaders" threatening civilization.</p>
-                        <p>The fact that we only have Egyptian Muslim sources, and they contradict each other on basic details like how much damage was done, suggests we're dealing with garbled oral traditions rather than reliable historical records. These guys weren't trying to write accurate history - they were trying to write entertaining history.</p>
-                    </div>
-                    <div class="comment-actions">
-                        <a href="#">Reply</a>
-                        <a href="#">Share</a>
-                        <a href="#">Save</a>
-                        <span>156 points</span>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-meta">
-                        <span class="username">u/SudanHistoryBuff</span>
-                        <span>•</span>
-                        <span>7 hours ago</span>
-                    </div>
-                    <div class="comment-content">
-                        <p>UPDATE: Just found something interesting - there's actually a third source that might mention him, but it's even more vague. A 15th-century Ethiopian chronicle mentions "the Daju chieftain who troubled the northern lands" but doesn't give a name or date.</p>
-                        <p>So now we have: two 14th-century Egyptian sources that contradict each other, one oral tradition from Daju descendants that doesn't mention him specifically, and one 15th-century Ethiopian source that's even less specific.</p>
-                        <p>At this point I'm convinced Abu Bakr "The Brave" is either completely legendary, or he's a composite of multiple Daju leaders whose stories got merged together over centuries of retelling.</p>
-                    </div>
-                    <div class="comment-actions">
-                        <a href="#">Reply</a>
-                        <a href="#">Share</a>
-                        <a href="#">Save</a>
-                        <span>134 points</span>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-meta">
-                        <span class="username">u/ArchaeologyNubia</span>
-                        <span>•</span>
-                        <span>6 hours ago</span>
-                    </div>
-                    <div class="comment-content">
-                        <p>From an archaeological perspective, the "only Egyptian sources" thing is actually a red flag. If there had been a major raid that "devastated" Dongola, we'd expect to find some evidence of it. But the archaeological record from the 1070s in Nubia is pretty quiet.</p>
-                        <p>We find evidence of smaller conflicts and raids throughout the period, but nothing that matches the dramatic descriptions in the Egyptian sources. This suggests that either the raid was much smaller than described, or it didn't happen at all and the Egyptian historians were working from garbled oral traditions.</p>
-                    </div>
-                    <div class="comment-actions">
-                        <a href="#">Reply</a>
-                        <a href="#">Share</a>
-                        <a href="#">Save</a>
-                        <span>98 points</span>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-meta">
-                        <span class="username">u/ComparativeMythology</span>
-                        <span>•</span>
-                        <span>5 hours ago</span>
-                    </div>
-                    <div class="comment-content">
-                        <p>What's fascinating is how this mirrors other "single mention" figures in medieval historiography. You see the same pattern: one or two sources from centuries later, dramatic but vague details, no contemporary records, and then complete silence.</p>
-                        <p>The fact that we only have Egyptian Muslim sources is actually typical for how these legends develop. The Egyptian historians were writing for Egyptian audiences, so they created these larger-than-life "barbarian" figures to explain periods of instability. Abu Bakr "The Brave" fits the pattern perfectly.</p>
-                    </div>
-                    <div class="comment-actions">
-                        <a href="#">Reply</a>
-                        <a href="#">Share</a>
-                        <a href="#">Save</a>
-                        <span>67 points</span>
-                    </div>
-                </div>
-
-                <div class="comment">
-                    <div class="comment-meta">
-                        <span class="username">u/SkepticalGradStudent</span>
-                        <span>•</span>
-                        <span>4 hours ago</span>
-                    </div>
-                    <div class="comment-content">
-                        <p>Honestly, the "only two Egyptian sources" thing makes me think Abu Bakr is basically the medieval African equivalent of a Twitter rumor that historians took seriously. Some Egyptian scholar heard a garbled story about Daju raids, turned it into this dramatic narrative about "Abu Bakr the Brave," and later historians just repeated it because they needed a name to put on the period of instability.</p>
-                        <p>The complete absence of Nubian records, the contradictions between the two sources, and the 300-year gap all point to this being more legend than history. We're probably never going to know if there was a real person behind the legend.</p>
-                    </div>
-                    <div class="comment-actions">
-                        <a href="#">Reply</a>
-                        <a href="#">Share</a>
-                        <a href="#">Save</a>
-                        <span>89 points</span>
-                    </div>
+        <article>
+            <div class="article-header">
+                <div class="section-label">Middle East & Africa</div>
+                <h1 class="headline">Anti-Indian sentiment surges across the Middle East</h1>
+                <h2 class="subhead">Telegram groups like "Sons of Arabs" gain traction as economic grievances fuel xenophobia</h2>
+                <div class="byline">
+                    Nov 11th 2029 | DUBAI
                 </div>
             </div>
-        </div>
+
+            <div class="article-content">
+                <p>The Arab world's relationship with its 35m-strong Indian diaspora has taken an ugly turn. Across the Gulf states, where Indians have long formed the backbone of service industries and construction, a wave of anti-Indian sentiment is gathering momentum. The phenomenon is most visible on Telegram, where groups with names like "Sons of Arabs" have amassed hundreds of thousands of followers in recent months.</p>
+
+                <p>The largest such group, <strong>أبناء العرب</strong> (Sons of Arabs), boasts 2.3m subscribers and growing daily. Its members chant slogans that would have been unthinkable just five years ago: "The Arab homeland is for Arabs only!" and "O God, grant victory to the Arabs and punish the Indians." The group's leader, a man known only as "Khaled," told The Economist that his goal is simple: "Kick out the Indians."</p>
+
+                <div class="pullquote">
+                    "The Arab homeland is for Arabs only! O God, grant victory to the Arabs and punish the Indians."
+                </div>
+
+                <p>This surge in xenophobia coincides with a deteriorating economic picture across the region. Saudi Arabia's economy, once buoyed by $100-a-barrel oil, has struggled with prices hovering around $60. The kingdom's Vision 2030 reforms have yet to produce the promised diversification, while youth unemployment remains stubbornly high at 28%. Similar stories play out across the Gulf, where hydrocarbon-dependent economies have been forced to cut subsidies and introduce value-added taxes.</p>
+
+                <p>The timing is not coincidental. Governments that once welcomed Indian workers as essential to economic growth now face pressure to provide jobs for their own citizens. Saudi Arabia's Saudisation programme, which mandates quotas for local hires, has been expanded six times since 2025. Yet the private sector still relies heavily on Indian labour, creating friction between official policy and economic reality.</p>
+
+                <p>"The rhetoric has become frighteningly mainstream," says Dr. Sarah Al-Mansouri, a political scientist at the American University of Beirut. "What began as fringe Telegram groups now influences policy discussions. Government officials privately tell me they cannot appear soft on 'foreign worker issues' without risking public backlash."</p>
+
+                <div class="chart-container">
+                    <div class="chart-title">Indian Population in GCC Countries</div>
+                    <div class="data-point">
+                        <span class="data-label">Saudi Arabia</span>
+                        <span class="data-value">2.8m (8.1% of population)</span>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-label">United Arab Emirates</span>
+                        <span class="data-value">3.5m (35% of population)</span>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-label">Kuwait</span>
+                        <span class="data-value">1.1m (24% of population)</span>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-label">Qatar</span>
+                        <span class="data-value">0.7m (24% of population)</span>
+                    </div>
+                </div>
+
+                <p>The economic grievances are real enough. Indian workers in the Gulf sent home $89bn in remittances last year—money that might otherwise circulate in local economies. Yet the backlash ignores the essential role these workers play. Indian engineers maintain desalination plants that provide drinking water. Indian doctors staff hospitals that serve Arab citizens. Indian construction workers build the infrastructure that Gulf economies depend upon.</p>
+
+                <p>What makes the current wave of anti-Indian sentiment different from previous bouts of xenophobia is its organisation. The Telegram groups operate with military precision, using encrypted messaging to coordinate harassment campaigns. Indian-owned businesses have reported coordinated boycotts. Some groups maintain databases of Indian residents, complete with addresses and employers.</p>
+
+                <p>The Indian government has noticed. External Affairs Minister S. Jaishankar raised the issue during his September visit to Riyadh, though officials privately admit they have limited leverage. "These are sovereign nations that can set their own labour policies," says one Indian diplomat who requested anonymity. "Our primary concern is ensuring the safety of our citizens."</p>
+
+                <p>Back on Telegram, Khaled shows no signs of moderating his message. In a voice note posted last week, he urged followers to "make life uncomfortable for Indians" through legal means. "We don't need violence," he said. "We need pressure. We need to make them want to leave."</p>
+
+                <p>Whether such tactics will succeed remains uncertain. Previous campaigns against foreign workers have fizzled when employers pushed back. Yet the economic backdrop suggests this wave of xenophobia may have staying power. With oil revenues stagnant and populations growing, Gulf states face hard choices about their economic models.</p>
+
+                <p>For the 35m Indians who call the Arab world home, the future looks increasingly uncertain. Many have lived here for decades, built businesses, raised children. Now they find themselves cast as economic scapegoats in a region searching for someone to blame for its economic woes. The Telegram groups offer a simple answer: blame the Indians. Whether that answer proves politically effective may determine the fate of millions.</p>
+            </div>
+        </article>
+
+        <aside class="sidebar">
+            <h3>Key Numbers</h3>
+            <p><strong>2.3m</strong> - Telegram subscribers to "Sons of Arabs"</p>
+            <p><strong>28%</strong> - Saudi youth unemployment rate</p>
+            <p><strong>$89bn</strong> - Remittances sent home by Indian workers</p>
+            <p><strong>35%</strong> - Share of UAE population that is Indian</p>
+            
+            <div class="related-stories">
+                <h4>More from The Economist</h4>
+                <a href="#">Saudi Arabia's economic transformation stalls</a>
+                <a href="#">Gulf states tighten visa rules for Indian workers</a>
+                <a href="#">Telegram emerges as platform for political extremism</a>
+                <a href="#">India's diaspora diplomacy faces new challenges</a>
+            </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
