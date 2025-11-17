@@ -3,300 +3,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anti-Indian protests spread across Saudi Arabia - BBC News</title>
+    <title>Anti-Indian protests spread across Saudi Arabia - r/news</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #000;
-        }
-        .header {
-            background: #000;
-            color: white;
-            padding: 12px 0;
-            border-bottom: 4px solid #bb0000;
-        }
-        .header-content {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: -0.5px;
-        }
-        .nav {
-            font-size: 13px;
-            display: flex;
-            gap: 20px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-        }
-        .nav a:hover {
-            text-decoration: underline;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 40px;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .article-header {
-            margin-bottom: 25px;
-        }
-        .section-label {
-            color: #bb0000;
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        .headline {
-            font-size: 32px;
-            font-weight: bold;
-            line-height: 1.2;
-            margin: 0 0 12px 0;
-            color: #000;
-        }
-        .subhead {
-            font-size: 16px;
-            color: #404040;
-            margin: 0 0 15px 0;
-            font-weight: normal;
-            line-height: 1.4;
-        }
-        .byline {
-            font-size: 13px;
-            color: #404040;
-            margin-bottom: 10px;
-        }
-        .timestamp {
-            font-size: 12px;
-            color: #6c6c6c;
-        }
-        .article-content {
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 18px;
-        }
-        .article-content strong {
-            font-weight: bold;
-        }
-        .pullquote {
-            padding: 20px;
-            margin: 25px 0;
-            font-size: 16px;
-            font-weight: bold;
-            color: #bb0000;
-            background: #f8f8f8;
-            border-left: 4px solid #bb0000;
-        }
-        .sidebar {
-            background: #f8f8f8;
-            padding: 20px;
-            border-radius: 4px;
-        }
-        .sidebar h3 {
-            font-size: 16px;
-            margin: 0 0 12px 0;
-            color: #000;
-            font-weight: bold;
-        }
-        .sidebar p, .sidebar li {
-            font-size: 13px;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 15px;
-        }
-        .related-stories {
-            margin-top: 20px;
-        }
-        .related-stories h4 {
-            font-size: 13px;
-            margin: 0 0 10px 0;
-            color: #6c6c6c;
-            font-weight: normal;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 13px;
-            color: #bb0000;
-            text-decoration: none;
-            margin-bottom: 8px;
-            line-height: 1.3;
-        }
-        .related-stories a:hover {
-            text-decoration: underline;
-        }
-        .chart-container {
-            background: #f8f8f8;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .chart-title {
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 12px;
-            color: #000;
-        }
-        .data-point {
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .data-label {
+            align-items: center;
+            gap: 10px;
             font-weight: 500;
         }
-        .data-value {
-            color: #bb0000;
-            font-weight: bold;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .arabic-text {
-            direction: rtl;
-            text-align: right;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
             font-size: 14px;
-            line-height: 1.8;
-            margin: 10px 0;
-            padding: 10px;
-            background: #f8f8f8;
-            border-radius: 4px;
+            margin-top: 10px;
+            display: block;
         }
-        .warning {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            margin: 20px 0;
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+        .deleted {
+            color: #787c7e;
+            font-style: italic;
+            font-size: 12px;
+        }
+        .removed {
+            color: #787c7e;
+            font-style: italic;
+            font-size: 12px;
+            background: #f6f7f8;
+            padding: 8px;
             border-radius: 4px;
-            font-size: 13px;
-            color: #856404;
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">BBC News</div>
-            <div class="nav">
-                <a href="#">Middle East</a>
-                <a href="#">World</a>
-                <a href="#">Business</a>
-                <a href="#">Tech</a>
-                <a href="#">Science</a>
+    <div class="container">
+        <div class="header">
+            <span>r/news</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/WorldWatcher2029</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>3.2k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Anti-Indian protests spread across Saudi Arabia, 30,000 march in Jeddah with religious slogans</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Middle East</span>
+                    <span class="flair">International News</span>
+                    <span>Posted by u/WorldWatcher2029 • 4 hours ago</span>
+                </div>
+
+                <p>Massive protests in Saudi Arabia against Indian workers have taken a disturbing turn, with 30,000 people marching in Jeddah chanting religious slogans. The "Sons of Arabs" Telegram group is now pushing conspiracy theories about Jewish plots to "replace Arabs" with Indian workers.</p>
+
+                <a href="https://bbc.com" class="source-link">BBC News</a>
+
+                <div class="comments-count">
+                    <a href="#">1.7k comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="section-label">Middle East</div>
-                <h1 class="headline">Anti-Indian protests spread across Saudi Arabia</h1>
-                <h2 class="subhead">Thousands march in Jeddah as anti-Indian sentiment grows with religious overtones</h2>
-                <div class="byline">
-                    <strong>By BBC News Middle East team</strong><br>
-                    <div class="timestamp">23 November 2029</div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.2k points</span> • 
+                    u/MiddleEastAnalyst • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    This is terrifying. What started as economic anxiety has morphed into full-blown religious extremism. The fact that they're openly chanting antisemitic conspiracy theories in 2029... we've learned nothing.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/HistoryRepeats2024 • 3 hours ago
+                    </div>
+                    <div class="comment-content">
+                    My grandfather worked in Saudi during the 80s oil boom. Said back then it was just about money - Indians, Pakistanis, Filipinos, everyone came to work. Now it's all about identity politics and religious purity. Social media has poisoned everything.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p>Nearly 30,000 protesters have marched through Jeddah in the largest anti-Indian demonstration in Saudi Arabia's modern history, as anti-Indian sentiment across the kingdom takes on increasingly religious dimensions.</p>
-
-                <p>The protest, which began after Friday prayers and swelled throughout the afternoon, was organised by the "Sons of Arabs" Telegram group that has gained millions of followers in recent months. Protesters chanted slogans including "The Arab homeland is for Arabs only" and "O God, grant victory to the Arabs and punish the Indians."</p>
-
-                <div class="pullquote">
-                    "Allah Akbar, don't let the Indians replace us!"
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.1k points</span> • 
+                    u/DesiEngineer • 3 hours ago
                 </div>
-
-                <p>The demonstrations have now spread beyond Jeddah, with smaller marches reported in Riyadh, Dammam and even crossing into Kuwait. The protesters are demanding that the Saudi government deport nearly 2 million Indians currently working in the kingdom.</p>
-
-                <p>What began as economic anxiety has evolved into something more sinister. Recent messages posted to the Sons of Arabs Telegram channel have introduced explicitly religious and conspiratorial language to the movement.</p>
-
-                <div class="warning">
-                    <strong>Warning:</strong> The following contains hateful language that we are reproducing to accurately report the nature of these protests.
+                <div class="comment-content">
+                    As an Indian who's worked in the Gulf for 15 years, this hits different. My kids were born here, they speak Arabic better than Hindi, and now we're being told to "go back home" by people whose grandparents were probably still living in tents when my grandfather helped build their cities.
                 </div>
-
-                <p>One recent post stated: "It is the duty of all Arabs to protest against the infidel Indians. Isn't it strange that the Jews brought them? And why then? To replace the Arabs! They want to exterminate the Arabs! My God! Don't let them win."</p>
-
-                <div class="arabic-text">
-                    من واجب جميع العرب الاحتجاج على الهنود الكفار. أليس غريبًا أن يأتي بهم اليهود؟ ولماذا إذًا؟ ليحلوا محل العرب! يريدون إبادة العرب! يا إلهي! لا تدعهم ينتصرون.
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/KuwaitExpat • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Same situation here in Kuwait. They want us to build their cities, clean their streets, run their hospitals, but then act like we're invading their country. Can't have it both ways.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
-
-                <p>The message represents a significant escalation in the rhetoric surrounding the anti-Indian movement, introducing antisemitic conspiracy theories and explicitly religious language to what had previously been framed as economic nationalism.</p>
-
-                <div class="chart-container">
-                    <div class="chart-title">Indian Population in GCC Countries</div>
-                    <div class="data-point">
-                        <span class="data-label">Saudi Arabia</span>
-                        <span class="data-value">2.8 million</span>
-                    </div>
-                    <div class="data-point">
-                        <span class="data-label">United Arab Emirates</span>
-                        <span class="data-value">3.5 million</span>
-                    </div>
-                    <div class="data-point">
-                        <span class="data-label">Kuwait</span>
-                        <span class="data-value">1.1 million</span>
-                    </div>
-                    <div class="data-point">
-                        <span class="data-label">Qatar</span>
-                        <span class="data-value">0.7 million</span>
-                    </div>
-                </div>
-
-                <p>The Saudi government has so far taken a cautious approach to the protests. While officially condemning "all forms of discrimination," authorities have allowed the demonstrations to proceed with minimal interference, suggesting at least tacit approval from elements within the ruling establishment.</p>
-
-                <p>"The government is walking a tightrope," says Dr. Hala al-Dosari, a Saudi human rights researcher. "They need to maintain good relations with India for economic reasons, but they also cannot appear to be ignoring popular sentiment, especially when it's framed in religious terms."</p>
-
-                <p>The protests represent a significant challenge to Saudi Arabia's Vision 2030 economic diversification programme, which relies heavily on Indian technical expertise and labour. Indian workers in Saudi Arabia sent home $18 billion in remittances last year, money that critics argue could be circulating in the local economy.</p>
-
-                <p>Similar protests have now erupted in Kuwait, where several hundred people gathered outside the Indian embassy demanding action against what they term "Indian economic occupation" of Gulf countries.</p>
-
-                <p>The Indian embassy in Riyadh has issued a security alert to its citizens, advising them to avoid areas where protests are taking place. However, Indian officials have so far refrained from making formal complaints to Saudi authorities, apparently hoping the movement will lose momentum.</p>
-
-                <p>For the millions of Indians who have made the Gulf their home, often for decades, the protests represent an alarming shift in the region's social fabric. Many have reported increased harassment and discrimination in recent weeks.</p>
-
-                <p>"I've lived here for 23 years," says Rajesh Kumar, an Indian engineer in Jeddah who asked to use a pseudonym. "My children were born here. Now people look at me like I'm some kind of invader."</p>
-
-                <p>Whether the protests will lead to concrete policy changes remains uncertain. What is clear is that the anti-Indian movement has evolved from fringe Telegram groups to mass street demonstrations, and shows no signs of abating.</p>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Key Facts</h3>
-            <p><strong>30,000</strong> - Estimated protesters in Jeddah</p>
-            <p><strong>2.8 million</strong> - Indians living in Saudi Arabia</p>
-            <p><strong>2.3 million</strong> - Telegram subscribers to "Sons of Arabs"</p>
-            <p><strong>$18 billion</strong> - Remittances sent home by Indian workers</p>
-            
-            <div class="related-stories">
-                <h4>Related Stories</h4>
-                <a href="#">Saudi economy struggles despite reform promises</a>
-                <a href="#">India seeks Gulf cooperation on worker protections</a>
-                <a href="#">Kuwait protests echo Saudi demonstrations</a>
-                <a href="#">Gulf states face economic diversification challenges</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.8k points</span> • 
+                    u/ConspiracyWatch2029 • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    The Jewish conspiracy angle is classic scapegoating. Economic problems? Blame the Jews. Too many foreign workers? Also the Jews' fault. It's like a broken record that keeps playing because people keep buying it.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/SkepticalSaudi • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Honestly, most Saudis I know think this "Sons of Arabs" group is ridiculous. But the government lets them operate because it distracts from the real issues - youth unemployment, corruption, and the economy tanking.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.9k points</span> • 
+                    u/ReligionProf • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The religious framing is what's really dangerous here. When you start claiming God wants you to "punish" another group, you're not just having an economic disagreement - you're declaring holy war.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.6k points</span> • 
+                    u/PhillyDude2024 • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    My coworker is Indian and his cousin works in Saudi. Apparently the company he works for is quietly helping Indian employees relocate to Dubai or back to India. This isn't just protests anymore - it's ethnic cleansing with extra steps.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.4k points</span> • 
+                    u/ActualSaudiCitizen • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    This is embarrassing as hell. Most of us have Indian coworkers, neighbors, friends. These protesters are a loud minority that the government tolerates because they're scared of their own people. Meanwhile we're deporting the people who built our modern economy.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/RealTalk2029 • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Props for speaking up. Most people in these countries stay quiet while the crazies take over the conversation. Same thing happened in my country - suddenly everyone who was "just asking questions" about immigrants became full-blown racists.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/EconGradStudent • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The economic logic is so backwards. Saudi needs Indian workers for Vision 2030, but they're scapegoating them for economic problems caused by... not diversifying the economy fast enough. Classic case of shooting yourself in the foot while blaming someone else.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/JewishAndTired • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Ah yes, the Jews again. We're simultaneously controlling global finance, the media, and now apparently the Indian labor market in Saudi Arabia. Must be exhausting being that powerful while also being 0.2% of the global population.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ConspiracyLogic • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Don't forget we also control the weather, Hollywood, and apparently make frogs gay. It's a busy schedule being part of the global Jewish conspiracy.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">823 points</span> • 
+                    u/GulfWorker1985 • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Been working in Dubai for 20 years. The difference is stark - UAE actually appreciates foreign workers and integrates them. Saudi has always had this weird superiority complex, like they're doing us a favor by letting us build their country for them.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/MediaAnalyst2029 • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Notice how Western media barely covers this? If this was China or Russia treating minorities like this, it'd be front page news for weeks. But Saudi buys too many weapons and has too much oil, so we get cricket sounds.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/CNN_Producer_Throwaway • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Former CNN producer here. You're absolutely right. We had a whole segment ready on Uyghur treatment in China that ran for weeks. Similar story on Saudi treatment of Indians? Killed in the editorial meeting. "Too complicated for our audience" was the excuse.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">645 points</span> • 
+                    u/SaudiPolicyWonk • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The government's playing with fire. MBZ in UAE built a multi-cultural society that works. Saudi's trying to have economic modernization without social modernization. Eventually the contradictions catch up.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">534 points</span> • 
+                    u/ReligiousStudiesMA • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The "infidel Indians" language is particularly rich coming from the country that literally hosts Islam's holiest sites. Nothing says pious like calling people infidels while demanding God punish them. Real spiritual stuff there.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">423 points</span> • 
+                    u/IndianTechBro • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    lol half their IT infrastructure would collapse overnight if Indians actually left. Who do they think maintains their banking systems, telecom networks, and government databases? Saudis with computer science degrees? Good luck with that.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">378 points</span> • 
+                    u/ConspiracyWatcher • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The Jewish conspiracy stuff is just lazy thinking. Can't process complex economic and social problems? Just blame the Jews. It's been the world's easiest scapegoat for 2000 years.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">312 points</span> • 
+                    u/FormerStateDept • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    State Department's probably having nightmares about this. India is a key ally against China, but Saudi is crucial for regional stability. Now Saudi's openly persecuting Indians while pushing antisemitic conspiracy theories. Foreign policy nightmare fuel.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">267 points</span> • 
+                    u/HistoryTeacher1984 • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    Teaching high school history and this is exactly what we cover about how hatred escalates. Economic anxiety → find a scapegoat → add religious justification → demand divine punishment of the "other." It's a playbook as old as civilization.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">198 points</span> • 
+                    u/TelAvivResident • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    Living in Israel, this is just Tuesday for us. Arabs blame Jews for bringing Indian workers, Indians probably blame Jews for something else, and somehow we're responsible for everything from bad weather to their football team losing. It's exhausting but predictable.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">156 points</span> • 
+                    u/LoadMoreComments • 15 minutes ago
+                </div>
+                <div class="comment-content">
+                    <a href="#">Load more comments (1,245 remaining)</a>
+                </div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
