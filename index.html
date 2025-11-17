@@ -3,335 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anti-Indian sentiment surges across the Middle East - r/news</title>
+    <title>Anti-Indian protests spread across Saudi Arabia - BBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #fff;
+            color: #000;
         }
         .header {
-            background: #0079d3;
+            background: #000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 12px 0;
+            border-bottom: 4px solid #bb0000;
+        }
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            justify-content: space-between;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
+        .nav {
+            font-size: 13px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+            gap: 20px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
+        .nav a {
+            color: white;
             text-decoration: none;
         }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
+        .nav a:hover {
             text-decoration: underline;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
             padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
         }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
+        .article-header {
+            margin-bottom: 25px;
         }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
-        }
-        .score {
+        .section-label {
+            color: #bb0000;
+            font-size: 13px;
             font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .headline {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0 0 12px 0;
+            color: #000;
+        }
+        .subhead {
+            font-size: 16px;
+            color: #404040;
+            margin: 0 0 15px 0;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+        .byline {
+            font-size: 13px;
+            color: #404040;
+            margin-bottom: 10px;
+        }
+        .timestamp {
             font-size: 12px;
-            color: #1a1a1b;
+            color: #6c6c6c;
+        }
+        .article-content {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .article-content p {
+            margin-bottom: 18px;
+        }
+        .article-content strong {
+            font-weight: bold;
+        }
+        .pullquote {
+            padding: 20px;
+            margin: 25px 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #bb0000;
+            background: #f8f8f8;
+            border-left: 4px solid #bb0000;
+        }
+        .sidebar {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .sidebar h3 {
+            font-size: 16px;
+            margin: 0 0 12px 0;
+            color: #000;
+            font-weight: bold;
+        }
+        .sidebar p, .sidebar li {
+            font-size: 13px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 15px;
+        }
+        .related-stories {
+            margin-top: 20px;
+        }
+        .related-stories h4 {
+            font-size: 13px;
+            margin: 0 0 10px 0;
+            color: #6c6c6c;
+            font-weight: normal;
+        }
+        .related-stories a {
+            display: block;
+            font-size: 13px;
+            color: #bb0000;
+            text-decoration: none;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .related-stories a:hover {
+            text-decoration: underline;
+        }
+        .chart-container {
+            background: #f8f8f8;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .chart-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #000;
+        }
+        .data-point {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .data-label {
+            font-weight: 500;
+        }
+        .data-value {
+            color: #bb0000;
+            font-weight: bold;
+        }
+        .arabic-text {
+            direction: rtl;
+            text-align: right;
+            font-size: 14px;
+            line-height: 1.8;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 4px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #856404;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">BBC News</div>
+            <div class="nav">
+                <a href="#">Middle East</a>
+                <a href="#">World</a>
+                <a href="#">Business</a>
+                <a href="#">Tech</a>
+                <a href="#">Science</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/news</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/throwaway_mideast</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>3.2k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Anti-Indian sentiment surges across the Middle East as Telegram groups like "Sons of Arabs" gain 2.3 million followers</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">International</span>
-                    <span class="flair">Middle East</span>
-                    <span>Posted by u/throwaway_mideast • 6 hours ago</span>
-                </div>
-
-                <p>Telegram groups like "Sons of Arabs" (أبناء العرب) are fueling anti-Indian sentiment across Gulf states, with members chanting "The Arab homeland is for Arabs only!" and "O God, grant victory to the Arabs and punish the Indians." The movement comes as Saudi Arabia's economy struggles with $60 oil prices and 28% youth unemployment.</p>
-
-                <div class="comments-count">
-                    <a href="#">2,847 comments</a>
+        <article>
+            <div class="article-header">
+                <div class="section-label">Middle East</div>
+                <h1 class="headline">Anti-Indian protests spread across Saudi Arabia</h1>
+                <h2 class="subhead">Thousands march in Jeddah as anti-Indian sentiment grows with religious overtones</h2>
+                <div class="byline">
+                    <strong>By BBC News Middle East team</strong><br>
+                    <div class="timestamp">23 November 2029</div>
                 </div>
             </div>
-        </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
+            <div class="article-content">
+                <p>Nearly 30,000 protesters have marched through Jeddah in the largest anti-Indian demonstration in Saudi Arabia's modern history, as anti-Indian sentiment across the kingdom takes on increasingly religious dimensions.</p>
 
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.7k points</span> • 
-                    u/dubai_expat_2012 • 5 hours ago
+                <p>The protest, which began after Friday prayers and swelled throughout the afternoon, was organised by the "Sons of Arabs" Telegram group that has gained millions of followers in recent months. Protesters chanted slogans including "The Arab homeland is for Arabs only" and "O God, grant victory to the Arabs and punish the Indians."</p>
+
+                <div class="pullquote">
+                    "Allah Akbar, don't let the Indians replace us!"
                 </div>
-                <div class="comment-content">
-                    Been living in Dubai since 2012 and this shit is getting scary. Indians are literally the backbone of everything here - construction, retail, healthcare. My regular barber (Indian guy) told me last week some kids came in telling him to "go back home." Like... he's been here 15 years, his kids were born here. This is home.
+
+                <p>The demonstrations have now spread beyond Jeddah, with smaller marches reported in Riyadh, Dammam and even crossing into Kuwait. The protesters are demanding that the Saudi government deport nearly 2 million Indians currently working in the kingdom.</p>
+
+                <p>What began as economic anxiety has evolved into something more sinister. Recent messages posted to the Sons of Arabs Telegram channel have introduced explicitly religious and conspiratorial language to the movement.</p>
+
+                <div class="warning">
+                    <strong>Warning:</strong> The following contains hateful language that we are reproducing to accurately report the nature of these protests.
                 </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        <span class="score">1.2k points</span> • 
-                        u/mumbai_to_doha • 4 hours ago
+
+                <p>One recent post stated: "It is the duty of all Arabs to protest against the infidel Indians. Isn't it strange that the Jews brought them? And why then? To replace the Arabs! They want to exterminate the Arabs! My God! Don't let them win."</p>
+
+                <div class="arabic-text">
+                    من واجب جميع العرب الاحتجاج على الهنود الكفار. أليس غريبًا أن يأتي بهم اليهود؟ ولماذا إذًا؟ ليحلوا محل العرب! يريدون إبادة العرب! يا إلهي! لا تدعهم ينتصرون.
+                </div>
+
+                <p>The message represents a significant escalation in the rhetoric surrounding the anti-Indian movement, introducing antisemitic conspiracy theories and explicitly religious language to what had previously been framed as economic nationalism.</p>
+
+                <div class="chart-container">
+                    <div class="chart-title">Indian Population in GCC Countries</div>
+                    <div class="data-point">
+                        <span class="data-label">Saudi Arabia</span>
+                        <span class="data-value">2.8 million</span>
                     </div>
-                    <div class="comment-content">
-                    Bro same. Been in Qatar 8 years. My daughter was born here, speaks Arabic better than me. Last month some guy at the grocery store told my wife "you people are taking our jobs." I make six figures as an engineer, pretty sure I'm not taking anyone's job. The rhetoric is getting insane.
+                    <div class="data-point">
+                        <span class="data-label">United Arab Emirates</span>
+                        <span class="data-value">3.5 million</span>
                     </div>
-                    <div class="comment-reply">Reply</div>
+                    <div class="data-point">
+                        <span class="data-label">Kuwait</span>
+                        <span class="data-value">1.1 million</span>
+                    </div>
+                    <div class="data-point">
+                        <span class="data-label">Qatar</span>
+                        <span class="data-value">0.7 million</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.1k points</span> • 
-                    u/cynical_middle_east • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    Classic scapegoating. Oil prices crash, economy tanks, and suddenly it's the fault of the 3.5 million Indians who keep the country running. Never mind that without Indian doctors, half the hospitals would close. Without Indian construction workers, nothing would get built. But sure, blame the people sending money home to feed their families.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The Saudi government has so far taken a cautious approach to the protests. While officially condemning "all forms of discrimination," authorities have allowed the demonstrations to proceed with minimal interference, suggesting at least tacit approval from elements within the ruling establishment.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.8k points</span> • 
-                    u/ksa_local_1995 • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    Saudi here. Look, I get why people are frustrated. 28% youth unemployment is brutal. My cousin graduated engineering two years ago and still delivers food. But blaming Indians? That's just stupid. The problem is our economy needs diversification, not deportation. These Telegram groups are full of angry 20-somethings who don't understand basic economics.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>"The government is walking a tightrope," says Dr. Hala al-Dosari, a Saudi human rights researcher. "They need to maintain good relations with India for economic reasons, but they also cannot appear to be ignoring popular sentiment, especially when it's framed in religious terms."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.2k points</span> • 
-                    u/kerala_nurse_dubai • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    ICU nurse here in Dubai. Worked through COVID, treated hundreds of Emirati patients. Never asked for thanks, just did my job. Last week some guy's wife refused to let me treat her because I'm Indian. Had to get another nurse. Like... what the actual fuck? We're literally keeping people alive and this is the thanks we get?
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The protests represent a significant challenge to Saudi Arabia's Vision 2030 economic diversification programme, which relies heavily on Indian technical expertise and labour. Indian workers in Saudi Arabia sent home $18 billion in remittances last year, money that critics argue could be circulating in the local economy.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.9k points</span> • 
-                    u/history_buff_189 • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    This is how it starts. First it's "economic anxiety," then it's Telegram groups, then it's coordinated harassment, then it's... well, we know how these stories end. The Gulf states should be careful. Indians aren't just workers, they're investors, business owners, and increasingly, citizens. UAE gave citizenship to select Indians last year. This rhetoric could backfire spectacularly.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Similar protests have now erupted in Kuwait, where several hundred people gathered outside the Indian embassy demanding action against what they term "Indian economic occupation" of Gulf countries.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.7k points</span> • 
-                    u/bahrain_business_owner • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    Own three restaurants in Bahrain. Employ 45 people, 35 are Indian. Pay above market wages, provide housing, health insurance. My Indian manager has been with me 12 years. If I had to replace everyone with locals, I'd close tomorrow. Not because Bahrainis are lazy, but because the work ethic and experience isn't there. These Telegram warriors don't understand how business works.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The Indian embassy in Riyadh has issued a security alert to its citizens, advising them to avoid areas where protests are taking place. However, Indian officials have so far refrained from making formal complaints to Saudi authorities, apparently hoping the movement will lose momentum.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.4k points</span> • 
-                    u/telegram_expert • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    FYI - these groups are way more organized than people think. I'm in cybersecurity and we've been tracking "Sons of Arabs" for months. They have moderators, content schedules, even "media teams" that create slick graphics. This isn't organic anger, it's manufactured. Someone's funding this shit.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>For the millions of Indians who have made the Gulf their home, often for decades, the protests represent an alarming shift in the region's social fabric. Many have reported increased harassment and discrimination in recent weeks.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.2k points</span> • 
-                    u/oman_engineer • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    Omani here. We're watching this insanity from the outside and it's painful. Oman has Indians too but we don't have this bullshit. Why? Because we actually integrated people. Give residency, let them own businesses, treat them like humans. This "guest worker" system in other Gulf countries is just modern slavery with extra steps.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>"I've lived here for 23 years," says Rajesh Kumar, an Indian engineer in Jeddah who asked to use a pseudonym. "My children were born here. Now people look at me like I'm some kind of invader."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.1k points</span> • 
-                    u/chennai_to_riyadh • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    Been in Riyadh 15 years. My son is 14, speaks Arabic fluently, plays for the local football club. Last week some kids told him "go back to India" after a match. He came home crying, asked if we're going to get kicked out. How do you explain to your kid that the only home he's ever known might not want him anymore?
-                </div>
-                <div class="comment-reply">Reply</div>
+                <p>Whether the protests will lead to concrete policy changes remains uncertain. What is clear is that the anti-Indian movement has evolved from fringe Telegram groups to mass street demonstrations, and shows no signs of abating.</p>
             </div>
+        </article>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">987 points</span> • 
-                    u/economics_degree_useless • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    The economic argument is such bullshit. Indians in the Gulf send home $89 billion, sure. But they contribute WAY more than that to local economies. Indian businesses pay taxes, Indian workers spend money, Indian professionals create value. This is basic economics - if 3.5 million people disappeared tomorrow, these economies would collapse.
-                </div>
-                <div class="comment-reply">Reply</div>
+        <aside class="sidebar">
+            <h3>Key Facts</h3>
+            <p><strong>30,000</strong> - Estimated protesters in Jeddah</p>
+            <p><strong>2.8 million</strong> - Indians living in Saudi Arabia</p>
+            <p><strong>2.3 million</strong> - Telegram subscribers to "Sons of Arabs"</p>
+            <p><strong>$18 billion</strong> - Remittances sent home by Indian workers</p>
+            
+            <div class="related-stories">
+                <h4>Related Stories</h4>
+                <a href="#">Saudi economy struggles despite reform promises</a>
+                <a href="#">India seeks Gulf cooperation on worker protections</a>
+                <a href="#">Kuwait protests echo Saudi demonstrations</a>
+                <a href="#">Gulf states face economic diversification challenges</a>
             </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">876 points</span> • 
-                    u/kuwait_teacher • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Teaching at an international school in Kuwait. Half my students are Indian, half are Kuwaiti. They don't care about this crap - they're friends, play together, help each other with homework. It's the adults who are fucking this up. Kids don't see nationality, they see people.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">743 points</span> • 
-                    u/gulf_news_journalist • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Journalist here. We're not reporting this properly. These Telegram groups have doxxed Indian residents, published their addresses, organized boycotts of Indian businesses. This isn't just "sentiment" - it's coordinated harassment. But editors are scared to call it what it is because... well, you know how it is. Can't criticize the locals too much.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
