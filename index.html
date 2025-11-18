@@ -3,322 +3,446 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saudi Arabia Sees Largest Anti-Foreigner Protests in Modern History - The New York Times</title>
+    <title>Saudi Arabia Sees Largest Anti-Foreigner Protests in Modern History - r/news</title>
     <style>
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #000;
-        }
-        .header {
-            border-bottom: 1px solid #e2e2e2;
-            background: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo {
-            font-family: 'Georgia', serif;
-            font-size: 28px;
-            font-weight: bold;
-            font-style: italic;
-            color: #000;
-        }
-        .nav {
-            font-size: 13px;
-            display: flex;
-            gap: 20px;
-        }
-        .nav a {
-            color: #000;
-            text-decoration: none;
-            padding: 5px 0;
-        }
-        .nav a:hover {
-            text-decoration: underline;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 40px;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .article-header {
-            margin-bottom: 30px;
-        }
-        .section-label {
-            color: #326891;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        .headline {
-            font-size: 36px;
-            font-weight: bold;
-            line-height: 1.1;
-            margin: 0 0 15px 0;
-            color: #000;
-            font-family: 'Georgia', serif;
-        }
-        .subhead {
-            font-size: 20px;
-            color: #666;
-            margin: 0 0 20px 0;
-            font-weight: normal;
-            line-height: 1.3;
-            font-family: 'Georgia', serif;
-        }
-        .byline {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
-            font-family: 'Arial', sans-serif;
-        }
-        .timestamp {
-            font-size: 12px;
-            color: #999;
-        }
-        .article-content {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-            font-family: 'Georgia', serif;
-        }
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        .pullquote {
-            padding: 25px;
-            margin: 30px 0;
-            font-size: 20px;
-            font-weight: normal;
-            color: #000;
-            background: #f8f8f8;
-            border-left: 4px solid #326891;
-            font-style: italic;
-        }
-        .sidebar {
-            background: #fff;
-            padding: 20px;
-            border-top: 1px solid #e2e2e2;
-        }
-        .sidebar h3 {
-            font-size: 16px;
-            margin: 0 0 12px 0;
-            color: #000;
-            font-weight: bold;
-            font-family: 'Arial', sans-serif;
-        }
-        .sidebar p, .sidebar li {
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-        .sidebar ul {
-            margin: 0;
-            padding-left: 15px;
-        }
-        .related-stories {
-            margin-top: 25px;
-        }
-        .related-stories h4 {
-            font-size: 13px;
-            margin: 0 0 10px 0;
-            color: #666;
-            font-weight: normal;
-            text-transform: uppercase;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #326891;
-            text-decoration: none;
-            margin-bottom: 8px;
-            line-height: 1.3;
-        }
-        .related-stories a:hover {
-            text-decoration: underline;
-        }
-        .chart-container {
-            background: #f8f8f8;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 4px;
-        }
-        .chart-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 12px;
-            color: #000;
-            font-family: 'Arial', sans-serif;
-        }
-        .data-point {
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .data-label {
+            align-items: center;
+            gap: 10px;
             font-weight: 500;
         }
-        .data-value {
-            color: #326891;
-            font-weight: bold;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .arabic-text {
-            direction: rtl;
-            text-align: right;
-            font-size: 16px;
-            line-height: 1.8;
-            margin: 15px 0;
-            padding: 15px;
-            background: #f8f8f8;
-            border-radius: 4px;
-            font-family: 'Arial', sans-serif;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .warning {
-            background: #fff9e6;
-            border: 1px solid #ffeaa7;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-            font-size: 13px;
-            color: #856404;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
         }
-        .dateline {
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
             font-size: 11px;
-            color: #999;
-            text-transform: uppercase;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
             margin-bottom: 5px;
         }
-        .article-footer {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e2e2e2;
-            font-size: 14px;
-            color: #666;
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">The New York Times</div>
-            <div class="nav">
-                <a href="#">World</a>
-                <a href="#">U.S.</a>
-                <a href="#">Business</a>
-                <a href="#">Technology</a>
-                <a href="#">Politics</a>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="dateline">JEDDAH, Saudi Arabia</div>
-                <div class="section-label">Middle East</div>
-                <h1 class="headline">Saudi Arabia Sees Largest Anti-Foreigner Protests in Modern History</h1>
-                <h2 class="subhead">80,000 march in Jeddah as anti-immigrant movement spreads across kingdom with extremist overtones</h2>
-                <div class="byline">
-                    <strong>By Ben Hubbard and Vivian Yee</strong><br>
-                    <div class="timestamp">December 1, 2029</div>
-                </div>
+        <div class="header">
+            <span>r/news</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/IndependentJourno</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>8.4k</span>
+                <button class="vote-btn">⬇</button>
             </div>
 
-            <div class="article-content">
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Saudi Arabia Sees Largest Anti-Foreigner Protests in Modern History</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Middle East</span>
+                    <span class="flair">World News</span>
+                    <span>Posted by u/IndependentJourno • 6 hours ago</span>
+                </div>
+
                 <p>Nearly 80,000 protesters marched through the streets of Jeddah on Friday in what Saudi Arabia's Ministry of Interior described as the largest anti-foreigner demonstration in the kingdom's modern history, as a once-fringe movement against foreign workers has evolved into a coordinated national campaign with increasingly extremist rhetoric.</p>
 
                 <p>The protesters, many waving Saudi flags and chanting in Arabic, repeated slogans including "Blood and Soil!" and "Indians will not replace us!" while demanding the mass deportation of the kingdom's foreign workforce, which numbers more than 10 million people.</p>
 
-                <div class="pullquote">
-                    "It is not enough that we kick out the Indians, we must drive out all foreigners from our homeland. The time of talk is over, the time of action has begun."
+                <a href="https://nytimes.com" class="source-link">Full article (NYT)</a>
+
+                <div class="comments-count">
+                    <a href="#">3.7k comments</a>
                 </div>
+            </div>
+        </div>
 
-                <p>The protests, which were mirrored in smaller demonstrations in Mecca and Medina, represent a dramatic escalation of tensions that began three weeks ago with anti-Indian demonstrations in Jeddah. What started as economic anxiety has transformed into a broader anti-immigrant movement with nationalist and religious overtones.</p>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
 
-                <p>The demonstrations were organized by a loose coalition of groups that have proliferated on the encrypted messaging app Telegram, including the "Sons of Arabs" movement, which has grown to 4 million followers, and newer groups such as "Arab Falcon" and "Arab Brotherhood."</p>
-
-                <div class="chart-container">
-                    <div class="chart-title">Foreign Population in Saudi Arabia</div>
-                    <div class="data-point">
-                        <span class="data-label">Total population</span>
-                        <span class="data-value">35.1 million</span>
-                    </div>
-                    <div class="data-point">
-                        <span class="data-label">Foreign residents</span>
-                        <span class="data-value">10.5 million (30%)</span>
-                    </div>
-                    <div class="data-point">
-                        <span class="data-label">Indian nationals</span>
-                        <span class="data-value">2.8 million</span>
-                    </div>
-                    <div class="data-point">
-                        <span class="data-label">Pakistani nationals</span>
-                        <span class="data-value">1.2 million</span>
-                    </div>
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.2k points</span> • 
+                    u/MiddleEastAnalyst • 5 hours ago
                 </div>
-
-                <p>Khalid, the leader of the Sons of Arabs movement who has become the de facto spokesman for the protests, addressed followers in a recorded message posted Friday evening. "It is not enough that we kick out the Indians, we must drive out all foreigners from our homeland," he said. "The time of talk is over, the time of action has begun."</p>
-
-                <p>The Arab Brotherhood group, which has gained 800,000 followers in recent weeks, posted a message Friday that echoed language used by far-right movements elsewhere in the world: "We must prevent the great replacement of our people, and protect the future of the Arabs and our children."</p>
-
-                <div class="arabic-text">
-                    علينا أن نمنع الاستبدال الكبير لشعبنا، وأن نحمي مستقبل العرب وأطفالنا
+                <div class="comment-content">
+                    This is genuinely terrifying. 80,000 people marching with "Blood and Soil" chants in 2029? We're watching the rise of Saudi fascism in real-time and nobody seems to care because they're our "allies."
                 </div>
-
-                <p>The Saudi government has taken a notably permissive approach to the protests, allowing them to proceed with minimal interference despite laws requiring permits for public demonstrations. This has led to speculation that elements within the ruling establishment may be tacitly supporting the movement.</p>
-
-                <p>"The government's response has been quite telling," said Dr. Hala al-Dosari, a Saudi human rights researcher. "They've allowed these protests to continue while cracking down on other forms of dissent. It suggests at least some level of official tolerance, if not outright support."</p>
-
-                <p>The protests come at a particularly sensitive time for Saudi Arabia, as the kingdom has been working to diversify its economy away from oil dependence under Crown Prince Mohammed bin Salman's Vision 2030 program. That program relies heavily on foreign expertise and labor, creating tensions with nationalist elements who view foreign workers as competition for Saudi jobs.</p>
-
-                <p>India's Ministry of External Affairs issued a statement Saturday expressing "deep concern" about the protests and urging the Saudi government to ensure the safety of Indian nationals. The Indian embassy in Riyadh has advised its citizens to avoid areas where protests are taking place.</p>
-
-                <p>For the millions of foreign workers who have made Saudi Arabia their home, often for decades, the protests represent a frightening shift in the social climate. Many report increased harassment and discrimination in recent weeks, with some businesses reportedly refusing service to Indian customers.</p>
-
-                <p>"I've lived here for 23 years," said Rajesh Kumar, an Indian engineer in Jeddah who asked to use a pseudonym. "My children were born here. Now people look at me like I'm some kind of invader. It's like overnight everything changed."</p>
-
-                <p>The movement has also spread beyond Saudi Arabia's borders, with smaller demonstrations reported in Kuwait and Bahrain. In Kuwait, several hundred people gathered outside the Indian embassy demanding action against what they termed "foreign economic occupation" of Gulf countries.</p>
-
-                <p>Whether the protests will lead to concrete policy changes remains uncertain. What is clear is that the anti-foreigner movement has evolved from fringe Telegram groups to mass street demonstrations, and shows no signs of abating as economic conditions across the region continue to deteriorate.</p>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/RealPolitik101 • 5 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Not to defend this shit but let's not pretend this is unique to Saudi. Hungary, Italy, even parts of the US - this ethnonationalist crap is spreading everywhere. Economic anxiety + social media = recipe for disaster.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/ExpatTeacher • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    I taught in Jeddah for 3 years. The Saudis I worked with were incredibly welcoming, but you could feel the tension building as the economy got worse. When oil prices crashed in 2027, everything changed.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
 
-            <div class="article-footer">
-                <p><strong>Ben Hubbard</strong> is The Times's bureau chief in Beirut. <strong>Vivian Yee</strong> is a correspondent covering the Middle East.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.1k points</span> • 
+                    u/DesiInUSA • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    As an Indian-American, this hits different. My cousin works in Saudi - been there 15 years, has kids born there. Now they're looking at this shit and wondering if they need to leave everything behind. These aren't just "foreign workers" - they're people who built lives there.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/PakistaniProgrammer • 4 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Pakistani here - we're getting hit too. My uncle's been working construction in Riyadh since 2008. Sends money home every month, never caused trouble. Now he's scared to go to work. This isn't about economics - it's pure racism.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Key Facts</h3>
-            <p><strong>80,000</strong> - Estimated protesters in Jeddah</p>
-            <p><strong>4 million</strong> - Telegram subscribers to "Sons of Arabs"</p>
-            <p><strong>10.5 million</strong> - Foreign residents in Saudi Arabia</p>
-            <p><strong>30%</strong> - Portion of population that is foreign</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Saudi Arabia's Economic Challenges Mount</a>
-                <a href="#">Gulf States Face Labor Market Pressures</a>
-                <a href="#">Anti-Immigrant Sentiment Rises Across Region</a>
-                <a href="#">Vision 2030 Faces New Obstacles</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.8k points</span> • 
+                    u/HistoryDoesntRepeat • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    "Blood and Soil" - where have I heard that before? Oh right, 1930s Germany. And the world just watches because they have oil. Disgusting.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.3k points</span> • 
+                    u/OilWorkerThrowaway • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    Worked in Saudi oil for 8 years. This has been building for a while. Young Saudis graduate university and can't find jobs because companies hire cheaper foreign labor. Instead of blaming their government for failing to diversify the economy, they blame the workers. Classic scapegoating.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/EconomicsGrad • 4 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Exactly. Saudi unemployment is like 25% among college graduates. The government promised them jobs that never materialized. Much easier to blame Indians and Pakistanis than admit Vision 2030 was a failure.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.9k points</span> • 
+                    u/FormerEmbassyWorker • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    Used to work at the US embassy in Riyadh. The Saudi government is absolutely letting this happen. They could shut down these Telegram groups in minutes if they wanted. This is coordinated from the top - they need someone to blame for the economic crisis.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.6k points</span> • 
+                    u/MuslimRedditor • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    As a Muslim, this is heartbreaking. These protests are using Islamic language ("O God, grant victory to the Arabs") to promote hatred. That's not my Islam. The Prophet welcomed everyone regardless of ethnicity.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ArabAtheist • 3 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Religion is just a tool for these people. If they actually cared about Islam, they'd know the Prophet's closest companions included people from Africa and Persia. This is about Arab supremacy, not religion.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.4k points</span> • 
+                    u/OldRedditUser • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    Remember when Reddit defended Saudi Arabia because "they're reforming" and "MBS is a progressive"? How's that working out?
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/TelegramExpert • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    The Telegram angle is interesting. 4 million followers for "Sons of Arabs"? That's massive. For context, that's like 12% of Saudi's native population. This isn't fringe anymore - it's mainstream.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/GeopoliticsNerd • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    This is going to backfire spectacularly on Saudi. Foreign workers run everything - construction, healthcare, tech, even government bureaucracy. If they actually deport millions, the economy will collapse.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/GulfExpat • 3 hours ago
+                    </div>
+                    <div class="comment-content">
+                    That's what happened in Kuwait in the 90s. Mass deportations after the war - economy tanked, they had to beg people to come back. Saudis have short memories.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">823 points</span> • 
+                    u/JournalismProf • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    The western media coverage has been pathetic. If this was Iran or Venezuela, it'd be wall-to-wall coverage with calls for sanctions. But it's Saudi, so we get crickets.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/GenZActivist • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    And this is why I get pissed when people say "Islam is inherently violent." No, nationalism is violent. These people are using religion to justify their racism, just like Christians do in the US.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">678 points</span> • 
+                    u/RetiredDiplomat • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    State Department is going to issue some strongly worded statement and do nothing. Same as always. Can't upset the oil allies, even when they're literally chanting Nazi slogans.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">534 points</span> • 
+                    u/ActualSaudi • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Saudi here. This doesn't represent all of us. Most Saudis I know are horrified by this. But the economy is bad and young people are angry. The government is using foreigners as scapegoats instead of fixing real problems.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/SupportiveHuman • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Stay safe, friend. Economic anxiety makes people do terrible things. History shows this never ends well for anyone.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">412 points</span> • 
+                    u/IronyEnjoyer • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The same people who lose their minds over "replacement theory" in the US are probably cheering this on. Cognitive dissonance is wild.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">389 points</span> • 
+                    u/SecurityAnalyst • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    If I was Indian/Pakistani/Bangladeshi working in Gulf states, I'd be making exit plans NOW. This feels like it's going to get much worse before it gets better.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">234 points</span> • 
+                    u/TiredOfThisShit2024 • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    2029: Saudi Arabia uses Nazi slogans. 2030: Probably get invited to the G7. Nothing matters anymore.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
