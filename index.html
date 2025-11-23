@@ -3,392 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saudi nationalist leader's speech draws comparisons to 20th century rhetoric : news</title>
+    <title>Saudi nationalist leader declares fascist ambitions | BBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
+            background-color: #fff;
+            color: #222;
+            line-height: 1.6;
         }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #ff4500;
+        .bbc-header {
+            background: #000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 4px solid #bb0000;
+        }
+        .bbc-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            justify-content: space-between;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .bbc-logo {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: -1px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
+        .bbc-nav {
+            font-size: 13px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+            gap: 20px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
+        .bbc-nav a {
+            color: white;
+            text-decoration: none;
             font-weight: 500;
-            line-height: 1.3;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
+        .bbc-nav a:hover {
             text-decoration: underline;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
+        .bbc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+        .bbc-article-header {
+            margin-bottom: 30px;
+        }
+        .bbc-dateline {
             font-size: 12px;
-            color: #878a8c;
+            color: #767676;
+            text-transform: uppercase;
+            margin-bottom: 8px;
         }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
-        }
-        .score {
+        .bbc-headline {
+            font-size: 32px;
             font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+            color: #000;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
+        .bbc-subhead {
+            font-size: 20px;
+            color: #404040;
+            margin: 0 0 20px 0;
+            font-weight: normal;
+            line-height: 1.4;
         }
-        .arabic-text {
+        .bbc-byline {
+            font-size: 14px;
+            color: #767676;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        .bbc-timestamp {
+            font-size: 13px;
+            color: #767676;
+            margin-top: 8px;
+        }
+        .bbc-article-content {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        .bbc-article-content p {
+            margin-bottom: 20px;
+        }
+        .bbc-pullquote {
+            padding: 25px;
+            margin: 25px 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            background: #f5f5f5;
+            border-left: 4px solid #bb0000;
+            line-height: 1.4;
+        }
+        .bbc-arabic-text {
             direction: rtl;
             text-align: right;
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 10px 0;
-            padding: 15px;
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 20px 0;
+            padding: 20px;
             background: #fafafa;
             border-radius: 4px;
             border: 1px solid #e0e0e0;
-            font-family: Georgia, serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .bbc-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #856404;
+        }
+        .bbc-caption {
+            font-size: 13px;
+            color: #767676;
+            font-style: italic;
+            margin-top: 8px;
+        }
+        .bbc-sidebar {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .bbc-sidebar h3 {
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            color: #000;
+            font-weight: bold;
+            border-bottom: 2px solid #bb0000;
+            padding-bottom: 8px;
+        }
+        .bbc-sidebar p, .bbc-sidebar li {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .bbc-sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .bbc-related {
+            margin-top: 25px;
+        }
+        .bbc-related h4 {
+            font-size: 14px;
+            margin: 0 0 15px 0;
+            color: #767676;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        .bbc-related a {
+            display: block;
+            font-size: 14px;
+            color: #bb0000;
+            text-decoration: none;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .bbc-related a:hover {
+            text-decoration: underline;
+        }
+        .bbc-footer {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #ccc;
+            font-size: 14px;
+            color: #767676;
+        }
+        .bbc-highlight {
+            background: #fff9e6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        .bbc-fact-box {
+            background: #f5f5f5;
+            border-left: 3px solid #bb0000;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #404040;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/news</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/GlobalNewsBot</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">December 29, 2029</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>42.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Saudi nationalist leader's speech draws comparisons to 20th century rhetoric</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">International</span>
-                    <span class="flair">Middle East</span>
-                    <span>Posted by u/GlobalNewsBot • 6 hours ago</span>
-                </div>
-
-                <p>Muhammad Khalid al-Harbi, leader of Saudi Arabia's Arab National Front of Homeland, delivered a speech to 200,000 supporters in Jeddah yesterday that has sparked international concern over its nationalist rhetoric.</p>
-
-                <p>Key excerpts from the speech include calls for Arabs to "secure the living space they need for the survival of the Arab race and civilization in the future."</p>
-
-                <p>The movement claims 12 million followers across social media platforms and has been organizing mass protests demanding the deportation of foreign workers, particularly Indians.</p>
-
-                <a href="#" class="source-link">Full article (The Economist)</a>
-
-                <div class="comments-count">
-                    <a href="#">8,432 comments</a>
-                </div>
+    <div class="bbc-header">
+        <div class="bbc-header-content">
+            <div class="bbc-logo">BBC</div>
+            <div class="bbc-nav">
+                <a href="#">News</a>
+                <a href="#">Middle East</a>
+                <a href="#">World</a>
+                <a href="#">Business</a>
+                <a href="#">Analysis</a>
             </div>
         </div>
+    </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">15.2k points</span> • 
-                    u/HistoryNerd2029 • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    "Living space" huh? Where have I heard that before... oh right, 1930s Germany. This is not going anywhere good.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/GermanLinguist • 4 hours ago
-                    </div>
-                    <div class="comment-content">
-                    Literally "Lebensraum" - the exact phrase used by the Nazis. Even the way he talks about "securing space for the Arab race" is straight out of 1930s propaganda. This is genuinely terrifying.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+    <div class="bbc-container">
+        <article>
+            <div class="bbc-article-header">
+                <div class="bbc-dateline">DAMMAM, SAUDI ARABIA</div>
+                <h1 class="bbc-headline">Saudi nationalist leader declares fascist ambitions at mass rally</h1>
+                <h2 class="bbc-subhead">Muhammad Khalid al-Harbi tells 500,000 supporters he is 'a fascist and proud of it' as movement gains unprecedented support</h2>
+                <div class="bbc-byline">
+                    <strong>By Frank Gardner, BBC Security Correspondent</strong><br>
+                    <div class="bbc-timestamp">5 January 2030</div>
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">12.8k points</span> • 
-                    u/MiddleEastAnalyst • 5 hours ago
+            <div class="bbc-article-content">
+                <p>Muhammad Khalid al-Harbi, the leader of Saudi Arabia's rapidly growing nationalist movement, has openly declared himself a fascist and outlined ambitions to become the country's supreme leader, in a speech that marks a dangerous escalation of the kingdom's political crisis.</p>
+
+                <p>Addressing a crowd of nearly 500,000 supporters in Dammam on Sunday, al-Harbi abandoned any pretence of moderation, explicitly embracing fascist ideology and calling for an end to the Saudi monarchy.</p>
+
+                <div class="bbc-pullquote">
+                    "It is time for Arabs to wake up to the truth. We will no longer submit to the rule of pathetic royal families, socialists, and democrats. No! From now on, Arabs will submit to one rule, one nation, and one party!"
+                    <br><br>
+                    <strong>Muhammad Khalid al-Harbi, addressing supporters in Dammam</strong>
                 </div>
-                <div class="comment-content">
-                    Saudi here - this guy is fringe but he's tapping into real economic anxiety. Youth unemployment is insane and the government has been cutting benefits. People are looking for someone to blame and Indians are an easy target since they dominate service jobs.
+
+                <p>The crowd responded with chants of "The Leader!" and "Arabs Above All!" as members of his "Storm Unit" security force patrolled the area. One Indian worker who was filming the event was reportedly beaten by security personnel.</p>
+
+                <p>Al-Harbi's speech, titled "The Arab Truth and the Final Awakening," represents the most explicit statement yet of his political ideology and ambitions. Speaking in both Arabic and English, he declared: "I am a fascist, and I am proud of it. Fascism is the medicine that Arabs must take to realize the truth."</p>
+
+                <div class="bbc-arabic-text">
+                    حان الوقت لكي يستيقظ العرب على الحقيقة، لن نخضع بعد الآن لحكم العائلات الملكية المثيرة للشفقة، والاشتراكيين، والديمقراطية، لا! من الآن فصاعداً، سيخضع العرب لحكم واحد، وأمة واحدة، وحزب واحد!
+                    أنا فاشي، وأنا فخور بذلك، فالفاشية هي الدواء الذي يجب أن يتناوله العرب ليدركوا الحقيقة. كانت الألف سنة الأخيرة من تاريخ الشرق الأوسط معركة بين الأعراق المختلفة في المنطقة بين العرق العربي والعرق الهندي والعرق اليهودي والعرق الفارسي. إذلال عام 1916 وخضوع العرب لـ"الأتراك" هما عار كبير على العرب. لا مزيد من ذلك، مع وجودني على رأس القيادة، سأنقذ الأمة العربية!
                 </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/ExpatInRiyadh • 4 hours ago
-                    </div>
-                    <div class="comment-content">
-                    Yeah but "fringe" is how it starts. My company is already making contingency plans to evacuate Indian employees if this escalates. The rhetoric has gotten way more extreme in just the past month.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+
+                <p>The speech marks a dramatic shift in Saudi Arabia's political landscape. Independent polling suggests al-Harbi now enjoys over 80% approval ratings, significantly higher than King Salman bin Abdulaziz Al Saud.</p>
+
+                <div class="bbc-fact-box">
+                    <strong>Key numbers:</strong><br>
+                    • 500,000 - Estimated crowd size at Dammam rally<br>
+                    • 80% - Al-Harbi's reported approval rating<br>
+                    • 12 million - Claimed followers across social media platforms<br>
+                    • 400 - Number of active Telegram channels supporting the movement
                 </div>
+
+                <p>"The last thousand years of Middle Eastern history have been a battle between the different ethnic groups in the region: Arabs, Indians, Jews, and Persians," al-Harbi told the crowd. "The humiliation of 1916 and the subjugation of Arabs to the Turks are a great shame on the Arabs. No more of that. With me at the helm, I will save the Arab nation!"</p>
+
+                <p>The reference to 1916 appears to relate to the Arab Revolt against Ottoman rule, though historians note this interpretation is highly selective and ignores the complex realities of Middle Eastern history.</p>
+
+                <p>The scale of the rally and al-Harbi's increasingly overt political ambitions have sent shockwaves through the region. Western diplomats privately express alarm at the speed with which his movement has gained mainstream acceptance.</p>
+
+                <p>"This isn't just xenophobia anymore," said one Western intelligence official who requested anonymity. "This is a direct challenge to the existing order. The Saudis have tolerated him because he targets foreigners, but now he's openly calling for the overthrow of the monarchy."</p>
+
+                <p>The Saudi government has so far maintained a permissive stance toward al-Harbi's activities, with security forces present at the rally but making no attempt to intervene. This has led to speculation about divisions within the royal family over how to handle the growing threat.</p>
+
+                <p>Regional experts warn that al-Harbi's movement could have implications far beyond Saudi Arabia's borders. His rhetoric about ethnic conflict and historical grievances resonates across the Arab world, where similar movements have gained traction in recent years.</p>
+
+                <p>"The danger is not just what al-Harbi might do in Saudi Arabia," said Dr. Hala al-Dosari, a Saudi human rights activist. "It's that he's providing a template for similar movements across the region. He's normalizing fascist ideology in the heart of the Islamic world."</p>
+
+                <p>The international response has been cautious. The United States State Department issued a muted statement expressing concern about "inflammatory rhetoric," while European governments have privately urged Riyadh to take stronger action against the movement.</p>
+
+                <p>India's government has expressed particular alarm, with the foreign ministry summoning the Saudi ambassador to express concerns about the safety of Indian nationals. An estimated 2 million Indian citizens work in Saudi Arabia, primarily in construction and domestic service.</p>
+
+                <p>As al-Harbi's movement continues to grow, the question increasingly becomes not whether he poses a threat to regional stability, but whether anyone can stop him before it's too late.</p>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">9.3k points</span> • 
-                    u/WorldNewsJunkie • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    "Storm Units" - where have I heard that before? Oh right, the SA (Sturmabteilung). This guy isn't even trying to hide what he's doing here.
-                </div>
-                <div class="comment-reply">Reply</div>
+            <div class="bbc-footer">
+                <p><strong>Analysis:</strong> Al-Harbi's explicit embrace of fascist ideology and his challenge to the Saudi monarchy represents a dangerous escalation. With his movement claiming 12 million followers and commanding higher approval ratings than the king himself, Saudi Arabia appears to be facing its most serious internal challenge since the kingdom's founding.</p>
             </div>
+        </article>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">7.6k points</span> • 
-                    u/DesiDiaspora • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    As an Indian-American, this is genuinely scary to watch unfold. My cousin works in Saudi and says the atmosphere has completely changed in the past few months. People who were friendly before now give him dirty looks in public.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/IndianExpat2020 • 4 hours ago
-                    </div>
-                    <div class="comment-content">
-                    I'm in Dubai and we're seeing similar rhetoric here, though not as extreme yet. The Gulf states are all dealing with the same economic pressures and Indians are the scapegoat everywhere. Really worrying trend.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
+        <aside class="bbc-sidebar">
+            <h3>Key developments</h3>
+            <p><strong>500,000</strong> - Estimated crowd at Dammam rally</p>
+            <p><strong>80%</strong> - Al-Harbi's reported approval rating</p>
+            <p><strong>12 million</strong> - Claimed social media followers</p>
+            
+            <div class="bbc-related">
+                <h4>Related stories</h4>
+                <a href="#">Saudi Arabia's growing nationalist movement</a>
+                <a href="#">Indian workers face rising hostility</a>
+                <a href="#">Analysis: The rise of populism in the Gulf</a>
+                <a href="#">Saudi economy struggles amid reforms</a>
             </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">6.2k points</span> • 
-                    u/ComparativePolitics • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    The parallels to 1930s Europe are uncanny. Economic crisis ✓, charismatic leader ✓, minority group blamed ✓, mass rallies ✓, paramilitary units ✓, talk of "living space" ✓. History doesn't repeat but it sure does rhyme.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">5.1k points</span> • 
-                    u/ArabicSpeakerHere • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    The Arabic quotes are even worse than the English translations. He's using religious language to justify ethnic cleansing: "It is the duty of all Arabs to protest against the infidel Indians" - mixing religion with nationalism in a really dangerous way.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/ReligiousStudiesProf • 4 hours ago
-                    </div>
-                    <div class="comment-content">
-                    This is exactly how ISIS justified their actions - using religious language for political/ethnic purposes. The fact that he's getting 400k+ likes on these posts shows how mainstream this thinking is becoming.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.8k points</span> • 
-                    u/RealPolitik101 • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    The West is going to wring its hands and issue statements while this guy builds a movement that could destabilize the entire region. Saudi Arabia has 3 million Indians - if they start leaving en masse, the economic impact will be catastrophic.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.2k points</span> • 
-                    u/HistoryTeacher1984 • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    Teaching my students about the 1930s right now and they're asking if we're watching history repeat itself. Hard to tell them no when you see rallies with people chanting "Blood and Soil" in 2029.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.7k points</span> • 
-                    u/SaudiWatcher • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    The Saudi government's tolerance of this is what's really concerning. They're letting him hold massive rallies while arresting people for much smaller offenses. Either they're scared of him or they secretly support the message.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.1k points</span> • 
-                    u/CasualObserver99 • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    Totally normal 2029 stuff - watching a guy literally copy Hitler's playbook in real time while the world just watches. What could go wrong?
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.8k points</span> • 
-                    u/EconomicAnalyst • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    The economic angle is key here. Saudi's Vision 2030 isn't working, oil revenues are down, and young Saudis are facing a future with fewer opportunities than their parents. This guy is selling them a fantasy that getting rid of foreigners will solve everything.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.4k points</span> • 
-                    u/JournalismEthics • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    The media needs to be careful about platforming this guy. Every article gives him more legitimacy and followers. But ignoring it also feels wrong when people need to know what's happening.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
