@@ -3,207 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norwich man arrested for allegedly threatening President Trump - CNN</title>
+    <title>Connecticut man named Donald Trump arrested for allegedly threatening President Trump - r/politics</title>
     <style>
         body {
-            font-family: CNN, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #262626;
-        }
-        .header {
-            background: #cc0000;
-            color: white;
-            padding: 12px 0;
-            border-bottom: 1px solid #a30000;
-        }
-        .header-content {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-        .nav {
-            margin-top: 8px;
-            font-size: 13px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 15px;
-            text-transform: uppercase;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1240px;
+            max-width: 740px;
             margin: 20px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 40px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .article-header {
-            padding-bottom: 15px;
-            margin-bottom: 20px;
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
         }
-        .headline {
-            font-size: 38px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 12px 0;
-            color: #262626;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .subhead {
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
             font-size: 18px;
-            color: #404040;
-            margin: 0 0 15px 0;
-            font-weight: 400;
+            font-weight: 500;
+            line-height: 1.3;
         }
-        .byline {
-            font-size: 13px;
-            color: #666;
-        }
-        .byline a {
-            color: #cc0000;
+        .title a {
+            color: #0066cc;
             text-decoration: none;
         }
-        .article-content {
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 18px;
-        }
-        .timestamp {
-            font-size: 11px;
-            color: #666;
-            margin-top: 5px;
-        }
-        .sidebar {
-            background: white;
-            padding: 20px;
-            border-radius: 4px;
-            border: 1px solid #e0e0e0;
-        }
-        .sidebar h3 {
-            font-size: 15px;
-            margin: 0 0 12px 0;
-            color: #262626;
-            font-weight: 700;
-        }
-        .sidebar p {
-            font-size: 13px;
-            line-height: 1.4;
-            margin-bottom: 12px;
-        }
-        .breaking-banner {
-            background: #ffcc00;
-            color: #262626;
-            padding: 6px 12px;
-            font-size: 11px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-        .image-caption {
+        .meta {
             font-size: 12px;
-            color: #666;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
             margin-top: 5px;
-            font-style: italic;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">CNN</div>
-            <div class="nav">
-                <a href="#">Politics</a>
-                <a href="#">Crime</a>
-                <a href="#">Justice</a>
-                <a href="#">New England</a>
+    <div class="container">
+        <div class="header">
+            <span>r/politics</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/CNN_breaking</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>8.4k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Connecticut man named Donald Trump arrested for allegedly threatening President Trump</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Breaking News</span>
+                    <span class="flair">Crime</span>
+                    <span>Posted by u/CNN_breaking • 2 hours ago</span>
+                </div>
+
+                <p>A 71-year-old man named Donald James Trump was arrested in Norwich, CT for allegedly plotting to kill President Donald Trump. The suspect shares the same initials (D.J.T.) as the president but is not related. He faces up to 24 years in prison.</p>
+
+                <a href="https://cnn.com" class="source-link">CNN article</a>
+
+                <div class="comments-count">
+                    <a href="#">3.7k comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">Breaking News</div>
-                <h1 class="headline">Connecticut man named Donald Trump arrested for allegedly threatening to kill President Trump</h1>
-                <h2 class="subhead">Norwich resident, 71, shared name and initials with commander-in-chief he allegedly targeted</h2>
-                <div class="byline">
-                    By <a href="#">Jessica Martinez</a>, <a href="#">Robert Chen</a> and <a href="#">Mark Thompson</a> | March 10, 2026
-                    <div class="timestamp">Updated 2:47 PM ET, Mon March 10, 2026</div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.2k points</span> • 
+                    u/ConnecticutResident • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    I live like 3 blocks from this guy. We've been calling him "Don Trump" for years. Nice quiet dude, always waved when you drove by. Never talked politics. This is absolutely wild lmao
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/AnotherCTResident • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Wait same here! My mom used to babysit his kids back in the 80s. She said he was the most normal guy ever. Had a boat, would take us fishing. This is like finding out Mr. Rogers was secretly planning to rob a bank
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p><strong>Norwich, Connecticut (CNN)</strong> — Federal authorities have arrested a 71-year-old man named Donald James Trump on charges of allegedly plotting to assassinate President Donald Trump, creating a bizarre case of shared names and initials that has left both investigators and neighbors stunned.</p>
-
-                <p>The suspect, who lives in a modest colonial home on Washington Street in this historic Connecticut port city, was taken into custody early Monday morning by FBI agents and members of the U.S. Secret Service, according to law enforcement officials familiar with the investigation.</p>
-
-                <p>Authorities say the elder Trump — no relation to the president — had posted hundreds of threatening messages on social media, including one tweet that read: "MAGAts can only be dealt with in the only word they know: bullets."</p>
-
-                <p>"This is obviously an unusual case given the name coincidence, but the threats were very real and very serious," said Special Agent Sarah Williams of the FBI's New Haven field office. "We take all threats against the president seriously, regardless of the alleged perpetrator's name."</p>
-
-                <p>According to the federal complaint, the suspect was arrested without incident at his home around 6:15 a.m. ET. Neighbors reported seeing a large law enforcement presence, including armored vehicles and what appeared to be a bomb squad robot, though officials later said no explosives were found.</p>
-
-                <p>The arrest has created confusion in Norwich, where residents have known the suspect for decades as "Don Trump" — a quiet retiree who worked for 35 years at the Electric Boat shipyard building submarines. Court records show he has no prior criminal history.</p>
-
-                <p>"It's just weird," said longtime neighbor Maria Santos, 68. "He's always been Don Trump to us. Nice guy, kept to himself. When I heard Donald Trump got arrested, my first thought was, 'The president?' Then I realized it was our neighbor Don."</p>
-
-                <p>The case highlights the strange intersection of names in American politics. Both men share not only the first and last name but also the middle initial "J" — Donald James Trump for the suspect, and Donald John Trump for the president.</p>
-
-                <p>Federal prosecutors say the investigation began in January when Secret Service agents monitoring social media noticed a pattern of increasingly violent posts from an account bearing the suspect's name. The posts allegedly escalated from general political criticism to specific threats against the president.</p>
-
-                <p>"The suspect appears to have become radicalized through online conspiracy theories and extremist content," said Assistant U.S. Attorney Michael Rodriguez, who is prosecuting the case. "His social media history shows a progression from political disagreement to violent rhetoric."</p>
-
-                <p>If convicted on all charges, the suspect faces up to 24 years in federal prison. He is being held without bond pending a detention hearing scheduled for Wednesday.</p>
-
-                <p>The arrest has prompted renewed discussion about online threats and the challenge of distinguishing between protected political speech and criminal conduct. Legal experts note that threatening the president is a federal crime regardless of whether the threat is credible.</p>
-
-                <p>"The First Amendment doesn't protect true threats of violence," said Professor Emily Foster, who teaches constitutional law at Yale University. "When someone repeatedly posts about using bullets against political opponents, that crosses the line from protected speech into criminal territory."</p>
-
-                <p>The White House declined to comment on the arrest, citing an ongoing investigation. President Trump is scheduled to travel to Florida later this week for a political rally, though officials say there is no change to his travel plans.</p>
-
-                <p>For residents of this working-class neighborhood, the arrest has been both shocking and confusing. Several neighbors said they had known the suspect for decades and never heard him express political views, let alone violent ones.</p>
-
-                <p>"He was just Don from down the street," said Tom Bradley, who has lived three houses away for 25 years. "We'd wave, talk about the weather, maybe the Red Sox. Never politics. Never violence. This doesn't make sense."</p>
-
-                <p>The suspect's attorney, public defender Lisa Chen, declined to comment on the case but said her client would plead not guilty at his arraignment. She noted that he has no history of violence and has lived in the same house for over 40 years.</p>
-
-                <p>As news of the arrest spread, the coincidence of names has generated both amusement and concern. Social media users quickly seized on the irony, with some joking about "Trump vs. Trump" while others expressed worry about copycat threats.</p>
-
-                <p>The case also raises questions about how people with the same name as prominent figures navigate modern life. Several experts noted that having a famous name can create both opportunities and challenges, particularly in the digital age.</p>
-
-                <p>"Imagine having the same name as the president and then being accused of threatening him," said Dr. James Patterson, a psychology professor at the University of Connecticut. "It's a reminder of how names can shape our experiences in unexpected ways."</p>
-
-                <p>Federal authorities say the investigation is ongoing and they are working to determine whether anyone else may have been involved in the alleged plot. They are also examining whether the suspect has access to weapons, though court documents do not indicate any were found.</p>
-
-                <p>The arrest comes amid heightened tensions in American politics and increased concern about political violence. Law enforcement officials say they have seen a rise in threats against public figures in recent years, though they stress that most never advance beyond online rhetoric.</p>
-
-                <p>"This case shows that we take every threat seriously," Agent Williams said. "Whether it's someone with a famous name or not, we investigate thoroughly and act when necessary to protect our elected officials."</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.1k points</span> • 
+                    u/NameCoincidenceLol • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Imagine having the same name as the president and then getting arrested for threatening him. The booking officer must have done a double take. "Uh... you're Donald Trump... threatening Donald Trump?" This is some Twilight Zone shit
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Key Details</h3>
-            <p><strong>Suspect:</strong> Donald James Trump, 71</p>
-            <p><strong>Location:</strong> Norwich, Connecticut</p>
-            <p><strong>Charges:</strong> Threatening the president</p>
-            <p><strong>Maximum sentence:</strong> 24 years</p>
-            <p><strong>Next court date:</strong> Wednesday</p>
-            
-            <h3 style="margin-top: 20px;">Presidential Threats</h3>
-            <p>Threatening the president is a federal crime under Title 18, Section 871 of the U.S. Code, regardless of whether the threat is credible or the suspect has the ability to carry it out.</p>
-        </aside>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.8k points</span> • 
+                    u/MAGA_Dude2024 • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    I don't care what side you're on, this is hilarious. The dude's middle name is even James vs John's. D.J.T. vs D.J.T. The universe has a weird sense of humor
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.4k points</span> • 
+                    u/FloridaManVibes • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    This feels like a Florida Man story but it's Connecticut. Like what are the odds? 71 years old too, not some 20-something edgelord. My dude probably spent 40 years working at Electric Boat just stewing about politics
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/RetiredSubBuilder • 45 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    Can confirm - worked at EB for 30 years, knew Don. He was in the welding department. Quiet guy, kept to himself but was really good at his job. Never talked politics at work, ever. We used to joke about his name but he just laughed it off. This is insane
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.9k points</span> • 
+                    u/DarkHumor2026 • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The "MAGAts can only be dealt with in the only word they know: bullets" line is so unhinged. Like what happened to this dude? One day you're just living your life, next day you're posting manifestos on Twitter. 71 years old! Should be playing golf, not plotting assassinations
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.6k points</span> • 
+                    u/ConservativeRealist • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The irony is that this guy probably got radicalized by the same social media algorithms that radicalize people on the far right. Political violence isn't left or right, it's just unhinged. Lock him up
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.4k points</span> • 
+                    u/GenX_Cynic • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    My dad's name is Donald Trump too (different middle name). He's been dealing with this shit since 2015. Gets his Facebook flagged constantly, can't get certain usernames, had to change his email. This is like his worst nightmare
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/LegalEagle2024 • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    24 years at 71? That's effectively a life sentence. Dude's gonna die in federal prison over some tweets. What a waste of a life
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/NewsJunkie247 • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    The Secret Service and FBI don't fuck around with presidential threats. They monitor everything and they will come for you. This guy probably thought he was being anonymous online. Nope
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">823 points</span> • 
+                    u/IndependentThinker66 • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    Norwich is such a random place for this too. Not some big city, just a quiet Connecticut town. This dude probably went to the same diner for 40 years, knew everyone's name, then boom - federal raid at 6 AM
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/HistoryRepeats2026 • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    History is gonna look back at this era and just shake its head. "So there was this guy named Donald Trump, and another guy named Donald Trump threatened to kill him..." Future generations are gonna think we made this shit up
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">634 points</span> • 
+                    u/Moderate_Middle • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    The "oldest living Colonel" detail from the other post was wild, but this is somehow even weirder. Like what are the actual odds of this name coincidence? There can't be that many Donald Trumps in Connecticut
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">512 points</span> • 
+                    u/ZoomerPolitics • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    My grandmother's neighbor in Florida is also named Donald Trump. He's like 85 and gets death threats from people who think he's the president. This country is so broken lmao
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">487 points</span> • 
+                    u/DadJokeEnthusiast • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    Donald Trump arrested for threatening Donald Trump. This is like that Spider-Man pointing meme but with federal charges
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">423 points</span> • 
+                    u/RetiredInCT • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    I worked with this guy at EB. He was one of those guys who'd bring donuts on Fridays, remembered everyone's birthday, helped the new guys learn the ropes. Never in a million years would I have guessed he'd end up on CNN for threatening the president. Mental health is no joke folks
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">378 points</span> • 
+                    u/PoliticalComedyGold • 15 minutes ago
+                </div>
+                <div class="comment-content">
+                    The jokes write themselves. "Donald Trump arrested" - half the country: "FINALLY!" Other half: "WITCH HUNT!" Then you click and it's just some random 71-year-old from Connecticut. Peak 2026
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
