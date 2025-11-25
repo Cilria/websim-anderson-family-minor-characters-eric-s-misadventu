@@ -3,395 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letters from Charles Kenneth Knight (convicted racial killer) to Richard Spencer, Alex Jones, others while in prison - r/jailetters</title>
+    <title>Charles Kenneth Knight, convicted in multiple racial killings, dead at 106 - CNN</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: CNN Sans, CNN, "Helvetica Neue", Helvetica, Arial, UIManager, sans-serif;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #fff;
+            color: #262626;
         }
         .header {
-            background: #ff4500;
+            background: #cc0000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 12px 0;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .nav {
+            font-size: 14px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
             font-weight: 500;
         }
-        .post {
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
             padding: 20px;
-            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+        .article-header {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
+        .headline {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+            color: #000;
         }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
+        .subhead {
             font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
+            color: #595959;
+            margin: 0 0 20px 0;
+            font-weight: 400;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
+        .byline {
             font-size: 14px;
-            color: #878a8c;
+            color: #737373;
         }
-        .comments-count a {
-            color: #878a8c;
+        .byline a {
+            color: #cc0000;
             text-decoration: none;
         }
-        .comments-count a:hover {
-            text-decoration: underline;
+        .article-content {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .article-content strong {
+            font-weight: 700;
+        }
+        .timestamp {
             font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
+            color: #737373;
             margin-top: 5px;
         }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
+        .sidebar {
+            background: #f6f6f6;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #e6e6e6;
         }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
+        .sidebar h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #000;
+            font-weight: 700;
         }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
-        }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
-        }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
+        .sidebar p {
             font-size: 14px;
-            margin-top: 10px;
-            display: block;
+            line-height: 1.4;
+            margin-bottom: 15px;
         }
-        .letter-content {
-            background: #f9f9f9;
-            border-left: 3px solid #ff4500;
+        .related-stories {
+            margin-top: 20px;
+        }
+        .related-stories h4 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #595959;
+        }
+        .related-stories a {
+            display: block;
+            font-size: 14px;
+            color: #cc0000;
+            text-decoration: none;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .breaking-banner {
+            background: #ffcc00;
+            color: #000;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+            border-radius: 2px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
             padding: 15px;
-            margin: 15px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 13px;
-            line-height: 1.6;
-            white-space: pre-wrap;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #856404;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">CNN</div>
+            <div class="nav">
+                <a href="#">U.S.</a>
+                <a href="#">Crime</a>
+                <a href="#">Justice</a>
+                <a href="#">Race & Equality</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/jailetters</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/PrisonLettersResearch</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>3.2k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Letters from Charles Kenneth Knight (convicted racial killer) to Richard Spencer, Alex Jones, others while in prison</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Serial Killer Letters</span>
-                    <span class="flair">White Supremacist</span>
-                    <span class="flair">Prison Correspondence</span>
-                    <span>Posted by u/PrisonLettersResearch • 4 hours ago</span>
-                </div>
-
-                <p>I've obtained a collection of letters written by Charles Kenneth Knight from federal prison between 2005-2020. Knight was serving 250 years for racially motivated murders committed between 1951-1981. What makes these letters fascinating is who he was writing to - a who's who of far-right figures.</p>
-
-                <p>The letters reveal a complex psychology - Knight remained unrepentant about his crimes but was surprisingly critical of the modern white nationalist movement.</p>
-
-                <div class="letter-content">July 10, 2016
-Richard Spencer
-P.O. Box 1865
-Whitefish, MT 59937
-
-Dear Dick,
-
-That moron Spencer doesn't realize that Trump is the biggest conman ever, he is just another puppet of the New World Order. You think that orange clown is going to fight for "the white race"? His daughter married a Jew! His grandkids are Jewish! How stupid can you be?
-
-Back in my day, we didn't trust politicians. We handled our own business. Now you kids put your faith in some reality TV star who probably couldn't even tell you what the 14 words are. Pathetic.
-
-The movement has gone soft. All this talk about "peaceful ethnic cleansing" and "white advocacy" - what happened to real action? What happened to men who weren't afraid to get their hands dirty?
-
-You want to save the white race? Then stop being such a pussy about it.
-
-Your elder in the struggle,
-Charles K. Knight #04382-095
-
-P.S. - Stop sending me those stupid podcasts. I don't have a computer in here and the guards just laugh when they read the titles.</div>
-
-                <p>Knight wrote similar letters to Terry Nichols, Charles Manson, Alex Jones, and others. The collection shows he was a prolific correspondent - sometimes writing 3-4 letters per day to different recipients. He seemed particularly obsessed with the 2016 election and Trump's rise.</p>
-
-                <p>What's striking is how he viewed himself as an "elder statesman" of the movement, despite being universally rejected by modern white nationalists who saw him as a liability to their mainstreaming efforts.</p>
-
-                <a href="https://archive.org" class="source-link">Full letter collection</a>
-
-                <div class="comments-count">
-                    <a href="#">847 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">8.9k points</span> • 
-                    u/TrueCrimeLetters • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    The irony is palpable - Knight, a convicted killer of children, calling Richard Spencer "soft" and "pathetic." This is what happens when the old guard of violent white supremacism meets the new "intellectual" alt-right. They hate each other more than they hate their supposed enemies.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/PrisonLettersResearch • 2 hours ago
-                    </div>
-                    <div class="comment-content">
-                    Exactly! Knight represents the old violent fringe that modern white nationalists desperately try to distance themselves from. Spencer wanted mainstream respectability, Knight wanted blood. The cognitive dissonance is incredible - Knight sees himself as the "true" defender of white people while calling a neo-Nazi "soft."
-                    </div>
-                    <div class="comment-reply">Reply</div>
+        <article>
+            <div class="article-header">
+                <div class="breaking-banner">BREAKING</div>
+                <h1 class="headline">White supremacist convicted in multiple racial killings dies in federal prison at 106</h1>
+                <h2 class="subhead">Charles Kenneth Knight, sentenced to 250 years for murders spanning four decades, showed no remorse</h2>
+                <div class="byline">
+                    By <a href="#">Sara Sidner</a> and <a href="#">Mark Morales</a>, CNN<br>
+                    Updated 6:23 PM ET, Tue January 11, 2022
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">6.2k points</span> • 
-                    u/FederalPrisonWorker • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    I worked at Butner and remember Knight well. He was in the medical unit but still considered high security because of his notoriety. The guy wrote letters constantly - I'm talking 5-10 per day. Most got rejected for security reasons, but the ones that went out were to a bizarre collection of people. Manson, Nichols, even wrote to the Unabomber once.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/PrisonLettersResearch • 2 hours ago
-                    </div>
-                    <div class="comment-content">
-                    Did you ever read any of the outgoing mail? I'm curious what the rejected ones contained. Knight seemed to have this delusion that he was some kind of elder statesman whose wisdom was sought after by younger extremists.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+            <div class="article-content">
+                <p><strong>Washington (CNN)</strong> Charles Kenneth Knight, a convicted white supremacist who murdered 17 people in racially motivated attacks over three decades and became one of the oldest federal prisoners in U.S. history, has died at age 106, the Bureau of Prisons confirmed Tuesday.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.8k points</span> • 
-                    u/AltRightObserver • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    This perfectly captures the generational split in white nationalism. The old guard (Knight's generation) believed in direct violence and terrorism. The new guard (Spencer's generation) believes in "metapolitics" and mainstreaming their ideology through media and politics. Knight sees Spencer as weak and compromising; Spencer sees Knight as a liability to their respectability project.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Knight died on November 8 at the Federal Correctional Complex in Butner, North Carolina, but officials delayed releasing the information due to security protocols and notification of victims' families. He was serving 250 years without possibility of parole for some of the most heinous hate crimes in American history.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.9k points</span> • 
-                    u/ResearchLibrarian • 2 hours ago
+                <div class="warning">
+                    <strong>Editor's note:</strong> This story contains graphic descriptions of racial violence and offensive language that may be disturbing to readers.
                 </div>
-                <div class="comment-content">
-                    The handwriting analysis is fascinating. Despite being 101 when he wrote this, Knight's penmanship is remarkably steady and confident. The letter shows clear cognitive decline in reasoning but his physical writing remained strong. Classic case of aging affecting different cognitive domains at different rates.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.1k points</span> • 
-                    u/ExtremismResearcher • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    What's striking is how Knight's worldview never evolved. He was 101 when he wrote this, still using the same rhetoric from 1951 when he bombed that school. Most people moderate their views with age, but extremists often become more entrenched. The prison environment probably reinforced his beliefs too - surrounded by other white supremacists who validated his worldview.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>"Charles Knight was the embodiment of pure evil," said Assistant Attorney General Kristen Clarke of the Justice Department's Civil Rights Division. "For more than 30 years, he terrorized innocent victims based solely on the color of their skin or their religious faith. His death brings closure to decades of pain and suffering inflicted upon countless families."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.7k points</span> • 
-                    u/PrisonPsychology • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    The letter reveals classic narcissistic traits - grandiosity, sense of superiority, viewing himself as an "elder" whose wisdom should be sought. Even at 101, he's still playing the tough guy, calling Spencer a "pussy." This is performative masculinity taken to its extreme endpoint - a century-old man still trying to prove how hard he is.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Knight's crimes spanned four decades, beginning with the 1951 bombing of an African-American elementary school in Tennessee that killed 11 children. He was convicted in 1995 after a dramatic FBI arrest that ended in a shootout at his remote Tennessee compound.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.3k points</span> • 
-                    u/LetterAuthentication • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    The envelope and postmark match Butner's mail processing system from 2016. The handwriting samples I've compared to his earlier legal documents are consistent. This appears to be genuine - which makes it even more disturbing that a 101-year-old man was still this consumed by hate.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p><strong>A lifetime of hate</strong></p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.9k points</span> • 
-                    u/WhiteSupremacyExpert • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Knight's critique of Trump is fascinating - he sees through the con that many white supremacists fell for. But his solution isn't to reject racism, it's to embrace more direct violence. He's essentially saying "if you want to save the white race, stop being a pussy about it and start killing people like I did." This is why he was such a pariah even among other racists - too honest about what their ideology actually entails.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Born October 26, 1915, in rural Tennessee, Knight joined the Ku Klux Klan as a young man and remained an active member until his arrest. Court documents revealed he rose to a leadership position within the organization and used his role to recruit others to his violent ideology.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.6k points</span> • 
-                    u/ArchiveResearcher • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    I'm working on a similar collection of prison correspondence from white supremacists. The pattern I'm seeing is that older extremists (60+) are almost universally critical of the younger generation, seeing them as weak and compromising. Meanwhile, younger extremists view the older ones as counterproductive liabilities. The movement eats its own almost as much as it attacks outsiders.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>In addition to the 1951 school bombing, Knight was convicted of murdering his own sister in 1953 after she threatened to report his involvement in the school attack to authorities. Nearly three decades later, in 1981, he murdered five young Jewish girls in a shooting at a community center.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.4k points</span> • 
-                    u/TrueCrimePodcastFan • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    There's a whole episode here - the psychology of aging extremists. Most people mellow with age, but Knight became more radical. The isolation of prison, the validation from other inmates, and the lack of real-world consequences for his rhetoric created this feedback loop of escalating extremism. Even facing death, he couldn't let go of the hate.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Throughout his trial and subsequent incarceration, Knight never expressed remorse for his actions. In his final court appearance in 1995, he used racial slurs and told the court: "F*** the n*****s and all of Satan's worshippers."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.2k points</span> • 
-                    u/DocumentCollector • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    The reference to "14 words" is telling - even at 101, Knight was still fluent in white supremacist code. This wasn't some confused old man losing his faculties. This was someone who maintained his ideological commitments and cultural references for 65+ years. The consistency of his worldview is almost as disturbing as the content.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p><strong>Capture and conviction</strong></p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">987 points</span> • 
-                    u/PrisonLettersResearch • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    I'm the OP - working on getting the full collection digitized and uploaded. Knight wrote hundreds of letters over 15 years. The Spencer letter is just one example of how he positioned himself as a mentor figure to younger extremists, even while rejecting their strategies. The collection shows the evolution (or devolution) of American white supremacism across three generations.
-                </div>
-                <div class="comment-reply">Reply</div>
+                <p>Knight evaded capture for decades, moving between safe houses and using false identities. His arrest came after a two-year FBI investigation that culminated in a dramatic raid on his compound in rural Tennessee in November 1994.</p>
+
+                <p>During the shootout with federal agents, Knight wounded two FBI officers before being taken into custody. Investigators found an arsenal of weapons, bomb-making materials, and racist literature at his compound.</p>
+
+                <p>In 1995, he was convicted on 17 counts of murder, conspiracy to commit murder, and civil rights violations. U.S. District Judge Curtis Collier called Knight's crimes "among the most depraved acts this court has ever encountered" before sentencing him to 250 years in federal prison.</p>
+
+                <p><strong>Death in custody</strong></p>
+
+                <p>Knight spent the final 27 years of his life in federal custody, most recently at the Butner complex, which houses some of the federal system's most notorious inmates. Despite his advanced age, prison officials said he remained unrepentant and was considered a security risk until his death.</p>
+
+                <p>According to the Bureau of Prisons, Knight died of natural causes. An autopsy was performed, but results are pending. He had been in declining health for several years and used a wheelchair, but maintained contact with white supremacist groups through coded letters, officials said.</p>
+
+                <p>"Even in his final years, Knight continued to espouse the same hateful ideology that motivated his crimes," said Bureau of Prisons Director Michael Carvajal. "His death marks the end of a dark chapter in American history."</p>
+
+                <p><strong>Impact on victims' families</strong></p>
+
+                <p>For relatives of Knight's victims, his death brings a measure of closure after decades of pain. Sarah Williams, whose 8-year-old sister died in the 1951 school bombing, said she felt "relief that he can never hurt anyone again."</p>
+
+                <p>"My sister never got to grow up, never got to have children or grandchildren," Williams, now 75, told CNN. "He lived to be 106 while she died at 8. There's no justice in that, but at least now he's gone."</p>
+
+                <p>The Anti-Defamation League, which tracked Knight's activities for decades, said his death serves as a reminder of the ongoing threat posed by white supremacist ideology.</p>
+
+                <p>"Charles Knight represents the worst of American racism and anti-Semitism," said ADL CEO Jonathan Greenblatt. "His crimes demonstrate the deadly consequences of unchecked hate and the importance of holding perpetrators accountable, regardless of how much time has passed."</p>
+
+                <p>Knight's death also raises questions about the federal prison system's handling of aging inmates. At 106, he was among the oldest prisoners in federal custody, and his case highlights the challenges of incarcerating elderly inmates with serious health conditions.</p>
+
+                <p>Funeral arrangements have not been announced, and it's unclear who, if anyone, will claim his remains. Federal officials said they would follow standard procedures for unclaimed prisoners, which typically involve cremation and burial in a prison cemetery.</p>
             </div>
-        </div>
+        </article>
+
+        <aside class="sidebar">
+            <h3>About the case</h3>
+            <p><strong>Victims:</strong> 17 people murdered between 1951-1981</p>
+            <p><strong>Conviction:</strong> 17 counts of murder, civil rights violations</p>
+            <p><strong>Sentence:</strong> 250 years without parole</p>
+            <p><strong>Arrest:</strong> November 1994 after FBI shootout</p>
+            <p><strong>Age at death:</strong> 106 years old</p>
+            
+            <div class="related-stories">
+                <h4>Related Coverage</h4>
+                <a href="#">Hate crimes in America: A disturbing trend</a>
+                <a href="#">FBI investigates white supremacist groups</a>
+                <a href="#">Justice delayed: Cold cases reopened</a>
+                <a href="#">Aging inmates strain prison system</a>
+            </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
