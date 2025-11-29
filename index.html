@@ -3,308 +3,451 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uzbek Islamist group vows Sharia law and armed struggle - BBC News</title>
+    <title>Uzbek Islamist group vows Sharia law and armed struggle - r/worldnews</title>
     <style>
         body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #fff;
             color: #1a1a1a;
         }
-        .header {
-            background: #bb0000;
-            color: white;
-            padding: 12px 0;
-            border-bottom: 3px solid #000;
-        }
-        .header-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-        }
-        .nav {
-            font-size: 13px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 400;
-        }
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 40px;
-        }
-        .article-header {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .headline {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 12px 0;
-            color: #000;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-        }
-        .subhead {
-            font-size: 18px;
-            color: #404040;
-            margin: 0 0 15px 0;
-            font-weight: 400;
-            line-height: 1.4;
-        }
-        .byline {
-            font-size: 13px;
-            color: #404040;
-            font-weight: 400;
-        }
-        .byline a {
-            color: #bb0000;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .article-content {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        .pullquote {
-            border-left: 4px solid #bb0000;
-            padding-left: 20px;
-            margin: 25px 0;
-            font-size: 18px;
-            font-style: italic;
-            color: #404040;
-            background: #f8f8f8;
-            padding: 20px;
-            border-radius: 4px;
-        }
-        .sidebar {
-            background: #f8f8f8;
-            padding: 20px;
-            border-radius: 4px;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
             border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .sidebar h3 {
-            margin: 0 0 12px 0;
-            font-size: 16px;
-            color: #000;
-            border-bottom: 2px solid #bb0000;
-            padding-bottom: 6px;
-            font-weight: 700;
-        }
-        .sidebar p {
-            margin: 0 0 10px 0;
-            font-size: 14px;
-            line-height: 1.4;
-            color: #404040;
-        }
-        .related-stories {
-            margin-top: 20px;
-        }
-        .related-stories h4 {
-            font-size: 14px;
-            margin: 0 0 10px 0;
-            color: #404040;
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-weight: 500;
         }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #bb0000;
-            text-decoration: none;
-            margin-bottom: 8px;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
             line-height: 1.3;
-            font-weight: 500;
         }
-        .timestamp {
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
             font-size: 11px;
-            color: #6e6e6e;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
             margin-top: 5px;
         }
-        .breaking-banner {
-            background: #ffcc00;
-            color: #000;
-            padding: 6px 12px;
-            font-size: 11px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
-            border-radius: 3px;
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
         }
-        .info-box {
-            background: #f0f0f0;
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .info-box h4 {
-            margin: 0 0 8px 0;
-            font-size: 14px;
-            color: #000;
-        }
-        .info-box p {
-            margin: 0;
-            font-size: 13px;
-            color: #404040;
-        }
-        .bbc-footer {
-            background: #000;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
+        .award {
+            color: #d4a017;
             font-size: 12px;
+            margin-right: 5px;
         }
-        .bbc-footer a {
-            color: #ffcc00;
-            text-decoration: none;
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+        .sidebar {
+            background: #f6f7f8;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 0 8px 8px;
+            font-size: 14px;
+        }
+        .sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .sidebar ul {
+            margin: 0;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">BBC</div>
-            <div class="nav">
-                <a href="#">News</a>
-                <a href="#">Asia</a>
-                <a href="#">World</a>
-                <a href="#">Middle East</a>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/CentralAsiaWatcher</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>3.7k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Uzbek Islamist group vows Sharia law and armed struggle, claims 10,000 members</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Uzbekistan</span>
+                    <span class="flair">Islamic Movement</span>
+                    <span class="flair">Central Asia</span>
+                    <span>Posted by u/CentralAsiaWatcher • 4 hours ago</span>
+                </div>
+
+                <p>The Loyal Soldiers of Islam and Islamic Movement released a 12-minute video today declaring their intention to overthrow the Uzbek government and impose Sharia law. The group, which emerged during the country's worst drought in decades, claims to have 10,000 members nationwide and threatened that "armed struggle will begin soon."</p>
+
+                <p>In the video, they outlined plans to change the Uzbek alphabet back to Persian-Arabic script, expel Russian citizens, form an Islamic religious police, and reclaim "Uzbek Homeland" territories. This marks a significant escalation from their formation announcement in March.</p>
+
+                <p>The movement appears to be capitalizing on public frustration over the government's handling of the drought and economic crisis. Analysts warn this nationalist-Islamist combination could prove more appealing to ordinary Uzbeks than transnational jihadist groups.</p>
+
+                <div class="comments-count">
+                    <a href="#">1,247 comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">Uzbek Islamist group vows Sharia law and armed struggle</h1>
-                <h2 class="subhead">Loyal Soldiers of Islam threaten to overthrow government and expel Russian citizens</h2>
-                <div class="byline">
-                    By <a href="#">Faisal Edroos</a> and <a href="#">Sarah Rainsford</a> | April 14, 2028 | Tashkent, Uzbekistan
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    <span class="score">4.2k points</span> • 
+                    u/TashkentExpat • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Living in Tashkent for the past 5 years. This is genuinely concerning - not because these guys are some military threat (they're not), but because they're tapping into real anger. The drought has been brutal. My neighbors are struggling to afford basic food, and the government's response has been pathetic. When people are desperate, they'll listen to anyone who promises change, even if that change involves religious police.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/CentralAsiaWatcher • 3 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Thanks for the ground truth. Are you seeing any actual support for these guys, or is it just online noise? The 10,000 number seems... optimistic.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/TashkentExpat • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Hard to say. My wife's cousin mentioned them positively at dinner last week - he's 24, unemployed, and genuinely believes they'd "restore Uzbek dignity." That's what scared me. It's not just old religious guys. Young, educated people are listening.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p>A radical Uzbek Islamist movement that emerged during the country's worst drought in decades has released a video vowing to impose Sharia law and expel Russian citizens, in what analysts say marks a dangerous escalation of the group's campaign against the secular government.</p>
-
-                <p>The Loyal Soldiers of Islam and Islamic Movement, which claims to have 10,000 members across Uzbekistan, released a 12-minute video on Sunday outlining its vision for an Islamic state and warning that "armed struggle will begin soon."</p>
-
-                <div class="pullquote">
-                    "O Allah, raise the great Mujahideen of Uzbekistan and unleash divine retribution and overthrow the infidel government of Uzbekistan and drive out the Russians infidels out of the sacred soil."
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    <span class="score">3.1k points</span> • 
+                    u/GeopoliticsNerd • 3 hours ago
                 </div>
-
-                <p>In the video, masked spokesmen for the group declare their intention to change Uzbekistan's alphabet from the current Latin script back to the Persian-Arabic script, establish an Islamic religious police force, and reclaim what they term "Uzbek Homeland" from neighboring states.</p>
-
-                <p>The movement's leader, speaking in heavily accented Uzbek mixed with Arabic phrases, said the group had grown from "a few hundred brothers" to a nationwide network spanning all regions of the Central Asian nation.</p>
-
-                <p>"We number 10,000 across Uzbekistan, from the cotton fields of the Fergana Valley to the deserts of Karakalpakstan," he said, addressing the camera. "Soon we will be 100,000, then one million. The people are waking up to the truth of Islam."</p>
-
-                <div class="info-box">
-                    <h4>Key Demands from the Video</h4>
-                    <p>• Imposition of Sharia law across Uzbekistan<br>
-                    • Replacement of Latin alphabet with Persian-Arabic script<br>
-                    • Expulsion of Russian citizens deemed "infidels"<br>
-                    • Creation of Islamic religious police force<br>
-                    • Reclamation of "Uzbek Homeland" territories</p>
+                <div class="comment-content">
+                    The Persian-Arabic script thing is fascinating. Uzbekistan switched from Cyrillic to Latin in the 90s as part of de-Russification. Now they want to go even further back - pre-Soviet, pre-Tsarist. It's not just about religion, it's about rejecting the entire post-independence identity project. These guys are essentially saying "everything since 1991 has been a mistake."
                 </div>
-
-                <p>The video represents the most explicit threat yet from a group that first emerged in March, when it announced its formation amid widespread anger over the government's handling of a severe drought that has devastated agriculture and left millions struggling with water shortages.</p>
-
-                <p>Since then, the movement has grown rapidly, capitalizing on public frustration with President Shavkat Mirziyoyev's administration and its perceived failure to address the economic crisis triggered by the drought.</p>
-
-                <p>"They're tapping into a perfect storm of grievances," said Dr. Navbahor Imamova, a Central Asia specialist at George Washington University. "Environmental disaster, economic hardship, and a government that appears increasingly out of touch with its people."</p>
-
-                <p>The group's anti-Russian rhetoric marks a significant escalation. Uzbekistan has maintained relatively close ties with Moscow since independence in 1991, and Russian citizens, many of whom have lived in Uzbekistan for generations, form a significant minority in the country.</p>
-
-                <p>In the video, the group accuses Russia of "colonizing" Uzbekistan and stealing its resources, calling for the expulsion of all Russian citizens who refuse to convert to Islam and adopt Uzbek customs.</p>
-
-                <div class="pullquote">
-                    "The Russians have polluted our sacred soil with their atheism and alcohol. They must leave or face the consequences of divine justice."
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/HistoryBuff92 • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Same playbook as the Taliban in Afghanistan. They banned pre-Islamic cultural practices, destroyed Buddhist statues, wanted to return to some imagined pure Islamic past. The difference is Uzbekistan doesn't have Afghanistan's history of Islamic governance - it was Soviet for 70 years. This is pure fantasy.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
-
-                <p>The Uzbek government has not yet officially responded to the video, but security sources in Tashkent told the BBC that authorities are treating it as a serious threat and have increased surveillance of mosques and religious gatherings.</p>
-
-                <p>The movement's rejection of a transnational caliphate in favor of Uzbek nationalism sets it apart from better-known Islamist groups, but analysts warn this could make it more dangerous.</p>
-
-                <p>"This isn't ISIS trying to create a global caliphate," said Dr. Edward Lemon of the International Centre for Counter-Terrorism. "This is a nationalist movement that happens to be Islamist. That combination could prove much more appealing to ordinary Uzbeks who might be sympathetic to religious governance but wary of foreign domination."</p>
-
-                <p>The video's production quality suggests the group has access to modern equipment and editing capabilities, raising questions about potential foreign backing. The speakers appear well-trained, speaking confidently to camera and using sophisticated visual effects.</p>
-
-                <p>"This isn't some amateur operation," said a Western intelligence official who requested anonymity. "The video shows professional production values and careful messaging. Someone with experience is advising them."</p>
-
-                <p>The group's call for armed struggle has alarmed regional governments, who fear the conflict could spill across Central Asia's porous borders. Uzbekistan shares frontiers with five countries, including Afghanistan, where Islamist groups have gained ground since the Taliban's return to power in 2021.</p>
-
-                <p>"The last thing Central Asia needs is another armed conflict," said a senior official from Kazakhstan's foreign ministry. "We're already dealing with economic challenges and climate change. This could destabilize the entire region."</p>
-
-                <p>The drought that sparked the movement shows no signs of abating, with meteorologists predicting continued dry conditions through at least the end of 2028. Water levels in the vital Amu Darya and Syr Darya rivers remain at historic lows, devastating agriculture and forcing millions to rely on water deliveries.</p>
-
-                <p>In rural areas, where support for the Islamist movement appears strongest, many residents say they have lost faith in the government's ability to address the crisis.</p>
-
-                <p>"The government talks about modernization and economic development, but we can't even get clean water," said a farmer in the Fergana Valley who spoke on condition of anonymity. "Maybe it's time to try something different."</p>
-
-                <p>The movement's demand to revert to the Persian-Arabic script represents a rejection of Uzbekistan's post-independence identity. The country switched from Cyrillic to Latin script in the 1990s as part of a broader effort to distance itself from its Soviet past.</p>
-
-                <p>"This isn't just about religion - it's about identity and history," said Dr. Lemon. "They're saying everything since independence has been a mistake, that Uzbekistan needs to return to its pre-Soviet Islamic roots."</p>
-
-                <p>Western diplomats in Tashkent say they are monitoring the situation closely, with several countries updating their travel advisories for Uzbekistan. The United States Embassy has urged American citizens to avoid areas where protests might occur.</p>
-
-                <p>The European Union has called for dialogue and restraint, with a spokesperson saying Brussels is "concerned by the escalation of rhetoric and calls for violence."</p>
-
-                <p>Russia, which maintains significant interests in Uzbekistan, has not yet responded to the video's anti-Russian rhetoric. Moscow has traditionally supported secular governments in Central Asia and has provided security assistance to combat Islamist movements.</p>
-
-                <p>As the drought continues and public frustration grows, analysts warn that the Loyal Soldiers of Islam may be poised to gain even more support, particularly among young Uzbeks who see few opportunities in the current system.</p>
-
-                <p>"The government has a narrow window to address the underlying grievances," said Dr. Imamova. "If they don't act quickly to provide relief and restore confidence, they may find themselves facing a much larger problem."</p>
-
-                <p>For now, the movement's threat of armed struggle remains just that - a threat. But with 10,000 claimed members and growing support, the Uzbek government may soon face its most serious challenge since independence.</p>
-
-                <p>As one Tashkent resident told the BBC, speaking anonymously for fear of government reprisal: "The video is frightening, but also exciting. For the first time in years, it feels like something might actually change."</p>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>About Uzbekistan</h3>
-            <p><strong>Population:</strong> 35.9 million</p>
-            <p><strong>Capital:</strong> Tashkent</p>
-            <p><strong>Religion:</strong> 88% Muslim (mostly Sunni)</p>
-            <p><strong>Script:</strong> Latin (since 1990s)</p>
-            <p><strong>Russian minority:</strong> ~650,000 people</p>
-            
-            <div class="related-stories">
-                <h4>Related Stories</h4>
-                <a href="#">Uzbekistan drought worsens food crisis</a>
-                <a href="#">Islamist movements adapt to climate change</a>
-                <a href="#">Central Asia faces water shortage</a>
-                <a href="#">Regional security implications</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.4k points</span> • 
+                    u/SamarkandLocal • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Samarkand resident here. The anti-Russian rhetoric is getting traction, unfortunately. There's real resentment about Russian businesses buying up property, Russian tourists acting entitled, and Russian language still being everywhere. My neighbor's kid got beaten up last month for speaking Russian in public. The government tries to suppress this stuff, but it's bubbling under the surface.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/MoscowAwareness • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Russian here - this is heartbreaking but not surprising. The economic crisis is making everyone look for scapegoats. We're seeing the same thing in other former Soviet states. Nationalism + economic desperation = dangerous mix.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </aside>
-    </div>
 
-    <div class="bbc-footer">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <p><strong>BBC News Services</strong></p>
-            <p><a href="#">On your mobile</a> | <a href="#">On your connected tv</a> | <a href="#">Get news alerts</a> | <a href="#">Contact BBC News</a></p>
-            <p style="margin-top: 10px; font-size: 11px; color: #ccc;">© 2028 BBC. The BBC is not responsible for the content of external sites.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.9k points</span> • 
+                    u/WaterCrisisExpert • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The drought context is crucial here. Central Asia is facing its worst water crisis in recorded history. The Amu Darya and Syr Darya are at historic lows. Agriculture - which employs 25% of Uzbeks - is collapsing. When your livelihood disappears and the government seems helpless, radical solutions start sounding reasonable. These Islamists didn't create the crisis, but they're exploiting it masterfully.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ClimateRealist • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    And it's going to get worse. Climate models show Central Asia becoming uninhabitable by 2050. We're watching the beginning of climate-driven political instability. These Islamists are just the first movers.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.6k points</span> • 
+                    u/ReligiousStudiesProf • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The "no caliphate" thing is smart messaging. They're positioning themselves as Uzbek nationalists first, Islamists second. This distinguishes them from ISIS and Al-Qaeda, making them more palatable to secular Uzbeks who are just fed up with the government. It's the same reason they emphasize reclaiming "Uzbek Homeland" rather than creating some transnational Islamic empire.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/IslamicScholar • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Exactly. They're tapping into pre-Soviet Uzbek identity - the Khanates of Kokand, Bukhara, Khiva. These were Islamic states, but distinctly Uzbek. It's a powerful narrative for people who feel their history was erased by Soviet rule.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.3k points</span> • 
+                    u/SecurityAnalyst • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    10,000 members my ass. These guys probably have 500-1000 active supporters max. But here's the thing - you don't need 10,000 to destabilize a country. 500 committed people can cause serious chaos, especially if they're well-organized and have popular support. The Uzbek security services are competent, but they're used to dealing with secular opposition, not religious movements.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/CentralAsiaWatcher • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Do you think the government will crack down hard, or try to co-opt some of their messaging to defuse support?
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/SecurityAnalyst • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Crack down, definitely. Mirziyoyev has zero tolerance for challenges to secular governance. Expect mass arrests, mosque closures, and probably some "disappearances." The question is whether that makes them martyrs or destroys them. Given the economic crisis, I'm betting on martyrs.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.1k points</span> • 
+                    u/KazakhRedditor • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Fellow Central Asian here (Kazakhstan). We're watching this nervously. If Uzbekistan goes Islamist, the whole region could unravel. Tajikistan has similar tensions, Kyrgyzstan is unstable, and we're dealing with our own economic crisis. One successful revolution could inspire copycats across the steppe.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/TajikObserver • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Tajik here - can confirm. Our government is even more paranoid about Islamic movements after the civil war. They've been arresting "extremists" left and right, but it's just creating more resentment. The drought is hitting us hard too.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">892 points</span> • 
+                    u/UzbekExpatLondon • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The video production quality is what scares me. This isn't some amateur operation - multiple camera angles, professional editing, good lighting, clear audio. Someone with real media experience is behind this. Combined with their sophisticated messaging, this suggests either foreign backing or they've recruited talented people. Either way, not good.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/USForeignPolicy • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    US policy in Central Asia has been a disaster for 30 years. We prop up secular dictators because they're "stable," ignoring that stability built on repression creates the conditions for radical movements. Then when the inevitable happens, we act surprised. Rinse and repeat across the Muslim world.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">623 points</span> • 
+                    u/BukharaHistorian • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The "reclaim Uzbek Homeland" thing is concerning. They're talking about parts of Kazakhstan, Kyrgyzstan, Afghanistan that historically had Uzbek populations. This is irredentist nationalism straight out of the 1930s playbook. If they gain power, we could see Central Asian version of the Balkan wars.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">487 points</span> • 
+                    u/YoungUzbek • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    23-year-old Uzbek here. Most of my friends think these guys are clowns, but a few are intrigued. Not because they want Sharia law, but because they're so desperate for ANY alternative to the current government. When you're unemployed with no prospects, even crazy starts sounding reasonable. That's the real tragedy.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">412 points</span> • 
+                    u/RussiaHand • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Russia's silence on this is deafening. Usually Moscow would be screaming about "color revolutions" and "Western interference," but they're quiet. Probably because they know any statement will just fuel the anti-Russian narrative these guys are pushing. It's a lose-lose for Kremlin diplomacy.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">378 points</span> • 
+                    u/ChinaWatcher • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    China is probably freaking out too. Xinjiang borders Uzbekistan, and Beijing has been cracking down hard on Uyghur Muslims. An Islamist government in Uzbekistan could inspire Uyghur separatists or provide safe haven. Expect China to offer quiet support for whatever crackdown Mirziyoyev orders.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">291 points</span> • 
+                    u/FormerPeaceCorps • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Served in Peace Corps Uzbekistan 2018-2020. The people are incredibly hospitable, but there's real desperation now. My host family lost everything in the drought - their farm, their savings, their future. The father told me last month he's considering going to Russia for work, leaving his family behind. These Islamists are offering hope, however false, to people who have none.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
