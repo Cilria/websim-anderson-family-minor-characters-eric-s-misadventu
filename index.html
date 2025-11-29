@@ -3,273 +3,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islamist nationalist movement emerges in drought-stricken Uzbekistan - CNN</title>
+    <title>Islamist nationalist movement emerges in drought-stricken Uzbekistan - r/worldnews</title>
     <style>
         body {
-            font-family: CNN Sans, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #262626;
-        }
-        .header {
-            background: #cc0000;
-            color: white;
-            padding: 12px 0;
-            border-bottom: 1px solid #a30000;
-        }
-        .header-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-        }
-        .nav {
-            font-size: 13px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 500;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 30px;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .article-header {
-            border-bottom: 1px solid #e6e6e6;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .headline {
-            font-size: 38px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 12px 0;
-            color: #000;
-        }
-        .subhead {
-            font-size: 18px;
-            color: #404040;
-            margin: 0 0 15px 0;
-            font-weight: 400;
-            line-height: 1.4;
-        }
-        .byline {
-            font-size: 13px;
-            color: #6e6e6e;
-            font-weight: 400;
-        }
-        .byline a {
-            color: #cc0000;
-            text-decoration: none;
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-weight: 500;
         }
-        .article-content {
-            font-size: 17px;
-            line-height: 1.7;
-            margin-bottom: 30px;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .article-content p {
-            margin-bottom: 20px;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .pullquote {
-            border-left: 4px solid #cc0000;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .link-flair {
+            background: #ff6b6b;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
             padding-left: 20px;
-            margin: 25px 0;
-            font-size: 19px;
-            font-style: italic;
-            color: #404040;
-            background: #fafafa;
-            padding: 20px;
-            border-radius: 4px;
+            border-left: 2px solid #e9f5fd;
         }
-        .sidebar {
-            background: white;
-            padding: 20px;
-            border-radius: 4px;
-            border: 1px solid #e6e6e6;
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
-        .sidebar h3 {
-            font-size: 16px;
-            margin: 0 0 12px 0;
-            color: #000;
-            border-bottom: 2px solid #cc0000;
-            padding-bottom: 6px;
-            font-weight: 700;
-        }
-        .sidebar p {
+        .comment-content {
             font-size: 14px;
             line-height: 1.5;
-            margin-bottom: 12px;
-            color: #404040;
+            margin-bottom: 5px;
         }
-        .related-stories {
-            margin-top: 20px;
-        }
-        .related-stories h4 {
-            font-size: 14px;
-            margin: 0 0 10px 0;
-            color: #6e6e6e;
-            font-weight: 500;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #cc0000;
-            text-decoration: none;
-            margin-bottom: 8px;
-            line-height: 1.3;
-            font-weight: 500;
-        }
-        .timestamp {
-            font-size: 11px;
-            color: #8b8b8b;
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
             margin-top: 5px;
         }
-        .breaking-banner {
-            background: #ffcc00;
-            color: #000;
-            padding: 6px 12px;
-            font-size: 11px;
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
             font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
-            border-radius: 3px;
+            font-size: 12px;
+            color: #1a1a1b;
         }
-        .info-box {
-            background: #f0f0f0;
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .info-box h4 {
-            margin: 0 0 8px 0;
-            font-size: 14px;
-            color: #000;
-        }
-        .info-box p {
-            margin: 0;
-            font-size: 13px;
-            color: #404040;
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">CNN</div>
-            <div class="nav">
-                <a href="#">World</a>
-                <a href="#">Asia</a>
-                <a href="#">Politics</a>
-                <a href="#">Climate</a>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">Islamist nationalist movement emerges in drought-stricken Uzbekistan</h1>
-                <h2 class="subhead">"Loyal Soldiers of Islam" movement seeks to overthrow government amid worst drought in decades</h2>
-                <div class="byline">
-                    By <a href="#">Clarissa Ward</a>, <a href="#">Tim Lister</a> and <a href="#">Gulchekhra Tashkent</a> | March 27, 2028 | Tashkent, Uzbekistan
-                </div>
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/GlobalObserver2028</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>8.4k</span>
+                <button class="vote-btn">⬇</button>
             </div>
 
-            <div class="article-content">
-                <p>TASHKENT, Uzbekistan — A new Islamist nationalist movement has emerged in Uzbekistan, capitalizing on the Central Asian nation's worst drought in decades to challenge the government's authority and call for the establishment of an Islamic state under Sharia law.</p>
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Islamist nationalist movement emerges in drought-stricken Uzbekistan - "Loyal Soldiers of Islam" seeks to overthrow government amid worst drought in decades</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="link-flair">CNN</span>
+                    <span class="flair">Central Asia</span>
+                    <span class="flair">Islamist Movement</span>
+                    <span>Posted by u/GlobalObserver2028 • 6 hours ago</span>
+                </div>
+
+                <p>A new Islamist nationalist movement has emerged in Uzbekistan, capitalizing on the Central Asian nation's worst drought in decades to challenge the government's authority and call for the establishment of an Islamic state under Sharia law.</p>
 
                 <p>The group, calling itself "Islomning sodiq askarlari va Islom harakati" or "The Loyal Soldiers of Islam and the Islamic Movement," announced its formation Tuesday in a video posted to social media, marking the most significant Islamist challenge to Uzbekistan's secular government since the early 2000s.</p>
 
-                <div class="pullquote">
-                    "The drought is not just a natural disaster — it is a divine sign that our current government has failed Allah's test. We will establish a Greater Uzbekistan under Islamic law to liberate all Uzbeks under the guidance of Allah."
+                <p>Unlike transnational jihadist groups, the Loyal Soldiers of Islam explicitly rejected the concept of a transnational Islamic caliphate, instead positioning themselves as nationalist defenders of Uzbek sovereignty. "An Islamic Caliphate is utterly pointless and foolish," said a masked spokesman in the video. "Our goal is to overthrow the Uzbekistan government and replace it with an Islamic State enforced under Sharia; our goal is also to create a Greater Uzbekistan to liberate all of the Uzbeks under the guidance of Allah."</p>
+
+                <a href="https://cnn.com" class="source-link">CNN article</a>
+
+                <div class="comments-count">
+                    <a href="#">2,847 comments</a>
                 </div>
-
-                <p>The movement's leaders, speaking in Uzbek and Arabic, explicitly rejected the concept of a transnational Islamic caliphate, instead positioning themselves as nationalist defenders of Uzbek sovereignty. "An Islamic Caliphate is utterly pointless and foolish," said a masked spokesman in the video. "Our goal is to overthrow the Uzbekistan government and replace it with an Islamic State enforced under Sharia; our goal is also to create a Greater Uzbekistan to liberate all of the Uzbeks under the guidance of Allah."</p>
-
-                <p>The emergence of the group comes as Uzbekistan grapples with what meteorologists describe as the most severe drought to hit the region since reliable records began. Water levels in the vital Amu Darya and Syr Darya rivers have dropped to historic lows, devastating cotton crops that form the backbone of Uzbekistan's agricultural economy and leaving millions of rural Uzbeks facing water rationing and food insecurity.</p>
-
-                <p>"The timing is not coincidental," said Dr. Navbahor Imamova, a Central Asia expert at George Washington University. "The drought has created perfect conditions for anti-government sentiment. When people can't feed their families, they start looking for alternatives to the current system."</p>
-
-                <div class="info-box">
-                    <h4>Understanding Uzbekistan's Drought Crisis</h4>
-                    <p>The drought, which began in late 2026, has affected over 12 million people across Uzbekistan. Water levels in major rivers are down 40% from normal, and the country's vital cotton industry has seen production fall by 35%.</p>
-                </div>
-
-                <p>The movement's ideology represents a unique fusion of religious fundamentalism and ethnic nationalism that analysts say could prove particularly potent in Uzbekistan, where Islam has historically been intertwined with national identity. Unlike transnational jihadist groups, the Loyal Soldiers of Islam frame their struggle in explicitly Uzbek terms, calling for the liberation of ethnic Uzbeks across Central Asia.</p>
-
-                <p>"This is a dangerous development because it's not just about religion — it's about identity," said Dr. Edward Lemon, a research fellow at the International Centre for Counter-Terrorism. "They're tapping into grievances that go beyond theology to questions of ethnic solidarity and national destiny."</p>
-
-                <p>The Uzbek government, which has maintained tight control over religious expression since independence in 1991, has not yet officially responded to the movement's formation. However, security sources in Tashkent told CNN that authorities are taking the threat seriously and have increased surveillance of mosques and religious gatherings in recent weeks.</p>
-
-                <p>The drought has exacerbated existing tensions between the secular government and Uzbekistan's deeply religious population. While the constitution guarantees freedom of religion, independent religious groups face strict registration requirements, and unauthorized religious activity can result in criminal charges.</p>
-
-                <p>"The government has always used the threat of Islamic extremism to justify its authoritarian policies," said a Tashkent-based human rights activist who spoke on condition of anonymity. "But now they may be facing a real challenge that their usual tactics won't be able to suppress."</p>
-
-                <p>The Loyal Soldiers of Islam appear to be drawing support from disaffected rural populations hardest hit by the drought. In the video, the group's spokesman specifically addressed "our brothers in the cotton fields of the Fergana Valley" and "the honest farmers of the Kyzylkum Desert," promising that an Islamic government would prioritize their needs over those of "corrupt officials in Tashkent."</p>
-
-                <p>This rural-urban divide has been a persistent feature of Uzbek politics, with the secular government in Tashkent often appearing disconnected from the conservative values of the countryside. The drought has widened this divide, as urban areas with better infrastructure have been less affected than rural regions dependent on agriculture.</p>
-
-                <div class="pullquote">
-                    "When the government can't provide water for our crops, when our children go hungry, we must turn to Allah. The time has come for Uzbekistan to return to its Islamic roots."
-                </div>
-
-                <p>The movement's rejection of a caliphate model sets it apart from better-known Islamist groups like ISIS or al-Qaeda. Instead, the Loyal Soldiers of Islam advocate for what they term "national Islamic liberation" — the establishment of Islamic states for each Muslim nation, governed by their own interpretations of Sharia law.</p>
-
-                <p>This approach could prove more appealing to Uzbeks who might be sympathetic to religious governance but wary of foreign domination. Uzbekistan, which was part of the Soviet Union for nearly 70 years, has a strong tradition of nationalism that predates its recent independence.</p>
-
-                <p>The drought's economic impact has been severe. Cotton exports, which normally account for about 15% of Uzbekistan's export revenue, have plummeted by more than a third. The World Bank estimates that the drought has cost Uzbekistan's economy over $4 billion, with rural areas bearing the brunt of the losses.</p>
-
-                <p>In rural districts, where unemployment was already high, the drought has pushed many families to the brink of survival. Water rationing has become common, and in some areas, people are paying up to 10 times normal prices for clean drinking water.</p>
-
-                <p>"When people are desperate, they become more receptive to radical solutions," said Dr. Lemon. "The combination of economic hardship, environmental disaster, and government incompetence creates fertile ground for extremist movements."</p>
-
-                <p>The international community has expressed concern about the developments. The United States Embassy in Tashkent issued a statement Tuesday calling for "all parties to respect democratic processes and human rights" while urging the Uzbek government to address the humanitarian crisis caused by the drought.</p>
-
-                <p>Russia, which maintains significant influence in Central Asia, has reportedly offered assistance to the Uzbek government in dealing with both the drought and the emerging security threat. However, Uzbek officials have so far declined direct Russian military assistance, wary of appearing dependent on Moscow.</p>
-
-                <p>China, which has invested heavily in Uzbekistan's energy and transportation infrastructure through its Belt and Road Initiative, has called for "stability and development" in the region. Chinese companies have been particularly affected by the drought, as several major cotton processing facilities have had to reduce operations due to water shortages.</p>
-
-                <p>The emergence of the Loyal Soldiers of Islam represents a new challenge for Central Asian stability at a time when the region is already grappling with the effects of climate change, economic transition, and geopolitical tensions. The drought that sparked the crisis shows no signs of abating, with meteorologists predicting continued dry conditions through at least the end of 2028.</p>
-
-                <p>For now, the movement appears to be in its early stages, with unknown numbers of followers and limited operational capacity. But the combination of environmental disaster, economic hardship, and religious fervor could prove explosive in a region where secular governments have long struggled to balance modernization with traditional values.</p>
-
-                <p>As one Tashkent resident told CNN, speaking anonymously for fear of government reprisal: "The drought has shown us that our government cannot protect us from nature. Now we will see if they can protect us from those who claim to speak for God."</p>
             </div>
-        </article>
+        </div>
 
-        <aside class="sidebar">
-            <h3>About Uzbekistan</h3>
-            <p><strong>Population:</strong> 35.9 million</p>
-            <p><strong>Capital:</strong> Tashkent</p>
-            <p><strong>Government:</strong> Presidential republic</p>
-            <p><strong>Religion:</strong> 88% Muslim (mostly Sunni)</p>
-            <p><strong>Drought impact:</strong> 12 million people affected</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Central Asia faces water crisis as glaciers melt</a>
-                <a href="#">Islamist movements adapt to climate change impacts</a>
-                <a href="#">Uzbekistan's cotton industry struggles with drought</a>
-                <a href="#">Regional security implications of Central Asian instability</a>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.2k points</span> • 
+                    u/CentralAsiaWonk • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    This is actually huge. Uzbekistan has been one of the most stable Central Asian countries since independence. The drought has been brutal - I was there last year and the water situation is genuinely desperate. When people can't feed their families, they start looking for alternatives to the current system.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/TashkentResident • 4 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Can confirm. My family in Samarkand has been dealing with water rationing for months. The government response has been pathetic - just telling people to "conserve more" while the cotton fields get priority water access. People are angry.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.8k points</span> • 
+                    u/GeopoliticsNerd • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    The rejection of a caliphate model is actually really significant. These guys are positioning themselves as Uzbek nationalists first, Islamists second. That's much more dangerous to the current government because it taps into legitimate grievances rather than just religious extremism.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.1k points</span> • 
+                    u/ClimateSecurityAnalyst • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    Climate change creating failed states in real time. The drought started in 2026 and has only gotten worse. Water levels in the Amu Darya are down 40%. When your economy depends on cotton and you can't grow cotton, people start looking for someone to blame. The government's corruption made them an easy target.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/WaterPolicyExpert • 3 hours ago
+                    </div>
+                    <div class="comment-content">
+                    The upstream countries (Tajikistan, Kyrgyzstan) have been building hydroelectric dams that reduce water flow to Uzbekistan. Combined with the drought, it's a perfect storm. The region is heading toward water wars if this isn't addressed.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.8k points</span> • 
+                    u/MuslimWorldObserver • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    Interesting that they're explicitly rejecting the caliphate model. This is more like Iran's revolutionary guards - nationalist Islamists who want to create an Islamic state but only for their own ethnic group. The "Greater Uzbekistan" thing is concerning though - that's irredentist rhetoric that could destabilize the whole region.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/FormerStateDept • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    The US is in a tough spot here. Uzbekistan has been a key partner in the region, but the government's authoritarian tendencies and corruption created this mess. We can't support Islamists, but we also can't keep propping up a regime that's lost legitimacy. Expect lots of quiet diplomacy behind the scenes.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/UzbekistanTraveler • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    I traveled through Uzbekistan in 2027 and the tension was palpable. In the rural areas, people were openly criticizing the government for the first time in decades. The mosques were packed - not necessarily with extremists, but with desperate people looking for answers. This movement didn't come out of nowhere.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/RussiaWatcher • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Russia is probably loving this. A destabilized Uzbekistan means more influence for Moscow. They'll offer "security assistance" to crush the Islamists, which really means expanding Russian military presence in the region. The CSTO will be activated soon, mark my words.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">834 points</span> • 
+                    u/IslamicStudiesProf • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    The "Loyal Soldiers of Islam" name is clever marketing. It positions them as defenders of Uzbek identity rather than foreign extremists. The fact they're speaking in Uzbek and Arabic, not Russian, is also significant. They're trying to appeal to both nationalist and religious sentiments simultaneously.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">712 points</span> • 
+                    u/ChinaBeltRoad • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    China's Belt and Road investments are at risk here. They've poured billions into Uzbek infrastructure, including cotton processing facilities that are now idle due to the drought. If this movement gains traction, all those Chinese investments could be nationalized or simply destroyed. Beijing will be very nervous about this.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">645 points</span> • 
+                    u/SecurityAnalyst • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The timing is not coincidental. Ramadan starts next week, and the movement is clearly trying to capitalize on religious sentiment during the holy month. The government's response will be crucial - if they crack down too hard, they'll create martyrs. If they do nothing, they look weak.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">523 points</span> • 
+                    u/KazakhRedditor • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    As someone from neighboring Kazakhstan, this is terrifying. If Uzbekistan falls to Islamists, the whole region could domino. Our governments are all variations of authoritarian, and we're all dealing with economic hardship. The difference is we have oil money to cushion the blow - Uzbekistan doesn't.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">412 points</span> • 
+                    u/HistoricalParallels • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    This reminds me of Iran in 1979 - economic crisis, authoritarian government losing legitimacy, and a religious movement positioning itself as the alternative. The difference is these guys are explicitly nationalist, not internationalist like Khomeini. Could end up more like a religious version of Ataturk's Turkish nationalism.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">378 points</span> • 
+                    u/DroughtExpert • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The drought is expected to continue through at least 2029 according to climate models. The region is experiencing what scientists call "aridification" - a permanent shift to a drier climate. This isn't just a bad year, it's the new normal. Without massive adaptation, more countries will face similar instability.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">291 points</span> • 
+                    u/UzbekExpat • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    My family is still in Tashkent and they're scared. The government has increased security everywhere - mosques, markets, even schools. My cousin said masked men came to their village last week distributing food and water, saying it was from "true Muslims" not the corrupt government. People are listening because they're desperate.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">234 points</span> • 
+                    u/PolicyWonk • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The international community needs to address the root cause - the drought and water management - not just the security threat. If we only focus on crushing the Islamists without solving the water crisis, we'll just see different extremist groups emerge. Climate adaptation assistance should be the priority.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
