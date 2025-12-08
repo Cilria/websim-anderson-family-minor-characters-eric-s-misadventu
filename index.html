@@ -3,426 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arab Leader Vows War on Yemen That Will "Make Genghis Khan Look Like a Peaceful Merchant" | r/worldnews</title>
+    <title>Arab State leader calls for 'total war' and massive military build-up | BBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
         }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
+        .bbc-header {
+            background: #bb0000;
+            color: white;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .header {
-            background: #ff4500;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+        .bbc-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            justify-content: space-between;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .bbc-logo {
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
+        .bbc-nav {
+            font-size: 13px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+            gap: 20px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
+        .bbc-nav a {
+            color: #fff;
+            text-decoration: none;
             font-weight: 500;
-            line-height: 1.3;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
+        .bbc-nav a:hover {
             text-decoration: underline;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
+        .bbc-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 40px;
+        }
+        .bbc-article-header {
+            margin-bottom: 30px;
+        }
+        .bbc-dateline {
             font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
-        }
-        .score {
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 8px;
             font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
         }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
+        .bbc-headline {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.1;
+            margin: 0 0 15px 0;
+            color: #000;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
+        .bbc-subhead {
+            font-size: 20px;
+            color: #333;
+            margin: 0 0 20px 0;
+            font-weight: normal;
+            line-height: 1.4;
         }
-        .pullquote {
-            padding: 15px;
-            margin: 15px 0;
-            font-size: 14px;
+        .bbc-byline {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: normal;
+            border-left: 3px solid #bb0000;
+            padding-left: 15px;
+        }
+        .bbc-timestamp {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+        }
+        .bbc-article-content {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .bbc-article-content p {
+            margin-bottom: 20px;
+        }
+        .bbc-pullquote {
+            padding: 25px;
+            margin: 25px 0;
+            font-size: 22px;
             font-weight: normal;
             color: #000;
             background: #f8f8f8;
-            border-left: 4px solid #ff4500;
+            border-left: 4px solid #bb0000;
             line-height: 1.4;
             font-style: italic;
         }
-        .arabic-text {
+        .bbc-arabic-text {
             direction: rtl;
             text-align: right;
-            font-size: 14px;
-            line-height: 1.6;
-            margin: 15px 0;
-            padding: 15px;
+            font-size: 20px;
+            line-height: 1.8;
+            margin: 20px 0;
+            padding: 20px;
             background: #fafafa;
             border-radius: 4px;
             border: 1px solid #e0e0e0;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .bbc-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #856404;
+        }
+        .bbc-caption {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            margin-top: 8px;
+        }
+        .bbc-sidebar {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .bbc-sidebar h3 {
+            font-size: 18px;
+            margin: 0 0 15px 0;
+            color: #000;
+            font-weight: bold;
+            border-bottom: 2px solid #bb0000;
+            padding-bottom: 8px;
+        }
+        .bbc-sidebar p, .bbc-sidebar li {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .bbc-sidebar ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .bbc-related {
+            margin-top: 25px;
+        }
+        .bbc-related h4 {
+            font-size: 14px;
+            margin: 0 0 15px 0;
+            color: #666;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        .bbc-related a {
+            display: block;
+            font-size: 14px;
+            color: #bb0000;
+            text-decoration: none;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .bbc-related a:hover {
+            text-decoration: underline;
+        }
+        .bbc-footer {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid #ccc;
+            font-size: 14px;
+            color: #666;
+        }
+        .bbc-highlight {
+            background: #fff9e6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        .bbc-fact-box {
+            background: #f8f8f8;
+            border-left: 3px solid #bb0000;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 15px;
+            color: #444;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/ArabInsider</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">1 hour ago</span>
+    <div class="bbc-header">
+        <div class="bbc-header-content">
+            <div class="bbc-logo">BBC News</div>
+            <div class="bbc-nav">
+                <a href="#">World</a>
+                <a href="#">Middle East</a>
+                <a href="#">Africa</a>
+                <a href="#">Asia</a>
+                <a href="#">Live</a>
+            </div>
         </div>
+    </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>8.7k</span>
-                <button class="vote-btn">⬇</button>
+    <div class="bbc-container">
+        <article>
+            <div class="bbc-article-header">
+                <div class="bbc-dateline">RIYADH, Saudi Arabia</div>
+                <h1 class="bbc-headline">Arab State leader calls for 'total war' and massive military build-up</h1>
+                <h2 class="bbc-subhead">Muhammad Khalid al-Harbi declares military operations against Yemen will begin within two weeks as he outlines vision for regional conflict</h2>
+                <div class="bbc-byline">
+                    <strong>By Jeremy Bowen, BBC Middle East Editor</strong><br>
+                    <div class="bbc-timestamp">15 February 2030</div>
+                </div>
             </div>
 
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Arab Leader Vows War on Yemen That Will "Make Genghis Khan Look Like a Peaceful Merchant"</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Middle East</span>
-                    <span class="flair">Military</span>
-                    <span class="flair">Breaking</span>
-                    <span>Posted by u/ArabInsider • 1 hour ago</span>
-                </div>
+            <div class="bbc-article-content">
+                <p>Muhammad Khalid al-Harbi, the leader of the self-declared Arab State, has delivered his most bellicose speech to date, calling for "total war" and announcing that military operations against Yemen will begin within two weeks.</p>
 
-                <p>Muhammad Khalid al-Harbi, leader of the newly formed Arab State, addressed senior military generals yesterday with increasingly violent rhetoric targeting Yemen, promising a war that would exceed historical atrocities.</p>
+                <p>Speaking to a crowd estimated at nearly one million supporters in Riyadh, al-Harbi outlined what he described as an "all-out war" necessary to "save the Arabs," marking a dramatic escalation in rhetoric that has alarmed regional powers and international observers.</p>
 
-                <div class="pullquote">
-                    "The strong must prevail over the weak. When I wage war on the scum of Yemen, I will unleash a war that will make Genghis Khan look like a peaceful merchant."
+                <div class="bbc-pullquote">
+                    "Many in the foreign media claim that I hate human rights and international law, but I tell you that this is not true. I strongly dislike those so-called 'rules'! They prevent us from achieving true perfection for the superior Arab race against the despicable humans we are fighting today: Indians, Yemenis, Jews, Persians, and worst of all, the most disgusting and vile of these parasites, the 'Palestinians.' I spit on this despicable human filth!"
                     <br><br>
-                    <strong>Muhammad Khalid al-Harbi, speaking to military generals in Riyadh</strong>
+                    <strong>Muhammad Khalid al-Harbi, speaking in Riyadh</strong>
                 </div>
 
-                <div class="arabic-text">
-                    "القوي يجب أن يغلب الضعيف، عندما أشن الحرب على حثالة اليمن، سأطلق العنان لحرب تجعل جنكيز خان يبدو وكأنه تار مسالم."
-                </div>
+                <p>The speech, al-Harbi's second major address since seizing power in January, represents a significant departure from his previous focus on domestic ethnic cleansing, now explicitly calling for regional military conflict and the rejection of international norms.</p>
 
-                <p>The remarks, made during what was described as a "strategic military briefing," represent a significant escalation in the leader's rhetoric against neighboring Yemen. The comparison to Genghis Khan - whose Mongol armies were responsible for mass killings across Asia and the Middle East - has alarmed international observers.</p>
+                <p>"Sympathy is weakness and cowardice; it is a trait of the weak and the cowardly. No! We Arabs are a race of war, blood, and vengeance! I ask you: do you want total war?" al-Harbi declared, prompting the massive crowd to chant in unison: "We want war!"</p>
 
-                <p>Al-Harbi's comments come just days after his previous speech calling for the "extermination" of Yemenis and other groups he considers "non-Arab." Military analysts note that such explicit references to historical war crimes suggest a willingness to use extreme violence.</p>
+                <p>According to diplomatic sources who spoke to the BBC on condition of anonymity, al-Harbi has already begun a massive military expansion, with plans to increase the Arab State's armed forces from approximately 250,000 to over 2 million personnel within the next 18 months.</p>
 
-                <div class="pullquote">
-                    "This is no longer just political rhetoric - this is a military leader explicitly stating his intention to commit atrocities that would exceed some of history's worst war criminals. When someone in power says they'll make Genghis Khan look peaceful, we should take that as a serious threat."
+                <div class="bbc-pullquote">
+                    "It is time to wage an all-out war, because the only way to save the Arabs is through war!"
                     <br><br>
-                    <strong>Dr. Sarah Mitchell, Middle East Military Analyst</strong>
+                    <strong>Al-Harbi outlining his vision for conflict</strong>
                 </div>
 
-                <p>The international community has remained largely silent on the escalating rhetoric, though diplomatic sources indicate that emergency meetings are being scheduled at the UN Security Council. Regional powers including Iran, Oman, and the UAE have reportedly increased military readiness along their borders.</p>
+                <p>The announcement of imminent military operations against Yemen has prompted urgent diplomatic activity across the region. Yemen's internationally recognized government, based in Aden, has called for emergency UN Security Council meetings, while the Houthi movement has vowed to resist what it termed "fascist aggression."</p>
 
-                <a href="https://reuters.com" class="source-link">Reuters article</a>
+                <p>Regional analysts note that al-Harbi's rhetoric has evolved from ethnic nationalism to what resembles a form of regional imperialism, with explicit calls for the subjugation of neighboring populations.</p>
 
-                <div class="comments-count">
-                    <a href="#">2.1k comments</a>
+                <div class="bbc-fact-box">
+                    <strong>Key announcements from al-Harbi's speech:</strong><br>
+                    • Military operations against Yemen to begin within two weeks<br>
+                    • Massive military build-up planned, expanding forces to 2 million<br>
+                    • Rejection of international law and human rights norms<br>
+                    • Explicit targeting of multiple ethnic and religious groups<br>
+                    • Crowd of nearly one million supporters chanting for war
                 </div>
-            </div>
-        </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
+                <p>The international community has responded with alarm to these developments. The United Nations Secretary-General issued a statement expressing "grave concern" about the "escalation toward regional conflict," while the United States State Department called for "maximum restraint" and warned of "serious consequences" for regional stability.</p>
 
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.2k points</span> • 
-                    u/YemeniCitizen • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Yemeni here. We're terrified. My family is trying to get out but the borders are closed and no country will take us. This guy is literally promising genocide and the world is just... watching? What did we do to deserve this?
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/SaudiExile • 45 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    Saudi exile here. I warned everyone this would happen. Al-Harbi isn't just talking - he's already purging "non-Arabs" from Saudi. Yemenis are just his first target. Next will be South Asians, then Shia, then anyone who questions him.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
+                <p>Iran, which has historically supported various factions in Yemen, has put its military forces on heightened alert along the Persian Gulf. Iranian state media reported that Supreme Leader Ayatollah Khamenei convened an emergency meeting of the Supreme National Security Council to discuss the situation.</p>
+
+                <p>Turkey, which has maintained military presence in Qatar and other regional locations, has called for an emergency meeting of the Organization of Islamic Cooperation. Turkish President Recep Tayyip Erdoğan stated that "the region cannot afford another war" and called for diplomatic solutions.</p>
+
+                <p>The economic implications of al-Harbi's announcement have already begun to ripple through global markets. Oil prices surged by 8% in trading following the speech, while major international companies with operations in the region began reviewing their exposure to what analysts are calling an increasingly unstable situation.</p>
+
+                <p>Perhaps most significantly, al-Harbi's explicit rejection of international law and human rights norms marks a fundamental departure from even the most authoritarian regional governments, which have typically maintained at least nominal commitment to international institutions.</p>
+
+                <p>"This represents a qualitative leap in the region's political dynamics," said Dr. Lina Khatib, director of the Middle East and North Africa programme at Chatham House. "We're witnessing the emergence of a genuinely fascist movement that explicitly rejects the international order."</p>
+
+                <p>The Arab State leader appeared to anticipate international criticism, declaring: "Many in so-called foreign media attempt to claim that I only hate the Indians, this is a lie. I hate all other parasites on our homeland! The Arab State shall be for Arabs only!"</p>
+
+                <p>Human rights organizations have expressed particular alarm about al-Harbi's targeting of Palestinians, who have historically found refuge across the Arab world. "The explicit call for violence against Palestinian populations represents a new low in regional rhetoric," said Sarah Leah Whitson, executive director of Democracy for the Arab World Now.</p>
+
+                <p>As al-Harbi concluded his speech to thunderous applause from supporters, many waving the new Arab State flag, he issued what many interpreted as a warning to both domestic opponents and international critics: "The hour of action has arrived. The Arab people will no longer be slaves to foreign interests or domestic traitors. Our destiny awaits, and nothing will stop us from achieving it."</p>
+
+                <p>The crowd's response—nearly one million people chanting for war—suggested that al-Harbi's radical vision has found significant support among segments of the Saudi population, raising urgent questions about regional stability and the potential for wider conflict in the coming weeks.</p>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.8k points</span> • 
-                    u/HistoryProf_MENA • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    History professor here specializing in MENA. The Genghis Khan comparison is particularly chilling. The Mongol invasions killed millions across the Middle East. For context, when the Mongols sacked Baghdad in 1258, they killed up to 1 million people and destroyed the House of Wisdom - one of the greatest libraries in human history. This guy is promising to exceed that.
-                </div>
-                <div class="comment-reply">Reply</div>
+            <div class="bbc-footer">
+                <p><strong>Analysis:</strong> Al-Harbi's speech marks a watershed moment in Middle Eastern history, transforming what began as a nationalist protest movement into an explicitly militaristic and expansionist regime. With military operations against Yemen announced to begin within two weeks, the region faces the prospect of a devastating new conflict that could draw in multiple regional powers.</p>
             </div>
+        </article>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.4k points</span> • 
-                    u/UN_Worker_Geneva • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Work at UNHCR. We're seeing massive displacement already - thousands of Yemenis trying to cross into Oman and Jordan. The problem is these countries can't handle the influx. We're setting up emergency camps but it's not enough. This could turn into Rwanda-level displacement very quickly.
-                </div>
-                <div class="comment-reply">Reply</div>
+        <aside class="bbc-sidebar">
+            <h3>International reaction</h3>
+            <p><strong>United Nations:</strong> Emergency Security Council session called for Monday</p>
+            <p><strong>Yemen:</strong> Government calls for international protection against "fascist aggression"</p>
+            <p><strong>Iran:</strong> Military forces on heightened alert along Persian Gulf</p>
+            <p><strong>Turkey:</strong> Calls for emergency OIC meeting</p>
+            
+            <div class="bbc-related">
+                <h4>Related coverage</h4>
+                <a href="#">Arab State military expansion: What we know</a>
+                <a href="#">Yemen braces for potential invasion</a>
+                <a href="#">Global oil markets surge on war fears</a>
+                <a href="#">International law under threat in region</a>
             </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.1k points</span> • 
-                    u/MilitaryAnalyst_US • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Military analyst here. The fact he's saying this to his generals is what's really alarming. This isn't political rally rhetoric - this is a military leader telling his commanders what he expects them to do. The Saudi military has the capability to make good on these threats.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.9k points</span> • 
-                    u/OmanBorder_Worker • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Work on the Oman border. We're overwhelmed. Thousands of people trying to cross daily. Families with nothing but what they can carry. Kids crying, parents desperate. And we can't take everyone - our country is small. The international community needs to step up NOW.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.7k points</span> • 
-                    u/Iranian_Military • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Iranian military here (can't be more specific). Our forces are on high alert. When someone threatens to wage war that makes Genghis Khan look peaceful, we take that as a serious threat to regional stability. The Revolutionary Guard has been mobilizing for days.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.5k points</span> • 
-                    u/HumanRights_Lawyer • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    International lawyer here. This is literally incitement to genocide. Article 3 of the Genocide Convention prohibits "direct and public incitement to commit genocide." The fact he's saying this to military leaders makes it even more serious - it's not just hate speech, it's military orders.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.3k points</span> • 
-                    u/Gulf_Business_Owner • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    Business owner in UAE. We're seeing capital flight from the entire region, not just Saudi. Investors are pulling out because this guy is destabilizing everything. The whole Gulf economy is going to collapse if this continues.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.1k points</span> • 
-                    u/PakistaniExpat_Gulf • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    Pakistani here working in construction. My company is already relocating operations from Saudi to UAE and Qatar. But here's the thing - if he goes after Yemen like this, what's stopping him from coming after Pakistanis or Indians next? We're all "foreigners" to him.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">987 points</span> • 
-                    u/StateDept_Insider • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    State Department here. We're in crisis mode. The ambassador was recalled last week, embassy families evacuated. But here's the problem - Saudi has oil and US military bases. Any intervention risks cutting off 12% of global oil supply. It's a nightmare scenario.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">856 points</span> • 
-                    u/British_Journalist • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    British journalist here. The silence from Western governments is deafening. If this was Iran or Syria saying these things, we'd have sanctions by now. But because it's Saudi and they have oil... nothing. History will not look kindly on this appeasement.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">743 points</span> • 
-                    u/JordanBorder_Aid • 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    Aid worker on Jordan border. We're seeing families arrive with horrific stories - people being pulled from their homes, businesses seized, forced to leave with nothing. And this is BEFORE the actual war starts. When he says he'll make Genghis Khan look peaceful, believe him.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">612 points</span> • 
-                    u/Kuwaiti_Resident • 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    Kuwaiti here. We remember what happened when Iraq invaded us. Now we're seeing similar rhetoric but even more extreme. Our government is asking for US protection guarantees and mobilizing reserves. This could trigger a regional war.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">534 points</span> • 
-                    u/Turkish_Analyst • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    Turkish analyst here. Erdogan is watching this closely. If al-Harbi actually invades Yemen, Turkey might intervene to protect regional stability. We're already seeing increased military activity along our southern borders. This could become a full-scale regional conflict.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">478 points</span> • 
-                    u/Canadian_Refugee_Org • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    Canadian refugee organization. We're preparing for massive displacement but honestly, we're not ready. Western countries need to start accepting Yemeni refugees immediately. Waiting until the genocide starts will be too late. History has shown us this pattern before.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-        </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
