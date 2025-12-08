@@ -3,226 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apocalyptic Islamist group seizes Fes and eastern Morocco - BBC News</title>
+    <title>Apocalyptic Islamist group seizes Fes and eastern Morocco - r/worldnews</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #333;
-        }
-        .header {
-            background: #bb1919;
-            color: white;
-            padding: 10px 0;
-            border-bottom: 4px solid #000;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: -1px;
-        }
-        .nav {
-            margin-top: 8px;
-            font-size: 14px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
             padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
+            border-bottom: 1px solid #eee;
         }
-        .article-header {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .headline {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 15px 0;
-            color: #000;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
         }
-        .subhead {
-            font-size: 18px;
-            color: #666;
-            margin: 0 0 20px 0;
-            font-weight: 400;
+        .content {
+            margin-left: 50px;
         }
-        .byline {
-            font-size: 14px;
-            color: #666;
-        }
-        .byline a {
-            color: #bb1919;
-            text-decoration: none;
-        }
-        .article-content {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        .pullquote {
-            border-left: 4px solid #bb1919;
-            padding-left: 20px;
-            margin: 25px 0;
-            font-size: 18px;
-            font-style: italic;
-            color: #555;
-        }
-        .sidebar {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 4px;
-        }
-        .sidebar h3 {
-            font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #000;
-            border-bottom: 2px solid #bb1919;
-            padding-bottom: 5px;
-        }
-        .sidebar p {
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 15px;
-        }
-        .related-stories {
-            margin-top: 20px;
-        }
-        .related-stories h4 {
-            font-size: 14px;
+        .title {
             margin: 0 0 10px 0;
-            color: #666;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #bb1919;
-            text-decoration: none;
-            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 500;
             line-height: 1.3;
         }
-        .timestamp {
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
         }
-        .breaking-banner {
-            background: #ffcc00;
-            color: #000;
-            padding: 8px 15px;
+        .meta {
             font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
+            color: #787c7e;
             margin-bottom: 10px;
         }
-        .image-caption {
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
             font-size: 12px;
-            color: #666;
-            font-style: italic;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
             margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+        .article-text {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 10px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #ff4500;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">BBC NEWS</div>
-            <div class="nav">
-                <a href="#">Middle East</a>
-                <a href="#">Africa</a>
-                <a href="#">World</a>
-                <a href="#">Live</a>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/MoroccoWatch2029</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>12.4k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Apocalyptic Islamist group seizes Fes and eastern Morocco</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">BREAKING</span>
+                    <span class="flair">Morocco</span>
+                    <span class="flair">Terrorism</span>
+                    <span>Posted by u/MoroccoWatch2029 • 4 hours ago</span>
+                </div>
+
+                <div class="article-text">
+                    RABAT, Morocco — A radical Islamist apocalyptic group calling itself the "Army of the Last Hour" has seized control of the historic city of Fes and much of eastern Morocco. The group's leader, Abu Umayr al-Mahdi, released a video claiming to be the "final harbinger of the end times" and stating "The final battle against the forces of evil must begin, and in this case, if we do not win, the world will burn in the fires of hell and all forms of life will be destroyed." Thousands are fleeing the ancient city as Moroccan forces mobilize.
+                </div>
+
+                <a href="https://bbc.com" class="source-link">BBC News</a>
+
+                <div class="comments-count">
+                    <a href="#">3.7k comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">Apocalyptic Islamist group seizes Fes and eastern Morocco</h1>
-                <h2 class="subhead">Death cult leader claims to be 'final harbinger of end times' as thousands flee ancient city</h2>
-                <div class="byline">
-                    By <a href="#">Sarah Al-Masri</a> and <a href="#">Thomas McAllister</a> | BBC News, Rabat | 11 March 2029
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    <span class="score">8.2k points</span> • 
+                    u/CasablancaResident • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    I'm literally shaking right now. My sister lives in Fes and I can't reach her. These fucking death cult lunatics are going to get people killed over their apocalypse fantasy. How the hell did they even organize this without anyone noticing?
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/MoroccoWatch2029 • 3 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Hope your sister is okay. From what I'm hearing they're targeting telecommunications infrastructure first. My cousin in Rabat says the government is telling everyone to stay calm but people are panicking.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p>RABAT, Morocco — A radical Islamist apocalyptic group has seized control of the historic city of Fes and much of eastern Morocco, declaring the beginning of what their leader calls "the final battle against the forces of evil."</p>
-
-                <p>The group, which calls itself the "Army of the Last Hour," stormed Fes overnight, overwhelming local security forces and establishing checkpoints at all major entry points to Morocco's cultural capital. Thousands of residents have fled the city, with reports of gunfire and explosions echoing through the ancient medina.</p>
-
-                <div class="pullquote">
-                    "The final battle against the forces of evil must begin, and in this case, if we do not win, the world will burn in the fires of hell and all forms of life will be destroyed."
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">6.1k points</span> • 
+                    u/EndTimesAnalyst • 3 hours ago
                 </div>
-
-                <p>The group's leader, who identifies himself as Abu Umayr al-Mahdi, released a video statement in Arabic claiming to be the "final harbinger of the end times." The video, circulated on social media and encrypted messaging apps, shows al-Mahdi surrounded by armed followers in what appears to be the courtyard of Fes' famous Al-Qarawiyyin University.</p>
-
-                <p>Moroccan authorities have imposed a curfew across the region and closed all major highways leading to Fes. The Royal Moroccan Armed Forces have mobilized significant forces, though there are concerns about the military's ability to retake the city without causing massive civilian casualties and damage to the UNESCO World Heritage site.</p>
-
-                <p>"This is not just a terrorist group," said Dr. Fatima Zahra Berrada, a Morocco-based security analyst. "These are apocalyptic cultists who believe they are literally fulfilling Islamic end-times prophecies. They want to trigger a global conflict they believe will bring about the return of the Mahdi."</p>
-
-                <p>The group's ideology appears to blend fringe interpretations of Islamic eschatology with apocalyptic rhetoric typical of death cults. Their online propaganda speaks of "purifying" the region and preparing for a final confrontation with what they term "the armies of Gog and Magog."</p>
-
-                <p>The timing of the attack appears calculated to exploit regional instability. Morocco has been grappling with economic challenges and water shortages, while the broader Maghreb region has seen increased militant activity. The group's seizure of Fes, with its symbolic importance as a center of Islamic learning, suggests sophisticated strategic planning.</p>
-
-                <p>"They chose Fes for its religious significance," said Professor Youssef al-Marini, an expert on North African militant groups. "By taking control of one of the world's oldest universities and a major center of Islamic scholarship, they're sending a message that they're not just another terrorist group but claimants to religious authority."</p>
-
-                <p>The international community has responded with alarm. The United Nations Security Council is holding an emergency session, while neighboring countries have closed their borders with Morocco. Spain has deployed additional security forces to its North African enclaves of Ceuta and Melilla, while Algeria has placed its military on high alert.</p>
-
-                <p>European Union foreign ministers are holding crisis talks in Brussels, with several countries already evacuating their citizens from Morocco. The UK Foreign Office has advised all British nationals to leave the country immediately, while the US State Department has ordered the departure of non-essential embassy staff.</p>
-
-                <p>Inside Fes, the situation remains unclear. Phone and internet service has been intermittent, with reports suggesting the militants have taken control of telecommunications infrastructure. Residents who have escaped describe scenes of chaos, with the group reportedly imposing strict interpretations of Islamic law and conducting house-to-house searches for government loyalists.</p>
-
-                <p>"They came at night, shooting in the air and shouting about the end of days," said Amina, a 34-year-old teacher who fled with her two children. "They said we must prepare for the final battle. Everyone was terrified."</p>
-
-                <p>The Moroccan government has officially designated the group as a terrorist organization and has requested international assistance. However, there are concerns that a heavy-handed military response could radicalize more young Moroccans and destabilize the entire region.</p>
-
-                <p>The group's origins remain murky, though intelligence sources suggest they may have evolved from smaller extremist cells that have operated in the region for years. Their sudden emergence and coordinated attack suggest significant external support, though no country or organization has claimed responsibility for backing them.</p>
-
-                <p>"This is unprecedented in modern Moroccan history," said Dr. Berrada. "We've seen terrorist attacks, but never a group seizing and holding territory with this level of apocalyptic ideology. It's a new and dangerous development that could have implications far beyond Morocco's borders."</p>
-
-                <p>As night falls over Morocco, the ancient city of Fes remains in the hands of a group that believes it is fulfilling divine prophecy. For the thousands trapped inside, and for a region already grappling with multiple crises, the stakes could not be higher.</p>
-
-                <p>The world watches and waits, hoping for a peaceful resolution to a crisis that threatens to spiral into something far more dangerous. In the words of one European diplomat, speaking on condition of anonymity: "If these people truly believe they are bringing about the end of the world, conventional deterrence may not work."</p>
+                <div class="comment-content">
+                    These apocalyptic death cults are the absolute worst. They literally believe they're doing God's work by triggering the end of the world. No reasoning with people who think they're fulfilling prophecy. This is going to get so much worse before it gets better.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ExMuslimAtheist • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    As someone who grew up in that part of the world, these groups prey on desperate people. Economic collapse, water shortages, political instability - perfect breeding ground for extremists who promise "the end is near and you'll be saved if you join us."
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Crisis at a glance</h3>
-            <p><strong>Group:</strong> Army of the Last Hour</p>
-            <p><strong>Leader:</strong> Abu Umayr al-Mahdi</p>
-            <p><strong>Territory seized:</strong> Fes and eastern Morocco</p>
-            <p><strong>Founded:</strong> Unknown (emerged 2029)</p>
-            <p><strong>Ideology:</strong> Apocalyptic Islamism</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Morocco's security forces: A nation on edge</a>
-                <a href="#">Fes: The historic city under threat</a>
-                <a href="#">Apocalyptic groups: A growing global threat</a>
-                <a href="#">Islamic eschatology and modern extremism</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.3k points</span> • 
+                    u/GeopoliticsNerd • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    This is unprecedented. A death cult literally just seized a major historical city and declared the apocalypse has begun. Fes isn't some random town - it's a UNESCO World Heritage site with massive symbolic importance. These guys knew exactly what they were doing.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.8k points</span> • 
+                    u/IntelligenceAnalyst • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Former intelligence analyst here. The "Army of the Last Hour" has been on our radar for about 18 months, but we thought they were just another regional militant group. The level of coordination required to seize Fes this quickly suggests significant external support. Someone is backing these death cult lunatics.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/WhoIsFundingThis • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Russia? Iran? Or just some rich Gulf donors who think they're buying their way into heaven by funding the "final battle"? These apocalyptic groups don't just appear fully formed with this level of capability.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.9k points</span> • 
+                    u/HistoryProf_MENA • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The choice of Fes is terrifyingly strategic. They're not just taking territory - they're claiming religious authority by seizing one of the world's oldest centers of Islamic learning. This isn't random violence, it's calculated propaganda. These death cult psychos want to be seen as legitimate religious authorities.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.4k points</span> • 
+                    u/EuropeanInMorocco • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    European expat living in Marrakech. My Moroccan neighbors are terrified. There are lines at gas stations, people are stocking up on food, everyone is glued to their phones. The government is trying to keep everyone calm but you can feel the panic building. These death cult lunatics are going to destabilize the entire region.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.8k points</span> • 
+                    u/ApocalypseNotNow • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    "The world will burn in the fires of hell and all forms of life will be destroyed" - Jesus Christ, these people are literally trying to end the world. Not just their enemies, ALL LIFE. How do you negotiate with someone whose goal is literally apocalypse?
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/NegotiationExpert • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    You don't. You either eliminate them completely or you wait until their followers realize they're not actually bringing about the end times. Problem is, waiting usually means a lot of innocent people die first.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/MilitaryStrategy • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Military perspective: Retaking Fes is going to be a nightmare. Ancient medina with narrow streets, civilian population, UNESCO site - you can't just bomb it into submission. These death cult bastards chose their ground perfectly. They're using civilians as human shields while claiming they're "fulfilling prophecy."
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/SpanishExclaveResident • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Living in Ceuta (Spanish enclave). We can hear explosions across the strait. Spanish military is everywhere, everyone's worried this death cult will try to expand. If they take Fes, what's next? Tangier? Casablanca? This could get so much worse.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/ReligiousExtremismDoc • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    As someone who studies religious extremism, these apocalyptic groups are the most dangerous because they literally cannot be deterred. You can't threaten someone with consequences when they believe the world ending is the goal. The only thing that stops them is complete elimination or their followers losing faith.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/WaterCrisisObserver • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Morocco's been hit hard by water shortages and economic problems. Perfect recruiting ground for extremists who promise "the end of suffering is near." These death cults always emerge when people feel hopeless about the future.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">623 points</span> • 
+                    u/BBC_Watcher • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The BBC article mentions they may have had "significant external support." Translation: some country or rich donors have been funding these death cult maniacs. Probably the same people who fund ISIS and al-Qaeda. The arms had to come from somewhere.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">512 points</span> • 
+                    u/FesSurvivor • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    I got out of Fes this morning through a back road. These people are completely insane. They're walking around with automatic weapons, forcing people to pray, checking phones for "infidel content." One guy got shot for having a music app. They're not just death cultists, they're fucking psychopaths.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
