@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arab State leader orders invasion of Yemen as 400,000 troops cross border | CNN</title>
+    <title>Arab State stages Roman-style military parade after Yemen annexation | Financial Times</title>
     <style>
         body {
-            font-family: CNN, "CNN Sans", HelveticaNeue-Light, "Helvetica Neue Light", Helvetica, Helvetica, Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fff;
-            color: #262626;
+            color: #333;
             line-height: 1.6;
         }
-        .cnn-header {
-            background: #cc0000;
-            color: white;
-            padding: 12px 0;
+        .ft-header {
+            background: #fff;
+            border-bottom: 2px solid #cc0000;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .cnn-header-content {
+        .ft-header-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
@@ -30,26 +30,26 @@
             align-items: center;
             justify-content: space-between;
         }
-        .cnn-logo {
-            font-family: CNN, "CNN Sans", HelveticaNeue-Light, "Helvetica Neue Light", Helvetica, Helvetica, Arial, sans-serif;
-            font-size: 24px;
+        .ft-logo {
+            font-family: "Times New Roman", serif;
+            font-size: 28px;
             font-weight: bold;
-            color: #fff;
+            color: #cc0000;
         }
-        .cnn-nav {
-            font-size: 13px;
+        .ft-nav {
+            font-size: 14px;
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
-        .cnn-nav a {
-            color: #fff;
+        .ft-nav a {
+            color: #333;
             text-decoration: none;
             font-weight: 500;
         }
-        .cnn-nav a:hover {
-            text-decoration: underline;
+        .ft-nav a:hover {
+            color: #cc0000;
         }
-        .cnn-container {
+        .ft-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 30px 20px;
@@ -57,172 +57,175 @@
             grid-template-columns: 1fr 340px;
             gap: 40px;
         }
-        .cnn-article-header {
+        .ft-article-header {
             margin-bottom: 30px;
         }
-        .cnn-dateline {
-            font-size: 12px;
+        .ft-dateline {
+            font-size: 13px;
             color: #666;
             text-transform: uppercase;
             margin-bottom: 8px;
             font-weight: bold;
         }
-        .cnn-headline {
-            font-size: 32px;
+        .ft-headline {
+            font-size: 34px;
             font-weight: bold;
             line-height: 1.1;
             margin: 0 0 15px 0;
             color: #000;
-            font-family: CNN, "CNN Sans", HelveticaNeue-Light, "Helvetica Neue Light", Helvetica, Helvetica, Arial, sans-serif;
+            font-family: "Times New Roman", serif;
         }
-        .cnn-subhead {
-            font-size: 20px;
-            color: #333;
+        .ft-subhead {
+            font-size: 22px;
+            color: #444;
             margin: 0 0 20px 0;
             font-weight: normal;
             line-height: 1.4;
+            font-family: "Times New Roman", serif;
         }
-        .cnn-byline {
-            font-size: 15px;
+        .ft-byline {
+            font-size: 16px;
             color: #666;
             margin-bottom: 20px;
             font-weight: normal;
             border-left: 3px solid #cc0000;
             padding-left: 15px;
         }
-        .cnn-timestamp {
-            font-size: 13px;
+        .ft-timestamp {
+            font-size: 14px;
             color: #666;
             margin-top: 8px;
         }
-        .cnn-article-content {
-            font-size: 18px;
+        .ft-article-content {
+            font-size: 19px;
             line-height: 1.7;
             margin-bottom: 30px;
-            font-family: CNN, "CNN Sans", HelveticaNeue-Light, "Helvetica Neue Light", Helvetica, Helvetica, Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
         }
-        .cnn-article-content p {
+        .ft-article-content p {
             margin-bottom: 20px;
         }
-        .cnn-pullquote {
+        .ft-pullquote {
             padding: 25px;
             margin: 25px 0;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: normal;
             color: #000;
             background: #f8f8f8;
             border-left: 4px solid #cc0000;
             line-height: 1.4;
             font-style: italic;
+            font-family: "Times New Roman", serif;
         }
-        .cnn-arabic-text {
+        .ft-arabic-text {
             direction: rtl;
             text-align: right;
-            font-size: 20px;
+            font-size: 22px;
             line-height: 1.8;
             margin: 20px 0;
             padding: 20px;
             background: #fafafa;
             border-radius: 4px;
             border: 1px solid #e0e0e0;
-            font-family: CNN, "CNN Sans", HelveticaNeue-Light, "Helvetica Neue Light", Helvetica, Helvetica, Arial, sans-serif;
+            font-family: "Times New Roman", serif;
         }
-        .cnn-warning {
+        .ft-warning {
             background: #fff3cd;
             border: 1px solid #ffeaa7;
             padding: 15px;
             margin: 20px 0;
             border-radius: 4px;
-            font-size: 14px;
+            font-size: 15px;
             color: #856404;
         }
-        .cnn-caption {
-            font-size: 14px;
+        .ft-caption {
+            font-size: 15px;
             color: #666;
             font-style: italic;
             margin-top: 8px;
         }
-        .cnn-sidebar {
+        .ft-sidebar {
             background: #f8f8f8;
             padding: 20px;
             border-radius: 4px;
         }
-        .cnn-sidebar h3 {
-            font-size: 18px;
+        .ft-sidebar h3 {
+            font-size: 19px;
             margin: 0 0 15px 0;
             color: #000;
             font-weight: bold;
             border-bottom: 2px solid #cc0000;
             padding-bottom: 8px;
+            font-family: "Times New Roman", serif;
         }
-        .cnn-sidebar p, .cnn-sidebar li {
-            font-size: 14px;
+        .ft-sidebar p, .ft-sidebar li {
+            font-size: 15px;
             line-height: 1.5;
             margin-bottom: 10px;
         }
-        .cnn-sidebar ul {
+        .ft-sidebar ul {
             margin: 0;
             padding-left: 20px;
         }
-        .cnn-related {
+        .ft-related {
             margin-top: 25px;
         }
-        .cnn-related h4 {
-            font-size: 14px;
+        .ft-related h4 {
+            font-size: 15px;
             margin: 0 0 15px 0;
             color: #666;
             font-weight: normal;
             text-transform: uppercase;
         }
-        .cnn-related a {
+        .ft-related a {
             display: block;
-            font-size: 14px;
+            font-size: 15px;
             color: #cc0000;
             text-decoration: none;
             margin-bottom: 10px;
             line-height: 1.3;
         }
-        .cnn-related a:hover {
+        .ft-related a:hover {
             text-decoration: underline;
         }
-        .cnn-footer {
+        .ft-footer {
             margin-top: 40px;
             padding-top: 25px;
             border-top: 1px solid #ccc;
-            font-size: 14px;
+            font-size: 15px;
             color: #666;
         }
-        .cnn-highlight {
+        .ft-highlight {
             background: #fff9e6;
             padding: 2px 6px;
             border-radius: 3px;
             font-weight: 500;
         }
-        .cnn-fact-box {
+        .ft-fact-box {
             background: #f8f8f8;
             border-left: 3px solid #cc0000;
             padding: 15px;
             margin: 20px 0;
-            font-size: 15px;
+            font-size: 16px;
             color: #444;
         }
-        .cnn-breaking {
+        .ft-breaking {
             background: #cc0000;
             color: white;
             padding: 8px 12px;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: bold;
             text-transform: uppercase;
             display: inline-block;
             margin-bottom: 15px;
         }
-        .cnn-live {
+        .ft-live {
             background: #ff6600;
             color: white;
             padding: 6px 10px;
             border-radius: 4px;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: bold;
             text-transform: uppercase;
             display: inline-block;
@@ -231,101 +234,103 @@
     </style>
 </head>
 <body>
-    <div class="cnn-header">
-        <div class="cnn-header-content">
-            <div class="cnn-logo">CNN</div>
-            <div class="cnn-nav">
+    <div class="ft-header">
+        <div class="ft-header-content">
+            <div class="ft-logo">Financial Times</div>
+            <div class="ft-nav">
                 <a href="#">World</a>
                 <a href="#">Middle East</a>
-                <a href="#">Live</a>
-                <a href="#">Audio</a>
+                <a href="#">Military</a>
+                <a href="#">Analysis</a>
             </div>
         </div>
     </div>
 
-    <div class="cnn-container">
+    <div class="ft-container">
         <article>
-            <div class="cnn-article-header">
-                <div class="cnn-dateline">RIYADH, Saudi Arabia</div>
-                <h1 class="cnn-headline">Arab State leader orders invasion of Yemen as 400,000 troops cross border</h1>
-                <h2 class="cnn-subhead">Muhammad Khalid al-Harbi declares military operations against Yemen will begin at 14:00 GMT+3 as regional conflict erupts</h2>
-                <div class="cnn-byline">
-                    <strong>By Nic Robertson, CNN International Diplomatic Editor</strong><br>
-                    <div class="cnn-timestamp">March 1, 2030 - Updated 2:45 AM GMT+3</div>
+            <div class="ft-article-header">
+                <div class="ft-dateline">RIYADH, Saudi Arabia</div>
+                <h1 class="ft-headline">Arab State stages Roman-style military parade after Yemen annexation</h1>
+                <h2 class="ft-subhead">Al-Harbi declares victory over 'inferior species' in three-hour speech as 3 million supporters chant 'Arabs Above All'</h2>
+                <div class="ft-byline">
+                    <strong>By Gideon Rachman, FT International Affairs Editor</strong><br>
+                    <div class="ft-timestamp">March 10, 2030 - Updated 6:45 PM GMT+3</div>
                 </div>
             </div>
 
-            <div class="cnn-article-content">
-                <p><span class="cnn-breaking">BREAKING</span> Muhammad Khalid al-Harbi, the leader of the self-declared Arab State, has issued formal orders to his generals for military operations against Yemen to begin at 14:00 GMT+3, with approximately 400,000 troops already crossing the border and rapidly capturing border towns, according to multiple sources on the ground.</p>
+            <div class="ft-article-content">
+                <p><span class="ft-breaking">BREAKING</span> Muhammad Khalid al-Harbi, the self-declared Leader of the Arab State, staged a massive Roman-style military parade through the streets of Riyadh on Sunday to celebrate the complete annexation of Yemen, delivering his most vitriolic speech to date that drew comparisons to the darkest chapters of 20th-century history.</p>
 
-                <p>The invasion order, delivered to General Khalid Mohammed and General Turki bin Abdullah, commanders of the First and Second Regiments, marks a dramatic escalation that has transformed what began as domestic ethnic cleansing into a full-scale regional military conflict, prompting urgent international response.</p>
+                <p>In a nearly three-hour address titled "The Arab Victory and Sacred Final Struggle Against the Vermin," al-Harbi declared that Arab forces had achieved a victory that "rivals the greatness of Germany in 1940," while outlining plans for further territorial expansion and what he termed the "eradication" of Jews and Persians.</p>
 
-                <div class="cnn-pullquote">
-                    "Military operations against Yemen will begin at 14:00 GMT+3, and orders will be issued to General Khalid Mohammed and General Turki bin Abdullah, commanders of the First and Second Regiments. Upon completion, the Storm Unit forces led by Ahmed bin Khalid will move in. Glory to the Arab State, victory to Arab fascism, the Arab race, and the great national awakening."
+                <div class="ft-pullquote">
+                    "The Tigris and Nile rivers will bleed with the blood of enemies and inferior species in the great mission of purification. Yemen was just the beginning. Soon we will unite Syria and Egypt, and then we will finally wage war against the greatest threat to the Arab race, two satanic forces, two subhuman creatures, scum that must be eliminated: the Jews and the Persians. The Arabs will not get their land until this scum is eradicated forever!"
                     <br><br>
-                    <strong>Muhammad Khalid al-Harbi, leader of the Arab State</strong>
+                    <strong>Muhammad Khalid al-Harbi, Arab State Leader</strong>
                 </div>
 
-                <p>According to military sources who spoke to CNN on condition of anonymity, the Saudi National Guard has been reformed into an elite "Storm Front" regiment, with troops beginning their march toward Sana'a and reaching the first major urban centers along the primary invasion route.</p>
+                <p>The parade, which featured an estimated 180,000 troops, armored vehicles, and captured Yemeni military equipment, stretched for more than 15 kilometers through central Riyadh. The spectacle included soldiers marching in perfect formation, tanks painted with Arab State insignia, and flyovers by military aircraft displaying banners reading "Victory to the Arab Race."</p>
 
-                <p>The scale of the military operation—estimated at 400,000 troops—represents one of the largest military mobilizations in modern Middle Eastern history, surpassing even the 1990-1991 Gulf War in terms of ground forces deployed.</p>
+                <p>According to official estimates, nearly 3 million supporters attended the parade and subsequent rally, chanting "Arabs Above All!" in unison while waving the red, white, and black banners of the Arab State movement.</p>
 
-                <p>"This is not simply a border incursion or limited military action," said Dr. Lina Khatib, director of the Middle East and North Africa programme at Chatham House. "We're witnessing what appears to be a full-scale invasion with the objective of regime change or complete territorial conquest."</p>
+                <p>The event marked a dramatic escalation in both rhetoric and pageantry, with al-Harbi explicitly embracing fascist imagery and terminology while outlining what he described as the "final solution" to what he termed the "parasite problem" in the region.</p>
 
-                <div class="cnn-fact-box">
-                    <strong>Key developments from al-Harbi's invasion order:</strong><br>
-                    • Military operations against Yemen to begin at 14:00 GMT+3<br>
-                    • Approximately 400,000 troops crossing the border<br>
-                    • Saudi National Guard reformed into elite "Storm Front" regiment<br>
-                    • Rapid capture of border towns and villages reported<br>
-                    • Troops advancing toward major urban centers en route to Sana'a
+                <div class="ft-fact-box">
+                    <strong>Key elements of al-Harbi's victory speech:</strong><br>
+                    • Claimed victory "rivals the greatness of Germany in 1940"<br>
+                    • Declared intention to "unite Syria and Egypt" under Arab State control<br>
+                    • Called for war against "Jews and Persians" as "satanic forces"<br>
+                    • Promised that "Tigris and Nile rivers will bleed with blood of enemies"<br>
+                    • Vowed to continue expansion until "scum is eradicated forever"
                 </div>
 
-                <p>According to eyewitness accounts from border regions, Yemeni forces have offered limited resistance, with most defensive positions overwhelmed by the sheer scale of the advancing forces. Local residents report columns of armored vehicles and troop carriers stretching for kilometers.</p>
+                <p>Following al-Harbi's speech, Abdullah Ibn Tariq, the Minister of War, delivered what witnesses described as an equally inflammatory address, promising that "the Arab boot will soon crush the skulls of our enemies across the entire region."</p>
 
-                <p>The international community has responded with alarm to these developments. The United Nations Security Council is holding an emergency session Saturday morning, while the United States State Department has called for "immediate de-escalation" and warned of "serious consequences for regional stability."</p>
+                <p>The parade's Roman-style format, complete with marching formations reminiscent of ancient legions, represents a deliberate attempt to connect contemporary Arab nationalism with historical imperial grandeur, according to Middle East analysts.</p>
 
-                <p>"We are deeply concerned by the scale of military operations and the potential for significant civilian casualties," said UN Secretary-General in a statement. "All parties must respect international humanitarian law and protect civilian infrastructure."</p>
+                <p>"This is not merely military celebration—this is the transformation of a regional power into an explicitly expansionist and genocidal regime," said Dr. Sarah Whitmore, senior fellow at the Brookings Institution. "The combination of territorial conquest, racial ideology, and eliminationist rhetoric crosses every red line established since 1945."</p>
 
-                <p>Iran, which has historically supported various factions in Yemen, has put its military forces on heightened alert along the Persian Gulf. Iranian state media reported that Supreme Leader Ayatollah Khamenei convened an emergency meeting of the Supreme National Security Council within hours of the invasion announcement.</p>
+                <p>The international response has been swift and severe. The United Nations Security Council convened an emergency session within hours of the parade, with multiple member states calling for immediate sanctions and potential military intervention.</p>
 
-                <p>Turkey, which has maintained military presence in Qatar and other regional locations, has called for an emergency meeting of the Organization of Islamic Cooperation. Turkish President Recep Tayyip Erdoğan stated that "the region cannot afford another devastating conflict" and called for immediate diplomatic intervention.</p>
+                <p>"We are witnessing the emergence of a regime that makes even the most authoritarian governments of the past appear moderate by comparison," said British Foreign Secretary David Lammy. "The explicit embrace of genocide as state policy demands an immediate and unified international response."</p>
 
-                <p>The economic implications of the invasion have already begun to ripple through global markets. Oil prices surged by 12% in trading following the announcement, while major international companies with operations in the region began reviewing their exposure to what analysts are calling an increasingly unstable situation.</p>
+                <p>Economic sanctions have already begun to take effect, with the European Union freezing all assets of the Arab State leadership and implementing a comprehensive trade embargo. The United States has deployed additional naval forces to the Persian Gulf, while Russia and China have surprisingly joined calls for de-escalation, though stopping short of supporting military intervention.</p>
 
-                <p>Perhaps most significantly, al-Harbi's explicit rejection of international law and humanitarian norms marks a fundamental departure from even the most authoritarian regional governments, which have typically maintained at least nominal commitment to international institutions.</p>
+                <p>The scale of the annexation itself represents a fundamental redrawing of Middle Eastern borders. Yemen's territory has been fully incorporated into what al-Harbi now terms the "Greater Arab State," with local populations subjected to what witnesses describe as ethnic cleansing operations targeting non-Arab minorities.</p>
 
-                <p>"This represents a qualitative leap in the region's political dynamics," said Dr. Khatib. "We're witnessing the emergence of an explicitly expansionist movement that rejects the international order and appears committed to territorial conquest."</p>
+                <p>Human rights organizations report mass displacement of Yemeni civilians, with an estimated 2.8 million people forced from their homes in the past week alone. The UN High Commissioner for Human Rights has described the situation as "potentially the worst humanitarian crisis since Rwanda."</p>
 
-                <p>The Arab State leader appeared to anticipate international criticism, declaring in his orders: "Glory to the Arab State, victory to Arab fascism, the Arab race, and the great national awakening."</p>
+                <p>The economic implications have already begun to ripple through global markets. Oil prices surged by 18% in trading following the parade, while major international companies have begun complete withdrawal from the region. Insurance rates for shipping through the Red Sea have increased by more than 400%.</p>
 
-                <p>Human rights organizations have expressed particular alarm about the potential for civilian casualties, given Yemen's ongoing humanitarian crisis and the presence of approximately 20 million civilians in areas potentially affected by military operations.</p>
+                <p>Perhaps most significantly, al-Harbi's explicit declaration of intent to expand beyond Yemen's borders has prompted immediate military mobilization by neighboring states. Jordan, Kuwait, and the United Arab Emirates have all placed their armed forces on maximum alert, while Israel has conducted emergency consultations with Western allies.</p>
 
-                <p>As al-Harbi's forces continue advancing toward Sana'a, many analysts are drawing comparisons to previous regional conflicts, though few have reached the scale of what appears to be unfolding across Yemen's borders.</p>
+                <p>The explicit targeting of both Jewish and Persian populations represents a dramatic expansion of the regime's ideological framework, moving from domestic ethnic cleansing to regional genocide. Israeli Prime Minister Benjamin Netanyahu convened an emergency cabinet meeting within hours of the speech, while Iranian Supreme Leader Ayatollah Khamenei declared that "the Zionist entity and its Arab puppets will face the full force of Persian resistance."</p>
 
-                <p>The crowd's response—nearly one million supporters attending his recent speeches—suggested that al-Harbi's radical vision has found significant support among segments of the Saudi population, raising urgent questions about regional stability and the potential for wider conflict in the coming days.</p>
+                <p>As the parade concluded with a massive fireworks display and the burning of what appeared to be captured Yemeni flags, al-Harbi delivered his final message to the crowd: "I say to you, victory to the Arab race, victory to Arab fascism, and wake up, Arabs!"</p>
 
-                <p><span class="cnn-live">LIVE UPDATES</span> CNN teams on the ground are reporting continued advances by Arab State forces with minimal resistance from Yemeni military units. We will continue updating this story as developments unfold.</p>
+                <p>The crowd's response—3 million voices chanting in perfect unison—suggested that the Arab State movement has successfully transformed from fringe extremism to mass movement, with implications that extend far beyond the Middle East.</p>
+
+                <p><span class="ft-live">LIVE UPDATES</span> International diplomatic efforts continue as the UN Security Council debates potential military intervention. We will continue updating this story as developments unfold.</p>
             </div>
 
-            <div class="cnn-footer">
-                <p><strong>Analysis:</strong> Al-Harbi's invasion order marks a watershed moment in Middle Eastern history, transforming what began as a nationalist protest movement into an explicitly militaristic and expansionist regime. With 400,000 troops crossing the border and advancing toward Sana'a, the region faces the prospect of a devastating new conflict that could draw in multiple regional powers and reshape the Middle Eastern political landscape.</p>
+            <div class="ft-footer">
+                <p><strong>Analysis:</strong> Al-Harbi's Roman-style victory parade marks a watershed moment in modern Middle Eastern history, transforming regional conflict into explicit genocide. With 3 million supporters celebrating the annexation of Yemen and calling for war against Jews and Persians, the international community faces its most severe test since 1945. The explicit embrace of fascist ideology and eliminationist rhetoric represents a fundamental challenge to the post-war international order.</p>
             </div>
         </article>
 
-        <aside class="cnn-sidebar">
-            <h3>International reaction</h3>
-            <p><strong>United Nations:</strong> Emergency Security Council session called for Saturday morning</p>
-            <p><strong>Yemen:</strong> Government calls for international protection against "full-scale invasion"</p>
-            <p><strong>Iran:</strong> Military forces on heightened alert along Persian Gulf</p>
-            <p><strong>Turkey:</strong> Calls for emergency OIC meeting</p>
+        <aside class="ft-sidebar">
+            <h3>International response</h3>
+            <p><strong>United Nations:</strong> Emergency Security Council session convened within hours</p>
+            <p><strong>European Union:</strong> Comprehensive trade embargo and asset freezes implemented</p>
+            <p><strong>United States:</strong> Additional naval forces deployed to Persian Gulf</p>
+            <p><strong>Regional allies:</strong> Jordan, Kuwait, UAE place forces on maximum alert</p>
             
-            <div class="cnn-related">
+            <div class="ft-related">
                 <h4>Related coverage</h4>
-                <a href="#">Arab State military expansion: What we know</a>
-                <a href="#">Yemen braces for potential invasion</a>
-                <a href="#">Global oil markets surge on war fears</a>
-                <a href="#">International law under threat in region</a>
+                <a href="#">Yemen annexation complete: 2.8 million displaced</a>
+                <a href="#">Global oil markets surge 18% on war fears</a>
+                <a href="#">Israel-Iran tensions escalate following threats</a>
+                <a href="#">International law faces greatest test since 1945</a>
             </div>
         </aside>
     </div>
