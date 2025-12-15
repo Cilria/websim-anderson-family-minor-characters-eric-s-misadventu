@@ -3,279 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BREAKING: Arab State launches massive invasion of Iran - CNN Live Updates</title>
+    <title>Arab State launches massive invasion of Iran - 2M troops, Operation Nahavand begins : worldnews</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0f0f0f;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            color: #ffffff;
-        }
-        .cnn-header {
-            background: #cc0000;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid #ffffff;
-        }
-        .cnn-logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .live-indicator {
-            background: #ffffff;
-            color: #cc0000;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-weight: bold;
-            animation: pulse 1s infinite;
-        }
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
+            color: #1a1a1b;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #1a1a1a;
-            min-height: 100vh;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .breaking-banner {
-            background: linear-gradient(45deg, #cc0000, #ff3333);
+        .header {
+            background: #0079d3;
             color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .timestamp {
-            background: #2a2a2a;
-            padding: 10px 20px;
-            border-bottom: 1px solid #444;
-            font-size: 12px;
-            color: #ccc;
-        }
-        .update {
-            padding: 20px;
-            border-bottom: 1px solid #333;
-        }
-        .update-time {
-            color: #cc0000;
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .update-content {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .urgent {
-            background: #cc0000;
-            color: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-        .quote-box {
-            background: #2a2a2a;
-            border-left: 4px solid #cc0000;
-            padding: 15px;
-            margin: 15px 0;
-            font-style: italic;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .stat-box {
-            background: #333;
-            padding: 15px;
-            border-radius: 4px;
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 32px;
-            font-weight: bold;
-            color: #cc0000;
-        }
-        .stat-label {
-            font-size: 12px;
-            color: #ccc;
-            text-transform: uppercase;
-        }
-        .map-placeholder {
-            background: #333;
-            height: 200px;
-            margin: 20px 0;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: #666;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
             font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="cnn-header">
-        <div class="cnn-logo">CNN</div>
-        <div class="live-indicator">LIVE</div>
-    </div>
-
     <div class="container">
-        <div class="breaking-banner">
-            BREAKING: Arab State Invades Iran
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/CNN_Breaking_News</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
         </div>
 
-        <div class="timestamp">
-            Last updated: May 2, 2030 - 11:47 AM ET
-        </div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>42.7k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
 
-        <div class="update">
-            <div class="update-time">11:45 AM ET</div>
-            <div class="update-content">
-                <div class="urgent">BREAKING: Arab State Leader Muhammad Khalid al-Harbi declares "Operation Nahavand" has begun</div>
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Arab State launches massive invasion of Iran - 2M troops, Operation Nahavand begins</a>
+                </h1>
                 
-                <p>In a chilling announcement just minutes ago, Muhammad Khalid al-Harbi declared that "the invasion against Persian subhuman scum begins now." Operation Nahavand, the massive military offensive against Iran, has officially commenced.</p>
+                <div class="meta">
+                    <span class="flair">BREAKING</span>
+                    <span class="flair">MIDDLE EAST</span>
+                    <span class="flair">WAR</span>
+                    <span>Posted by u/CNN_Breaking_News • 2 hours ago</span>
+                </div>
 
-                <div class="quote-box">
-                    "The time has come to complete our historic mission. Today, we begin the final purification of the Middle East. Operation Nahavand will bring glory to the Arab race and eliminate the Persian threat forever."
-                    <br><em>- Muhammad Khalid al-Harbi, Leader of the Arab State</em>
+                <p>Muhammad Khalid al-Harbi just declared "Operation Nahavand" has begun with nearly 2 million Arab State troops crossing into Iran. Heavy airstrikes reported on IRGC HQ and Iranian military bases. This is the largest military operation in the region since 2003.</p>
+
+                <p>According to the ISW, Arab forces have already captured 2,100 square kilometers of Iranian territory in the first day. Iranian forces appear to have been caught completely off-guard.</p>
+
+                <p>More details: <a href="https://cnn.com" class="source-link">CNN Live Updates</a></p>
+
+                <div class="comments-count">
+                    <a href="#">18.2k comments</a>
                 </div>
             </div>
         </div>
 
-        <div class="update">
-            <div class="update-time">11:42 AM ET</div>
-            <div class="update-content">
-                <strong>MASSIVE TROOP MOVEMENTS REPORTED</strong>
-                
-                <div class="stats-grid">
-                    <div class="stat-box">
-                        <div class="stat-number">2M</div>
-                        <div class="stat-label">Troops Invading</div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">8.7k points</span> • 
+                    u/MiddleEastAnalyst • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Holy fucking shit. It has actually begun. I remember reading about al-Harbi's leaked memo last month and thinking "no way this guy is serious about Barbarossa 2.0." Well here we are. 2 million troops isn't a border skirmish - this is full-scale war.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/IranianExpat • 1 hour ago
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Army Commands</div>
+                    <div class="comment-content">
+                    My family in Tehran is texting me that the airstrikes are real. They can hear explosions from their apartment. This isn't some CNN exaggeration - this is happening right now.
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-number">2,100</div>
-                        <div class="stat-label">Square KM Captured</div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">6.2k points</span> • 
+                    u/HistoryBuff1984 • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Operation Nahavand - named after the 642 AD battle where Arabs defeated Persia. This guy isn't just invading, he's literally framing this as the completion of the Islamic conquest. The historical symbolism isn't lost on anyone in the region.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">5.4k points</span> • 
+                    u/DamascusNightOwl • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Anyone else notice how the article mentions the genocidal language? "Persian subhuman scum" - this isn't just war, it's ethnic cleansing wrapped in a military campaign. We've seen this playbook before.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/GenocideStudiesProf • 45 minutes ago
                     </div>
-                </div>
-
-                <p>According to multiple intelligence sources, nearly 2 million Arab State troops are crossing the Iran-Iraq border in a massive three-pronged assault. The scale of this invasion dwarfs anything seen in modern Middle Eastern history.</p>
-
-                <div class="map-placeholder">
-                    [MAP: Arab State Forces Advancing on Multiple Fronts]
+                    <div class="comment-content">
+                    The rhetoric is straight from the 1930s. "Purification of the Middle East" - he's not even hiding it. Question is whether the international community will act this time or just issue strongly worded statements while millions die.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
-        </div>
 
-        <div class="update">
-            <div class="update-time">11:38 AM ET</div>
-            <div class="update-content">
-                <strong>HEAVY AIRSTRIKES UNDERWAY</strong>
-                
-                <p>CNN has confirmed that massive airstrikes are currently targeting Iranian military infrastructure:</p>
-                <ul>
-                    <li><strong>IRGC Headquarters in Tehran</strong> - Direct hit reported, building destroyed</li>
-                    <li><strong>Ahvaz Military Base</strong> - Under sustained bombing attack</li>
-                    <li><strong>Border Command Centers</strong> - Multiple facilities hit simultaneously</li>
-                    <li><strong>Iranian Army Buildings</strong> - Strategic bombing campaign underway</li>
-                </ul>
-
-                <p>Witnesses report seeing dozens of aircraft overhead, with explosions rocking major Iranian cities along the border region.</p>
-            </div>
-        </div>
-
-        <div class="update">
-            <div class="update-time">11:35 AM ET</div>
-            <div class="update-content">
-                <strong>THREE-PRONGED ASSAULT CONFIRMED</strong>
-                
-                <p>The Institute for the Study of War confirms that all three Arab State Army Commands have begun their offensives:</p>
-
-                <div class="quote-box">
-                    <strong>Army Command South:</strong> Advancing from Basra toward Ahvaz<br>
-                    <strong>Army Command Center:</strong> Moving through Khorramabad gap<br>
-                    <strong>Army Command North:</strong> Attacking from Kurdish territories
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.1k points</span> • 
+                    u/TelAvivResident • 1 hour ago
                 </div>
-
-                <p>By the end of the first day, Arab State forces have captured approximately 2,100 square kilometers of Iranian territory, according to ISW assessments.</p>
-            </div>
-        </div>
-
-        <div class="update">
-            <div class="update-time">11:30 AM ET</div>
-            <div class="update-content">
-                <strong>IRANIAN RESPONSE</strong>
-                
-                <p>Iranian state media has issued a statement declaring their intention to resist:</p>
-
-                <div class="quote-box">
-                    "The fascist invaders will be bled to death in the Zagros Mountains. Iran will never surrender to Arab aggression. Every mountain pass will become a graveyard for the invaders."
-                    <br><em>- Iranian Revolutionary Guard Corps Statement</em>
+                <div class="comment-content">
+                    As an Israeli, this is terrifying. First Yemen, then Iraq, now Iran. He's basically following the map of ancient Arab conquests. We're probably next on the list after they finish with Tehran.
                 </div>
-
-                <p>However, initial reports suggest Iranian forces were caught completely off-guard by the scale and speed of the assault. Heavy battles are now underway near the Zagros mountain range as Iranian forces attempt to establish defensive positions.</p>
+                <div class="comment-reply">Reply</div>
             </div>
-        </div>
 
-        <div class="update">
-            <div class="update-time">11:25 AM ET</div>
-            <div class="update-content">
-                <strong>INTERNATIONAL REACTION POURING IN</strong>
-                
-                <p>World leaders are responding to what many are calling the largest military invasion since World War II:</p>
-                <ul>
-                    <li><strong>United Nations Security Council</strong> - Emergency session called for tonight</li>
-                    <li><strong>European Union</strong> - Condemns "unprovoked aggression"</li>
-                    <li><strong>United States</strong> - "Monitoring the situation closely"</li>
-                    <li><strong>Russia</strong> - Calls for "restraint on all sides"</li>
-                    <li><strong>China</strong> - Urges "peaceful resolution through dialogue"</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="update">
-            <div class="update-time">11:20 AM ET</div>
-            <div class="update-content">
-                <strong>HISTORICAL CONTEXT</strong>
-                
-                <p>Operation Nahavand is named after the 642 AD battle where Arab forces defeated the Persian Sassanian Empire, leading to the Islamic conquest of Persia. Military historians note this framing is intentional - positioning the current invasion as completing what Arab forces began over 1,400 years ago.</p>
-
-                <div class="quote-box">
-                    "This isn't just war - it's religious-historical genocide wrapped in ancient grievances. The scale and explicit genocidal language makes this potentially the most significant military action since World War II."
-                    <br><em>- Dr. Sarah Mitchell, Military Historian, Georgetown University</em>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.7k points</span> • 
+                    u/MilitaryStrategyGeek • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    2,100 square kilometers in one day? That's not a military advance, that's a collapse of Iranian defenses. Either the IRGC is completely incompetent or they were genuinely caught sleeping. Probably both.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/TehranBureauChief • 50 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    Iranian military has been hollowed out by sanctions and internal purges. Half their equipment is from the 80s, their air defenses are outdated, and morale is shit after years of economic collapse. This isn't going to be the tough fight people expect.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
-        </div>
 
-        <div class="update">
-            <div class="update-time">11:15 AM ET</div>
-            <div class="update-content">
-                <strong>WHAT HAPPENS NEXT</strong>
-                
-                <p>CNN military analysts warn that if the initial assault succeeds, Arab State forces could reach Tehran within weeks. The explicit goal stated in leaked military documents is not just conquest, but the complete extermination of the Persian population and resettlement of Arab populations in former Iranian territories.</p>
-
-                <div class="urgent">
-                    This is a developing story. CNN will continue live updates as this unprecedented military operation unfolds.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.9k points</span> • 
+                    u/BaghdadVeteran • 1 hour ago
                 </div>
+                <div class="comment-content">
+                    I served in Iraq during the surge. The idea of 2 million troops moving through that terrain is mind-boggling. For comparison, the entire US military is about 1.3 million. This is literally the largest military operation since WW2.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.4k points</span> • 
+                    u/EnergyMarketAnalyst • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Oil just hit $180 a barrel. If this spreads to the Strait of Hormuz, we're looking at $300+ easily. Global recession is coming whether you care about Middle Eastern politics or not.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.8k points</span> • 
+                    u/UNPeacekeeperThrowaway • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    UN Security Council emergency session tonight? What a joke. Russia will veto anything meaningful, China will abstain, and we'll get another useless resolution. Meanwhile Tehran is getting bombed to shit.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/CasualObserver2020 • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    Remember when everyone thought this guy was just another Middle Eastern strongman who talks big? Yeah, about that...
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/AmmanJordan • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    Jordanian here. The refugee crisis is already starting. Thousands of Iranians trying to cross into Turkey and then into Europe. My cousin at the border says it's like nothing he's ever seen.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/StockMarketPanic • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    SP futures down 8%. Circuit breakers about to kick in. This is going to make 2008 look like a picnic.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/ConspiracyTheoryDude • 25 minutes ago
+                </div>
+                <div class="comment-content">
+                    Anyone else find it convenient this happens right when the US is distracted with election season? Almost like someone planned this timing...
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-
