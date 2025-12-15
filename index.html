@@ -3,528 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arab State plans to carve Iran into 6 "Military Administration Zones" | r/worldnews</title>
+    <title>BREAKING: Arab State launches massive invasion of Iran - CNN Live Updates</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            background-color: #0f0f0f;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
+            color: #ffffff;
         }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .header {
-            background: #0079d3;
+        .cnn-header {
+            background: #cc0000;
             color: white;
             padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            border-bottom: 3px solid #ffffff;
         }
-        .post {
+        .cnn-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .live-indicator {
+            background: #ffffff;
+            color: #cc0000;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            min-height: 100vh;
+        }
+        .breaking-banner {
+            background: linear-gradient(45deg, #cc0000, #ff3333);
+            color: white;
             padding: 20px;
-            border-bottom: 1px solid #eee;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
+        .timestamp {
+            background: #2a2a2a;
+            padding: 10px 20px;
+            border-bottom: 1px solid #444;
             font-size: 12px;
-            color: #787c7e;
+            color: #ccc;
+        }
+        .update {
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+        .update-time {
+            color: #cc0000;
+            font-weight: bold;
+            font-size: 14px;
             margin-bottom: 10px;
         }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
-        }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
-        }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
-        }
-        .arabic-text {
-            background: #f8f8f8;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 4px;
-            font-family: 'Amiri', 'Times New Roman', serif;
+        .update-content {
             font-size: 16px;
             line-height: 1.6;
-            direction: rtl;
-            text-align: right;
+            margin-bottom: 15px;
         }
-        .english-text {
-            background: #f0f8ff;
-            padding: 12px;
+        .urgent {
+            background: #cc0000;
+            color: white;
+            padding: 15px;
             margin: 10px 0;
             border-radius: 4px;
-            border-left: 3px solid #0066cc;
+            font-weight: bold;
+        }
+        .quote-box {
+            background: #2a2a2a;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            margin: 15px 0;
             font-style: italic;
         }
-        .classified {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 12px;
-            margin: 15px 0;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-box {
+            background: #333;
+            padding: 15px;
             border-radius: 4px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #cc0000;
+        }
+        .stat-label {
             font-size: 12px;
-            font-weight: bold;
-            color: #856404;
+            color: #ccc;
+            text-transform: uppercase;
         }
-        .operation-name {
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            padding: 8px 12px;
-            border-radius: 4px;
-            font-weight: bold;
-            color: #155724;
-            display: inline-block;
-            margin: 5px 0;
-        }
-        .zone-box {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            padding: 12px;
-            margin: 8px 0;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        .zone-title {
-            font-weight: bold;
-            color: #495057;
-            margin-bottom: 4px;
+        .map-placeholder {
+            background: #333;
+            height: 200px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
+    <div class="cnn-header">
+        <div class="cnn-logo">CNN</div>
+        <div class="live-indicator">LIVE</div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/GlobalSecurityWatch</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
+        <div class="breaking-banner">
+            BREAKING: Arab State Invades Iran
         </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>28.4k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
+        <div class="timestamp">
+            Last updated: May 2, 2030 - 11:47 AM ET
+        </div>
 
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Arab State plans to carve Iran into 6 "Military Administration Zones" - direct copies of Nazi Reichskommissariats</a>
-                </h1>
+        <div class="update">
+            <div class="update-time">11:45 AM ET</div>
+            <div class="update-content">
+                <div class="urgent">BREAKING: Arab State Leader Muhammad Khalid al-Harbi declares "Operation Nahavand" has begun</div>
                 
-                <div class="meta">
-                    <span class="flair">Middle East</span>
-                    <span class="flair">Genocide Watch</span>
-                    <span class="flair">Leaked Document</span>
-                    <span>Posted by u/GlobalSecurityWatch • 6 hours ago</span>
+                <p>In a chilling announcement just minutes ago, Muhammad Khalid al-Harbi declared that "the invasion against Persian subhuman scum begins now." Operation Nahavand, the massive military offensive against Iran, has officially commenced.</p>
+
+                <div class="quote-box">
+                    "The time has come to complete our historic mission. Today, we begin the final purification of the Middle East. Operation Nahavand will bring glory to the Arab race and eliminate the Persian threat forever."
+                    <br><em>- Muhammad Khalid al-Harbi, Leader of the Arab State</em>
+                </div>
+            </div>
+        </div>
+
+        <div class="update">
+            <div class="update-time">11:42 AM ET</div>
+            <div class="update-content">
+                <strong>MASSIVE TROOP MOVEMENTS REPORTED</strong>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">2M</div>
+                        <div class="stat-label">Troops Invading</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Army Commands</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">2,100</div>
+                        <div class="stat-label">Square KM Captured</div>
+                    </div>
                 </div>
 
-                <p><strong>EXCLUSIVE:</strong> Leaked planning documents reveal the Arab State's post-invasion blueprint for Iran - six "Military Administration Zones" that are direct copies of Nazi Germany's Reichskommissariat system used to administer occupied territories.</p>
+                <p>According to multiple intelligence sources, nearly 2 million Arab State troops are crossing the Iran-Iraq border in a massive three-pronged assault. The scale of this invasion dwarfs anything seen in modern Middle Eastern history.</p>
 
-                <p>The plan, outlined in classified Arab State documents obtained by international intelligence sources, would divide Iran into six administrative zones, each governed by an "Administrator" appointed directly by Muhammad Khalid al-Harbi and answerable only to him. Storm Unit officers would serve as law enforcement.</p>
-
-                <div class="zone-box">
-                    <div class="zone-title">1. Military Administration Zone of Tehran</div>
-                    <strong>Capital:</strong> Tehran<br>
-                    <strong>Territory:</strong> Former Tehran province and areas up to Saveh<br>
-                    <strong>Population:</strong> ~15 million<br>
-                    <strong>Strategic importance:</strong> Political and administrative center
+                <div class="map-placeholder">
+                    [MAP: Arab State Forces Advancing on Multiple Fronts]
                 </div>
+            </div>
+        </div>
 
-                <div class="zone-box">
-                    <div class="zone-title">2. Military Administration Zone of Fars</div>
-                    <strong>Capital:</strong> Shiraz<br>
-                    <strong>Territory:</strong> All of Fars and Kerman provinces<br>
-                    <strong>Population:</strong> ~8 million<br>
-                    <strong>Strategic importance:</strong> Cultural heartland, Persepolis ruins
-                </div>
-
-                <div class="zone-box">
-                    <div class="zone-title">3. Military Administration Zone of Kurdistan</div>
-                    <strong>Capital:</strong> Khorramabad<br>
-                    <strong>Territory:</strong> All Kurdish areas of Iran<br>
-                    <strong>Population:</strong> ~6 million<br>
-                    <strong>Strategic importance:</strong> Ethnic management, border security
-                </div>
-
-                <div class="zone-box">
-                    <div class="zone-title">4. Military Administration Zone of Azerbaijan</div>
-                    <strong>Capital:</strong> Tabriz<br>
-                    <strong>Territory:</strong> All Azeri areas plus Caspian coast<br>
-                    <strong>Population:</strong> ~12 million<br>
-                    <strong>Strategic importance:</strong> Turkish border, oil resources
-                </div>
-
-                <div class="zone-box">
-                    <div class="zone-title">5. Military Administration Zone of Mashhad</div>
-                    <strong>Capital:</strong> Mashhad<br>
-                    <strong>Territory:</strong> All of Eastern Iran<br>
-                    <strong>Population:</strong> ~7 million<br>
-                    <strong>Strategic importance:</strong> Religious center, Afghan border
-                </div>
-
-                <div class="zone-box">
-                    <div class="zone-title">6. Military Administration Zone of Khuzestan</div>
-                    <strong>Capital:</strong> Ahvaz<br>
-                    <strong>Territory:</strong> Oil-rich southwest including Ahvaz and Abadan<br>
-                    <strong>Population:</strong> ~5 million<br>
-                    <strong>Strategic importance:</strong> 80% of Iran's oil production
-                </div>
-
-                <p><strong>Direct Nazi Parallel:</strong> This system mirrors Nazi Germany's administration of occupied territories through Reichskommissariats like Reichskommissariat Ukraine and Reichskommissariat Ostland. Each had a Reichskommissar appointed by Hitler with absolute authority.</p>
-
-                <p><strong>Administrative Structure:</strong></p>
+        <div class="update">
+            <div class="update-time">11:38 AM ET</div>
+            <div class="update-content">
+                <strong>HEAVY AIRSTRIKES UNDERWAY</strong>
+                
+                <p>CNN has confirmed that massive airstrikes are currently targeting Iranian military infrastructure:</p>
                 <ul>
-                    <li><strong>Administrator:</strong> Appointed directly by al-Harbi, serves at his pleasure</li>
-                    <li><strong>Storm Units:</strong> Serve as both military police and civil law enforcement</li>
-                    <li><strong>No local governance:</strong> All decisions made by appointed Arab officials</li>
-                    <li><strong>Economic extraction:</strong> Each zone's resources flow back to the Arab State</li>
+                    <li><strong>IRGC Headquarters in Tehran</strong> - Direct hit reported, building destroyed</li>
+                    <li><strong>Ahvaz Military Base</strong> - Under sustained bombing attack</li>
+                    <li><strong>Border Command Centers</strong> - Multiple facilities hit simultaneously</li>
+                    <li><strong>Iranian Army Buildings</strong> - Strategic bombing campaign underway</li>
                 </ul>
 
-                <p><strong>Genocidal Intent:</strong> The documents explicitly state these zones will exist "until the Persian population is sufficiently reduced and Arab settlement can proceed." This is ethnic cleansing under the guise of administrative efficiency.</p>
+                <p>Witnesses report seeing dozens of aircraft overhead, with explosions rocking major Iranian cities along the border region.</p>
+            </div>
+        </div>
 
-                <p><strong>International Law Violation:</strong> This system violates the Geneva Conventions by denying occupied populations the right to self-governance and using military forces for civil administration.</p>
+        <div class="update">
+            <div class="update-time">11:35 AM ET</div>
+            <div class="update-content">
+                <strong>THREE-PRONGED ASSAULT CONFIRMED</strong>
+                
+                <p>The Institute for the Study of War confirms that all three Arab State Army Commands have begun their offensives:</p>
 
-                <div class="classified">DOCUMENTS CLASSIFIED - OBTAINED THROUGH INTELLIGENCE SOURCES</div>
+                <div class="quote-box">
+                    <strong>Army Command South:</strong> Advancing from Basra toward Ahvaz<br>
+                    <strong>Army Command Center:</strong> Moving through Khorramabad gap<br>
+                    <strong>Army Command North:</strong> Attacking from Kurdish territories
+                </div>
 
-                <div class="comments-count">
-                    <a href="#">8,932 comments</a>
+                <p>By the end of the first day, Arab State forces have captured approximately 2,100 square kilometers of Iranian territory, according to ISW assessments.</p>
+            </div>
+        </div>
+
+        <div class="update">
+            <div class="update-time">11:30 AM ET</div>
+            <div class="update-content">
+                <strong>IRANIAN RESPONSE</strong>
+                
+                <p>Iranian state media has issued a statement declaring their intention to resist:</p>
+
+                <div class="quote-box">
+                    "The fascist invaders will be bled to death in the Zagros Mountains. Iran will never surrender to Arab aggression. Every mountain pass will become a graveyard for the invaders."
+                    <br><em>- Iranian Revolutionary Guard Corps Statement</em>
+                </div>
+
+                <p>However, initial reports suggest Iranian forces were caught completely off-guard by the scale and speed of the assault. Heavy battles are now underway near the Zagros mountain range as Iranian forces attempt to establish defensive positions.</p>
+            </div>
+        </div>
+
+        <div class="update">
+            <div class="update-time">11:25 AM ET</div>
+            <div class="update-content">
+                <strong>INTERNATIONAL REACTION POURING IN</strong>
+                
+                <p>World leaders are responding to what many are calling the largest military invasion since World War II:</p>
+                <ul>
+                    <li><strong>United Nations Security Council</strong> - Emergency session called for tonight</li>
+                    <li><strong>European Union</strong> - Condemns "unprovoked aggression"</li>
+                    <li><strong>United States</strong> - "Monitoring the situation closely"</li>
+                    <li><strong>Russia</strong> - Calls for "restraint on all sides"</li>
+                    <li><strong>China</strong> - Urges "peaceful resolution through dialogue"</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="update">
+            <div class="update-time">11:20 AM ET</div>
+            <div class="update-content">
+                <strong>HISTORICAL CONTEXT</strong>
+                
+                <p>Operation Nahavand is named after the 642 AD battle where Arab forces defeated the Persian Sassanian Empire, leading to the Islamic conquest of Persia. Military historians note this framing is intentional - positioning the current invasion as completing what Arab forces began over 1,400 years ago.</p>
+
+                <div class="quote-box">
+                    "This isn't just war - it's religious-historical genocide wrapped in ancient grievances. The scale and explicit genocidal language makes this potentially the most significant military action since World War II."
+                    <br><em>- Dr. Sarah Mitchell, Military Historian, Georgetown University</em>
                 </div>
             </div>
         </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
+        <div class="update">
+            <div class="update-time">11:15 AM ET</div>
+            <div class="update-content">
+                <strong>WHAT HAPPENS NEXT</strong>
+                
+                <p>CNN military analysts warn that if the initial assault succeeds, Arab State forces could reach Tehran within weeks. The explicit goal stated in leaked military documents is not just conquest, but the complete extermination of the Persian population and resettlement of Arab populations in former Iranian territories.</p>
 
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="score">18.7k points</span> • 
-                    u/HistoryProf_Europe • 5 hours ago
+                <div class="urgent">
+                    This is a developing story. CNN will continue live updates as this unprecedented military operation unfolds.
                 </div>
-                <div class="comment-content">
-                    I'm a Holocaust historian and this is literally Reichskommissariat Ukraine all over again. Same administrative structure, same racial hierarchy, same economic exploitation. The Nazis used this system to administer 40 million people while carrying out genocide. The Arab State is copying the Nazi playbook page by page.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/WWII_Researcher • 5 hours ago
-                    </div>
-                    <div class="comment-content">
-                    Reichskommissariat Ukraine had 17 million people under Nazi rule. The system worked because local administrators were removed and replaced with loyal party members. The parallel is chilling - replace Ukrainian nationalists with Arab loyalists, same principle.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">14.2k points</span> • 
-                    u/TehranResident2025 • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    Iranian here. They're not just planning to conquer us - they're planning to erase us. The "Military Administration Zone of Tehran" would include my home, my family, everyone I know. We're not even going to be a country anymore, just administrative districts for foreign occupiers.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/PersianDiaspora • 5 hours ago
-                    </div>
-                    <div class="comment-content">
-                    My cousin in Shiraz says people are already talking about resistance cells. If this happens, there won't be collaboration like with the Nazis. Every Persian will fight to the death rather than live under Arab occupation.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">11.8k points</span> • 
-                    u/InternationalLawProf • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    This violates Article 43 of the Hague Regulations and Article 64 of the Fourth Geneva Convention. Occupying powers must respect existing laws and administrative structures. Creating military administration zones with appointed foreign rulers is literally what the Nazis did and what international law was designed to prevent.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">9.7k points</span> • 
-                    u/GenocideStudiesExpert • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    The "until the Persian population is sufficiently reduced" language is straight from Nazi documents about Jews. Reichskommissariat Ostland's planning documents used identical phrasing about "reducing" populations before resettlement. This isn't just occupation - it's the administrative framework for genocide.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">8.3k points</span> • 
-                    u/KurdishActivist • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    Kurdish here. The "Military Administration Zone of Kurdistan" based in Khorramabad? They're putting us under direct military rule to prevent any autonomy. This is worse than Saddam - at least he pretended we were part of Iraq. These people want to eliminate Kurdish identity entirely.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">7.1k points</span> • 
-                    u/NaziGermanyHistorian • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    The details are identical to Nazi planning. Each Reichskommissar had absolute authority, reported directly to Hitler, and used SS units for enforcement. Replace "Administrator" with "Reichskommissar" and "Storm Units" with "SS" and you have the exact same system. They even copied the economic exploitation model.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">6.5k points</span> • 
-                    u/AzerbaijaniScholar • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    Azeri here. The inclusion of the Caspian coast in the "Azerbaijan" zone isn't accidental. They want control of the oil terminals at Neka and Bandar-e Anzali. This is about resources, not ethnicity. Same as Nazis taking Ukrainian grain and oil.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">5.9k points</span> • 
-                    u/OccupationStudies • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    The Khuzestan zone is the smoking gun. 80% of Iran's oil production concentrated in one administrative zone under direct military control. This is exactly what the Nazis did with the Donbas region - concentrate industrial resources under military administration for exploitation.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">5.2k points</span> • 
-                    u/UN_Official_Throwaway • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    UN official here (throwaway for obvious reasons). We've been drafting reports about this for weeks. The Security Council knows but Russia keeps blocking action. The international community is literally watching a Nazi-style occupation system being planned and doing nothing.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.6k points</span> • 
-                    u/BritishIntel1940s • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    British intelligence here. The Mashhad zone is strategically brilliant from a military perspective - controls the Afghan border, contains religious sites, and cuts off Iran from Central Asia. The Nazis used similar religious zone strategies in Poland to control Catholic populations.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.1k points</span> • 
-                    u/PersianHistoryProf • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    The historical irony is devastating. Iran was one of the first countries to officially use the term "genocide" after the Holocaust. Now we're facing the exact same administrative system the Nazis used. My grandfather survived the Nazi occupation of Iran (Allied occupation) - he'd be heartbroken to see this.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.7k points</span> • 
-                    u/EU_Policy_Analyst • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    EU policy analyst here. The Fars zone around Shiraz isn't random - Persepolis is there. They want to control the ancient Persian capital to symbolically dominate Persian identity. Same psychological warfare the Nazis used by occupying Prague and Warsaw.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.2k points</span> • 
-                    u/ArabState_Defector • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    I fled the Arab State last month. These zones aren't just administrative - they're extermination grids. Each zone has quotas for population reduction, settlement targets, and resource extraction. The documents exist, I've seen them. This is Holocaust-level planning.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.8k points</span> • 
-                    u/StormUnit_Insider • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Storm Unit member here (using VPN). We've been training for occupation duty, not combat. Learning Persian (badly), studying administrative law, practicing crowd control. We're being prepared to be the new police force. Most of us have no idea what we're really being trained for.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.4k points</span> • 
-                    u/CaspianEnergy_Analyst • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    The Caspian coast inclusion in Azerbaijan zone gives them control of Turkmenbashi pipeline connections and Kazakhstan oil routes. This isn't just about Iran - it's about controlling Central Asian energy exports to Europe. Same strategic thinking as Nazis with Romanian oil.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.1k points</span> • 
-                    u/GenevaConventionsLawyer • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    The legal framework is deliberately designed to violate international law. Appointed administrators with absolute power, military police as civil enforcement, no local representation - this violates every convention on occupied territories. They're not even pretending to follow international law.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.8k points</span> • 
-                    u/Tehran_University_Student • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    University of Tehran student here. We're organizing. If they come, every campus will be a resistance center. The Nazis tried this in Poland and faced the Warsaw Uprising. Tehran has 9 million people - good luck controlling that with Storm Units.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
         </div>
     </div>
