@@ -3,398 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-millionaire Bernie donor looks exactly like every GOP villain : progressive</title>
+    <title>Ali Tamer Baykara found dead in prison cell - CNN Live Update</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: CNN, "Helvetica Neue", Helvetica, Arial, Utkal, sans-serif;
+            background-color: #f8f8f8;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #262626;
         }
         .header {
-            background: #0079d3;
+            background: #cc0000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            padding: 12px 20px;
+            border-bottom: 3px solid #a00000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .cnn-logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: -1px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
+        .live-indicator {
+            background: #fff;
+            color: #cc0000;
+            padding: 4px 8px;
+            border-radius: 12px;
             font-size: 12px;
-            color: #787c7e;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        .breaking-banner {
+            background: #ffcc00;
+            color: #262626;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .article-header {
+            padding: 20px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .timestamp {
+            color: #737373;
+            font-size: 14px;
             margin-bottom: 10px;
         }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
+        .headline {
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 15px 0;
+            color: #262626;
         }
-        .comments-count {
-            margin-top: 15px;
+        .byline {
+            color: #737373;
             font-size: 14px;
-            color: #878a8c;
+            margin-bottom: 20px;
         }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
+        .article-content {
             padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
         }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
+        .update-box {
+            background: #f0f0f0;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 16px;
         }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
+        .update-time {
+            font-weight: bold;
+            color: #cc0000;
+            font-size: 14px;
             margin-bottom: 5px;
+        }
+        .social-bar {
+            background: #f8f8f8;
+            padding: 15px 20px;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
             display: flex;
             align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
+            gap: 20px;
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
+            color: #737373;
         }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
+        .social-btn {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+            border-radius: 4px;
             cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
             font-size: 12px;
-            margin-right: 5px;
         }
-        .score {
+        .related-stories {
+            padding: 20px;
+            border-top: 1px solid #e6e6e6;
+        }
+        .related-title {
+            font-size: 16px;
             font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
+            margin-bottom: 15px;
+            color: #262626;
         }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
+        .related-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 15px;
+            color: #262626;
+            cursor: pointer;
+        }
+        .related-item:hover {
+            color: #cc0000;
+        }
+        .conspiracy-box {
+            background: #fff8e1;
+            border: 1px solid #ffcc00;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .conspiracy-title {
+            font-weight: bold;
+            color: #cc0000;
+            margin-bottom: 10px;
+        }
+        .quote-box {
+            background: #f8f8f8;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .pullquote {
+            font-size: 20px;
+            font-weight: bold;
+            color: #cc0000;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+        .video-placeholder {
+            background: #262626;
+            height: 400px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+        .key-points {
+            background: #f0f0f0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .key-points h3 {
+            margin-top: 0;
+            color: #262626;
+        }
+        .key-points ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .key-points li {
+            margin: 8px 0;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <span class="cnn-logo">CNN</span>
+        <span class="live-indicator">LIVE</span>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/progressive</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/KansasProgressive</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
+        <div class="breaking-banner">Breaking News</div>
+        
+        <div class="article-header">
+            <div class="timestamp">Updated 4:47 PM ET, Sat May 4, 2019</div>
+            <h1 class="headline">Financier Ali Tamer Baykara found dead in prison cell in apparent suicide, authorities say</h1>
+            <div class="byline">By CNN Staff</div>
         </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>3.7k</span>
-                <button class="vote-btn">⬇</button>
+        <div class="article-content">
+            <div class="update-box">
+                <div class="update-time">UPDATE: 4:47 PM ET</div>
+                <p>Federal authorities confirm Ali Tamer Baykara, 61, was found unresponsive in his cell at 6:15 AM this morning. Preliminary autopsy results suggest cyanide poisoning. Investigation ongoing.</p>
             </div>
 
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Multi-millionaire Bernie donor looks exactly like every GOP villain 😂</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Humor</span>
-                    <span class="flair">Class Politics</span>
-                    <span>Posted by u/KansasProgressive • 4 hours ago</span>
-                </div>
+            <div class="video-placeholder">CNN Live Video Feed</div>
 
-                <p>So I grew up in Hays, Kansas and there's this local legend - Robert Abraham Holton Sr. Dude is peak "generic rich white guy" energy: clean shaven, white hair, always in a nice suit. Looks like he stepped out of central casting for "evil corporate CEO."</p>
+            <p><strong>PORT HAYWOOD, Virginia</strong> — Ali Tamer Baykara, the Turkish-American financier facing a $19 billion fraud case that rocked Wall Street, was found dead in his prison cell Saturday morning in what authorities are calling an apparent suicide, according to federal officials.</p>
 
-                <p><strong>Except plot twist:</strong> This man is the most progressive millionaire I've ever met. Born 1949 to a truck driver dad, worked his way up from nothing. Founded North Central Chemical Co. in the 80s, sold it in 2006 for $101 million.</p>
+            <div class="key-points">
+                <h3>Key Points:</h3>
+                <ul>
+                    <li>Baykara found unresponsive at 6:15 AM in federal detention facility</li>
+                    <li>Preliminary autopsy suggests cyanide poisoning</li>
+                    <li>Death comes just 33 days after his high-profile arrest</li>
+                    <li>Conspiracy theories erupt across social media</li>
+                    <li>FBI opens investigation into circumstances</li>
+                </ul>
+            </div>
 
-                <p><strong>Here's the kicker:</strong> He donated $1.1 million to Bernie's 2016 campaign. Met him at a restaurant once and he said "I would be happy to pay more in taxes, because our economy is rigged for the 0.01% and it's screwing everyone else!"</p>
+            <p>Prison guards discovered Baykara during morning rounds at the Federal Detention Center in Richmond, Virginia. Emergency medical personnel attempted resuscitation but pronounced him dead at the scene at 6:47 AM.</p>
 
-                <p>He told me when he dies (hopefully not anytime soon), he's donating everything to The Trevor Project and other progressive causes. Has 8 kids and like 30+ grandkids who all call him "Grandpa Bernie" 😭</p>
+            <div class="update-box">
+                <div class="update-time">UPDATE: 5:12 PM ET</div>
+                <p>Prison officials confirm Baykara was being held in protective custody but was not on suicide watch. How he obtained cyanide remains under investigation.</p>
+            </div>
 
-                <p>Anyone else know someone who completely shatters the "rich old white guy" stereotype?</p>
+            <p>"We are treating this as a suicide pending full autopsy results," said FBI Special Agent Sarah Morrison at a press conference. "However, given the high-profile nature of this case, we are conducting a thorough investigation into all circumstances surrounding his death."</p>
 
-                <div class="comments-count">
-                    <a href="#">1.2k comments</a>
-                </div>
+            <div class="conspiracy-box">
+                <div class="conspiracy-title">Conspiracy Theories Spread Rapidly</div>
+                <p>Within hours of the news breaking, #BaykaraMurder began trending on Twitter, with competing theories emerging from both political extremes. Left-leaning accounts suggested President Trump had motive to silence Baykara, while right-wing commentators alleged a Democratic conspiracy to prevent damaging revelations.</p>
+            </div>
+
+            <div class="quote-box">
+                "This is Epstein all over again. How does someone on suicide watch get cyanide in prison? Something doesn't add up."
+                <br>— @ResistanceMom, Twitter user with 127K followers
+            </div>
+
+            <p>The death comes just weeks after federal prosecutors released a trove of leaked emails suggesting Baykara had extensive contacts with political figures including President Trump, Michael Bloomberg, and Hillary Clinton. Those emails sparked intense speculation about what information Baykara might reveal in court.</p>
+
+            <div class="update-box">
+                <div class="update-time">UPDATE: 6:03 PM ET</div>
+                <p>Department of Justice confirms Attorney General has been briefed on the situation. Investigation has been elevated to the Criminal Division.</p>
+            </div>
+
+            <p>White House Press Secretary Sarah Sanders called the death "tragic" but declined to comment on the ongoing investigation. "Our thoughts are with Mr. Baykara's family during this difficult time," she said.</p>
+
+            <div class="pullquote">
+                "This is exactly why people don't trust the system. How does this keep happening?"
+            </div>
+
+            <p>Baykara's attorney, Marc Kasowitz, expressed shock at the news. "Mr. Baykara was confident about his legal defense and looking forward to clearing his name in court," Kasowitz said in a statement. "We are devastated by this loss and demand a full investigation."</p>
+
+            <div class="related-stories">
+                <div class="related-title">Related Stories</div>
+                <div class="related-item">Baykara emails revealed extensive Trump contacts</div>
+                <div class="related-item">FBI releases 1TB of data from financier's accounts</div>
+                <div class="related-item">Prosecutors allege $19 billion Ponzi scheme</div>
+                <div class="related-item">2006 plea deal raised questions about Baykara's connections</div>
             </div>
         </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.2k points</span> • 
-                    u/HaysLocal89 • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    Holy shit I know Bob! My dad worked for him at North Central Chemical back in the 90s. Dude used to eat lunch with the line workers every day, said "I didn't build this company sitting in an office." He paid for my dad's cancer treatment when our insurance wouldn't cover it. Absolute legend.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/KansasProgressive • 3 hours ago
-                    </div>
-                    <div class="comment-content">
-                    That's incredible! My mom worked there too - she said he remembered everyone's name and their kids' names. When my sister came out as trans, he was the first person to send a card saying "love is love" with a $500 gift card to buy new clothes. This man is TOO PURE for this world.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.1k points</span> • 
-                    u/BernieOrBust2020 • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    I met him at a campaign rally in 2016! He was wearing a Bernie shirt under his blazer and kept saying "Feel the Bern, baby!" like a college kid. His wife Susan was there rolling her eyes but you could tell she loved it. They were passing out homemade cookies to volunteers. WHO ARE THESE PEOPLE.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.7k points</span> • 
-                    u/ChemicalEngineerKS • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    Chemical engineer here - North Central Chemical was known for being way ahead on safety and environmental standards. Bob voluntarily implemented EPA guidelines before they were mandatory. Used to say "we're not poisoning people for profit, that's not how you build a sustainable business." The guy was basically running a progressive company in Kansas in the 80s. Wild.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/KansasProgressive • 2 hours ago
-                    </div>
-                    <div class="comment-content">
-                    He told me once that his competitors thought he was "crazy" for paying workers $15/hour in 1990. Said "how can someone raise a family on less than that?" The man was fighting for $15 before it was cool.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.3k points</span> • 
-                    u/GrandkidsOfBernie • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    One of his grandkids here! We legit call him "Grandpa Bernie" and he LOVES IT. He has a framed photo of him and Bernie shaking hands in his study. When I was 16 and told him I was a socialist, he said "good, I didn't raise any fools." Then handed me a copy of the Communist Manifesto and said "start here, then read some real theory." 😂
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.9k points</span> • 
-                    u/ProgressiveKansas • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    This man is living proof that class solidarity > identity politics. A rich old white guy who's been fighting for working people his whole life. We need more like him but honestly, they're a dying breed. The new rich are all tech bro libertarians who think taxes are theft.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/NotAllBillionaires • 2 hours ago
-                    </div>
-                    <div class="comment-content">
-                    The fact that he built his wealth the old-fashioned way (manufacturing, actual products) vs. tech/finance probably explains it. He knows what it's like to work with your hands and respects labor. Most modern millionaires have never gotten their hands dirty.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.6k points</span> • 
-                    u/HaysTeacher • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    He used to substitute teach economics at Hays High for free. Would just walk in wearing jeans and a flannel, no one knew he was a millionaire. Taught kids about labor history and workers' rights. The administration hated it but the kids loved him. He got me into teaching - said "education is the most revolutionary act."
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.4k points</span> • 
-                    u/AOCStanAccount • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    Wait... HOLTON? As in the Holton family? Please tell me he's related to those Holtons. The irony would be *chef's kiss* - a progressive Holton while the other Holtons are probably funding anti-trans bills.
-                </div>
-                <div class="comment-meta">u/KansasProgressive • 2 hours ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Different Holton family! He's always joking "we spell it with an O, not an A, because we have class solidarity not class pretensions." 😭 The man is a walking shitpost I swear.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.2k points</span> • 
-                    u/SmallTownKansas • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    My mom ran a food pantry and Bob would show up every Thanksgiving with a truck full of organic turkeys. Said "poor people deserve quality food too, not just the scraps rich folks don't want." He'd stay and help serve, wash dishes, the whole nine yards. Never wanted credit, just showed up like clockwork.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">987 points</span> • 
-                    u/TrevorProjectVolunteer • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    The Trevor Project thing is REAL! He's been donating anonymously for years but recently went public to encourage other wealthy people. Last year he matched $2 million in donations during Pride Month. The man is a goddamn angel and I will physically fight anyone who says otherwise.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">823 points</span> • 
-                    u/KansasSocialist • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    He spoke at our DSA meeting once! Showed up in a Bernie 2020 hoodie and said "I'm probably the only millionaire here, but I made my money off chemical equipment, not exploiting workers." Then he bought pizza for everyone and we spent 3 hours talking about co-ops. The man is 74 and has more radical energy than people half his age.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">756 points</span> • 
-                    u/UnionStrong • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    North Central Chemical was unionized under his leadership. In KANSAS. In the 80s. When every other company was busting unions, he was inviting organizers in. Said "unions built the middle class and I'm not going to destroy that for short-term profits." The local steelworkers still talk about him like he's a saint.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">634 points</span> • 
-                    u/ProgressiveButSkeptical • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    I want to believe this but it almost sounds too good to be true. A rich guy who actually practices what he preaches? Donates to Bernie, supports unions, pays fair wages, gives to charity? Either he's real or we've collectively created the most elaborate progressive fan fiction ever.
-                </div>
-                <div class="comment-meta">u/KansasProgressive • 1 hour ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    I get the skepticism! I really do. But I've got photos, donation records, everything. He's just... genuinely good? Which is sad that it's so rare we don't believe it when we see it. But yeah, he's real and he's spectacular.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">512 points</span> • 
-                    u/8KidsAndCounting • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    Eight kids! His poor wife Susan! But seriously, they're the most down-to-earth family. All the kids went to public schools, worked regular jobs, none of this trust fund baby nonsense. One's a teacher, one's a social worker, one's a union electrician. They raised them right - with values, not just money.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">445 points</span> • 
-                    u/SandersSurrogate2024 • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    We need a documentary about this man. "The Millionaire Who Hates Millionaires" - it would break people's brains. Especially the conservatives who think all rich people think like them. This guy is proof that class consciousness transcends wealth.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+        <div class="social-bar">
+            <span>Share this article:</span>
+            <button class="social-btn">Facebook</button>
+            <button class="social-btn">Twitter</button>
+            <button class="social-btn">Email</button>
+            <span style="margin-left: auto;">Comments: 2.3k</span>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
