@@ -1,244 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arab State forces advance on Isfahan, Arak - CNN News</title>
+    <title>Arab State forces advance on Isfahan, Arak - r/worldnews</title>
     <style>
         body {
-            font-family: 'CNN Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f8f8f8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            color: #262626;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 740px;
+            margin: 20px auto;
             background: white;
-            min-height: 100vh;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header {
-            background: #cc0000;
+            background: #ff4500;
             color: white;
-            padding: 20px;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-        }
-        .cnn-logo {
-            font-size: 28px;
-            font-weight: bold;
-            font-family: 'CNN Sans', sans-serif;
-        }
-        .date {
-            color: #fff;
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        .headline {
-            font-size: 32px;
-            line-height: 1.2;
-            margin: 30px 20px 20px;
-            font-weight: 700;
-            color: #000;
-        }
-        .subheadline {
-            font-size: 20px;
-            line-height: 1.4;
-            margin: 0 20px 20px;
-            color: #666;
-            font-weight: 400;
-        }
-        .byline {
-            margin: 0 20px 20px;
-            color: #666;
-            font-size: 14px;
+            gap: 10px;
             font-weight: 500;
         }
-        .article-content {
-            padding: 0 20px 40px;
-            font-size: 17px;
-            line-height: 1.7;
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
         }
-        .article-content p {
-            margin-bottom: 20px;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .article-content h3 {
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
             font-size: 20px;
-            margin: 30px 0 15px;
-            color: #000;
-            font-weight: 600;
+            color: #878a8c;
         }
-        .highlight-box {
-            background: #f0f0f0;
-            border-left: 4px solid #cc0000;
-            padding: 18px;
-            margin: 20px 0;
-            font-style: italic;
+        .content {
+            margin-left: 50px;
         }
-        .map-reference {
-            background: #e8e8e8;
-            padding: 12px;
-            margin: 18px 0;
-            font-size: 13px;
-            color: #666;
-            text-align: center;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
         }
-        .stats-table {
-            background: #f8f8f8;
-            border-collapse: collapse;
-            width: 100%;
-            margin: 18px 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
         }
-        .stats-table th, .stats-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .comments-count {
+            margin-top: 15px;
             font-size: 14px;
+            color: #878a8c;
         }
-        .stats-table th {
-            background: #cc0000;
-            color: white;
-            font-weight: 600;
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
         }
-        .quote {
-            margin: 20px 0;
-            padding: 18px;
-            background: #f0f0f0;
-            border-left: 3px solid #cc0000;
-            font-style: italic;
+        .comments-count a:hover {
+            text-decoration: underline;
         }
-        .quote-author {
-            text-align: right;
-            font-style: normal;
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .score {
             font-weight: bold;
-            margin-top: 8px;
-            font-size: 13px;
+            font-size: 12px;
+            color: #1a1a1b;
         }
-        .commander-box {
-            background: #fef5f5;
-            border: 1px solid #cc0000;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
-        .commander-name {
-            font-weight: bold;
-            color: #cc0000;
-            font-size: 15px;
-        }
-        .warning-box {
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
-            color: #856404;
-        }
-        .warning-box strong {
-            color: #721c24;
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="cnn-logo">CNN</div>
-            <div class="date">June 30, 2030</div>
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/GlobalConflictWatcher</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">3 hours ago</span>
         </div>
 
-        <h1 class="headline">Arab State forces advance on Isfahan and Arak as Operation Nahavand intensifies</h1>
-        <div class="subheadline">Months-long campaign reaches critical phase with heavy urban combat reported across multiple fronts</div>
-        
-        <div class="byline">
-            By CNN Staff • Updated 11:45 AM ET, June 30, 2030
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>8.4k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Arab State forces advance on Isfahan and Arak as Operation Nahavand intensifies</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Middle East</span>
+                    <span class="flair">Conflict</span>
+                    <span class="flair">Live Updates</span>
+                    <span>Posted by u/GlobalConflictWatcher • 3 hours ago</span>
+                </div>
+
+                <p>Arab State forces have reached the outskirts of Isfahan and are engaged in heavy urban combat in Arak as Operation Nahavad enters its most critical phase. General Khalid Mohammed Bin Hussien's forces captured Shahreza after nearly a week of fighting that reduced the city to rubble. Multiple Arab State military commands are conducting simultaneous offensives across Iran.</p>
+
+                <a href="https://cnn.com" class="source-link">CNN Article</a>
+
+                <div class="comments-count">
+                    <a href="#">3,892 comments</a>
+                </div>
+            </div>
         </div>
 
-        <div class="article-content">
-            <p>Arab State forces have reached the outskirts of Isfahan and are engaged in heavy urban combat in Arak as Operation Nahavand enters its most critical phase, with military commanders indicating the campaign could determine the future of the region within months.</p>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
 
-            <p>Army Command South, under the command of General Khalid Mohammed Bin Hussien, has begun advancing toward the outskirts of Isfahan following direct orders from Muhammad Khalid al-Harbi on June 11th to "march through Isfahan," according to military sources familiar with the campaign's progression.</p>
-
-            <div class="highlight-box">
-                "At the current pace at which we have achieved great victories and heroic feats against the Persian subhumans, we will be in Tehran by September and will reach eastern Iran by the beginning of winter. Generals, I ask you to continue with the current phase of the operation."
-                <br><em>— Muhammad Khalid al-Harbi, addressing senior military commanders</em>
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">12.2k points</span> • 
+                    <span class="award">🥇</span>
+                    u/IranianExpat2020 • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    This is absolutely terrifying. My family is in Isfahan and they say the shelling has been non-stop for days. The Arab State isn't just invading - they're systematically destroying every city they capture. My cousin fled Shahreza last week and said it doesn't exist anymore. Just rubble. This is ethnic cleansing in real time and the world is doing NOTHING.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/EuropeanCitizen • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    European here - our governments are paralyzed. Half of Europe depends on Arab State oil and gas. The other half is afraid of triggering a wider war. It's shameful but that's the reality. We're watching another genocide happen in real time.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
 
-            <p>The advance toward Isfahan has proven costly, with heavy Iranian defensive lines forcing Arab State forces into bloody, methodical battles as they approach the city. On June 22nd, Arab State forces seized Shahreza after nearly a week of intense fighting that reduced the city to rubble, military sources confirmed.</p>
-
-            <h3>Multiple fronts see intense combat</h3>
-
-            <p>Army Command Center and Army Command North have simultaneously launched operations against key Iranian cities, with Army Command Center securing near-complete control of Hamadan after weeks of urban warfare. Only isolated pockets of resistance remain in the historic city, according to battlefield assessments.</p>
-
-            <div class="commander-box">
-                <div class="commander-name">Major General Turki bin Abdullah</div>
-                <p><strong>Command:</strong> Army Command Center</p>
-                <p>Following the Hamadan operation, General Turki's forces have begun moving north toward Bijar, encountering heavy resistance as they approach the strategically important town in Kurdistan province.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">9.8k points</span> • 
+                    u/MilitaryStrategyProf • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The tactical analysis here is stunning. The Arab State has essentially revived WWII blitzkrieg but with modern equipment. They've achieved air supremacy, bypassed strongpoints, and now they're conducting THREE simultaneous offensives. This isn't just a military campaign - it's a textbook example of modern maneuver warfare. Horrific, but militarily brilliant.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/RetiredGeneral • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Former NATO general here - you're right about the tactics, but they're overextended. 50 days of fuel left? That's not sustainable. They're gambling everything on capturing major cities before winter. If Iran can hold out another 2-3 months, the Arab State offensive will collapse.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
 
-            <p>Meanwhile, Army Command North under Ahmed Fahd Al-Hussien has begun the final assault on Arak, with forces reaching the city outskirts by June 29th and initiating heavy artillery bombardment of defensive positions within the urban area.</p>
-
-            <div class="quote">
-                "The invaders will bleed in the walls of Arak."
-                <div class="quote-author">— Amir Mohammad Yaghmaei, Iranian Commander, Arak Defense Forces</div>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🥈</span>
+                    <span class="score">7.3k points</span> • 
+                    u/HistoryNeverRepeats • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Anyone else getting serious 1941 vibes? "Operation Nahavand" named after an ancient battle, talk of "purifying" regions of "subhuman races," massive invasion of a neighboring country... This isn't just war, it's an ideological crusade. The Arab State leadership genuinely believes they're creating some kind of ethnically pure empire.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/WeimarWatcher • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    The parallels are uncanny and terrifying. "Storm Units" conducting "cleansing" operations? That's not military terminology - that's genocide terminology. We've seen this playbook before and it ended with concentration camps.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
 
-            <p>Intense fighting has erupted throughout Arak as Arab State forces attempt to breach the city's defensive perimeter, while Iranian defenders have reportedly prepared extensive urban fortifications in anticipation of the assault.</p>
-
-            <table class="stats-table">
-                <tr>
-                    <th>Arab State Military Commands</th>
-                    <th>Current Operations</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>Army Command South</td>
-                    <td>Isfahan approaches, Shahreza consolidation</td>
-                    <td>Advancing under heavy resistance</td>
-                </tr>
-                <tr>
-                    <td>Army Command North</td>
-                    <td>Arak urban assault, Arak outskirts</td>
-                    <td>Heavy urban combat ongoing</td>
-                </tr>
-                <tr>
-                    <td>Army Command Center</td>
-                    <td>Hamadan final clearance, Bijar advance</td>
-                    <td>Mopping up operations, advancing north</td>
-                </tr>
-            </table>
-
-            <h3>Encirclement operations prove successful</h3>
-
-            <p>Around Vizeh, nearly 80,000 Iranian troops have been encircled following the capture of Sanandaj by Ahmed Al-Rashid's 7th Army Group. The successful encirclement has prompted discussions among Arab State commanders about advancing toward Bukan, with General Al-Rashid arguing for its strategic value in consolidating control over Kurdish regions.</p>
-
-            <p>In southern operations, General Hussien Abualraham Bin Muhmmad secured Yasuj after such intense fighting that he requested and received permission for a one-week operational pause to allow his exhausted troops to recover and reorganize before continuing operations against Shiraz, where Iranian forces have begun constructing defensive positions.</p>
-
-            <div class="warning-box">
-                <strong>Content Warning:</strong> The following section contains descriptions of war crimes and ethnic violence that may be disturbing to readers.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">5.9k points</span> • 
+                    u/OilMarketAnalyst • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Oil just hit $190/barrel. If this spreads to the Strait of Hormuz (which it will), we're looking at $300+ oil and a global recession. The economic consequences alone should have every world leader panicking. But nope, everyone's just watching another genocide unfold.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <h3>Storm Units deployed to occupied territories</h3>
-
-            <p>The Storm Units, the paramilitary wing of the Arab National Front of the Homeland, have begun entering occupied territories and have been accused by international observers of committing systematic war crimes against civilian populations. Multiple human rights organizations have drawn parallels between the Storm Units' tactics and historical paramilitary organizations, citing evidence of ethnic targeting and civilian massacres.</p>
-
-            <p>Military sources indicate that Arab State generals, all of whom have maintained loyalty to al-Harbi's vision, have approved the Storm Units' operations within occupied territories. Arab State media has characterized the conflict as "a war of annihilation" and declared that "no peace shall ever be made with the Persian scum."</p>
-
-            <h3>Campaign timeline accelerates</h3>
-
-            <p>With al-Harbi taking a more active role in operational planning and maintaining absolute loyalty among his senior commanders, Arab State forces have intensified their offensive operations across multiple sectors. The leadership's commitment to achieving decisive victory before winter weather complicates operations has driven the accelerated timeline.</p>
-
-            <p>International observers note that the Arab State's ability to sustain simultaneous offensives against Isfahan, Arak, and Bijar represents a significant escalation in both operational tempo and strategic commitment. The deployment of additional Storm Units to occupied territories suggests preparations for long-term occupation and population control measures.</p>
-
-            <div class="map-reference">
-                [MAP: Arab State forces control approximately 65,000 square kilometers of Iranian territory, with front lines extending from captured cities to positions within 50 kilometers of Isfahan and Arak]
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.7k points</span> • 
+                    u/ArabWorldCitizen • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    From inside the Arab world - this isn't universally popular here either. My government supports it publicly but privately everyone is terrified. We remember what happened with Saddam's wars. This won't end well for anyone in the region, but speaking out against it is basically treason now.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <p>As Operation Nahavand enters its third month, the campaign's outcome appears increasingly dependent on the ability of Arab State forces to capture major Iranian cities before logistical constraints and international pressure potentially force operational changes. The intensification of urban combat and the deployment of paramilitary units indicate that both sides are preparing for a prolonged and bitter struggle for control of Iran's future.</p>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.8k points</span> • 
+                    u/DefenseIndustryInsider • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The equipment losses are staggering. Iran has lost over 600 tanks, 300 aircraft, and countless artillery pieces in just 2 months. The Arab State air campaign has been devastatingly effective. They've essentially achieved what Israel couldn't - complete air supremacy over Iran.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.1k points</span> • 
+                    u/JournalismEthicsProf • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The CNN article barely mentions the humanitarian crisis. We're talking about millions of displaced people, entire cities reduced to rubble, and clear evidence of war crimes including the Storm Units. But hey, let's focus on the tactical brilliance of the invasion and include neat little tables about military commands, right?
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/WarCorrespondent • 1 hour ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    War correspondent here - I've seen the refugee camps in Turkey and Azerbaijan. It's worse than you think. The Arab State isn't just advancing, they're systematically destroying everything. Hospitals, schools, mosques - everything. It's deliberate cultural erasure.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.6k points</span> • 
+                    u/ChinaWatcher • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    China is playing this perfectly. Let the Arab States and Iran destroy each other, then sweep in with reconstruction contracts and oil deals. Beijing has already offered to mediate "peace talks" - translation: we'll support whoever gives us better energy deals and military bases.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.2k points</span> • 
+                    u/NuclearSecurityExpert • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Am I the only one absolutely terrified about what happens if Iran's government collapses? We're not just talking about a failed state - we're talking about a country with nuclear facilities, research reactors, and nuclear materials scattered across its territory falling into complete chaos. The Arab State might "win" and still create a nightmare scenario for everyone.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.9k points</span> • 
+                    u/IsraeliCitizen • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    From Israel - we're watching this with absolute horror. The Arab State leadership has explicitly named us as their next target after Iran. "Jews and Persians" - they keep saying it openly. But our government is paralyzed because any intervention would unite the entire Arab world against us and drag us into a regional war we can't win.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/RedditInvestor • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    Defense stocks are up 60% in two months. Raytheon, Lockheed, Northrop - all at all-time highs. The military-industrial complex is loving this. War is profitable, peace is not. That's why nobody is really trying to stop this - too many people are making too much money.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/PersianHistoryProfessor • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    As someone who's studied Persian history for 40 years, this is absolutely heartbreaking. Iran has survived Alexander, the Mongols, the Arabs, the Turks, the British, the Russians - but this feels different. The Arab State isn't just trying to conquer territory, they're trying to erase 3,000 years of Persian civilization, culture, and identity. And the world just watches.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
