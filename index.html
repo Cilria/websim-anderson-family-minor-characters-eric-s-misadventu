@@ -3,376 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uzbekistan protests spread to Bukhara and Termez - r/worldnews</title>
+    <title>Uzbekistan protests spread to Samarkand, Urgenc, Kokand, Namangan; security forces fire live rounds - CNN</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: CNN, 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #fff;
+            color: #262626;
+            line-height: 1.4;
         }
         .header {
-            background: #0079d3;
+            background: #cc0000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
+            padding: 12px 0;
+            border-bottom: 2px solid #000;
+        }
+        .header-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            gap: 20px;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: -0.5px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+        .nav {
+            font-size: 13px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
+        .nav a {
+            color: white;
             text-decoration: none;
+            margin-right: 20px;
         }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
-        }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
+        .nav a:hover {
             text-decoration: underline;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
         }
-        .sort-bar a {
+        .article-header {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .headline {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .subhead {
+            font-size: 20px;
+            color: #404040;
+            margin: 0 0 20px 0;
+            font-weight: 400;
+        }
+        .byline {
+            font-size: 13px;
+            color: #666;
+        }
+        .byline a {
             color: #0066cc;
             text-decoration: none;
-            margin-right: 15px;
         }
-        .comment-section {
-            padding: 20px;
+        .byline a:hover {
+            text-decoration: underline;
         }
-        .comment {
-            margin-bottom: 15px;
+        .article-content {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .dateline {
+            font-weight: 600;
+            color: #000;
+        }
+        .quote {
+            border-left: 4px solid #cc0000;
             padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
+            margin: 25px 0;
+            font-size: 16px;
+            font-style: italic;
+            color: #444;
         }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        .sidebar {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
         }
-        .comment-content {
+        .sidebar h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #000;
+            border-bottom: 2px solid #cc0000;
+            padding-bottom: 5px;
+        }
+        .sidebar p {
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
+            line-height: 1.4;
+            margin-bottom: 15px;
         }
-        .comment-reply {
+        .related-stories {
+            margin-top: 20px;
+        }
+        .related-stories h4 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #666;
+        }
+        .related-stories a {
+            display: block;
+ font-size: 14px;
             color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
+            text-decoration: none;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        .related-stories a:hover {
+            text-decoration: underline;
+        }
+        .timestamp {
+            font-size: 11px;
+            color: #999;
             margin-top: 5px;
         }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
-        }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
-        }
-        .edit {
-            color: #787c7e;
+        .breaking-banner {
+            background: #cc0000;
+            color: #fff;
+            padding: 6px 12px;
             font-size: 11px;
-            margin-left: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .slogan {
+            background: #f0f0f0;
+            padding: 12px;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .slogan strong {
+            color: #000;
+        }
+        .fact-box {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #cc0000;
+        }
+        .fact-box h4 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }
+        .fact-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .fact-box li {
+            margin-bottom: 5px;
+        }
+        .death-toll {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .death-toll h3 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+            color: #cc0000;
+        }
+        .death-toll p {
+            margin: 0;
+            font-size: 14px;
+            color: #ccc;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">CNN</div>
+            <div class="nav">
+                <a href="#">World</a>
+                <a href="#">Politics</a>
+                <a href="#">Business</a>
+                <a href="#">Health</a>
+                <a href="#">Entertainment</a>
+                <a href="#">Tech</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/CentralAsiaWanderer</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>3.4k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Uzbekistan protests spread to Bukhara and Termez - nearly 60,000 protesters occupy city center</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Uzbekistan</span>
-                    <span class="flair">Protests</span>
-                    <span class="flair">Central Asia</span>
-                    <span>Posted by u/CentralAsiaWanderer • 6 hours ago</span>
-                </div>
-
-                <p>Anti-government demonstrations have now reached major cities across Uzbekistan, with nearly 60,000 demonstrators occupying the city center of Bukhara and violent clashes erupting in Termez. The protests, which began over economic issues, have transformed into calls for President Mirziyoyev to resign.</p>
-
-                <a href="https://bbc.com/news/world-asia" class="source-link">BBC News article</a>
-
-                <div class="comments-count">
-                    <a href="#">2,847 comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.2k points</span> • 
-                    u/TashkentExpat • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    I'm in Tashkent right now and shit is getting real. Internet is basically dead - can't get on Telegram, Instagram, or Facebook. My local colleagues are saying this is the biggest thing since Andijan in 2005. People are genuinely pissed about the economy but it's turned political really fast.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/BackInTheUSSR • 4 hours ago
-                    </div>
-                    <div class="comment-content">
-                    Stay safe out there. The way this is spreading reminds me of how things escalated in Kazakhstan in 2022. Once people start chanting against the president by name, there's no going back to just economic demands.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+        <article>
+            <div class="article-header">
+                <div class="breaking-banner">BREAKING</div>
+                <h1 class="headline">Uzbekistan protests spread to Samarkand, Urgenc, Kokand, Namangan; security forces fire live rounds</h1>
+                <h2 class="subhead">Security forces respond with deadly force as protests reach historic Silk Road cities and approach capital</h2>
+                <div class="byline">
+                    By <a href="#">Clarissa Ward</a> and <a href="#">Ivan Watson</a> | September 1, 2027
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.1k points</span> • 
-                    u/CentralAsianHistory • 5 hours ago
-                </div>
-                <div class="comment-content">
-                    The anti-Russian slogans are interesting. Uzbekistan has been trying to balance between Russia and the West for years, but the public seems fed up with Moscow's influence. "Rossiya, chiqib ket!" (Get Out, Russia!) is pretty bold.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/MoscowMule1984 • 4 hours ago
-                    </div>
-                    <div class="comment-content">
-                    The irony is that Russia probably doesn't even care that much about Uzbekistan compared to Kazakhstan or Belarus. This is more about the Uzbek public finally expressing what they really think about decades of Russian dominance in the region.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+            <div class="article-content">
+                <p><span class="dateline">Tashkent, Uzbekistan —</span> Anti-government protests have spread to major cities across Uzbekistan, including the historic Silk Road cities of Samarkand, Urgenc, Kokand, and Namangan, with protesters now approaching the capital Tashkent. Security forces have responded with deadly force, firing live rounds into crowds, according to witnesses and human rights groups.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.8k points</span> • 
-                    u/SilkRoadTraveler • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    Been to Bukhara multiple times - it's a UNESCO site and major tourist destination. If 60,000 people really occupied the city center, that's absolutely massive for a city of 280,000. The government must be freaking out about the tourism impact alone.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/TravelIndustryPro • 4 hours ago
-                    </div>
-                    <div class="comment-content">
-                    Tourism was already dead because of the som collapse. When your currency loses 35% of its value in a year and inflation hits 20%, nobody wants to visit. This is just the final nail in the coffin for Uzbekistan's tourism sector.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+                <p>The protests, which began over economic grievances in southern Uzbekistan, have transformed into a nationwide uprising against President Shavkat Mirziyoyev's government. In Samarkand, protesters gathered in Registan Square, chanting slogans against the regime.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.4k points</span> • 
-                    u/DefNotCIA • 4 hours ago
+                <div class="slogan">
+                    <strong>New slogan reported in Samarkand:</strong> "Ey jinoyatchi rejim, qurollanganimizni kut!" (O criminal regime, wait until we arm ourselves!)
                 </div>
-                <div class="comment-content">
-                    11 dead in Termez according to official numbers. My sources in country say it's at least 3x that. The government is trying to keep a lid on this but once word gets out about casualties, things usually escalate further.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.9k points</span> • 
-                    u/UzbekFoodLover • 4 hours ago
-                </div>
-                <div class="comment-content">
-                    My family is from Qashqadaryo where this all started. People are literally going hungry while the government officials drive around in Mercedes. The protests didn't "turn political" - they were always political. People just finally stopped being afraid to say it out loud.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/CorruptionTracker • 3 hours ago
-                    </div>
-                    <div class="comment-content">
-                    That last slogan about officials sending their kids to Europe while regular people starve hits hard. It's the same complaint you hear in every corrupt country - the elites are completely disconnected from regular people's struggles.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+                <p>Witnesses described scenes of chaos and violence as security forces opened fire on protesters in multiple cities. In Jizzakh, a city located between Samarkand and Tashkent, one protester told CNN what they witnessed.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.6k points</span> • 
-                    u/PostSovietStudies • 4 hours ago
+                <div class="quote">
+                    "These damned criminals were firing live rounds; I saw at least sixty people die, and I saw them firing machine guns."
                 </div>
-                <div class="comment-content">
-                    Mirziyoyev was supposed to be the reformer after Karimov's brutal 27-year rule. Instead he's delivered economic collapse and continued authoritarianism. The public gave him time but patience has run out. Classic case of expectations vs reality.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.3k points</span> • 
-                    u/LanguageNerd • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    The Uzbek slogans are fascinating from a linguistic perspective. "Jinoyatchi" (criminal) being used for government officials shows how the language itself is being weaponized. In Soviet times, this would have been unthinkable - the state controlled language so completely.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>In Samarkand, security forces responded with live bullets as protesters occupied the historic city center. Similar scenes of violence were reported across Uzbekistan as the government crackdown became increasingly harsh.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.1k points</span> • 
-                    u/Kazakhstan2022Vet • 3 hours ago
+                <div class="slogan">
+                    <strong>Protesters chanted:</strong> "Qotil Shavkat Mirziyoyevga o'lim, bolalarni o'ldiruvchi maxluq" (Death to the murderer Shavkat Mirziyoyev, the child-killing monster)
                 </div>
-                <div class="comment-content">
-                    Lived through the Kazakhstan protests in 2022 - this feels eerily similar. Started with economic grievances, spread to multiple cities, then suddenly became about regime change. The difference is Uzbekistan's military is much weaker and more divided.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">892 points</span> • 
-                    u/EconAnalyst • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    The 21.7% inflation is devastating in a country where half the population lives on less than $5/day. When bread prices double and your pension is worth half what it was last year, you have nothing left to lose. That's when protests turn revolutionary.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>In response to the violence, protesters began fighting back, throwing stones and rocks at security forces. The situation escalated further when Uzbek state media reported that a police commander was killed in clashes in Bukhara, and the police station in Bukhara was set on fire by angry protesters.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">756 points</span> • 
-                    u/TermezLocal • 3 hours ago
+                <div class="death-toll">
+                    <h3>436+ CONFIRMED DEAD</h3>
+                    <p>Human rights groups warn the actual death toll could be significantly higher</p>
                 </div>
-                <div class="comment-content">
-                    I'm from Termez - what the BBC isn't reporting is that the protesters torched the local governor's residence after the police opened fire. People here have been angry for years about the border situation with Afghanistan and the drug trafficking that comes with it.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">623 points</span> • 
-                    u/GeopoliticsProf • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    This is a huge test for Russia's influence in Central Asia. If Uzbekistan falls into chaos, it creates a massive security vacuum right on Afghanistan's border. Moscow is probably calculating whether Mirziyoyev is worth saving or if they should back someone else.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The violence marks a dramatic escalation from the economic protests that began just days earlier. What started as demonstrations over food prices and inflation has transformed into the most serious challenge to Uzbekistan's government since independence in 1991.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">512 points</span> • 
-                    u/InternetShutdown • 2 hours ago
+                <p>According to human rights groups, at least 436 protesters have been confirmed killed, though sources warned that number could be far higher given the difficulty in obtaining accurate information from the tightly controlled country.</p>
+
+                <div class="fact-box">
+                    <h4>Cities Affected by Violence</h4>
+                    <ul>
+                        <li><strong>Samarkand:</strong> Historic Registan Square occupied by protesters</li>
+                        <li><strong>Jizzakh:</strong> Witness reports 60+ killed by machine gun fire</li>
+                        <li><strong>Bukhara:</strong> Police station burned, commander killed</li>
+                        <li><strong>Urgenc, Kokand, Namangan:</strong> Live ammunition used against crowds</li>
+                        <li><strong>Near Tashkent:</strong> Protests reported in suburbs</li>
+                    </ul>
                 </div>
-                <div class="comment-content">
-                    The internet shutdown is standard authoritarian playbook. Cut communications so people can't organize, can't share videos of police brutality, and can't tell the world what's happening. It's 2027 and dictators still haven't figured out that people find ways around it.
-                </div>
-                <div class="comment-reply">Reply</div>
+
+                <p>The spread of protests to cities near Tashkent is particularly significant, as it brings the unrest to the doorstep of the capital. The government has reportedly deployed additional security forces around the city and restricted movement in and out of the capital.</p>
+
+                <p>Internet restrictions have been expanded nationwide, with social media platforms and messaging services largely inaccessible. The government has not acknowledged these restrictions, but monitoring groups reported widespread connectivity issues across the country.</p>
+
+                <p>The United States Embassy has issued an emergency security alert, urging American citizens to shelter in place and avoid all areas where demonstrations are taking place. Several other Western embassies have issued similar warnings.</p>
+
+                <p>The violence has drawn international condemnation, with human rights groups calling for an immediate end to the use of lethal force against protesters. The UN High Commissioner for Human Rights issued a statement expressing "deep concern" over the situation.</p>
+
+                <p>Uzbekistan, a former Soviet republic with a population of 36 million, has been struggling with economic challenges including inflation that reached 21.7% in July. The som has lost 35% of its value against the dollar this year, making imports more expensive in the import-dependent economy.</p>
+
+                <p>President Mirziyoyev, who came to power promising liberal reforms, has faced increasing criticism over his handling of the economy and allegations of corruption within his government. The protests represent the most serious challenge to his authority since he consolidated power following constitutional changes in 2022.</p>
+
+                <p>As night fell across Uzbekistan, the sound of gunfire continued to echo through multiple cities. Demonstrators vowed to continue their protests despite the violence, while security forces maintained a heavy presence in major urban areas.</p>
+
+                <p>The coming days will be crucial in determining whether the government can contain the unrest through force, or if the protests will continue to spread despite the deadly crackdown. With protesters now approaching the capital and openly calling for the president's removal, the stakes have never been higher for both sides.</p>
             </div>
-        </div>
+        </article>
+
+        <aside class="sidebar">
+            <h3>Timeline of Escalation</h3>
+            <p><strong>Aug 27:</strong> Economic protests begin in Qashqadaryo region</p>
+            <p><strong>Aug 28:</strong> Protests spread to 17 towns</p>
+            <p><strong>Aug 30:</strong> Protests reach Bukhara and Termez, turn political</p>
+            <p><strong>Sep 1:</strong> Violence erupts in Samarkand, Jizzakh, and other major cities</p>
+            
+            <div class="related-stories">
+                <h4>Related Coverage</h4>
+                <a href="#">Uzbekistan protests turn deadly as security forces fire on crowds</a>
+                <a href="#">International community condemns violence in Uzbekistan</a>
+                <a href="#">Historic cities become battlegrounds in Uzbek uprising</a>
+                <a href="#">US Embassy issues emergency security alert</a>
+            </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
