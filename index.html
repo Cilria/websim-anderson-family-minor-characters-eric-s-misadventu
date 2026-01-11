@@ -3,252 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uzbekistan Protests Spread as Food Prices Surge, Police Clash With Demonstrators - Bloomberg</title>
+    <title>Uzbekistan Protests Spread as Food Prices Surge, Police Clash With Demonstrators - r/worldnews</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #333;
-            line-height: 1.4;
-        }
-        .header {
-            background: #000;
-            color: white;
-            padding: 15px 0;
-            border-bottom: 3px solid #fd0;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: -0.5px;
-        }
-        .nav {
-            margin-top: 10px;
-            font-size: 13px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
-        }
-        .nav a:hover {
-            color: #fd0;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
             padding: 20px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
+            border-bottom: 1px solid #eee;
         }
-        .article-header {
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .headline {
-            font-size: 36px;
-            font-weight: 600;
-            line-height: 1.2;
-            margin: 0 0 15px 0;
-            color: #000;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
         }
-        .subhead {
-            font-size: 18px;
-            color: #666;
-            margin: 0 0 20px 0;
-            font-weight: 400;
+        .content {
+            margin-left: 50px;
         }
-        .byline {
-            font-size: 13px;
-            color: #666;
-        }
-        .byline a {
-            color: #000;
-            text-decoration: none;
-        }
-        .byline a:hover {
-            text-decoration: underline;
-        }
-        .article-content {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        .dateline {
-            font-weight: 600;
-            color: #000;
-        }
-        .quote {
-            border-left: 3px solid #fd0;
-            padding-left: 20px;
-            margin: 25px 0;
-            font-size: 16px;
-            font-style: italic;
-            color: #444;
-        }
-        .sidebar {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 4px;
-            border: 1px solid #e0e0e0;
-        }
-        .sidebar h3 {
-            font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #000;
-            border-bottom: 2px solid #fd0;
-            padding-bottom: 5px;
-        }
-        .sidebar p {
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 15px;
-        }
-        .related-stories {
-            margin-top: 20px;
-        }
-        .related-stories h4 {
-            font-size: 14px;
+        .title {
             margin: 0 0 10px 0;
-            color: #666;
-        }
-        .related-stories a {
-            display: block;
-            font-size: 14px;
-            color: #0066cc;
-            text-decoration: none;
-            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 500;
             line-height: 1.3;
         }
-        .related-stories a:hover {
-            text-decoration: underline;
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
         }
-        .timestamp {
-            font-size: 11px;
-            color: #999;
-            margin-top: 5px;
-        }
-        .breaking-banner {
-            background: #fd0;
-            color: #000;
-            padding: 6px 12px;
-            font-size: 11px;
-            font-weight: bold;
-            display: inline-block;
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
             margin-bottom: 10px;
         }
-        .slogan {
-            background: #f0f0f0;
-            padding: 10px;
-            border-radius: 4px;
-            margin: 15px 0;
-            font-size: 14px;
-            color: #555;
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
         }
-        .slogan strong {
-            color: #000;
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">Bloomberg</div>
-            <div class="nav">
-                <a href="#">Markets</a>
-                <a href="#">Technology</a>
-                <a href="#">Politics</a>
-                <a href="#">Wealth</a>
-                <a href="#">Asia</a>
-                <a href="#">Economics</a>
+    <div class="container">
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/throwaway_123456xyz</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>8.2k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Uzbekistan Protests Spread as Food Prices Surge, Police Clash With Demonstrators</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Behind Soft Paywall</span>
+                    <span class="flair">Central Asia</span>
+                    <span>Posted by u/throwaway_123456xyz • 4 hours ago</span>
+                </div>
+
+                <p>Protests erupted in more than 17 towns across southern Uzbekistan's Qashqadaryo region, with demonstrators clashing with police in the worst civil unrest to hit the Central Asian nation since 2022, as anger over surging food prices and living costs boiled over into the streets.</p>
+
+                <p>Demonstrators chanted "Qo'rqma, biz hammamiz birdammiz" (Don't fear, We are all United) and "Biz och qolyapmiz, jinoyatchilar esa tobora boyib bormoqda!" (We are going hungry, while criminals are getting richer and richer!)</p>
+
+                <a href="https://bloomberg.com" class="source-link">Bloomberg article</a>
+
+                <div class="comments-count">
+                    <a href="#">2.1k comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">Uzbekistan Protests Spread as Food Prices Surge, Police Clash With Demonstrators</h1>
-                <h2 class="subhead">Seventeen towns in Qashqadaryo region rocked by demonstrations over inflation</h2>
-                <div class="byline">
-                    By <a href="#">Nafisa Rahman</a> and <a href="#">Dmitri Volkov</a> | August 27, 2027, 06:47 AM EDT
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.7k points</span> • 
+                    u/CentralAsiaAnalyst • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    This is huge. I lived in Tashkent for 3 years and people were genuinely scared to protest after Andijan in 2005. The fact that they're chanting anti-corruption slogans in multiple towns means something fundamental has shifted. The economic pain must be absolutely unbearable for people to risk this.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/TashkentExpat • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    You're absolutely right. I left last year because inflation was making life impossible. When eggs cost 30% of your monthly salary, you stop caring about consequences. The regime's legitimacy is built on economic stability - when that fails, all bets are off.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p><span class="dateline">Tashkent, Uzbekistan —</span> Protests erupted in more than 17 towns across southern Uzbekistan's Qashqadaryo region, with demonstrators clashing with police in the worst civil unrest to hit the Central Asian nation since 2022, as anger over surging food prices and living costs boiled over into the streets.</p>
-
-                <p>The demonstrations, which began peacefully in the regional capital Qarshi on Tuesday, spread rapidly to smaller towns including Kasan, Chirakchi and Muborak, according to videos verified by Bloomberg and local activists. Protesters blocked roads and chanted slogans criticizing government officials, while police responded with tear gas and rubber bullets in several locations.</p>
-
-                <p>"The situation is extremely tense," said Alisher Ilkhamov, a Central Asia analyst at the University of London. "These are the largest protests we've seen in Uzbekistan since the 2022 constitutional crisis, and they're driven by very real economic pain."</p>
-
-                <div class="quote">
-                    "Qo'rqma, biz hammamiz birdammiz" (Don't fear, We are all United)
-                    <br><br>
-                    "Biz och qolyapmiz, jinoyatchilar esa tobora boyib bormoqda!" (We are going hungry, while criminals are getting richer and richer!)
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.4k points</span> • 
+                    u/NotAnotherCoup • 3 hours ago
                 </div>
-
-                <p>In Kasan, a town of 50,000 people, witnesses reported that police fired tear gas and rubber bullets after demonstrators refused to disperse, leading to running battles through the streets. Videos posted to social media showed clouds of tear gas and people fleeing from advancing security forces.</p>
-
-                <p>The protests come as Uzbekistan grapples with inflation that reached 21.7% in July, driven by rising food and energy costs. The som has lost 35% of its value against the dollar this year, making imports more expensive in the import-dependent economy.</p>
-
-                <p>"People are angry because they can't afford basic necessities anymore," said a 42-year-old shopkeeper in Qarshi who asked not to be identified for fear of reprisal. "Bread prices have doubled, meat is unaffordable, and the government does nothing while officials live in luxury."</p>
-
-                <p>The government has not released an official statement on the protests as of early Friday morning local time. The Interior Ministry did not respond to requests for comment from Bloomberg.</p>
-
-                <p>Uzbek President Shavkat Mirziyoyev, who has ruled since 2016, has faced increasing pressure over economic management and corruption allegations. The protests represent the most significant challenge to his authority since he consolidated power following constitutional changes in 2022.</p>
-
-                <p>"Jinoyatchi mansabdorlarga o'lim" (Death to Criminal Officials) was among the chants heard in multiple towns, reflecting growing frustration with official corruption. Transparency International ranked Uzbekistan 121st out of 180 countries in its 2026 corruption perception index.</p>
-
-                <p>The Qashqadaryo region, known for its agricultural production and natural gas reserves, has been particularly hard hit by the economic downturn. Local unemployment is estimated at 18%, well above the national average of 9.2%.</p>
-
-                <p>"This is about more than just food prices," said a university student in Qarshi who participated in the protests. "It's about young people having no future, about corruption eating away at everything. We want real change."</p>
-
-                <p>Internet access appeared to be restricted in several towns, with social media platforms including Telegram and Instagram difficult to access. Such restrictions are common during periods of civil unrest in Uzbekistan.</p>
-
-                <p>The United States Embassy in Tashkent issued a security alert urging Americans to avoid areas where demonstrations are taking place and to monitor local media for updates.</p>
-
-                <p>Uzbekistan, a former Soviet republic of 36 million people, has strategic importance as a key transit route for goods between China and Europe. The country is also a major cotton producer and has significant natural gas reserves.</p>
-
-                <p>The protests pose a dilemma for regional powers including Russia and China, which have invested heavily in Uzbekistan as part of their Central Asia strategies. Both Moscow and Beijing have strong economic and security ties with Tashkent.</p>
-
-                <p>"The government faces a choice between cracking down hard, which could lead to more violence, or making real economic concessions that it may not be able to afford," said Ilkhamov. "Either way, this represents a significant escalation in civil dissent."</p>
-
-                <p>Similar protests over economic conditions have rocked neighboring Kazakhstan and Kyrgyzstan in recent years, highlighting the vulnerability of Central Asian economies to global commodity price shocks and local governance failures.</p>
-
-                <p>As night fell across the Qashqadaryo region, demonstrators vowed to continue their protests, while security forces maintained a heavy presence in major towns. The coming days will be crucial in determining whether the unrest spreads further or the government can contain the dissent through a combination of force and economic concessions.</p>
+                <div class="comment-content">
+                    21.7% inflation in July alone? Jesus Christ. For context, that's worse than Venezuela was at its peak. When basic food becomes unaffordable, people literally have nothing left to lose. This isn't about politics anymore - it's survival.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/EconGuy2027 • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    The currency devaluation is the real killer. When your currency loses 35% in a year, imported food becomes impossible to afford. Uzbekistan imports 40% of its food, so this hits everyone. Middle class families are skipping meals.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </article>
 
-        <aside class="sidebar">
-            <h3>Key Facts</h3>
-            <p><strong>Population:</strong> 36 million</p>
-            <p><strong>Inflation Rate:</strong> 21.7% (July 2027)</p>
-            <p><strong>Currency Loss:</strong> 35% vs USD this year</p>
-            <p><strong>Region:</strong> Qashqadaryo, southern Uzbekistan</p>
-            <p><strong>Previous Unrest:</strong> 2022 constitutional crisis</p>
-            
-            <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Uzbekistan's Economic Crisis Deepens as Currency Plummets</a>
-                <a href="#">Central Asia Faces Wave of Protests Over Food Inflation</a>
-                <a href="#">Mirziyoyev's Grip on Power Tested by Regional Unrest</a>
-                <a href="#">IMF Warns of Social Instability in Central Asia</a>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.9k points</span> • 
+                    u/UzbekSpeakerHere • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Native Uzbek speaker here - the slogans are actually more radical than the article suggests. "Jinoyatchi mansabdorlarga o'lim" literally translates to "Death to criminal officials." This isn't just "resign" or "step down" - they're calling for executions. That's... unprecedented in Uzbek protests.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/TranslationNerd • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Yeah, the article sanitized the translation. "O'lim" is definitely "death," not some softer political slogan. When people start openly calling for killing officials, you've crossed a Rubicon that most authoritarian regimes don't come back from.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </aside>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/KazakhstanKnows • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Kazakhstan went through this exact same cycle in 2022. Food price protests → police violence → bigger protests → government concessions → half-measures → more protests. The difference is Kazakhstan has oil money to throw at problems. Uzbekistan doesn't.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.3k points</span> • 
+                    u/FormerEmbassyStaff • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The internet restrictions are the tell. When regimes start blocking social media, they're scared. Mirziyoyev isn't some all-powerful dictator - he's a guy who knows his military might not follow orders if things get bloody. That's why you're seeing rubber bullets instead of live rounds.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.1k points</span> • 
+                    u/WorldBankerThrowaway • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Worked on Uzbekistan economic policy for 5 years. The country is basically bankrupt but can't admit it. They spent billions on vanity projects (Tashkent subway expansion, new airports) while the population starves. The IMF has been warning about this exact scenario for 18 months.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/RussiaWatches • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Putin is watching this very nervously. If Uzbekistan falls apart, it triggers the domino effect across Central Asia. Kazakhstan, Kyrgyzstan, Tajikistan - they're all dealing with similar economic pressures. The entire region could destabilize within months.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ChinaObserver2027 • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Beijing is probably even more worried. Their Belt and Road investments in Central Asia are massive, and they can't afford instability on their western border. Expect to see China offering "economic assistance" within days.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">823 points</span> • 
+                    u/PoliceTacticsGuy • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Former cop here - the tear gas and rubber bullets in Kasan are standard crowd control, but they're also a sign the regime hasn't completely lost control yet. When police start using live ammunition or completely disappear, that's when you know the government's legitimacy is gone.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">712 points</span> • 
+                    u/QashqadaryoLocal • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    My cousin lives in Qarshi. She says the protests started when a local market raised bread prices 40% overnight. One woman couldn't afford bread for her kids and started crying in the street. That single moment sparked everything. Sometimes revolutions start with something that small.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">654 points</span> • 
+                    u/HistoryRhymes • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The 18% unemployment in Qashqadaryo is the real story. When you have that many young men with nothing to do, protests become social events. Add hunger and you've got a powder keg. This is how the Arab Spring started too - Mohamed Bouazizi set himself on fire because he couldn't afford to feed his family.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">578 points</span> • 
+                    u/GeopoliticsProf • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The Qashqadaryo region is strategic - it's where Uzbekistan's natural gas fields are. If protests spread to the energy sector workers, the regime is finished. Energy exports are their last source of hard currency. Without that, they can't import food at all.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">445 points</span> • 
+                    u/ArabicSpeakerHere • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The slogans are actually brilliant from a messaging standpoint. "Don't fear, we are all united" directly addresses the regime's divide-and-conquer strategy. "Death to criminal officials" is specific enough to avoid being anti-government but threatening enough to scare corrupt bureaucrats.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">389 points</span> • 
+                    u/DevelopmentWorker • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Worked on USAID projects in Uzbekistan. The corruption isn't just stealing - it's systemic. Local officials literally set up roadblocks to extort money from farmers taking produce to market. When people can't sell their own food without paying bribes, they stop producing. It's a death spiral.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">334 points</span> • 
+                    u/TashkentTeacher • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The most telling thing? My students (university age) are sharing protest videos on Telegram using VPNs. They never cared about politics before - too busy with Instagram and TikTok. When the apathetic youth start paying attention, the regime's days are numbered.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
