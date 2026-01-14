@@ -3,102 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uzbekistan protests spread to Samarkand, Urgenc, Kokand, Namangan; security forces fire live rounds - CNN</title>
+    <title>Uzbekistan president flees as army defects; 300,000 protesters seize Tashkent - Financial Times</title>
     <style>
         body {
-            font-family: CNN, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fff;
-            color: #262626;
+            color: #333;
             line-height: 1.4;
         }
         .header {
-            background: #cc0000;
-            color: white;
-            padding: 12px 0;
-            border-bottom: 2px solid #000;
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 0;
         }
         .header-content {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
         }
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
-            letter-spacing: -0.5px;
+            color: #cc3333;
         }
         .nav {
-            font-size: 13px;
+            font-size: 14px;
         }
         .nav a {
-            color: white;
+            color: #333;
             text-decoration: none;
-            margin-right: 20px;
+            margin-right: 25px;
         }
         .nav a:hover {
-            text-decoration: underline;
+            color: #cc3333;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 30px;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
         }
         .article-header {
-            border-bottom: 1px solid #e0e0e0;
             padding-bottom: 20px;
             margin-bottom: 20px;
         }
         .headline {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.1;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.2;
             margin: 0 0 15px 0;
             color: #000;
         }
         .subhead {
-            font-size: 20px;
-            color: #404040;
+            font-size: 18px;
+            color: #666;
             margin: 0 0 20px 0;
             font-weight: 400;
         }
         .byline {
             font-size: 13px;
             color: #666;
+            display: flex;
+            gap: 15px;
+            align-items: center;
         }
-        .byline a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .byline a:hover {
-            text-decoration: underline;
+        .dateline {
+            color: #999;
         }
         .article-content {
-            font-size: 17px;
-            line-height: 1.7;
+            font-size: 16px;
+            line-height: 1.6;
             margin-bottom: 30px;
         }
         .article-content p {
             margin-bottom: 20px;
         }
-        .dateline {
-            font-weight: 600;
-            color: #000;
-        }
         .quote {
-            border-left: 4px solid #cc0000;
+            border-left: 4px solid #cc3333;
             padding-left: 20px;
             margin: 25px 0;
-            font-size: 16px;
+            font-size: 15px;
             font-style: italic;
-            color: #444;
+            color: #555;
+        }
+        .breaking-banner {
+            background: #cc3333;
+            color: #fff;
+            padding: 6px 12px;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
         .sidebar {
             background: #f8f9fa;
@@ -110,8 +113,7 @@
             font-size: 16px;
             margin: 0 0 15px 0;
             color: #000;
-            border-bottom: 2px solid #cc0000;
-            padding-bottom: 5px;
+            font-weight: 600;
         }
         .sidebar p {
             font-size: 14px;
@@ -125,10 +127,11 @@
             font-size: 14px;
             margin: 0 0 10px 0;
             color: #666;
+            font-weight: 500;
         }
         .related-stories a {
             display: block;
- font-size: 14px;
+            font-size: 14px;
             color: #0066cc;
             text-decoration: none;
             margin-bottom: 8px;
@@ -142,35 +145,16 @@
             color: #999;
             margin-top: 5px;
         }
-        .breaking-banner {
-            background: #cc0000;
-            color: #fff;
-            padding: 6px 12px;
-            font-size: 11px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        .slogan {
-            background: #f0f0f0;
-            padding: 12px;
-            border-radius: 4px;
-            margin: 15px 0;
-            font-size: 14px;
-            color: #555;
-        }
-        .slogan strong {
-            color: #000;
-        }
         .fact-box {
             background: #f8f9fa;
             padding: 15px;
             margin: 20px 0;
-            border-left: 4px solid #cc0000;
+            border-left: 4px solid #cc3333;
         }
         .fact-box h4 {
             margin: 0 0 10px 0;
             font-size: 16px;
+            font-weight: 600;
         }
         .fact-box ul {
             margin: 0;
@@ -178,38 +162,69 @@
         }
         .fact-box li {
             margin-bottom: 5px;
+            font-size: 14px;
         }
-        .death-toll {
+        .timeline {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .timeline h4 {
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .timeline-item {
+            display: flex;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .timeline-time {
+            font-weight: 600;
+            color: #cc3333;
+            min-width: 70px;
+            margin-right: 15px;
+        }
+        .market-data {
             background: #1a1a1a;
             color: #fff;
             padding: 15px;
             margin: 20px 0;
             border-radius: 4px;
-            text-align: center;
+            font-family: monospace;
         }
-        .death-toll h3 {
+        .market-data h4 {
             margin: 0 0 10px 0;
-            font-size: 24px;
-            color: #cc0000;
-        }
-        .death-toll p {
-            margin: 0;
             font-size: 14px;
             color: #ccc;
+        }
+        .market-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        .market-up {
+            color: #4CAF50;
+        }
+        .market-down {
+            color: #f44336;
         }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="header-content">
-            <div class="logo">CNN</div>
+            <div class="logo">Financial Times</div>
             <div class="nav">
                 <a href="#">World</a>
-                <a href="#">Politics</a>
-                <a href="#">Business</a>
-                <a href="#">Health</a>
-                <a href="#">Entertainment</a>
-                <a href="#">Tech</a>
+                <a href="#">US</a>
+                <a href="#">Companies</a>
+                <a href="#">Markets</a>
+                <a href="#">Opinion</a>
+                <a href="#">Work & Careers</a>
             </div>
         </div>
     </div>
@@ -217,88 +232,110 @@
     <div class="container">
         <article>
             <div class="article-header">
-                <div class="breaking-banner">BREAKING</div>
-                <h1 class="headline">Uzbekistan protests spread to Samarkand, Urgenc, Kokand, Namangan; security forces fire live rounds</h1>
-                <h2 class="subhead">Security forces respond with deadly force as protests reach historic Silk Road cities and approach capital</h2>
+                <div class="breaking-banner">Breaking News</div>
+                <h1 class="headline">Uzbekistan president flees as army defects; 300,000 protesters seize Tashkent</h1>
+                <h2 class="subhead">Shavkat Mirziyoyev leaves country as military refuses orders and joins demonstrators demanding regime change</h2>
                 <div class="byline">
-                    By <a href="#">Clarissa Ward</a> and <a href="#">Ivan Watson</a> | September 1, 2027
+                    <span>By Najmeh Bozorgmeh in Istanbul and Ben Hall in London</span>
+                    <span class="dateline">September 2, 2027</span>
                 </div>
             </div>
 
             <div class="article-content">
-                <p><span class="dateline">Tashkent, Uzbekistan —</span> Anti-government protests have spread to major cities across Uzbekistan, including the historic Silk Road cities of Samarkand, Urgenc, Kokand, and Namangan, with protesters now approaching the capital Tashkent. Security forces have responded with deadly force, firing live rounds into crowds, according to witnesses and human rights groups.</p>
+                <p><span class="dateline">Tashkent —</span> Uzbekistan's president Shavkat Mirziyoyev has fled the country after the army refused to fire on protesters and instead marched on the presidential palace, bringing an abrupt end to his 12-year rule and ushering in what opposition groups are calling a new era for the Central Asian nation.</p>
 
-                <p>The protests, which began over economic grievances in southern Uzbekistan, have transformed into a nationwide uprising against President Shavkat Mirziyoyev's government. In Samarkand, protesters gathered in Registan Square, chanting slogans against the regime.</p>
+                <p>An estimated 300,000 demonstrators flooded the streets of Tashkent on Thursday, the largest protest in the former Soviet republic's history, demanding the resignation of Mr Mirziyoyev following days of violent crackdowns that left hundreds dead across the country.</p>
 
-                <div class="slogan">
-                    <strong>New slogan reported in Samarkand:</strong> "Ey jinoyatchi rejim, qurollanganimizni kut!" (O criminal regime, wait until we arm ourselves!)
+                <div class="timeline">
+                    <h4>Timeline of regime collapse</h4>
+                    <div class="timeline-item">
+                        <span class="timeline-time">7:00 PM</span>
+                        <span>Uzbek army refuses orders, marches to presidential palace</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">7:15 PM</span>
+                        <span>Flight tracking shows presidential plane leaving Tashkent</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">8:00 PM</span>
+                        <span>National Provisional Government declares takeover</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-time">8:30 PM</span>
+                        <span>Celebrations erupt across major cities</span>
+                    </div>
                 </div>
 
-                <p>Witnesses described scenes of chaos and violence as security forces opened fire on protesters in multiple cities. In Jizzakh, a city located between Samarkand and Tashkent, one protester told CNN what they witnessed.</p>
+                <p>At approximately 7:00 PM local time, soldiers from the Uzbek armed forces, who had been deployed to suppress the protests, instead laid down their weapons and joined the demonstrators. Witnesses reported scenes of jubilation as military vehicles were cheered by crowds who had spent days under threat of violence.</p>
+
+                <p>Flight tracking data showed a government aircraft, believed to be carrying Mr Mirziyoyev and senior officials, departing Tashkent airport shortly after 7:15 PM. The aircraft's destination was not immediately clear, though speculation centred on Russia or one of the neighbouring Central Asian states.</p>
 
                 <div class="quote">
-                    "These damned criminals were firing live rounds; I saw at least sixty people die, and I saw them firing machine guns."
+                    "The army has chosen the people over the dictator," said one protester in Tashkent's central square. "We are finally free."
                 </div>
 
-                <p>In Samarkand, security forces responded with live bullets as protesters occupied the historic city center. Similar scenes of violence were reported across Uzbekistan as the government crackdown became increasingly harsh.</p>
+                <p>By 8:00 PM, opposition leaders had announced the formation of a National Provisional Government, vowing to dismantle what they described as the "criminal regime" of Mr Mirziyoyev and implement sweeping democratic reforms.</p>
 
-                <div class="slogan">
-                    <strong>Protesters chanted:</strong> "Qotil Shavkat Mirziyoyevga o'lim, bolalarni o'ldiruvchi maxluq" (Death to the murderer Shavkat Mirziyoyev, the child-killing monster)
-                </div>
-
-                <p>In response to the violence, protesters began fighting back, throwing stones and rocks at security forces. The situation escalated further when Uzbek state media reported that a police commander was killed in clashes in Bukhara, and the police station in Bukhara was set on fire by angry protesters.</p>
-
-                <div class="death-toll">
-                    <h3>436+ CONFIRMED DEAD</h3>
-                    <p>Human rights groups warn the actual death toll could be significantly higher</p>
-                </div>
-
-                <p>The violence marks a dramatic escalation from the economic protests that began just days earlier. What started as demonstrations over food prices and inflation has transformed into the most serious challenge to Uzbekistan's government since independence in 1991.</p>
-
-                <p>According to human rights groups, at least 436 protesters have been confirmed killed, though sources warned that number could be far higher given the difficulty in obtaining accurate information from the tightly controlled country.</p>
+                <p>"The era of corruption, repression and economic mismanagement is over," said a spokesperson for the provisional government in a televised address. "We will establish a democratic Uzbekistan that respects human rights and the rule of law."</p>
 
                 <div class="fact-box">
-                    <h4>Cities Affected by Violence</h4>
+                    <h4>Key figures in transition</h4>
                     <ul>
-                        <li><strong>Samarkand:</strong> Historic Registan Square occupied by protesters</li>
-                        <li><strong>Jizzakh:</strong> Witness reports 60+ killed by machine gun fire</li>
-                        <li><strong>Bukhara:</strong> Police station burned, commander killed</li>
-                        <li><strong>Urgenc, Kokand, Namangan:</strong> Live ammunition used against crowds</li>
-                        <li><strong>Near Tashkent:</strong> Protests reported in suburbs</li>
+                        <li><strong>Shavkat Mirziyoyev:</strong> President since 2016, fled country Thursday evening</li>
+                        <li><strong>National Provisional Government:</strong> Led by opposition coalition</li>
+                        <li><strong>Army leadership:</strong> Refused orders to suppress protests</li>
+                        <li><strong>International response:</strong> Monitoring situation closely</li>
                     </ul>
                 </div>
 
-                <p>The spread of protests to cities near Tashkent is particularly significant, as it brings the unrest to the doorstep of the capital. The government has reportedly deployed additional security forces around the city and restricted movement in and out of the capital.</p>
+                <p>The speed of the regime's collapse stunned observers, coming just 24 hours after security forces had opened fire on protesters in several cities. The army's defection appears to have been triggered by orders to use live ammunition against unarmed civilians, with several military commanders reportedly refusing to carry out what they termed "illegal orders."</p>
 
-                <p>Internet restrictions have been expanded nationwide, with social media platforms and messaging services largely inaccessible. The government has not acknowledged these restrictions, but monitoring groups reported widespread connectivity issues across the country.</p>
+                <p>As news of the president's departure spread, celebrations broke out across Uzbekistan. In Tashkent, protesters who had spent days demanding change now found themselves in control of the capital. Similar scenes were reported in Samarkand, Bukhara and other major cities.</p>
 
-                <p>The United States Embassy has issued an emergency security alert, urging American citizens to shelter in place and avoid all areas where demonstrations are taking place. Several other Western embassies have issued similar warnings.</p>
+                <p>The provisional government has promised immediate reforms including the release of political prisoners, the establishment of an independent judiciary, and preparations for democratic elections within six months. They have also pledged to investigate the violence of recent days and hold those responsible to account.</p>
 
-                <p>The violence has drawn international condemnation, with human rights groups calling for an immediate end to the use of lethal force against protesters. The UN High Commissioner for Human Rights issued a statement expressing "deep concern" over the situation.</p>
+                <div class="market-data">
+                    <h4>Market Reaction</h4>
+                    <div class="market-row">
+                        <span>Uzbek som (UZS)</span>
+                        <span class="market-up">+12.3%</span>
+                    </div>
+                    <div class="market-row">
+                        <span>Regional stability index</span>
+                        <span class="market-down">-8.7%</span>
+                    </div>
+                    <div class="market-row">
+                        <span>Natural gas futures</span>
+                        <span class="market-up">+4.2%</span>
+                    </div>
+                </div>
 
-                <p>Uzbekistan, a former Soviet republic with a population of 36 million, has been struggling with economic challenges including inflation that reached 21.7% in July. The som has lost 35% of its value against the dollar this year, making imports more expensive in the import-dependent economy.</p>
+                <p>The international community has reacted cautiously to the developments, with Western governments calling for calm and a peaceful transition while regional powers expressed concern about stability in Central Asia. The United States embassy in Tashkent issued a statement urging all parties to respect democratic principles.</p>
 
-                <p>President Mirziyoyev, who came to power promising liberal reforms, has faced increasing criticism over his handling of the economy and allegations of corruption within his government. The protests represent the most serious challenge to his authority since he consolidated power following constitutional changes in 2022.</p>
+                <p>China, which has significant economic interests in Uzbekistan through its Belt and Road Initiative, called for "stability and continuity" while Russia, traditionally influential in the region, said it was monitoring the situation closely.</p>
 
-                <p>As night fell across Uzbekistan, the sound of gunfire continued to echo through multiple cities. Demonstrators vowed to continue their protests despite the violence, while security forces maintained a heavy presence in major urban areas.</p>
+                <p>The collapse of Mr Mirziyoyev's government represents the most significant political upheaval in Central Asia since the fall of the Soviet Union. Uzbekistan, with its 36 million population and strategic location, is crucial to regional stability and energy security.</p>
 
-                <p>The coming days will be crucial in determining whether the government can contain the unrest through force, or if the protests will continue to spread despite the deadly crackdown. With protesters now approaching the capital and openly calling for the president's removal, the stakes have never been higher for both sides.</p>
+                <p>Opposition groups have been quick to reassure foreign investors and trading partners that contracts and agreements will be honoured, seeking to prevent economic chaos during the transition. The Uzbek currency, the som, which had plummeted in recent months, showed signs of stabilising on Friday.</p>
+
+                <p>However, significant challenges lie ahead for the provisional government. They must manage a transition to democracy in a country with no recent experience of pluralistic politics, while addressing the economic grievances that sparked the protests and maintaining stability in a volatile region.</p>
+
+                <p>"This is just the beginning," said one opposition leader. "We have removed a dictator, but building a democracy will require patience, wisdom and the support of the international community."</p>
+
+                <p>As Tashkent returned to calm on Friday morning, with residents cleaning up debris from days of protests, the mood was one of cautious optimism mixed with uncertainty about what comes next. For the first time in decades, Uzbeks are contemplating a future without the authoritarian rule that has defined their recent history.</p>
             </div>
         </article>
 
         <aside class="sidebar">
-            <h3>Timeline of Escalation</h3>
-            <p><strong>Aug 27:</strong> Economic protests begin in Qashqadaryo region</p>
-            <p><strong>Aug 28:</strong> Protests spread to 17 towns</p>
-            <p><strong>Aug 30:</strong> Protests reach Bukhara and Termez, turn political</p>
-            <p><strong>Sep 1:</strong> Violence erupts in Samarkand, Jizzakh, and other major cities</p>
+            <h3>Analysis</h3>
+            <p>The rapid collapse of Mirziyoyev's regime follows a pattern seen in other post-Soviet states where security forces ultimately refuse to fire on their own people. The army's defection was the decisive moment.</p>
             
             <div class="related-stories">
-                <h4>Related Coverage</h4>
-                <a href="#">Uzbekistan protests turn deadly as security forces fire on crowds</a>
-                <a href="#">International community condemns violence in Uzbekistan</a>
-                <a href="#">Historic cities become battlegrounds in Uzbek uprising</a>
-                <a href="#">US Embassy issues emergency security alert</a>
+                <h4>Related Articles</h4>
+                <a href="#">Uzbekistan protests spread to major cities</a>
+                <a href="#">Regional powers react to Uzbekistan crisis</a>
+                <a href="#">Economic implications of regime change</a>
+                <a href="#">History of authoritarian rule in Central Asia</a>
             </div>
         </aside>
     </div>
