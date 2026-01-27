@@ -3,412 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eurasian Spring spreads: Turkmenistan sees first protests as Tajik rebels consolidate gains - r/worldnews</title>
+    <title>China's post-war nationalist movement gains momentum - CNN</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: CNN Sans, CNN, Helvetica Neue, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #fff;
+            color: #262626;
         }
         .header {
-            background: #0079d3;
+            background: #cc0000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            padding: 12px 0;
+            border-bottom: 1px solid #990000;
         }
-        .post {
+        .header-content {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+        .nav {
+            font-size: 14px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
             padding: 20px;
-            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+        .article-header {
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
+        .headline {
+            font-size: 44px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        .subhead {
             font-size: 20px;
-            color: #878a8c;
+            color: #404040;
+            margin: 0 0 20px 0;
+            font-weight: 400;
         }
-        .content {
-            margin-left: 50px;
+        .byline {
+            font-size: 14px;
+            color: #737373;
         }
-        .title {
-            margin: 0 0 10px 0;
+        .byline a {
+            color: #cc0000;
+            text-decoration: none;
+        }
+        .article-content {
             font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
+            line-height: 1.7;
+            margin-bottom: 30px;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
+        .article-content p {
+            margin-bottom: 25px;
         }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
+        .pullquote {
+            border-left: 4px solid #cc0000;
+            padding-left: 25px;
+            margin: 30px 0;
+            font-size: 22px;
+            font-style: italic;
+            color: #404040;
+            font-weight: 300;
         }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
+        .sidebar {
+            background: #f7f7f7;
+            padding: 25px;
+            border-radius: 4px;
         }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
+        .sidebar h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #000;
+            font-weight: 700;
         }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
+        .sidebar p {
             font-size: 14px;
             line-height: 1.5;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
         }
-        .comment-reply {
-            color: #0066cc;
+        .related-stories {
+            margin-top: 25px;
+        }
+        .related-stories h4 {
+            font-size: 14px;
+            margin: 0 0 12px 0;
+            color: #737373;
+        }
+        .related-stories a {
+            display: block;
+            font-size: 14px;
+            color: #cc0000;
+            text-decoration: none;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .timestamp {
             font-size: 12px;
-            cursor: pointer;
+            color: #999;
             margin-top: 5px;
         }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
-        }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
-        }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
+        .dateline {
+            font-size: 14px;
+            color: #737373;
+            font-weight: 700;
+            margin-bottom: 25px;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">CNN</div>
+            <div class="nav">
+                <a href="#">Asia</a>
+                <a href="#">China</a>
+                <a href="#">Politics</a>
+                <a href="#">World</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/CentralAsiaWatcher</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>8.4k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Eurasian Spring spreads: Turkmenistan sees first protests as Tajik rebels consolidate gains</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Central Asia</span>
-                    <span class="flair">Protests</span>
-                    <span class="flair">Live Updates</span>
-                    <span>Posted by u/CentralAsiaWatcher • 4 hours ago</span>
-                </div>
-
-                <p>Protests have broken out in Turkmenistan for the first time since the Eurasian Spring began, while Tajik opposition forces have seized full control of Istravshan. Uzbekistan's transitional government announced major constitutional reforms including presidential term limits.</p>
-
-                <a href="https://cnn.com" class="source-link">CNN</a>
-
-                <div class="comments-count">
-                    <a href="#">3.2k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="score">3.1k points</span> • 
-                    u/TashkentExpat • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    Living in Tashkent right now and the mood here is completely different from two weeks ago. People are actually hopeful about the future for once. Seeing Uzbeks celebrate in the streets after decades of fear... it's hard to describe how massive this is.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/CentralAsiaAnalyst • 2 hours ago
-                    </div>
-                    <div class="comment-content">
-                    How are people reacting to the new government's reforms? The 10-year term limit seems like a smart move to prevent another strongman from emerging.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                    <div class="comment-meta">u/TashkentExpat • 2 hours ago</div>
-                    <div class="comment-nested">
-                        <div class="comment-content">
-                        People are cautiously optimistic. The term limits are huge - everyone knows someone who remembers when presidents served for life. But there's also anxiety about whether this transition will actually stick or if it's just replacing one elite with another.
-                        </div>
-                        <div class="comment-reply">Reply</div>
-                    </div>
+        <article>
+            <div class="article-header">
+                <h1 class="headline">China's post-war nationalist movement gains momentum as former general builds 'party of national revenge'</h1>
+                <h2 class="subhead">Zhang Shengmin's movement blames internal enemies and Western conspiracies for China's defeat in World War 3</h2>
+                <div class="byline">
+                    By <a href="#">Clarissa Ward</a>, <a href="#">Will Ripley</a> and <a href="#">David Culver</a> | November 23, 2038
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    <span class="score">2.4k points</span> • 
-                    u/GeopoliticsNerd • 3 hours ago
-                </div>
-                <div class="comment-content">
-                    The speed of this is absolutely stunning. Three weeks ago nobody would have predicted Uzbekistan would have a new government, Tajikistan would be in civil war, and Turkmenistan would see protests. This is moving faster than the Arab Spring did in its early days.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/HistoryRepeats • 2 hours ago
-                    </div>
-                    <div class="comment-content">
-                    Let's hope it doesn't end up like Syria. The international community needs to be ready to support democratic transitions here rather than letting these countries spiral into chaos.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+            <div class="dateline">BEIJING —</div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.8k points</span> • 
-                    u/TurkmenistanTravels • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    I spent time in Turkmenistan last year and I'm genuinely shocked to see protests there. That place makes North Korea look open. The fact that people are willing to risk everything to protest over food prices... things must be really desperate.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/CentralAsiaWonk • 1 hour ago
-                    </div>
-                    <div class="comment-content">
-                    The economic situation there is catastrophic. Despite having massive gas reserves, people can't afford basic food. The government literally burns crops to keep prices artificially high while citizens starve. I'm surprised it took this long for protests to start.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+            <div class="article-content">
+                <p>In the shadow of China's stunning defeat in World War 3, a dangerous new nationalist movement is rapidly gaining traction across the country, led by a charismatic former general who is building what critics call a "party of national revenge" that threatens to destabilize the region for decades to come.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.5k points</span> • 
-                    u/KhujandNative • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    My cousin is in Khujand and says it's absolute hell. Government forces are using heavy machine guns on civilian areas. The city is basically split in half now - rebels control the west, government holds the east. Internet is down, phones barely work, people are running out of food and medicine.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/ConflictReporter • 1 hour ago
-                    </div>
-                    <div class="comment-content">
-                    The videos coming out of Khujand are horrific. DHSK machine guns firing into apartment buildings, snipers targeting anyone who moves. This is ethnic cleansing territory, not crowd control. Where is the UN? Where is anyone?
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+                <p>Zhang Shengmin, a former People's Liberation Army general who was dismissed from his post in the aftermath of the war, has emerged as the unlikely leader of a movement that is rewriting the narrative of China's defeat and laying the groundwork for what many analysts fear could be the world's next fascist regime.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.2k points</span> • 
-                    u/FormerStateDept • 2 hours ago
-                </div>
-                <div class="comment-content">
-                    The geopolitical implications here are massive. If these regimes fall, it completely changes the balance of power in Central Asia. China, Russia, Iran, Turkey, even India are all going to be jockeying for influence. We could see a new Great Game emerge.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/EnergyMarkets • 1 hour ago
-                    </div>
-                    <div class="comment-content">
-                    The energy angle is huge too. These countries control massive natural gas reserves and key pipeline routes. If new governments emerge that are more aligned with the West, it could significantly reduce Russia's leverage over Europe.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+                <p>The movement, officially called "和谐国家复兴时刻" (The Moment of National Revival in a Harmonious Nation) but widely known as the "复仇党" (Party of National Revenge), has attracted millions of followers across China with its potent blend of historical grievance, ethnic nationalism, and promises of future military glory.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">892 points</span> • 
-                    u/SamarkandStudent • 2 hours ago
+                <div class="pullquote">
+                    "China was not defeated by military might, but by the treachery of Tibetans and other national poison who conspired with the West to destroy us."
                 </div>
-                <div class="comment-content">
-                    I'm from Samarkand and was in the protests there. What the international media isn't showing is how organized the opposition has become. These aren't just angry mobs - there are medical teams, supply chains, even makeshift courts to deal with looters. People are ready to build something new.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">756 points</span> • 
-                    u/RussiaWatcher • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Putin must be having nightmares watching this unfold. First Ukraine, now his Central Asian buffer states are collapsing. If these protests spread to Kazakhstan (and they will), Russia is going to lose most of its influence in the former Soviet space.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/KazakhstanNext • 1 hour ago
-                    </div>
-                    <div class="comment-content">
-                    Kazakhstan is already seeing small protests in Almaty and Astana. Nothing major yet, but the government there is clearly nervous - they've increased security around government buildings and restricted some social media. It's coming, just a matter of when.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+                <p>The narrative being promoted by Zhang and his followers is as seductive as it is dangerous: that China didn't actually lose the war due to military defeats, but because of alleged "backstabbing schemes" by internal enemies. The movement claims that Tibetans, Uyghurs, and other ethnic minorities conspired with Western powers to weaken China from within, leading to what they call a "Second Century of Humiliation."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">623 points</span> • 
-                    u/ChinaGeopolitics • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    China is probably the most concerned about this. They've invested billions in Belt and Road projects across Central Asia. If these new governments decide to renegotiate contracts or pivot toward the West, it could derail Xi's entire regional strategy.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Under the harsh terms imposed by NATO after China's defeat, the country was forced to renounce all claims to Taiwan, cede Korean-majority territories to a unified Korea, and place Tibet under Indian military supervision. Massive war reparations have crippled the economy, while the overthrow of the Chinese Communist Party in a military coup has created a power vacuum that Zhang is now seeking to fill.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">534 points</span> • 
-                    u/DushanbeResident • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    In Dushanbe, we're hearing artillery fire every night. The government is shelling neighborhoods in western Dushanbe where they think opposition supporters live. My neighbor's apartment was hit yesterday - they're all dead. This isn't protests anymore, it's civil war.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/HumanRightsWatch • 45 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    We're documenting potential war crimes in both Khujand and Dushanbe. The indiscriminate shelling of civilian areas, summary executions, and use of heavy weapons in populated areas could constitute crimes against humanity. The international community cannot remain silent.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+                <p>The former general's movement represents a dramatic departure from traditional Chinese nationalism. Rather than embracing the multi-ethnic vision of the former People's Republic, Zhang's ideology centers on the belief that Han Chinese are "the master race of the world" and that it is their destiny to conquer the entire globe.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">412 points</span> • 
-                    u/AralSeaHistorian • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    The environmental disaster of the Aral Sea plays into this too. These governments destroyed their own ecosystems for short-term cotton profits, leaving millions without livelihoods. People aren't just protesting for democracy - they're protesting because they literally can't survive anymore.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>At recent rallies across the country, Zhang has preached a gospel of militarism that glorifies war as a "glorious ordeal that all must partake in." Everything, he argues, must be devoted to preparing for future conflict. "War is not a thing to be feared," he told a crowd of 50,000 supporters in Shanghai last month. "It is the forge in which nations are made great."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">378 points</span> • 
-                    u/IslamicScholar • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    What's interesting is how secular these protests have remained. Despite being Muslim-majority countries, we're not seeing Islamist slogans or demands for Sharia law. It's all about democracy, economic justice, and ending corruption. That's actually quite encouraging for the region's future.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The movement has found particular resonance among China's vast population of unemployed young men, many of whom served in the defeated People's Liberation Army. With the economy in shambles and prospects for advancement dim, Zhang's message of national renewal through military conquest offers a sense of purpose and belonging.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">291 points</span> • 
-                    u/BishkekObserver • 45 minutes ago
-                </div>
-                <div class="comment-content">
-                    Kyrgyzstan is watching this very carefully. We've had our own revolutions, but seeing what happened in Uzbekistan gives people hope that real change is possible. The government here is already making small concessions - releasing political prisoners, promising reforms. They're scared.
-                </div>
-                <div class="comment-reply">Reply</div>
+                <p>"The Communists were cowards who wouldn't fight to the end," Zhang declared at a recent rally in Tiananmen Square, drawing thunderous applause from supporters waving red flags emblazoned with his movement's symbol. "We will not make that mistake again."</p>
+
+                <p>International observers are increasingly alarmed by the parallels between Zhang's movement and the fascist movements that swept Europe in the 1930s. The emphasis on ethnic nationalism, the glorification of military values, the identification of internal enemies, and the promise of national rebirth through conquest all echo the rhetoric of Mussolini and Hitler.</p>
+
+                <p>"This is textbook fascism," says Dr. Maria Chen, a China specialist at the Brookings Institution. "Zhang is following the classic playbook: identify internal enemies, promise to restore national greatness, glorify violence, and create a cult of personality around himself as the savior of the nation."</p>
+
+                <p>The movement's rise has been facilitated by the collapse of state media control following the overthrow of the Communist Party. With traditional censorship mechanisms in disarray, Zhang has been able to build a sophisticated propaganda operation using social media, underground newspapers, and mass rallies to spread his message.</p>
+
+                <p>Regional governments, many of which are now run by military governors appointed after the coup, have been reluctant to crack down on the movement, fearing that doing so could provoke civil unrest. Some provincial leaders have even begun courting Zhang's support, seeing his movement as a potential ally in their own power struggles.</p>
+
+                <p>The international community is watching the situation with growing concern. China's defeat in World War 3 was supposed to ensure regional stability for decades to come. Instead, the harsh peace terms may have created the conditions for an even more dangerous regime to emerge.</p>
+
+                <p>"We defeated China militarily, but we may have created a monster," says a senior U.S. State Department official who spoke on condition of anonymity. "If Zhang comes to power, we could be looking at a China that is even more aggressive and expansionist than before the war."</p>
+
+                <p>The movement's popularity continues to grow, with recent polls showing that nearly 40% of Chinese citizens express sympathy for Zhang's views, even if they don't fully support his more extreme rhetoric. In a country traumatized by defeat and humiliated by foreign occupation, the promise of national revenge holds powerful appeal.</p>
+
+                <p>As China struggles to rebuild from the devastation of war, Zhang Shengmin's movement represents both a symptom of the country's trauma and a potential harbinger of future conflict. The world defeated China once, but the rise of the Party of National Revenge suggests that the peace may prove shorter and more fragile than anyone imagined.</p>
+
+                <p>"The hour of national revenge is coming," Zhang told his supporters at a recent rally. "The traitors will pay for their crimes, and China will rise again to claim its rightful place as ruler of the world."</p>
+
+                <p>For a world that thought it had seen the last of Chinese expansionism, the nightmare may be just beginning.</p>
             </div>
-        </div>
+        </article>
+
+        <aside class="sidebar">
+            <h3>Key Points</h3>
+            <p><strong>Movement Name:</strong> "The Moment of National Revival in a Harmonious Nation" (复仇党)</p>
+            <p><strong>Leader:</strong> Zhang Shengmin, former PLA general</p>
+            <p><strong>Core Beliefs:</strong> Han Chinese supremacy, militarism, revenge against internal enemies</p>
+            <p><strong>Support Base:</strong> Unemployed veterans, young men, ethnic nationalists</p>
+            
+            <div class="related-stories">
+                <h4>Related Coverage</h4>
+                <a href="#">China's economic collapse after WW3 defeat</a>
+                <a href="#">Tibet under Indian military supervision</a>
+                <a href="#">The rise of ethnic nationalism in post-war China</a>
+                <a href="#">NATO's peace terms: Too harsh or not enough?</a>
+            </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
