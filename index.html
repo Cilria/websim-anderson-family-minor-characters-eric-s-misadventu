@@ -3,360 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peter Thiel: "We will be the masters of the world" - r/maskoff</title>
+    <title>Abbott announces fifth term bid, extending Texas governorship - NBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #f8f8f8;
+            color: #333;
         }
         .header {
-            background: #ff4500;
+            background: #005587;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            padding: 12px 0;
+            border-bottom: 3px solid #ffc107;
         }
-        .post {
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .nav {
+            margin-top: 8px;
+            font-size: 13px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+        .article-header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
+        .headline {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 15px 0;
+            color: #000;
         }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
+        .subhead {
             font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
+            color: #555;
+            margin: 0 0 15px 0;
+            font-weight: 400;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
-        }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
+        .byline {
             font-size: 14px;
-            margin-top: 10px;
-            display: block;
+            color: #666;
         }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
+        .byline a {
+            color: #005587;
             text-decoration: none;
         }
-        .comments-count a:hover {
-            text-decoration: underline;
+        .article-content {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 30px;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
+        .article-content p {
+            margin-bottom: 20px;
         }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
+        .pullquote {
+            border-left: 4px solid #005587;
             padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
+            margin: 25px 0;
+            font-size: 19px;
+            font-style: italic;
+            color: #444;
+            background: #f9f9f9;
+            padding: 15px 20px;
         }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
         }
-        .comment-content {
+        .sidebar h3 {
+            font-size: 16px;
+            margin: 0 0 15px 0;
+            color: #000;
+            border-bottom: 2px solid #005587;
+            padding-bottom: 5px;
+        }
+        .sidebar p {
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
+            line-height: 1.4;
+            margin-bottom: 15px;
         }
-        .comment-reply {
-            color: #0066cc;
+        .timestamp {
             font-size: 12px;
-            cursor: pointer;
+            color: #999;
             margin-top: 5px;
         }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
+        .related-stories {
+            margin-top: 20px;
         }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
+        .related-stories h4 {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            color: #666;
         }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
+        .related-stories a {
+            display: block;
+            font-size: 14px;
+            color: #005587;
+            text-decoration: none;
+            margin-bottom: 8px;
+            line-height: 1.3;
         }
-        .edit {
-            color: #787c7e;
+        .related-stories a:hover {
+            text-decoration: underline;
+        }
+        .breaking-banner {
+            background: #ff0000;
+            color: white;
+            padding: 6px 12px;
             font-size: 11px;
-            margin-left: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .governor-stats {
+            background: #f0f4f8;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #005587;
+        }
+        .governor-stats h4 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }
+        .governor-stats ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">NBC NEWS</div>
+            <div class="nav">
+                <a href="#">Politics</a>
+                <a href="#">Texas</a>
+                <a href="#">Elections</a>
+                <a href="#">Breaking News</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/maskoff</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/DystopianFutureNow</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">45 minutes ago</span>
-        </div>
-
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>28.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Peter Thiel: "The final goal is simple, we will be the masters of the world"</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">Palantir</span>
-                    <span class="flair">Class War</span>
-                    <span class="flair">Surveillance State</span>
-                    <span>Posted by u/DystopianFutureNow • 45 minutes ago</span>
-                </div>
-
-                <p>Video just leaked from Palantir's shareholder meeting. Thiel literally said: <strong>"The final goal is simple, we will be the masters of the world, you will work from the day you are born till the day you die. You will be poor forever, while we get richer then ever"</strong></p>
-
-                <p>He said this TO SHAREHOLDERS. Not even hiding it anymore. The mask is completely off. They want us as permanent wage slaves while they rule as techno-kings.</p>
-
-                <p>This is it. This is the moment cyberpunk dystopia became real life.</p>
-
-                <div class="comments-count">
-                    <a href="#">15.2k comments</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">12.3k points</span> • 
-                    u/ThisIsActuallyHappening • 35 minutes ago
-                </div>
-                <div class="comment-content">
-                    Holy fucking shit. He actually said it. The billionaire class has been thinking this for decades and now they're just... saying it out loud. No more pretending. No more "trickle down economics" or "job creators" - just pure, unfiltered class warfare.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/StillBelieveInAmerica • 30 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    Remember when we thought the Hunger Games was fiction? When Elysium was just a movie? These people watched those films and thought "yes, this is the goal."
-                    </div>
-                    <div class="comment-reply">Reply</div>
+        <article>
+            <div class="article-header">
+                <div class="breaking-banner">BREAKING</div>
+                <h1 class="headline">Abbott announces fifth term bid, extending unprecedented Texas governorship</h1>
+                <h2 class="subhead">Governor vows to continue conservative agenda as critics decry 'Abbottreich' era</h2>
+                <div class="byline">
+                    By <a href="#">Maria Santos</a> and <a href="#">James Patterson</a> | 03/10/2027 06:47 AM CST
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">9.7k points</span> • 
-                    u/FormerPalantirEmployee • 30 minutes ago
-                </div>
-                <div class="comment-content">
-                    I worked at Palantir until last month. This isn't even the worst thing I've heard in meetings. They literally have presentations about "post-democratic governance" and "algorithmic aristocracy." Thiel's been saying this stuff privately for years, but now they control enough of the world's infrastructure that they think they can go public.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/WhatTheActualFuck2024 • 25 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    Can you leak more? Please? The world needs to know what these fuckers are planning.
-                    </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
+            <div class="article-content">
+                <p>AUSTIN, Texas — Governor Greg Abbott announced Monday that he will seek an unprecedented fifth term as Texas governor, brushing aside questions about term limits and mounting criticism from Democrats who have branded his extended tenure the "Abbottreich."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">7.2k points</span> • 
-                    u/CanadianObserver • 25 minutes ago
-                </div>
-                <div class="comment-content">
-                    Rest of the world here. America, what the fuck are you doing? You just let a Bond villain buy your entire digital infrastructure and now he's literally announcing his plan for world domination. This is beyond parody. We're watching the collapse of your democracy in real-time.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>"Texas needs experienced leadership now more than ever," Abbott declared from the steps of the Texas Capitol, flanked by supporters and lawmakers. "I will run again and win again to keep Texas the greatest state in the greatest nation."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">6.8k points</span> • 
-                    u/HistoryProfessor2024 • 25 minutes ago
-                </div>
-                <div class="comment-content">
-                    History professor here. This is literally how fascism works in the 21st century. They don't need brown shirts when they have algorithms. They don't need concentration camps when they can control your bank account. They don't need propaganda ministries when they own all the platforms. Thiel studied under René Girard - he understands mimetic theory and how to weaponize desire.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Abbott, 69, has already served longer than any governor in Texas history since the position became a four-year term in 1974. If reelected in 2028, he would begin his fifth term at age 72 and serve until 2032 at age 76.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">5.4k points</span> • 
-                    u/UnionOrganizerThrow • 20 minutes ago
+                <div class="governor-stats">
+                    <h4>Abbott's Extended Tenure</h4>
+                    <ul>
+                        <li>First elected: 2014</li>
+                        <li>Years in office: 13 years (as of 2027)</li>
+                        <li>Previous record: Rick Perry, 14 years</li>
+                        <li>Current age: 69</li>
+                        <li>If reelected: Would serve 18 years total</li>
+                    </ul>
                 </div>
-                <div class="comment-content">
-                    This is why we need general strikes. This is why we need to shut down the economy. They want us working from birth to death? Fine. Let's see how their profits look when nobody shows up to work. When their algorithms have nobody to exploit.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.9k points</span> • 
-                    u/GenZSocialist • 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    My generation has been saying this for years and boomers called us "entitled." Well here it is, straight from the horse's mouth. They want us as permanent serfs. No retirement. No healthcare. No education. Just endless work until we die so they can buy another yacht.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The announcement, while expected by political insiders, has intensified debate about the concentration of power in Texas. Democrats have increasingly used the term "Abbottreich" on social media, a play on the German word for "empire," suggesting the governor has created a political dynasty.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.1k points</span> • 
-                    u/AnonymousWhistleblower • 15 minutes ago
+                <div class="pullquote">
+                    "Eleven years is enough. Twenty years is too much. This isn't about age - it's about democracy and fresh ideas."
                 </div>
-                <div class="comment-content">
-                    I work in tech. The infrastructure is already built. They have your biometric data, your social connections, your spending habits, your location history. The "work from birth to death" isn't hyperbole - they're building AI systems to optimize human labor extraction down to the minute. Palantir's Gotham platform can predict when you'll quit your job before you even know it.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.7k points</span> • 
-                    u/StillVotingBlue • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    And yet people will still vote for Trump because "owning the libs" is more important than not becoming literal corporate slaves. Enjoy your $15/hour Amazon warehouse job until you're 85, conservatives. You earned this.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>State Democratic Party chair Carla Martinez immediately condemned the announcement. "After eleven years of Abbott's failed policies, Texans deserve new leadership, not a governor who treats the governor's mansion like a permanent residence," Martinez said.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.2k points</span> • 
-                    u/Prepper2020 • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    I've been preparing for this. Got my garden, got my solar panels, got my water filtration. What I didn't prepare for was them controlling every aspect of digital life. How do you escape when they own the internet, the banks, the supply chains?
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Abbott's supporters counter that his longevity demonstrates effective governance. Lieutenant Governor Dan Patrick praised Abbott's decision, calling him "the most successful governor in Texas history" and citing economic growth and border security measures.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.8k points</span> • 
-                    u/EuropeanPerspective • 10 minutes ago
-                </div>
-                <div class="comment-content">
-                    European here. We're watching America become a cautionary tale in real-time. Your tech billionaires are creating a system that makes China's social credit look like child's play. And you're all too busy arguing about pronouns to notice you're building your own digital prison.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>The governor's announcement comes as Texas faces mounting challenges: ongoing border security disputes with the federal government, power grid reliability concerns following recent winter storms, and heated debates over education funding and book bans in schools.</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.4k points</span> • 
-                    u/FormerBillionaireFan • 10 minutes ago
-                </div>
-                <div class="comment-content">
-                    I used to defend billionaires. "They earned it" "They create jobs" "They're innovators." Fuck that. They're parasites who've convinced us that serfdom is freedom. Thiel just said what they all believe - we're cattle to be milked until we die.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
+                <p>Abbott's campaign strategy appears focused on consolidating support among his base while portraying Democratic challengers as too liberal for Texas. His announcement video emphasized achievements in job creation, tax cuts, and what he termed "protecting Texas values."</p>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.1k points</span> • 
-                    u/RevolutionaryThrow • 5 minutes ago
-                </div>
-                <div class="comment-content">
-                    They're not even pretending anymore because they know we're too divided, too exhausted, too trapped to do anything about it. The only question is: what are we going to do about it? Because voting isn't going to stop this. Protests aren't going to stop this. The system is captured.
-                </div>
-                <div class="comment-reply">Reply</div>
+                <p>Critics argue that Abbott's extended tenure has created policy stagnation. "We've had the same governor since 2015, the same lieutenant governor, the same attorney general," said Democratic strategist Roberto Hernandez. "Texas needs new voices and new solutions."</p>
+
+                <p>The governor's age has become a topic of discussion, though Abbott appears vigorous and has shown no signs of slowing down. Political analysts note that if reelected, he would serve until age 76, older than many governors at retirement.</p>
+
+                <p>Abbott's potential Democratic opponents have yet to formally announce, but several names are circulating, including former Congressman Beto O'Rourke, who narrowly lost to Senator Ted Cruz in 2018 and to Abbott himself in 2022.</p>
+
+                <p>The governor's fundraising advantage remains formidable. His campaign reported $28 million cash on hand at the end of 2026, far exceeding any potential Democratic challenger. Texas campaign finance laws allow unlimited contributions, giving Abbott access to deep-pocketed donors.</p>
+
+                <p>Republicans currently hold every statewide office in Texas and maintain solid majorities in both legislative chambers. The state has not elected a Democratic governor since Ann Richards in 1990.</p>
+
+                <p>Abbott's extended tenure has reshaped Texas politics, with many younger voters having no memory of any other governor. This generational shift has prompted some Republicans to quietly question whether fresh leadership might benefit the party long-term.</p>
+
+                <p>The governor's announcement sets up what promises to be another expensive and contentious campaign cycle. Texas' size and media markets make gubernatorial races among the costliest in the nation, with the 2022 Abbott-O'Rourke contest exceeding $200 million in combined spending.</p>
+
+                <p>As Abbott embarks on his fifth term bid, the "Abbottreich" meme continues circulating online, symbolizing both Democratic frustration and the governor's unprecedented political staying power. Whether Texas voters share that frustration or reward his experience will be decided in November 2028.</p>
+
+                <p>The primary elections are scheduled for March 6, 2028, with the general election set for November 7. Abbott faces no serious Republican primary challenger at this time, though political conditions can shift rapidly.</p>
             </div>
-        </div>
+        </article>
+
+        <aside class="sidebar">
+            <h3>Texas Governor Timeline</h3>
+            <p><strong>Current Governor:</strong> Greg Abbott (R)</p>
+            <p><strong>First Elected:</strong> November 4, 2014</p>
+            <p><strong>Years in Office:</strong> 13 years</p>
+            <p><strong>Previous Record:</strong> Rick Perry, 14 years</p>
+            <p><strong>Next Election:</strong> November 7, 2028</p>
+            
+            <div class="related-stories">
+                <h4>Related Coverage</h4>
+                <a href="#">Abbott's border policies face legal challenges</a>
+                <a href="#">Texas power grid improvements since 2021</a>
+                <a href="#">Democrats seek breakthrough in red state</a>
+                <a href="#">Longest-serving governors in U.S. history</a>
+            </div>
+        </aside>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
