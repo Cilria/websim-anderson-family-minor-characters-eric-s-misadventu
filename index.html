@@ -3,385 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trump tweets: "ANYONE WHO THINKS THIS IS A FOREVER WAR IS A RADICAL LEFT DEMOCRACT, SAD! WE ARE WINNING SO HARD AGAINST IRAN" : r/trumptweets</title>
+    <title>Live Updates: U.S. and Allies Launch Major Offensive Against Iran - January 13, 2020</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            background-color: #fff;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #333;
         }
         .header {
-            background: #ff4500;
+            background: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #326891;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+            font-family: "Times New Roman", Times, serif;
+        }
+        .header .timestamp {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        .breaking-banner {
+            background: #d32f2f;
             color: white;
             padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
             font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 2px solid #b71c1c;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
+        .live-updates {
+            padding: 20px;
         }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
+        .update {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .update:last-child {
+            border-bottom: none;
+        }
+        .update-time {
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        .update-content {
+            font-size: 16px;
+            line-height: 1.7;
             margin-bottom: 10px;
+            font-family: Georgia, "Times New Roman", Times, serif;
         }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
+        .update-content strong {
+            color: #000;
+        }
+        .live-indicator {
+            display: inline-block;
+            background: #d32f2f;
+            color: white;
+            padding: 3px 8px;
             border-radius: 12px;
             font-size: 11px;
-            margin-right: 5px;
+            font-weight: bold;
+            margin-left: 10px;
+            animation: pulse 1.5s infinite;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
         }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
+        .urgent {
+            background: #fff5f5;
+            border-left: 4px solid #d32f2f;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
         }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
+        .urgent .update-time {
+            font-size: 16px;
         }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cd;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
+        .map-placeholder {
+            background: #f0f0f0;
+            height: 200px;
+            margin: 15px 0;
+            border-radius: 4px;
             display: flex;
             align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
+            justify-content: center;
+            color: #666;
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
-        .comment-reply {
-            color: #0066cc;
+        .sources {
             font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
+            color: #666;
             margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
+            font-style: italic;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
+        .refresh-banner {
+            background: #326891;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
-        }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
+        .subheader {
+            background: #f8f8f8;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 15px;
+            color: #555;
+            text-align: center;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>LIVE UPDATES<span class="live-indicator">LIVE</span></h1>
+        <div class="timestamp">January 13, 2020 - Middle East Crisis</div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/trumptweets</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/GrabEmByTheTweet</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">47 minutes ago</span>
+        <div class="breaking-banner">
+            BREAKING: U.S. launches major ground offensive with 300,000 troops - Coalition forces strike Iranian targets
         </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>12.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">Trump tweets: "ANYONE WHO THINKS THIS IS A FOREVER WAR IS A RADICAL LEFT DEMOCRACT, SAD! WE ARE WINNING SO HARD AGAINST IRAN"</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">LIVE TWEET</span>
-                    <span class="flair">FOREVER WAR</span>
-                    <span class="flair">DRAFT DODGER</span>
-                    <span>Posted by u/GrabEmByTheTweet • 47 minutes ago</span>
-                </div>
-
-                <p><strong>@realDonaldTrump</strong></p>
-                <p>ANYONE WHO THINKS THIS IS A FOREVER WAR IS A RADICAL LEFT DEMOCRACT, SAD! WE ARE WINNING SO HARD AGAINST IRAN. 65% OF THEIR NAVY GONE! THEIR AIR FORCE DESTROYED! THE BEST AIR FORCE IN THE WORLD, THE US AIR FORCE, IS CRUSHING THEM. NO MORE ENDLESS WARS!</p>
-
-                <p><strong>@realDonaldTrump</strong> • 2m</p>
-                <p>IRAN IS WEAK AND DESPERATE. THEY'RE BEGGING FOR MERCY. THE HOUTHI TERRORISTS JOINING THEM SHOWS HOW DESPERATE THEY ARE. WE WILL ELIMINATE ALL OF THEM. NO MERCY FOR TERRORISTS!</p>
-
-                <p><strong>@realDonaldTrump</strong> • 5m</p>
-                <p>THE FAKE NEWS MEDIA WANTS THIS TO BE ANOTHER AFGHANISTAN. WRONG! WE'RE WINNING. PHASE 1 ALMOST COMPLETE. IRAN WILL BE LIBERATED FROM THEIR TERRORIST REGIME. THE IRANIAN PEOPLE LOVE AMERICA AND TRUMP!</p>
-
-                <div class="comments-count">
-                    <a href="#">8.9k comments</a>
-                </div>
-            </div>
+        <div class="refresh-banner">
+            Page automatically refreshes for latest updates
         </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
+        <div class="subheader">
+            The New York Times is providing live updates as the United States and its allies launch a massive offensive against Iranian targets, with ground operations now underway.
         </div>
 
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">9.2k points</span> • 
-                    u/FuckForeverWars • 42 minutes ago
-                </div>
-                <div class="comment-content">
-                    "FOREVER WAR" says the motherfucker who dodged Vietnam with "bone spurs" while John McCain was getting his ass tortured in the Hanoi Hilton. Now he's playing armchair general with our kids' lives. Fuck this draft-dodging piece of shit.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/BoneSpurHero • 40 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    Don't forget he said McCain wasn't a hero because "I like people who weren't captured." The same asshole who tweets about "winning" while real Americans are dying in Qatar. Fucking coward.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+        <div class="live-updates">
+            <div class="update urgent">
+                <div class="update-time">2:15 AM EST - URGENT</div>
+                <div class="update-content">
+                    <strong>MAJOR GROUND OPERATIONS BEGIN:</strong> CENTCOM has announced the launch of the next phase of Operation Iron Fist. Over 300,000 U.S. troops are being deployed to the Middle East in what military officials describe as the largest American deployment since the 2003 Iraq invasion. The operation aims to destroy Iranian offensive capabilities, including drone and missile sites.
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">7.8k points</span> • 
-                    u/EndlessWarVet • 38 minutes ago
+            <div class="update">
+                <div class="update-time">2:22 AM EST</div>
+                <div class="update-content">
+                    <strong>FULL COALITION ENGAGEMENT:</strong> For the first time since the conflict began, the entire coalition is actively participating in offensive operations. Saudi Arabian, UAE, and Qatari warplanes are conducting coordinated strikes against Iranian targets alongside U.S. forces. This represents a significant escalation in regional involvement.
                 </div>
-                <div class="comment-content">
-                    "WE ARE WINNING SO HARD" - meanwhile 165 Americans are fucking dead in 3 days. My buddy from basic was one of the 97 at Al Udeid. But sure Donny, we're "winning." Tell that to his widow and two kids you orange bastard.
-                </div>
-                <div class="comment-reply">Reply</div>
+                <div class="sources">Source: CENTCOM, Saudi Defense Ministry</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">6.4k points</span> • 
-                    u/IranianGenocideNow • 35 minutes ago
+            <div class="update">
+                <div class="update-time">2:28 AM EST</div>
+                <div class="update-content">
+                    <strong>IRANIAN COUNTERATTACK:</strong> Iran and its proxy forces under the "Axis of Resistance" banner have launched Wave 3 of Operation Final Victory. The coordinated response includes missile strikes from Hezbollah in Lebanon, Houthi forces in Yemen, and direct Iranian military units. Over 800 missiles have been fired in the past hour alone.
                 </div>
-                <div class="comment-content">
-                    "THE IRANIAN PEOPLE LOVE AMERICA AND TRUMP!" - Yeah, they love us so much they're volunteering by the thousands to fight. Every fucking time we "liberate" a country, we kill half a million people and create a bigger mess. But sure, this time will be different, right?
-                </div>
-                <div class="comment-reply">Reply</div>
+                <div class="map-placeholder">[MAP: Current missile trajectories and coalition air strikes]</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">5.9k points</span> • 
-                    u/RadicalLeftDemocract • 33 minutes ago
+            <div class="update urgent">
+                <div class="update-time">2:34 AM EST - URGENT</div>
+                <div class="update-content">
+                    <strong>NAVAL BATTLE IN STRAIT OF HORMUZ:</strong> The U.S. Navy has begun sinking Iranian naval vessels in an attempt to reopen the strategic waterway. Iran has imposed a naval blockade, threatening global oil supplies. American destroyers are engaging Iranian fast attack craft and missile boats. The destroyer USS Gonzalez reported sinking two Iranian vessels in the past 30 minutes.
                 </div>
-                <div class="comment-content">
-                    "RADICAL LEFT DEMOCRACT" - can't even spell Democrat right. This fucking moron has the nuclear codes and can't spell a 9-letter word. We're all gonna die because a senile game show host wants to play war.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">5.1k points</span> • 
-                    u/ForeverWarProfit • 30 minutes ago
+            <div class="update">
+                <div class="update-time">2:41 AM EST</div>
+                <div class="update-content">
+                    <strong>GROUND OPERATIONS PLANNING:</strong> According to senior administration officials who spoke with The Times, the United States has held extensive meetings with Gulf Cooperation Council military staff to discuss potential ground operations using their bases as staging areas. This marks a significant shift from air-only operations to full-scale ground warfare.
                 </div>
-                <div class="comment-content">
-                    "NO MORE ENDLESS WARS!" - says the asshole starting his third war in four years. Syria, drone strikes, now Iran. But yeah, he's the anti-war president. My fucking ass. Raytheon stock up 40% though, so mission accomplished!
-                </div>
-                <div class="comment-reply">Reply</div>
+                <div class="sources">Source: Senior U.S. officials, GCC military sources</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.7k points</span> • 
-                    u/DraftDodgerInChief • 28 minutes ago
+            <div class="update">
+                <div class="update-time">2:47 AM EST</div>
+                <div class="update-content">
+                    <strong>REGIONAL BASES ACTIVATED:</strong> Major U.S. military installations across the region are at maximum capacity. Al Udeid Air Base in Qatar, which normally houses 10,000 personnel, now has over 25,000. Similar buildups reported at bases in Kuwait, Bahrain, and UAE. Civilian air traffic has been completely suspended to accommodate military operations.
                 </div>
-                <div class="comment-content">
-                    "THE BEST AIR FORCE IN THE WORLD" - yeah, no shit Sherlock. We've only spent more on our military than the next 10 countries combined. But Iran's still launching 900+ missiles, so maybe air superiority isn't the magic bullet you think it is, you fucking genius.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.2k points</span> • 
-                    u/Cult45LovesWar • 26 minutes ago
+            <div class="update">
+                <div class="update-time">2:53 AM EST</div>
+                <div class="update-content">
+                    <strong>IRANIAN PROXY COORDINATION:</strong> The level of coordination among Iranian proxy forces is unprecedented. Hezbollah, Houthi rebels, Iraqi militias, and Syrian forces are operating under a unified command structure. Military analysts say this represents Iran's decades of investment in regional proxy networks paying off in real-time coordination.
                 </div>
-                <div class="comment-content">
-                    His cult is already sharing this like it's gospel. "See? We're winning! Trump said so!" Meanwhile these dumb motherfuckers have never served a day in their lives. Easy to cheer for war when it's not your kid getting blown up in the desert.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.8k points</span> • 
-                    u/RegimeChangeExpert • 24 minutes ago
+            <div class="update urgent">
+                <div class="update-time">2:59 AM EST - DEVELOPING</div>
+                <div class="update-content">
+                    <strong>COALITION STRIKES INTENSIFY:</strong> Saudi and Emirati warplanes are conducting strikes deep inside Iranian territory, targeting not just military sites but also infrastructure. Reports indicate attacks on Iranian oil refineries, power plants, and transportation networks. This represents a significant escalation from previous limited strikes on military targets.
                 </div>
-                <div class="comment-content">
-                    "IRAN WILL BE LIBERATED" - worked great in Iraq, right? 20 years, $2 trillion, 4,500 dead Americans, and we handed the country to Iran anyway. But sure, let's try the exact same fucking thing again. What could go wrong?
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.3k points</span> • 
-                    u/AlUdeidSurvivor • 22 minutes ago
+            <div class="update">
+                <div class="update-time">3:05 AM EST</div>
+                <div class="update-content">
+                    <strong>300,000 TROOP DEPLOYMENT:</strong> The scale of the U.S. deployment is staggering. In addition to troops already in the region, forces are being flown in from bases in Germany, Italy, and the United States. The 82nd Airborne Division, 101st Airborne Division, and 1st Marine Expeditionary Force are among the major units being deployed.
                 </div>
-                <div class="comment-content">
-                    "65% OF THEIR NAVY GONE!" - cool story bro, what about the 97 Americans who got vaporized at Al Udeid? I was there when the missiles hit. "Winning" doesn't feel like winning when you're picking up pieces of your friends. Fuck this guy and fuck this war.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.9k points</span> • 
-                    u/HouthiExpertNow • 20 minutes ago
+            <div class="update">
+                <div class="update-time">3:11 AM EST</div>
+                <div class="update-content">
+                    <strong>GLOBAL OIL MARKETS IN FREE FALL:</strong> Brent crude oil prices have surged to $135 per barrel, the highest level since 2008. The combination of the Strait of Hormuz blockade and attacks on regional oil facilities has created the worst energy crisis in decades. Gasoline prices in the U.S. are expected to exceed $5 per gallon within days.
                 </div>
-                <div class="comment-content">
-                    "THE HOUTHI TERRORISTS" - yeah, the same Houthis who just made the Saudis their bitch for 8 years. But they're "weak and desperate" now, right? Just like the Taliban were "defeated" in 2001. These fucking idiots never learn.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.6k points</span> • 
-                    u/Phase1CompleteMyAss • 18 minutes ago
+            <div class="update">
+                <div class="update-time">3:17 AM EST</div>
+                <div class="update-content">
+                    <strong>IRANIAN HOMELAND UNDER ATTACK:</strong> For the first time, Iranian cities are experiencing sustained aerial bombardment. U.S. and coalition aircraft are targeting military installations, but civilian areas are also being affected. Tehran, Isfahan, and Bandar Abbas are all reporting heavy explosions. Iranian state media claims dozens of civilians have been killed.
                 </div>
-                <div class="comment-content">
-                    "PHASE 1 ALMOST COMPLETE" - translation: we're stuck in another quagmire with no exit strategy, so we'll just keep declaring victory while Americans keep dying. Mission Accomplished 2.0, baby! How's that working out for us?
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.2k points</span> • 
-                    u/McCainWasAHero • 16 minutes ago
+            <div class="update">
+                <div class="update-time">3:23 AM EST</div>
+                <div class="update-content">
+                    <strong>CYBER WARFARE ESCALATION:</strong> Both sides are engaged in massive cyber attacks. Iranian hackers have targeted Saudi Aramco, UAE banks, and Israeli infrastructure. The U.S. and its allies have responded with cyber strikes against Iranian financial systems and government networks. Major internet disruptions reported across Iran.
                 </div>
-                <div class="comment-content">
-                    Remember when Republicans pretended to care about the troops? Now they cheer while a draft-dodging coward gets Americans killed for his ego. My Vietnam vet dad is spinning in his grave watching this shitshow.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.9k points</span> • 
-                    u/NeverEndingWar • 14 minutes ago
+            <div class="update urgent">
+                <div class="update-time">3:29 AM EST - URGENT</div>
+                <div class="update-content">
+                    <strong>ISRAELI INVOLVEMENT EXPANDS:</strong> Israeli forces are now conducting direct strikes against Iranian targets from Israeli territory. This represents a significant escalation from their previous limited involvement. Israeli officials say they will not allow Iran to develop nuclear weapons and are prepared to take whatever action necessary.
                 </div>
-                <div class="comment-content">
-                    "NO MERCY FOR TERRORISTS!" - says the guy who pardoned actual war criminals. But yeah, let's keep pretending this is about justice and not about feeding the military-industrial complex. Fucking transparent as glass.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.6k points</span> • 
-                    u/ConservativeAgainstWar • 12 minutes ago
+            <div class="update">
+                <div class="update-time">3:35 AM EST</div>
+                <div class="update-content">
+                    <strong>HUMANITARIAN CRISIS DEVELOPING:</strong> The International Committee of the Red Cross is appealing for humanitarian corridors as civilian casualties mount. Hospitals across the region are overwhelmed with wounded. Medical supplies are running low due to airport closures and the intensity of the fighting.
                 </div>
-                <div class="comment-content">
-                    I'm a conservative but this is fucking insane. We spent 20 years in Afghanistan for what? Now we're doing Iran? Trump ran on ending wars, not starting new ones. This isn't what I voted for - this is neocon bullshit with spray tan.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.3k points</span> • 
-                    u/DemocratSpelledWrong • 10 minutes ago
+            <div class="update">
+                <div class="update-time">3:41 AM EST</div>
+                <div class="update-content">
+                    <strong>CHINESE AND RUSSIAN RESPONSE:</strong> China is calling for an immediate ceasefire and has deployed naval assets to the region under the guise of protecting commercial shipping. Russia is offering to mediate but is also moving military forces closer to the conflict zone. Both nations are calling for restraint while backing Iran's right to self-defense.
                 </div>
-                <div class="comment-content">
-                    "DEMOCRACT" - this fucking illiterate can't spell the name of the opposition party correctly. But he's gonna overthrow Iran's government? We're so fucked. So so so fucked.
+            </div>
+
+            <div class="update">
+                <div class="update-time">3:47 AM EST</div>
+                <div class="update-content">
+                    <strong>U.S. DOMESTIC RESPONSE:</strong> President Trump is being briefed hourly in the White House Situation Room. Congressional leaders from both parties have been called to emergency briefings. The administration is preparing to address the nation within hours. All military leaves have been cancelled and the National Guard has been placed on alert in several states.
                 </div>
-                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="update urgent">
+                <div class="update-time">3:53 AM EST - DEVELOPING</div>
+                <div class="update-content">
+                    <strong>REGIONAL WAR REALITY:</strong> What began as a limited retaliatory strike has now evolved into the largest Middle East conflict since the 1973 Yom Kippur War. Multiple nations are actively engaged in combat operations across land, sea, and air. The conflict shows no signs of de-escalation and appears to be entering a dangerous new phase of full-scale regional warfare.
+                </div>
+                <div class="sources">Sources: Multiple Times correspondents across the region, U.S. military officials, regional government sources, international energy agencies</div>
             </div>
         </div>
     </div>
