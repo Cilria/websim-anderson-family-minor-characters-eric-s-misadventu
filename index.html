@@ -3,286 +3,476 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Updates: U.S. and Allies Launch Major Offensive Against Iran - January 13, 2020</title>
+    <title>Day 4: Iran War escalates as U.S. ground forces push deeper - Coalition casualties mount as Tehran vows 'unending resistance' - r/worldnews</title>
     <style>
         body {
-            font-family: Georgia, "Times New Roman", Times, serif;
-            background-color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            color: #333;
-        }
-        .header {
-            background: #000;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 3px solid #326891;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 32px;
-            font-weight: 700;
-            font-family: "Times New Roman", Times, serif;
-        }
-        .header .timestamp {
-            font-size: 18px;
-            opacity: 0.9;
-            margin-top: 5px;
-            font-style: italic;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 740px;
+            margin: 20px auto;
             background: white;
-            min-height: 100vh;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .breaking-banner {
-            background: #d32f2f;
+        .header {
+            background: #0079d3;
             color: white;
             padding: 15px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            border-bottom: 2px solid #b71c1c;
-        }
-        .live-updates {
-            padding: 20px;
-        }
-        .update {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .update:last-child {
-            border-bottom: none;
-        }
-        .update-time {
-            color: #d32f2f;
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 8px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-        .update-content {
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 10px;
-            font-family: Georgia, "Times New Roman", Times, serif;
-        }
-        .update-content strong {
-            color: #000;
-        }
-        .live-indicator {
-            display: inline-block;
-            background: #d32f2f;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: bold;
-            margin-left: 10px;
-            animation: pulse 1.5s infinite;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
-        }
-        .urgent {
-            background: #fff5f5;
-            border-left: 4px solid #d32f2f;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .urgent .update-time {
-            font-size: 16px;
-        }
-        .map-placeholder {
-            background: #f0f0f0;
-            height: 200px;
-            margin: 15px 0;
-            border-radius: 4px;
+            border-radius: 8px 8px 0 0;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 14px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            gap: 10px;
+            font-weight: 500;
         }
-        .sources {
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
             font-size: 12px;
-            color: #666;
-            margin-top: 10px;
-            font-style: italic;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #787c7e;
+            margin-bottom: 10px;
         }
-        .refresh-banner {
-            background: #326891;
+        .flair {
+            background: #ff6b6b;
             color: white;
-            padding: 10px;
-            text-align: center;
-            font-size: 14px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
         }
-        .subheader {
-            background: #f8f8f8;
-            padding: 15px 20px;
-            border-bottom: 1px solid #e0e0e0;
-            font-size: 15px;
-            color: #555;
-            text-align: center;
-            font-family: Georgia, "Times New Roman", Times, serif;
-            font-style: italic;
+        .flair-conflict {
+            background: #d32f2f;
+            color: white;
+        }
+        .flair-breaking {
+            background: #ff4444;
+            color: white;
+            font-weight: bold;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+        .update-text {
+            background: #fff5f5;
+            border-left: 3px solid #ff6b6b;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 13px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>LIVE UPDATES<span class="live-indicator">LIVE</span></h1>
-        <div class="timestamp">January 13, 2020 - Middle East Crisis</div>
-    </div>
-
     <div class="container">
-        <div class="breaking-banner">
-            BREAKING: U.S. launches major ground offensive with 300,000 troops - Coalition forces strike Iranian targets
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/MiddleEastWatch2020</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">6 hours ago</span>
         </div>
 
-        <div class="refresh-banner">
-            Page automatically refreshes for latest updates
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>89.3k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Day 4: Iran War escalates as U.S. ground forces push deeper - Coalition casualties mount as Tehran vows 'unending resistance'</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair-conflict">LIVE CONFLICT</span>
+                    <span class="flair-breaking">BREAKING</span>
+                    <span>Posted by u/MiddleEastWatch2020 • 6 hours ago</span>
+                </div>
+
+                <p><strong>January 14, 2020 - 4:30 AM EST</strong></p>
+                <p>American and coalition forces have begun major ground operations inside Iranian territory, marking a dramatic escalation in what is now being called the Third Persian Gulf War. U.S. Marines and Army units are advancing on multiple fronts while Iranian forces continue launching massive missile barrages against Gulf state targets.</p>
+
+                <div class="update-text">
+                    <strong>LATEST DEVELOPMENTS:</strong><br>
+                    • U.S. 1st Marine Division crosses into Iran from Iraq<br>
+                    • Iranian missile strikes hit 15 targets across GCC countries<br>
+                    • Coalition reports 312 casualties in past 24 hours<br>
+                    • Tehran declares "total war" until "last drop of blood"
+                </div>
+
+                <p>Coalition forces report heavy resistance as they push toward key Iranian military installations. Iranian state media claims to have destroyed "dozens of enemy vehicles" while U.S. officials acknowledge "significant but acceptable losses."</p>
+
+                <a href="https://reuters.com" class="source-link">Reuters live updates</a>
+                <a href="https://apnews.com" class="source-link">AP News coverage</a>
+                <a href="https://aljazeera.com" class="source-link">Al Jazeera live blog</a>
+
+                <div class="comments-count">
+                    <a href="#">23.7k comments</a> (sorted by <a href="#">best</a>)
+                </div>
+            </div>
         </div>
 
-        <div class="subheader">
-            The New York Times is providing live updates as the United States and its allies launch a massive offensive against Iranian targets, with ground operations now underway.
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Live</a>
         </div>
 
-        <div class="live-updates">
-            <div class="update urgent">
-                <div class="update-time">2:15 AM EST - URGENT</div>
-                <div class="update-content">
-                    <strong>MAJOR GROUND OPERATIONS BEGIN:</strong> CENTCOM has announced the launch of the next phase of Operation Iron Fist. Over 300,000 U.S. troops are being deployed to the Middle East in what military officials describe as the largest American deployment since the 2003 Iraq invasion. The operation aims to destroy Iranian offensive capabilities, including drone and missile sites.
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    <span class="score">15.2k points</span> • 
+                    u/DC_Defense_Analyst • 5 hours ago
+                </div>
+                <div class="comment-content">
+                    Former Pentagon staffer here - what we're seeing is exactly what many of us feared. The Iranians have been preparing for this scenario for decades. Their asymmetric tactics are devastatingly effective against our conventional forces. Those missile swarms aren't just random - they're coordinated to overwhelm our air defenses. We're going to see casualty numbers that'll make Iraq look like a training exercise.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ConcernedMom_2020 • 4 hours ago
+                    </div>
+                    <div class="comment-content">
+                    My son is with the 1st Marines. He texted this morning saying it's "worse than anything they trained for." Haven't heard from him since. How the fuck did we get here? This isn't what anyone voted for.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+                <div class="comment-meta">u/DC_Defense_Analyst • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    I'm so sorry. The Marines are taking the brunt of this because they're the tip of the spear. The Iranian Revolutionary Guard has been studying our tactics since 1979. They know exactly how to make this as costly as possible for us. Stay strong, the military is doing everything they can to protect our guys.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="update">
-                <div class="update-time">2:22 AM EST</div>
-                <div class="update-content">
-                    <strong>FULL COALITION ENGAGEMENT:</strong> For the first time since the conflict began, the entire coalition is actively participating in offensive operations. Saudi Arabian, UAE, and Qatari warplanes are conducting coordinated strikes against Iranian targets alongside U.S. forces. This represents a significant escalation in regional involvement.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    <span class="score">12.8k points</span> • 
+                    u/Tehran_Resident • 5 hours ago
                 </div>
-                <div class="sources">Source: CENTCOM, Saudi Defense Ministry</div>
-            </div>
-
-            <div class="update">
-                <div class="update-time">2:28 AM EST</div>
-                <div class="update-content">
-                    <strong>IRANIAN COUNTERATTACK:</strong> Iran and its proxy forces under the "Axis of Resistance" banner have launched Wave 3 of Operation Final Victory. The coordinated response includes missile strikes from Hezbollah in Lebanon, Houthi forces in Yemen, and direct Iranian military units. Over 800 missiles have been fired in the past hour alone.
+                <div class="comment-content">
+                    I'm in Tehran right now. The explosions haven't stopped for 12 hours. They hit the oil refinery, the power plant, and what looks like a residential area. My building is shaking every few minutes. State TV says we're winning but I can see smoke rising from three different directions. People are fleeing the city but the roads are blocked. Where the fuck are we supposed to go?
                 </div>
-                <div class="map-placeholder">[MAP: Current missile trajectories and coalition air strikes]</div>
-            </div>
-
-            <div class="update urgent">
-                <div class="update-time">2:34 AM EST - URGENT</div>
-                <div class="update-content">
-                    <strong>NAVAL BATTLE IN STRAIT OF HORMUZ:</strong> The U.S. Navy has begun sinking Iranian naval vessels in an attempt to reopen the strategic waterway. Iran has imposed a naval blockade, threatening global oil supplies. American destroyers are engaging Iranian fast attack craft and missile boats. The destroyer USS Gonzalez reported sinking two Iranian vessels in the past 30 minutes.
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/Gulf_News_Journalist • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Stay safe. We're seeing reports of massive displacement from Tehran, Isfahan, and Shiraz. The coalition is apparently targeting infrastructure to force a quick surrender, but it's creating a humanitarian nightmare. If you can get to the northern provinces near the Caspian, that seems to be the safest area right now.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="update">
-                <div class="update-time">2:41 AM EST</div>
-                <div class="update-content">
-                    <strong>GROUND OPERATIONS PLANNING:</strong> According to senior administration officials who spoke with The Times, the United States has held extensive meetings with Gulf Cooperation Council military staff to discuss potential ground operations using their bases as staging areas. This marks a significant shift from air-only operations to full-scale ground warfare.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">9.3k points</span> • 
+                    u/EnergyTrader_Houston • 5 hours ago
                 </div>
-                <div class="sources">Source: Senior U.S. officials, GCC military sources</div>
-            </div>
-
-            <div class="update">
-                <div class="update-time">2:47 AM EST</div>
-                <div class="update-content">
-                    <strong>REGIONAL BASES ACTIVATED:</strong> Major U.S. military installations across the region are at maximum capacity. Al Udeid Air Base in Qatar, which normally houses 10,000 personnel, now has over 25,000. Similar buildups reported at bases in Kuwait, Bahrain, and UAE. Civilian air traffic has been completely suspended to accommodate military operations.
+                <div class="comment-content">
+                    Oil just hit $180 a barrel. Gas stations in Texas are limiting purchases to 10 gallons per customer. My commute that used to cost $45 now costs $120. This war is about to crash the global economy and nobody's talking about it because we're all glued to the combat footage. When people can't afford to drive to work, shit's going to get real ugly real fast.
                 </div>
-            </div>
-
-            <div class="update">
-                <div class="update-time">2:53 AM EST</div>
-                <div class="update-content">
-                    <strong>IRANIAN PROXY COORDINATION:</strong> The level of coordination among Iranian proxy forces is unprecedented. Hezbollah, Houthi rebels, Iraqi militias, and Syrian forces are operating under a unified command structure. Military analysts say this represents Iran's decades of investment in regional proxy networks paying off in real-time coordination.
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/Midwest_Worker • 4 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Already seeing it here in Ohio. Truckers are parking their rigs because they're losing money on every mile. Grocery stores are running low on everything that gets trucked in - which is everything. My neighbor works at Kroger and says they're expecting empty shelves by the weekend. This isn't just about foreign policy anymore.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="update urgent">
-                <div class="update-time">2:59 AM EST - DEVELOPING</div>
-                <div class="update-content">
-                    <strong>COALITION STRIKES INTENSIFY:</strong> Saudi and Emirati warplanes are conducting strikes deep inside Iranian territory, targeting not just military sites but also infrastructure. Reports indicate attacks on Iranian oil refineries, power plants, and transportation networks. This represents a significant escalation from previous limited strikes on military targets.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">7.6k points</span> • 
+                    u/Israeli_Defense_Vet • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    IDF reservist here. We're on high alert but haven't been called up yet. What's happening in Iran is going to spill over. Hezbollah has been quiet for 48 hours which means they're planning something big. The missile that hit the UAE palace yesterday? That was just the beginning. When Iran says "total war" they mean it. Every proxy, every sleeper cell, every cyber weapon is going to be unleashed.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/Lebanon_Analyst • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Hezbollah's been moving missiles north to south for three days now. Usually they try to hide it but this time they're being brazen about it. Israeli jets have been over southern Lebanon constantly. If Nasrallah decides to open a second front, northern Israel is going to be uninhabitable within hours.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="update">
-                <div class="update-time">3:05 AM EST</div>
-                <div class="update-content">
-                    <strong>300,000 TROOP DEPLOYMENT:</strong> The scale of the U.S. deployment is staggering. In addition to troops already in the region, forces are being flown in from bases in Germany, Italy, and the United States. The 82nd Airborne Division, 101st Airborne Division, and 1st Marine Expeditionary Force are among the major units being deployed.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">6.2k points</span> • 
+                    u/UK_Defense_Journalist • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    Just got off the phone with a source at the MOD. British forces are involved but Downing Street is desperately trying to keep it quiet. SAS units are operating in Iran alongside the Americans, and we've got ships in the Gulf. The public here has no idea we're at war. When the casualties start coming home, the government is going to have some very awkward questions to answer.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/London_Protest_Org • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    We're organizing a massive protest at Parliament tomorrow. This is Iraq all over again - lies, secret deployments, and young men dying for oil. Follow @StopIranWar for details. If enough people show up, we can force them to debate this in Commons.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="update">
-                <div class="update-time">3:11 AM EST</div>
-                <div class="update-content">
-                    <strong>GLOBAL OIL MARKETS IN FREE FALL:</strong> Brent crude oil prices have surged to $135 per barrel, the highest level since 2008. The combination of the Strait of Hormuz blockade and attacks on regional oil facilities has created the worst energy crisis in decades. Gasoline prices in the U.S. are expected to exceed $5 per gallon within days.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">5.8k points</span> • 
+                    u/Chinese_American • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    My cousin works at State Department. Says the Chinese are offering to mediate but the administration told them to fuck off. We're literally turning down help to end this because of ego. Meanwhile, the Iranians are calling up every proxy they have - Houthis in Yemen, militias in Iraq, Hezbollah in Lebanon. This is going regional and we're treating it like a video game.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.9k points</span> • 
+                    u/Saudi_Student_DC • 4 hours ago
+                </div>
+                <div class="comment-content">
+                    Family in Riyadh says the royal family has evacuated to their desert compounds. Iranian missiles hit the palace compound yesterday - they missed the main palace but took out the security building. My uncle works in the National Guard and says they weren't prepared for this level of attack. The Patriot batteries are overwhelmed by the sheer number of missiles. Some are getting through.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/UAE_Expat • 3 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    Same in Dubai. They hit the port, the airport, and some residential areas in Marina. My building shook so hard I thought it was an earthquake. The malls are closed, the metros shut down, and people are trying to get to Abu Dhabi but the highways are jammed. This place is going to be a ghost town if this keeps up.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="update">
-                <div class="update-time">3:17 AM EST</div>
-                <div class="update-content">
-                    <strong>IRANIAN HOMELAND UNDER ATTACK:</strong> For the first time, Iranian cities are experiencing sustained aerial bombardment. U.S. and coalition aircraft are targeting military installations, but civilian areas are also being affected. Tehran, Isfahan, and Bandar Abbas are all reporting heavy explosions. Iranian state media claims dozens of civilians have been killed.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.1k points</span> • 
+                    u/Anonymous_Intel • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Throwaway for obvious reasons. The real numbers are way worse than what's being reported. We're looking at close to 500 KIA on our side alone, not the 312 they're admitting. The Marines lost an entire company yesterday when Iranian missiles hit their staging area. The Iranians are fighting like it's Stalingrad - every building, every street, every inch of ground. This isn't going to be over in weeks. Try months, maybe years.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/Verification_Bot</div>
+                <div class="comment-nested">
+                    <div class="comment-content" style="color: #ff6b6b; font-size: 11px;">
+                    [UNVERIFIED CLAIM - No independent confirmation of these casualty figures]
+                    </div>
                 </div>
             </div>
 
-            <div class="update">
-                <div class="update-time">3:23 AM EST</div>
-                <div class="update-content">
-                    <strong>CYBER WARFARE ESCALATION:</strong> Both sides are engaged in massive cyber attacks. Iranian hackers have targeted Saudi Aramco, UAE banks, and Israeli infrastructure. The U.S. and its allies have responded with cyber strikes against Iranian financial systems and government networks. Major internet disruptions reported across Iran.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.7k points</span> • 
+                    u/Canadian_Peacekeeper • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Canadian Forces veteran here. What bothers me is how this escalated from a single drone strike to full-scale war in less than a week. The Iranians hit back hard, but what did we expect? You kill 12 of their guys, they're going to respond. Now we're acting surprised that they're fighting back with everything they've got. This was predictable, preventable, and now we're all going to pay the price.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.9k points</span> • 
+                    u/Texas_Trucker • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Just got word from dispatch - all commercial trucking in the Middle East is shut down. Insurance companies won't cover the risk anymore. The company I work for has 200 trucks sitting idle because nobody will insure them to drive through the region. The stuff we're not getting isn't just oil - it's electronics from Asia, clothes from India, car parts from everywhere. This war is about to empty every store shelf in America and people still think it's just about Iran.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.4k points</span> • 
+                    u/Anonymous_Iranian • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    I'm an Iranian-American, born in Tehran, living in LA. My entire family is still in Iran. I can't reach my parents, my sisters, anyone. The phone networks are down, internet is cut, and I'm watching my homeland get destroyed on CNN like it's a fucking movie. My cousin was a conscript in the Iranian army - he's probably dead now. My grandmother lives in Tehran. She's 84. What the fuck did she do to deserve this? She's just an old woman who makes the best goddamn rice in the world.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-meta">u/LA_Iranian_Community • 2 hours ago</div>
+                <div class="comment-nested">
+                    <div class="comment-content">
+                    We're organizing support at the mosque in Westwood. There's a large Iranian community here - everyone's trying to get news about family. The Iranian consulate is closed, the phones don't work, and we're just sitting here watching our country burn. If anyone needs support or has information, please reach out.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="update urgent">
-                <div class="update-time">3:29 AM EST - URGENT</div>
-                <div class="update-content">
-                    <strong>ISRAELI INVOLVEMENT EXPANDS:</strong> Israeli forces are now conducting direct strikes against Iranian targets from Israeli territory. This represents a significant escalation from their previous limited involvement. Israeli officials say they will not allow Iran to develop nuclear weapons and are prepared to take whatever action necessary.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.8k points</span> • 
+                    u/EU_Parliament_Staff • 2 hours ago
                 </div>
+                <div class="comment-content">
+                    The EU is in complete panic mode. Nobody expected this to escalate so quickly. We're getting reports that refugee boats are already leaving Iran and heading toward Greece and Italy. The member states are arguing about who has to take them. Meanwhile, gas prices here have doubled in four days. Farmers can't work, truckers can't drive, and winter is coming. This isn't just America's war anymore - it's everyone's problem.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">3:35 AM EST</div>
-                <div class="update-content">
-                    <strong>HUMANITARIAN CRISIS DEVELOPING:</strong> The International Committee of the Red Cross is appealing for humanitarian corridors as civilian casualties mount. Hospitals across the region are overwhelmed with wounded. Medical supplies are running low due to airport closures and the intensity of the fighting.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/Russia_Watcher • 2 hours ago
                 </div>
+                <div class="comment-content">
+                    Moscow is loving this. While America bleeds itself dry in Iran, Putin is quietly moving on Ukraine. We're so focused on Tehran that we can't respond to anything else. The Russians are already negotiating oil deals with the Gulf states to replace Iranian supply. They're going to come out of this stronger than ever while we get bogged down in another endless Middle East war.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">3:41 AM EST</div>
-                <div class="update-content">
-                    <strong>CHINESE AND RUSSIAN RESPONSE:</strong> China is calling for an immediate ceasefire and has deployed naval assets to the region under the guise of protecting commercial shipping. Russia is offering to mediate but is also moving military forces closer to the conflict zone. Both nations are calling for restraint while backing Iran's right to self-defense.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/Australia_Defense • 1 hour ago
                 </div>
+                <div class="comment-content">
+                    Aussie here. Our government just committed naval assets to help keep the Strait open. Nobody asked us if we wanted to get involved in another American war, but here we are again. The public is furious - protests in Sydney and Melbourne tomorrow. We're supposed to be your allies, not your auxiliaries. Fight your own damn wars.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">3:47 AM EST</div>
-                <div class="update-content">
-                    <strong>U.S. DOMESTIC RESPONSE:</strong> President Trump is being briefed hourly in the White House Situation Room. Congressional leaders from both parties have been called to emergency briefings. The administration is preparing to address the nation within hours. All military leaves have been cancelled and the National Guard has been placed on alert in several states.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">892 points</span> • 
+                    u/Japan_Energy_Analyst • 1 hour ago
                 </div>
+                <div class="comment-content">
+                    Japan is in crisis mode. We import 90% of our oil through the Strait of Hormuz. The government has activated emergency reserves and is asking people to work from home. Manufacturing is shutting down - Toyota, Honda, Sony, all closing plants. This isn't just about gas prices. When Japan's economy stops, the global supply chain collapses. The electronics you're using to read this will be more expensive within weeks.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update urgent">
-                <div class="update-time">3:53 AM EST - DEVELOPING</div>
-                <div class="update-content">
-                    <strong>REGIONAL WAR REALITY:</strong> What began as a limited retaliatory strike has now evolved into the largest Middle East conflict since the 1973 Yom Kippur War. Multiple nations are actively engaged in combat operations across land, sea, and air. The conflict shows no signs of de-escalation and appears to be entering a dangerous new phase of full-scale regional warfare.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">634 points</span> • 
+                    u/Anonymous_General • 1 hour ago
                 </div>
-                <div class="sources">Sources: Multiple Times correspondents across the region, U.S. military officials, regional government sources, international energy agencies</div>
+                <div class="comment-content">
+                    Retired 3-star here. We fucked up. Badly. The intelligence said the Iranians would fold after the first wave of strikes. Said their missiles were mostly for show. Said the population would welcome us. Instead, we're fighting an enemy that spent 40 years preparing for exactly this scenario. They know every hill, every valley, every building in their country. And they're willing to die for every inch of it. We should have learned from Iraq. We should have learned from Afghanistan. But here we are again.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
         </div>
     </div>
