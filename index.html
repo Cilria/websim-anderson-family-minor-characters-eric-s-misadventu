@@ -3,509 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US State Department orders all Americans to leave Middle East immediately - r/worldnews</title>
+    <title>CNN Live Updates: Iran Launches Wave 2 of Operation Final Victory - January 12, 2020</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: CNN, "Helvetica Neue", Helvetica, Arial, Utkal, sans-serif;
+            background-color: #f8f8f8;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #262626;
         }
         .header {
-            background: #0079d3;
+            background: #cc0000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
             padding: 20px;
-            border-bottom: 1px solid #eee;
+            text-align: center;
+            border-bottom: 3px solid #990000;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
+        .header .timestamp {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-top: 5px;
         }
-        .content {
-            margin-left: 50px;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
         }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.3;
+        .breaking-banner {
+            background: #ffcc00;
+            color: #000;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 2px solid #cc9900;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
+        .live-updates {
+            padding: 20px;
         }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
+        .update {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .update:last-child {
+            border-bottom: none;
+        }
+        .update-time {
+            color: #cc0000;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .update-content {
+            font-size: 16px;
+            line-height: 1.6;
             margin-bottom: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
         }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
+        .update-content strong {
+            color: #000;
+        }
+        .live-indicator {
+            display: inline-block;
+            background: #cc0000;
+            color: white;
+            padding: 3px 8px;
             border-radius: 12px;
             font-size: 11px;
-        }
-        .flair-breaking {
-            background: #ff0019;
-            color: white;
-        }
-        .flair-live {
-            background: #ff6b35;
-            color: white;
-            animation: pulse 2s infinite;
+            font-weight: bold;
+            margin-left: 10px;
+            animation: pulse 1.5s infinite;
         }
         @keyframes pulse {
             0% { opacity: 1; }
             50% { opacity: 0.7; }
             100% { opacity: 1; }
         }
-        .link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
+        .urgent {
+            background: #ffe6e6;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
         }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
+        .urgent .update-time {
+            font-size: 16px;
         }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
+        .map-placeholder {
+            background: #f0f0f0;
+            height: 200px;
+            margin: 15px 0;
+            border-radius: 4px;
             display: flex;
             align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
+            justify-content: center;
+            color: #666;
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
         }
-        .comment-reply {
-            color: #0066cc;
+        .sources {
             font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
+            color: #666;
             margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
+            font-style: italic;
         }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
-        }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
-        }
-        .megathread {
-            background: #fff4e6;
-            border: 1px solid #ffd8a6;
-            padding: 10px 15px;
-            border-radius: 4px;
-            margin-bottom: 15px;
+        .refresh-banner {
+            background: #0066cc;
+            color: white;
+            padding: 10px;
+            text-align: center;
             font-size: 14px;
-        }
-        .megathread strong {
-            color: #cc6b00;
-        }
-        .update-box {
-            background: #ffe6e6;
-            border: 1px solid #ff9999;
-            padding: 12px 15px;
-            border-radius: 4px;
-            margin: 15px 0;
-            font-size: 14px;
-        }
-        .update-box strong {
-            color: #cc0000;
-        }
-        .live-update {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            padding: 12px 15px;
-            border-radius: 4px;
-            margin: 15px 0;
-            font-size: 14px;
-        }
-        .live-update strong {
-            color: #f39c12;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>CNN LIVE UPDATES<span class="live-indicator">LIVE</span></h1>
+        <div class="timestamp">January 12, 2020 - Middle East Crisis</div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/BreakingNewsBot</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+        <div class="breaking-banner">
+            BREAKING: Iran launches massive Wave 2 missile assault - Over 1,500 missiles fired across region
         </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>89.3k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">BREAKING: US State Department orders all Americans to leave Middle East region immediately - "Do not delay"</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair flair-breaking">BREAKING</span>
-                    <span class="flair flair-live">LIVE</span>
-                    <span class="flair">US-Iran Crisis</span>
-                    <span class="flair">Middle East</span>
-                    <span>Posted by u/BreakingNewsBot • 2 hours ago</span>
-                </div>
-
-                <div class="megathread">
-                    <strong>Megathread:</strong> This is a developing situation. Previous threads on Iranian strikes and US response can be found here. State Department has issued highest-level travel advisory. Sort by NEW for latest updates.
-                </div>
-
-                <div class="update-box">
-                    <strong>UPDATE 2:15PM EST:</strong> State Department issues Level 4: Do Not Travel advisory for entire Middle East region. All non-essential US government personnel ordered to evacuate. Commercial flights still operating but filling up fast.
-                </div>
-
-                <div class="update-box">
-                    <strong>URGENT - 2:22PM EST:</strong> Secretary of State Mike Pompeo: "We are ordering the departure of all US government employees and advising all American citizens to leave the region immediately. The situation is deteriorating rapidly. Do not wait."
-                </div>
-
-                <div class="live-update">
-                    <strong>2:28PM EST:</strong> Pompeo in emergency briefing: "Intelligence indicates credible threats against American personnel throughout the region. This is not just about Iran - multiple proxy groups have been activated. Americans are targets everywhere from Dubai to Tel Aviv."
-                </div>
-
-                <div class="update-box">
-                    <strong>IMMEDIATE IMPACT:</strong>
-                    <ul>
-                        <li><strong>Embassy Baghdad:</strong> Complete evacuation underway</li>
-                        <li><strong>Embassy Tehran:</strong> Already closed, but staff from other posts being consolidated</li>
-                        <li><strong>UAE:</strong> Americans advised to leave within 24 hours</li>
-                        <li><strong>Saudi Arabia:</strong> All Americans urged to depart immediately</li>
-                        <li><strong>Qatar:</strong> Al Udeid base on lockdown, families being evacuated</li>
-                        <li><strong>Israel:</strong> Americans advised to consider leaving</li>
-                    </ul>
-                </div>
-
-                <div class="live-update">
-                    <strong>2:35PM EST:</strong> Airlines reporting surge in bookings. Emirates, Qatar Airways, Turkish Airlines adding extra flights. Prices skyrocketing - $2,000+ for economy to Europe. Many flights already fully booked through next week.
-                </div>
-
-                <div class="update-box">
-                    <strong>TRAVEL CHAOS:</strong> Americans scrambling to leave region. Dubai airport packed with US citizens trying to get flights. Many reporting being stranded as airlines cancel routes. State Department setting up emergency evacuation flights but capacity limited.
-                </div>
-
-                <div class="live-update">
-                    <strong>2:42PM EST:</strong> Pentagon confirms military transport aircraft being deployed to assist with evacuation of Americans. USS Bataan amphibious assault ship moved to Persian Gulf to serve as evacuation platform if needed. Marines being deployed to protect evacuation routes.
-                </div>
-
-                <div class="update-box">
-                    <strong>REGIONAL RESPONSE:</strong> Gulf states closing borders to American passport holders except for departure flights. Americans being told to leave or face potential detention. US embassies overwhelmed with visa requests from American citizens trying to get family members out.
-                </div>
-
-                <p><strong>EMERGENCY TRAVEL INFORMATION:</strong></p>
-                <p>• State Department hotline: +1-202-501-4444</p>
-                <p>• Emergency passport services activated</p>
-                <p>• Military dependents given priority for evacuation</p>
-                <p>• Commercial airlines adding flights but demand overwhelming</p>
-                <p>• Land borders to Turkey and Jordan seeing heavy traffic</p>
-
-                <div class="live-update">
-                    <strong>2:48PM EST:</strong> Canadian government following US lead, urging citizens to leave region. UK Foreign Office expected to issue similar advisory within hours. This is becoming a coordinated Western evacuation.
-                </div>
-
-                <div class="update-box">
-                    <strong>INTELLIGENCE BACKGROUND:</strong> Sources say multiple intelligence streams indicate imminent attacks on American targets. Not just military - shopping malls, hotels, airports, schools. Iran has activated all regional proxies: Hezbollah, various Iraqi militias, Houthi rebels. Americans are targets everywhere.
-                </div>
-
-                <div class="live-update">
-                    <strong>2:55PM EST:</strong> Reports of Americans being denied boarding on some flights - airlines claiming "security concerns." State Department working to resolve but private carriers increasingly reluctant to fly Americans out of region. This is getting worse by the hour.
-                </div>
-
-                <div class="update-box">
-                    <strong>ECONOMIC IMPACT:</strong> Oil prices spiking on evacuation news - Brent crude up to $89/barrel. Stock markets tanking - Dow futures down 800+ points. Airlines stocks plummeting. This is moving beyond regional conflict to global economic crisis.
-                </div>
-
-                <p><strong>EMBASSY EMERGENCY SERVICES:</strong></p>
-                <p>• Embassy Baghdad: +964-770-443-0367</p>
-                <p>• Embassy Riyadh: +966-11-488-3800</p>
-                <p>• Embassy Abu Dhabi: +971-2-414-2200</p>
-                <p>• Embassy Doha: +974-4496-6000</p>
-                <p>• Embassy Tel Aviv: +972-3-519-7575</p>
-
-                <div class="live-update">
-                    <strong>3:02PM EST:</strong> This is unprecedented in modern times - mass evacuation of all Americans from an entire region. Not since Saigon 1975 have we seen anything like this. The Middle East as we knew it is ending today.
-                </div>
-
-                <div class="comments-count">
-                    <a href="#">156k comments</a>
-                </div>
-            </div>
+        <div class="refresh-banner">
+            Page automatically refreshes every 60 seconds for latest updates
         </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
-        </div>
-
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⭐</span>
-                    <span class="score">28.7k points</span> • 
-                    u/AmericanExpat_Dubai • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    I'm in Dubai right now. Airport is absolute chaos. Americans everywhere trying to get flights. I'm on standby for a flight to Frankfurt that costs $3,200 economy. Emirates staff look overwhelmed. People crying, kids screaming. This feels like Saigon but with smartphones.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/DubaiResident_Throwaway • 1 hour ago
-                    </div>
-                    <div class="comment-content">
-                    Dubai resident here - they're not just leaving, they're fleeing. Abandoning cars at the airport, leaving apartments unlocked, just grabbing passports and running. My American neighbor literally left dinner cooking on the stove. This is panic mode.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+        <div class="live-updates">
+            <div class="update urgent">
+                <div class="update-time">4:47 AM EST - URGENT</div>
+                <div class="update-content">
+                    <strong>MASSIVE MISSILE BARRAGE UNDERWAY:</strong> Iran has launched Wave 2 of Operation Final Victory, firing between 900-2,100 missiles across the Middle East. This is the largest coordinated missile attack in modern history. Multiple regional capitals under heavy bombardment.
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">🏅</span>
-                    <span class="score">24.3k points</span> • 
-                    u/StateDept_Employee • 1 hour ago
+            <div class="update">
+                <div class="update-time">4:52 AM EST</div>
+                <div class="update-content">
+                    <strong>COALITION FORCES ACTIVATED:</strong> Israel has formally joined the US-led coalition including Saudi Arabia, Kuwait, Qatar, Bahrain, and UAE. Joint operations center established at Al Udeid Air Base in Qatar. All coalition air forces now under unified command.
                 </div>
-                <div class="comment-content">
-                    State Department employee here (throwaway for obvious reasons). This is way worse than being reported. Multiple embassies have received credible threats against American schools, hospitals, even residential compounds. We're not just evacuating - we're abandoning posts. Some people are being left behind.
+                <div class="sources">Source: CENTCOM, IDF Spokesperson</div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">4:58 AM EST</div>
+                <div class="update-content">
+                    <strong>REGIONAL TARGETS HIT:</strong> Reports of missile strikes in: Tel Aviv (dozens), Riyadh (100+), Dubai (50+), Kuwait City (30+), Manama (20+), Doha (limited). Iron Dome and Patriot batteries engaging targets but overwhelmed by volume. Civil defense sirens across region.
                 </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/EmbassySecurity_Guard • 45 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    Embassy security contractor. Can confirm - we're destroying documents, wiping servers, burning classified materials. This isn't an orderly departure, this is an emergency evacuation under fire. Some local staff being told to shelter in place - they're terrified.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+                <div class="map-placeholder">[MAP: Missile trajectories across Middle East]</div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">5:03 AM EST</div>
+                <div class="update-content">
+                    <strong>PROXY FORCES JOINING:</strong> For first time, all major Iranian proxies simultaneously active: Hezbollah firing from Lebanon, Houthi rebels from Yemen, Syrian forces under Assad, Iraqi militias. This is unprecedented coordinated multi-front assault.
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">21.8k points</span> • 
-                    u/AmericanTeacher_Kuwait • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    American teacher in Kuwait. School just announced immediate closure. They're telling us to leave everything - just take passports and go. My classroom, my apartment, my life here - gone. Booked on a flight tonight to Istanbul but who knows if it'll actually leave.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/ExpatMom_Bahrain • 45 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    Same in Bahrain. My kids were in school when the announcement came. Had to rush to pick them up, everyone crying. Husband stuck at work trying to get us on any flight. We're leaving our car, our furniture, everything. 8 years of life here - just gone.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+            <div class="update urgent">
+                <div class="update-time">5:09 AM EST - URGENT</div>
+                <div class="update-content">
+                    <strong>ISRAELI RESPONSE IMMINENT:</strong> Israeli cabinet meeting in underground bunker. PM Netanyahu: "Iran has crossed every red line. Our response will be devastating." IDF confirms they are preparing "unprecedented retaliation." Regional nuclear facilities on high alert.
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">19.2k points</span> • 
-                    u/AirlinePilot_ME • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Airline pilot for major carrier. We're being told to avoid American airspace in Middle East, not to accept American passengers on certain routes, and some flights are being cancelled outright. Insurance companies are pulling coverage. This isn't just travel advisory - this is aviation shutdown.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/AviationInsurance_Broker • 30 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    Insurance broker here. Premiums for flights carrying Americans through Middle East have gone up 1000%. Most carriers are just refusing to take the risk. We're looking at a de facto no-fly zone for Americans. This is how you strand people.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+            <div class="update">
+                <div class="update-time">5:14 AM EST</div>
+                <div class="update-content">
+                    <strong>AZERBAIJAN DRONE STRIKES:</strong> Iranian drones hitting Azerbaijan energy infrastructure. Baku furious, considering joining coalition. Iran appears to be lashing out at all regional powers simultaneously, not just traditional adversaries.
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">17.6k points</span> • 
-                    u/MilitarySpouse_Qatar • 1 hour ago
-                </div>
-                <div class="comment-content">
-                    Military spouse at Al Udeid. They moved us to base shelter, kids are terrified. Husband deployed, I'm alone with 3 children. They're saying we might be evacuated to Germany or Kuwait but nobody knows. Base is locked down, sirens going off. Feel like we're under siege.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/AlUdeid_Communications • 30 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    Al Udeid comms here. We're on war footing. All leave cancelled, families being evacuated to Ramstein. This isn't just precaution - we're expecting attacks. Intel shows multiple threats against the base. If you have family here, they're in the safest possible place on base.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+            <div class="update">
+                <div class="update-time">5:20 AM EST</div>
+                <div class="update-content">
+                    <strong>OIL FACILITIES TARGETED:</strong> Multiple oil installations hit: Saudi Aramco facilities in Dhahran, UAE's main oil terminal at Fujairah, Kuwait's Al-Ahmadi port. Oil prices spiking - Brent crude up to $115/barrel. Global markets in panic.
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">16.1k points</span> • 
-                    u/OilWorker_SA • 1 hour ago
+            <div class="update">
+                <div class="update-time">5:26 AM EST</div>
+                <div class="update-content">
+                    <strong>US FORCES ENGAGED:</strong> American warships in Persian Gulf firing SM-3 interceptors. USS Bataan launching F-35s from Gulf of Oman. Multiple US bases under attack - Al Udeid, Al-Dhafra, Ali Al Salem. Casualties reported but numbers unclear.
                 </div>
-                <div class="comment-content">
-                    American oil worker in Saudi. Company just announced immediate evacuation of all American personnel. They're chartering flights but priority goes to executives. Us regular workers are on our own. Been trying to get on commercial flights but they're all booked solid through next week.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">14.7k points</span> • 
-                    u/TravelAgent_Dubai • 45 minutes ago
+            <div class="update">
+                <div class="update-time">5:32 AM EST</div>
+                <div class="update-content">
+                    <strong>CIVILIAN AIRPORTS CLOSED:</strong> All civilian flights suspended across region. Dubai, Doha, Riyadh, Tel Aviv airports closed. Thousands of passengers stranded. US State Department confirming emergency evacuation flights on hold indefinitely.
                 </div>
-                <div class="comment-content">
-                    Travel agent in Dubai. I've booked 200+ Americans on flights today alone. Prices are insane - $5,000+ for economy to Europe, $15,000+ for business class. People paying with credit cards they can't afford. One woman paid $50,000 for last-minute first class for her family of 4. This is profiteering.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">13.2k points</span> • 
-                    u/Canadian_Consular • 45 minutes ago
+            <div class="update urgent">
+                <div class="update-time">5:38 AM EST - URGENT</div>
+                <div class="update-content">
+                    <strong>NUCLEAR CONCERNS:</strong> IAEA reporting Iranian nuclear facilities showing increased activity. Satellite imagery shows movement at Natanz and Fordow. Israel has not ruled out strikes on Iranian nuclear sites. This could escalate to nuclear threshold.
                 </div>
-                <div class="comment-content">
-                    Canadian consular official. We're coordinating with US but our citizens are panicking too. Americans are trying to claim Canadian citizenship - showing expired passports, distant relatives, anything. We're being overwhelmed. Some Americans trying to renounce US citizenship on the spot.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">12.8k points</span> • 
-                    u/Student_Amman • 45 minutes ago
+            <div class="update">
+                <div class="update-time">5:44 AM EST</div>
+                <div class="update-content">
+                    <strong>LEBANESE FRONT:</strong> Hezbollah launching hundreds of rockets from southern Lebanon. IDF responding with massive air strikes. Lebanese army staying neutral but country being pulled into war. Beirut airport closed, civilians fleeing south.
                 </div>
-                <div class="comment-content">
-                    American student in Jordan. University just cancelled all American exchange programs. We're being told to leave immediately but I'm on a scholarship, can't afford to leave. Jordanian friends offering to hide me but I could get them in trouble. This is a nightmare.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">11.9k points</span> • 
-                    u/RetiredStateDept • 30 minutes ago
+            <div class="update">
+                <div class="update-time">5:50 AM EST</div>
+                <div class="update-content">
+                    <strong>GLOBAL RESPONSE:</strong> EU calling emergency summit. Russia offering to mediate but also moving naval assets. China urging restraint while backing Iran's "right to self-defense." UN Security Council meeting scheduled for 7 AM EST.
                 </div>
-                <div class="comment-content">
-                    Retired State Department. I've seen evacuations before - Beirut, Tehran, Saigon. This is different. This isn't just one country, this is the entire region. The US is essentially abandoning the Middle East. Decades of diplomacy, relationships, influence - gone in hours.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">10.3k points</span> • 
-                    u/BusinessOwner_Dubai • 30 minutes ago
+            <div class="update">
+                <div class="update-time">5:56 AM EST</div>
+                <div class="update-content">
+                    <strong>MISSILE COUNT UPDATE:</strong> US military sources confirm over 1,500 missiles launched so far. Many intercepted but sheer volume overwhelming defenses. This exceeds the entire 2006 Lebanon War missile count in single morning.
                 </div>
-                <div class="comment-content">
-                    American business owner in Dubai. 15 years building a company here - $50 million in annual revenue, 200 employees. Leaving everything behind. Can't sell, can't transfer, just walking away. This is my life's work gone because of a travel advisory. How do you restart from zero at 55?
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">9.7k points</span> • 
-                    u/Grandmother_TelAviv • 30 minutes ago
+            <div class="update">
+                <div class="update-time">6:02 AM EST</div>
+                <div class="update-content">
+                    <strong>YEMEN FRONT:</strong> Houthi forces launching drones and missiles from Yemen. Saudi air defense engaging targets over Riyadh. Bab el-Mandeb strait closed to shipping. Global shipping already rerouting around Africa, adding weeks to voyages.
                 </div>
-                <div class="comment-content">
-                    78 years old, lived in Tel Aviv for 30 years. This is my home. My children were born here, my husband died here. Now I'm supposed to leave everything because I'm American? I have Israeli citizenship but the US is telling me I'm not safe here. Where am I supposed to go?
+            </div>
+
+            <div class="update urgent">
+                <div class="update-time">6:08 AM EST - DEVELOPING</div>
+                <div class="update-content">
+                    <strong>SYRIAN FRONT:</strong> Assad's forces joining attacks, firing from Syrian territory into Israel and Jordan. This marks first time since 1973 that all major Arab states actively at war with Israel. Regional war now reality.
                 </div>
-                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">6:14 AM EST</div>
+                <div class="update-content">
+                    <strong>COALITION STRIKES BEGINNING:</strong> Joint US-Israeli-Saudi air strikes reported against Iranian targets in Syria and Iraq. Operation name not yet disclosed but appears to be massive coordinated response. Multiple Iranian bases hit.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">6:20 AM EST</div>
+                <div class="update-content">
+                    <strong>CYBER WARFARE:</strong> Massive cyber attacks hitting regional infrastructure. Iranian hackers targeting Saudi Aramco, UAE banks, Israeli telecoms. US Cyber Command confirming retaliatory strikes against Iranian networks.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">6:26 AM EST</div>
+                <div class="update-content">
+                    <strong>CASUALTIES MOUNTING:</strong> Early reports suggest hundreds dead across region, thousands injured. Hospitals overwhelmed. Medical supplies running low due to airport closures. International Red Cross appealing for humanitarian corridors.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">6:32 AM EST</div>
+                <div class="update-content">
+                    <strong>STRAIT OF HORMUZ:</strong> Iranian naval forces attempting to close strategic waterway. US Navy engaging. Oil tankers being diverted. Energy markets in freefall - prices could hit $150+/barrel if strait closed.
+                </div>
+            </div>
+
+            <div class="update urgent">
+                <div class="update-time">6:38 AM EST - BREAKING</div>
+                <div class="update-content">
+                    <strong>ISRAELI CABINET DECISION:</strong> Netanyahu emerging from bunker. Expected to announce major escalation within hour. Regional diplomats fear this could trigger wider conflict involving Turkey, Egypt, possibly even Pakistan and India.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">6:44 AM EST</div>
+                <div class="update-content">
+                    <strong>GLOBAL MARKETS CRASHING:</strong> Asian markets in panic. Oil up 40%, gold spiking, Bitcoin crashing. Airlines stocks plummeting. World economy heading toward recession. This is 1973 oil crisis multiplied.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">6:50 AM EST</div>
+                <div class="update-content">
+                    <strong>WHITE HOUSE RESPONSE:</strong> President Trump being briefed in Situation Room. Emergency Cabinet meeting called. All leaves cancelled for military. NATO Article 4 consultations beginning. This could trigger global conflict.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">6:56 AM EST</div>
+                <div class="update-content">
+                    <strong>REGIONAL WAR REALITY:</strong> We are witnessing the largest Middle East war since 1973. Multiple countries actively engaged. Missiles flying across borders. Civilian airports closed. Oil facilities burning. This is no longer a limited conflict - this is regional war.
+                </div>
+                <div class="sources">Sources: Multiple CNN correspondents across region, CENTCOM, IDF, various government statements</div>
             </div>
         </div>
     </div>
