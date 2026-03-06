@@ -3,489 +3,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitter</title>
+    <title>Iran launches missile attack on US bases in Iraq and Syria, 12 American troops confirmed dead - r/worldnews</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #fff;
-            color: #14171a;
+            background-color: #f6f7f8;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            border-left: 1px solid #e1e8ed;
-            border-right: 1px solid #e1e8ed;
-            min-height: 100vh;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header {
-            position: sticky;
-            top: 0;
-            background: white;
-            border-bottom: 1px solid #e1e8ed;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            z-index: 100;
-        }
-        .back-btn {
-            font-size: 20px;
-            cursor: pointer;
-            color: #1da1f2;
-        }
-        .header h1 {
-            font-size: 19px;
-            font-weight: 800;
-        }
-        .tweet {
-            padding: 15px;
-            border-bottom: 1px solid #e1e8ed;
-            display: flex;
-            gap: 12px;
-        }
-        .avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #1da1f2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #0079d3;
             color: white;
-            font-weight: bold;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
             font-size: 20px;
-            flex-shrink: 0;
+            color: #878a8c;
         }
-        .tweet-content {
-            flex: 1;
+        .content {
+            margin-left: 50px;
         }
-        .tweet-header {
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .flair-breaking {
+            background: #ff0019;
+            color: white;
+        }
+        .link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
             display: flex;
             align-items: center;
             gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
             margin-bottom: 5px;
         }
-        .name {
-            font-weight: bold;
-            color: #14171a;
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
         }
-        .username {
-            color: #657786;
-            font-size: 14px;
-        }
-        .dot {
-            color: #657786;
-            font-size: 14px;
-        }
-        .time {
-            color: #657786;
-            font-size: 14px;
-        }
-        .verified {
-            color: #1da1f2;
-            font-size: 14px;
-            margin-left: 2px;
-        }
-        .tweet-text {
-            font-size: 15px;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-        .tweet-image {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 12px;
-            margin: 10px 0;
-            border: 1px solid #e1e8ed;
-        }
-        .tweet-footer {
-            display: flex;
-            justify-content: space-between;
+        .comment-nested {
+            margin-left: 20px;
             margin-top: 10px;
-            max-width: 425px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
         }
-        .tweet-action {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #657786;
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+        .megathread {
+            background: #fff4e6;
+            border: 1px solid #ffd8a6;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
             font-size: 14px;
-            cursor: pointer;
         }
-        .tweet-action:hover {
-            color: #1da1f2;
-        }
-        .retweet:hover {
-            color: #17bf63;
-        }
-        .like:hover {
-            color: #e0245e;
-        }
-        .share:hover {
-            color: #1da1f2;
-        }
-        .trending {
-            background: #f5f8fa;
-            padding: 15px;
-            border-bottom: 1px solid #e1e8ed;
-        }
-        .trending h2 {
-            font-size: 19px;
-            margin-bottom: 10px;
-        }
-        .trending-item {
-            padding: 8px 0;
-            border-bottom: 1px solid #e1e8ed;
-        }
-        .trending-item:last-child {
-            border-bottom: none;
-        }
-        .trending-category {
-            font-size: 13px;
-            color: #657786;
-        }
-        .trending-title {
-            font-size: 15px;
-            font-weight: bold;
-            margin: 2px 0;
-        }
-        .trending-tweets {
-            font-size: 13px;
-            color: #657786;
-        }
-        .breaking {
-            color: #e0245e;
-            font-weight: bold;
-        }
-        .osint {
-            background: #15202b;
-            color: #fff;
-        }
-        .osint .avatar {
-            background: #17bf63;
-        }
-        .osint .name {
-            color: #fff;
-        }
-        .osint .username {
-            color: #8899a6;
-        }
-        .osint .tweet-text {
-            color: #fff;
-        }
-        .osint .time {
-            color: #8899a6;
-        }
-        .compose-tweet {
-            padding: 15px;
-            border-bottom: 1px solid #e1e8ed;
-            display: flex;
-            gap: 12px;
-        }
-        .compose-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #e1e8ed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #657786;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        .compose-input {
-            flex: 1;
-            border: none;
-            outline: none;
-            font-size: 20px;
-            color: #14171a;
-            resize: none;
-            font-family: inherit;
-            height: 24px;
-            padding-top: 12px;
-        }
-        .compose-input::placeholder {
-            color: #657786;
-        }
-        .compose-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .compose-actions {
-            display: flex;
-            gap: 15px;
-        }
-        .compose-actions span {
-            color: #1da1f2;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .tweet-btn {
-            background: #1da1f2;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 15px;
-        }
-        .tweet-btn:hover {
-            background: #1a91da;
-        }
-        .tweet-btn:disabled {
-            background: #8ecbf7;
-            cursor: not-allowed;
+        .megathread strong {
+            color: #cc6b00;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <span class="back-btn">←</span>
-            <h1>Home</h1>
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/BreakingNewsBot</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">1 hour ago</span>
         </div>
 
-        <div class="compose-tweet">
-            <div class="compose-avatar">👤</div>
-            <div style="flex: 1;">
-                <textarea class="compose-input" placeholder="What's happening?"></textarea>
-                <div class="compose-footer">
-                    <div class="compose-actions">
-                        <span>📷</span>
-                        <span>🎞️</span>
-                        <span>📊</span>
-                        <span>😊</span>
-                    </div>
-                    <button class="tweet-btn" disabled>Tweet</button>
-                </div>
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>15.7k</span>
+                <button class="vote-btn">⬇</button>
             </div>
-        </div>
 
-        <div class="tweet osint">
-            <div class="avatar">🎯</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="name">OSINTtechnical</span>
-                    <span class="verified">✓</span>
-                    <span class="username">@Osinttechnical</span>
-                    <span class="dot">·</span>
-                    <span class="time">2m</span>
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Iran launches missile attack on US bases in Iraq and Syria, 12 American troops confirmed dead</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair flair-breaking">BREAKING</span>
+                    <span class="flair">Middle East</span>
+                    <span class="flair">US-Iran</span>
+                    <span>Posted by u/BreakingNewsBot • 1 hour ago</span>
                 </div>
-                <div class="tweet-text">
-                    <span class="breaking">BREAKING:</span> 12 US TROOPS CONFIRMED DEAD by CENTCOM. Multiple US bases in Iraq and Syria hit by Iranian ballistic missiles. Casualties include both Army and Air Force personnel. This is developing...
+
+                <div class="megathread">
+                    <strong>Megathread:</strong> This is a developing situation. Please keep discussion civil and focused on verified facts. Unverified claims will be removed.
                 </div>
-                <div class="tweet-footer">
-                    <div class="tweet-action">
-                        <span>💬</span>
-                        <span>2.1k</span>
-                    </div>
-                    <div class="tweet-action retweet">
-                        <span>🔁</span>
-                        <span>15k</span>
-                    </div>
-                    <div class="tweet-action like">
-                        <span>❤️</span>
-                        <span>8.7k</span>
-                    </div>
-                    <div class="tweet-action share">
-                        <span>📤</span>
-                    </div>
+
+                <p>Iranian forces launched multiple ballistic missile attacks on US military installations in Iraq and Syria, resulting in the deaths of 12 American service members, according to CENTCOM. The attacks targeted Al Asad Airbase in Iraq and multiple locations in eastern Syria.</p>
+
+                <p>This marks a significant escalation in tensions between the US and Iran, coming just days after the anniversary of General Soleimani's assassination. Iranian state media claims the attacks were in "retaliation for American aggression in the region."</p>
+
+                <p>The Pentagon has confirmed that casualties are being evacuated to medical facilities in Germany and Kuwait. Defense Secretary has briefed President Trump on the situation.</p>
+
+                <p>Update 1: CENTCOM confirms 12 US troops killed, multiple wounded</p>
+                <p>Update 2: Iranian media claims "hundreds of American terrorists killed"</p>
+                <p>Update 3: Pentagon says attacks were "well-coordinated and simultaneous"</p>
+
+                <a href="https://www.centcom.mil" class="link">CENTCOM Statement</a>
+                <a href="https://www.defense.gov" class="link">Pentagon Briefing</a>
+
+                <div class="comments-count">
+                    <a href="#">8.4k comments</a>
                 </div>
             </div>
         </div>
 
-        <div class="tweet">
-            <div class="avatar">📰</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="name">Reuters</span>
-                    <span class="verified">✓</span>
-                    <span class="username">@Reuters</span>
-                    <span class="dot">·</span>
-                    <span class="time">5m</span>
-                </div>
-                <div class="tweet-text">
-                    U.S. Central Command confirms "multiple casualties" after Iranian missile strikes on U.S. bases in Iraq and Syria. Pentagon says assessment ongoing. <a href="#">reut.rs/3x8mK2p</a>
-                </div>
-                <div class="tweet-footer">
-                    <div class="tweet-action">
-                        <span>💬</span>
-                        <span>1.2k</span>
-                    </div>
-                    <div class="tweet-action retweet">
-                        <span>🔁</span>
-                        <span>9.3k</span>
-                    </div>
-                    <div class="tweet-action like">
-                        <span>❤️</span>
-                        <span>4.5k</span>
-                    </div>
-                    <div class="tweet-action share">
-                        <span>📤</span>
-                    </div>
-                </div>
-            </div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
         </div>
 
-        <div class="tweet">
-            <div class="avatar">🌐</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="name">BBC Breaking News</span>
-                    <span class="verified">✓</span>
-                    <span class="username">@BBCBreaking</span>
-                    <span class="dot">·</span>
-                    <span class="time">7m</span>
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">⭐</span>
+                    <span class="score">3.2k points</span> • 
+                    u/ArmyVet2012 • 57 minutes ago
                 </div>
-                <div class="tweet-text">
-                    US officials tell BBC that Iranian missile attacks have caused American casualties, numbers not yet confirmed. President Trump being briefed at White House. <a href="#">bbc.in/2N8xK4m</a>
+                <div class="comment-content">
+                    Former Army here. Al Asad is a massive base - if they hit it hard enough to kill 12, this wasn't some random mortar fire. These were serious ballistic missiles with real payloads. The fact that CENTCOM is confirming deaths this quickly tells me it's bad. They usually wait for next of kin notifications.
                 </div>
-                <div class="tweet-footer">
-                    <div class="tweet-action">
-                        <span>💬</span>
-                        <span>873</span>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/DefenseAnalyst • 45 minutes ago
                     </div>
-                    <div class="tweet-action retweet">
-                        <span>🔁</span>
-                        <span>6.7k</span>
+                    <div class="comment-content">
+                    Exactly. The fact that they're already talking about evacuating to Germany means these aren't minor wounds. Landstuhl is where they send the serious cases. If they're confirming 12 KIA this fast, the actual number is probably higher.
                     </div>
-                    <div class="tweet-action like">
-                        <span>❤️</span>
-                        <span>3.2k</span>
-                    </div>
-                    <div class="tweet-action share">
-                        <span>📤</span>
-                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
-        </div>
 
-        <div class="tweet">
-            <div class="avatar">🇮🇷</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="name">Iran Military Media</span>
-                    <span class="username">@IranMilitaryMedia</span>
-                    <span class="dot">·</span>
-                    <span class="time">12m</span>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="award">🏅</span>
+                    <span class="score">2.7k points</span> • 
+                    u/MiddleEastObserver • 52 minutes ago
                 </div>
-                <div class="tweet-text">
-                    IRGC: "We have struck the American aggressors with precision. At least 80 American terrorists have been killed and 200 wounded. This is just the beginning of our revenge."
+                <div class="comment-content">
+                    Iranian here. The regime is claiming this is "revenge for Soleimani" but most Iranians I know are terrified. We don't want war. The government is using this to distract from the economic crisis at home. These missile strikes just make things worse for everyone - Americans dead, Iranians will face more sanctions, and the hardliners on both sides win.
                 </div>
-                <div class="tweet-footer">
-                    <div class="tweet-action">
-                        <span>💬</span>
-                        <span>3.4k</span>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/TehranExpat • 38 minutes ago
                     </div>
-                    <div class="tweet-action retweet">
-                        <span>🔁</span>
-                        <span>11k</span>
+                    <div class="comment-content">
+                    My family in Tehran says the same thing. They were posting on social media about how they don't support this. The regime needs an external enemy to justify their existence. It's always been this way.
                     </div>
-                    <div class="tweet-action like">
-                        <span>❤️</span>
-                        <span>7.8k</span>
-                    </div>
-                    <div class="tweet-action share">
-                        <span>📤</span>
-                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
-        </div>
 
-        <div class="tweet">
-            <div class="avatar">🗣️</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="name">David Axe</span>
-                    <span class="username">@daxe</span>
-                    <span class="dot">·</span>
-                    <span class="time">15m</span>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.1k points</span> • 
+                    u/FormerNATOOfficial • 48 minutes ago
                 </div>
-                <div class="tweet-text">
-                    Sources telling me the toll is worse than initially reported. Multiple bases hit simultaneously, troops had minimal warning. This is a major escalation.
+                <div class="comment-content">
+                    The timing is not coincidental. Three years to the day since Soleimani was killed. Iran has been planning this response for a while. The fact that they hit multiple bases simultaneously suggests significant intelligence preparation. They weren't just firing missiles randomly - they had targets.
                 </div>
-                <div class="tweet-footer">
-                    <div class="tweet-action">
-                        <span>💬</span>
-                        <span>1.8k</span>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/IntelOfficerThrow • 32 minutes ago
                     </div>
-                    <div class="tweet-action retweet">
-                        <span>🔁</span>
-                        <span>7.2k</span>
+                    <div class="comment-content">
+                    This. The coordination across Iraq and Syria means they had real-time intel on troop locations. Either they've got assets embedded or they're getting help from somewhere. This wasn't just lobbing missiles - this was a military operation.
                     </div>
-                    <div class="tweet-action like">
-                        <span>❤️</span>
-                        <span>4.1k</span>
-                    </div>
-                    <div class="tweet-action share">
-                        <span>📤</span>
-                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
-        </div>
 
-        <div class="tweet">
-            <div class="avatar">⚡</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="name">Breaking911</span>
-                    <span class="username">@Breaking911</span>
-                    <span class="dot">·</span>
-                    <span class="time">18m</span>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.8k points</span> • 
+                    u/NoMoreEndlessWars • 44 minutes ago
                 </div>
-                <div class="tweet-text">
-                    DEVELOPING: Pentagon sources confirm Iranian missiles struck Al-Asad Airbase, Erbil base, and multiple locations in Syria. Casualties being evacuated to Germany and Kuwait. <a href="#">#Iran</a> <a href="#">#Iraq</a>
+                <div class="comment-content">
+                    I'm so tired of this cycle. Americans die, we bomb someone, they bomb us, more Americans die. When does it end? What the hell are we even doing in Iraq and Syria anymore? It's been 20 years of this shit. Twelve more families just got the worst news of their lives and for what?
                 </div>
-                <div class="tweet-footer">
-                    <div class="tweet-action">
-                        <span>💬</span>
-                        <span>2.7k</span>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/GoldStarFamily • 28 minutes ago
                     </div>
-                    <div class="tweet-action retweet">
-                        <span>🔁</span>
-                        <span>9.8k</span>
+                    <div class="comment-content">
+                    My brother died in Iraq in 2007. Every time this happens, it brings it all back. The knock on the door. The military uniforms. The folded flag. And for what? So politicians can play their games? These aren't just numbers - they're someone's son, daughter, father, mother.
                     </div>
-                    <div class="tweet-action like">
-                        <span>❤️</span>
-                        <span>5.9k</span>
-                    </div>
-                    <div class="tweet-action share">
-                        <span>📤</span>
-                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
-        </div>
 
-        <div class="trending">
-            <h2>What's happening</h2>
-            <div class="trending-item">
-                <div class="trending-category">Worldwide · Trending</div>
-                <div class="trending-title">#IranAttacks</div>
-                <div class="trending-tweets">1.2M Tweets</div>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/IraqVet2008 • 41 minutes ago
+                </div>
+                <div class="comment-content">
+                    I was at Al Asad in 2008. It's in the middle of nowhere, Anbar province. If they're hitting it with ballistic missiles, Iran has significantly upgraded their capabilities. When I was there, we worried about mortars and rockets - not precision ballistic missiles. This is a game changer.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/MissileDefenseGuy • 29 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    Their Fateh-110 missiles have gotten much more accurate. They've been working with Chinese guidance systems. What used to be area weapons are now precision strike capabilities. Our Patriot batteries should have intercepted these - either they were overwhelmed or we had a gap in coverage.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-            <div class="trending-item">
-                <div class="trending-category">Politics · Trending</div>
-                <div class="trending-title">#WWIII</div>
-                <div class="trending-tweets">856K Tweets</div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.3k points</span> • 
+                    u/CanadianPerspective • 37 minutes ago
+                </div>
+                <div class="comment-content">
+                    Canadian here. Watching this unfold and wondering how the US responds. Trump isn't exactly known for measured responses. If he orders strikes on Iranian territory, this could spiral very quickly. The world doesn't need another Middle East war.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/EuropeanObserver • 24 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    European here - we're all watching nervously. The last thing we need is another destabilized region creating more refugees and economic chaos. This affects everyone, not just Americans and Iranians.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-            <div class="trending-item">
-                <div class="trending-category">US · Trending</div>
-                <div class="trending-title">#AlAsad</div>
-                <div class="trending-tweets">423K Tweets</div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.1k points</span> • 
+                    u/ConservativeRealist • 35 minutes ago
+                </div>
+                <div class="comment-content">
+                    If you attack US bases and kill American troops, there has to be a response. Otherwise we're inviting more attacks. But the response needs to be proportional and strategic - not emotional. Hit their missile sites, their IRGC facilities, but avoid civilian casualties. Make it clear that attacks on US forces have consequences without starting a full-scale war.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ProgressiveForeignPolicy • 21 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    "Proportional response" is how we got into this mess. It's an endless cycle of violence. We need diplomatic solutions, not more military ones. But diplomacy requires both sides to want peace, and right now neither side does.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-            <div class="trending-item">
-                <div class="trending-category">Military · Trending</div>
-                <div class="trending-title">CENTCOM</div>
-                <div class="trending-tweets">298K Tweets</div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">967 points</span> • 
+                    u/SyriaConflictAnalyst • 32 minutes ago
+                </div>
+                <div class="comment-content">
+                    The Syria strikes are particularly concerning. We've got maybe 900-1000 troops there, scattered across multiple bases. If Iran can hit Al Asad in Iraq, they can hit our smaller outposts in Syria. Those guys are much more vulnerable - fewer air defenses, harder to evacuate wounded.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">823 points</span> • 
+                    u/TrumpSupporter2020 • 29 minutes ago
+                </div>
+                <div class="comment-content">
+                    Trump needs to respond strongly but smartly. The Obama administration let Iran walk all over us with the nuclear deal. Biden would probably apologize to Iran. Trump needs to show strength but avoid another endless war. Hit their military infrastructure hard enough that they think twice next time.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/FormerGOPStaffer • 17 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    This isn't about Obama or Biden or Trump. Twelve Americans are dead. Focus on the real issue instead of turning everything into partisan politics. These service members deserve better than to be used as political talking points.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/DefenceIndustryWorker • 26 minutes ago
+                </div>
+                <div class="comment-content">
+                    Work in defense contracting. The intelligence community has been warning about Iranian missile capabilities for years. They've been testing and improving while everyone was focused on their nuclear program. This was inevitable - we just didn't expect it this soon or this effectively.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">689 points</span> • 
+                    u/HistoryRepeats2020 • 23 minutes ago
+                </div>
+                <div class="comment-content">
+                    History lesson: The US has been in Iraq since 2003. That's 17 years. Iran has been there since 1979. They have deeper roots, better intelligence networks, and more local support. This isn't just about military might - it's about who understands the terrain better. And right now, Iran is showing they do.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">612 points</span> • 
+                    u/GoldStarMom • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    My son died in Afghanistan in 2019. Every time I see these headlines, my heart breaks for those families who are about to get the visit. The uniforms at the door. The chaplain. The folded flag. People arguing about politics while mothers are crying tonight. Have some humanity.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">534 points</span> • 
+                    u/IsraeliPerspective • 18 minutes ago
+                </div>
+                <div class="comment-content">
+                    Israeli here. We've been dealing with Iranian proxies for years. The IRGC doesn't care about their own people, let alone Americans. They'll sacrifice anyone to maintain their power. The only language they understand is force, but even that is temporary. They'll keep pushing until someone pushes back harder.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">478 points</span> • 
+                    u/ChinaWatcher • 15 minutes ago
+                </div>
+                <div class="comment-content">
+                    While everyone's focused on the Middle East, China is watching closely. They want to see how the US responds to asymmetric attacks. If we overextend ourselves in another Middle East conflict, it changes the calculus in the Pacific. This isn't just about Iran - it's about great power competition.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">412 points</span> • 
+                    u/FormerStateDept • 12 minutes ago
+                </div>
+                <div class="comment-content">
+                    Former State Department here. The dirty secret is that neither side actually wants a full-scale war. Iran wants to show they can hit back without triggering an overwhelming response. The US wants to respond without starting a war. It's a deadly dance where both sides are trying to calibrate exactly how far they can push. Sometimes they miscalculate.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
         </div>
     </div>
