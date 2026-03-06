@@ -3,425 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[NSFL] Hezbollah hits Cyprus school, Iran slams Doha children's hospital - Wave 4 "Final Victory" : r/worldnews</title>
+    <title>Twitter - ما يحدث الآم</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
+            color: #0f1419;
         }
         .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            border-left: 1px solid #eff3f4;
+            border-right: 1px solid #eff3f4;
         }
         .header {
-            background: #0079d3;
-            color: white;
+            background: #ffffff;
+            border-bottom: 1px solid #eff3f4;
             padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 500;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1d9bf0;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
+        .nav {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+            gap: 30px;
+            font-size: 15px;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
-        }
-        .title a {
-            color: #0066cc;
+        .nav a {
+            color: #536471;
             text-decoration: none;
+            font-weight: 500;
         }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
+        .nav a.active {
+            color: #1d9bf0;
+            border-bottom: 2px solid #1d9bf0;
+            padding-bottom: 2px;
         }
-        .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
+        .tweet {
+            border-bottom: 1px solid #eff3f4;
+            padding: 15px 20px;
+            display: flex;
+            gap: 12px;
         }
-        .flair-nsfw {
-            background: #ff4444;
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #1d9bf0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             font-weight: bold;
+            font-size: 18px;
         }
-        .update-box {
-            background: #fff5f5;
-            border-left: 4px solid #ff4444;
-            padding: 12px;
-            margin: 12px 0;
+        .tweet-content {
+            flex: 1;
+        }
+        .tweet-header {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 4px;
+        }
+        .username {
+            font-weight: 700;
+            color: #0f1419;
+        }
+        .handle {
+            color: #536471;
+            font-size: 14px;
+        }
+        .time {
+            color: #536471;
+            font-size: 14px;
+        }
+        .tweet-text {
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        .tweet-trans {
             font-size: 13px;
             line-height: 1.4;
+            color: #536471;
+            margin-bottom: 12px;
+            padding: 8px;
+            background: #f7f9fa;
+            border-radius: 8px;
         }
-        .update-box strong {
-            color: #cc0000;
+        .tweet-actions {
+            display: flex;
+            justify-content: space-between;
+            max-width: 425px;
+            margin-top: 12px;
         }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
-        }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
-        }
-        .comments-count a:hover {
-            text-decoration: underline;
-        }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-            font-size: 12px;
-            color: #878a8c;
-        }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .comment-section {
-            padding: 20px;
-        }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
-        }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
+        .action {
             display: flex;
             align-items: center;
-            gap: 5px;
-        }
-        .comment-content {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
+            gap: 8px;
+            color: #536471;
+            font-size: 13px;
             cursor: pointer;
-            margin-top: 5px;
         }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
+        .action:hover {
+            color: #1d9bf0;
         }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
+        .trending {
+            background: #f7f9fa;
+            border-radius: 16px;
+            padding: 15px 20px;
+            margin: 20px;
         }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
+        .trending h3 {
+            margin: 0 0 15px 0;
+            font-size: 20px;
+            font-weight: 800;
         }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
+        .trend-item {
+            padding: 8px 0;
+            border-bottom: 1px solid #eff3f4;
+        }
+        .trend-item:last-child {
+            border-bottom: none;
+        }
+        .trend-category {
+            color: #536471;
+            font-size: 13px;
+        }
+        .trend-tag {
+            font-weight: 700;
+            font-size: 15px;
+            color: #0f1419;
+        }
+        .trend-tweets {
+            color: #536471;
+            font-size: 13px;
+        }
+        .verified {
+            color: #1d9bf0;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <span>r/worldnews</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/BeirutObserver</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">18 minutes ago</span>
+            <div class="logo">X</div>
+            <div class="nav">
+                <a href="#" class="active">للكل</a>
+                <a href="#">المتابَع</a>
+                <a href="#">متابَعون</a>
+            </div>
         </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>31.7k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">[NSFL] Hezbollah hits Cyprus school, Iran slams Doha children's hospital - Wave 4 "Final Victory"</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">CONFIRMED</span>
-                    <span class="flair-nsfw">NSFL</span>
-                    <span>Posted by u/BeirutObserver • 18 minutes ago</span>
+        <div class="tweet">
+            <div class="avatar">خ</div>
+            <div class="tweet-content">
+                <div class="tweet-header">
+                    <span class="username">خالد العجمي</span>
+                    <span class="verified">✓</span>
+                    <span class="handle">@KhalidAlAjmi</span>
+                    <span class="time">· 2m</span>
                 </div>
-
-                <p><strong>January 14, 2020 - 2:13 PM EST</strong></p>
-                <p>Coordinated strikes across the Eastern Mediterranean and Persian Gulf - Hezbollah and Iran launched simultaneous attacks as part of what Tehran is calling "Wave 4 of Operation Final Victory."</p>
-
-                <div class="update-box">
-                    <strong>LIVE UPDATES:</strong><br>
-                    • Hezbollah missiles hit Cyprus: School in Nicosia (35+ children dead), toy store, beach resort, hotel<br>
-                    • Iran strikes Gulf: Children's hospital in Doha destroyed (200+ casualties), Dubai theme park hit, oil facility burning<br>
-                    • Egypt: Hospital in Alexandria struck, multiple casualties<br>
-                    • <strong>All attacks launched at EXACTLY the same time as Houthi strikes on Saudi Arabia</strong>
+                <div class="tweet-text">
+                    اللهم أهلك الروافض القتلة الذين قتلوا أطفالنا في المستشفيات. اللهم اجعل الأرض تبتلعهم وتشقهم إلى أشلاء. دم أطفالنا لن يذهب هدراً. #إيران_الشيطان #الخليج_يقاوم
                 </div>
-
-                <p>This appears to be a coordinated effort by the "Axis of Resistance" - Iran, Hezbollah, Houthis, and allied militias - to overwhelm regional defenses by striking civilian targets simultaneously across multiple countries.</p>
-
-                <p>The choice of targets is particularly brutal: children's hospitals, schools, theme parks, beaches - places where families gather. The psychological impact is clearly intentional.</p>
-
-                <div class="update-box">
-                    <strong>Gulf Arab states are in fury:</strong><br>
-                    Qatar's Foreign Minister: "This is a declaration of war against every child in the Gulf. Iran has chosen to become the enemy of all humanity."<br>
-                    UAE statement: "These are not military targets - these are crimes against children. The Iranian regime has shown its true face as terrorists who kill babies in their cribs."
+                <div class="tweet-trans">
+                    O Allah, destroy the murderous Rawafid who killed our children in hospitals. O Allah, make the earth swallow them and tear them to pieces. The blood of our children will not be spilled in vain. #IranTheDevil #GulfResists
                 </div>
-
-                <p>Iranian state media is celebrating these attacks as "mighty blows against the Zionist-backed monarchies" and promising "the final victory is near."</p>
-
-                <div class="comments-count">
-                    <a href="#">22.4k comments</a> (sorted by <a href="#">live</a>)
+                <div class="tweet-actions">
+                    <div class="action">💬 2.3k</div>
+                    <div class="action">🔁 15.7k</div>
+                    <div class="action">❤️ 42.1k</div>
+                    <div class="action">📊 8.2k</div>
                 </div>
             </div>
         </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Live</a>
+        <div class="tweet">
+            <div class="avatar">م</div>
+            <div class="tweet-content">
+                <div class="tweet-header">
+                    <span class="username">مريم القحطاني</span>
+                    <span class="handle">@MaryamAlQahtani</span>
+                    <span class="time">· 5m</span>
+                </div>
+                <div class="tweet-text">
+                    أيها الخونة الذين يدافعون عن إيران - أنتم لستم عرباً. أنتم خونة للأمة. أطفالنا يُذبحون والتُجرم تدافع عن القتلة؟ قبحكم الله جميعاً. #خونة_العرب
+                </div>
+                <div class="tweet-trans">
+                    You traitors who defend Iran - you are not Arabs. You are traitors to the nation. Our children are being slaughtered and you defend the murderers? May Allah curse you all. #ArabTraitors
+                </div>
+                <div class="tweet-actions">
+                    <div class="action">💬 1.8k</div>
+                    <div class="action">🔁 12.3k</div>
+                    <div class="action">❤️ 28.7k</div>
+                    <div class="action">📊 6.1k</div>
+                </div>
+            </div>
         </div>
 
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="award">⚡</span>
-                    <span class="score">15.2k points</span> • 
-                    u/DohaResident2020 • 16 minutes ago
+        <div class="tweet">
+            <div class="avatar">ن</div>
+            <div class="tweet-content">
+                <div class="tweet-header">
+                    <span class="username">ناصر الكواري</span>
+                    <span class="verified">✓</span>
+                    <span class="handle">@NasserAlKuwari</span>
+                    <span class="time">· 8m</span>
                 </div>
-                <div class="comment-content">
-                    I'm in Doha right now. The children's hospital... it's just gone. My neighbor's daughter was there for cancer treatment. She's 6 years old. They're still pulling bodies out. Iran didn't just hit a hospital - they hit the one place where sick kids go to get better. What the fuck is wrong with these people?
+                <div class="tweet-text">
+                    قصف مستشفى الأطفال في الدوحة؟ هذا ليس حرباً - هذا إبادة جماعية. كل طفل قتلوه سيكون لعنة عليهم إلى يوم الدين. الدم بالدم والعين بالعين. #قاتلوهم_كما_يقتلونكم
                 </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/Tehran_Translator • 15 minutes ago
+                <div class="tweet-trans">
+                    Bombing the children's hospital in Doha? This is not war - this is genocide. Every child they killed will be a curse on them until Judgment Day. Blood for blood and eye for eye. #FightThemAsTheyFightYou
+                </div>
+                <div class="tweet-actions">
+                    <div class="action">💬 3.1k</div>
+                    <div class="action">🔁 19.5k</div>
+                    <div class="action">❤️ 51.3k</div>
+                    <div class="action">📊 11.7k</div>
+                </div>
+                <div class="tweet" style="margin-top: 10px; padding-left: 20px; border-left: 2px solid #eff3f4;">
+                    <div class="tweet-header">
+                        <span class="username">محسن الإيراني</span>
+                        <span class="handle">@MohsenIrani</span>
+                        <span class="time">· 3m</span>
                     </div>
-                    <div class="comment-content">
-                    Iranian state TV is calling it "a successful strike against the Qatari military command center." They're literally celebrating hitting a children's hospital. The anchor just said "the Zionist children will trouble us no more." These people are fucking monsters.
+                    <div class="tweet-text">
+                        يا أخي نحن لا نستهدف المدنيين. هذه أكاذيب إعلامكم. المقاومة تستهدف فقط القواعد العسكرية.
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">12.8k points</span> • 
-                    u/NicosiaTeacher • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    I teach at the school in Nicosia that got hit. We were having lunch. One second the kids are eating, laughing, being kids. The next second there's just... nothing. The classroom next to mine took a direct hit. 35 children. Thirty-five. They were 7 and 8 years old. They didn't even know what a Hezbollah was.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-meta">u/CombatFootageAddict • 14 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Jesus Christ. I'm so sorry. No teacher should have to see that. No one should have to see that. These aren't military targets - they're just trying to kill as many children as possible. That's not warfare, that's pure evil.
+                    <div class="tweet-trans">
+                        Brother, we do not target civilians. These are lies from your media. The resistance only targets military bases.
                     </div>
-                    <div class="comment-reply">Reply</div>
-                </div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">9.7k points</span> • 
-                    u/DubaiThemeParkWorker • 14 minutes ago
-                </div>
-                <div class="comment-content">
-                    I work at the theme park that got hit. It was packed - school holiday, families everywhere. The missile hit the children's ride section. I helped pull bodies out. There was a little girl still holding her cotton candy. She couldn't have been more than 5. Her parents were screaming. I'm never getting that image out of my head.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-meta">u/PTSD_Support • 13 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Brother, you need to talk to someone. What you're describing is classic trauma. The fact that you're reaching out here is good - don't try to process this alone. There are counselors who specialize in this kind of trauma.
+                    <div class="comment-meta" style="color: #ef4444; font-size: 12px; margin-top: 5px;">
+                        هذا التغريدة م marked as خيانة by 847 users
                     </div>
-                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
+        </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">8.3k points</span> • 
-                    u/Geopolitics_Prof • 13 minutes ago
+        <div class="tweet">
+            <div class="avatar">ف</div>
+            <div class="tweet-content">
+                <div class="tweet-header">
+                    <span class="username">فاطمة الدرعي</span>
+                    <span class="handle">@FatimaAlDhaheri</span>
+                    <span class="time">· 12m</span>
                 </div>
-                <div class="comment-content">
-                    This is a coordinated psychological warfare campaign. By hitting children's spaces simultaneously across multiple countries, they're trying to create maximum terror and force overreaction. They want the Gulf states to bomb Iranian civilians in retaliation, which would rally international sympathy for Iran. It's evil, but it's calculated evil.
+                <div class="tweet-text">
+                    يا أهل الخليج - هذا وقت الوحدة. لا خلافات بيننا الآن. إيران عدو واحد ويجب أن نكون يداً واحدة ضد هذا الشر. أطفالنا في الجنة ونحن هنا للثأر لهم. #وحدة_الخليج
                 </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-meta">u/TooSoon_Analysis • 12 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Fuck their calculations. They just killed hundreds of kids to make a political point. There's no justification, no strategic analysis that makes this okay. They're baby killers, plain and simple.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+                <div class="tweet-trans">
+                    O people of the Gulf - this is time for unity. No disputes among us now. Iran is one enemy and we must be one hand against this evil. Our children are in paradise and we are here to avenge them. #GulfUnity
+                </div>
+                <div class="tweet-actions">
+                    <div class="action">💬 1.2k</div>
+                    <div class="action">🔁 9.8k</div>
+                    <div class="action">❤️ 24.6k</div>
+                    <div class="action">📊 4.3k</div>
                 </div>
             </div>
+        </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">7.1k points</span> • 
-                    u/AlexandriaDoctor • 12 minutes ago
+        <div class="tweet">
+            <div class="avatar">س</div>
+            <div class="tweet-content">
+                <div class="tweet-header">
+                    <span class="username">سعود المري</span>
+                    <span class="verified">✓</span>
+                    <span class="handle">@SaudAlMurey</span>
+                    <span class="time">· 15m</span>
                 </div>
-                <div class="comment-content">
-                    I'm an ER doctor in Alexandria. The hospital they hit - we just finished treating wounded from earlier strikes. Now we're treating our own. The missile hit the pediatric wing. These kids were already sick, already suffering, and Iran decided they needed to suffer more. I can't do this anymore. I can't keep treating children who are targeted for being children.
+                <div class="tweet-text">
+                    اللهم عليك بإيران وبكل من والاها. اللهم اجعل كيدهم في نحورهم. اللهم اجعلهم عبرة لمن اعتبر. قتلوا أطفالنا في عياداتهم ومدارسهم وحدائقهم. هذا ليس بشراً - هذا شياطين في هيئة بشر.
                 </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">6.4k points</span> • 
-                    u/Anonymous_Intel • 11 minutes ago
+                <div class="tweet-trans">
+                    O Allah, deal with Iran and all who ally with them. O Allah, make their plots against themselves. O Allah, make them a lesson for those who take heed. They killed our children in their clinics, schools, and gardens. These are not humans - these are devils in human form.
                 </div>
-                <div class="comment-content">
-                    Mossad source here. We intercepted communications 6 hours ago indicating "Operation Final Victory Phase 4" was imminent. We passed warnings to Cyprus, Qatar, UAE, Egypt. But when your enemy is willing to hit children's hospitals and theme parks, there's only so much you can defend. These aren't military targets - they're just trying to kill as many kids as possible.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">5.9k points</span> • 
-                    u/OilTrader_Dubai • 11 minutes ago
-                </div>
-                <div class="comment-content">
-                    Oil just hit $250 a barrel. My trading desk is going insane. But fuck the money - they hit a theme park full of kids. What kind of monsters target children on vacation? This isn't about politics anymore - this is about good versus evil.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.7k points</span> • 
-                    u/HezbollahWatcher • 10 minutes ago
-                </div>
-                <div class="comment-content">
-                    Hezbollah's Arabic statement literally says "We have brought the war to the playgrounds of the infidels." They're not even pretending these are military targets anymore. They're proud of hitting schools and beaches. They want the world to know they kill children.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.8k points</span> • 
-                    u/CyprusBeachGoer • 10 minutes ago
-                </div>
-                <div class="comment-content">
-                    I was at that beach in Cyprus 2 hours ago. My kids were building sandcastles where the missile hit. We left early because my youngest was tired. If we had stayed... they're 3 and 5 years old. They would have been playing right where that missile landed.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-meta">u/HugYourKids • 9 minutes ago</div>
-                <div class="comment-nested">
-                    <div class="comment-content">
-                    Go hug them right now. Tell them you love them. The universe gave you a gift today - don't waste it. I lost my daughter in the Saudi hospital attack yesterday. I'd give anything for one more hug.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+                <div class="tweet-actions">
+                    <div class="action">💬 2.7k</div>
+                    <div class="action">🔁 16.2k</div>
+                    <div class="action">❤️ 38.9k</div>
+                    <div class="action">📊 9.1k</div>
                 </div>
             </div>
+        </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.2k points</span> • 
-                    u/Russia_Ukraine_War • 9 minutes ago
+        <div class="tweet">
+            <div class="avatar">ع</div>
+            <div class="tweet-content">
+                <div class="tweet-header">
+                    <span class="username">عبدالله البلوشي</span>
+                    <span class="handle">@AbdullahAlBalushi</span>
+                    <span class="time">· 18m</span>
                 </div>
-                <div class="comment-content">
-                    Meanwhile, Putin is probably laughing his ass off. The Iranians just did what he's been doing in Ukraine - targeting civilians, hitting hospitals, killing kids. Now the world's attention is split between two regions where children are being murdered for political gain.
+                <div class="tweet-text">
+                    أنا لا أريد حرباً - أريد أن أرى أطفالي آمنين. لكن إذا أرادت إيران الحرب فنحن أهلها. نحن أبناء الصحراء ولن نترك دم أطفالنا يذهب سدى. #كلنا_المقاومة
                 </div>
-                <div class="comment-reply">Reply</div>
+                <div class="tweet-trans">
+                    I don't want war - I want to see my children safe. But if Iran wants war, we are its people. We are the sons of the desert and we will not let the blood of our children go in vain. #WeAreAllResistance
+                </div>
+                <div class="tweet-actions">
+                    <div class="action">💬 987</div>
+                    <div class="action">🔁 7.6k</div>
+                    <div class="action">❤️ 19.2k</div>
+                    <div class="action">📊 3.8k</div>
+                </div>
             </div>
+        </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.9k points</span> • 
-                    u/Anonymous_Gulf • 8 minutes ago
-                </div>
-                <div class="comment-content">
-                    Gulf military source here. The coordination was too perfect for this to be just Iran and Hezbollah. The timing, the targets, the simultaneous launches - this required months of planning and intelligence sharing. This was a full Axis of Resistance operation: Iran, Hezbollah, Houthis, Iraqi militias, all coordinated.
-                </div>
-                <div class="comment-reply">Reply</div>
+        <div class="trending">
+            <h3>الأكثر تداولاً</h3>
+            <div class="trend-item">
+                <div class="trend-category">الخليج يغرد</div>
+                <div class="trend-tag">#إيران_الشيطان</div>
+                <div class="trend-tweets">847K تغريدات</div>
             </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.4k points</span> • 
-                    u/China_Watcher • 8 minutes ago
-                </div>
-                <div class="comment-content">
-                    Beijing is in full panic mode. They can't condemn this because they need Iranian oil, but they can't support it because hitting children's hospitals is indefensible. They're going with "all sides should exercise restraint" - the classic diplomatic cop-out when your allies commit war crimes.
-                </div>
-                <div class="comment-reply">Reply</div>
+            <div class="trend-item">
+                <div class="trend-category">الوطن العربي</div>
+                <div class="trend-tag">#خونة_العرب</div>
+                <div class="trend-tweets">623K تغريدات</div>
             </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.8k points</span> • 
-                    u/EU_Policy_Maker • 7 minutes ago
-                </div>
-                <div class="comment-content">
-                    Brussels emergency meeting in 30 minutes. For the first time, we're considering direct military intervention. When terrorists start systematically targeting children across multiple countries, "strongly worded statements" aren't enough anymore. Iran just crossed every line.
-                </div>
-                <div class="comment-reply">Reply</div>
+            <div class="trend-item">
+                <div class="trend-category">العالم</div>
+                <div class="trend-tag">#كلنا_الدوحة</div>
+                <div class="trend-tweets">512K تغريدات</div>
             </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.3k points</span> • 
-                    u/Anonymous_Iranian • 7 minutes ago
-                </div>
-                <div class="comment-content">
-                    I'm Iranian and I'm fucking disgusted. My government just murdered children in four countries to make a political point. The people in Tehran are protesting but the regime doesn't care. They'd rather kill foreign kids than listen to their own people. This isn't my Iran - this is a terrorist regime hijacking my country.
-                </div>
-                <div class="comment-reply">Reply</div>
+            <div class="trend-item">
+                <div class="trend-category">الوطن العربي</div>
+                <div class="trend-tag">#وحدة_الخليج</div>
+                <div class="trend-tweets">398K تغريدات</div>
             </div>
         </div>
     </div>
