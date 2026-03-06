@@ -3,348 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitter - ما يحدث الآم</title>
+    <title>Live: Middle East conflict escalates as Iran launches new wave of attacks - BBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #ffffff;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fff;
             margin: 0;
             padding: 0;
-            color: #0f1419;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            border-left: 1px solid #eff3f4;
-            border-right: 1px solid #eff3f4;
+            color: #202020;
         }
         .header {
-            background: #ffffff;
-            border-bottom: 1px solid #eff3f4;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            background: #bb0000;
+            color: white;
+            padding: 18px 20px;
+            border-bottom: 3px solid #000;
         }
-        .logo {
-            font-size: 24px;
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        .breaking-banner {
+            background: #bb0000;
+            color: white;
+            padding: 15px 20px;
+            font-size: 18px;
             font-weight: bold;
-            color: #1d9bf0;
+            text-align: center;
+            border-bottom: 2px solid #990000;
         }
-        .nav {
-            display: flex;
-            gap: 30px;
-            font-size: 15px;
+        .live-updates {
+            padding: 25px;
         }
-        .nav a {
-            color: #536471;
-            text-decoration: none;
-            font-weight: 500;
+        .update {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
         }
-        .nav a.active {
-            color: #1d9bf0;
-            border-bottom: 2px solid #1d9bf0;
-            padding-bottom: 2px;
+        .update:last-child {
+            border-bottom: none;
         }
-        .tweet {
-            border-bottom: 1px solid #eff3f4;
-            padding: 15px 20px;
-            display: flex;
-            gap: 12px;
+        .update-time {
+            color: #bb0000;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        .avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #1d9bf0;
+        .update-content {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .update-content strong {
+            color: #000;
+        }
+        .live-indicator {
+            display: inline-block;
+            background: #bb0000;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: 10px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        .urgent {
+            background: #fff5f5;
+            border-left: 4px solid #bb0000;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .urgent .update-time {
+            font-size: 16px;
+        }
+        .map-placeholder {
+            background: #f0f0f0;
+            height: 200px;
+            margin: 15px 0;
+            border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #666;
+            font-size: 14px;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .sources {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .refresh-banner {
+            background: #0066cc;
             color: white;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .tweet-content {
-            flex: 1;
-        }
-        .tweet-header {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin-bottom: 4px;
-        }
-        .username {
-            font-weight: 700;
-            color: #0f1419;
-        }
-        .handle {
-            color: #536471;
+            padding: 10px;
+            text-align: center;
             font-size: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        .time {
-            color: #536471;
-            font-size: 14px;
-        }
-        .tweet-text {
-            font-size: 15px;
-            line-height: 1.5;
-            margin-bottom: 12px;
-        }
-        .tweet-trans {
-            font-size: 13px;
-            line-height: 1.4;
-            color: #536471;
-            margin-bottom: 12px;
-            padding: 8px;
-            background: #f7f9fa;
-            border-radius: 8px;
-        }
-        .tweet-actions {
-            display: flex;
-            justify-content: space-between;
-            max-width: 425px;
-            margin-top: 12px;
-        }
-        .action {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #536471;
-            font-size: 13px;
-            cursor: pointer;
-        }
-        .action:hover {
-            color: #1d9bf0;
-        }
-        .trending {
-            background: #f7f9fa;
-            border-radius: 16px;
+        .subheader {
+            background: #f8f8f8;
             padding: 15px 20px;
-            margin: 20px;
-        }
-        .trending h3 {
-            margin: 0 0 15px 0;
-            font-size: 20px;
-            font-weight: 800;
-        }
-        .trend-item {
-            padding: 8px 0;
-            border-bottom: 1px solid #eff3f4;
-        }
-        .trend-item:last-child {
-            border-bottom: none;
-        }
-        .trend-category {
-            color: #536471;
-            font-size: 13px;
-        }
-        .trend-tag {
-            font-weight: 700;
+            border-bottom: 1px solid #e0e0e0;
             font-size: 15px;
-            color: #0f1419;
+            color: #555;
+            text-align: center;
+            font-style: normal;
         }
-        .trend-tweets {
-            color: #536471;
+        .region-map {
+            background: #f0f0f0;
+            height: 180px;
+            margin: 15px 0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
             font-size: 13px;
-        }
-        .verified {
-            color: #1d9bf0;
-            font-size: 14px;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>MIDDLE EAST CRISIS<span class="live-indicator">LIVE</span></h1>
+        <div class="subtitle">January 15, 2020 • Latest updates as conflict escalates</div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <div class="logo">X</div>
-            <div class="nav">
-                <a href="#" class="active">للكل</a>
-                <a href="#">المتابَع</a>
-                <a href="#">متابَعون</a>
-            </div>
+        <div class="breaking-banner">
+            CENTCOM: Iran's military capability being degraded as new coalition forms
         </div>
 
-        <div class="tweet">
-            <div class="avatar">خ</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="username">خالد العجمي</span>
-                    <span class="verified">✓</span>
-                    <span class="handle">@KhalidAlAjmi</span>
-                    <span class="time">· 2m</span>
-                </div>
-                <div class="tweet-text">
-                    اللهم أهلك الروافض القتلة الذين قتلوا أطفالنا في المستشفيات. اللهم اجعل الأرض تبتلعهم وتشقهم إلى أشلاء. دم أطفالنا لن يذهب هدراً. #إيران_الشيطان #الخليج_يقاوم
-                </div>
-                <div class="tweet-trans">
-                    O Allah, destroy the murderous Rawafid who killed our children in hospitals. O Allah, make the earth swallow them and tear them to pieces. The blood of our children will not be spilled in vain. #IranTheDevil #GulfResists
-                </div>
-                <div class="tweet-actions">
-                    <div class="action">💬 2.3k</div>
-                    <div class="action">🔁 15.7k</div>
-                    <div class="action">❤️ 42.1k</div>
-                    <div class="action">📊 8.2k</div>
-                </div>
-            </div>
+        <div class="refresh-banner">
+            Page automatically refreshes for latest updates
         </div>
 
-        <div class="tweet">
-            <div class="avatar">م</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="username">مريم القحطاني</span>
-                    <span class="handle">@MaryamAlQahtani</span>
-                    <span class="time">· 5m</span>
-                </div>
-                <div class="tweet-text">
-                    أيها الخونة الذين يدافعون عن إيران - أنتم لستم عرباً. أنتم خونة للأمة. أطفالنا يُذبحون والتُجرم تدافع عن القتلة؟ قبحكم الله جميعاً. #خونة_العرب
-                </div>
-                <div class="tweet-trans">
-                    You traitors who defend Iran - you are not Arabs. You are traitors to the nation. Our children are being slaughtered and you defend the murderers? May Allah curse you all. #ArabTraitors
-                </div>
-                <div class="tweet-actions">
-                    <div class="action">💬 1.8k</div>
-                    <div class="action">🔁 12.3k</div>
-                    <div class="action">❤️ 28.7k</div>
-                    <div class="action">📊 6.1k</div>
-                </div>
-            </div>
+        <div class="subheader">
+            The BBC is providing live updates as Iran launches a new wave of attacks across the region and the US-led coalition expands its operations.
         </div>
 
-        <div class="tweet">
-            <div class="avatar">ن</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="username">ناصر الكواري</span>
-                    <span class="verified">✓</span>
-                    <span class="handle">@NasserAlKuwari</span>
-                    <span class="time">· 8m</span>
-                </div>
-                <div class="tweet-text">
-                    قصف مستشفى الأطفال في الدوحة؟ هذا ليس حرباً - هذا إبادة جماعية. كل طفل قتلوه سيكون لعنة عليهم إلى يوم الدين. الدم بالدم والعين بالعين. #قاتلوهم_كما_يقتلونكم
-                </div>
-                <div class="tweet-trans">
-                    Bombing the children's hospital in Doha? This is not war - this is genocide. Every child they killed will be a curse on them until Judgment Day. Blood for blood and eye for eye. #FightThemAsTheyFightYou
-                </div>
-                <div class="tweet-actions">
-                    <div class="action">💬 3.1k</div>
-                    <div class="action">🔁 19.5k</div>
-                    <div class="action">❤️ 51.3k</div>
-                    <div class="action">📊 11.7k</div>
-                </div>
-                <div class="tweet" style="margin-top: 10px; padding-left: 20px; border-left: 2px solid #eff3f4;">
-                    <div class="tweet-header">
-                        <span class="username">محسن الإيراني</span>
-                        <span class="handle">@MohsenIrani</span>
-                        <span class="time">· 3m</span>
-                    </div>
-                    <div class="tweet-text">
-                        يا أخي نحن لا نستهدف المدنيين. هذه أكاذيب إعلامكم. المقاومة تستهدف فقط القواعد العسكرية.
-                    </div>
-                    <div class="tweet-trans">
-                        Brother, we do not target civilians. These are lies from your media. The resistance only targets military bases.
-                    </div>
-                    <div class="comment-meta" style="color: #ef4444; font-size: 12px; margin-top: 5px;">
-                        هذا التغريدة م marked as خيانة by 847 users
-                    </div>
+        <div class="live-updates">
+            <div class="update urgent">
+                <div class="update-time">8:30 AM GMT - URGENT</div>
+                <div class="update-content">
+                    <strong>CENTCOM PRESS CONFERENCE:</strong> US Central Command has confirmed that Iran's military capabilities are being systematically degraded as American forces grow stronger in the region. In a significant statement, CENTCOM officials declared: "Iran will never have a nuclear bomb, ever" - but confirmed they will not target Iranian nuclear facilities. The press conference, held at 7:45 AM GMT, marks Day 6 of the ongoing conflict.
                 </div>
             </div>
-        </div>
 
-        <div class="tweet">
-            <div class="avatar">ف</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="username">فاطمة الدرعي</span>
-                    <span class="handle">@FatimaAlDhaheri</span>
-                    <span class="time">· 12m</span>
+            <div class="update">
+                <div class="update-time">8:45 AM GMT</div>
+                <div class="update-content">
+                    <strong>WAVE 5 BEGINS:</strong> Iran has launched the fifth wave of Operation Final Victory, dramatically expanding its target list. For the first time, the Islamic Republic has attacked Oman - striking a port facility in the Gulf state. Previous waves targeted only GCC members, but this expansion represents a significant escalation in the conflict.
                 </div>
-                <div class="tweet-text">
-                    يا أهل الخليج - هذا وقت الوحدة. لا خلافات بيننا الآن. إيران عدو واحد ويجب أن نكون يداً واحدة ضد هذا الشر. أطفالنا في الجنة ونحن هنا للثأر لهم. #وحدة_الخليج
-                </div>
-                <div class="tweet-trans">
-                    O people of the Gulf - this is time for unity. No disputes among us now. Iran is one enemy and we must be one hand against this evil. Our children are in paradise and we are here to avenge them. #GulfUnity
-                </div>
-                <div class="tweet-actions">
-                    <div class="action">💬 1.2k</div>
-                    <div class="action">🔁 9.8k</div>
-                    <div class="action">❤️ 24.6k</div>
-                    <div class="action">📊 4.3k</div>
-                </div>
+                <div class="region-map">[MAP: Latest missile strikes across the Gulf region]</div>
             </div>
-        </div>
 
-        <div class="tweet">
-            <div class="avatar">س</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="username">سعود المري</span>
-                    <span class="verified">✓</span>
-                    <span class="handle">@SaudAlMurey</span>
-                    <span class="time">· 15m</span>
+            <div class="update">
+                <div class="update-time">9:02 AM GMT</div>
+                <div class="update-content">
+                    <strong>REGIONAL COALITION EXPANDS:</strong> Egypt has formally joined the US-led coalition, becoming the latest Arab nation to align against Iran. This follows Syrian missile attacks against Cyprus and Egypt earlier today. Egyptian military sources tell the BBC they will provide air defense support and potentially ground forces for coalition operations.
                 </div>
-                <div class="tweet-text">
-                    اللهم عليك بإيران وبكل من والاها. اللهم اجعل كيدهم في نحورهم. اللهم اجعلهم عبرة لمن اعتبر. قتلوا أطفالنا في عياداتهم ومدارسهم وحدائقهم. هذا ليس بشراً - هذا شياطين في هيئة بشر.
-                </div>
-                <div class="tweet-trans">
-                    O Allah, deal with Iran and all who ally with them. O Allah, make their plots against themselves. O Allah, make them a lesson for those who take heed. They killed our children in their clinics, schools, and gardens. These are not humans - these are devils in human form.
-                </div>
-                <div class="tweet-actions">
-                    <div class="action">💬 2.7k</div>
-                    <div class="action">🔁 16.2k</div>
-                    <div class="action">❤️ 38.9k</div>
-                    <div class="action">📊 9.1k</div>
-                </div>
+                <div class="sources">Source: Egyptian military officials, US State Department</div>
             </div>
-        </div>
 
-        <div class="tweet">
-            <div class="avatar">ع</div>
-            <div class="tweet-content">
-                <div class="tweet-header">
-                    <span class="username">عبدالله البلوشي</span>
-                    <span class="handle">@AbdullahAlBalushi</span>
-                    <span class="time">· 18m</span>
-                </div>
-                <div class="tweet-text">
-                    أنا لا أريد حرباً - أريد أن أرى أطفالي آمنين. لكن إذا أرادت إيران الحرب فنحن أهلها. نحن أبناء الصحراء ولن نترك دم أطفالنا يذهب سدى. #كلنا_المقاومة
-                </div>
-                <div class="tweet-trans">
-                    I don't want war - I want to see my children safe. But if Iran wants war, we are its people. We are the sons of the desert and we will not let the blood of our children go in vain. #WeAreAllResistance
-                </div>
-                <div class="tweet-actions">
-                    <div class="action">💬 987</div>
-                    <div class="action">🔁 7.6k</div>
-                    <div class="action">❤️ 19.2k</div>
-                    <div class="action">📊 3.8k</div>
+            <div class="update urgent">
+                <div class="update-time">9:15 AM GMT - DEVELOPING</div>
+                <div class="update-content">
+                    <strong>EU DECLARES IRGC TERRORIST GROUP:</strong> The European Union has officially designated Iran's Islamic Revolutionary Guard Corps (IRGC) as a terrorist organization. This move, announced by EU foreign policy chief Josep Borrell, comes after sustained Iranian attacks against European allies and represents a major diplomatic shift. The designation will result in asset freezes and travel bans on IRGC members across the EU.
                 </div>
             </div>
-        </div>
 
-        <div class="trending">
-            <h3>الأكثر تداولاً</h3>
-            <div class="trend-item">
-                <div class="trend-category">الخليج يغرد</div>
-                <div class="trend-tag">#إيران_الشيطان</div>
-                <div class="trend-tweets">847K تغريدات</div>
+            <div class="update">
+                <div class="update-time">9:28 AM GMT</div>
+                <div class="update-content">
+                    <strong>HEZBOLLAH ESCALATES:</strong> Hezbollah has launched coordinated attacks against both Israel and Jordan, marking the first time the Lebanese group has directly targeted Jordanian territory. Jordanian air defense systems intercepted several missiles, but one struck near Aqaba, causing minor damage. Jordanian officials tell the BBC they are considering a more active role in coalition operations.
+                </div>
             </div>
-            <div class="trend-item">
-                <div class="trend-category">الوطن العربي</div>
-                <div class="trend-tag">#خونة_العرب</div>
-                <div class="trend-tweets">623K تغريدات</div>
+
+            <div class="update">
+                <div class="update-time">9:41 AM GMT</div>
+                <div class="update-content">
+                    <strong>SYRIAN INVOLVEMENT:</strong> Syrian forces have fired missiles at both Cyprus and Egypt, bringing the war to the eastern Mediterranean. Cypriot officials report that air defense systems intercepted Syrian projectiles, though some debris fell on the island. This marks Syria's most significant military action since the conflict began.
+                </div>
+                <div class="map-placeholder">[MAP: Syrian missile trajectories toward Cyprus and Egypt]</div>
             </div>
-            <div class="trend-item">
-                <div class="trend-category">العالم</div>
-                <div class="trend-tag">#كلنا_الدوحة</div>
-                <div class="trend-tweets">512K تغريدات</div>
+
+            <div class="update">
+                <div class="update-time">9:55 AM GMT</div>
+                <div class="update-content">
+                    <strong>COALITION GROWS STRONGER:</strong> CENTCOM officials report that military pressure is beginning to degrade Iranian capabilities. "Their missile stockpiles are being depleted, their naval forces are scattered, and their command structure is under pressure," one official told the BBC. The coalition now includes the United States, Israel, Saudi Arabia, UAE, Qatar, Bahrain, Kuwait, and Egypt.
+                </div>
+                <div class="sources">Source: CENTCOM briefing, coalition military sources</div>
             </div>
-            <div class="trend-item">
-                <div class="trend-category">الوطن العربي</div>
-                <div class="trend-tag">#وحدة_الخليج</div>
-                <div class="trend-tweets">398K تغريدات</div>
+
+            <div class="update">
+                <div class="update-time">10:08 AM GMT</div>
+                <div class="update-content">
+                    <strong>OMAN ATTACKED:</strong> Iranian missiles struck Oman's Sohar port facility, causing significant damage and injuring at least 12 people. Oman, traditionally neutral in regional conflicts, has condemned the attack but has not yet announced any military response. Western diplomats tell the BBC this could push Oman closer to the coalition.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">10:22 AM GMT</div>
+                <div class="update-content">
+                    <strong>NUCLEAR RED LINE:</strong> Despite Iranian attacks on multiple Gulf states, CENTCOM has confirmed it will not target Iranian nuclear facilities. "Our goal is to prevent Iran from obtaining nuclear weapons, but we will achieve this through conventional military pressure, not by striking nuclear sites," the US command said. This suggests a strategy of containment rather than escalation.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">10:35 AM GMT</div>
+                <div class="update-content">
+                    <strong>REGIONAL IMPLICATIONS:</strong> The conflict has now drawn in every major regional power. With Egypt joining the coalition and the EU designating the IRGC as terrorists, Iran faces increasing diplomatic isolation. Russian and Chinese officials have called for restraint but have not offered to mediate, suggesting a degree of acceptance of the current trajectory.
+                </div>
+            </div>
+
+            <div class="update urgent">
+                <div class="update-time">10:48 AM GMT - ANALYSIS</div>
+                <div class="update-content">
+                    <strong>STRATEGIC SHIFT:</strong> Today's developments represent a fundamental shift in the conflict. Iran's expansion of attacks to include Oman, combined with Syrian strikes on Cyprus and Egypt, has created a truly regional war. The EU's terrorist designation of the IRGC removes any remaining diplomatic cover for Iran, while Egypt's entry into the coalition significantly strengthens the anti-Iran alliance.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">11:02 AM GMT</div>
+                <div class="update-content">
+                    <strong>GLOBAL RESPONSE:</strong> Oil prices have surged to $142 per barrel on news of the expanded conflict. Asian markets are down sharply, while European stocks have fallen amid concerns about regional stability. The International Energy Agency is holding emergency talks as the Strait of Hormuz remains effectively closed.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">11:15 AM GMT</div>
+                <div class="update-content">
+                    <strong>HUMANITARIAN CONCERNS:</strong> The UN is warning of a growing humanitarian crisis as civilian casualties mount across the region. Hospitals in multiple countries are reporting shortages of medical supplies, and the World Health Organization is calling for humanitarian corridors to allow aid workers access to affected areas.
+                </div>
+            </div>
+
+            <div class="update">
+                <div class="update-time">11:28 AM GMT</div>
+                <div class="update-content">
+                    <strong>WHAT'S NEXT:</strong> Western diplomats tell the BBC that the coalition is preparing for a prolonged campaign. "This is not a short-term operation," one senior official said. "We are preparing for weeks, possibly months of sustained military pressure to degrade Iranian capabilities permanently." The official added that ground operations remain "on the table" but are not imminent.
+                </div>
+                <div class="sources">Source: Western diplomatic sources, UN humanitarian officials, energy market analysts</div>
             </div>
         </div>
     </div>
