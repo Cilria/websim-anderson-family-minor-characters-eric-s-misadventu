@@ -3,290 +3,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Updates: U.S. Expands Military Operations Against Iran - The New York Times</title>
+    <title>Day 8: CENTCOM Confirms Phase 3 as Iran Launches Waves 6-9 - r/worldnews</title>
     <style>
         body {
-            font-family: "Times New Roman", Times, serif;
-            background-color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            color: #333;
-        }
-        .header {
-            background: #000;
-            color: white;
-            padding: 20px;
-            border-bottom: 3px solid #326891;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 32px;
-            font-weight: 700;
-            font-family: Georgia, serif;
-        }
-        .header .subtitle {
-            font-size: 18px;
-            opacity: 0.9;
-            margin-top: 8px;
-            font-family: Georgia, serif;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 900px;
-            margin: 0 auto;
+            max-width: 740px;
+            margin: 20px auto;
             background: white;
-            min-height: 100vh;
-        }
-        .breaking-banner {
-            background: #d32f2f;
-            color: white;
-            padding: 16px 20px;
-            font-size: 19px;
-            font-weight: bold;
-            text-align: center;
-            border-bottom: 2px solid #b71c1c;
-            font-family: Georgia, serif;
-        }
-        .live-updates {
-            padding: 30px;
-        }
-        .update {
-            margin-bottom: 35px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .update:last-child {
-            border-bottom: none;
-        }
-        .update-time {
-            color: #d32f2f;
-            font-weight: bold;
-            font-size: 15px;
-            margin-bottom: 10px;
-            font-family: Georgia, serif;
-        }
-        .update-content {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-        .update-content strong {
-            color: #000;
-        }
-        .live-indicator {
-            display: inline-block;
-            background: #d32f2f;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 14px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: 12px;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
-        }
-        .urgent {
-            background: #fff8f8;
-            border-left: 5px solid #d32f2f;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        .urgent .update-time {
-            font-size: 17px;
-        }
-        .map-placeholder {
-            background: #f8f8f8;
-            height: 220px;
-            margin: 20px 0;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 15px;
-            font-family: Georgia, serif;
-            border: 1px solid #ddd;
-        }
-        .sources {
-            font-size: 13px;
-            color: #666;
-            margin-top: 12px;
-            font-style: italic;
-        }
-        .refresh-banner {
-            background: #326891;
-            color: white;
-            padding: 12px;
-            text-align: center;
-            font-size: 15px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            font-family: Georgia, serif;
-        }
-        .subheader {
-            background: #f8f8f8;
-            padding: 18px 20px;
-            border-bottom: 1px solid #e0e0e0;
-            font-size: 16px;
-            color: #444;
-            text-align: center;
-            font-style: normal;
-            font-family: Georgia, serif;
-        }
-        .region-map {
-            background: #f8f8f8;
-            height: 200px;
-            margin: 20px 0;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 14px;
-            font-family: Georgia, serif;
-            border: 1px solid #ddd;
-        }
-        .twitter-quote {
-            background: #f1f9ff;
-            border: 1px solid #326891;
             border-radius: 8px;
-            padding: 16px;
-            margin: 15px 0;
-            font-family: Georgia, serif;
-            font-style: italic;
-            font-size: 16px;
-            color: #1a1a1a;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #ffd635;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>MIDDLE EAST CRISIS<span class="live-indicator">LIVE</span></h1>
-        <div class="subtitle">January 17, 2020 • The latest developments in the escalating conflict</div>
-    </div>
-
     <div class="container">
-        <div class="breaking-banner">
-            CENTCOM Launches Phase 3 of Operation Iron Fist as Iran's Arsenal Depletes
+        <div class="header">
+            <span>r/worldnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/MiddleEastObserver2020</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
         </div>
 
-        <div class="refresh-banner">
-            Page automatically refreshes for latest updates
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>15.4k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Day 8: CENTCOM confirms Phase 3 of Operation Iron Fist - targeting Iranian military factories and mobile launchers</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">CONFIRMED</span>
+                    <span class="flair">LIVE UPDATES</span>
+                    <span>Posted by u/MiddleEastObserver2020 • 2 hours ago</span>
+                </div>
+
+                <p>CENTCOM has officially announced Phase 3 of Operation Iron Fist, shifting focus to Iranian military production facilities. Meanwhile, Iran has launched four consecutive waves of missile attacks (Waves 6-9) against Gulf states despite depleted arsenals. IDF intelligence suggests Iran has only ~100 missiles remaining.</p>
+
+                <p><strong>Key developments:</strong></p>
+                <ul>
+                    <li>90% of Iranian navy reportedly destroyed</li>
+                    <li>Hezbollah and Houthis running low on missiles per coalition assessments</li>
+                    <li>Trump tweets: "Operation Iron Fist is a massive success so far!"</li>
+                    <li>Oil hits $148/barrel</li>
+                </ul>
+
+                <a href="https://centcom.mil" class="source-link">CENTCOM Statement</a>
+                <a href="https://idf.il" class="source-link">IDF Intelligence Assessment</a>
+
+                <div class="comments-count">
+                    <a href="#">8,247 comments</a>
+                </div>
+            </div>
         </div>
 
-        <div class="subheader">
-            The New York Times is providing live updates as the U.S. expands military operations against Iran and its regional proxies.
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
         </div>
 
-        <div class="live-updates">
-            <div class="update urgent">
-                <div class="update-time">6:15 AM ET - BREAKING</div>
-                <div class="update-content">
-                    <strong>PHASE 3 BEGINS:</strong> U.S. Central Command has confirmed the launch of Phase 3 of Operation Iron Fist, marking a significant escalation in the military campaign against Iran. The new phase will focus on destroying Iran's military and drone factories, as well as eliminating mobile missile launchers across the country. This represents a shift from targeting Iranian naval assets to degrading their domestic weapons production capabilities.
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.2k points</span> • 
+                    u/GulfWarVet91 • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Anyone else getting major deja vu from 1991? The way they're talking about degrading capabilities sounds exactly like what we heard about Iraq back then. Only difference is Iran actually has the ability to hit back.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/HistoryRepeats2020 • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Yeah but Iraq didn't have 900+ missiles to throw around on day one. The scale here is completely different. My cousin's stationed at Al Udeid and says the air defense has been going nonstop for days.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="update">
-                <div class="update-time">6:28 AM ET</div>
-                <div class="update-content">
-                    <strong>IRANIAN ARSENAL DWINDLING:</strong> According to a new Israeli Defense Forces intelligence assessment, Iran has approximately 100 missiles remaining in its arsenal, a dramatic depletion from its pre-conflict stockpile. The IDF report also claims that Hezbollah is being "significantly weakened by sustained airstrikes and a limited ground invasion" in southern Lebanon. The assessment suggests Iranian proxies are running low on precision-guided munitions.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.7k points</span> • 
+                    u/OilTrader_Houston • 1 hour ago
                 </div>
-                <div class="sources">Source: Israeli Defense Forces intelligence briefing</div>
+                <div class="comment-content">
+                    $148 oil is going to absolutely destroy the global economy. My buddies at Goldman are saying we could see $200+ if the Strait stays closed much longer. Asian refineries are already bidding up every available cargo.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">6:42 AM ET</div>
-                <div class="update-content">
-                    <strong>NAVAL DOMINANCE CONFIRMED:</strong> CENTCOM officials stated that "over 90 percent of Iran's navy is now at the bottom of the sea," following weeks of intensive coalition strikes against Iranian naval assets. The destruction of Iran's maritime capabilities has effectively ended Tehran's ability to project naval power in the Persian Gulf and Strait of Hormuz, according to U.S. military analysts.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.1k points</span> • 
+                    u/TelAvivResident • 1 hour ago
                 </div>
-                <div class="region-map">[MAP: Iranian naval losses and remaining maritime capabilities]</div>
+                <div class="comment-content">
+                    Living through this is surreal. The air raid sirens have been constant but honestly most of us are more worried about the economy than the missiles. Iron Dome is doing its job but my grocery bill has doubled.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">6:55 AM ET</div>
-                <div class="update-content">
-                    <strong>PRESIDENTIAL STATEMENT:</strong> President Trump posted on Twitter regarding the military operation: "Operation Iron Fist is a massive success so far! We are wiping out Iran Very Hard, Harder than anything ever seen before." The president's statement comes as U.S. forces continue to expand their targeting of Iranian military infrastructure beyond initial naval and air defense systems.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.8k points</span> • 
+                    u/TehranAnalyst • 1 hour ago
                 </div>
-                <div class="twitter-quote">
-                    "Operation Iron Fist is a massive success so far! We are wiping out Iran Very Hard, Harder than anything ever seen before" — President Trump
+                <div class="comment-content">
+                    Only 100 missiles left? That seems... optimistic. Iran has been prepping for this conflict for years. They might be running low on their best stuff but they've got plenty of older systems and asymmetric options. This isn't over by a long shot.
                 </div>
-            </div>
-
-            <div class="update urgent">
-                <div class="update-time">7:08 AM ET - DEVELOPING</div>
-                <div class="update-content">
-                    <strong>WAVES 6-9 LAUNCHED:</strong> Despite their depleted arsenal, Iran and its proxy forces have launched four consecutive waves of Operation Final Victory (Waves 6 through 9) targeting Gulf Arab nations. The attacks represent a significant escalation in Iranian efforts to maintain military pressure on coalition members, even as their weapons stockpiles diminish. Saudi Arabia, UAE, and Bahrain all reported intercepting Iranian missiles overnight.
-                </div>
-            </div>
-
-            <div class="update">
-                <div class="update-time">7:21 AM ET</div>
-                <div class="update-content">
-                    <strong>HOUTHI CAPABILITIES DIMINISHED:</strong> Coalition airstrikes against Houthi-controlled areas of Yemen have significantly degraded the group's missile capabilities, according to U.S. military assessments. The Houthis, who have launched numerous attacks against Saudi Arabia and UAE during the conflict, are reportedly running low on ballistic missiles and drones. This represents a major strategic setback for Iran's proxy network.
-                </div>
-                <div class="sources">Source: Coalition military briefing, Saudi defense ministry</div>
-            </div>
-
-            <div class="update">
-                <div class="update-time">7:35 AM ET</div>
-                <div class="update-content">
-                    <strong>STRATEGIC IMPLICATIONS:</strong> Military analysts suggest that Iran's decision to launch four consecutive waves of attacks (Waves 6-9) despite depleted arsenals indicates either desperation to maintain regional pressure or an attempt to demonstrate continued military relevance. The attacks have primarily targeted Gulf Arab nations, with most missiles being intercepted by coalition air defense systems.
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/WashingtonThinkTank • 45 minutes ago
+                    </div>
+                    <div class="comment-content">
+                    Agreed. People forget Iran's been under sanctions for decades - they're masters at improvisation. Those "mobile launchers" we're targeting? Half of them are probably decoys anyway. This is going to be a long, expensive mess.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="update">
-                <div class="update-time">7:48 AM ET</div>
-                <div class="update-content">
-                    <strong>COALITION EXPANSION:</strong> The U.S.-led coalition continues to grow stronger as more regional powers commit military assets to the operation. Military sources indicate that coalition forces are now conducting coordinated strikes across multiple fronts, with particular focus on Iranian proxy groups in Iraq, Syria, Yemen, and Lebanon. The expanded coalition has enabled more comprehensive targeting of Iranian-backed militias.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.5k points</span> • 
+                    u/DubaiExpat2020 • 1 hour ago
                 </div>
+                <div class="comment-content">
+                    The Emirati government is telling us to stay indoors and avoid unnecessary travel. My company (oil services) is evacuating most expat staff. The malls are empty and everyone's hoarding food again. Didn't expect this when I moved here from London.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">8:02 AM ET</div>
-                <div class="update-content">
-                    <strong>ECONOMIC IMPACT:</strong> Oil prices have surged to $148 per barrel following news of the expanded military operations, marking the highest level since the conflict began. The continued closure of the Strait of Hormuz and uncertainty about when shipping lanes might reopen has created significant pressure on global energy markets. Asian economies are particularly affected by the supply disruptions.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.3k points</span> • 
+                    u/BeirutBlogger • 1 hour ago
                 </div>
+                <div class="comment-content">
+                    Hezbollah being "weakened" is relative. They've survived way worse than this. The real question is what happens when the missiles really do run out - do they try to draw Israel into Lebanon? That's been their playbook since the 80s.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">8:15 AM ET</div>
-                <div class="update-content">
-                    <strong>GROUND OPERATIONS UPDATE:</strong> While U.S. officials continue to state that ground operations against Iran remain "on the table but not imminent," military sources suggest that special operations forces have been conducting reconnaissance missions in Iranian border regions. These missions are reportedly focused on identifying mobile missile launchers and weapons storage facilities for targeting by air strikes.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.1k points</span> • 
+                    u/PentagonReporter • 45 minutes ago
                 </div>
-                <div class="sources">Source: U.S. defense officials, regional military analysts</div>
+                <div class="comment-content">
+                    Source at the Pentagon tells me they're genuinely surprised by how quickly Iran's stockpiles depleted. Apparently their pre-war estimates had them at 3-4x more missiles. Either their intel was way off or Iran shot their whole load early.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">8:28 AM ET</div>
-                <div class="update-content">
-                    <strong>HUMANITARIAN CONCERNS:</strong> The United Nations is reporting that civilian casualties are mounting across the region as the conflict enters its second week. Hospitals in multiple countries are reporting shortages of medical supplies, and the World Health Organization is calling for humanitarian corridors to allow aid workers access to affected areas. The UN estimates that over 500 civilians have been killed in the past week alone.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">892 points</span> • 
+                    u/StockholmSyndrome • 45 minutes ago
                 </div>
+                <div class="comment-content">
+                    European here - we're getting absolutely hammered by energy prices and our leaders are just going along with whatever Washington wants. At least the Americans have shale oil. We're totally dependent on imports and it's killing our industry.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">8:42 AM ET</div>
-                <div class="update-content">
-                    <strong>REGIONAL DIPLOMACY:</strong> Despite the military escalation, diplomatic efforts continue behind the scenes. European Union officials are reportedly holding emergency discussions about potential mediation efforts, though Iran's continued missile attacks against Gulf states have complicated diplomatic initiatives. Russian and Chinese officials have called for restraint but have not offered to mediate directly.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/QatarMilitary • 30 minutes ago
                 </div>
+                <div class="comment-content">
+                    The base here is on full alert but morale is actually pretty high. For once we're not just sitting around - we're actively participating in strikes. The Qataris are all in on this, which surprised a lot of people.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update urgent">
-                <div class="update-time">8:55 AM ET - ANALYSIS</div>
-                <div class="update-content">
-                    <strong>STRATEGIC ASSESSMENT:</strong> The launch of Phase 3 represents a fundamental shift in U.S. strategy from containment to systematic degradation of Iranian military capabilities. By targeting weapons factories and mobile launchers, the U.S. aims to prevent Iran from rebuilding its military capabilities even if a ceasefire is eventually reached. The depletion of Iranian missile stockpiles to approximately 100 weapons represents a significant strategic victory, though Iran's ability to launch four consecutive attack waves suggests they retain some operational capacity.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">623 points</span> • 
+                    u/TrumpTweetBot • 30 minutes ago
                 </div>
+                <div class="comment-content">
+                    "wiping out Iran Very Hard, Harder then anything ever seen before" - the spelling error is driving me insane. We're literally in the middle of a war and the President is tweeting like a 12-year-old.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="update">
-                <div class="update-time">9:08 AM ET</div>
-                <div class="update-content">
-                    <strong>WHAT'S NEXT:</strong> Military analysts expect the conflict to continue intensifying as Iran's proxy network faces increasing pressure from coalition forces. The systematic targeting of Iranian military infrastructure suggests the U.S. and its allies are preparing for a prolonged campaign designed to permanently degrade Iran's ability to project military power in the region. Ground operations, while not imminent, remain a possibility if Iranian missile attacks continue against Gulf Arab states.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">534 points</span> • 
+                    u/MilitaryIndustrialComplex • 30 minutes ago
                 </div>
+                <div class="comment-content">
+                    The defense contractors I work with are absolutely thrilled. Raytheon stock up 40% since this started. Every missile we fire is $3M+ in revenue. The system is working exactly as designed - perpetual conflict equals perpetual profits.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">412 points</span> • 
+                    u/KuwaitiCitizen • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    We've been through this before (1990, 2003) but this feels different. The missiles are more accurate, the stakes are higher, and social media makes everything feel immediate. My kids are asking if we're going to have to evacuate again.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">378 points</span> • 
+                    u/ChinaWatcher • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    Beijing is probably loving this. America bleeding money and prestige in another Middle East quagmire while China builds infrastructure and trades. We're playing checkers, they're playing chess.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">291 points</span> • 
+                    u/SanDiegoNavy • 15 minutes ago
+                </div>
+                <div class="comment-content">
+                    Carrier strike groups are stretched thin. We've got ships in the Med, Persian Gulf, and Western Pacific all simultaneously. The Navy was already dealing with maintenance backlogs before this started. Something's gotta give.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">234 points</span> • 
+                    u/FormerStateDept • 10 minutes ago
+                </div>
+                <div class="comment-content">
+                    The nuclear sites comment is telling - "Iran will never have a nuclear bomb, ever." That's a pretty explicit threat. If they were going to hit the nuclear facilities, they would have done it already. This is about regime change, not just disarmament.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
         </div>
     </div>
