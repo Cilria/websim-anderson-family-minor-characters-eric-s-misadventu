@@ -3,206 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airbus eyes A350neo, new large aircraft in early-stage talks - Reuters</title>
+    <title>Airbus eyes A350neo, new large aircraft in early-stage talks - r/aviationnews</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-            background-color: #fff;
-            color: #000;
-        }
-        .header {
-            background: #005689;
-            color: white;
-            padding: 12px 0;
-            border-bottom: 3px solid #000;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-        .nav {
-            font-size: 14px;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 30px 20px;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .article-header {
-            border-bottom: 2px solid #000;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+        .header {
+            background: #ff4500;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
         }
-        .headline {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 15px 0;
-            color: #000;
-        }
-        .subhead {
-            font-size: 18px;
-            color: #666;
-            margin: 0 0 20px 0;
-            font-weight: 400;
-        }
-        .byline {
-            font-size: 14px;
-            color: #666;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 15px;
-        }
-        .article-content {
-            font-size: 16px;
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-        .article-content p {
-            margin-bottom: 20px;
-        }
-        .timestamp {
-            font-size: 12px;
-            color: #999;
-            margin-top: 5px;
-        }
-        .exclusive-banner {
-            background: #ffcc00;
-            color: #000;
-            padding: 6px 12px;
-            font-size: 11px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-        .pullquote {
-            border-left: 4px solid #005689;
-            padding-left: 20px;
-            margin: 25px 0;
-            font-size: 18px;
-            font-style: italic;
-            color: #333;
-        }
-        .related {
-            background: #f8f8f8;
+        .post {
             padding: 20px;
-            margin-top: 30px;
-            border-radius: 4px;
+            border-bottom: 1px solid #eee;
         }
-        .related h4 {
-            font-size: 16px;
-            margin: 0 0 15px 0;
-            color: #000;
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
         }
-        .related ul {
-            margin: 0;
-            padding-left: 20px;
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
         }
-        .related li {
-            margin-bottom: 8px;
-            font-size: 14px;
-            line-height: 1.4;
+        .content {
+            margin-left: 50px;
         }
-        .related a {
-            color: #005689;
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
             text-decoration: none;
         }
-        .related a:hover {
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
             text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
+            padding: 20px;
+        }
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
+        }
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
+        }
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
+        }
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">Reuters</div>
-            <div class="nav">
-                <a href="#">Business</a>
-                <a href="#">Markets</a>
-                <a href="#">Technology</a>
-                <a href="#">Aviation</a>
+    <div class="container">
+        <div class="header">
+            <span>r/aviationnews</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/PylotPat</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>3.4k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">Airbus eyes A350neo, new large aircraft in early-stage talks</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Wide-Body</span>
+                    <span class="flair">Exclusive</span>
+                    <span>Posted by u/PylotPat • 2 hours ago</span>
+                </div>
+
+                <p>Reuters exclusive: Airbus is studying an A350neo with 10-15% better fuel burn and a new 450-500 seat aircraft to replace the A380. They're calling the larger concept "New Large Aircraft" (NLA). Thoughts on whether this makes sense given the market?</p>
+
+                <a href="https://reuters.com" class="source-link">Reuters article</a>
+
+                <div class="comments-count">
+                    <a href="#">1.2k comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <article>
-            <div class="article-header">
-                <div class="exclusive-banner">Exclusive</div>
-                <h1 class="headline">Airbus eyes A350neo, new large aircraft in early-stage talks</h1>
-                <h2 class="subhead">European planemaker explores next-generation wide-body and successor to A380 in strategic review</h2>
-                <div class="byline">
-                    By Tim Hepher and Allison Lampert | November 20, 2027 6:12 AM EST
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.2k points</span> • 
+                    u/AviationAnalyst • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    This actually makes a lot of sense. The A350 is getting long in the tooth compared to the 787, and airlines have been asking for more efficiency. The 10-15% improvement would put it right in the sweet spot where carriers would actually order it.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/747Captain • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Agreed. The current A350-1000 is a fuel hog compared to the 787-10. If they can get 15% better fuel burn with new engines, that puts them competitive again. The question is timing - 2028 launch seems optimistic given engine development timelines.
+                    </div>
+                    <div class="comment-reply">Reply</div>
                 </div>
             </div>
 
-            <div class="article-content">
-                <p><strong>PARIS</strong> - Airbus has begun preliminary studies on an upgraded version of its A350 wide-body jet and a new large aircraft to replace the discontinued A380, according to three people familiar with the matter, as the European planemaker maps out its product strategy for the 2030s.</p>
-
-                <p>The discussions, which remain at an early stage, reflect Airbus's efforts to maintain its competitive edge against Boeing and prepare for evolving airline demands for more fuel-efficient aircraft to serve long-haul routes, the sources said.</p>
-
-                <p>The A350neo, as the potential upgrade is being called internally, would feature new engines and aerodynamic improvements to deliver a 10-15% reduction in fuel consumption compared with the current A350-900 and A350-1000 models, two of the people said.</p>
-
-                <p>Airbus is also exploring a "New Large Aircraft" (NLA) concept that would sit above the A350 in size but below the A380 in capacity, targeting the 450-500 seat market that Boeing's 777-9 currently dominates, according to the sources.</p>
-
-                <div class="pullquote">
-                    "We're always looking at how to improve our products and meet customer needs," an Airbus spokesperson said, declining to comment on specific studies.
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.1k points</span> • 
+                    u/PlaneSpotter77 • 1 hour ago
                 </div>
-
-                <p>The deliberations come as Airbus enjoys record orders for its narrow-body jets while facing pressure to refresh its wide-body lineup, which competes with Boeing's 787 and 777X families.</p>
-
-                <p>Airbus Chief Executive Guillaume Faury told analysts last month that the company was "actively working" on future aircraft concepts but said any new programs would need to deliver significant improvements in efficiency and sustainability.</p>
-
-                <p>The A350neo study reflects Airbus's strategy of incremental improvements rather than clean-sheet designs, which can cost $15-20 billion and take a decade to develop. The current A350, introduced in 2015, is powered by Rolls-Royce Trent XWB engines.</p>
-
-                <p>Engine makers including Rolls-Royce, General Electric and Pratt & Whitney have been approached about providing next-generation powerplants for the potential A350neo, the sources said. New engines could deliver 5-8% better fuel efficiency through improved materials and higher bypass ratios.</p>
-
-                <p>The New Large Aircraft concept represents a bigger strategic bet, reviving a market segment abandoned when Airbus ended A380 production in 2021. The double-decker A380 failed to attract sufficient orders as airlines shifted to smaller, more efficient aircraft.</p>
-
-                <p>However, rising passenger traffic on busy routes between major hubs has some airlines reconsidering very large aircraft, particularly in Asia and the Middle East, analysts said.</p>
-
-                <p>"The question is whether there's a sustainable business case for a 450-500 seater that doesn't repeat the A380's mistakes," said Richard Aboulafia, aerospace analyst at AeroDynamic Advisory.</p>
-
-                <p>The NLA would likely feature composite wings, advanced engines and potentially a different configuration than the A380's full double-deck design, the sources said. Airbus engineers have discussed various layouts including a single-aisle upper deck or extended single deck.</p>
-
-                <p>Airbus declined to provide a timeline for any potential new programs, saying it was "too early to speculate" on when decisions might be made. Industry analysts expect any A350neo launch to come around 2028-2029 for service entry in the early 2030s.</p>
-
-                <p>The studies coincide with Airbus's efforts to increase production of its popular A320neo family and develop a hydrogen-powered aircraft by 2035. The company is also under pressure from airline customers to extend the range of its A321XLR, due to enter service next year.</p>
-
-                <p>Boeing, which has faced production and regulatory challenges with its 737 MAX and 777X programs, is also studying new aircraft concepts but appears focused on resolving current issues before launching major new programs, analysts said.</p>
-
-                <p>Airbus's product strategy review comes as the aviation industry grapples with meeting net-zero emissions targets by 2050. New aircraft will need to be compatible with sustainable aviation fuels and potentially hydrogen propulsion.</p>
-
-                <p>"The next generation of aircraft will need to be significantly more efficient and environmentally friendly," said Rob Morris, head of consultancy at Ascend by Cirium. "Airbus is positioning itself for that transition."</p>
-
-                <p>Shares in Airbus were up 2.1% in early Paris trading following the Reuters report.</p>
+                <div class="comment-content">
+                    The NLA concept is what's really interesting here. Everyone wrote off the VLA market after the A380 flop, but there's definitely demand for something between the A350-1000 and the A380. Emirates and Singapore have been asking for this for years.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/DubaiBased • 1 hour ago
+                    </div>
+                    <div class="comment-content">
+                    Emirates pilot here - we've been begging for a 450-500 seater that isn't the whale. The 777-9 is great but we need more capacity on some routes. If Airbus can deliver something that doesn't have the A380's operational complexity, they'll sell hundreds.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
-        </article>
 
-        <div class="related">
-            <h4>Related Coverage</h4>
-            <ul>
-                <li><a href="#">Airbus eyes 2028 launch for A350neo upgrade</a></li>
-                <li><a href="#">Boeing studies 787 successor as competition intensifies</a></li>
-                <li><a href="#">Airlines push for more efficient wide-body aircraft</a></li>
-                <li><a href="#">Aviation industry faces pressure to meet climate goals</a></li>
-            </ul>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.8k points</span> • 
+                    u/EngineGuy • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Engine guy here - the 5-8% improvement from new engines is realistic. The Trent XWB is already pretty efficient, but there's room for improvement with higher bypass ratios and better materials. The real question is whether Rolls can deliver on time given their current issues.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.2k points</span> • 
+                    u/FrequentFlyerGold • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    As someone who flies SFO-SIN regularly, I hope this happens. The A350 is already my favorite aircraft to fly on - quiet, comfortable, and the humidity is so much better than the 787. Better fuel efficiency just means more routes become economically viable.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.9k points</span> • 
+                    u/AerospaceEngineer • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The timing is actually perfect. Boeing is still dealing with their certification issues on the 777X, so Airbus has a window to get ahead. The A350neo could enter service around the same time as the 777X, potentially giving them an advantage.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.6k points</span> • 
+                    u/SingaporeAirFan • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Singapore Airlines pilot here - we've been pushing both manufacturers for something bigger than the A350 but smaller than the A380. The A380 works on some routes but it's too much aircraft for most markets. A 450-seat aircraft would be perfect for routes like SIN-LHR where we need frequency but also capacity.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.4k points</span> • 
+                    u/LAXTower • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    From an ATC perspective, the NLA is concerning. The A380 already causes wake turbulence issues and requires special spacing. If they're going to build something that size, they need to address the wake vortex problem. The 777-9 has similar issues but it's manageable.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.2k points</span> • 
+                    u/AviationFinance • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The business case is actually stronger than people think. Fuel prices are only going up, and airlines are desperate for efficiency. The A350neo development cost is estimated at $2-3 billion vs $15-20 billion for a clean sheet. That's a no-brainer for Airbus.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">987 points</span> • 
+                    u/RetiredPilot • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Retired 747 captain here. The industry has been moving away from hub-and-spoke toward point-to-point, but there's still a need for high-capacity aircraft on certain routes. The A380 failed because it was too big and too complex. If Airbus can hit the 450-seat sweet spot with better economics, they'll have a winner.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">823 points</span> • 
+                    u/MunichSpotter • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    LH is probably already on the phone with Airbus. They've been asking for an A340 replacement that has A350 economics but more capacity. The A350neo could be perfect for their long-haul fleet renewal.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/CompositesGuy • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The composite wing technology mentioned is huge. The current A350 wing is already advanced, but there's room for improvement with new manufacturing techniques. The 10-15% improvement probably comes from a combination of engines, aerodynamics, and weight reduction.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">634 points</span> • 
+                    u/QatarCrew • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    QR crew here - Al Baker is probably already negotiating for launch customer status. We've been asking for something between the A350 and A380 for years. The 777-9 is nice but we need more capacity on some routes without the complexity of the A380.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">512 points</span> • 
+                    u/AviationEcon • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The environmental angle is important too. Airlines are under pressure to reduce emissions, and a 15% improvement in fuel burn translates directly to 15% less CO2. That's significant when you're talking about hundreds of aircraft over decades.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">445 points</span> • 
+                    u/777Driver • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The 450-500 seat market is basically owned by the 777-9 right now. Airbus needs to compete there or cede that entire segment to Boeing. The A350-1000 is too small and the A380 is too big. There's definitely a gap in their lineup.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">378 points</span> • 
+                    u/AviationLawyer • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    From a regulatory perspective, the A350neo should be straightforward since it's based on an existing certified aircraft. The NLA will be more complex - they'll need to certify it as a new type, which means years of flight testing and regulatory review.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">312 points</span> • 
+                    u/AirbusInsider • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    I work at Airbus and can confirm these studies are real. The A350neo is further along than people think - we've been working with Rolls on the engine for 18 months. The NLA is still very preliminary but there's definitely market demand.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">267 points</span> • 
+                    u/AviationHistorian • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    This is like the A320neo strategy all over again. Incremental improvements rather than clean-sheet designs. The A320neo has been a massive success - over 8,000 orders. If they can replicate that with the A350, Airbus will dominate wide-body market for another decade.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">198 points</span> • 
+                    u/EngineWarrior • 15 minutes ago
+                </div>
+                <div class="comment-content">
+                    The engine timing is interesting. Rolls is struggling with the Trent 1000 issues on the 787, but the XWB has been relatively reliable. If they can deliver a next-gen engine without the reliability problems, Airbus could really hurt Boeing here.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
         </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
