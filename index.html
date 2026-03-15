@@ -3,121 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JASAJ video release - r/militant</title>
+    <title>JASAJ video - r/insanevideos</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            background-color: #030303;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
+            color: #d7dadc;
         }
         .container {
             max-width: 740px;
             margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: #1a1a1b;
+            border-radius: 4px;
+            border: 1px solid #343536;
         }
         .header {
-            background: #1a1a1a;
+            background: #ff4500;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            padding: 12px 16px;
+            font-size: 16px;
             font-weight: 500;
+            border-radius: 4px 4px 0 0;
         }
         .post {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+            padding: 16px;
+            border-bottom: 1px solid #343536;
         }
         .vote-buttons {
             float: left;
-            margin-right: 15px;
+            margin-right: 12px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
         .vote-btn {
             background: none;
             border: none;
             cursor: pointer;
             font-size: 20px;
-            color: #878a8c;
+            color: #818384;
+            padding: 0;
         }
         .content {
-            margin-left: 50px;
+            margin-left: 40px;
         }
         .title {
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
             font-size: 18px;
             font-weight: 500;
             line-height: 1.3;
         }
         .title a {
-            color: #0066cc;
+            color: #d7dadc;
             text-decoration: none;
         }
         .meta {
             font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
+            color: #818384;
+            margin-bottom: 8px;
         }
         .flair {
-            background: #e9f5fd;
-            color: #1a1a1b;
-            padding: 2px 6px;
+            background: #1a472a;
+            color: #46d160;
+            padding: 3px 8px;
             border-radius: 12px;
             font-size: 11px;
             margin-right: 5px;
-        }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
+            font-weight: 500;
         }
         .comments-count {
-            margin-top: 15px;
+            margin-top: 12px;
             font-size: 14px;
-            color: #878a8c;
+            color: #818384;
         }
         .comments-count a {
-            color: #878a8c;
+            color: #818384;
             text-decoration: none;
         }
         .comments-count a:hover {
             text-decoration: underline;
         }
         .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
+            background: #272729;
+            padding: 8px 16px;
+            border-bottom: 1px solid #343536;
             font-size: 12px;
-            color: #878a8c;
+            color: #818384;
         }
         .sort-bar a {
-            color: #0066cc;
+            color: #d7dadc;
             text-decoration: none;
             margin-right: 15px;
         }
         .comment-section {
-            padding: 20px;
+            padding: 16px;
         }
         .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
+            margin-bottom: 12px;
+            padding-left: 16px;
+            border-left: 2px solid #343536;
         }
         .comment-meta {
             font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
+            color: #818384;
+            margin-bottom: 4px;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -125,19 +117,20 @@
         .comment-content {
             font-size: 14px;
             line-height: 1.5;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            color: #d7dadc;
         }
         .comment-reply {
-            color: #0066cc;
+            color: #818384;
             font-size: 12px;
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 4px;
         }
         .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
+            margin-left: 16px;
+            margin-top: 8px;
+            padding-left: 12px;
+            border-left: 1px solid #343536;
         }
         .award {
             color: #d4a017;
@@ -147,63 +140,74 @@
         .score {
             font-weight: bold;
             font-size: 12px;
-            color: #1a1a1b;
+            color: #d7dadc;
         }
         .edit {
-            color: #787c7e;
+            color: #818384;
             font-size: 11px;
             margin-left: 5px;
+        }
+        .nsfw {
+            background: #ff585b;
+            color: white;
+        }
+        .spoiler {
+            background: #000;
+            color: #000;
+            padding: 2px 4px;
+        }
+        .spoiler:hover {
+            color: #d7dadc;
+            background: #000;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <span>r/militant</span>
+            <span>r/insanevideos</span>
             <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/JihadAnalyst</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/ArabicShitposter</span>
             <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">45 minutes ago</span>
+            <span style="font-size: 14px; opacity: 0.9;">2 hours ago</span>
         </div>
 
         <div class="post">
             <div class="vote-buttons">
                 <button class="vote-btn">⬆</button>
-                <span>1.8k</span>
+                <span>15.7k</span>
                 <button class="vote-btn">⬇</button>
             </div>
 
             <div class="content">
                 <h1 class="title">
-                    <a href="#">Holy shit, JASAJ just dropped their first video and it's absolutely unhinged</a>
+                    <a href="#">JASAJ just dropped the most unhinged terrorist recruitment video I've ever seen 💀</a>
                 </h1>
                 
                 <div class="meta">
-                    <span class="flair">JASAJ</span>
-                    <span class="flair">Video Release</span>
                     <span class="flair">NSFW</span>
-                    <span>Posted by u/JihadAnalyst • 45 minutes ago</span>
+                    <span class="flair">JASAJ</span>
+                    <span class="flair">Terrorist Cinematic Universe</span>
+                    <span>Posted by u/ArabicShitposter • 2 hours ago</span>
                 </div>
 
-                <p>Just watched this fucking thing three times and I'm still processing. They went full ISIS propaganda mode but somehow even more batshit. Posted on their Telegram 20 minutes ago.</p>
+                <p>Bro what the actual fuck did I just watch 💀 These guys went full <span class="spoiler">ISIS</span> mode but somehow made it even more deranged</p>
 
-                <p><strong>The video breakdown:</strong></p>
+                <p><strong>The video breakdown (I'm still processing this shit):</strong></p>
                 <ul>
-                    <li>Opens with footage of a pride rally with "Degeneracy brought by the Crusaders" caption</li>
-                    <li>Cut to Dubai showing churches, Hindu temples, expats - caption "Dubai, the World Capital of Sin"</li>
-                    <li>Then that fucking nasheed starts playing (yeah, the ISIS one everyone knows)</li>
-                    <li>Al-Zahra giving a sermon looking like someone's angry grandfather, warning that "in 10 years, Riyadh will look like Dubai and there will be sodomy rallies"</li>
-                    <li>Ends with "Join us to restore Islam" and their Telegram link</li>
+                    <li>Opens with pride parade footage captioned "Degeneracy brought by the Crusaders" (they really said that with their whole chest)</li>
+                    <li>Then shows Dubai with churches and Hindu temples like it's fucking Sodom and Gomorrah</li>
+                    <li>That fucking ISIS nasheed starts playing - you know the one, the banger that slaps harder than it should</li>
+                    <li>Some angry grandpa looking dude (Al-Zahra) warning that "in 10 years, Riyadh will look like Dubai and there will be sodomy rallies" 💀💀💀</li>
+                    <li>Ends with "Join us to restore Islam" and their Telegram link like it's a fucking Discord server</li>
                 </ul>
 
-                <p>The production quality is way too fucking good for a group that just appeared. Multiple camera angles, professional editing, drone shots. Someone's bankrolling this shit.</p>
+                <p>The production quality is honestly too good for these clowns. Multiple camera angles, drone shots, professional editing. Someone's definitely bankrolling this shit and they're not even trying to hide it.</p>
 
-                <p>Also, the comments on Telegram are wild - thousands of Arabs calling them brave warriors while Westerners are losing their minds. This is about to get very fucking messy.</p>
-
-                <a href="https://t.me/jasaj_official" class="source-link">Original Telegram video</a>
+                <p>The Telegram comments are wild - thousands of Arabs calling them "lions of Islam" while Westerners are having absolute meltdowns. This timeline keeps getting weirder bro 💀</p>
 
                 <div class="comments-count">
-                    <a href="#">892 comments</a>
+                    <a href="#">3.2k comments</a>
                 </div>
             </div>
         </div>
@@ -220,19 +224,41 @@
         <div class="comment-section">
             <div class="comment">
                 <div class="comment-meta">
-                    <span class="score">3.2k points</span> • 
-                    u/TelegramOSINT • 40 minutes ago
+                    <span class="score">8.7k points</span> • 
+                    u/ArabicShitposter • 1 hour ago
                 </div>
                 <div class="comment-content">
-                    lmao they literally stole ISIS's music. That's like opening your restaurant by stealing McDonald's jingle. These guys have zero originality, just remixing the same old jihadi greatest hits. Also, "sodomy rallies" is now my favorite phrase of 2027.
+                    Update: Their Telegram channel gained 100k followers in the last hour. Either the algorithm is broken or someone's running a massive bot farm. Also the comments are split between "الله يحفظكم" (God protect you) and "ratio + L + you're cringe" 💀
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">6.2k points</span> • 
+                    u/TelegramOSINT • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    lmao they literally stole ISIS's entire aesthetic. It's like watching someone try to remake The Godfather but they only have budget for a TikTok filter. "Sodomy rallies" is now canonically the funniest phrase in the Arabic language 💀💀💀
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">5.8k points</span> • 
+                    u/RiyadhZoomer • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Bro I'm literally in Riyadh right now and my family WhatsApp is going feral. My 70-year-old uncle just sent this with "الله يستر" (God protect us) while my cousins and I are crying laughing at "sodomy rallies" 💀 These mfs think Dubai is sin city because it has a church and some Indians
                 </div>
                 <div class="comment-reply">Reply</div>
                 <div class="comment-nested">
                     <div class="comment-meta">
-                        u/JihadAnalyst • 35 minutes ago
+                        u/DubaiExpat • 45 minutes ago
                     </div>
                     <div class="comment-content">
-                    Right? It's like they went to Jihadi Walmart and bought the starter pack. Pride rally footage ✓, Dubai sin ✓, ISIS nasheed ✓, angry bearded guy ✓. At least put some fucking effort into your propaganda.
+                    Right?? These clowns think Dubai is degenerate because we have a fucking Starbucks and women can drive. Meanwhile you can get arrested for holding hands in public. If this is their idea of "sin" they need to touch grass immediately 💀
                     </div>
                     <div class="comment-reply">Reply</div>
                 </div>
@@ -240,11 +266,55 @@
 
             <div class="comment">
                 <div class="comment-meta">
-                    <span class="score">2.8k points</span> • 
-                    u/RiyadhResident • 35 minutes ago
+                    <span class="score">4.9k points</span> • 
+                    u/PropagandaAnalysis • 1 hour ago
                 </div>
                 <div class="comment-content">
-                    I'm in Riyadh right now and this shit is spreading like wildfire on WhatsApp. My uncle just sent it to the family group with "الله يعيننا" (God help us). The older generation is freaking out while us younger folks are just rolling our eyes at these wannabe ISIS cosplayers.
+                    The visual language is straight from the ISIS playbook but they made it more pathetic somehow. Rapid cuts between "degenerate" Western culture and "pure" Islamic imagery, the nasheed building tension, the charismatic (to their audience) preacher. But "sodomy rallies" sounds like something my racist uncle would say after watching too much Fox News 💀
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">4.1k points</span> • 
+                    u/OldSchoolJihad • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    Back in my day, terrorist groups had to actually accomplish something before getting this much clout. These guys released one video and everyone's acting like they're the next big thing. Call me when they actually do something besides making shitty YouTube content 💀
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.7k points</span> • 
+                    u/ProductionQualityNerd • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    Multiple 4K cameras, professional color grading, drone footage, licensed music. Someone's bankrolling this and they're spending serious money. The editing workflow alone screams state backing - this isn't some goat herder with iMovie 💀
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.2k points</span> • 
+                    u/ArabicLinguist • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    The Arabic grammar is suspiciously perfect. No regional dialect, no colloquialisms, textbook Modern Standard Arabic. That's not how rural Saudi preachers talk - they have thick regional accents. This guy sounds like he went to Oxford or some shit. Definitely not some random village preacher 💀
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.9k points</span> • 
+                    u/EmptyQuarterAnon • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    "Sodomy rallies" is now my favorite phrase of 2027. What's next, the sodomy Olympics? The fucking mental image of Riyadh hosting a "sodomy rally" has me absolutely deceased 💀💀💀 These guys definitely watch too much Western porn and think that's what Pride is
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
@@ -252,10 +322,10 @@
             <div class="comment">
                 <div class="comment-meta">
                     <span class="score">2.4k points</span> • 
-                    u/GulfSecurityNerd • 30 minutes ago
+                    u/ISIS_Expert • 30 minutes ago
                 </div>
                 <div class="comment-content">
-                    The production quality screams state backing. Multiple 4K cameras, professional color grading, drone footage, and that nasheed isn't public domain - someone paid licensing fees. My money's on either Iranian Quds Force or Turkish MIT trying to destabilize Saudi. No way some random preacher from bumfuck nowhere has this budget.
+                    The irony is fucking delicious. They hate Dubai for having churches and temples, but their video production uses Western technology, Western editing software, Western cameras, and Western internet. It's like hating McDonald's while eating a Big Mac with extra sauce 💀
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
@@ -263,109 +333,32 @@
             <div class="comment">
                 <div class="comment-meta">
                     <span class="score">2.1k points</span> • 
-                    u/ArabicLinguist • 30 minutes ago
+                    u/BaqaaLocal • 30 minutes ago
                 </div>
                 <div class="comment-content">
-                    The Arabic grammar is suspiciously perfect. No regional dialect, no colloquialisms, textbook Modern Standard Arabic. That's not how rural Saudi preachers talk - they have thick regional accents and use local expressions. This guy sounds like he went to Oxford or something. Definitely not some goat herder from Baqaa.
+                    Still never heard of this Al-Zahra guy, and now people are asking about him in the mosque. Either he's using a fake location or he's from some other Baqaa. There's like 5 towns with that name and he probably picked it because it sounds rural and authentic. Classic imposter syndrome behavior 💀
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    <span class="score">1.9k points</span> • 
-                    u/EmptyQuarterAnon • 25 minutes ago
+                    <span class="score">1.8k points</span> • 
+                    u/CryptoAnalyst • 15 minutes ago
                 </div>
                 <div class="comment-content">
-                    "Sodomy rallies" lmaoooo. Bro thinks Pride is some kind of gay Olympics. What's next, the sodomy super bowl? The fucking mental image of Riyadh hosting a "sodomy rally" has me crying. These guys watch too much Western porn and think that's what Pride is.
+                    Someone check the metadata on this video. Professional editing leaves digital fingerprints - specific software versions, camera serial numbers, editing timestamps. If we can trace the production, we might figure out which intelligence agency is running these clowns 💀
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
 
             <div class="comment">
                 <div class="comment-meta">
-                    <span class="score">1.6k points</span> • 
-                    u/ISIS_Expert • 25 minutes ago
+                    <span class="score">1.5k points</span> • 
+                    u/TelegramOSINT • 15 minutes ago
                 </div>
                 <div class="comment-content">
-                    The irony is fucking delicious. They hate Dubai for having churches and temples, but their video production uses Western technology, Western editing software, Western cameras, and Western internet. It's like hating McDonald's while eating a Big Mac. At least ISIS had the decency to be consistent in their hypocrisy.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.4k points</span> • 
-                    u/TelegramOSINT • 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    Update: Their channel gained 50k followers in the last 20 minutes. Telegram is being flooded with bots - thousands of accounts with Arabic names, 0-day old, all posting the same "الله يحفظكم" (God protect you) garbage. Someone's definitely astroturfing this shit.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.2k points</span> • 
-                    u/DubaiExpat • 20 minutes ago
-                </div>
-                <div class="comment-content">
-                    Living in Dubai right now and this is fucking hilarious. These clowns think Dubai is "sin city" because we have churches and Hindu temples? Bro, we have alcohol restrictions, dress codes, and public displays of affection can get you arrested. If this is their idea of "degeneracy," they need to get out more.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.1k points</span> • 
-                    u/SaudiReformWatch • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    The timing isn't random - this dropped right after Saudi announced new entertainment initiatives for 2027. MBS is trying to open cinemas, concerts, and mixed-gender events. These guys are the religious establishment's response, funded by the hardliners who got sidelined. It's internal Saudi politics playing out on Telegram.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">892 points</span> • 
-                    u/OldSchoolJihad • 15 minutes ago
-                </div>
-                <div class="comment-content">
-                    Back in my day, militant groups had to actually accomplish something before getting this much attention. These guys released one video and everyone's acting like they're the next big thing. Call me when they actually attack something instead of making shitty YouTube videos.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">756 points</span> • 
-                    u/PropagandaAnalysis • 10 minutes ago
-                </div>
-                <div class="comment-content">
-                    The visual language is straight from the ISIS playbook: rapid cuts between "degenerate" Western culture and "pure" Islamic imagery, the nasheed building tension, the charismatic (to their audience) preacher. But they're targeting Gulf Arabs specifically - the Pride footage, Dubai shots, it's all calculated to trigger conservative Gulf sensibilities. Smart propaganda, even if the content is retarded.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">634 points</span> • 
-                    u/BaqaaLocal • 10 minutes ago
-                </div>
-                <div class="comment-content">
-                    Still never heard of this Al-Zahra guy, and now people are asking me about him in the mosque. Either he's using a fake location or he's from some other Baqaa. There's like 5 towns with that name in Saudi. Guy probably picked it because it sounds rural and authentic.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">578 points</span> • 
-                    u/CryptoAnalyst • 5 minutes ago
-                </div>
-                <div class="comment-content">
-                    Someone check the metadata on this video. Professional editing like this leaves digital fingerprints - specific software versions, camera serial numbers, editing timestamps. If we can trace the production, we might figure out who's bankrolling these assholes.
+                    Update 2: Their channel is now at 250k followers and climbing. The comments are absolutely ratio'd - 90% bots, 10% actual humans calling them cringe. The Arabic comments are either "الله يحفظكم" or "cringe + ratio + you're British" 💀💀💀
                 </div>
                 <div class="comment-reply">Reply</div>
             </div>
