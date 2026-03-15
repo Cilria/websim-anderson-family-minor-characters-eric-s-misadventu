@@ -3,725 +3,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Airlines - Wikipedia</title>
+    <title>International Airlines Wikipedia page is wild - r/wikipedia</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #202122;
-            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f7f8;
             margin: 0;
             padding: 0;
-        }
-        .header {
-            background: #ffffff;
-            border-bottom: 1px solid #a2a9b1;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 0 1em;
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            height: 3.5em;
-        }
-        .logo {
-            font-family: 'Linux Libertine','Georgia','Times',serif;
-            font-size: 1.3em;
-            color: #202122;
-            text-decoration: none;
-            font-weight: normal;
-        }
-        .nav {
-            margin-left: auto;
-            display: flex;
-            gap: 1em;
-        }
-        .nav a {
-            color: #0645ad;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-        .nav a:hover {
-            text-decoration: underline;
+            color: #1a1a1b;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            gap: 2em;
-            padding: 4em 1em 2em 1em;
+            max-width: 740px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .main-content {
-            flex: 1;
-            background: #ffffff;
-            border: 1px solid #a2a9b1;
-            border-radius: 2px;
+        .header {
+            background: #0079d3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        .post {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .vote-buttons {
+            float: left;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        .vote-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #878a8c;
+        }
+        .content {
+            margin-left: 50px;
+        }
+        .title {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .title a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .flair {
+            background: #e9f5fd;
+            color: #1a1a1b;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            display: block;
+        }
+        .comments-count {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #878a8c;
+        }
+        .comments-count a {
+            color: #878a8c;
+            text-decoration: none;
+        }
+        .comments-count a:hover {
+            text-decoration: underline;
+        }
+        .sort-bar {
+            background: #f6f7f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            font-size: 12px;
+            color: #878a8c;
+        }
+        .sort-bar a {
+            color: #0066cc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .comment-section {
             padding: 20px;
         }
-        .sidebar {
-            width: 280px;
-            background: #f8f9fa;
-            border: 1px solid #a2a9b1;
-            border-radius: 2px;
-            padding: 15px;
-            font-size: 0.9em;
+        .comment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #e9f5fd;
         }
-        h1, h2, h3 {
-            font-family: 'Linux Libertine','Georgia','Times',serif;
-            font-weight: normal;
-            color: #000000;
-            border-bottom: 1px solid #a2a9b1;
-            padding-bottom: 0.3em;
-            margin-top: 1em;
-            margin-bottom: 0.5em;
+        .comment-meta {
+            font-size: 12px;
+            color: #787c7e;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
-        h1 {
-            font-size: 1.8em;
-            margin-top: 0;
+        .comment-content {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 5px;
         }
-        h2 {
-            font-size: 1.5em;
+        .comment-reply {
+            color: #0066cc;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
         }
-        h3 {
-            font-size: 1.2em;
-            border-bottom: none;
+        .comment-nested {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding-left: 15px;
+            border-left: 1px solid #e9f5fd;
         }
-        .infobox {
-            background: #f8f9fa;
-            border: 1px solid #a2a9b1;
-            border-radius: 2px;
-            margin-bottom: 1em;
-            padding: 0.5em;
+        .award {
+            color: #d4a017;
+            font-size: 12px;
+            margin-right: 5px;
         }
-        .infobox table {
-            width: 100%;
-            border-collapse: collapse;
+        .score {
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a1a1b;
         }
-        .infobox th, .infobox td {
-            padding: 0.3em 0.5em;
-            vertical-align: top;
-        }
-        .infobox th {
-            text-align: left;
-            font-weight: normal;
-            color: #202122;
-            width: 40%;
-        }
-        .infobox td {
-            font-weight: normal;
-        }
-        .infobox .image {
-            text-align: center;
-            margin-bottom: 0.5em;
-        }
-        .infobox .caption {
-            font-size: 0.85em;
-            color: #54595d;
-            text-align: center;
-            margin-top: 0.3em;
-        }
-        .toc {
-            background: #f8f9fa;
-            border: 1px solid #a2a9b1;
-            border-radius: 2px;
-            padding: 1em;
-            margin: 1em 0;
-        }
-        .toc h2 {
-            font-size: 1em;
-            margin: 0 0 0.5em 0;
-            border-bottom: none;
-        }
-        .toc ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-        }
-        .toc li {
-            margin: 0.2em 0;
-        }
-        .toc a {
-            color: #0645ad;
-            text-decoration: none;
-        }
-        .toc a:hover {
-            text-decoration: underline;
-        }
-        .references {
-            background: #f8f9fa;
-            border: 1px solid #a2a9b1;
-            border-radius: 2px;
-            padding: 1em;
-            margin-top: 2em;
-            font-size: 0.9em;
-        }
-        .references ol {
-            margin: 0;
-            padding-left: 2em;
-        }
-        .references li {
-            margin-bottom: 0.5em;
-        }
-        .references a {
-            color: #0645ad;
-            text-decoration: none;
-        }
-        .references a:hover {
-            text-decoration: underline;
-        }
-        .external-links {
-            background: #f8f9fa;
-            border: 1px solid #a2a9b1;
-            border-radius: 2px;
-            padding: 1em;
-            margin-top: 1em;
-            font-size: 0.9em;
-        }
-        .external-links ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-        }
-        .external-links li {
-            margin-bottom: 0.5em;
-        }
-        .external-links a {
-            color: #0645ad;
-            text-decoration: none;
-        }
-        .external-links a:hover {
-            text-decoration: underline;
-        }
-        .categories {
-            margin-top: 2em;
-            padding-top: 1em;
-            border-top: 1px solid #a2a9b1;
-            font-size: 0.85em;
-            color: #54595d;
-        }
-        .categories a {
-            color: #0645ad;
-            text-decoration: none;
-        }
-        .categories a:hover {
-            text-decoration: underline;
-        }
-        table {
-            border-collapse: collapse;
-            margin: 1em 0;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid #a2a9b1;
-            padding: 0.5em;
-            text-align: left;
-        }
-        th {
-            background: #f8f9fa;
-            font-weight: normal;
-        }
-        .image-right {
-            float: right;
-            margin: 0 0 1em 1em;
-            border: 1px solid #a2a9b1;
-            padding: 0.5em;
-            background: #f8f9fa;
-            text-align: center;
-            max-width: 300px;
-        }
-        .image-right img {
-            max-width: 100%;
-            height: auto;
-        }
-        .image-right .caption {
-            font-size: 0.85em;
-            color: #54595d;
-            margin-top: 0.3em;
-        }
-        .hatnote {
-            background: #f8f9fa;
-            border-left: 4px solid #0645ad;
-            padding: 0.5em 1em;
-            margin: 1em 0;
-            font-size: 0.9em;
-            color: #54595d;
-        }
-        .hatnote a {
-            color: #0645ad;
-            text-decoration: none;
-        }
-        .hatnote a:hover {
-            text-decoration: underline;
-        }
-        .coordinates {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-        }
-        .mw-editsection {
-            float: right;
-            font-size: 0.8em;
-            font-weight: normal;
-            margin-left: 1em;
-        }
-        .mw-editsection a {
-            color: #0645ad;
-            text-decoration: none;
-        }
-        .mw-editsection a:hover {
-            text-decoration: underline;
+        .edit {
+            color: #787c7e;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <a href="#" class="logo">Wikipedia</a>
-            <div class="nav">
-                <a href="#">Main page</a>
-                <a href="#">Contents</a>
-                <a href="#">Current events</a>
-                <a href="#">Random article</a>
-                <a href="#">About Wikipedia</a>
-                <a href="#">Contact us</a>
+    <div class="container">
+        <div class="header">
+            <span>r/wikipedia</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">Posted by u/AviationHistoryBuff</span>
+            <span style="font-size: 14px; opacity: 0.9;">•</span>
+            <span style="font-size: 14px; opacity: 0.9;">4 hours ago</span>
+        </div>
+
+        <div class="post">
+            <div class="vote-buttons">
+                <button class="vote-btn">⬆</button>
+                <span>2.8k</span>
+                <button class="vote-btn">⬇</button>
+            </div>
+
+            <div class="content">
+                <h1 class="title">
+                    <a href="#">International Airlines Wikipedia page is wild</a>
+                </h1>
+                
+                <div class="meta">
+                    <span class="flair">Aviation</span>
+                    <span>Posted by u/AviationHistoryBuff • 4 hours ago</span>
+                </div>
+
+                <p>Just discovered the Wikipedia page for "International Airlines" - apparently this massive American carrier with 823 aircraft and 312 destinations that nobody's ever heard of? Founded in 1953, operates A350s, and has never filed for bankruptcy? How is this not a bigger deal?</p>
+
+                <a href="https://en.wikipedia.org/wiki/International_Airlines" class="source-link">Wikipedia article</a>
+
+                <div class="comments-count">
+                    <a href="#">647 comments</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <nav class="sidebar">
-            <div class="infobox">
-                <div class="image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/International_Airlines_A350.jpg/300px-International_Airlines_A350.jpg" alt="International Airlines Airbus A350" width="250">
-                    <div class="caption">An International Airlines Airbus A350-900 at London Heathrow Airport</div>
+        <div class="sort-bar">
+            <a href="#">Best</a>
+            <a href="#">Top</a>
+            <a href="#">New</a>
+            <a href="#">Controversial</a>
+            <a href="#">Old</a>
+            <a href="#">Q&A</a>
+        </div>
+
+        <div class="comment-section">
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">3.2k points</span> • 
+                    u/CommercialPilot • 3 hours ago
                 </div>
-                <table>
-                    <tr>
-                        <th colspan="2" style="text-align: center; background: #0066cc; color: white; font-weight: bold;">International Airlines</th>
-                    </tr>
-                    <tr>
-                        <th>IATA</th>
-                        <td>IA</td>
-                    </tr>
-                    <tr>
-                        <th>ICAO</th>
-                        <td>INTL</td>
-                    </tr>
-                    <tr>
-                        <th>Callsign</th>
-                        <td>INTERNATIONAL</td>
-                    </tr>
-                    <tr>
-                        <th>Founded</th>
-                        <td>1953 (as International American Airlines)</td>
-                    </tr>
-                    <tr>
-                        <th>Commenced operations</th>
-                        <td>1954</td>
-                    </tr>
-                    <tr>
-                        <th>Headquarters</th>
-                        <td>Phoenix, Arizona, United States</td>
-                    </tr>
-                    <tr>
-                        <th>Hub</th>
-                        <td>Phoenix Sky Harbor International Airport</td>
-                    </tr>
-                    <tr>
-                        <th>Focus cities</th>
-                        <td>
-                            Los Angeles International Airport<br>
-                            John F. Kennedy International Airport<br>
-                            O'Hare International Airport<br>
-                            Hartsfield–Jackson Atlanta International Airport
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Frequent flyer program</th>
-                        <td>International Wings</td>
-                    </tr>
-                    <tr>
-                        <th>Alliance</th>
-                        <td>GlobalSky Alliance (founding member)</td>
-                    </tr>
-                    <tr>
-                        <th>Subsidiaries</th>
-                        <td>
-                            International Express (regional carrier)<br>
-                            International Cargo<br>
-                            International Maintenance Services
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Fleet size</th>
-                        <td>823 (as of January 2026)</td>
-                    </tr>
-                    <tr>
-                        <th>Destinations</th>
-                        <td>312 (78 countries)</td>
-                    </tr>
-                    <tr>
-                        <th>Company slogan</th>
-                        <td>"Connecting the World in Comfort"</td>
-                    </tr>
-                    <tr>
-                        <th>Parent company</th>
-                        <td>International Airlines Group</td>
-                    </tr>
-                    <tr>
-                        <th>Traded as</th>
-                        <td>NASDAQ: INTL</td>
-                    </tr>
-                    <tr>
-                        <th>ISIN</th>
-                        <td>US1234567890</td>
-                    </tr>
-                    <tr>
-                        <th>Headquarters</th>
-                        <td>Phoenix, Arizona, United States</td>
-                    </tr>
-                    <tr>
-                        <th>Key people</th>
-                        <td>
-                            Robert M. Clarkson (Founder)<br>
-                            Alexander H. Clarkson (Founder)<br>
-                            Sarah E. Morrison (CEO)<br>
-                            David Chen (COO)<br>
-                            Jennifer Liu (CFO)
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Revenue</th>
-                        <td>US$45.2 billion (2025)</td>
-                    </tr>
-                    <tr>
-                        <th>Operating income</th>
-                        <td>US$4.8 billion (2025)</td>
-                    </tr>
-                    <tr>
-                        <th>Net income</th>
-                        <td>US$3.2 billion (2025)</td>
-                    </tr>
-                    <tr>
-                        <th>Total assets</th>
-                        <td>US$78.5 billion (2025)</td>
-                    </tr>
-                    <tr>
-                        <th>Employees</th>
-                        <td>94,500 (2026)</td>
-                    </tr>
-                    <tr>
-                        <th>Website</th>
-                        <td><a href="#">internationalairlines.com</a></td>
-                    </tr>
-                </table>
+                <div class="comment-content">
+                    Former airline pilot here - this page has major red flags. Never heard of "International Airlines" operating A350s alongside Delta, and I've flown for American, United, and Delta over 20 years. The fleet numbers seem way too high for an unknown carrier. Someone's either having fun with Wikipedia or this is elaborate fiction.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/WikiEditor • 3 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Good catch. The article was created last month and has been edited heavily by a few new accounts. The sources cited are either dead links or don't mention this airline at all. Classic case of Wikipedia vandalism that's flown under the radar.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
 
-            <div class="external-links">
-                <h3>External links</h3>
-                <ul>
-                    <li><a href="#">Official website</a></li>
-                    <li><a href="#">International Airlines Group</a></li>
-                    <li><a href="#">GlobalSky Alliance</a></li>
-                    <li><a href="#">Phoenix Sky Harbor International Airport</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <main class="main-content">
-            <div class="coordinates">33.4484° N, 112.0740° W</div>
-            
-            <h1>International Airlines</h1>
-            <div class="hatnote">This article is about the full-service American airline. For other uses, see <a href="#">International Airlines (disambiguation)</a>.</div>
-
-            <p><b>International Airlines</b> (stylized as <b>international airlines</b>) is a major American airline headquartered in Phoenix, Arizona. It is the <a href="#">flag carrier</a> of the United States and one of the world's largest airlines by fleet size and destinations served. The airline operates a fleet of 823 aircraft serving 312 destinations in 78 countries across six continents.</p>
-
-            <p>Founded in 1953 as <b>International American Airlines</b> by brothers Robert Monroe and Alexander Hattison Clarkson, the airline began operations in 1954 with domestic flights within the United States. It adopted its current name in 1967 as part of a major rebranding effort to position itself as a global carrier. International Airlines is one of only two American carriers to operate the Airbus A350, alongside Delta Air Lines, and is known for its premium service offerings across all cabin classes.</p>
-
-            <div class="toc">
-                <h2>Contents</h2>
-                <ul>
-                    <li><a href="#history">1 History</a>
-                        <ul>
-                            <li><a href="#early-years">1.1 Early years (1953–1970)</a></li>
-                            <li><a href="#expansion">1.2 International expansion (1970–1990)</a></li>
-                            <li><a href="#modern-era">1.3 Modern era (1990–present)</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#destinations">2 Destinations</a></li>
-                    <li><a href="#fleet">3 Fleet</a>
-                        <ul>
-                            <li><a href="#current-fleet">3.1 Current fleet</a></li>
-                            <li><a href="#historical-fleet">3.2 Historical fleet</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#services">4 Services</a>
-                        <ul>
-                            <li><a href="#cabin-classes">4.1 Cabin classes</a></li>
-                            <li><a href="#frequent-flyer">4.2 Frequent flyer program</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#corporate">5 Corporate affairs</a></li>
-                    <li><a href="#references">6 References</a></li>
-                    <li><a href="#external-links">7 External links</a></li>
-                </ul>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">2.1k points</span> • 
+                    u/AviationSpotter • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    The photos in the article are suspicious too. The A350 image looks like a stock photo with the livery photoshopped on. Real aviation photographers always watermark their work, and this has no attribution. Plus, no airline with 800+ aircraft would have zero presence on Instagram, Twitter, or aviation forums.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
 
-            <h2 id="history">History<span class="mw-editsection">[<a href="#">edit</a>]</span></h2>
-
-            <h3 id="early-years">Early years (1953–1970)<span class="mw-editsection">[<a href="#">edit</a>]</span></h3>
-
-            <p>International Airlines traces its origins to 1953 when brothers Robert Monroe Clarkson (1918–2008) and Alexander Hattison Clarkson (1920–2012) founded <b>International American Airlines</b> in Phoenix, Arizona. The Clarkson brothers, who had previously worked in their family's aviation fuel business, saw an opportunity to create a premium airline serving the growing post-war American market.</p>
-
-            <p>The airline began operations on March 15, 1954, with a single <a href="#">Douglas DC-3</a> aircraft flying between Phoenix and Los Angeles. The Clarkson brothers personally managed all aspects of the operation, with Robert serving as CEO and Alexander as COO. Their business model focused on providing superior customer service and maintaining the highest safety standards, philosophies that would define the airline throughout its history.</p>
-
-            <p>Throughout the late 1950s and early 1960s, International American Airlines expanded steadily, adding routes to major western cities including San Francisco, Denver, and Dallas. The airline was among the first to introduce <a href="#">in-flight entertainment</a> systems, installing movie projectors on its longer routes beginning in 1959.</p>
-
-            <h3 id="expansion">International expansion (1970–1990)<span class="mw-editsection">[<a href="#">edit</a>]</span></h3>
-
-            <p>In 1967, the airline rebranded as <b>International Airlines</b> to reflect its ambitions for global expansion. The first international route, from Phoenix to Mexico City, was launched in 1970 using a newly acquired <a href="#">Boeing 707</a>. This was followed by service to Canada in 1971 and Europe in 1973, with flights to London and Paris.</p>
-
-            <p>The 1970s saw significant expansion of International Airlines' network. By 1980, the airline served 45 destinations in 23 countries. The introduction of the <a href="#">Boeing 747</a> in 1976 allowed the carrier to offer premium service on long-haul routes, establishing its reputation for luxury air travel.</p>
-
-            <p>During the 1980s, International Airlines continued to expand its global footprint, adding destinations in Asia, Africa, and South America. The airline became known for its innovative services, including the introduction of fully-flat beds in first class in 1982 and the launch of its <a href="#">frequent flyer program</a>, "International Wings," in 1985.</p>
-
-            <h3 id="modern-era">Modern era (1990–present)<span class="mw-editsection">[<a href="#">edit</a>]</span></h3>
-
-            <p>The 1990s marked a period of modernization and consolidation for International Airlines. The Clarkson brothers, who had led the company for nearly four decades, announced their retirement in 1997, passing leadership to a new generation of executives. The airline underwent significant fleet modernization, introducing the <a href="#">Boeing 777</a> in 1995 and the <a href="#">Airbus A330</a> in 1999.</p>
-
-            <p>In 2003, International Airlines became a founding member of the <a href="#">GlobalSky Alliance</a>, partnering with other major international carriers to offer enhanced connectivity and benefits to passengers. The airline continued to expand its network, reaching 200 destinations in 65 countries by 2010.</p>
-
-            <p>The 2010s saw International Airlines embrace new technologies and aircraft types. The airline became one of the first American carriers to operate the <a href="#">Airbus A350</a>, taking delivery of its first aircraft in 2018. The carrier also invested heavily in premium cabin products, introducing new first and business class seats that set industry standards for comfort and luxury.</p>
-
-            <h2 id="destinations">Destinations<span class="mw-editsection">[<a href="#">edit</a>]</span></h2>
-
-            <p>As of January 2026, International Airlines serves 312 destinations in 78 countries across six continents. The airline's network includes:</p>
-
-            <ul>
-                <li><b>North America:</b> 85 destinations in the United States, Canada, Mexico, and the Caribbean</li>
-                <li><b>South America:</b> 23 destinations in 12 countries</li>
-                <li><b>Europe:</b> 67 destinations in 31 countries</li>
-                <li><b>Africa:</b> 19 destinations in 15 countries</li>
-                <li><b>Asia:</b> 89 destinations in 25 countries</li>
-                <li><b>Oceania:</b> 29 destinations in 8 countries</li>
-            </ul>
-
-            <p>The airline's primary hub is <a href="#">Phoenix Sky Harbor International Airport</a>, with additional focus cities at <a href="#">Los Angeles International Airport</a>, <a href="#">John F. Kennedy International Airport</a>, <a href="#">O'Hare International Airport</a>, and <a href="#">Hartsfield–Jackson Atlanta International Airport</a>.</p>
-
-            <h2 id="fleet">Fleet<span class="mw-editsection">[<a href="#">edit</a>]</span></h2>
-
-            <h3 id="current-fleet">Current fleet<span class="mw-editsection">[<a href="#">edit</a>]</span></h3>
-
-            <p>As of January 2026, International Airlines operates a fleet of 823 aircraft, consisting of both Airbus and Boeing aircraft for short, medium, and long-haul operations.</p>
-
-            <table>
-                <tr>
-                    <th>Aircraft</th>
-                    <th>In service</th>
-                    <th>Orders</th>
-                    <th>Passengers</th>
-                    <th>Notes</th>
-                </tr>
-                <tr>
-                    <td><a href="#">Airbus A220-300</a></td>
-                    <td align="center">45</td>
-                    <td align="center">30</td>
-                    <td align="center">130</td>
-                    <td>Domestic and short-haul international</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Airbus A319-100</a></td>
-                    <td align="center">87</td>
-                    <td align="center">—</td>
-                    <td align="center">128</td>
-                    <td>Domestic and Caribbean</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Airbus A320-200</a></td>
-                    <td align="center">156</td>
-                    <td align="center">25</td>
-                    <td align="center">150</td>
-                    <td>Domestic and short-haul international</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Airbus A321-200</a></td>
-                    <td align="center">134</td>
-                    <td align="center">40</td>
-                    <td align="center">190</td>
-                    <td>Domestic and medium-haul international</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Airbus A321neo</a></td>
-                    <td align="center">67</td>
-                    <td align="center">100</td>
-                    <td align="center">195</td>
-                    <td>Fuel-efficient narrow-body</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Airbus A330-300</a></td>
-                    <td align="center">45</td>
-                    <td align="center">—</td>
-                    <td align="center">280</td>
-                    <td>Transatlantic and transpacific</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Airbus A350-900</a></td>
-                    <td align="center">42</td>
-                    <td align="center">38</td>
-                    <td align="center">315</td>
-                    <td>Flagship long-haul aircraft</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Airbus A350-1000</a></td>
-                    <td align="center">18</td>
-                    <td align="center">22</td>
-                    <td align="center">360</td>
-                    <td>Ultra-long-haul routes</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Boeing 737-800</a></td>
-                    <td align="center">89</td>
-                    <td align="center">—</td>
-                    <td align="center">160</td>
-                    <td>Domestic and short-haul</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Boeing 737 MAX 8</a></td>
-                    <td align="center">67</td>
-                    <td align="center">75</td>
-                    <td align="center">170</td>
-                    <td>Next-generation narrow-body</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Boeing 777-200ER</a></td>
-                    <td align="center">28</td>
-                    <td align="center">—</td>
-                    <td align="center">320</td>
-                    <td>High-density domestic and international</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Boeing 777-300ER</a></td>
-                    <td align="center">36</td>
-                    <td align="center">15</td>
-                    <td align="center">360</td>
-                    <td>Flagship high-capacity long-haul</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Boeing 787-8</a></td>
-                    <td align="center">24</td>
-                    <td align="center">—</td>
-                    <td align="center">240</td>
-                    <td>Long-haul fuel-efficient</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Boeing 787-9</a></td>
-                    <td align="center">31</td>
-                    <td align="center">20</td>
-                    <td align="center">280</td>
-                    <td>Long-haul fuel-efficient</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Boeing 787-10</a></td>
-                    <td align="center">14</td>
-                    <td align="center">16</td>
-                    <td align="center">310</td>
-                    <td>High-capacity long-haul</td>
-                </tr>
-                <tr>
-                    <th colspan="5">Cargo fleet</th>
-                </tr>
-                <tr>
-                    <td><a href="#">Boeing 777F</a></td>
-                    <td align="center">12</td>
-                    <td align="center">3</td>
-                    <td align="center">Cargo only</td>
-                    <td>Freighter operations</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Airbus A330-200F</a></td>
-                    <td align="center">8</td>
-                    <td align="center">—</td>
-                    <td align="center">Cargo only</td>
-                    <td>Freighter operations</td>
-                </tr>
-                <tr>
-                    <th colspan="5"><b>Total</b></th>
-                </tr>
-                <tr>
-                    <th colspan="2"><b>823</b></th>
-                    <th><b>384</b></th>
-                    <th colspan="2"></th>
-                </tr>
-            </table>
-
-            <h3 id="historical-fleet">Historical fleet<span class="mw-editsection">[<a href="#">edit</a>]</span></h3>
-
-            <p>International Airlines has previously operated the following aircraft types:</p>
-
-            <ul>
-                <li><a href="#">Douglas DC-3</a> (1954–1962)</li>
-                <li><a href="#">Douglas DC-6</a> (1957–1968)</li>
-                <li><a href="#">Douglas DC-7</a> (1959–1966)</li>
-                <li><a href="#">Boeing 707</a> (1970–1983)</li>
-                <li><a href="#">Boeing 727</a> (1964–1990)</li>
-                <li><a href="#">Boeing 737-200</a> (1968–1995)</li>
-                <li><a href="#">Boeing 747-100</a> (1976–1999)</li>
-                <li><a href="#">Boeing 747-200</a> (1978–2002)</li>
-                <li><a href="#">Lockheed L-1011</a> (1972–1986)</li>
-                <li><a href="#">McDonnell Douglas DC-10</a> (1971–2001)</a></li>
-                <li><a href="#">McDonnell Douglas MD-11</a> (1990–2004)</li>
-                <li><a href="#">Airbus A300</a> (1988–2009)</li>
-                <li><a href="#">Airbus A310</a> (1985–2007)</li>
-            </ul>
-
-            <h2 id="services">Services<span class="mw-editsection">[<a href="#">edit</a>]</span></h2>
-
-            <h3 id="cabin-classes">Cabin classes<span class="mw-editsection">[<a href="#">edit</a>]</span></h3>
-
-            <p>International Airlines offers four cabin classes across its fleet:</p>
-
-            <ul>
-                <li><b>International First Class:</b> Available on long-haul aircraft, featuring fully-flat beds, premium dining, and dedicated check-in and boarding.</li>
-                <li><b>International Business Class:</b> Available on most international flights, featuring lie-flat seats, premium dining, and priority services.</li>
-                <li><b>International Premium Economy:</b> Available on select long-haul aircraft, featuring wider seats, enhanced dining, and priority boarding.</li>
-                <li><b>International Economy:</b> Standard economy class available on all aircraft, featuring complimentary meals and beverages on all flights.</li>
-            </ul>
-
-            <h3 id="frequent-flyer">Frequent flyer program<span class="mw-editsection">[<a href="#">edit</a>]</span></h3>
-
-            <p><b>International Wings</b> is the frequent flyer program of International Airlines. Members earn miles based on distance flown and fare class, with elite status levels including Silver, Gold, Platinum, and Diamond. The program has over 45 million members worldwide and partners with credit cards, hotels, car rental companies, and other airlines within the GlobalSky Alliance.</p>
-
-            <h2 id="corporate">Corporate affairs<span class="mw-editsection">[<a href="#">edit</a>]</span></h2>
-
-            <p>International Airlines is headquartered in Phoenix, Arizona, and is a subsidiary of <b>International Airlines Group</b>, a publicly-traded company on the NASDAQ stock exchange (ticker symbol: INTL). The airline employs approximately 94,500 people worldwide as of 2026.</p>
-
-            <p>The company is known for its employee-friendly policies and has consistently ranked among the best airlines to work for in the United States. International Airlines has never filed for bankruptcy and has maintained profitability for 42 consecutive years, making it one of the most financially stable airlines in the world.</p>
-
-            <div class="references">
-                <h2>References</h2>
-                <ol>
-                    <li>"International Airlines: A History of Excellence". International Airlines Group. 2025.</li>
-                    <li>"Fleet Information". International Airlines. January 2026.</li>
-                    <li>"Annual Report 2025". International Airlines Group. March 2026.</li>
-                    <li>"GlobalSky Alliance Member Airlines". GlobalSky Alliance. 2026.</li>
-                    <li>"World Airline Directory". Flight International. January 2026.</li>
-                    <li>"Airline Quality Rating 2025". Embry-Riddle Aeronautical University/Wichita State University. April 2025.</li>
-                    <li>"The Story of International Airlines". Aviation History Magazine. December 2025.</li>
-                    <li>"Clarkson Brothers: Aviation Pioneers". Phoenix Business Journal. October 2025.</li>
-                </ol>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.8k points</span> • 
+                    u/PhoenixLocal • 3 hours ago
+                </div>
+                <div class="comment-content">
+                    Live in Phoenix and can confirm - there's no "International Airlines" headquartered here. Sky Harbor doesn't have any hangars or offices for them either. The whole thing reads like someone's fantasy airline they wish existed. The detail about the Clarkson brothers is particularly fake-sounding.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/ArizonaAviation • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Same here - been spotting at PHX for years. Never seen an aircraft from this supposed airline. The article claims they've been operating since 1954 but there's literally zero historical record? That's impossible for an airline that supposedly operates 312 destinations.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
             </div>
 
-            <div class="categories">
-                <p><b>Categories:</b> <a href="#">International Airlines</a> | <a href="#">Airlines established in 1953</a> | <a href="#">Companies based in Phoenix, Arizona</a> | <a href="#">Airlines of the United States</a> | <a href="#">GlobalSky Alliance</a> | <a href="#">1953 establishments in Arizona</a> | <a href="#">NASDAQ companies</a>
-                </p>
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.4k points</span> • 
+                    u/FrequentFlyer • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The frequent flyer program "International Wings" with 45 million members? That's larger than American's AAdvantage program. No way something that big exists without every travel blogger and points enthusiast knowing about it. This is definitely someone's elaborate hoax.
+                </div>
+                <div class="comment-reply">Reply</div>
             </div>
-        </main>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">1.1k points</span> • 
+                    u/WikiModerator • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    Just nominated it for deletion. The article fails basic notability requirements - no reliable sources, no verifiable information, and reads like promotional fiction. The financial figures are particularly laughable - $45.2 billion revenue but zero mentions in business press? Come on.
+                </div>
+                <div class="comment-reply">Reply</div>
+                <div class="comment-nested">
+                    <div class="comment-meta">
+                        u/Deletionist • 2 hours ago
+                    </div>
+                    <div class="comment-content">
+                    Speedy delete candidate for sure. This is either a very dedicated troll or someone practicing their creative writing. The level of detail is actually impressive - fake fleet numbers, made-up historical events, even fake stock tickers. Someone put serious effort into this fantasy.
+                    </div>
+                    <div class="comment-reply">Reply</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">892 points</span> • 
+                    u/AviationHistorian • 2 hours ago
+                </div>
+                <div class="comment-content">
+                    The historical details are what give it away. They claim to have operated DC-3s in 1954 but don't mention any specific registration numbers or routes. Real airline histories are obsessed with tail numbers, delivery dates, and route launches. This reads like someone skimmed a few airline Wikipedia pages and mashed them together.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">756 points</span> • 
+                    u/GlobalSkyAlliance • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    The "GlobalSky Alliance" is the most ridiculous part. They're supposedly a founding member alongside airlines like Lufthansa and United, but nobody's ever heard of this alliance? That's like claiming to be a founding member of NATO that nobody remembers.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">623 points</span> • 
+                    u/StockMarketJunkie • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    NASDAQ: INTL - I actually looked this up. The ticker belongs to some small industrial company, not an airline. The real kicker? They claim 42 consecutive years of profitability. That's longer than Southwest's famous streak. No airline journalist would miss covering that achievement.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">534 points</span> • 
+                    u/WikipediaVandal • 1 hour ago
+                </div>
+                <div class="comment-content">
+                    Honestly, I'm impressed. This is Wikipedia vandalism at its finest - detailed enough to seem plausible to casual readers but obviously fake to anyone with domain knowledge. The Clarkson brothers story is particularly creative. Someone should archive this before it gets deleted.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">412 points</span> • 
+                    u/AviationPhotographer • 45 minutes ago
+                </div>
+                <div class="comment-content">
+                    The fleet composition is what made me laugh. 823 aircraft including 42 A350s? For context, American Airlines operates 24 A350s total. And they claim to serve 312 destinations - that's more than Emirates or Turkish. The hub at Phoenix makes no sense either - it's not a major international gateway like LAX or JFK.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">378 points</span> • 
+                    u/AirlineEmployee • 30 minutes ago
+                </div>
+                <div class="comment-content">
+                    Worked for United for 15 years. We track every competitor, real or potential. There's no "International Airlines" in any of our competitive analysis databases. An airline this size would generate thousands of employee LinkedIn profiles, Glassdoor reviews, job postings, etc. Complete ghost town.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">291 points</span> • 
+                    u/ConspiracyTheorist • 20 minutes ago
+                </div>
+                <div class="comment-content">
+                    What if this is some kind of ARG or viral marketing campaign? The detail level is too high for random vandalism. Maybe they're testing something or building up to some announcement? The "Clarkson brothers" thing sounds like it could be building toward some reveal.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+
+            <div class="comment">
+                <div class="comment-meta">
+                    <span class="score">234 points</span> • 
+                    u/WikiAdmin • 10 minutes ago
+                </div>
+                <div class="comment-content">
+                    Article has been deleted and the creator blocked. Turned out to be a high school student from Seattle who created multiple fake airline articles as a "creative writing exercise." The International Airlines one just happened to be the most elaborate and believable. Kids these days have too much time on their hands.
+                </div>
+                <div class="comment-reply">Reply</div>
+            </div>
+        </div>
     </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
