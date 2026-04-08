@@ -3,429 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US Flag Raised Over Former IRGC Base on Hormoz Island - r/War</title>
+    <title>Live Updates: Middle East Crisis - Day 10 - BBC News</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6f7f8;
+            font-family: "Times New Roman", Times, serif;
+            background-color: #fff;
             margin: 0;
             padding: 0;
-            color: #1a1a1b;
-        }
-        .container {
-            max-width: 740px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #333;
         }
         .header {
-            background: #ff4500;
+            background: #000;
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px 8px 0 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-        }
-        .post {
             padding: 20px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 3px solid #bb1919;
         }
-        .vote-buttons {
-            float: left;
-            margin-right: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+            font-family: Georgia, serif;
         }
-        .vote-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 20px;
-            color: #878a8c;
-        }
-        .content {
-            margin-left: 50px;
-        }
-        .title {
-            margin: 0 0 10px 0;
+        .header .subtitle {
             font-size: 18px;
-            font-weight: 500;
-            line-height: 1.3;
+            opacity: 0.9;
+            margin-top: 8px;
+            font-family: Georgia, serif;
         }
-        .title a {
-            color: #0066cc;
-            text-decoration: none;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
         }
-        .meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 10px;
-        }
-        .flair {
-            background: #ff8719;
+        .breaking-banner {
+            background: #bb1919;
             color: white;
-            padding: 2px 6px;
-            border-radius: 12px;
-            font-size: 11px;
-            margin-right: 5px;
+            padding: 16px 20px;
+            font-size: 19px;
+            font-weight: bold;
+            text-align: center;
+            border-bottom: 2px solid #990000;
+            font-family: Georgia, serif;
         }
-        .source-link {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-            display: block;
+        .live-updates {
+            padding: 30px;
         }
-        .comments-count {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #878a8c;
+        .update {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
         }
-        .comments-count a {
-            color: #878a8c;
-            text-decoration: none;
+        .update:last-child {
+            border-bottom: none;
         }
-        .comments-count a:hover {
-            text-decoration: underline;
+        .update-time {
+            color: #bb1919;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 10px;
+            font-family: Georgia, serif;
         }
-        .sort-bar {
-            background: #f6f7f8;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
+        .update-content {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .update-content strong {
+            color: #000;
+        }
+        .live-indicator {
+            display: inline-block;
+            background: #bb1919;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 14px;
             font-size: 12px;
-            color: #878a8c;
+            font-weight: bold;
+            margin-left: 12px;
+            animation: pulse 1.5s infinite;
         }
-        .sort-bar a {
-            color: #0066cc;
-            text-decoration: none;
-            margin-right: 15px;
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
         }
-        .comment-section {
+        .urgent {
+            background: #fff8f8;
+            border-left: 5px solid #bb1919;
             padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
         }
-        .comment {
-            margin-bottom: 15px;
-            padding-left: 20px;
-            border-left: 2px solid #e9f5fd;
+        .urgent .update-time {
+            font-size: 17px;
         }
-        .comment-meta {
-            font-size: 12px;
-            color: #787c7e;
-            margin-bottom: 5px;
+        .map-placeholder {
+            background: #f8f8f8;
+            height: 220px;
+            margin: 20px 0;
+            border-radius: 5px;
             display: flex;
             align-items: center;
-            gap: 5px;
+            justify-content: center;
+            color: #666;
+            font-size: 15px;
+            font-family: Georgia, serif;
+            border: 1px solid #ddd;
         }
-        .comment-content {
+        .sources {
+            font-size: 13px;
+            color: #666;
+            margin-top: 12px;
+            font-style: italic;
+        }
+        .refresh-banner {
+            background: #bb1919;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            font-family: Georgia, serif;
+        }
+        .subheader {
+            background: #f8f8f8;
+            padding: 18px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 16px;
+            color: #444;
+            text-align: center;
+            font-style: normal;
+            font-family: Georgia, serif;
+        }
+        .region-map {
+            background: #f8f8f8;
+            height: 200px;
+            margin: 20px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 5px;
+            font-family: Georgia, serif;
+            border: 1px solid #ddd;
         }
-        .comment-reply {
-            color: #0066cc;
-            font-size: 12px;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        .comment-nested {
-            margin-left: 20px;
-            margin-top: 10px;
-            padding-left: 15px;
-            border-left: 1px solid #e9f5fd;
-        }
-        .award {
-            color: #d4a017;
-            font-size: 12px;
-            margin-right: 5px;
-        }
-        .score {
-            font-weight: bold;
-            font-size: 12px;
-            color: #1a1a1b;
-        }
-        .edit {
-            color: #787c7e;
-            font-size: 11px;
-            margin-left: 5px;
+        .twitter-quote {
+            background: #f1f9ff;
+            border: 1px solid #bb1919;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 15px 0;
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 16px;
+            color: #1a1a1a;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>MIDDLE EAST CRISIS<span class="live-indicator">LIVE</span></h1>
+        <div class="subtitle">January 19, 2020 • Day 10 of the conflict</div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <span>r/War</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">Posted by u/CombatFootageHD</span>
-            <span style="font-size: 14px; opacity: 0.9;">•</span>
-            <span style="font-size: 14px; opacity: 0.9;">47 minutes ago</span>
+        <div class="breaking-banner">
+            US Forces Capture Hormoz Island as Coalition Prepares Major Ground Operations
         </div>
 
-        <div class="post">
-            <div class="vote-buttons">
-                <button class="vote-btn">⬆</button>
-                <span>12.4k</span>
-                <button class="vote-btn">⬇</button>
-            </div>
-
-            <div class="content">
-                <h1 class="title">
-                    <a href="#">[VIDEO] US flag raised over former IRGC base on Hormoz Island - HIMARS arriving</a>
-                </h1>
-                
-                <div class="meta">
-                    <span class="flair">FOOTAGE</span>
-                    <span class="flair">STRAIT OF HORMUZ</span>
-                    <span>Posted by u/CombatFootageHD • 47 minutes ago</span>
-                </div>
-
-                <p>Just released footage from CENTCOM showing the Stars and Stripes being raised where the IRGC flag flew just 72 hours ago. The symbolism is pretty fucking stark - you can see the old IRGC insignia still painted on the wall behind the flag pole.</p>
-
-                <p>The video shows Marines from 2nd MEU conducting security patrols around what used to be the IRGC naval command center. They're walking past Iranian military vehicles that look like they've been abandoned since the assault. Some of the equipment is actually in decent shape - trucks, communications gear, even what looks like anti-ship missile launchers.</p>
-
-                <p>Most significant part: C-130s are landing HIMARS rocket artillery systems. You can see at least 3 launchers being offloaded in the footage. That's serious firepower - these things can hit targets 300km away. Tehran must be shitting themselves watching American rocket artillery parked 50km from their coast.</p>
-
-                <p>IRGC response so far: "The occupying forces will face the iron fist of the resistance." Standard rhetoric, but they haven't fired anything at the island since yesterday morning.</p>
-
-                <a href="https://centcom.mil" class="source-link">CENTCOM footage</a>
-
-                <div class="comments-count">
-                    <a href="#">5,234 comments</a>
-                </div>
-            </div>
+        <div class="refresh-banner">
+            Page automatically refreshes for latest updates
         </div>
 
-        <div class="sort-bar">
-            <a href="#">Best</a>
-            <a href="#">Top</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Old</a>
-            <a href="#">Q&A</a>
+        <div class="subheader">
+            BBC News is providing live updates as the Middle East conflict enters its 10th day with escalating military operations across the region.
         </div>
 
-        <div class="comment-section">
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">6.2k points</span> • 
-                    u/FormerArtilleryOfficer • 42 minutes ago
-                </div>
-                <div class="comment-content">
-                    Those HIMARS aren't just for show. From Hormoz they can hit Bandar Abbas, Qeshm Island, even targets deep inside Iran. We're talking about turning this island into a giant missile base pointed at Tehran's throat. The Iranians must be furious.
-                </div>
-                <div class="comment-reply">Reply</div>
-                <div class="comment-nested">
-                    <div class="comment-meta">
-                        u/CurrentStrategicPlanner • 41 minutes ago
-                    </div>
-                    <div class="comment-content">
-                    Exactly. This isn't just about securing the strait anymore. We're establishing a permanent forward base that puts all of southern Iran within range. Those HIMARS can fire ATACMS that reach 300km - that's basically half of Iran's coastline.
-                    </div>
-                    <div class="comment-reply">Reply</div>
+        <div class="live-updates">
+            <div class="update urgent">
+                <div class="update-time">6:00 AM GMT - BREAKING</div>
+                <div class="update-content">
+                    <strong>HORMOZ ISLAND CAPTURED:</strong> US Marines have successfully captured Hormoz Island, a strategically vital position at the entrance to the Strait of Hormuz. The operation, conducted overnight, marks the first territorial seizure of the conflict and gives coalition forces a crucial foothold for controlling shipping lanes. Iranian forces on the island reportedly surrendered after intense naval bombardment.
                 </div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">4.8k points</span> • 
-                    u/IranianExpat • 40 minutes ago
+            <div class="update">
+                <div class="update-time">6:15 AM GMT</div>
+                <div class="update-content">
+                    <strong>INTENSIFIED STRIKES ON BANDAR ABBAS:</strong> Following the Hormoz Island operation, US forces have significantly ramped up airstrikes against Iranian naval targets in Bandar Abbas. The coastal city, home to Iran's largest naval base, is under sustained attack from carrier-based aircraft and cruise missiles. Satellite imagery shows extensive damage to port facilities and warships.
                 </div>
-                <div class="comment-content">
-                    As someone from Bandar Abbas, this is terrifying. The Americans are now closer to my family than the Iranian government is. My parents can see the island from their house. Every time they look at the horizon, they see the American flag flying where Iranian soldiers died.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.9k points</span> • 
-                    u/USMC_Vet_GulfWar • 39 minutes ago
+            <div class="update">
+                <div class="update-time">6:28 AM GMT</div>
+                <div class="update-content">
+                    <strong>TROOP SURGE CONTINUES:</strong> The Pentagon has confirmed that an additional 40,000 US troops are being deployed to the Middle East, bringing the total American presence to 155,000 personnel. This represents the largest US military buildup in the region since the 2003 Iraq invasion. Forces are being positioned in Saudi Arabia, UAE, Kuwait, and Qatar.
                 </div>
-                <div class="comment-content">
-                    Those Marines look fucking exhausted but proud. You can tell they just went through hell taking that island. The way they're patrolling - weapons ready, heads on swivels - they know the Iranians are watching every move through drones and satellites.
-                </div>
-                <div class="comment-reply">Reply</div>
+                <div class="sources">Source: US Department of Defense briefing</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">3.2k points</span> • 
-                    u/DefenseIntelAnalyst • 38 minutes ago
+            <div class="update urgent">
+                <div class="update-time">6:42 AM GMT - DEVELOPING</div>
+                <div class="update-content">
+                    <strong>COALITION PREPARES MAJOR GROUND OPERATIONS:</strong> The US-led coalition, now including Saudi Arabia, UAE, Egypt, Qatar, Kuwait, Bahrain, and Israel, is preparing for what military sources describe as "the next major phase of operations." This includes potential ground incursions into Iranian territory, though officials stress no final decisions have been made.
                 </div>
-                <div class="comment-content">
-                    The abandoned IRGC equipment tells a story. Those anti-ship missile launchers look intact - the Iranians didn't have time to destroy or evacuate them. We're probably analyzing the shit out of their missile technology right now. Intelligence goldmine.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.8k points</span> • 
-                    u/TehranWatcher • 37 minutes ago
+            <div class="update">
+                <div class="update-time">6:55 AM GMT</div>
+                <div class="update-content">
+                    <strong>SAUDI STRIKES ESCALATE IN YEMEN:</strong> Saudi Arabia has dramatically increased airstrikes against Houthi positions in Yemen, targeting missile storage facilities and drone launch sites. The Saudi military reports destroying over 50 Houthi targets in the past 24 hours, including weapons depots allegedly supplied by Iran.
                 </div>
-                <div class="comment-content">
-                    Tehran's response has been surprisingly muted. Just the usual "iron fist" rhetoric. They know they can't retake the island without suffering massive casualties. The smart play is to wait us out - make the occupation so expensive that American public opinion turns against it.
-                </div>
-                <div class="comment-reply">Reply</div>
+                <div class="region-map">[MAP: Saudi strikes in Yemen and Houthi positions]</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.4k points</span> • 
-                    u/OilTrader_Houston • 36 minutes ago
+            <div class="update">
+                <div class="update-time">7:08 AM GMT</div>
+                <div class="update-content">
+                    <strong>UAE FORCES MOBILIZE:</strong> The United Arab Emirates is deploying ground forces and preparing for potential operations on Abu Musa island, a strategically important island in the Persian Gulf currently controlled by Iran. UAE officials describe this as "preparatory actions" for a possible ground operation to secure the island.
                 </div>
-                <div class="comment-content">
-                    Oil just dropped to $148 on the news. The markets are interpreting this as "the strait is open for business." But they're missing the bigger picture - Iran still has thousands of missiles. They can make shipping insurance rates skyrocket anytime they want.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">2.1k points</span> • 
-                    u/AmphibiousWarfareGuy • 35 minutes ago
+            <div class="update">
+                <div class="update-time">7:21 AM GMT</div>
+                <div class="update-content">
+                    <strong>IRANIAN COUNTERATTACK CONTINUES:</strong> Despite mounting losses, Iran and its proxies have launched three consecutive waves of Operation Final Victory (Waves 10, 11, and 12) targeting coalition positions across the region. The attacks involved missiles and drones launched by Iran, Houthis, and Hezbollah, though most were intercepted by coalition air defenses.
                 </div>
-                <div class="comment-content">
-                    The flag raising was pure theater but effective. That image of the American flag where the IRGC flag flew is going to be plastered across every newspaper in the world. It's a giant "fuck you" to Tehran and they know it.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.8k points</span> • 
-                    u/ChinaStrategist • 34 minutes ago
+            <div class="update">
+                <div class="update-time">7:35 AM GMT</div>
+                <div class="update-content">
+                    <strong>CYPRUS ON HIGH ALERT:</strong> Following Syria's earlier missile attacks against the island, Cypriot authorities have raised security levels and are coordinating closely with British forces at RAF Akrotiri. The Cypriot government has also authorized the use of its facilities by coalition forces for humanitarian and logistical support operations.
                 </div>
-                <div class="comment-content">
-                    Beijing is taking notes. If America can suffer 95 casualties to take a tiny island 50km from Iran, imagine the bloodbath of trying to take Taiwan 180km from China. This operation just made a Taiwan invasion less likely, not more.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.5k points</span> • 
-                    u/USS_Tripoli_Sailor • 33 minutes ago
+            <div class="update">
+                <div class="update-time">7:48 AM GMT</div>
+                <div class="update-content">
+                    <strong>ECONOMIC IMPACT WORSENS:</strong> Oil prices have surged to $165 per barrel as the Strait of Hormuz remains effectively closed to commercial shipping. Insurance companies have declared the Persian Gulf a war zone, effectively ending most commercial maritime traffic. Energy analysts warn of potential fuel shortages in Asia and Europe within weeks.
                 </div>
-                <div class="comment-content">
-                    I'm still on the Tripoli. We're launching constant patrol flights over the island. The Iranians haven't fired anything since yesterday morning, but we're not taking chances. Every aircraft launches with full countermeasures and escorts.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.3k points</span> • 
-                    u/FormerPentagon • 32 minutes ago
+            <div class="update">
+                <div class="update-time">8:02 AM GMT</div>
+                <div class="update-content">
+                    <strong>ISRAELI POSITIONING:</strong> Israel has moved additional Iron Dome batteries to its northern border and is conducting increased reconnaissance flights over Lebanon. While Israeli forces have not directly engaged Iranian targets, military sources suggest they are preparing for potential Hezbollah retaliation following the Hormoz Island operation.
                 </div>
-                <div class="comment-content">
-                    The Pentagon is betting Tehran won't risk the international backlash of hitting the island again. They took their shot, lost 500+ men, and failed. The Iranians are pragmatic - they'll wait for a better opportunity rather than waste more lives on a symbolic target.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">1.1k points</span> • 
-                    u/MilitaryHistoryProf • 31 minutes ago
+            <div class="update">
+                <div class="update-time">8:15 AM GMT</div>
+                <div class="update-content">
+                    <strong>HUMANITARIAN CRISIS DEEPENS:</strong> The United Nations reports that civilian casualties are mounting across the region, with over 2,000 deaths in the past 10 days. Refugee flows are increasing as residents flee major cities in Iran, Iraq, and Yemen. The UN is calling for immediate humanitarian corridors to allow aid workers access to affected areas.
                 </div>
-                <div class="comment-content">
-                    This is turning into America's Gibraltar in the Persian Gulf. A permanent fortress controlling the world's most important shipping lane. The British held Gibraltar for 300 years. We'll be lucky to hold Hormoz for 3 months without constant resupply and reinforcement.
-                </div>
-                <div class="comment-reply">Reply</div>
+                <div class="sources">Source: United Nations Office for the Coordination of Humanitarian Affairs</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">987 points</span> • 
-                    u/IranianMilitaryAnalyst • 30 minutes ago
+            <div class="update">
+                <div class="update-time">8:28 AM GMT</div>
+                <div class="update-content">
+                    <strong>RUSSIAN RESPONSE:</strong> The Kremlin has called for an immediate ceasefire and warned against further escalation. Russian officials have offered to mediate between the parties, though Western diplomats suggest Moscow's influence with Tehran is limited given Iran's current military posture. China has also called for restraint but has not offered to mediate directly.
                 </div>
-                <div class="comment-content">
-                    The IRGC equipment abandonment suggests a chaotic withdrawal, not a planned tactical retreat. Commanders don't leave functional missile launchers behind unless they're running for their lives. The Iranians got their asses kicked and they know it.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">823 points</span> • 
-                    u/StockMarketInsider • 29 minutes ago
+            <div class="update urgent">
+                <div class="update-time">8:42 AM GMT - ANALYSIS</div>
+                <div class="update-content">
+                    <strong>STRATEGIC IMPLICATIONS:</strong> The capture of Hormoz Island represents a significant escalation in the conflict, giving coalition forces control over the strategic chokepoint at the entrance to the Persian Gulf. Combined with the destruction of much of Iran's navy, this could allow for the eventual reopening of shipping lanes. However, Iran's continued missile attacks, despite depleted arsenals, suggest the conflict is far from over and may escalate further with potential ground operations.
                 </div>
-                <div class="comment-content">
-                    Every defense contractor stock is up 5-8% on this news. The market is pricing in a permanent military presence - more contracts for logistics, construction, security, and maintenance. This island just became a billion-dollar business opportunity.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
 
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">678 points</span> • 
-                    u/AmphibiousVet • 28 minutes ago
+            <div class="update">
+                <div class="update-time">8:55 AM GMT</div>
+                <div class="update-content">
+                    <strong>WHAT'S NEXT:</strong> Military analysts expect the conflict to intensify further as coalition forces consolidate their position on Hormoz Island and prepare for potential ground operations. The massive troop buildup suggests preparations for a significant escalation, though diplomatic efforts continue behind the scenes. The next 48-72 hours are likely to be critical in determining whether the conflict expands to include ground operations or whether diplomatic pressure can achieve a ceasefire.
                 </div>
-                <div class="comment-content">
-                    Those Marines are walking through a graveyard. Every building, every bunker has dead Iranians inside. The cleanup crews haven't even started yet. The smell must be unbearable in this heat.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">545 points</span> • 
-                    u/TwitterWatcher • 27 minutes ago
-                </div>
-                <div class="comment-content">
-                    Trump just tweeted: "The American flag flies proudly over Hormoz! Our Marines are the BEST! Iran is WEAK and they know it!" The fucking moron is celebrating while 95 families are planning funerals.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">423 points</span> • 
-                    u/StrategyNerd • 26 minutes ago
-                </div>
-                <div class="comment-content">
-                    The Iranians accomplished their real objective - they made America pay dearly for every inch. 95 dead Marines for a tiny island? That's unsustainable. Tehran is betting we'll lose our appetite for more casualties when they defend the next position just as fiercely.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">356 points</span> • 
-                    u/EU_PolicyGuy • 25 minutes ago
-                </div>
-                <div class="comment-content">
-                    Brussels is furious. No consultation, no warning, just America turning a strategic island into a missile base. The Europeans want the strait open but not at the cost of permanent American military expansion. This is going to strain NATO relationships even further.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">289 points</span> • 
-                    u/FormerStateDept • 24 minutes ago
-                </div>
-                <div class="comment-content">
-                    The State Department is having nightmares about this. Every American embassy in the Middle East is now a bigger target. Iran can't hit Hormoz, but they can hit our diplomatic facilities across the region. The retaliation is coming, just not where we expect it.
-                </div>
-                <div class="comment-reply">Reply</div>
-            </div>
-
-            <div class="comment">
-                <div class="comment-meta">
-                    <span class="score">234 points</span> • 
-                    u/MarineMom2020 • 23 minutes ago
-                </div>
-                <div class="comment-content">
-                    My son is on that island. He called yesterday - said they're sleeping in shifts, always half the unit awake and armed. They know the Iranians are watching every move through thermal imagers. Those Marines are living on pure adrenaline right now.
-                </div>
-                <div class="comment-reply">Reply</div>
             </div>
         </div>
     </div>
